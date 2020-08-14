@@ -44,9 +44,9 @@ const { getStrSize, getStrGzipSize, formatTime, compressionRate } = require('./u
 
 		mdStr += outdent`
 		### ${package}
-		**File** \`${path.relative(process.cwd(), pkgPath)}\`
-		**Size** \`${filesize(size)}\`
-		**Gzip size** \`${filesize(gzipSize)}\`
+		- **File** \`${path.relative(process.cwd(), pkgPath)}\`
+		- **Size** \`${filesize(size)}\`
+		- **Gzip size** \`${filesize(gzipSize)}\`
 
 		${mdtable}
 
