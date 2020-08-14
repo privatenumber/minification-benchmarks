@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "xo lib",
+    "build": "node lib"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,8 @@
     "react": "^16.13.1",
     "terser": "^5.0.0",
     "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "xo": "^0.33.0"
   }
 }
