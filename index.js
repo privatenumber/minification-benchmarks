@@ -7,6 +7,8 @@ const _ = require('lodash');
 const minifiers = require('./minifiers');
 const { getStrSize, getStrGzipSize, formatTime, compressionRate } = require('./utils');
 
+const mdcode = str => `\`${str}\``;
+
 (async (packages) => {
 	let mdStr = outdent`
 	# Minification benchmarks
@@ -36,17 +38,17 @@ const { getStrSize, getStrGzipSize, formatTime, compressionRate } = require('./u
 			['Minifier', 'Size', 'Gzip size', 'Time'],
 			...results.map(r => [
 				r.name,
-				(r.best.size ? '🏆 ' : '') + `${filesize(r.size)} (${compressionRate(size, r.size)})`,
-				(r.best.gzip ? '🏆 ' : '') + `${filesize(r.gzipSize)} (${compressionRate(gzipSize, r.gzipSize)})`,
-				(r.best.time ? '🏆 ' : '') + formatTime(r.ms),
+				(r.best.size ? '🏆 ' : '') + `${mdcode(filesize(r.size))} (${mdcode(compressionRate(size, r.size))})`,
+				(r.best.gzip ? '🏆 ' : '') + `${mdcode(filesize(r.gzipSize))} (${mdcode(compressionRate(gzipSize, r.gzipSize))})`,
+				(r.best.time ? '🏆 ' : '') + mdcode(formatTime(r.ms)),
 			]),
 		],   {align: ['l', 'r', 'r', 'r']});
 
 		mdStr += outdent`
 		### ${package}
-		- **File** \`${path.relative(process.cwd(), pkgPath)}\`
-		- **Size** \`${filesize(size)}\`
-		- **Gzip size** \`${filesize(gzipSize)}\`
+		- **File** ${mdcode(path.relative(process.cwd(), pkgPath))}
+		- **Size** ${mdcode(filesize(size))}
+		- **Gzip size** ${mdcode(filesize(gzipSize))}
 
 		${mdtable}
 
