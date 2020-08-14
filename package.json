@@ -1,0 +1,31 @@
+{
+  "name": "minification-benchmarks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/privatenumber/minification-benchmarks.git"
+  },
+  "author": "Hiroki Osame <hiroki.osame@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/privatenumber/minification-benchmarks/issues"
+  },
+  "homepage": "https://github.com/privatenumber/minification-benchmarks#readme",
+  "dependencies": {
+    "esbuild": "^0.6.22",
+    "filesize": "^6.1.0",
+    "lodash": "^4.17.20",
+    "markdown-table": "^2.0.0",
+    "moment": "^2.27.0",
+    "outdent": "^0.7.1",
+    "p-map-series": "^2.1.0",
+    "react": "^16.13.1",
+    "terser": "^5.0.0",
+    "vue": "^2.6.11"
+  }
+}
