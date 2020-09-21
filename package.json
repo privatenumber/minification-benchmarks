@@ -25,21 +25,21 @@
   "dependencies": {
     "babel-minify": "^0.5.1",
     "d3": "^5.16.0",
-    "esbuild": "^0.6.27",
+    "esbuild": "^0.7.2",
     "filesize": "^6.1.0",
     "jquery": "^3.5.1",
     "lodash": "^4.17.20",
     "markdown-table": "^2.0.0",
-    "moment": "^2.27.0",
+    "moment": "^2.28.0",
     "outdent": "^0.7.1",
     "p-map-series": "^2.1.0",
     "react": "^16.13.1",
-    "terser": "^5.2.1",
-    "uglify-js": "^3.10.2",
+    "terser": "^5.3.2",
+    "uglify-js": "^3.10.4",
     "vue": "^2.6.12"
   },
   "devDependencies": {
-    "husky": "^4.2.5",
+    "husky": "^4.3.0",
     "xo": "^0.33.0"
   }
 }

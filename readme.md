@@ -15,12 +15,12 @@ Benchmarks are gathered on the following minifiers:
 
 | Minifier                |                   Size |             Gzip size |           Time |
 | :---------------------- | ---------------------: | --------------------: | -------------: |
-| babel-minify - default  | 🐥 `240.19 KB` (`47%`) |    `80.38 KB` (`67%`) | 🐢 `6542.27ms` |
-| esbuild                 |    `245.33 KB` (`48%`) | 🐷 `82.28 KB` (`69%`) |   🐇 `58.69ms` |
-| terser - default        |    `242.96 KB` (`48%`) |    `79.76 KB` (`67%`) |    `2023.86ms` |
-| terser - no compress    |  🐷 `249.9 KB` (`49%`) |    `80.89 KB` (`68%`) |     `928.52ms` |
-| uglify-js - default     |    `241.46 KB` (`47%`) |  🐥 `79.2 KB` (`66%`) |    `3523.49ms` |
-| uglify-js - no compress |    `249.56 KB` (`49%`) |    `80.29 KB` (`67%`) |     `628.28ms` |
+| babel-minify - default  | 🐥 `240.19 KB` (`47%`) |    `80.38 KB` (`67%`) | 🐢 `6085.35ms` |
+| esbuild                 |    `245.26 KB` (`48%`) | 🐷 `82.26 KB` (`69%`) |   🐇 `90.09ms` |
+| terser - default        |    `242.96 KB` (`48%`) |    `79.76 KB` (`67%`) |    `2000.89ms` |
+| terser - no compress    |  🐷 `249.9 KB` (`49%`) |    `80.89 KB` (`68%`) |     `822.62ms` |
+| uglify-js - default     |    `241.43 KB` (`47%`) | 🐥 `79.21 KB` (`66%`) |    `3164.75ms` |
+| uglify-js - no compress |    `249.56 KB` (`49%`) |    `80.29 KB` (`67%`) |     `546.85ms` |
 
 ### jquery
 - **File** `node_modules/jquery/dist/jquery.js`
@@ -29,12 +29,12 @@ Benchmarks are gathered on the following minifiers:
 
 | Minifier                |                  Size |             Gzip size |           Time |
 | :---------------------- | --------------------: | --------------------: | -------------: |
-| babel-minify - default  |    `90.23 KB` (`32%`) |    `31.19 KB` (`37%`) | 🐢 `2064.25ms` |
-| esbuild                 |    `88.52 KB` (`31%`) | 🐷 `31.42 KB` (`37%`) |   🐇 `26.82ms` |
-| terser - default        |    `88.23 KB` (`31%`) |    `30.49 KB` (`36%`) |     `784.36ms` |
-| terser - no compress    | 🐷 `92.79 KB` (`33%`) |    `31.15 KB` (`37%`) |     `245.16ms` |
-| uglify-js - default     | 🐥 `87.05 KB` (`30%`) | 🐥 `30.29 KB` (`36%`) |     `982.63ms` |
-| uglify-js - no compress |    `92.05 KB` (`32%`) |    `30.84 KB` (`37%`) |     `175.24ms` |
+| babel-minify - default  |    `90.23 KB` (`32%`) |    `31.19 KB` (`37%`) | 🐢 `1982.22ms` |
+| esbuild                 |    `88.51 KB` (`31%`) | 🐷 `31.42 KB` (`37%`) |   🐇 `26.98ms` |
+| terser - default        |    `88.23 KB` (`31%`) |    `30.49 KB` (`36%`) |     `672.87ms` |
+| terser - no compress    | 🐷 `92.79 KB` (`33%`) |    `31.15 KB` (`37%`) |     `253.71ms` |
+| uglify-js - default     | 🐥 `87.05 KB` (`30%`) | 🐥 `30.29 KB` (`36%`) |     `997.04ms` |
+| uglify-js - no compress |    `92.05 KB` (`32%`) |    `30.84 KB` (`37%`) |     `185.19ms` |
 
 ### lodash
 - **File** `node_modules/lodash/lodash.js`
@@ -43,26 +43,26 @@ Benchmarks are gathered on the following minifiers:
 
 | Minifier                |                  Size |             Gzip size |           Time |
 | :---------------------- | --------------------: | --------------------: | -------------: |
-| babel-minify - default  |    `70.25 KB` (`13%`) |    `24.66 KB` (`26%`) | 🐢 `1658.59ms` |
-| esbuild                 |    `70.26 KB` (`13%`) | 🐷 `25.74 KB` (`27%`) |   🐇 `32.29ms` |
-| terser - default        |    `69.54 KB` (`13%`) |    `24.64 KB` (`26%`) |     `605.25ms` |
-| terser - no compress    | 🐷 `74.01 KB` (`13%`) |    `25.64 KB` (`27%`) |     `264.70ms` |
-| uglify-js - default     | 🐥 `68.32 KB` (`12%`) | 🐥 `24.06 KB` (`25%`) |     `954.76ms` |
-| uglify-js - no compress |    `73.46 KB` (`13%`) |     `25.2 KB` (`26%`) |     `194.22ms` |
+| babel-minify - default  |    `70.25 KB` (`13%`) |    `24.66 KB` (`26%`) | 🐢 `1511.54ms` |
+| esbuild                 |    `70.22 KB` (`13%`) | 🐷 `25.73 KB` (`27%`) |   🐇 `28.61ms` |
+| terser - default        |    `69.54 KB` (`13%`) |    `24.64 KB` (`26%`) |     `665.08ms` |
+| terser - no compress    | 🐷 `74.01 KB` (`13%`) |    `25.64 KB` (`27%`) |     `272.37ms` |
+| uglify-js - default     | 🐥 `68.31 KB` (`12%`) | 🐥 `24.05 KB` (`25%`) |     `952.09ms` |
+| uglify-js - no compress |    `73.46 KB` (`13%`) |     `25.2 KB` (`26%`) |     `180.04ms` |
 
 ### moment
 - **File** `node_modules/moment/moment.js`
-- **Size** `169.75 KB`
-- **Gzip size** `35.7 KB`
+- **Size** `169.78 KB`
+- **Gzip size** `35.69 KB`
 
 | Minifier                |                  Size |             Gzip size |           Time |
 | :---------------------- | --------------------: | --------------------: | -------------: |
-| babel-minify - default  |    `57.83 KB` (`34%`) |    `18.33 KB` (`51%`) | 🐢 `1079.67ms` |
-| esbuild                 |    `58.71 KB` (`34%`) |    `18.96 KB` (`53%`) |   🐇 `21.21ms` |
-| terser - default        |    `57.81 KB` (`34%`) |    `18.26 KB` (`51%`) |     `341.29ms` |
-| terser - no compress    | 🐷 `61.79 KB` (`36%`) | 🐷 `19.25 KB` (`53%`) |     `150.24ms` |
-| uglify-js - default     |  🐥 `57.4 KB` (`33%`) | 🐥 `18.16 KB` (`50%`) |     `574.82ms` |
-| uglify-js - no compress |    `61.51 KB` (`36%`) |     `19.1 KB` (`53%`) |     `108.72ms` |
+| babel-minify - default  |    `57.87 KB` (`34%`) |    `18.34 KB` (`51%`) | 🐢 `1053.66ms` |
+| esbuild                 |    `58.74 KB` (`34%`) |    `18.96 KB` (`53%`) |   🐇 `18.22ms` |
+| terser - default        |    `57.84 KB` (`34%`) |    `18.27 KB` (`51%`) |     `429.16ms` |
+| terser - no compress    | 🐷 `61.82 KB` (`36%`) | 🐷 `19.26 KB` (`53%`) |     `148.60ms` |
+| uglify-js - default     | 🐥 `57.43 KB` (`33%`) | 🐥 `18.16 KB` (`50%`) |     `562.93ms` |
+| uglify-js - no compress |    `61.54 KB` (`36%`) |     `19.1 KB` (`53%`) |     `109.82ms` |
 
 ### react/cjs/react.development.js
 - **File** `node_modules/react/cjs/react.development.js`
@@ -71,24 +71,24 @@ Benchmarks are gathered on the following minifiers:
 
 | Minifier                |                  Size |            Gzip size |          Time |
 | :---------------------- | --------------------: | -------------------: | ------------: |
-| babel-minify - default  |     `19.4 KB` (`32%`) |    `7.03 KB` (`43%`) | 🐢 `210.85ms` |
-| esbuild                 |    `19.65 KB` (`33%`) |    `7.18 KB` (`44%`) |  🐇 `10.82ms` |
-| terser - default        |    `19.11 KB` (`32%`) |    `6.99 KB` (`43%`) |    `114.81ms` |
-| terser - no compress    | 🐷 `20.71 KB` (`34%`) | 🐷 `7.34 KB` (`45%`) |     `40.24ms` |
-| uglify-js - default     |  🐥 `18.7 KB` (`31%`) | 🐥 `6.83 KB` (`42%`) |    `207.54ms` |
-| uglify-js - no compress |    `20.46 KB` (`34%`) |    `7.15 KB` (`44%`) |     `27.02ms` |
+| babel-minify - default  |     `19.4 KB` (`32%`) |    `7.03 KB` (`43%`) | 🐢 `252.43ms` |
+| esbuild                 |    `19.65 KB` (`33%`) |    `7.18 KB` (`44%`) |  🐇 `10.73ms` |
+| terser - default        |    `19.12 KB` (`32%`) |    `6.97 KB` (`43%`) |    `140.19ms` |
+| terser - no compress    | 🐷 `20.71 KB` (`34%`) | 🐷 `7.34 KB` (`45%`) |     `44.38ms` |
+| uglify-js - default     |  🐥 `18.7 KB` (`31%`) | 🐥 `6.83 KB` (`42%`) |    `188.36ms` |
+| uglify-js - no compress |    `20.46 KB` (`34%`) |    `7.15 KB` (`44%`) |     `28.62ms` |
 
 ### terser
 - **File** `node_modules/terser/dist/bundle.min.js`
-- **Size** `787.18 KB`
-- **Gzip size** `157.4 KB`
+- **Size** `835.03 KB`
+- **Gzip size** `167.85 KB`
 
 | Minifier                |                   Size |              Gzip size |           Time |
 | :---------------------- | ---------------------: | ---------------------: | -------------: |
 | babel-minify - default  |              ⚠️ Failed |              ⚠️ Failed |      ⚠️ Failed |
-| esbuild                 |    `360.71 KB` (`45%`) | 🐷 `104.68 KB` (`66%`) |   🐇 `58.86ms` |
-| terser - default        | 🐥 `358.73 KB` (`45%`) | 🐥 `101.89 KB` (`64%`) | 🐢 `1652.92ms` |
-| terser - no compress    | 🐷 `371.76 KB` (`47%`) |    `102.58 KB` (`65%`) |     `644.63ms` |
+| esbuild                 |    `398.14 KB` (`47%`) | 🐷 `114.27 KB` (`68%`) |   🐇 `57.59ms` |
+| terser - default        | 🐥 `396.16 KB` (`47%`) | 🐥 `111.45 KB` (`66%`) | 🐢 `1650.03ms` |
+| terser - no compress    | 🐷 `409.27 KB` (`49%`) |    `112.18 KB` (`66%`) |     `676.80ms` |
 | uglify-js - default     |              ⚠️ Failed |              ⚠️ Failed |      ⚠️ Failed |
 | uglify-js - no compress |              ⚠️ Failed |              ⚠️ Failed |      ⚠️ Failed |
 
@@ -99,10 +99,10 @@ Benchmarks are gathered on the following minifiers:
 
 | Minifier                |                  Size |             Gzip size |           Time |
 | :---------------------- | --------------------: | --------------------: | -------------: |
-| babel-minify - default  |    `93.04 KB` (`42%`) |    `30.78 KB` (`50%`) | 🐢 `1208.91ms` |
-| esbuild                 |    `93.14 KB` (`42%`) |    `31.12 KB` (`51%`) |   🐇 `24.89ms` |
-| terser - default        |    `92.77 KB` (`42%`) |     `30.6 KB` (`50%`) |     `384.21ms` |
-| terser - no compress    | 🐷 `98.89 KB` (`45%`) |     `31.4 KB` (`51%`) |     `182.39ms` |
-| uglify-js - default     | 🐥 `92.23 KB` (`42%`) | 🐥 `30.59 KB` (`50%`) |     `743.20ms` |
-| uglify-js - no compress |    `98.68 KB` (`45%`) |  🐷 `31.4 KB` (`51%`) |     `154.73ms` |
+| babel-minify - default  |    `93.04 KB` (`42%`) |    `30.78 KB` (`50%`) | 🐢 `1187.67ms` |
+| esbuild                 |    `93.13 KB` (`42%`) |    `31.11 KB` (`51%`) |   🐇 `24.62ms` |
+| terser - default        |    `92.77 KB` (`42%`) |     `30.6 KB` (`50%`) |     `429.44ms` |
+| terser - no compress    | 🐷 `98.89 KB` (`45%`) |     `31.4 KB` (`51%`) |     `236.71ms` |
+| uglify-js - default     |  🐥 `92.2 KB` (`42%`) | 🐥 `30.58 KB` (`50%`) |     `771.42ms` |
+| uglify-js - no compress |    `98.68 KB` (`45%`) |  🐷 `31.4 KB` (`51%`) |     `151.08ms` |
 
