@@ -1,8 +1,10 @@
 {
   "name": "minification-benchmarks",
-  "version": "1.0.0",
   "description": "JS minification benchmarks",
-  "main": "index.js",
+  "repository": "privatenumber/minification-benchmarks",
+  "author": "Hiroki Osame <hiroki.osame@gmail.com>",
+  "license": "MIT",
+  "private": true,
   "scripts": {
     "lint": "xo lib",
     "build": "node lib"
@@ -12,18 +14,9 @@
       "pre-commit": "npm run build && git add readme.md"
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/privatenumber/minification-benchmarks.git"
-  },
-  "author": "Hiroki Osame <hiroki.osame@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/privatenumber/minification-benchmarks/issues"
-  },
-  "homepage": "https://github.com/privatenumber/minification-benchmarks#readme",
   "dependencies": {
     "babel-minify": "^0.5.1",
+    "comment-mark": "^1.0.0",
     "d3": "^5.16.0",
     "esbuild": "^0.7.2",
     "filesize": "^6.1.0",
