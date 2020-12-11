@@ -5,14 +5,10 @@
   "author": "Hiroki Osame <hiroki.osame@gmail.com>",
   "license": "MIT",
   "private": true,
+  "type": "module",
   "scripts": {
     "lint": "xo lib",
-    "build": "node lib"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run build && git add readme.md"
-    }
+    "build": "node --experimental-import-meta-resolve lib"
   },
   "dependencies": {
     "d3": "^5.16.0",
@@ -20,20 +16,21 @@
     "lodash": "^4.17.20",
     "moment": "^2.28.0",
     "react": "^16.13.1",
+    "three": "^0.123.0",
     "vue": "^2.6.12"
   },
   "devDependencies": {
     "babel-minify": "^0.5.1",
+    "byte-size": "^7.0.0",
     "comment-mark": "^1.0.0",
-    "esbuild": "^0.7.2",
-    "filesize": "^6.1.0",
-    "husky": "^4.3.0",
+    "esbuild": "^0.8.21",
+    "execa": "^5.0.0",
     "listr": "^0.14.3",
+    "lodash-es": "^4.17.15",
     "markdown-table": "^2.0.0",
     "outdent": "^0.7.1",
-    "p-map-series": "^2.1.0",
-    "terser": "^5.3.2",
-    "uglify-js": "^3.10.4",
-    "xo": "^0.33.0"
+    "terser": "^5.5.1",
+    "uglify-js": "^3.12.1",
+    "xo": "^0.36.1"
   }
 }
