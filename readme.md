@@ -7,7 +7,7 @@ Benchmarks are gathered on the following minifiers:
 - [uglify-js](https://github.com/mishoo/UglifyJS)
 
 ## 📋 Results
-- The measured time an average taken from 10 consecutive runs
+- The measured time is an average taken from 10 consecutive runs
 - Each table is sorted by smallest minified size
 - Minzipped size measures how well the minified file compresses with Gzip
 
