@@ -23,8 +23,8 @@
     "babel-minify": "^0.5.1",
     "byte-size": "^7.0.0",
     "comment-mark": "^1.0.0",
-    "d3": "^5.16.0",
-    "esbuild": "^0.8.33",
+    "d3": "^6.3.1",
+    "esbuild": "^0.8.34",
     "execa": "^5.0.0",
     "jquery": "^3.5.1",
     "listr": "^0.14.3",
@@ -32,13 +32,12 @@
     "lodash-es": "^4.17.20",
     "markdown-table": "^2.0.0",
     "moment": "^2.29.1",
-    "outdent": "^0.7.1",
-    "react": "^16.14.0",
+    "outdent": "^0.8.0",
+    "react": "^17.0.1",
     "terser": "^5.5.1",
-    "three": "^0.123.0",
+    "three": "^0.124.0",
     "uglify-js": "^3.12.5",
-    "vue": "^2.6.12",
-    "xo": "^0.36.1"
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.12.1",
