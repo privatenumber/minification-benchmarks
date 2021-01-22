@@ -35,15 +35,11 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.12.1",
     "@babel/plugin-syntax-top-level-await": "^7.12.1",
-    "@pvtnbr/eslint-config-base": "^0.1.7",
+    "@pvtnbr/eslint-config-base": "^0.1.8",
     "eslint": "^7.18.0"
   },
   "eslintConfig": {
     "extends": "@pvtnbr/eslint-config-base",
-    "parser": "@babel/eslint-parser",
-    "parserOptions": {
-      "ecmaVersion": 2021,
-      "sourceType": "module"
-    }
+    "parser": "@babel/eslint-parser"
   }
 }
