@@ -11,6 +11,14 @@
     "lint": "eslint lib",
     "build": "node --experimental-import-meta-resolve lib"
   },
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+  },
+	"lint-staged": {
+		"*.js": "eslint"
+	},
   "dependencies": {
     "babel-minify": "^0.5.1",
     "byte-size": "^7.0.0",
@@ -36,7 +44,9 @@
     "@babel/eslint-parser": "^7.12.1",
     "@babel/plugin-syntax-top-level-await": "^7.12.1",
     "@pvtnbr/eslint-config-base": "^0.1.8",
-    "eslint": "^7.18.0"
+    "eslint": "^7.18.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.3"
   },
   "eslintConfig": {
     "extends": "@pvtnbr/eslint-config-base",
