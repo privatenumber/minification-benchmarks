@@ -7,6 +7,8 @@ Benchmarks are gathered on the following minifiers:
 - [uglify-js](https://github.com/mishoo/UglifyJS)
 - [google-closure-compiler](https://github.com/google/closure-compiler-npm/tree/master/packages/google-closure-compiler)
 
+<sub>If you like this project, please star it & [follow me](https://github.com/privatenumber) to see what other cool projects I'm working on! ❤️</sub>
+
 ## 👟 Methodology
 
 - Each minifier is executed in its own process
