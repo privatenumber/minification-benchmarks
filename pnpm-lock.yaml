@@ -5,6 +5,7 @@ dependencies:
   d3: 6.3.1
   esbuild: 0.8.34
   execa: 5.0.0
+  google-closure-compiler: 20210106.0.0
   jquery: 3.5.1
   listr: 0.14.3
   lodash: 4.17.20
@@ -730,6 +731,30 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-n8fOixwDD6b/ObinzTrp1ZKFzbgvKZvuz/TvejnLn1aQfC6r52XEx85FmuC+3HI+JM7coBRXUvNqEU2PHVrHpg==
+  /clone-buffer/1.0.0:
+    dev: false
+    engines:
+      node: '>= 0.10'
+    resolution:
+      integrity: sha1-4+JbIHrE5wGvch4staFnksrD3Fg=
+  /clone-stats/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-s3gt/4u1R04Yuba/D9/ngvh3doA=
+  /clone/2.1.2:
+    dev: false
+    engines:
+      node: '>=0.8'
+    resolution:
+      integrity: sha1-G39Ln1kfHo+DZwQBYANFoCiHQ18=
+  /cloneable-readable/1.1.3:
+    dependencies:
+      inherits: 2.0.4
+      process-nextick-args: 2.0.1
+      readable-stream: 2.3.7
+    dev: false
+    resolution:
+      integrity: sha512-2EF8zTQOxYq70Y4XKtorQupqF0m49MBz2/yf5Bj+MHjvpG3Hy7sImifnqD6UA+TKYxeSV+u6qqQPawN5UvnpKQ==
   /code-point-at/1.1.0:
     dev: false
     engines:
@@ -794,6 +819,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-4FJkXzKXEDB1snCFZlLP4gpC3JILicCpGbzG9f9G7tGqGCzETQ2hWPrcinA9oU4wtf2biUaEH5065UnMeR33oA==
+  /core-util-is/1.0.2:
+    dev: false
+    resolution:
+      integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
   /cosmiconfig/7.0.0:
     dependencies:
       '@types/parse-json': 4.0.0
@@ -1651,6 +1680,56 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-BWICuzzDvDoH54NHKCseDanAhE3CeDorgDL5MT6LMXXj2WCnd9UC2szdk4AWLfjdgNBCXLUanXYcpBBKOSWGwg==
+  /google-closure-compiler-java/20210106.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-RtuvBPpzBMTAizTYoLDXv3hVURi7NVXHa/bn/bf25pryrKOYUNjCCOhPRK8CP9koh/k25pSB/lyAXikFmSq+vg==
+  /google-closure-compiler-linux/20210106.0.0:
+    cpu:
+      - x64
+      - x86
+    dev: false
+    optional: true
+    os:
+      - linux
+    resolution:
+      integrity: sha512-Ae2j6Ob1YDadFCiaZWg7zB2WI/wyOLH/ntEQy/OzljZPvepmO3/WNNYAH9SulCdS/T018/vz+C8nR657fRUlnQ==
+  /google-closure-compiler-osx/20210106.0.0:
+    cpu:
+      - x64
+      - x86
+    dev: false
+    optional: true
+    os:
+      - darwin
+    resolution:
+      integrity: sha512-e58BcBbCzhpBFJ4f1a9TYPshkTq4cLVeZndRn+o42eLsLp1e2HoqJYudBHrGj6bBLbYwHfQA3hicdC8Nd8cv7w==
+  /google-closure-compiler-windows/20210106.0.0:
+    cpu:
+      - x64
+    dev: false
+    optional: true
+    os:
+      - win32
+    resolution:
+      integrity: sha512-FPgsZR/h4Bg2rQuXF/jGJu2FF0hXWYXGEYk2L2NlC2D1kl+MErrVsXPMJUVnwxpPjenfhahLle1ZMHvNTPDtsQ==
+  /google-closure-compiler/20210106.0.0:
+    dependencies:
+      chalk: 2.4.2
+      google-closure-compiler-java: 20210106.0.0
+      minimist: 1.2.5
+      vinyl: 2.2.1
+      vinyl-sourcemaps-apply: 0.2.1
+    dev: false
+    engines:
+      node: '>=10'
+    hasBin: true
+    optionalDependencies:
+      google-closure-compiler-linux: 20210106.0.0
+      google-closure-compiler-osx: 20210106.0.0
+      google-closure-compiler-windows: 20210106.0.0
+    resolution:
+      integrity: sha512-65HuRilVBBe726iinP9FJ7zLdDdLajDBfW63JD+oohIF+lRv9P/qyqTvQQV9cTFUbUJi8ar4nwe537NIMJkBjA==
   /graceful-fs/4.2.4:
     dev: true
     resolution:
@@ -1782,7 +1861,6 @@ packages:
     resolution:
       integrity: sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=
   /inherits/2.0.4:
-    dev: true
     resolution:
       integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
   /is-arrayish/0.2.1:
@@ -1933,7 +2011,6 @@ packages:
     resolution:
       integrity: sha512-OwijhaRSgqvhm/0ZdAcXNZt9lYdKFpcRDT5ULUuYXPoT794UNOdU+gpT6Rzo7b4V2HUl/op6GqY894AZwv9faQ==
   /isarray/1.0.0:
-    dev: true
     resolution:
       integrity: sha1-u5NdSFgsuhaMBoNJV6VKPgcSTxE=
   /isexe/2.0.0:
@@ -2585,6 +2662,10 @@ packages:
       node: '>= 0.8.0'
     resolution:
       integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
+  /process-nextick-args/2.0.1:
+    dev: false
+    resolution:
+      integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
   /progress/2.0.3:
     dev: true
     engines:
@@ -2659,6 +2740,18 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-Ug69mNOpfvKDAc2Q8DRpMjjzdtrnv9HcSMX+4VsZxD1aZ6ZzrIE7rlzXBtWTyhULSMKg076AW6WR5iZpD0JiOg==
+  /readable-stream/2.3.7:
+    dependencies:
+      core-util-is: 1.0.2
+      inherits: 2.0.4
+      isarray: 1.0.0
+      process-nextick-args: 2.0.1
+      safe-buffer: 5.1.2
+      string_decoder: 1.1.1
+      util-deprecate: 1.0.2
+    dev: false
+    resolution:
+      integrity: sha512-Ebho8K4jIbHAxnuxi7o42OrZgF/ZTNcsZj6nRKyUmkhLFq8CHItp/fy6hQZuZmP/n3yZ9VBUbp4zz/mX8hmYPw==
   /regexp-tree/0.1.23:
     dev: true
     hasBin: true
@@ -2670,12 +2763,22 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-ZOIzd8yVsQQA7j8GCSlPGXwg5PfmA1mrq0JP4nGhh54LaKN3xdai/vHUDu74pKwV8OxseMS65u2NImosQcSD0Q==
+  /remove-trailing-separator/1.1.0:
+    dev: false
+    resolution:
+      integrity: sha1-wkvOKig62tW8P1jg1IJJuSN52O8=
   /repeat-string/1.6.1:
     dev: false
     engines:
       node: '>=0.10'
     resolution:
       integrity: sha1-jcrkcOHIirwtYA//Sndihtp15jc=
+  /replace-ext/1.0.1:
+    dev: false
+    engines:
+      node: '>= 0.10'
+    resolution:
+      integrity: sha512-yD5BHCe7quCgBph4rMQ+0KkIRKwWCrHDOX1p1Gp6HwjPM5kVoCdKGNhN7ydqqsX6lJEnQDKZ/tFMiEdQ1dvPEw==
   /require-from-string/2.0.2:
     dev: true
     engines:
@@ -2921,6 +3024,12 @@ packages:
       define-properties: 1.1.3
     resolution:
       integrity: sha512-oBIBUy5lea5tt0ovtOFiEQaBkoBBkyJhZXzJYrSmDo5IUUqbOPvVezuRs/agBIdZ2p2Eo1FD6bD9USyBLfl3xg==
+  /string_decoder/1.1.1:
+    dependencies:
+      safe-buffer: 5.1.2
+    dev: false
+    resolution:
+      integrity: sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==
   /stringify-object/3.3.0:
     dependencies:
       get-own-enumerable-property-symbols: 3.0.2
@@ -3097,6 +3206,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
+  /util-deprecate/1.0.2:
+    dev: false
+    resolution:
+      integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
   /util.promisify/1.1.1:
     dependencies:
       call-bind: 1.0.2
@@ -3118,6 +3231,25 @@ packages:
     dev: true
     resolution:
       integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==
+  /vinyl-sourcemaps-apply/0.2.1:
+    dependencies:
+      source-map: 0.5.7
+    dev: false
+    resolution:
+      integrity: sha1-q2VJ1h0XLCsbh75cUI0jnI74dwU=
+  /vinyl/2.2.1:
+    dependencies:
+      clone: 2.1.2
+      clone-buffer: 1.0.0
+      clone-stats: 1.0.0
+      cloneable-readable: 1.1.3
+      remove-trailing-separator: 1.1.0
+      replace-ext: 1.0.1
+    dev: false
+    engines:
+      node: '>= 0.10'
+    resolution:
+      integrity: sha512-LII3bXRFBZLlezoG5FfZVcXflZgWP/4dCwKtxd5ky9+LOtM4CS3bIRQsmR1KMnMW07jpE8fqR2lcxPZ+8sJIcw==
   /vue/2.6.12:
     dev: false
     resolution:
@@ -3206,6 +3338,7 @@ specifiers:
   esbuild: ^0.8.34
   eslint: ^7.18.0
   execa: ^5.0.0
+  google-closure-compiler: ^20210106.0.0
   husky: ^4.3.8
   jquery: ^3.5.1
   lint-staged: ^10.5.3
