@@ -1,4 +1,5 @@
 dependencies:
+  '@swc/core': 1.2.46
   babel-minify: 0.5.1
   byte-size: 7.0.0
   comment-mark: 1.0.0
@@ -219,6 +220,17 @@ packages:
       node: ^10.12.0 || >=12.0.0
     resolution:
       integrity: sha512-1JTKgrOKAHVivSvOYw+sJOunkBjUOvjqWk1DPja7ZFhIS2mX/4EgTT8M7eTK9jrKhL/FvXXEbQwIs3pg1xp3dg==
+  /@napi-rs/triples/1.0.2:
+    dev: false
+    resolution:
+      integrity: sha512-EL3SiX43m9poFSnhDx4d4fn9SSaqyO2rHsCNhETi9bWPmjXK3uPJ0QpPFtx39FEdHcz1vJmsiW41kqc0AgvtzQ==
+  /@node-rs/helper/1.0.0:
+    dependencies:
+      '@napi-rs/triples': 1.0.2
+      tslib: 2.1.0
+    dev: false
+    resolution:
+      integrity: sha512-B4CSMHCuYPqai3LMsRTXyvBEP24YRnCZUUsDPYkgFD6tFA+q43rLkaEzsnTJTKJq5ZnJ4n5YJpJwEz7Xn8+0vg==
   /@pvtnbr/eslint-config-base/0.1.8_eslint@7.18.0:
     dependencies:
       confusing-browser-globals: 1.0.10
@@ -251,6 +263,111 @@ packages:
         optional: true
     resolution:
       integrity: sha512-c/qwwcHyafOQuVQJj0IlBjf5yYgBI7YPJ77k4fOJYesb41jio65eaJODRUmfYKhTOFBrIZ66kgvGPlNbjuoRdQ==
+  /@swc/core-android-arm64/1.2.46:
+    cpu:
+      - arm64
+    dev: false
+    engines:
+      node: '>=10'
+    optional: true
+    os:
+      - android
+    resolution:
+      integrity: sha512-VFHvcrpOwDXcsHAHQ0k0yd3kBDJKCrm4U1kKC4gn5oXlNEXvc2UOAzQNc6+gYqTTopvJ9xDsjrAX0Ugha2WewA==
+  /@swc/core-darwin-arm64/1.2.46:
+    cpu:
+      - arm64
+    dev: false
+    engines:
+      node: '>=10'
+    optional: true
+    os:
+      - darwin
+    resolution:
+      integrity: sha512-wNcHEcKrHCM1GpQo2FyWpYnr2v5E4mz5+0FxO27QB2oHoUVN6bxMuY0yFmK0e0FmspZfetWKz+q3iNb92QwlaA==
+  /@swc/core-darwin-x64/1.2.46:
+    cpu:
+      - x64
+    dev: false
+    engines:
+      node: '>=10'
+    optional: true
+    os:
+      - darwin
+    resolution:
+      integrity: sha512-Kq8dKTCWjQl+HQzcSjxQtpDET3NAJMycf1XizesjHlROQy16uab3zSXze/9kH/A3E2eGM/1GmmdMk6D9xgJOFw==
+  /@swc/core-linux-arm-gnueabihf/1.2.46:
+    cpu:
+      - arm
+    dev: false
+    engines:
+      node: '>=10'
+    optional: true
+    os:
+      - linux
+    resolution:
+      integrity: sha512-f3q45vPXuCy/OudgIpv3Sw/x9CMsiEEzBtMLkyiyZH6RRKLeSy0DvJezKqBQ/OE7DhrBLGzM64D8Kx//zla6vg==
+  /@swc/core-linux-arm64-gnu/1.2.46:
+    cpu:
+      - arm64
+    dev: false
+    engines:
+      node: '>=10'
+    optional: true
+    os:
+      - linux
+    resolution:
+      integrity: sha512-oe9VM/tUnRQ1JbHkOiLZwF9X1rrfX5INvQIktkf1l0Sw8d8RssVqu9dEAQ2V0Mk4JPvnnyKCAtur9hjbOmtsZw==
+  /@swc/core-linux-x64-gnu/1.2.46:
+    cpu:
+      - x64
+    dev: false
+    engines:
+      node: '>=10'
+    optional: true
+    os:
+      - linux
+    resolution:
+      integrity: sha512-NfmXIL61FPAlG/YIOZRZTw8pczf8zkB+V+H6udds/i8c4tpIsZLqaOy6sGFjIBRLEDSs2AXO9C5nLlR5Fr2KnQ==
+  /@swc/core-linux-x64-musl/1.2.46:
+    cpu:
+      - x64
+    dev: false
+    engines:
+      node: '>=10'
+    optional: true
+    os:
+      - linux
+    resolution:
+      integrity: sha512-Rj4j8FRj9nO6FwcUEhws2PM5w6/PJOF4LXDiGWi0yWG4XDqOto0lm1KVXZ++9XIpql7szPHbeW44yNuBd64eyw==
+  /@swc/core-win32-x64-msvc/1.2.46:
+    cpu:
+      - x64
+    dev: false
+    engines:
+      node: '>=10'
+    optional: true
+    os:
+      - win32
+    resolution:
+      integrity: sha512-VSw9G9wbg+qCqnMo0hDGt0WUAXBZRR6BziAmJxt/O8g7qeCZyKajgccAGaQtDUDkz3LtoU+5MKTaVRUJq5Pp/g==
+  /@swc/core/1.2.46:
+    dependencies:
+      '@node-rs/helper': 1.0.0
+    dev: false
+    engines:
+      node: '>=10'
+    optionalDependencies:
+      '@swc/core-android-arm64': 1.2.46
+      '@swc/core-darwin-arm64': 1.2.46
+      '@swc/core-darwin-x64': 1.2.46
+      '@swc/core-linux-arm-gnueabihf': 1.2.46
+      '@swc/core-linux-arm64-gnu': 1.2.46
+      '@swc/core-linux-x64-gnu': 1.2.46
+      '@swc/core-linux-x64-musl': 1.2.46
+      '@swc/core-win32-x64-msvc': 1.2.46
+    resolution:
+      integrity: sha512-mcyaP/uHykJdBZ4HXgbaiVVHZIVdgieclzQbZf/eDeqdqdA0BB0eVucPnJ1Lb5mTSf+eopwsUVcnKo4R+jpycg==
   /@types/json5/0.0.29:
     dev: true
     resolution:
@@ -3167,6 +3284,10 @@ packages:
   /tslib/1.14.1:
     resolution:
       integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
+  /tslib/2.1.0:
+    dev: false
+    resolution:
+      integrity: sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==
   /type-check/0.4.0:
     dependencies:
       prelude-ls: 1.2.1
@@ -3331,6 +3452,7 @@ specifiers:
   '@babel/eslint-parser': ^7.12.1
   '@babel/plugin-syntax-top-level-await': ^7.12.1
   '@pvtnbr/eslint-config-base': ^0.1.8
+  '@swc/core': ^1.2.46
   babel-minify: ^0.5.1
   byte-size: ^7.0.0
   comment-mark: ^1.0.0
