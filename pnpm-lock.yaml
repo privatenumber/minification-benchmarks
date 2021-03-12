@@ -1,7 +1,7 @@
 dependencies:
   '@swc/core': 1.2.46
   babel-minify: 0.5.1
-  byte-size: 7.0.0
+  byte-size: 7.0.1
   comment-mark: 1.0.0
   d3: 6.3.1
   esbuild: 0.8.34
@@ -930,12 +930,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==
-  /byte-size/7.0.0:
+  /byte-size/7.0.1:
     dev: false
     engines:
       node: '>=10'
     resolution:
-      integrity: sha512-NNiBxKgxybMBtWdmvx7ZITJi4ZG+CYUgwOSZTfqB1qogkRHrhbQE/R2r5Fh94X+InN5MCYz6SvB/ejHMj/HbsQ==
+      integrity: sha512-crQdqyCwhokxwV1UyDzLZanhkugAgft7vt0qbbdt60C6Zf3CAiGmtUCylbtYwrU6loOUw3euGrNtW1J651ot1A==
   /call-bind/1.0.2:
     dependencies:
       function-bind: 1.1.1
@@ -3673,7 +3673,7 @@ specifiers:
   '@pvtnbr/eslint-config-base': ^0.1.11
   '@swc/core': ^1.2.46
   babel-minify: ^0.5.1
-  byte-size: ^7.0.0
+  byte-size: ^7.0.1
   comment-mark: ^1.0.0
   d3: ^6.3.1
   esbuild: ^0.8.34

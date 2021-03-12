@@ -22,7 +22,7 @@
 	"dependencies": {
 		"@swc/core": "^1.2.46",
 		"babel-minify": "^0.5.1",
-		"byte-size": "^7.0.0",
+		"byte-size": "^7.0.1",
 		"comment-mark": "^1.0.0",
 		"d3": "^6.3.1",
 		"esbuild": "^0.8.34",
