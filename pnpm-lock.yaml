@@ -15,7 +15,7 @@ dependencies:
   moment: 2.29.1
   outdent: 0.8.0
   react: 17.0.1
-  terser: 5.5.1
+  terser: 5.6.0
   three: 0.124.0
   uglify-js: 3.12.5
   vue: 2.6.12
@@ -3467,7 +3467,7 @@ packages:
       node: '>=10.0.0'
     resolution:
       integrity: sha512-rxZevLGTUzWna/qBLObOe16kB2RTnnbhciwgPbMMlazz1yZGVEgnZK762xyVdVznhqxrfCeBMmMkgOOaPwjH7g==
-  /terser/5.5.1:
+  /terser/5.6.0:
     dependencies:
       commander: 2.20.3
       source-map: 0.7.3
@@ -3477,7 +3477,7 @@ packages:
       node: '>=10'
     hasBin: true
     resolution:
-      integrity: sha512-6VGWZNVP2KTUcltUQJ25TtNjx/XgdDsBDKGt8nN0MpydU36LmbPPcMBd2kmtZNNGVVDLg44k7GKeHHj+4zPIBQ==
+      integrity: sha512-vyqLMoqadC1uR0vywqOZzriDYzgEkNJFK4q9GeyOBHIbiECHiWLKcWfbQWAUaPfxkjDhapSlZB9f7fkMrvkVjA==
   /text-table/0.2.0:
     dev: true
     resolution:
@@ -3702,7 +3702,7 @@ specifiers:
   moment: ^2.29.1
   outdent: ^0.8.0
   react: ^17.0.1
-  terser: ^5.5.1
+  terser: ^5.6.0
   three: ^0.124.0
   uglify-js: ^3.12.5
   vue: ^2.6.12
