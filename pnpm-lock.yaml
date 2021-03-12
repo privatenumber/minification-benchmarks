@@ -17,7 +17,7 @@ dependencies:
   react: 17.0.1
   terser: 5.6.0
   three: 0.124.0
-  uglify-js: 3.12.5
+  uglify-js: 3.13.1
   vue: 2.6.12
 devDependencies:
   '@babel/eslint-parser': 7.13.10_eslint@7.21.0
@@ -3545,13 +3545,13 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
-  /uglify-js/3.12.5:
+  /uglify-js/3.13.1:
     dev: false
     engines:
       node: '>=0.8.0'
     hasBin: true
     resolution:
-      integrity: sha512-SgpgScL4T7Hj/w/GexjnBHi3Ien9WS1Rpfg5y91WXMj9SY997ZCQU76mH4TpLwwfmMvoOU8wiaRkIf6NaH3mtg==
+      integrity: sha512-EWhx3fHy3M9JbaeTnO+rEqzCe1wtyQClv6q3YWq0voOj4E+bMZBErVS1GAHPDiRGONYq34M1/d8KuQMgvi6Gjw==
   /uri-js/4.4.1:
     dependencies:
       punycode: 2.1.1
@@ -3704,5 +3704,5 @@ specifiers:
   react: ^17.0.1
   terser: ^5.6.0
   three: ^0.124.0
-  uglify-js: ^3.12.5
+  uglify-js: ^3.13.1
   vue: ^2.6.12
