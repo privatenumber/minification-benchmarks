@@ -25,7 +25,7 @@ devDependencies:
   '@pvtnbr/eslint-config-base': 0.1.11_eslint@7.21.0
   eslint: 7.21.0
   husky: 4.3.8
-  lint-staged: 10.5.3
+  lint-staged: 10.5.4
 lockfileVersion: 5.2
 packages:
   /@babel/code-frame/7.12.11:
@@ -1034,7 +1034,7 @@ packages:
   /cli-truncate/2.1.0:
     dependencies:
       slice-ansi: 3.0.0
-      string-width: 4.2.0
+      string-width: 4.2.2
     dev: true
     engines:
       node: '>=8'
@@ -2409,7 +2409,7 @@ packages:
     dev: true
     resolution:
       integrity: sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
-  /lint-staged/10.5.3:
+  /lint-staged/10.5.4:
     dependencies:
       chalk: 4.1.0
       cli-truncate: 2.1.0
@@ -2419,7 +2419,7 @@ packages:
       dedent: 0.7.0
       enquirer: 2.3.6
       execa: 4.1.0
-      listr2: 3.3.0_enquirer@2.3.6
+      listr2: 3.4.3_enquirer@2.3.6
       log-symbols: 4.0.0
       micromatch: 4.0.2
       normalize-path: 3.0.0
@@ -2429,7 +2429,7 @@ packages:
     dev: true
     hasBin: true
     resolution:
-      integrity: sha512-TanwFfuqUBLufxCc3RUtFEkFraSPNR3WzWcGF39R3f2J7S9+iF9W0KTVLfSy09lYGmZS5NDCxjNvhGMSJyFCWg==
+      integrity: sha512-EechC3DdFic/TdOPgj/RB3FicqE6932LTHCUm0Y2fsD9KGlLB+RwJl2q1IYBIvEsKzDOgn0D4gll+YxG5RsrKg==
   /listr-silent-renderer/1.1.1:
     dev: false
     engines:
@@ -2481,7 +2481,7 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-RmAl7su35BFd/xoMamRjpIE4j3v+L28o8CT5YhAXQJm1fD+1l9ngXY8JAQRJ+tFK2i5njvi0iRUKV09vPwA0iA==
-  /listr2/3.3.0_enquirer@2.3.6:
+  /listr2/3.4.3_enquirer@2.3.6:
     dependencies:
       chalk: 4.1.0
       cli-truncate: 2.1.0
@@ -2490,7 +2490,7 @@ packages:
       indent-string: 4.0.0
       log-update: 4.0.0
       p-map: 4.0.0
-      rxjs: 6.6.3
+      rxjs: 6.6.6
       through: 2.3.8
       wrap-ansi: 7.0.0
     dev: true
@@ -2499,7 +2499,7 @@ packages:
     peerDependencies:
       enquirer: '>= 2.3.0 < 3'
     resolution:
-      integrity: sha512-G9IFI/m65icgVlifS0wMQnvn35/8VJGzEb3crpE4NnaegQYQOn/wP7yqi9TTJQ/eoxme4UaPbffBK1XqKP/DOg==
+      integrity: sha512-wZmkzNiuinOfwrGqAwTCcPw6aKQGTAMGXwG5xeU1WpDjJNeBA35jGBeWxR3OF+R6Yl5Y3dRG+3vE8t6PDcSNHA==
   /load-json-file/2.0.0:
     dependencies:
       graceful-fs: 4.2.4
@@ -3162,10 +3162,19 @@ packages:
   /rxjs/6.6.3:
     dependencies:
       tslib: 1.14.1
+    dev: false
     engines:
       npm: '>=2.0.0'
     resolution:
       integrity: sha512-trsQc+xYYXZ3urjOiJOuCOa5N3jAZ3eiSpQB5hIT8zGlL2QfnHLJ2r7GMkBGuIausdJN1OneaI6gQlsqNHHmZQ==
+  /rxjs/6.6.6:
+    dependencies:
+      tslib: 1.14.1
+    dev: true
+    engines:
+      npm: '>=2.0.0'
+    resolution:
+      integrity: sha512-/oTwee4N4iWzAMAL9xdGKjkEHmIwupR3oXbQjCKywF1BeFohswF3vZdogbmEF6pZkOsXTzWkrZszrWpQTByYVg==
   /safe-buffer/5.1.2:
     resolution:
       integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==
@@ -3329,16 +3338,6 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-nOqH59deCq9SRHlxq1Aw85Jnt4w6KvLKqWVik6oA9ZklXLNIOlqg4F2yrT1MVaTjAqvVwdfeZ7w7aCvJD7ugkw==
-  /string-width/4.2.0:
-    dependencies:
-      emoji-regex: 8.0.0
-      is-fullwidth-code-point: 3.0.0
-      strip-ansi: 6.0.0
-    dev: true
-    engines:
-      node: '>=8'
-    resolution:
-      integrity: sha512-zUz5JD+tgqtuDjMhwIg5uFVV3dtqZ9yQJlZVfq4I01/K5Paj5UHj7VyrQOJvzawSVlKpObApbfD0Ed6yJc+1eg==
   /string-width/4.2.2:
     dependencies:
       emoji-regex: 8.0.0
@@ -3625,7 +3624,7 @@ packages:
   /wrap-ansi/6.2.0:
     dependencies:
       ansi-styles: 4.3.0
-      string-width: 4.2.0
+      string-width: 4.2.2
       strip-ansi: 6.0.0
     dev: true
     engines:
@@ -3635,7 +3634,7 @@ packages:
   /wrap-ansi/7.0.0:
     dependencies:
       ansi-styles: 4.3.0
-      string-width: 4.2.0
+      string-width: 4.2.2
       strip-ansi: 6.0.0
     dev: true
     engines:
@@ -3683,7 +3682,7 @@ specifiers:
   google-closure-compiler: ^20210106.0.0
   husky: ^4.3.8
   jquery: ^3.5.1
-  lint-staged: ^10.5.3
+  lint-staged: ^10.5.4
   listr: ^0.14.3
   lodash: ^4.17.20
   lodash-es: ^4.17.20
