@@ -6,7 +6,7 @@ dependencies:
   d3: 6.3.1
   esbuild: 0.9.1
   execa: 5.0.0
-  google-closure-compiler: 20210106.0.0
+  google-closure-compiler: 20210302.0.0
   jquery: 3.5.1
   listr: 0.14.3
   lodash: 4.17.20
@@ -2004,11 +2004,11 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-BWICuzzDvDoH54NHKCseDanAhE3CeDorgDL5MT6LMXXj2WCnd9UC2szdk4AWLfjdgNBCXLUanXYcpBBKOSWGwg==
-  /google-closure-compiler-java/20210106.0.0:
+  /google-closure-compiler-java/20210302.0.0:
     dev: false
     resolution:
-      integrity: sha512-RtuvBPpzBMTAizTYoLDXv3hVURi7NVXHa/bn/bf25pryrKOYUNjCCOhPRK8CP9koh/k25pSB/lyAXikFmSq+vg==
-  /google-closure-compiler-linux/20210106.0.0:
+      integrity: sha512-t4lSzS6y9e76eVCuyVN6xoBLBzBrVr3BzFWK8ogF+2TvOF92cEAbOHyZ/SV+P7tKBkB2MeEeOwOzcIVXNE0zkA==
+  /google-closure-compiler-linux/20210302.0.0:
     cpu:
       - x64
       - x86
@@ -2017,8 +2017,8 @@ packages:
     os:
       - linux
     resolution:
-      integrity: sha512-Ae2j6Ob1YDadFCiaZWg7zB2WI/wyOLH/ntEQy/OzljZPvepmO3/WNNYAH9SulCdS/T018/vz+C8nR657fRUlnQ==
-  /google-closure-compiler-osx/20210106.0.0:
+      integrity: sha512-tW0sScP38BvoqRXqDO6KWnZOLrV9E0xPi+rgqU0I7rXdCq1ZX7/8IuUtP3EIHW0sAFywtfmxlvR+V7nhy1hecA==
+  /google-closure-compiler-osx/20210302.0.0:
     cpu:
       - x64
       - x86
@@ -2027,8 +2027,8 @@ packages:
     os:
       - darwin
     resolution:
-      integrity: sha512-e58BcBbCzhpBFJ4f1a9TYPshkTq4cLVeZndRn+o42eLsLp1e2HoqJYudBHrGj6bBLbYwHfQA3hicdC8Nd8cv7w==
-  /google-closure-compiler-windows/20210106.0.0:
+      integrity: sha512-N9WgKJuHfDCKewyj8lS5D8LBAig860FidRQiuP9+eYfdnMkdWUv3IQvGpBHrnKafF0DLjeCSZXTMlEZ9N8qjgg==
+  /google-closure-compiler-windows/20210302.0.0:
     cpu:
       - x64
     dev: false
@@ -2036,11 +2036,11 @@ packages:
     os:
       - win32
     resolution:
-      integrity: sha512-FPgsZR/h4Bg2rQuXF/jGJu2FF0hXWYXGEYk2L2NlC2D1kl+MErrVsXPMJUVnwxpPjenfhahLle1ZMHvNTPDtsQ==
-  /google-closure-compiler/20210106.0.0:
+      integrity: sha512-axKAOwkcCqTeW4aRwHXp08m3rmoNQaGUhnTGmT9vAzO9Be7y/aFo3ckjDWfJZEQXnWgwy9dc1+gub0lQb7SATA==
+  /google-closure-compiler/20210302.0.0:
     dependencies:
       chalk: 2.4.2
-      google-closure-compiler-java: 20210106.0.0
+      google-closure-compiler-java: 20210302.0.0
       minimist: 1.2.5
       vinyl: 2.2.1
       vinyl-sourcemaps-apply: 0.2.1
@@ -2049,11 +2049,11 @@ packages:
       node: '>=10'
     hasBin: true
     optionalDependencies:
-      google-closure-compiler-linux: 20210106.0.0
-      google-closure-compiler-osx: 20210106.0.0
-      google-closure-compiler-windows: 20210106.0.0
+      google-closure-compiler-linux: 20210302.0.0
+      google-closure-compiler-osx: 20210302.0.0
+      google-closure-compiler-windows: 20210302.0.0
     resolution:
-      integrity: sha512-65HuRilVBBe726iinP9FJ7zLdDdLajDBfW63JD+oohIF+lRv9P/qyqTvQQV9cTFUbUJi8ar4nwe537NIMJkBjA==
+      integrity: sha512-dGZTQZjjAbM67CFB1f1XFDFpkGmZ6/kcnofwcRlEaIjMaCEfyb+NrshP6mAWy0IptsYYIU4n9aeSMyXzXlO3Mw==
   /graceful-fs/4.2.4:
     dev: true
     resolution:
@@ -3691,7 +3691,7 @@ specifiers:
   esbuild: ^0.9.1
   eslint: ^7.21.0
   execa: ^5.0.0
-  google-closure-compiler: ^20210106.0.0
+  google-closure-compiler: ^20210302.0.0
   husky: ^4.3.8
   jquery: ^3.5.1
   lint-staged: ^10.5.4
