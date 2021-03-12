@@ -20,7 +20,7 @@
 		"*.js": "eslint"
 	},
 	"dependencies": {
-		"@swc/core": "^1.2.46",
+		"@swc/core": "^1.2.50",
 		"babel-minify": "^0.5.1",
 		"byte-size": "^7.0.1",
 		"comment-mark": "^1.0.0",
