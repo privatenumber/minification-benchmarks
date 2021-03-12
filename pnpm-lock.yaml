@@ -4,7 +4,7 @@ dependencies:
   byte-size: 7.0.1
   comment-mark: 1.0.0
   d3: 6.3.1
-  esbuild: 0.8.34
+  esbuild: 0.9.1
   execa: 5.0.0
   google-closure-compiler: 20210106.0.0
   jquery: 3.5.1
@@ -1502,12 +1502,12 @@ packages:
       node: '>= 0.4'
     resolution:
       integrity: sha512-QCOllgZJtaUo9miYBcLChTUaHNjJF3PYs1VidD7AwiEj1kYxKeQTctLAezAOH5ZKRH0g2IgPn6KwB4IT8iRpvA==
-  /esbuild/0.8.34:
+  /esbuild/0.9.1:
     dev: false
     hasBin: true
     requiresBuild: true
     resolution:
-      integrity: sha512-tnr0V1ooakYr1aRLXQLzCn2GVG1kBTW3FWpRyC+NgrR3ntsouVpJOlTOV0BS4YLATx3/c+x3h/uBq9lWJlUAtQ==
+      integrity: sha512-2A0lJxpkV9tvwz+tCD6Ww1bvbZKvH4zBz8G8Dx/MhLwmJ23p8XRIz44ObWt8dpDpZARzhiahacQ+b/V1GJbx0A==
   /escalade/3.1.1:
     dev: true
     engines:
@@ -3688,7 +3688,7 @@ specifiers:
   byte-size: ^7.0.1
   comment-mark: ^1.0.0
   d3: ^6.3.1
-  esbuild: ^0.8.34
+  esbuild: ^0.9.1
   eslint: ^7.21.0
   execa: ^5.0.0
   google-closure-compiler: ^20210106.0.0
