@@ -159,13 +159,13 @@ _Want to see more projects listed?_ PRs welcome!
 ## 🥇 Results
 
 #### Best minification performance
-[UglifyJS](https://github.com/mishoo/UglifyJS) takes first place for minification performance. This is quite impressive as it doesn't support or leverage new and concise ES6+ syntax (hence the failed minifications for "terser v5.5.1").
+[UglifyJS](https://github.com/mishoo/UglifyJS) takes first place for minification performance, winning 6/8 races and only losing to Google Closure Compiler by less than `9 kB`! What's even more impressive is that it's still written in ES5 but can handle ES6 up to ES2020.
 
-[Terser](https://github.com/terser/terser) takes a very close second, only short at most by 1%. Terser is a fork of uglify-es and comes with support for ES6+.
+[Terser](https://github.com/terser/terser) takes a very close second, only short by at most by 1~2%. Terser is a fork of uglify-es and comes with support for ES6+.
 
 #### Fastest minifier
-[esbuild](https://github.com/evanw/esbuild) runs _10x_+ laps around everyone else! Nothing comes close to the Go compiled minifier/bundler.
-
-esbuild's minification supports cutting-edge [ESNext syntax](https://esbuild.github.io/content-types/#javascript) and performs very competitively—only short at most by 2% from UglifyJs.
+[esbuild](https://github.com/evanw/esbuild) runs _10x_+ laps around everyone else! The Go-lang JS minifier/bundler is a beast of its own. Not only is it insanely fast, but demonstrates very competitive minification abilities, usually performing just as well as Terser while supporting cutting-edge [ESNext syntax](https://esbuild.github.io/content-types/#javascript).
 
 _⚡️ Pro Tip: Harness the speed of esbuild in your Webpack build for minification (and even transpilation) with [esbuild-loader](https://github.com/privatenumber/esbuild-loader)._
+
+Definitely keep an eye out for [swc](https://github.com/swc-project/swc), the JS compiler written in Rust. It's also blazing fast and rumor has it they're stepping up their minification.
