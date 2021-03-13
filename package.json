@@ -20,14 +20,14 @@
 		"*.js": "eslint"
 	},
 	"dependencies": {
-		"@swc/core": "^1.2.46",
+		"@swc/core": "^1.2.50",
 		"babel-minify": "^0.5.1",
-		"byte-size": "^7.0.0",
+		"byte-size": "^7.0.1",
 		"comment-mark": "^1.0.0",
 		"d3": "^6.3.1",
-		"esbuild": "^0.8.34",
+		"esbuild": "^0.9.1",
 		"execa": "^5.0.0",
-		"google-closure-compiler": "^20210106.0.0",
+		"google-closure-compiler": "^20210302.0.0",
 		"jquery": "^3.5.1",
 		"listr": "^0.14.3",
 		"lodash": "^4.17.20",
@@ -36,18 +36,18 @@
 		"moment": "^2.29.1",
 		"outdent": "^0.8.0",
 		"react": "^17.0.1",
-		"terser": "^5.5.1",
+		"terser": "^5.6.0",
 		"three": "^0.124.0",
-		"uglify-js": "^3.12.5",
+		"uglify-js": "^3.13.1",
 		"vue": "^2.6.12"
 	},
 	"devDependencies": {
-		"@babel/eslint-parser": "^7.12.1",
-		"@babel/plugin-syntax-top-level-await": "^7.12.1",
-		"@pvtnbr/eslint-config-base": "^0.1.8",
-		"eslint": "^7.18.0",
+		"@babel/eslint-parser": "^7.13.10",
+		"@babel/plugin-syntax-top-level-await": "^7.12.13",
+		"@pvtnbr/eslint-config-base": "^0.1.11",
+		"eslint": "^7.21.0",
 		"husky": "^4.3.8",
-		"lint-staged": "^10.5.3"
+		"lint-staged": "^10.5.4"
 	},
 	"eslintConfig": {
 		"extends": "@pvtnbr/eslint-config-base",
