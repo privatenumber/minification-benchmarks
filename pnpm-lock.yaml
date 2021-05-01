@@ -11,6 +11,7 @@ specifiers:
   d3: ^6.3.1
   esbuild: ^0.9.1
   eslint: ^7.25.0
+  esno: ^0.5.0
   execa: ^5.0.0
   google-closure-compiler: ^20210302.0.0
   husky: ^4.3.8
@@ -55,6 +56,7 @@ devDependencies:
   '@babel/plugin-syntax-top-level-await': 7.12.13
   '@pvtnbr/eslint-config-base': 0.1.14_eslint@7.25.0
   eslint: 7.25.0
+  esno: 0.5.0
   husky: 4.3.8
   lint-staged: 10.5.4
 
@@ -1494,11 +1496,30 @@ packages:
       is-date-object: 1.0.2
       is-symbol: 1.0.3
 
+  /esbuild-register/2.5.0:
+    resolution: {integrity: sha512-5a8W3rH7IQbIPR9pPXJFkC3+CRMtm/OSpBz3hkWUUU63oPZ3NU6dVDGfaIjKnRizCTIRoGjNE6KEDt5p1sLwEw==}
+    dependencies:
+      esbuild: 0.11.16
+      jsonc-parser: 3.0.0
+    dev: true
+
+  /esbuild/0.11.16:
+    resolution: {integrity: sha512-34ZWjo4ouvM5cDe7uRoM9GFuMyEmpH9fnVYmomvS1cq9ED9d/0ZG1r+p4P2VbX7ihjv36zA2SWTmP8Zmt/EANA==}
+    hasBin: true
+    requiresBuild: true
+    dev: true
+
   /esbuild/0.9.1:
     resolution: {integrity: sha512-2A0lJxpkV9tvwz+tCD6Ww1bvbZKvH4zBz8G8Dx/MhLwmJ23p8XRIz44ObWt8dpDpZARzhiahacQ+b/V1GJbx0A==}
     hasBin: true
     requiresBuild: true
     dev: false
+
+  /esbuild/0.9.7:
+    resolution: {integrity: sha512-VtUf6aQ89VTmMLKrWHYG50uByMF4JQlVysb8dmg6cOgW8JnFCipmz7p+HNBl+RR3LLCuBxFGVauAe2wfnF9bLg==}
+    hasBin: true
+    requiresBuild: true
+    dev: true
 
   /escalade/3.1.1:
     resolution: {integrity: sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==}
@@ -1737,6 +1758,14 @@ packages:
       v8-compile-cache: 2.3.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /esno/0.5.0:
+    resolution: {integrity: sha512-r0tsflar7RB918JCjTNyU2QWfgyH2jgfAzHK1tABr3A5y84ruS86JanVHc6wove/V5I98soLZbg8Foso1dqCMA==}
+    hasBin: true
+    dependencies:
+      esbuild: 0.9.7
+      esbuild-register: 2.5.0
     dev: true
 
   /espree/7.3.1:
@@ -2367,6 +2396,10 @@ packages:
       eslint-utils: 2.1.0
       eslint-visitor-keys: 2.0.0
       espree: 7.3.1
+    dev: true
+
+  /jsonc-parser/3.0.0:
+    resolution: {integrity: sha512-fQzRfAbIBnR0IQvftw9FJveWiHp72Fg20giDrHz6TdfB12UH/uue0D3hm57UB5KgAVuniLMCaS8P1IMj9NR7cA==}
     dev: true
 
   /levn/0.4.1:

@@ -5,11 +5,10 @@
 	"repository": "privatenumber/minification-benchmarks",
 	"author": "Hiroki Osame <hiroki.osame@gmail.com>",
 	"private": true,
-	"type": "module",
 	"files": [],
 	"scripts": {
-		"lint": "eslint .",
-		"start": "node --experimental-import-meta-resolve lib"
+		"start": "esno lib",
+		"lint": "eslint ."
 	},
 	"husky": {
 		"hooks": {
@@ -46,16 +45,11 @@
 		"@babel/plugin-syntax-top-level-await": "^7.12.13",
 		"@pvtnbr/eslint-config-base": "^0.1.14",
 		"eslint": "^7.25.0",
+		"esno": "^0.5.0",
 		"husky": "^4.3.8",
 		"lint-staged": "^10.5.4"
 	},
 	"eslintConfig": {
-		"extends": "@pvtnbr/eslint-config-base",
-		"overrides": [
-			{
-				"files": "*.js",
-				"parser": "@babel/eslint-parser"
-			}
-		]
+		"extends": "@pvtnbr/eslint-config-base"
 	}
 }
