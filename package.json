@@ -8,7 +8,7 @@
 	"files": [],
 	"type": "module",
 	"scripts": {
-		"lint": "eslint lib",
+		"lint": "eslint .",
 		"start": "node --experimental-import-meta-resolve lib"
 	},
 	"husky": {
