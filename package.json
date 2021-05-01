@@ -9,7 +9,7 @@
 	"type": "module",
 	"scripts": {
 		"lint": "eslint lib",
-		"build": "node --experimental-import-meta-resolve lib"
+		"start": "node --experimental-import-meta-resolve lib"
 	},
 	"husky": {
 		"hooks": {
