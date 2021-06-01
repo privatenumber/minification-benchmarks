@@ -23,7 +23,7 @@ const getOptions = () => {
 
 const getMinifier = (minifierName: string) => {
 	try {
-		// eslint-disable-next-line node/global-require
+		// eslint-disable-next-line node/global-require,@typescript-eslint/no-var-requires
 		return require(`../scripts/minifiers/${minifierName}`).default;
 	} catch {
 		throw new Error(`Error loading minifier "${minifierName}"`);

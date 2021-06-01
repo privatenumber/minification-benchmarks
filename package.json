@@ -58,6 +58,9 @@
 		"typescript": "^4.3.2"
 	},
 	"eslintConfig": {
-		"extends": "@pvtnbr/eslint-config-typescript"
+		"extends": "@pvtnbr/eslint-config-typescript",
+		"rules": {
+			"@typescript-eslint/no-shadow": ["error", { "allow": ["task"] }]
+		}
 	}
 }

@@ -39,23 +39,30 @@ export async function benchmarkAllMinifiers(
 	const minifiers = await getMinifiers();
 	return await task.group(
 		task => minifiers.map(
-			minifier => task(minifier, async ({ setStatus, setOutput, setError }): Promise<MinifierBenchmarkResult> => {
-				const result = await benchmark(minifier, artifact.modulePath);
+			minifier => task(
+				minifier,
+				async ({
+					setStatus,
+					setOutput,
+					setError,
+				}): Promise<MinifierBenchmarkResult> => {
+					const result = await benchmark(minifier, artifact.modulePath);
 
-				if (!result) {
-					setError(new Error('Failed to minify'));
-				} else {
-					setStatus(formatMs(result.time));
-					setOutput(
-						`${byteSize(artifact.size)} → ${byteSize(result.minifiedSize)} (${percent(artifact.size, result.minifiedSize)})`,
-					);
-				}
+					if (!result) {
+						setError(new Error('Failed to minify'));
+					} else {
+						setStatus(formatMs(result.time));
+						setOutput(
+							`${byteSize(artifact.size)} → ${byteSize(result.minifiedSize)} (${percent(artifact.size, result.minifiedSize)})`,
+						);
+					}
 
-				return {
-					minifier,
-					result,
-				};
-			}),
+					return {
+						minifier,
+						result,
+					};
+				},
+			),
 		),
 		{ concurrency: 1 },
 	);

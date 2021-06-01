@@ -36,17 +36,24 @@ const compareSpeed = (
 		: mdu.emphasize(`${Math.floor(current.time / fastest.time)}x`)
 );
 
+const PositiveInfinity = Number.POSITIVE_INFINITY;
 function processData(results: MinifierBenchmarksResultObject) {
 	return Object.entries(results).map(([minifierName, benchmarks]) => {
 		const [result] = benchmarks;
-		const avgTime = benchmarks.reduce((current, next) => current + next?.time, 0) / benchmarks.length;
+		// eslint-disable-next-line unicorn/no-array-reduce
+		const avgTime = benchmarks.reduce(
+			(current, next) => current + next?.time,
+			0,
+		) / benchmarks.length;
 
 		return {
 			name: minifierName,
 			...result,
 			time: avgTime,
 		};
-	}).sort((a, b) => (a.minifiedSize ?? Number.POSITIVE_INFINITY) - (b.minifiedSize ?? Number.POSITIVE_INFINITY));
+	}).sort(
+		(a, b) => (a.minifiedSize ?? PositiveInfinity) - (b.minifiedSize ?? PositiveInfinity),
+	);
 }
 
 function getBenchmarkTable(
@@ -97,10 +104,12 @@ function getBenchmarkTable(
 export function getBenchmarkDataTables(artifactMinifierBenchmarks: ArtifactMinifierBenchmarks[]) {
 	return artifactMinifierBenchmarks.map(
 		({ artifact, results }) => outdent`
-			### ${mdu.link(
-				`${artifact.moduleName} v${artifact.moduleVersion}`,
-				`https://www.npmjs.com/package/${artifact.moduleName}/v/${artifact.moduleVersion}`,
-			)}
+			### ${
+				mdu.link(
+					`${artifact.moduleName} v${artifact.moduleVersion}`,
+					`https://www.npmjs.com/package/${artifact.moduleName}/v/${artifact.moduleVersion}`,
+				)
+			}
 			- Unminified size: ${mdu.c(byteSize(artifact.size))}
 			- Unminified Gzip size: ${mdu.c(byteSize(artifact.gzipSize))}
 
