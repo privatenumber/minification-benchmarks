@@ -1,20 +1,20 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { readPackageUpAsync as readPkgUp } from 'read-pkg-up';
-import { getSize, getGzipSize } from './get-size';
+import { readPackageUpAsync } from 'read-pkg-up';
 import type { Artifact } from '../types';
+import { getSize, getGzipSize } from './get-size';
 
-const readPublicPkgUp = async (cwd: string) => {
-	let pkg = await readPkgUp({ cwd });
-	while (pkg.packageJson.private) {
-		pkg = await readPkgUp({
-			cwd: path.join(path.dirname(pkg.path), '..'),
+const readPublicPackageUp = async (cwd: string) => {
+	let packageFound = await readPackageUpAsync({ cwd });
+	while (packageFound.packageJson.private) {
+		packageFound = await readPackageUpAsync({
+			cwd: path.join(path.dirname(packageFound.path), '..'),
 		});
 	}
-	return pkg.packageJson;
+	return packageFound.packageJson;
 };
 
-const isFilePathPattern = /^[\/\.]/;
+const isFilePathPattern = /^[./]/;
 
 export const getArtifact = async (
 	modulePath: string,
@@ -27,10 +27,10 @@ export const getArtifact = async (
 		packageJson,
 		code,
 	] = await Promise.all([
-		readPublicPkgUp(modulePath),
+		readPublicPackageUp(modulePath),
 		fs.readFile(modulePath),
 	]);
-	
+
 	return {
 		moduleName: packageJson.name,
 		moduleVersion: packageJson.version,

@@ -46,7 +46,7 @@ function processData(results: MinifierBenchmarksResultObject) {
 			...result,
 			time: avgTime,
 		};
-	}).sort((a, b) => (a.minifiedSize ?? Infinity) - (b.minifiedSize ?? Infinity))
+	}).sort((a, b) => (a.minifiedSize ?? Number.POSITIVE_INFINITY) - (b.minifiedSize ?? Number.POSITIVE_INFINITY));
 }
 
 function getBenchmarkTable(
@@ -55,7 +55,7 @@ function getBenchmarkTable(
 ) {
 	const results = processData(asdf);
 	const smallestMinzipped = minBy(results, 'minzippedSize');
-	const fastest = minBy(results, 'time'); 
+	const fastest = minBy(results, 'time');
 
 	return markdownTable([
 		['Minifier', 'Minified size', 'Minzipped size', 'Time'],
@@ -105,7 +105,7 @@ export function getBenchmarkDataTables(artifactMinifierBenchmarks: ArtifactMinif
 			- Unminified Gzip size: ${mdu.c(byteSize(artifact.gzipSize))}
 
 			${getBenchmarkTable(artifact, results)}
-		`
+		`,
 	).join('\n----\n');
 }
 

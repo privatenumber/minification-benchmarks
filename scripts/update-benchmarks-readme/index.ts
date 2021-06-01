@@ -1,17 +1,17 @@
 import task from 'tasuku';
-import artifactPaths from './artifact-paths';
 import { benchmarkAllMinifiers } from '../benchmark-all-minifiers';
-import { getBenchmarkDataTables, updateReadmeMd } from './update-readme';
 import { getArtifact } from '../utils/get-artifact';
 import type {
 	Artifact,
 	ArtifactsMinifierBenchmarks,
 	MinifierBenchmarkResult,
 } from '../types';
+import { getBenchmarkDataTables, updateReadmeMd } from './update-readme';
+import artifactPaths from './artifact-paths';
 
 const getArtifacts = async () => {
 	const artifacts = await Promise.all(artifactPaths.map(
-		async (filePath) => await getArtifact(filePath),
+		async filePath => await getArtifact(filePath),
 	));
 
 	artifacts.sort(
@@ -46,15 +46,15 @@ function recordData(
 	const artifacts = await getArtifacts();
 	const sampleSize = 10;
 	const artifactMinifierBenchmarks: ArtifactsMinifierBenchmarks = {};
-	
+
 	await task.group(task => [
 		task('Benchmarking', async ({ task, setTitle }) => {
 			for (let i = 1; i <= sampleSize; i += 1) {
 				setTitle(`Benchmarking #${i}`);
-	
+
 				const benchmarkArtifacts = await task.group(
-					(task) => artifacts.map(
-						(artifact) => task(artifact.moduleName, async ({ task }) => {
+					task => artifacts.map(
+						artifact => task(artifact.moduleName, async ({ task }) => {
 							const benchmarkMinifiers = await benchmarkAllMinifiers(
 								task,
 								artifact,
@@ -65,7 +65,7 @@ function recordData(
 					),
 					{ concurrency: 1 },
 				);
-	
+
 				benchmarkArtifacts.clear();
 			}
 		}),

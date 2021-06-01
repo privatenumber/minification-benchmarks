@@ -1,9 +1,9 @@
 import path from 'path';
 import assert from 'assert';
+import { inspect } from 'util';
 import execa from 'execa';
 import task from 'tasuku';
 import byteSize from 'byte-size';
-import { inspect } from 'util';
 import { getArtifact } from './utils/get-artifact';
 import { percent, formatMs } from './utils/formatting';
 import { safeJsonParse } from './utils/safe-json-parse';
@@ -28,7 +28,7 @@ const benchmark = async (
 	);
 
 	return safeJsonParse(stdout);
-}
+};
 
 type Tasuku = typeof task;
 
@@ -38,8 +38,8 @@ export async function benchmarkAllMinifiers(
 ) {
 	const minifiers = await getMinifiers();
 	return await task.group(
-		(task) => minifiers.map(
-			(minifier) => task(minifier, async ({ setStatus, setOutput, setError }): Promise<MinifierBenchmarkResult> => {
+		task => minifiers.map(
+			minifier => task(minifier, async ({ setStatus, setOutput, setError }): Promise<MinifierBenchmarkResult> => {
 				const result = await benchmark(minifier, artifact.modulePath);
 
 				if (!result) {
@@ -47,7 +47,7 @@ export async function benchmarkAllMinifiers(
 				} else {
 					setStatus(formatMs(result.time));
 					setOutput(
-						`${byteSize(artifact.size)} → ${byteSize(result.minifiedSize)} (${percent(artifact.size, result.minifiedSize)})`
+						`${byteSize(artifact.size)} → ${byteSize(result.minifiedSize)} (${percent(artifact.size, result.minifiedSize)})`,
 					);
 				}
 
