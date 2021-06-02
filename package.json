@@ -27,7 +27,7 @@
 		"comment-mark": "^1.0.0",
 		"d3": "^6.3.1",
 		"esbuild": "^0.9.1",
-		"execa": "^5.0.0",
+		"execa": "^5.0.1",
 		"google-closure-compiler": "^20210302.0.0",
 		"jquery": "^3.5.1",
 		"lodash": "^4.17.21",
@@ -45,14 +45,12 @@
 		"vue": "^2.6.12"
 	},
 	"devDependencies": {
-		"@babel/eslint-parser": "^7.13.10",
-		"@babel/plugin-syntax-top-level-await": "^7.12.13",
-		"@pvtnbr/eslint-config-typescript": "^0.1.16",
+		"@pvtnbr/eslint-config-typescript": "^0.1.17",
 		"@types/lodash": "^4.14.170",
 		"@types/minimist": "^1.2.1",
 		"@types/node": "^15.6.0",
 		"eslint": "^7.25.0",
-		"esno": "^0.5.0",
+		"esno": "^0.6.0",
 		"husky": "^4.3.8",
 		"lint-staged": "^10.5.4",
 		"typescript": "^4.3.2"

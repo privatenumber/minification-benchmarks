@@ -1,9 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@babel/eslint-parser': ^7.13.10
-  '@babel/plugin-syntax-top-level-await': ^7.12.13
-  '@pvtnbr/eslint-config-typescript': ^0.1.16
+  '@pvtnbr/eslint-config-typescript': ^0.1.17
   '@swc/core': ^1.2.50
   '@types/lodash': ^4.14.170
   '@types/minimist': ^1.2.1
@@ -14,8 +12,8 @@ specifiers:
   d3: ^6.3.1
   esbuild: ^0.9.1
   eslint: ^7.25.0
-  esno: ^0.5.0
-  execa: ^5.0.0
+  esno: ^0.6.0
+  execa: ^5.0.1
   google-closure-compiler: ^20210302.0.0
   husky: ^4.3.8
   jquery: ^3.5.1
@@ -42,7 +40,7 @@ dependencies:
   comment-mark: 1.0.0
   d3: 6.3.1
   esbuild: 0.9.1
-  execa: 5.0.0
+  execa: 5.0.1
   google-closure-compiler: 20210302.0.0
   jquery: 3.5.1
   lodash: 4.17.21
@@ -60,14 +58,12 @@ dependencies:
   vue: 2.6.12
 
 devDependencies:
-  '@babel/eslint-parser': 7.13.10_eslint@7.25.0
-  '@babel/plugin-syntax-top-level-await': 7.12.13
-  '@pvtnbr/eslint-config-typescript': 0.1.16_eslint@7.25.0+typescript@4.3.2
+  '@pvtnbr/eslint-config-typescript': 0.1.17_eslint@7.25.0+typescript@4.3.2
   '@types/lodash': 4.14.170
   '@types/minimist': 1.2.1
   '@types/node': 15.6.0
   eslint: 7.25.0
-  esno: 0.5.0
+  esno: 0.6.0
   husky: 4.3.8
   lint-staged: 10.5.4
   typescript: 4.3.2
@@ -132,19 +128,6 @@ packages:
       source-map: 0.5.7
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@babel/eslint-parser/7.13.10_eslint@7.25.0:
-    resolution: {integrity: sha512-/I1HQ3jGPhIpeBFeI3wO9WwWOnBYpuR0pX0KlkdGcRQAVX9prB/FCS2HBpL7BiFbzhny1YCiBH8MTZD2jJa7Hg==}
-    engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
-    peerDependencies:
-      '@babel/core': '>=7.11.0'
-      eslint: '>=7.5.0'
-    dependencies:
-      eslint: 7.25.0
-      eslint-scope: 5.1.0
-      eslint-visitor-keys: 1.3.0
-      semver: 6.3.0
     dev: true
 
   /@babel/eslint-parser/7.14.4_@babel+core@7.14.3+eslint@7.25.0:
@@ -284,10 +267,6 @@ packages:
       '@babel/types': 7.14.4
     dev: true
 
-  /@babel/helper-plugin-utils/7.13.0:
-    resolution: {integrity: sha512-ZPafIPSwzUlAoWT8DKs1W2VyF2gOWthGd5NGFMsBcMMol+ZhK+EQY/e6V96poa6PA/Bh+C9plWN0hXO1uB8AfQ==}
-    dev: true
-
   /@babel/helper-replace-supers/7.12.11:
     resolution: {integrity: sha512-q+w1cqmhL7R0FNzth/PLLp2N+scXEK/L2AHbXUyydxp828F4FEa5WcVoqui9vFRiHDQErj9Zof8azP32uGVTRA==}
     dependencies:
@@ -388,14 +367,6 @@ packages:
     resolution: {integrity: sha512-ArliyUsWDUqEGfWcmzpGUzNfLxTdTp6WU4IuP6QFSp9gGfWS6boxFCkJSJ/L4+RG8z/FnIU3WxCk6hPL9SSWeA==}
     engines: {node: '>=6.0.0'}
     hasBin: true
-    dev: true
-
-  /@babel/plugin-syntax-top-level-await/7.12.13:
-    resolution: {integrity: sha512-A81F9pDwyS7yM//KwbCSDqy3Uj4NMIurtplxphWxoYtNPov7cJsDkAFNNyVlIZ3jwGycVsurZ+LtOA8gZ376iQ==}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-    dependencies:
-      '@babel/helper-plugin-utils': 7.13.0
     dev: true
 
   /@babel/template/7.12.13:
@@ -509,8 +480,8 @@ packages:
       fastq: 1.11.0
     dev: true
 
-  /@pvtnbr/eslint-config-base/0.1.16_eslint@7.25.0:
-    resolution: {integrity: sha512-2HqJVq9iJG4rcwSA8XlVP6DProdBdDpUbv067YSdRgfKc9IZ83PCfRs4c8CpILYGFHoH3XXW/moxzbeqLgPDCg==}
+  /@pvtnbr/eslint-config-base/0.1.17_eslint@7.25.0:
+    resolution: {integrity: sha512-JXPKgSNgUa6ke6Jj5IycVoYVaLiUKHTUa3JzCMgRnYrtZPKOeRxnmhuYdw03K9uCEqBLnQSNU47PEgxrRO+qWA==}
     peerDependencies:
       eslint: ^7.15.0
     dependencies:
@@ -528,12 +499,12 @@ packages:
       - supports-color
     dev: true
 
-  /@pvtnbr/eslint-config-typescript/0.1.16_eslint@7.25.0+typescript@4.3.2:
-    resolution: {integrity: sha512-v0nebLT361w6hz/y4xzC7kDBUGKi4R+CGQs4xGb5kvsuNyogzkNYDRWPqEn3ROdodY6UbMXj4HPGyjw/noY0/g==}
+  /@pvtnbr/eslint-config-typescript/0.1.17_eslint@7.25.0+typescript@4.3.2:
+    resolution: {integrity: sha512-EkLx6BLwe3Yw4ZKJPfVMvmJ9YyTyDbzxRF4fPyW6mLUUyuPOQ9i/brLXkIkwe7tEZu5v2SrRrgw6D0fg3FGmog==}
     peerDependencies:
       eslint: ^7.15.0
     dependencies:
-      '@pvtnbr/eslint-config-base': 0.1.16_eslint@7.25.0
+      '@pvtnbr/eslint-config-base': 0.1.17_eslint@7.25.0
       '@typescript-eslint/eslint-plugin': 4.26.0_4f8fb2373752500a6c06ac41635c5bd4
       '@typescript-eslint/parser': 4.26.0_eslint@7.25.0+typescript@4.3.2
       eslint: 7.25.0
@@ -1685,17 +1656,17 @@ packages:
     requiresBuild: true
     dev: true
 
+  /esbuild/0.12.5:
+    resolution: {integrity: sha512-vcuP53pA5XiwUU4FnlXM+2PnVjTfHGthM7uP1gtp+9yfheGvFFbq/KyuESThmtoHPUrfZH5JpxGVJIFDVD1Egw==}
+    hasBin: true
+    requiresBuild: true
+    dev: true
+
   /esbuild/0.9.1:
     resolution: {integrity: sha512-2A0lJxpkV9tvwz+tCD6Ww1bvbZKvH4zBz8G8Dx/MhLwmJ23p8XRIz44ObWt8dpDpZARzhiahacQ+b/V1GJbx0A==}
     hasBin: true
     requiresBuild: true
     dev: false
-
-  /esbuild/0.9.7:
-    resolution: {integrity: sha512-VtUf6aQ89VTmMLKrWHYG50uByMF4JQlVysb8dmg6cOgW8JnFCipmz7p+HNBl+RR3LLCuBxFGVauAe2wfnF9bLg==}
-    hasBin: true
-    requiresBuild: true
-    dev: true
 
   /escalade/3.1.1:
     resolution: {integrity: sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==}
@@ -1854,14 +1825,6 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-scope/5.1.0:
-    resolution: {integrity: sha512-iiGRvtxWqgtx5m8EyQUJihBloE4EnYeGE/bz1wSPwJE6tZuJUtHlhqDM4Xj2ukE8Dyy1+HCZ4hE0fzIVMzb58w==}
-    engines: {node: '>=8.0.0'}
-    dependencies:
-      esrecurse: 4.3.0
-      estraverse: 4.3.0
-    dev: true
-
   /eslint-scope/5.1.1:
     resolution: {integrity: sha512-2NxwbF/hZ0KpepYN0cNbo+FN6XoK7GaHlQhgx/hIZl6Va0bF45RQOOwhLIy8lQDbuCiadSLCBnH2CFYquit5bw==}
     engines: {node: '>=8.0.0'}
@@ -1963,11 +1926,12 @@ packages:
       - supports-color
     dev: true
 
-  /esno/0.5.0:
-    resolution: {integrity: sha512-r0tsflar7RB918JCjTNyU2QWfgyH2jgfAzHK1tABr3A5y84ruS86JanVHc6wove/V5I98soLZbg8Foso1dqCMA==}
+  /esno/0.6.0:
+    resolution: {integrity: sha512-fzk7/w3I9f1c6oJ6E9qGN54rEYwweM2/LxGhW8iDrhkY4VnQvpavYS6pK3SF8iZgEvmtXsY7i9fs/D09o3Xdtg==}
     hasBin: true
     dependencies:
-      esbuild: 0.9.7
+      cross-spawn: 7.0.3
+      esbuild: 0.12.5
       esbuild-register: 2.5.0
     dev: true
 
@@ -2029,8 +1993,8 @@ packages:
       strip-final-newline: 2.0.0
     dev: true
 
-  /execa/5.0.0:
-    resolution: {integrity: sha512-ov6w/2LCiuyO4RLYGdpFGjkcs0wMTgGE8PrkTHikeUy5iJekXyPIKUjifk5CsE0pt7sMCrMZ3YNqoCj6idQOnQ==}
+  /execa/5.0.1:
+    resolution: {integrity: sha512-4hFTjFbFzQa3aCLobpbPJR/U+VoL1wdV5ozOWjeet0AWDeYr9UFGM1eUFWHX+VtOWFq4p0xXUXfW1YxUaP4fpw==}
     engines: {node: '>=10'}
     dependencies:
       cross-spawn: 7.0.3
