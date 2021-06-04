@@ -7,7 +7,9 @@
 	"private": true,
 	"files": [],
 	"scripts": {
-		"start": "esno lib",
+		"benchmark": "esno scripts/benchmark",
+		"benchmark-all-minifiers": "esno scripts/benchmark-all-minifiers",
+		"update-benchmarks-readme": "esno scripts/update-benchmarks-readme/index.ts",
 		"lint": "eslint ."
 	},
 	"husky": {
@@ -25,31 +27,45 @@
 		"comment-mark": "^1.0.0",
 		"d3": "^6.3.1",
 		"esbuild": "^0.9.1",
-		"execa": "^5.0.0",
+		"execa": "^5.0.1",
 		"google-closure-compiler": "^20210302.0.0",
 		"jquery": "^3.5.1",
-		"listr": "^0.14.3",
-		"lodash": "^4.17.20",
-		"lodash-es": "^4.17.20",
-		"markdown-table": "^2.0.0",
+		"lodash": "^4.17.21",
+		"markdown-table": "^3.0.0",
+		"mem": "^8.1.1",
+		"minimist": "^1.2.5",
 		"moment": "^2.29.1",
 		"outdent": "^0.8.0",
 		"react": "^17.0.1",
+		"read-pkg-up": "^8.0.0",
+		"tasuku": "^1.0.0",
 		"terser": "^5.6.0",
 		"three": "^0.124.0",
 		"uglify-js": "^3.13.1",
 		"vue": "^2.6.12"
 	},
 	"devDependencies": {
-		"@babel/eslint-parser": "^7.13.10",
-		"@babel/plugin-syntax-top-level-await": "^7.12.13",
-		"@pvtnbr/eslint-config-base": "^0.1.14",
+		"@pvtnbr/eslint-config-typescript": "^0.1.17",
+		"@types/lodash": "^4.14.170",
+		"@types/minimist": "^1.2.1",
+		"@types/node": "^15.6.0",
 		"eslint": "^7.25.0",
-		"esno": "^0.5.0",
+		"esno": "^0.6.0",
 		"husky": "^4.3.8",
-		"lint-staged": "^10.5.4"
+		"lint-staged": "^10.5.4",
+		"typescript": "^4.3.2"
 	},
 	"eslintConfig": {
-		"extends": "@pvtnbr/eslint-config-base"
+		"extends": "@pvtnbr/eslint-config-typescript",
+		"rules": {
+			"@typescript-eslint/no-shadow": [
+				"error",
+				{
+					"allow": [
+						"task"
+					]
+				}
+			]
+		}
 	}
 }

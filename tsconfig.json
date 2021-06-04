@@ -1,0 +1,7 @@
+{
+	"compilerOptions": {
+		"isolatedModules": true,
+		"esModuleInterop": true,
+	},
+	"include": ["scripts"]
+}
