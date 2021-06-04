@@ -64,7 +64,6 @@ export async function benchmarkAllMinifiers(
 				},
 			),
 		),
-		{ concurrency: 1 },
 	);
 }
 

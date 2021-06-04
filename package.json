@@ -38,7 +38,7 @@
 		"outdent": "^0.8.0",
 		"react": "^17.0.1",
 		"read-pkg-up": "^8.0.0",
-		"tasuku": "github:privatenumber/tasuku#built",
+		"tasuku": "^1.0.0",
 		"terser": "^5.6.0",
 		"three": "^0.124.0",
 		"uglify-js": "^3.13.1",
@@ -58,7 +58,14 @@
 	"eslintConfig": {
 		"extends": "@pvtnbr/eslint-config-typescript",
 		"rules": {
-			"@typescript-eslint/no-shadow": ["error", { "allow": ["task"] }]
+			"@typescript-eslint/no-shadow": [
+				"error",
+				{
+					"allow": [
+						"task"
+					]
+				}
+			]
 		}
 	}
 }

@@ -63,7 +63,6 @@ function recordData(
 							recordData(artifactMinifierBenchmarks, artifact, benchmarkMinifiers.results);
 						}),
 					),
-					{ concurrency: 1 },
 				);
 
 				benchmarkArtifacts.clear();
