@@ -36,9 +36,37 @@ const getSourceCode = async (filePath: string) => {
 	return sourceCode.toString();
 };
 
+const preservedComment = /\/\*!\n/g;
+const legalComment = /\* @license/g;
+
+async function stripComments(
+	code: string,
+	filePath: string,
+) {
+	let strippedCode = code;
+
+	if (preservedComment.test(strippedCode)) {
+		strippedCode = strippedCode.replace(preservedComment, '/*\n');
+	}
+
+	if (legalComment.test(strippedCode)) {
+		strippedCode = strippedCode.replace(legalComment, '*');
+	}
+
+	if (code !== strippedCode) {
+		// For minifiers like Google Closure that read from path
+		await fs.writeFile(filePath, strippedCode);
+	}
+
+	return strippedCode;
+}
+
 (async ({ minifierName, filePath }) => {
 	const minifier = getMinifier(minifierName);
-	const code = await getSourceCode(filePath);
+	const code = await stripComments(
+		await getSourceCode(filePath),
+		filePath,
+	);
 
 	const start = process.hrtime();
 	const minifiedCode = await minifier({
