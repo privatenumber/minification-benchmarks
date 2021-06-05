@@ -46,15 +46,20 @@ export async function benchmarkAllMinifiers(
 					setOutput,
 					setError,
 				}): Promise<MinifierBenchmarkResult> => {
-					const result = await benchmark(minifier, artifact.modulePath);
+					let result;
+					try {
+						result = await benchmark(minifier, artifact.modulePath);
 
-					if (!result) {
-						setError(new Error('Failed to minify'));
-					} else {
-						setStatus(formatMs(result.time));
-						setOutput(
-							`${byteSize(artifact.size)} → ${byteSize(result.minifiedSize)} (${percent(artifact.size, result.minifiedSize)})`,
-						);
+						if (!result) {
+							setError(new Error('Failed to minify'));
+						} else {
+							setStatus(formatMs(result.time));
+							setOutput(
+								`${byteSize(artifact.size)} → ${byteSize(result.minifiedSize)} (${percent(artifact.size, result.minifiedSize)})`,
+							);
+						}
+					} catch (error) {
+						setError(error);
 					}
 
 					return {

@@ -1,3 +1,4 @@
+import path from 'path';
 import task from 'tasuku';
 import { benchmarkAllMinifiers } from '../benchmark-all-minifiers';
 import { getArtifact } from '../utils/get-artifact';
@@ -44,7 +45,7 @@ function recordData(
 
 (async () => {
 	const artifacts = await getArtifacts();
-	const sampleSize = 10;
+	const sampleSize = 5;
 	const artifactMinifierBenchmarks: ArtifactsMinifierBenchmarks = {};
 
 	await task.group(task => [
@@ -54,14 +55,17 @@ function recordData(
 
 				const benchmarkArtifacts = await task.group(
 					task => artifacts.map(
-						artifact => task(artifact.moduleName, async ({ task }) => {
-							const benchmarkMinifiers = await benchmarkAllMinifiers(
-								task,
-								artifact,
-							);
-							benchmarkMinifiers.clear();
-							recordData(artifactMinifierBenchmarks, artifact, benchmarkMinifiers.results);
-						}),
+						artifact => task(
+							`${artifact.moduleName} - ${path.relative(process.cwd(), artifact.modulePath)}`,
+							async ({ task }) => {
+								const benchmarkMinifiers = await benchmarkAllMinifiers(
+									task,
+									artifact,
+								);
+								benchmarkMinifiers.clear();
+								recordData(artifactMinifierBenchmarks, artifact, benchmarkMinifiers.results);
+							},
+						),
 					),
 				);
 

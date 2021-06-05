@@ -10,6 +10,10 @@ const artifacts = [
 	'jquery',
 	// Can't use require resolve due to export map
 	path.resolve('node_modules/terser/dist/bundle.min.js'),
+	'antd/dist/antd.js',
+	'echarts',
+	'victory/dist/victory.js',
+
 ];
 
 export default artifacts;
