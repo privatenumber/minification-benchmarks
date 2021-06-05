@@ -12,8 +12,8 @@ Benchmarks are gathered on the following minifiers:
 
 ## 👟 Methodology
 
-- Each minifier is executed in its own process
-- The measured time is an average taken from 10 consecutive runs
+- Each minifier is executed in its own process with a 1 minute timeout
+- The measured time is an average taken from 5 consecutive runs
 - Each table is sorted by smallest minified size in ascending order
 - Each time is annotated with a multiplier relative to the fastest minifier
 - _"Minzipped size"_ measures how well the minified file compresses with Gzip
