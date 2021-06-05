@@ -21,7 +21,11 @@ Example:
 $ npm run benchmark-all-minifiers ./node_modules/vue/dist/vue.runtime.common.dev.js
 ```
 
-### Get benchmarks and update readme.md
+### Benchmark artifacts and update readme.md
 ```sh
 $ npm run update-benchmarks-readme
 ```
+
+## Artifacts
+
+All artifacts used for benchmarking are in [`/scripts/update-benchmarks-readme/artifact-paths.ts`](/scripts/update-benchmarks-readme/artifact-paths.ts).
