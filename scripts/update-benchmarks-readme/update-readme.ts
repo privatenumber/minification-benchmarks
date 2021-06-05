@@ -71,7 +71,7 @@ function getBenchmarkTable(
 			(
 				min.minifiedSize
 					? displayColumn(
-						byteSize(min.minzippedSize),
+						byteSize(min.minifiedSize),
 						percent(artifact.size, min.minifiedSize),
 						index === 0,
 					)
