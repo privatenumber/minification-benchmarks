@@ -29,47 +29,47 @@ Benchmarks are gathered on the following minifiers:
 
 | Minifier                                                                                   |                  Minified size |                   Minzipped size |                        Time |
 | :----------------------------------------------------------------------------------------- | -----------------------------: | -------------------------------: | --------------------------: |
-| [uglify-js](/scripts/minifiers/uglify-js.js)                                               | **<sup>🏆-67% </sup>`2.2 MB`** | **<sup>🏆-45% </sup>`458.8 kB`** | <sup>*43x* </sup>`22,206ms` |
-| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-66% </sup>`2.2 MB` |       <sup>-45% </sup>`461.4 kB` | <sup>*19x* </sup>`10,158ms` |
-| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-65% </sup>`2.3 MB` |       <sup>-41% </sup>`491.2 kB` |   **<sup>🏆 </sup>`513ms`** |
-| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |       <sup>-64% </sup>`2.4 MB` |       <sup>-42% </sup>`483.0 kB` |   <sup>*8x* </sup>`4,253ms` |
-| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |       <sup>-64% </sup>`2.4 MB` |       <sup>-42% </sup>`479.9 kB` |   <sup>*9x* </sup>`4,685ms` |
-| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) |       <sup>-59% </sup>`2.8 MB` |       <sup>-38% </sup>`515.5 kB` | <sup>*49x* </sup>`25,349ms` |
-| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-57% </sup>`2.9 MB` |       <sup>-36% </sup>`532.7 kB` | <sup>*41x* </sup>`21,179ms` |
-| [swc](/scripts/minifiers/swc.js)                                                           |       <sup>-33% </sup>`4.5 MB` |       <sup>-24% </sup>`634.8 kB` |   <sup>*3x* </sup>`1,754ms` |
+| [uglify-js](/scripts/minifiers/uglify-js.js)                                               | **<sup>🏆-67% </sup>`2.2 MB`** | **<sup>🏆-45% </sup>`458.8 kB`** | <sup>*31x* </sup>`25,427ms` |
+| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-66% </sup>`2.2 MB` |       <sup>-45% </sup>`461.4 kB` | <sup>*14x* </sup>`11,742ms` |
+| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-65% </sup>`2.3 MB` |       <sup>-41% </sup>`491.2 kB` |   **<sup>🏆 </sup>`807ms`** |
+| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |       <sup>-64% </sup>`2.4 MB` |       <sup>-42% </sup>`483.0 kB` |   <sup>*5x* </sup>`4,774ms` |
+| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |       <sup>-64% </sup>`2.4 MB` |       <sup>-42% </sup>`479.9 kB` |   <sup>*6x* </sup>`5,411ms` |
+| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) |       <sup>-59% </sup>`2.8 MB` |       <sup>-38% </sup>`515.5 kB` | <sup>*51x* </sup>`41,792ms` |
+| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-57% </sup>`2.9 MB` |       <sup>-36% </sup>`532.7 kB` | <sup>*40x* </sup>`32,670ms` |
+| [swc](/scripts/minifiers/swc.js)                                                           |       <sup>-33% </sup>`4.5 MB` |       <sup>-24% </sup>`634.8 kB` |   <sup>*2x* </sup>`1,987ms` |
 | [babel-minify](/scripts/minifiers/babel-minify.js) <sub>_Failed_</sub>                     |                              — |                                — |                           — |
 ----
 ### [d3 v6.3.1](https://www.npmjs.com/package/d3/v/6.3.1)
 - Unminified size: `555.8 kB`
 - Unminified Gzip size: `130.5 kB`
 
-| Minifier                                                                                   |                    Minified size |                  Minzipped size |                        Time |
-| :----------------------------------------------------------------------------------------- | -------------------------------: | ------------------------------: | --------------------------: |
-| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) | **<sup>🏆-54% </sup>`256.1 kB`** |       <sup>-30% </sup>`91.4 kB` | <sup>*109x* </sup>`9,871ms` |
-| [uglify-js](/scripts/minifiers/uglify-js.js)                                               |       <sup>-52% </sup>`265.4 kB` | **<sup>🏆-33% </sup>`87.3 kB`** |  <sup>*79x* </sup>`7,158ms` |
-| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-52% </sup>`268.0 kB` |       <sup>-33% </sup>`87.9 kB` |  <sup>*38x* </sup>`3,492ms` |
-| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-51% </sup>`270.4 kB` |       <sup>-31% </sup>`90.6 kB` |    **<sup>🏆 </sup>`90ms`** |
-| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |       <sup>-50% </sup>`276.1 kB` |       <sup>-32% </sup>`88.6 kB` |  <sup>*13x* </sup>`1,185ms` |
-| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |       <sup>-50% </sup>`276.5 kB` |       <sup>-32% </sup>`89.2 kB` |  <sup>*16x* </sup>`1,462ms` |
-| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-45% </sup>`306.4 kB` |      <sup>-22% </sup>`101.9 kB` |  <sup>*95x* </sup>`8,555ms` |
-| [swc](/scripts/minifiers/swc.js)                                                           |       <sup>-17% </sup>`462.8 kB` |      <sup>-11% </sup>`116.2 kB` |     <sup>*4x* </sup>`388ms` |
-| [babel-minify](/scripts/minifiers/babel-minify.js) <sub>_Failed_</sub>                     |                                — |                               — |                           — |
+| Minifier                                                                                   |                    Minified size |                  Minzipped size |                         Time |
+| :----------------------------------------------------------------------------------------- | -------------------------------: | ------------------------------: | ---------------------------: |
+| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) | **<sup>🏆-54% </sup>`256.1 kB`** |       <sup>-30% </sup>`91.4 kB` | <sup>*120x* </sup>`11,094ms` |
+| [uglify-js](/scripts/minifiers/uglify-js.js)                                               |       <sup>-52% </sup>`265.4 kB` | **<sup>🏆-33% </sup>`87.3 kB`** |   <sup>*87x* </sup>`8,126ms` |
+| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-52% </sup>`268.0 kB` |       <sup>-33% </sup>`87.9 kB` |   <sup>*42x* </sup>`3,963ms` |
+| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-51% </sup>`270.4 kB` |       <sup>-31% </sup>`90.6 kB` |     **<sup>🏆 </sup>`92ms`** |
+| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |       <sup>-50% </sup>`276.1 kB` |       <sup>-32% </sup>`88.6 kB` |   <sup>*14x* </sup>`1,330ms` |
+| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |       <sup>-50% </sup>`276.5 kB` |       <sup>-32% </sup>`89.2 kB` |   <sup>*18x* </sup>`1,687ms` |
+| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-45% </sup>`306.4 kB` |      <sup>-22% </sup>`101.9 kB` |  <sup>*103x* </sup>`9,582ms` |
+| [swc](/scripts/minifiers/swc.js)                                                           |       <sup>-17% </sup>`462.8 kB` |      <sup>-11% </sup>`116.2 kB` |      <sup>*4x* </sup>`404ms` |
+| [babel-minify](/scripts/minifiers/babel-minify.js) <sub>_Failed_</sub>                     |                                — |                               — |                            — |
 ----
 ### [echarts v5.1.1](https://www.npmjs.com/package/echarts/v/5.1.1)
 - Unminified size: `3.2 MB`
 - Unminified Gzip size: `689.7 kB`
 
-| Minifier                                                                                   |                    Minified size |                   Minzipped size |                         Time |
-| :----------------------------------------------------------------------------------------- | -------------------------------: | -------------------------------: | ---------------------------: |
-| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) | **<sup>🏆-75% </sup>`790.1 kB`** | **<sup>🏆-57% </sup>`296.7 kB`** |  <sup>*64x* </sup>`18,770ms` |
-| [uglify-js](/scripts/minifiers/uglify-js.js)                                               |       <sup>-69% </sup>`983.8 kB` |       <sup>-53% </sup>`326.0 kB` |  <sup>*63x* </sup>`18,595ms` |
-| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-69% </sup>`998.8 kB` |       <sup>-52% </sup>`330.4 kB` |  <sup>*57x* </sup>`16,820ms` |
-| [terser](/scripts/minifiers/terser.js)                                                     |         <sup>-69% </sup>`1.0 MB` |       <sup>-53% </sup>`322.1 kB` |   <sup>*30x* </sup>`8,983ms` |
-| [babel-minify](/scripts/minifiers/babel-minify.js)                                         |         <sup>-69% </sup>`1.0 MB` |       <sup>-53% </sup>`325.5 kB` | <sup>*137x* </sup>`40,152ms` |
-| [esbuild](/scripts/minifiers/esbuild.js)                                                   |         <sup>-68% </sup>`1.0 MB` |       <sup>-52% </sup>`331.7 kB` |    **<sup>🏆 </sup>`293ms`** |
-| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |         <sup>-67% </sup>`1.1 MB` |       <sup>-52% </sup>`331.7 kB` |    <sup>*9x* </sup>`2,926ms` |
-| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |         <sup>-66% </sup>`1.1 MB` |       <sup>-52% </sup>`330.7 kB` |   <sup>*13x* </sup>`3,948ms` |
-| [swc](/scripts/minifiers/swc.js)                                                           |         <sup>-42% </sup>`1.8 MB` |       <sup>-34% </sup>`455.4 kB` |    <sup>*4x* </sup>`1,377ms` |
+| Minifier                                                                                   |                    Minified size |                   Minzipped size |                        Time |
+| :----------------------------------------------------------------------------------------- | -------------------------------: | -------------------------------: | --------------------------: |
+| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) | **<sup>🏆-75% </sup>`790.1 kB`** | **<sup>🏆-57% </sup>`296.7 kB`** | <sup>*66x* </sup>`26,665ms` |
+| [uglify-js](/scripts/minifiers/uglify-js.js)                                               |       <sup>-69% </sup>`983.8 kB` |       <sup>-53% </sup>`326.0 kB` | <sup>*54x* </sup>`22,110ms` |
+| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-69% </sup>`998.8 kB` |       <sup>-52% </sup>`330.4 kB` | <sup>*46x* </sup>`18,870ms` |
+| [terser](/scripts/minifiers/terser.js)                                                     |         <sup>-69% </sup>`1.0 MB` |       <sup>-53% </sup>`322.1 kB` | <sup>*25x* </sup>`10,234ms` |
+| [esbuild](/scripts/minifiers/esbuild.js)                                                   |         <sup>-68% </sup>`1.0 MB` |       <sup>-52% </sup>`331.7 kB` |   **<sup>🏆 </sup>`403ms`** |
+| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |         <sup>-67% </sup>`1.1 MB` |       <sup>-52% </sup>`331.7 kB` |   <sup>*8x* </sup>`3,377ms` |
+| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |         <sup>-66% </sup>`1.1 MB` |       <sup>-52% </sup>`330.7 kB` |  <sup>*11x* </sup>`4,649ms` |
+| [swc](/scripts/minifiers/swc.js)                                                           |         <sup>-42% </sup>`1.8 MB` |       <sup>-34% </sup>`455.4 kB` |   <sup>*3x* </sup>`1,606ms` |
+| [babel-minify](/scripts/minifiers/babel-minify.js) <sub>_Failed_</sub>                     |                                — |                                — |                           — |
 ----
 ### [jquery v3.5.1](https://www.npmjs.com/package/jquery/v/3.5.1)
 - Unminified size: `287.6 kB`
@@ -77,15 +77,15 @@ Benchmarks are gathered on the following minifiers:
 
 | Minifier                                                                                   |                   Minified size |                  Minzipped size |                        Time |
 | :----------------------------------------------------------------------------------------- | ------------------------------: | ------------------------------: | --------------------------: |
-| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) | **<sup>🏆-70% </sup>`87.0 kB`** |       <sup>-62% </sup>`32.4 kB` | <sup>*152x* </sup>`5,431ms` |
-| [uglify-js](/scripts/minifiers/uglify-js.js)                                               |       <sup>-69% </sup>`88.9 kB` | **<sup>🏆-63% </sup>`31.0 kB`** |  <sup>*72x* </sup>`2,581ms` |
-| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-69% </sup>`89.9 kB` |       <sup>-63% </sup>`31.0 kB` |  <sup>*38x* </sup>`1,384ms` |
-| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-69% </sup>`90.2 kB` |       <sup>-62% </sup>`32.0 kB` |    **<sup>🏆 </sup>`36ms`** |
-| [babel-minify](/scripts/minifiers/babel-minify.js)                                         |       <sup>-68% </sup>`91.9 kB` |       <sup>-63% </sup>`31.7 kB` | <sup>*107x* </sup>`3,853ms` |
-| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |       <sup>-67% </sup>`94.3 kB` |       <sup>-63% </sup>`31.6 kB` |    <sup>*14x* </sup>`505ms` |
-| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |       <sup>-67% </sup>`94.6 kB` |       <sup>-63% </sup>`31.7 kB` |    <sup>*14x* </sup>`518ms` |
-| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-67% </sup>`96.1 kB` |       <sup>-59% </sup>`34.3 kB` | <sup>*137x* </sup>`4,924ms` |
-| [swc](/scripts/minifiers/swc.js)                                                           |      <sup>-49% </sup>`147.8 kB` |       <sup>-50% </sup>`42.4 kB` |      <sup>*2x* </sup>`82ms` |
+| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) | **<sup>🏆-70% </sup>`87.0 kB`** |       <sup>-62% </sup>`32.4 kB` | <sup>*159x* </sup>`6,245ms` |
+| [uglify-js](/scripts/minifiers/uglify-js.js)                                               |       <sup>-69% </sup>`88.9 kB` | **<sup>🏆-63% </sup>`31.0 kB`** |  <sup>*75x* </sup>`2,972ms` |
+| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-69% </sup>`89.9 kB` |       <sup>-63% </sup>`31.0 kB` |  <sup>*40x* </sup>`1,573ms` |
+| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-69% </sup>`90.2 kB` |       <sup>-62% </sup>`32.0 kB` |    **<sup>🏆 </sup>`39ms`** |
+| [babel-minify](/scripts/minifiers/babel-minify.js)                                         |       <sup>-68% </sup>`91.9 kB` |       <sup>-63% </sup>`31.7 kB` | <sup>*122x* </sup>`4,810ms` |
+| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |       <sup>-67% </sup>`94.3 kB` |       <sup>-63% </sup>`31.6 kB` |    <sup>*14x* </sup>`573ms` |
+| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |       <sup>-67% </sup>`94.6 kB` |       <sup>-63% </sup>`31.7 kB` |    <sup>*15x* </sup>`598ms` |
+| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-67% </sup>`96.1 kB` |       <sup>-59% </sup>`34.3 kB` | <sup>*143x* </sup>`5,607ms` |
+| [swc](/scripts/minifiers/swc.js)                                                           |      <sup>-49% </sup>`147.8 kB` |       <sup>-50% </sup>`42.4 kB` |      <sup>*2x* </sup>`84ms` |
 ----
 ### [lodash v4.17.21](https://www.npmjs.com/package/lodash/v/4.17.21)
 - Unminified size: `544.1 kB`
@@ -93,15 +93,15 @@ Benchmarks are gathered on the following minifiers:
 
 | Minifier                                                                                   |                   Minified size |                  Minzipped size |                        Time |
 | :----------------------------------------------------------------------------------------- | ------------------------------: | ------------------------------: | --------------------------: |
-| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) | **<sup>🏆-89% </sup>`60.0 kB`** | **<sup>🏆-79% </sup>`20.8 kB`** | <sup>*143x* </sup>`5,566ms` |
-| [uglify-js](/scripts/minifiers/uglify-js.js)                                               |       <sup>-87% </sup>`69.7 kB` |       <sup>-75% </sup>`24.6 kB` |  <sup>*65x* </sup>`2,558ms` |
-| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-87% </sup>`71.1 kB` |       <sup>-74% </sup>`25.1 kB` |  <sup>*38x* </sup>`1,485ms` |
-| [babel-minify](/scripts/minifiers/babel-minify.js)                                         |       <sup>-87% </sup>`71.8 kB` |       <sup>-74% </sup>`25.1 kB` |  <sup>*88x* </sup>`3,441ms` |
-| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-87% </sup>`72.5 kB` |       <sup>-73% </sup>`26.1 kB` |    **<sup>🏆 </sup>`39ms`** |
-| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |       <sup>-86% </sup>`75.4 kB` |       <sup>-73% </sup>`25.9 kB` |    <sup>*13x* </sup>`534ms` |
-| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |       <sup>-86% </sup>`75.7 kB` |       <sup>-73% </sup>`26.2 kB` |    <sup>*14x* </sup>`579ms` |
-| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-86% </sup>`77.4 kB` |       <sup>-73% </sup>`26.2 kB` | <sup>*129x* </sup>`5,024ms` |
-| [swc](/scripts/minifiers/swc.js)                                                           |      <sup>-71% </sup>`155.7 kB` |       <sup>-61% </sup>`38.0 kB` |      <sup>*2x* </sup>`79ms` |
+| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) | **<sup>🏆-89% </sup>`60.0 kB`** | **<sup>🏆-79% </sup>`20.8 kB`** | <sup>*140x* </sup>`6,281ms` |
+| [uglify-js](/scripts/minifiers/uglify-js.js)                                               |       <sup>-87% </sup>`69.7 kB` |       <sup>-75% </sup>`24.6 kB` |  <sup>*65x* </sup>`2,928ms` |
+| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-87% </sup>`71.1 kB` |       <sup>-74% </sup>`25.1 kB` |  <sup>*38x* </sup>`1,706ms` |
+| [babel-minify](/scripts/minifiers/babel-minify.js)                                         |       <sup>-87% </sup>`71.8 kB` |       <sup>-74% </sup>`25.1 kB` |  <sup>*93x* </sup>`4,188ms` |
+| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-87% </sup>`72.5 kB` |       <sup>-73% </sup>`26.1 kB` |    **<sup>🏆 </sup>`45ms`** |
+| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |       <sup>-86% </sup>`75.4 kB` |       <sup>-73% </sup>`25.9 kB` |    <sup>*13x* </sup>`599ms` |
+| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |       <sup>-86% </sup>`75.7 kB` |       <sup>-73% </sup>`26.2 kB` |    <sup>*14x* </sup>`661ms` |
+| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-86% </sup>`77.4 kB` |       <sup>-73% </sup>`26.2 kB` | <sup>*127x* </sup>`5,703ms` |
+| [swc](/scripts/minifiers/swc.js)                                                           |      <sup>-71% </sup>`155.7 kB` |       <sup>-61% </sup>`38.0 kB` |      <sup>*1x* </sup>`78ms` |
 ----
 ### [moment v2.29.1](https://www.npmjs.com/package/moment/v/2.29.1)
 - Unminified size: `173.9 kB`
@@ -109,14 +109,14 @@ Benchmarks are gathered on the following minifiers:
 
 | Minifier                                                                                   |                   Minified size |                  Minzipped size |                        Time |
 | :----------------------------------------------------------------------------------------- | ------------------------------: | ------------------------------: | --------------------------: |
-| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) | **<sup>🏆-72% </sup>`49.6 kB`** | **<sup>🏆-52% </sup>`17.6 kB`** | <sup>*192x* </sup>`4,955ms` |
-| [uglify-js](/scripts/minifiers/uglify-js.js)                                               |       <sup>-66% </sup>`58.3 kB` |       <sup>-49% </sup>`18.5 kB` |  <sup>*70x* </sup>`1,813ms` |
-| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-66% </sup>`59.1 kB` |       <sup>-49% </sup>`18.6 kB` |  <sup>*40x* </sup>`1,042ms` |
-| [babel-minify](/scripts/minifiers/babel-minify.js)                                         |       <sup>-66% </sup>`59.1 kB` |       <sup>-49% </sup>`18.7 kB` |  <sup>*94x* </sup>`2,434ms` |
-| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-66% </sup>`59.9 kB` |       <sup>-47% </sup>`19.3 kB` |    **<sup>🏆 </sup>`26ms`** |
-| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-65% </sup>`60.9 kB` |       <sup>-46% </sup>`19.7 kB` | <sup>*167x* </sup>`4,306ms` |
-| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |       <sup>-64% </sup>`63.0 kB` |       <sup>-47% </sup>`19.5 kB` |    <sup>*13x* </sup>`336ms` |
-| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |       <sup>-64% </sup>`63.2 kB` |       <sup>-46% </sup>`19.6 kB` |    <sup>*15x* </sup>`408ms` |
+| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) | **<sup>🏆-72% </sup>`49.6 kB`** | **<sup>🏆-52% </sup>`17.6 kB`** | <sup>*192x* </sup>`5,667ms` |
+| [uglify-js](/scripts/minifiers/uglify-js.js)                                               |       <sup>-66% </sup>`58.3 kB` |       <sup>-49% </sup>`18.5 kB` |  <sup>*69x* </sup>`2,063ms` |
+| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-66% </sup>`59.1 kB` |       <sup>-49% </sup>`18.6 kB` |  <sup>*39x* </sup>`1,168ms` |
+| [babel-minify](/scripts/minifiers/babel-minify.js)                                         |       <sup>-66% </sup>`59.1 kB` |       <sup>-49% </sup>`18.7 kB` |  <sup>*99x* </sup>`2,930ms` |
+| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-66% </sup>`59.9 kB` |       <sup>-47% </sup>`19.3 kB` |    **<sup>🏆 </sup>`30ms`** |
+| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-65% </sup>`60.9 kB` |       <sup>-46% </sup>`19.7 kB` | <sup>*172x* </sup>`5,090ms` |
+| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |       <sup>-64% </sup>`63.0 kB` |       <sup>-47% </sup>`19.5 kB` |    <sup>*12x* </sup>`382ms` |
+| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |       <sup>-64% </sup>`63.2 kB` |       <sup>-46% </sup>`19.6 kB` |    <sup>*14x* </sup>`441ms` |
 | [swc](/scripts/minifiers/swc.js)                                                           |      <sup>-41% </sup>`102.4 kB` |       <sup>-29% </sup>`25.8 kB` |      <sup>*1x* </sup>`49ms` |
 ----
 ### [react v17.0.1](https://www.npmjs.com/package/react/v/17.0.1)
@@ -125,15 +125,15 @@ Benchmarks are gathered on the following minifiers:
 
 | Minifier                                                                                   |                   Minified size |                 Minzipped size |                        Time |
 | :----------------------------------------------------------------------------------------- | ------------------------------: | -----------------------------: | --------------------------: |
-| [uglify-js](/scripts/minifiers/uglify-js.js)                                               | **<sup>🏆-68% </sup>`22.8 kB`** | **<sup>🏆-58% </sup>`8.2 kB`** |    <sup>*51x* </sup>`765ms` |
-| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-68% </sup>`23.1 kB` |       <sup>-57% </sup>`8.3 kB` |    <sup>*26x* </sup>`393ms` |
-| [babel-minify](/scripts/minifiers/babel-minify.js)                                         |       <sup>-67% </sup>`23.5 kB` |       <sup>-57% </sup>`8.4 kB` |  <sup>*69x* </sup>`1,035ms` |
-| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-67% </sup>`23.7 kB` |       <sup>-56% </sup>`8.6 kB` |    **<sup>🏆 </sup>`15ms`** |
-| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |       <sup>-65% </sup>`25.1 kB` |       <sup>-56% </sup>`8.7 kB` |     <sup>*9x* </sup>`144ms` |
-| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |       <sup>-65% </sup>`25.1 kB` |       <sup>-55% </sup>`8.7 kB` |    <sup>*11x* </sup>`178ms` |
-| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) |       <sup>-65% </sup>`25.2 kB` |       <sup>-52% </sup>`9.3 kB` | <sup>*259x* </sup>`3,887ms` |
-| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-55% </sup>`32.8 kB` |      <sup>-43% </sup>`11.1 kB` | <sup>*240x* </sup>`3,591ms` |
-| [swc](/scripts/minifiers/swc.js)                                                           |       <sup>-41% </sup>`42.7 kB` |      <sup>-41% </sup>`11.4 kB` |      <sup>*1x* </sup>`17ms` |
+| [uglify-js](/scripts/minifiers/uglify-js.js)                                               | **<sup>🏆-68% </sup>`22.8 kB`** | **<sup>🏆-58% </sup>`8.2 kB`** |    <sup>*55x* </sup>`886ms` |
+| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-68% </sup>`23.1 kB` |       <sup>-57% </sup>`8.3 kB` |    <sup>*27x* </sup>`437ms` |
+| [babel-minify](/scripts/minifiers/babel-minify.js)                                         |       <sup>-67% </sup>`23.5 kB` |       <sup>-57% </sup>`8.4 kB` |  <sup>*76x* </sup>`1,227ms` |
+| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-67% </sup>`23.7 kB` |       <sup>-56% </sup>`8.6 kB` |    **<sup>🏆 </sup>`16ms`** |
+| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |       <sup>-65% </sup>`25.1 kB` |       <sup>-56% </sup>`8.7 kB` |    <sup>*10x* </sup>`167ms` |
+| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |       <sup>-65% </sup>`25.1 kB` |       <sup>-55% </sup>`8.7 kB` |    <sup>*12x* </sup>`202ms` |
+| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) |       <sup>-65% </sup>`25.2 kB` |       <sup>-52% </sup>`9.3 kB` | <sup>*287x* </sup>`4,624ms` |
+| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-55% </sup>`32.8 kB` |      <sup>-43% </sup>`11.1 kB` | <sup>*256x* </sup>`4,125ms` |
+| [swc](/scripts/minifiers/swc.js)                                                           |       <sup>-41% </sup>`42.7 kB` |      <sup>-41% </sup>`11.4 kB` |      <sup>*1x* </sup>`18ms` |
 ----
 ### [terser v5.7.0](https://www.npmjs.com/package/terser/v/5.7.0)
 - Unminified size: `869.4 kB`
@@ -141,14 +141,14 @@ Benchmarks are gathered on the following minifiers:
 
 | Minifier                                                                                   |                    Minified size |                   Minzipped size |                        Time |
 | :----------------------------------------------------------------------------------------- | -------------------------------: | -------------------------------: | --------------------------: |
-| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) | **<sup>🏆-58% </sup>`369.0 kB`** |       <sup>-32% </sup>`118.5 kB` | <sup>*101x* </sup>`8,356ms` |
-| [uglify-js](/scripts/minifiers/uglify-js.js)                                               |       <sup>-53% </sup>`407.7 kB` | **<sup>🏆-34% </sup>`115.3 kB`** |  <sup>*66x* </sup>`5,521ms` |
-| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-53% </sup>`411.0 kB` |       <sup>-34% </sup>`115.5 kB` |  <sup>*37x* </sup>`3,107ms` |
-| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-53% </sup>`412.2 kB` |       <sup>-32% </sup>`118.3 kB` |    **<sup>🏆 </sup>`82ms`** |
-| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |       <sup>-51% </sup>`423.4 kB` |       <sup>-33% </sup>`116.3 kB` |  <sup>*13x* </sup>`1,121ms` |
-| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |       <sup>-51% </sup>`424.9 kB` |       <sup>-33% </sup>`116.3 kB` |  <sup>*15x* </sup>`1,241ms` |
-| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-51% </sup>`425.9 kB` |       <sup>-28% </sup>`125.8 kB` |  <sup>*89x* </sup>`7,414ms` |
-| [swc](/scripts/minifiers/swc.js)                                                           |       <sup>-32% </sup>`590.9 kB` |       <sup>-19% </sup>`141.2 kB` |     <sup>*4x* </sup>`335ms` |
+| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) | **<sup>🏆-58% </sup>`369.0 kB`** |       <sup>-32% </sup>`118.5 kB` | <sup>*103x* </sup>`9,583ms` |
+| [uglify-js](/scripts/minifiers/uglify-js.js)                                               |       <sup>-53% </sup>`407.7 kB` | **<sup>🏆-34% </sup>`115.3 kB`** |  <sup>*68x* </sup>`6,360ms` |
+| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-53% </sup>`411.0 kB` |       <sup>-34% </sup>`115.5 kB` |  <sup>*37x* </sup>`3,464ms` |
+| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-53% </sup>`412.2 kB` |       <sup>-32% </sup>`118.3 kB` |    **<sup>🏆 </sup>`92ms`** |
+| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |       <sup>-51% </sup>`423.4 kB` |       <sup>-33% </sup>`116.3 kB` |  <sup>*13x* </sup>`1,275ms` |
+| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |       <sup>-51% </sup>`424.9 kB` |       <sup>-33% </sup>`116.3 kB` |  <sup>*15x* </sup>`1,405ms` |
+| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-51% </sup>`425.9 kB` |       <sup>-28% </sup>`125.8 kB` |  <sup>*91x* </sup>`8,432ms` |
+| [swc](/scripts/minifiers/swc.js)                                                           |       <sup>-32% </sup>`590.9 kB` |       <sup>-19% </sup>`141.2 kB` |     <sup>*3x* </sup>`333ms` |
 | [babel-minify](/scripts/minifiers/babel-minify.js) <sub>_Failed_</sub>                     |                                — |                                — |                           — |
 ----
 ### [three v0.124.0](https://www.npmjs.com/package/three/v/0.124.0)
@@ -157,15 +157,15 @@ Benchmarks are gathered on the following minifiers:
 
 | Minifier                                                                                   |                    Minified size |                   Minzipped size |                         Time |
 | :----------------------------------------------------------------------------------------- | -------------------------------: | -------------------------------: | ---------------------------: |
-| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) | **<sup>🏆-58% </sup>`527.6 kB`** | **<sup>🏆-40% </sup>`148.5 kB`** |  <sup>*87x* </sup>`11,335ms` |
-| [uglify-js](/scripts/minifiers/uglify-js.js)                                               |       <sup>-48% </sup>`644.3 kB` |       <sup>-36% </sup>`158.7 kB` |   <sup>*65x* </sup>`8,456ms` |
-| [babel-minify](/scripts/minifiers/babel-minify.js)                                         |       <sup>-48% </sup>`645.3 kB` |       <sup>-35% </sup>`161.4 kB` | <sup>*108x* </sup>`14,040ms` |
-| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-48% </sup>`647.2 kB` |       <sup>-34% </sup>`163.3 kB` |    **<sup>🏆 </sup>`130ms`** |
-| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-48% </sup>`653.4 kB` |       <sup>-36% </sup>`159.1 kB` |   <sup>*33x* </sup>`4,296ms` |
-| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-47% </sup>`660.2 kB` |       <sup>-33% </sup>`167.1 kB` |   <sup>*74x* </sup>`9,641ms` |
-| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |       <sup>-46% </sup>`675.4 kB` |       <sup>-35% </sup>`162.9 kB` |   <sup>*12x* </sup>`1,623ms` |
-| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |       <sup>-46% </sup>`675.6 kB` |       <sup>-35% </sup>`162.9 kB` |   <sup>*13x* </sup>`1,796ms` |
-| [swc](/scripts/minifiers/swc.js)                                                           |       <sup>-23% </sup>`960.3 kB` |       <sup>-21% </sup>`197.2 kB` |      <sup>*3x* </sup>`441ms` |
+| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) | **<sup>🏆-58% </sup>`527.6 kB`** | **<sup>🏆-40% </sup>`148.5 kB`** |  <sup>*83x* </sup>`12,728ms` |
+| [uglify-js](/scripts/minifiers/uglify-js.js)                                               |       <sup>-48% </sup>`644.3 kB` |       <sup>-36% </sup>`158.7 kB` |   <sup>*65x* </sup>`9,956ms` |
+| [babel-minify](/scripts/minifiers/babel-minify.js)                                         |       <sup>-48% </sup>`645.3 kB` |       <sup>-35% </sup>`161.4 kB` | <sup>*147x* </sup>`22,466ms` |
+| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-48% </sup>`647.2 kB` |       <sup>-34% </sup>`163.3 kB` |    **<sup>🏆 </sup>`153ms`** |
+| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-48% </sup>`653.4 kB` |       <sup>-36% </sup>`159.1 kB` |   <sup>*32x* </sup>`4,966ms` |
+| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-47% </sup>`660.2 kB` |       <sup>-33% </sup>`167.1 kB` |  <sup>*73x* </sup>`11,223ms` |
+| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |       <sup>-46% </sup>`675.4 kB` |       <sup>-35% </sup>`162.9 kB` |   <sup>*12x* </sup>`1,870ms` |
+| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |       <sup>-46% </sup>`675.6 kB` |       <sup>-35% </sup>`162.9 kB` |   <sup>*13x* </sup>`2,101ms` |
+| [swc](/scripts/minifiers/swc.js)                                                           |       <sup>-23% </sup>`960.3 kB` |       <sup>-21% </sup>`197.2 kB` |      <sup>*3x* </sup>`577ms` |
 ----
 ### [victory v35.8.4](https://www.npmjs.com/package/victory/v/35.8.4)
 - Unminified size: `2.1 MB`
@@ -173,14 +173,14 @@ Benchmarks are gathered on the following minifiers:
 
 | Minifier                                                                                   |                    Minified size |                   Minzipped size |                        Time |
 | :----------------------------------------------------------------------------------------- | -------------------------------: | -------------------------------: | --------------------------: |
-| [uglify-js](/scripts/minifiers/uglify-js.js)                                               | **<sup>🏆-67% </sup>`706.5 kB`** |       <sup>-49% </sup>`159.3 kB` | <sup>*62x* </sup>`12,172ms` |
-| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-66% </sup>`715.6 kB` | **<sup>🏆-49% </sup>`158.9 kB`** |  <sup>*30x* </sup>`5,969ms` |
-| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-66% </sup>`724.5 kB` |       <sup>-42% </sup>`180.5 kB` |   **<sup>🏆 </sup>`195ms`** |
-| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |       <sup>-65% </sup>`756.6 kB` |       <sup>-46% </sup>`167.6 kB` |  <sup>*11x* </sup>`2,228ms` |
-| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |       <sup>-64% </sup>`759.3 kB` |       <sup>-47% </sup>`166.6 kB` |  <sup>*11x* </sup>`2,285ms` |
-| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) |       <sup>-61% </sup>`829.1 kB` |       <sup>-41% </sup>`182.9 kB` | <sup>*72x* </sup>`14,143ms` |
-| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-58% </sup>`903.3 kB` |       <sup>-38% </sup>`193.2 kB` | <sup>*60x* </sup>`11,817ms` |
-| [swc](/scripts/minifiers/swc.js)                                                           |         <sup>-30% </sup>`1.5 MB` |       <sup>-26% </sup>`230.7 kB` |     <sup>*3x* </sup>`771ms` |
+| [uglify-js](/scripts/minifiers/uglify-js.js)                                               | **<sup>🏆-67% </sup>`706.5 kB`** |       <sup>-49% </sup>`159.3 kB` | <sup>*67x* </sup>`14,604ms` |
+| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-66% </sup>`715.6 kB` | **<sup>🏆-49% </sup>`158.9 kB`** |  <sup>*32x* </sup>`6,998ms` |
+| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-66% </sup>`724.5 kB` |       <sup>-42% </sup>`180.5 kB` |   **<sup>🏆 </sup>`217ms`** |
+| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |       <sup>-65% </sup>`756.6 kB` |       <sup>-46% </sup>`167.6 kB` |  <sup>*11x* </sup>`2,564ms` |
+| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |       <sup>-64% </sup>`759.3 kB` |       <sup>-47% </sup>`166.6 kB` |  <sup>*12x* </sup>`2,694ms` |
+| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) |       <sup>-61% </sup>`829.1 kB` |       <sup>-41% </sup>`182.9 kB` | <sup>*75x* </sup>`16,323ms` |
+| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-58% </sup>`903.3 kB` |       <sup>-38% </sup>`193.2 kB` | <sup>*63x* </sup>`13,788ms` |
+| [swc](/scripts/minifiers/swc.js)                                                           |         <sup>-30% </sup>`1.5 MB` |       <sup>-26% </sup>`230.7 kB` |   <sup>*5x* </sup>`1,097ms` |
 | [babel-minify](/scripts/minifiers/babel-minify.js) <sub>_Failed_</sub>                     |                                — |                                — |                           — |
 ----
 ### [vue v2.6.12](https://www.npmjs.com/package/vue/v/2.6.12)
@@ -189,15 +189,15 @@ Benchmarks are gathered on the following minifiers:
 
 | Minifier                                                                                   |                   Minified size |                  Minzipped size |                        Time |
 | :----------------------------------------------------------------------------------------- | ------------------------------: | ------------------------------: | --------------------------: |
-| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) | **<sup>🏆-68% </sup>`71.3 kB`** | **<sup>🏆-55% </sup>`28.1 kB`** | <sup>*159x* </sup>`5,496ms` |
-| [uglify-js](/scripts/minifiers/uglify-js.js)                                               |       <sup>-58% </sup>`94.2 kB` |       <sup>-50% </sup>`31.2 kB` |  <sup>*54x* </sup>`1,882ms` |
-| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-57% </sup>`94.9 kB` |       <sup>-50% </sup>`31.3 kB` |  <sup>*30x* </sup>`1,047ms` |
-| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-57% </sup>`95.1 kB` |       <sup>-49% </sup>`31.8 kB` |    **<sup>🏆 </sup>`35ms`** |
-| [babel-minify](/scripts/minifiers/babel-minify.js)                                         |       <sup>-57% </sup>`95.2 kB` |       <sup>-50% </sup>`31.4 kB` |  <sup>*76x* </sup>`2,650ms` |
-| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-55% </sup>`99.4 kB` |       <sup>-47% </sup>`33.0 kB` | <sup>*134x* </sup>`4,628ms` |
-| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |      <sup>-55% </sup>`101.0 kB` |       <sup>-48% </sup>`32.2 kB` |    <sup>*12x* </sup>`431ms` |
-| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |      <sup>-55% </sup>`101.2 kB` |       <sup>-48% </sup>`32.1 kB` |    <sup>*12x* </sup>`445ms` |
-| [swc](/scripts/minifiers/swc.js)                                                           |      <sup>-40% </sup>`134.7 kB` |       <sup>-39% </sup>`38.3 kB` |      <sup>*1x* </sup>`55ms` |
+| [google-closure-compiler.advanced](/scripts/minifiers/google-closure-compiler.advanced.js) | **<sup>🏆-68% </sup>`71.3 kB`** | **<sup>🏆-55% </sup>`28.1 kB`** | <sup>*180x* </sup>`6,552ms` |
+| [uglify-js](/scripts/minifiers/uglify-js.js)                                               |       <sup>-58% </sup>`94.2 kB` |       <sup>-50% </sup>`31.2 kB` |  <sup>*61x* </sup>`2,224ms` |
+| [terser](/scripts/minifiers/terser.js)                                                     |       <sup>-57% </sup>`94.9 kB` |       <sup>-50% </sup>`31.3 kB` |  <sup>*34x* </sup>`1,244ms` |
+| [esbuild](/scripts/minifiers/esbuild.js)                                                   |       <sup>-57% </sup>`95.1 kB` |       <sup>-49% </sup>`31.8 kB` |    **<sup>🏆 </sup>`36ms`** |
+| [babel-minify](/scripts/minifiers/babel-minify.js)                                         |       <sup>-57% </sup>`95.2 kB` |       <sup>-50% </sup>`31.4 kB` |  <sup>*88x* </sup>`3,228ms` |
+| [google-closure-compiler.simple](/scripts/minifiers/google-closure-compiler.simple.js)     |       <sup>-55% </sup>`99.4 kB` |       <sup>-47% </sup>`33.0 kB` | <sup>*143x* </sup>`5,226ms` |
+| [uglify-js.no-compress](/scripts/minifiers/uglify-js.no-compress.js)                       |      <sup>-55% </sup>`101.0 kB` |       <sup>-48% </sup>`32.2 kB` |    <sup>*13x* </sup>`499ms` |
+| [terser.no-compress](/scripts/minifiers/terser.no-compress.js)                             |      <sup>-55% </sup>`101.2 kB` |       <sup>-48% </sup>`32.1 kB` |    <sup>*14x* </sup>`521ms` |
+| [swc](/scripts/minifiers/swc.js)                                                           |      <sup>-40% </sup>`134.7 kB` |       <sup>-39% </sup>`38.3 kB` |      <sup>*1x* </sup>`57ms` |
 <!-- benchmarks:end -->
 
 ---
