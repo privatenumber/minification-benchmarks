@@ -4,6 +4,8 @@ import { inspect } from 'util';
 import execa from 'execa';
 import task from 'tasuku';
 import byteSize from 'byte-size';
+import makeDir from 'make-dir';
+import unusedFilename from 'unused-filename';
 import { getArtifact } from './utils/get-artifact';
 import { percent, formatMs } from './utils/formatting';
 import { safeJsonParse } from './utils/safe-json-parse';
@@ -12,7 +14,8 @@ import type { Artifact, BenchmarkResult, MinifierBenchmarkResult } from './types
 
 const benchmark = async (
 	minifier: string,
-	filePath: string,
+	artifactPath: string,
+	outputPath?: string,
 ): Promise<BenchmarkResult> => {
 	const { stdout } = await execa(
 		require.resolve('esno/esno'),
@@ -20,7 +23,13 @@ const benchmark = async (
 			path.join(__dirname, 'benchmark.ts'),
 			'--minifier',
 			minifier,
-			filePath,
+			artifactPath,
+			...(outputPath
+				? [
+					'--outputPath',
+					outputPath,
+				]
+				: []),
 		],
 		{
 			timeout: 1000 * 60,
@@ -36,6 +45,9 @@ export async function benchmarkAllMinifiers(
 	task: Tasuku,
 	artifact: Artifact,
 ) {
+	const directoryName = await unusedFilename(`results/benchmark-all-minifiers-${Date.now()}`);
+	await makeDir(directoryName);
+
 	const minifiers = await getMinifiers();
 	return await task.group(
 		task => minifiers.map(
@@ -46,9 +58,12 @@ export async function benchmarkAllMinifiers(
 					setOutput,
 					setError,
 				}): Promise<MinifierBenchmarkResult> => {
+					const artifactFileName = path.basename(artifact.modulePath, '.js');
+					const outputPath = await unusedFilename(path.join(directoryName, `${artifactFileName}--${minifier}.js`));
+
 					let result;
 					try {
-						result = await benchmark(minifier, artifact.modulePath);
+						result = await benchmark(minifier, artifact.modulePath, outputPath);
 
 						if (!result) {
 							setError(new Error('Failed to minify'));
