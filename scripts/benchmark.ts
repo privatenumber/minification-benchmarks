@@ -9,15 +9,21 @@ const getOptions = () => {
 	const argv = minimist(process.argv.slice(2));
 	const minifierName: string = argv.minifier;
 	let filePath: string = argv._[0];
+	let outputPath: string = argv.outputPath;
 
 	assert(minifierName?.length, 'Minifier name must be passed in');
 	assert(filePath?.length, 'File path must be passed in');
 
 	filePath = path.resolve(filePath);
 
+	if (outputPath) {
+		outputPath = path.resolve(outputPath);
+	}
+
 	return {
 		minifierName,
 		filePath,
+		outputPath,
 	};
 };
 
@@ -61,7 +67,11 @@ async function stripComments(
 	return strippedCode;
 }
 
-(async ({ minifierName, filePath }) => {
+(async ({
+	minifierName,
+	filePath,
+	outputPath,
+}) => {
 	const minifier = getMinifier(minifierName);
 	const code = await stripComments(
 		await getSourceCode(filePath),
@@ -81,4 +91,8 @@ async function stripComments(
 		minzippedSize: success && getGzipSize(minifiedCode),
 		time: success && (hrtime[0] * 1000) + (hrtime[1] / 1e6),
 	} as BenchmarkResult));
+
+	if (outputPath) {
+		await fs.writeFile(outputPath, minifiedCode);
+	}
 })(getOptions());
