@@ -9,6 +9,7 @@ export default async ({ filePath }) => {
 	const compiler = new Compiler({
 		js: filePath,
 		compilation_level: 'ADVANCED',
+		jscomp_off: '*',
 	});
 
 	const code = await new Promise((resolve, reject) => {
