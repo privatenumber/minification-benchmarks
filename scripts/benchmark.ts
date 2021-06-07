@@ -42,7 +42,7 @@ const getSourceCode = async (filePath: string) => {
 	return sourceCode.toString();
 };
 
-const preservedComment = /\/\*!\n/g;
+const preservedComment = /\/\*!/g;
 const legalComment = /\* @license/g;
 
 async function stripComments(
@@ -52,7 +52,7 @@ async function stripComments(
 	let strippedCode = code;
 
 	if (preservedComment.test(strippedCode)) {
-		strippedCode = strippedCode.replace(preservedComment, '/*\n');
+		strippedCode = strippedCode.replace(preservedComment, '/*');
 	}
 
 	if (legalComment.test(strippedCode)) {
