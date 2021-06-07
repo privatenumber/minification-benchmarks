@@ -8,17 +8,17 @@ import type { BenchmarkResult } from './types';
 const getOptions = () => {
 	const argv = minimist(process.argv.slice(2));
 	const minifierName: string = argv.minifier;
+	let { outputPath } = argv;
 	let filePath: string = argv._[0];
-	let outputPath: string = argv.outputPath;
 
 	assert(minifierName?.length, 'Minifier name must be passed in');
 	assert(filePath?.length, 'File path must be passed in');
 
-	filePath = path.resolve(filePath);
-
 	if (outputPath) {
 		outputPath = path.resolve(outputPath);
 	}
+
+	filePath = path.resolve(filePath);
 
 	return {
 		minifierName,

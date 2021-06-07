@@ -24,10 +24,12 @@ const benchmark = async (
 			'--minifier',
 			minifier,
 			artifactPath,
-			...(outputPath ? [
-				'--outputPath',
-				outputPath,
-			] : [])
+			...(outputPath
+				? [
+					'--outputPath',
+					outputPath,
+				]
+				: []),
 		],
 		{
 			timeout: 1000 * 60,
