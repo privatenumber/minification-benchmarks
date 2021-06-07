@@ -22,7 +22,8 @@ jobs:
           git add .
           git commit -m "chore: updated benchmarks"
           git push
-      - uses: actions/upload-artifact@v2
+      - name: Upload minification results
+        uses: actions/upload-artifact@v2
         with:
           name: minification-results
           path: results/
