@@ -8,7 +8,7 @@ Benchmarks are gathered on the following minifiers:
 - [terser](https://github.com/terser/terser)
 - [uglify-js](https://github.com/mishoo/UglifyJS)
 
-<sub>If you like this project, please star it & [follow me](https://github.com/privatenumber) to see what other cool projects I'm working on! ❤️</sub>
+<sub>Support this project by ⭐️ starring and sharing it. [Follow me](https://github.com/privatenumber) to see what other cool projects I'm working on! ❤️</sub>
 
 ## 👟 Methodology
 
