@@ -17,8 +17,6 @@ Benchmarks are gathered on the following minifiers:
 - Each table is sorted by smallest minified size in ascending order
 - Each time is annotated with a multiplier relative to the fastest minifier
 - _"Minzipped size"_ measures how well the minified file compresses with Gzip
-- Comments are not stripped because not all minifiers support it
-
 
 ## 📋 Results
 
