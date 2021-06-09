@@ -17,6 +17,7 @@ Benchmarks are gathered on the following minifiers:
 - Each table is sorted by smallest minified size in ascending order
 - Each time is annotated with a multiplier relative to the fastest minifier
 - _"Minzipped size"_ measures how well the minified file compresses with Gzip
+- Minified artifacts can be downloaded and verified in each [action run](https://github.com/privatenumber/minification-benchmarks/actions/workflows/benchmark.yml)
 
 ## 📋 Results
 
