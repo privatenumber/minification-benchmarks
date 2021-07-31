@@ -1,10 +1,10 @@
 import swc from '@swc/core';
 
 export default async ({ code }) => {
-	const minified = await swc.transform(code, {
-		minify: true,
+	const minified = await swc.minify(code, {
+		mangle: true,
+		compress: true,
 		sourceMaps: false,
-		swcrc: false,
 	});
 	return minified.code;
 };
