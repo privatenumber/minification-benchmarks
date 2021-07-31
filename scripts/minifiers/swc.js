@@ -2,9 +2,9 @@ import swc from '@swc/core';
 
 export default async ({ code }) => {
 	const minified = await swc.minify(code, {
+		compress: false,
 		mangle: true,
-		compress: true,
-		sourceMaps: false,
+		sourceMap: false,
 	});
 	return minified.code;
 };
