@@ -9,12 +9,14 @@ import { benchmark } from './benchmark';
 
 type Tasuku = typeof task;
 
+const benchmarkTime = Date.now();
+
 export async function benchmarkMinifiers(
 	task: Tasuku,
 	minifiers: string[],
 	artifact: Artifact,
 ) {
-	const directoryName = await unusedFilename(`results/benchmark-all-minifiers-${Date.now()}`);
+	const directoryName = await unusedFilename(`results/benchmarks-${benchmarkTime}`);
 	await makeDir(directoryName);
 
 	return await task.group(
@@ -27,7 +29,7 @@ export async function benchmarkMinifiers(
 					setError,
 				}): Promise<MinifierBenchmarkResult> => {
 					const artifactFileName = path.basename(artifact.modulePath, '.js');
-					const outputPath = await unusedFilename(path.join(directoryName, `${artifactFileName}--${minifier}.js`));
+					const outputPath = path.join(directoryName, `${artifactFileName}--${minifier}.js`);
 
 					let result;
 					try {
