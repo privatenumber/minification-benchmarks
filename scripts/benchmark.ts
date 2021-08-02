@@ -2,8 +2,8 @@ import assert from 'assert';
 import path from 'path';
 import fs from 'fs/promises';
 import minimist from 'minimist';
-import { getSize, getGzipSize } from './utils/get-size';
-import type { BenchmarkResult } from './types';
+import { getSize, getGzipSize } from '../lib/utils/get-size';
+import type { BenchmarkResult } from '../lib/types';
 
 const getOptions = () => {
 	const argv = minimist(process.argv.slice(2));
@@ -30,7 +30,7 @@ const getOptions = () => {
 const getMinifier = (minifierName: string) => {
 	try {
 		// eslint-disable-next-line node/global-require,@typescript-eslint/no-var-requires
-		return require(`../scripts/minifiers/${minifierName}`).default;
+		return require(`../lib/minifiers/${minifierName}`).default;
 	} catch {
 		throw new Error(`Error loading minifier "${minifierName}"`);
 	}
@@ -42,10 +42,11 @@ const getSourceCode = async (filePath: string) => {
 	return sourceCode.toString();
 };
 
+// TODO: Move out
 const preservedComment = /\/\*!/g;
 const legalComment = /\* @license/g;
 
-async function stripComments(
+async function unpreserveComment(
 	code: string,
 	filePath: string,
 ) {
@@ -73,7 +74,7 @@ async function stripComments(
 	outputPath,
 }) => {
 	const minifier = getMinifier(minifierName);
-	const code = await stripComments(
+	const code = await unpreserveComment(
 		await getSourceCode(filePath),
 		filePath,
 	);

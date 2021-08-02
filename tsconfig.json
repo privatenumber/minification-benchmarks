@@ -3,5 +3,8 @@
 		"isolatedModules": true,
 		"esModuleInterop": true,
 	},
-	"include": ["scripts"]
+	"include": [
+		"scripts",
+		"lib"
+	]
 }

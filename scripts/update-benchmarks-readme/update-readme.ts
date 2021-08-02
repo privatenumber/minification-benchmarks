@@ -5,14 +5,14 @@ import outdent from 'outdent';
 import commentMark from 'comment-mark';
 import byteSize from 'byte-size';
 import { minBy } from 'lodash';
-import * as mdu from '../utils/mdu';
-import { formatMs, percent } from '../utils/formatting';
+import * as mdu from '../../lib/utils/mdu';
+import { formatMs, percent } from '../../lib/utils/formatting';
 import type {
 	Artifact,
 	ArtifactMinifierBenchmarks,
 	MinifierBenchmarksResultObject,
 	BenchmarkResult,
-} from '../types';
+} from '../../lib/types';
 
 const displayColumn = (
 	text: string,
