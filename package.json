@@ -8,7 +8,7 @@
 	"files": [],
 	"scripts": {
 		"benchmark": "esno scripts/benchmark",
-		"benchmark-all-minifiers": "esno scripts/benchmark-all-minifiers",
+		"benchmark-all": "esno scripts/benchmark-all",
 		"update-benchmarks-readme": "esno scripts/update-benchmarks-readme/index.ts",
 		"lint": "eslint ."
 	},

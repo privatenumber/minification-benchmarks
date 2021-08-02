@@ -11,17 +11,23 @@ Example:
 $ npm run benchmark -- --minifier esbuild ./node_modules/vue/dist/vue.runtime.common.dev.js
 ```
 
-### Get the benchmarks for a file using all minifiers
+### Benchmark all artifacts & minifiers
+
 ```sh
-$ npm run benchmark-all-minifiers <code-path>
+$ npm run benchmark-all
 ```
 
-Example:
-```
-$ npm run benchmark-all-minifiers ./node_modules/vue/dist/vue.runtime.common.dev.js
+#### Limit by minifier
+```sh
+$ npm run benchmark-all -- --minifier esbuild
 ```
 
-### Benchmark artifacts and update readme.md
+#### Limit by artifact
+```sh
+$ npm run benchmark-all -- --artifact artifact-name
+```
+
+### Benchmark all artifacts & minifiers and update readme.md
 ```sh
 $ npm run update-benchmarks-readme
 ```

@@ -1,49 +1,12 @@
-import path from 'path';
 import task from 'tasuku';
-import { benchmarkAllMinifiers } from '../benchmark-all-minifiers';
-import { getArtifact } from '../utils/get-artifact';
-import type {
-	Artifact,
-	ArtifactsMinifierBenchmarks,
-	MinifierBenchmarkResult,
-} from '../types';
+import { getArtifacts } from '../../lib/utils/get-artifacts';
+import { getMinifiers } from '../../lib/utils/get-minifiers';
+import { benchmarkArtifacts } from '../../lib/benchmark-artifacts';
+import type { ArtifactsMinifierBenchmarks } from '../../lib/types';
 import { getBenchmarkDataTables, updateReadmeMd } from './update-readme';
-import artifactPaths from './artifact-paths';
-
-const getArtifacts = async () => {
-	const artifacts = await Promise.all(artifactPaths.map(
-		async filePath => await getArtifact(filePath),
-	));
-
-	artifacts.sort(
-		(a, b) => a.moduleName.localeCompare(b.moduleName),
-	);
-
-	return artifacts;
-};
-
-function recordData(
-	data: ArtifactsMinifierBenchmarks,
-	artifact: Artifact,
-	results: MinifierBenchmarkResult[],
-) {
-	for (const { minifier, result } of results) {
-		if (!data[artifact.moduleName]) {
-			data[artifact.moduleName] = {
-				artifact,
-				results: {},
-			};
-		}
-
-		if (!data[artifact.moduleName].results[minifier]) {
-			data[artifact.moduleName].results[minifier] = [];
-		}
-
-		data[artifact.moduleName].results[minifier].push(result);
-	}
-}
 
 (async () => {
+	const minifiers = (await getMinifiers()).filter(m => m === 'esbuild');
 	const artifacts = await getArtifacts();
 	const sampleSize = 5;
 	const artifactMinifierBenchmarks: ArtifactsMinifierBenchmarks = {};
@@ -53,23 +16,26 @@ function recordData(
 			for (let i = 1; i <= sampleSize; i += 1) {
 				setTitle(`Benchmarking #${i}`);
 
-				const benchmarkArtifacts = await task.group(
-					task => artifacts.map(
-						artifact => task(
-							`${artifact.moduleName} - ${path.relative(process.cwd(), artifact.modulePath)}`,
-							async ({ task }) => {
-								const benchmarkMinifiers = await benchmarkAllMinifiers(
-									task,
-									artifact,
-								);
-								benchmarkMinifiers.clear();
-								recordData(artifactMinifierBenchmarks, artifact, benchmarkMinifiers.results);
-							},
-						),
-					),
-				);
+				const benchmarking = await benchmarkArtifacts(task, artifacts, minifiers);
 
-				benchmarkArtifacts.clear();
+				for (const { artifact, minifierResults } of benchmarking.results) {
+					if (!artifactMinifierBenchmarks[artifact.moduleName]) {
+						artifactMinifierBenchmarks[artifact.moduleName] = {
+							artifact,
+							results: {},
+						};
+					}
+
+					for (const { minifier, result } of minifierResults) {
+						if (!artifactMinifierBenchmarks[artifact.moduleName].results[minifier]) {
+							artifactMinifierBenchmarks[artifact.moduleName].results[minifier] = [];
+						}
+
+						artifactMinifierBenchmarks[artifact.moduleName].results[minifier].push(result);
+					}
+				}
+
+				benchmarking.clear();
 			}
 		}),
 		task('Update README.md', async () => {

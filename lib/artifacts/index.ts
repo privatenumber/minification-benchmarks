@@ -13,7 +13,6 @@ const artifacts = [
 	'antd/dist/antd.js',
 	'echarts',
 	'victory/dist/victory.js',
-
 ];
 
 export default artifacts;
