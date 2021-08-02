@@ -68,16 +68,33 @@ async function unpreserveComment(
 	return strippedCode;
 }
 
+function assertNoSyntaxErrors(code: string) {
+	try {
+		// Indirect eval
+		eval.call(null, code); // eslint-disable-line no-eval
+	} catch (error) {
+		if (error.constructor.name === 'SyntaxError') {
+			throw error;
+		}
+	}
+}
+
 (async ({
 	minifierName,
 	filePath,
 	outputPath,
 }) => {
 	const minifier = getMinifier(minifierName);
-	const code = await unpreserveComment(
-		await getSourceCode(filePath),
+
+	let code = await getSourceCode(filePath);
+
+	code = await unpreserveComment(
+		code,
 		filePath,
 	);
+
+	// Validate that it parses
+	assertNoSyntaxErrors(code);
 
 	const start = process.hrtime();
 	const minifiedCode = await minifier({
@@ -85,6 +102,10 @@ async function unpreserveComment(
 		code,
 	});
 	const hrtime = process.hrtime(start);
+
+	// Validate that it parses
+	assertNoSyntaxErrors(minifiedCode);
+
 	const success = Boolean(minifiedCode);
 
 	console.log(JSON.stringify({
