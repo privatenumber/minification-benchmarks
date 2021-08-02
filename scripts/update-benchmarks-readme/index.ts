@@ -6,7 +6,7 @@ import type { ArtifactsMinifierBenchmarks } from '../../lib/types';
 import { getBenchmarkDataTables, updateReadmeMd } from './update-readme';
 
 (async () => {
-	const minifiers = (await getMinifiers()).filter(m => m === 'esbuild');
+	const minifiers = await getMinifiers();
 	const artifacts = await getArtifacts();
 	const sampleSize = 5;
 	const artifactMinifierBenchmarks: ArtifactsMinifierBenchmarks = {};
