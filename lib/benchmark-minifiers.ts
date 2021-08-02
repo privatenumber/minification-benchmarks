@@ -2,7 +2,6 @@ import path from 'path';
 import task from 'tasuku';
 import byteSize from 'byte-size';
 import makeDir from 'make-dir';
-import unusedFilename from 'unused-filename';
 import { percent, formatMs } from './utils/formatting';
 import type { Artifact, MinifierBenchmarkResult } from './types';
 import { benchmark } from './benchmark';
@@ -16,7 +15,7 @@ export async function benchmarkMinifiers(
 	minifiers: string[],
 	artifact: Artifact,
 ) {
-	const directoryName = await unusedFilename(`results/benchmarks-${benchmarkTime}`);
+	const directoryName = `results/benchmarks-${benchmarkTime}`;
 	await makeDir(directoryName);
 
 	return await task.group(

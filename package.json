@@ -45,7 +45,6 @@
 		"terser": "^5.7.1",
 		"three": "^0.124.0",
 		"uglify-js": "^3.14.1",
-		"unused-filename": "^3.0.0",
 		"victory": "^35.8.4",
 		"vue": "^2.6.12"
 	},
