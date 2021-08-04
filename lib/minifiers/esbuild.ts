@@ -1,6 +1,7 @@
 import esbuild from 'esbuild';
+import { minifier } from '../types';
 
-export default async ({ code }) => {
+export default minifier(async ({ code }) => {
 	const minified = await esbuild.transform(code, {
 		minify: true,
 		sourcemap: false,
@@ -8,4 +9,4 @@ export default async ({ code }) => {
 	});
 
 	return minified.code;
-};
+});

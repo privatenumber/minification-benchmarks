@@ -34,3 +34,10 @@ export type ArtifactMinifierBenchmarks = {
 export type ArtifactsMinifierBenchmarks = {
 	[artifactName: string]: ArtifactMinifierBenchmarks;
 };
+
+type MinifierFunction = (minifySubject: {
+	code: string;
+	filePath: string;
+}) => Promise<string>;
+
+export const minifier = (minifierFunction: MinifierFunction): MinifierFunction => minifierFunction;
