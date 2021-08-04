@@ -3,7 +3,7 @@ import { minifier } from '../types';
 
 export default minifier(async ({ code }) => {
 	const minified = await swc.minify(code, {
-		compress: false,
+		compress: true,
 		mangle: true,
 		sourceMap: false,
 	});
