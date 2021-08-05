@@ -1,8 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { readPackageUpAsync } from 'read-pkg-up';
-import type { Artifact } from '../types';
-import artifactPaths from '../artifacts';
+import type { Artifact, ArtifactMeta } from '../types';
 import { getSize, getGzipSize } from './get-size';
 
 const readPublicPackageUp = async (cwd: string) => {
@@ -16,12 +15,16 @@ const readPublicPackageUp = async (cwd: string) => {
 };
 
 const isFilePathPattern = /^[./]/;
+const artifactDir = path.resolve(__dirname, '../artifacts');
 
 export const getArtifact = async (
-	modulePath: string,
+	artifactFilePath: string,
 ): Promise<Artifact> => {
+	const artifactMetaObject = require(artifactFilePath).default as ArtifactMeta;
+
+	let { path: modulePath } = artifactMetaObject;
 	if (!isFilePathPattern.test(modulePath)) {
-		modulePath = require.resolve(modulePath);
+		modulePath = require.resolve(modulePath); // resolve alias
 	}
 
 	const [
@@ -33,6 +36,7 @@ export const getArtifact = async (
 	]);
 
 	return {
+		artifactFilePath,
 		moduleName: packageJson.name,
 		moduleVersion: packageJson.version,
 		modulePath,
@@ -43,12 +47,17 @@ export const getArtifact = async (
 };
 
 export const getArtifacts = async () => {
-	const artifacts = await Promise.all(artifactPaths.map(
-		async filePath => await getArtifact(filePath),
+	const artifactMetaFiles = await fs.readdir(artifactDir);
+	const artifactMetaObjects = artifactMetaFiles.filter(
+		artifactMetaPath => artifactMetaPath.endsWith('.js')
+	);
+
+	const artifacts = await Promise.all(artifactMetaObjects.map(
+		async artifactMetaPath => await getArtifact(path.join(artifactDir, artifactMetaPath)),
 	));
 
 	artifacts.sort(
-		(a, b) => a.moduleName.localeCompare(b.moduleName),
+		(a, b) => a.size - b.size,
 	);
 
 	return artifacts;

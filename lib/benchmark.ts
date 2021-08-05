@@ -6,6 +6,7 @@ import type { BenchmarkResult } from './types';
 export const benchmark = async (
 	minifier: string,
 	artifactPath: string,
+	smokeTestPath?: string,
 	outputPath?: string,
 ): Promise<BenchmarkResult> => {
 	const { stdout } = await execa(
@@ -15,12 +16,22 @@ export const benchmark = async (
 			'--minifier',
 			minifier,
 			artifactPath,
-			...(outputPath
-				? [
-					'--outputPath',
-					outputPath,
-				]
-				: []),
+			...(
+				outputPath
+					? [
+						'--outputPath',
+						outputPath,
+					]
+					: []
+			),
+			...(
+				smokeTestPath
+					? [
+						'--smokeTestPath',
+						smokeTestPath
+					]
+					: []
+			)
 		],
 		{
 			timeout: 1000 * 60,

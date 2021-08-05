@@ -1,4 +1,5 @@
 export type Artifact = {
+	artifactFilePath: string;
 	moduleName: string;
 	moduleVersion: string;
 	modulePath: string;
@@ -35,9 +36,16 @@ export type ArtifactsMinifierBenchmarks = {
 	[artifactName: string]: ArtifactMinifierBenchmarks;
 };
 
-type MinifierFunction = (minifySubject: {
+export type MinifierFunction = (minifySubject: {
 	code: string;
 	filePath: string;
 }) => Promise<string>;
 
 export const minifier = (minifierFunction: MinifierFunction): MinifierFunction => minifierFunction;
+
+export type ArtifactMeta = {
+	path: string;
+	test: () => void;
+};
+
+export const artifactMeta = (artifactMetaObject: ArtifactMeta): ArtifactMeta => artifactMetaObject;
