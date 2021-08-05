@@ -12,11 +12,7 @@ const getOptions = () => {
 		smokeTestPath?: string;
 	}>(process.argv.slice(2));
 
-	let {
-		minifier: minifierName,
-		outputPath,
-		smokeTestPath,
-	} = argv;
+	const { minifier: minifierName } = argv;
 
 	assert(minifierName?.length, 'Minifier name must be passed in');
 
@@ -24,6 +20,11 @@ const getOptions = () => {
 	assert(filePath?.length, 'File path must be passed in');
 
 	filePath = path.resolve(filePath);
+
+	let {
+		outputPath,
+		smokeTestPath,
+	} = argv;
 
 	if (outputPath) {
 		outputPath = path.resolve(outputPath);
@@ -83,6 +84,7 @@ async function unpreserveComment(
 }
 
 async function runTests(smokeTestPath: string, code: string) {
+	// eslint-disable-next-line node/global-require,@typescript-eslint/no-var-requires
 	await require(smokeTestPath).default.test(code);
 }
 

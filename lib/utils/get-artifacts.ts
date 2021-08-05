@@ -20,6 +20,7 @@ const artifactDirectory = path.resolve(__dirname, '../artifacts');
 export const getArtifact = async (
 	artifactFilePath: string,
 ): Promise<Artifact> => {
+	// eslint-disable-next-line node/global-require,@typescript-eslint/no-var-requires
 	const artifactMetaObject = require(artifactFilePath).default as ArtifactMeta;
 
 	let { path: modulePath } = artifactMetaObject;
