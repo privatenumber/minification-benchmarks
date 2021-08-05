@@ -1,6 +1,7 @@
 import { minify } from 'terser';
+import { minifier } from '../types';
 
-export default async ({ code }) => {
+export default minifier(async ({ code }) => {
 	const minified = await minify(code, {
 		sourceMap: false,
 		compress: false,
@@ -8,5 +9,6 @@ export default async ({ code }) => {
 			comments: false,
 		},
 	});
+
 	return minified.code;
-};
+});
