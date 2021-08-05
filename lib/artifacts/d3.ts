@@ -1,15 +1,12 @@
-import assert from 'assert';
-import { Volume } from 'memfs';
-import { createFsRequire } from 'fs-require';
-import { artifactMeta } from '../types';
 import 'jsdom-global/register.js';
+import assert from 'assert';
+import { requireString } from '../utils/require-string';
+import { artifactMeta } from '../types';
 
 export default artifactMeta({
 	path: 'd3/dist/d3.js',
 	test(code) {
-		const vol = Volume.fromJSON({ '/index.js': code });
-		const fsRequire = createFsRequire(vol);
-		const d3 = fsRequire('/index');
+		const d3 = requireString(code);
 
 		const svg = d3.select(document.body).append('svg').attr('width', 100).attr('height', 100);
 		svg.append('circle').style('fill', 'green').attr('r', 40).attr('cx', 50)

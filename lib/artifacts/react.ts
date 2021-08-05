@@ -1,16 +1,13 @@
-import assert from 'assert';
-import { Volume } from 'memfs';
-import { createFsRequire } from 'fs-require';
-import { render } from 'react-dom';
-import { artifactMeta } from '../types';
 import 'jsdom-global/register.js';
+import assert from 'assert';
+import { render } from 'react-dom';
+import { requireString } from '../utils/require-string';
+import { artifactMeta } from '../types';
 
 export default artifactMeta({
 	path: 'react/cjs/react.development.js',
 	test(code) {
-		const vol = Volume.fromJSON({ '/index.js': code });
-		const fsRequire = createFsRequire(vol);
-		const React = fsRequire('/index');
+		const React = requireString(code);
 
 		const App = () => React.createElement('div', null, 'rendered');
 		document.body.innerHTML = '<div id="app"></div>';

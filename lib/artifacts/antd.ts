@@ -1,19 +1,16 @@
+import 'jsdom-global/register.js';
 import assert from 'assert';
-import { Volume } from 'memfs';
-import { createFsRequire } from 'fs-require';
 import { createElement } from 'react';
 import { render } from 'react-dom';
 import { artifactMeta } from '../types';
-import 'jsdom-global/register.js';
+import { requireString } from '../utils/require-string';
 
 export default artifactMeta({
 	path: 'antd/dist/antd.js',
 	test(code) {
 		code = code.replace(/console\.warn\(/g, '(');
 
-		const vol = Volume.fromJSON({ '/index.js': code });
-		const fsRequire = createFsRequire(vol);
-		const { Button } = fsRequire('/index');
+		const { Button } = requireString(code);
 
 		const App = () => createElement(Button, null, 'rendered');
 		document.body.innerHTML = '<div id="app"></div>';
