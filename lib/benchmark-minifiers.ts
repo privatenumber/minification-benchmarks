@@ -32,7 +32,12 @@ export async function benchmarkMinifiers(
 
 					let result;
 					try {
-						result = await benchmark(minifier, artifact.modulePath, artifact.artifactFilePath, outputPath);
+						result = await benchmark(
+							minifier,
+							artifact.modulePath,
+							artifact.artifactFilePath,
+							outputPath,
+						);
 
 						if (!result) {
 							setError(new Error('Failed to minify'));

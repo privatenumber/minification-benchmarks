@@ -15,7 +15,7 @@ const readPublicPackageUp = async (cwd: string) => {
 };
 
 const isFilePathPattern = /^[./]/;
-const artifactDir = path.resolve(__dirname, '../artifacts');
+const artifactDirectory = path.resolve(__dirname, '../artifacts');
 
 export const getArtifact = async (
 	artifactFilePath: string,
@@ -47,13 +47,13 @@ export const getArtifact = async (
 };
 
 export const getArtifacts = async () => {
-	const artifactMetaFiles = await fs.readdir(artifactDir);
+	const artifactMetaFiles = await fs.readdir(artifactDirectory);
 	const artifactMetaObjects = artifactMetaFiles.filter(
-		artifactMetaPath => artifactMetaPath.endsWith('.ts')
+		artifactMetaPath => artifactMetaPath.endsWith('.ts'),
 	);
 
 	const artifacts = await Promise.all(artifactMetaObjects.map(
-		async artifactMetaPath => await getArtifact(path.join(artifactDir, artifactMetaPath)),
+		async artifactMetaPath => await getArtifact(path.join(artifactDirectory, artifactMetaPath)),
 	));
 
 	artifacts.sort(

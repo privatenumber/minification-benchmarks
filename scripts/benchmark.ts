@@ -10,7 +10,7 @@ const getOptions = () => {
 		minifier: string;
 		outputPath?: string;
 		smokeTestPath?: string;
-	}>(process.argv.slice(2))
+	}>(process.argv.slice(2));
 
 	let {
 		minifier: minifierName,

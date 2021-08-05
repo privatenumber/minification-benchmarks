@@ -28,10 +28,10 @@ export const benchmark = async (
 				smokeTestPath
 					? [
 						'--smokeTestPath',
-						smokeTestPath
+						smokeTestPath,
 					]
 					: []
-			)
+			),
 		],
 		{
 			timeout: 1000 * 60,
