@@ -3,31 +3,46 @@ import path from 'path';
 import fs from 'fs/promises';
 import minimist from 'minimist';
 import { getSize, getGzipSize } from '../lib/utils/get-size';
-import type { BenchmarkResult } from '../lib/types';
+import type { BenchmarkResult, MinifierFunction } from '../lib/types';
 
 const getOptions = () => {
-	const argv = minimist(process.argv.slice(2));
-	const minifierName: string = argv.minifier;
-	let { outputPath } = argv;
-	let filePath: string = argv._[0];
+	const argv = minimist<{
+		minifier: string;
+		outputPath?: string;
+		smokeTestPath?: string;
+	}>(process.argv.slice(2));
+
+	const { minifier: minifierName } = argv;
 
 	assert(minifierName?.length, 'Minifier name must be passed in');
+
+	let filePath = argv._[0];
 	assert(filePath?.length, 'File path must be passed in');
+
+	filePath = path.resolve(filePath);
+
+	let {
+		outputPath,
+		smokeTestPath,
+	} = argv;
 
 	if (outputPath) {
 		outputPath = path.resolve(outputPath);
 	}
 
-	filePath = path.resolve(filePath);
+	if (smokeTestPath) {
+		smokeTestPath = path.resolve(smokeTestPath);
+	}
 
 	return {
 		minifierName,
 		filePath,
 		outputPath,
+		smokeTestPath,
 	};
 };
 
-const getMinifier = (minifierName: string) => {
+const getMinifier = (minifierName: string): MinifierFunction => {
 	try {
 		// eslint-disable-next-line node/global-require,@typescript-eslint/no-var-requires
 		return require(`../lib/minifiers/${minifierName}`).default;
@@ -68,21 +83,16 @@ async function unpreserveComment(
 	return strippedCode;
 }
 
-function assertNoSyntaxErrors(code: string) {
-	try {
-		// Indirect eval
-		eval.call(null, code); // eslint-disable-line no-eval
-	} catch (error) {
-		if (error.constructor.name === 'SyntaxError') {
-			throw error;
-		}
-	}
+async function runTests(smokeTestPath: string, code: string) {
+	// eslint-disable-next-line node/global-require,@typescript-eslint/no-var-requires
+	await require(smokeTestPath).default.test(code);
 }
 
 (async ({
 	minifierName,
 	filePath,
 	outputPath,
+	smokeTestPath,
 }) => {
 	const minifier = getMinifier(minifierName);
 
@@ -94,7 +104,7 @@ function assertNoSyntaxErrors(code: string) {
 	);
 
 	// Validate that it parses
-	assertNoSyntaxErrors(code);
+	await runTests(smokeTestPath, code);
 
 	const start = process.hrtime();
 	const minifiedCode = await minifier({
@@ -104,7 +114,7 @@ function assertNoSyntaxErrors(code: string) {
 	const hrtime = process.hrtime(start);
 
 	// Validate that it parses
-	assertNoSyntaxErrors(minifiedCode);
+	await runTests(smokeTestPath, minifiedCode);
 
 	const success = Boolean(minifiedCode);
 
