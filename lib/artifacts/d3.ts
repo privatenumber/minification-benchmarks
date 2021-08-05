@@ -8,8 +8,17 @@ export default artifactMeta({
 	test(code) {
 		const d3 = requireString(code);
 
-		const svg = d3.select(document.body).append('svg').attr('width', 100).attr('height', 100);
-		svg.append('circle').style('fill', 'green').attr('r', 40).attr('cx', 50)
+		document.body.innerHTML = '';
+
+		const svg = d3.select(document.body)
+			.append('svg')
+			.attr('width', 100)
+			.attr('height', 100);
+
+		svg.append('circle')
+			.style('fill', 'green')
+			.attr('r', 40)
+			.attr('cx', 50)
 			.attr('cy', 50);
 
 		assert(
