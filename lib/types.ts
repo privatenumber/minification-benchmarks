@@ -45,7 +45,7 @@ export const minifier = (minifierFunction: MinifierFunction): MinifierFunction =
 
 export type ArtifactMeta = {
 	path: string;
-	test: () => void;
+	test: (code: string) => void;
 };
 
 export const artifactMeta = (artifactMetaObject: ArtifactMeta): ArtifactMeta => artifactMetaObject;

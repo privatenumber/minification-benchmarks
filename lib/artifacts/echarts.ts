@@ -1,8 +1,8 @@
-import { artifactMeta } from '../types';
 import assert from 'assert';
 import { Volume } from 'memfs';
 import { createFsRequire } from 'fs-require';
-import 'jsdom-global/register';
+import { artifactMeta } from '../types';
+import 'jsdom-global/register.js';
 
 export default artifactMeta({
 	path: 'echarts',
@@ -11,7 +11,7 @@ export default artifactMeta({
 		const fsRequire = createFsRequire(vol);
 		const echarts = fsRequire('/index');
 
-		document.body.innerHTML = `<div id="app"></div>`;
+		document.body.innerHTML = '<div id="app"></div>';
 		echarts.init(window.app, undefined, {
 			width: 1,
 			height: 1,

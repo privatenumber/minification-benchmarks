@@ -1,8 +1,8 @@
-import { artifactMeta } from '../types';
 import assert from 'assert';
 import { Volume } from 'memfs';
 import { createFsRequire } from 'fs-require';
-import 'jsdom-global/register';
+import { artifactMeta } from '../types';
+import 'jsdom-global/register.js';
 
 export default artifactMeta({
 	path: 'd3/dist/d3.js',
@@ -12,10 +12,11 @@ export default artifactMeta({
 		const d3 = fsRequire('/index');
 
 		const svg = d3.select(document.body).append('svg').attr('width', 100).attr('height', 100);
-		svg.append('circle').style('fill', 'green').attr('r', 40).attr('cx', 50).attr('cy', 50);
+		svg.append('circle').style('fill', 'green').attr('r', 40).attr('cx', 50)
+			.attr('cy', 50);
 
 		assert(
-			document.body.innerHTML === '<svg width="100" height="100"><circle style="fill: green;" r="40" cx="50" cy="50"></circle></svg>'
+			document.body.innerHTML === '<svg width="100" height="100"><circle style="fill: green;" r="40" cx="50" cy="50"></circle></svg>',
 		);
 	},
 });

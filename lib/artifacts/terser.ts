@@ -1,8 +1,8 @@
-import { artifactMeta } from '../types';
 import path from 'path';
 import assert from 'assert';
 import { Volume } from 'memfs';
 import { createFsRequire } from 'fs-require';
+import { artifactMeta } from '../types';
 
 export default artifactMeta({
 	// Can't use require resolve due to export map

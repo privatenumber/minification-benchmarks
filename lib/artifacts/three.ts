@@ -1,18 +1,19 @@
-import { artifactMeta } from '../types';
 import assert from 'assert';
 import { Volume } from 'memfs';
 import { createFsRequire } from 'fs-require';
-import 'jsdom-global/register';
+import { artifactMeta } from '../types';
 
 export default artifactMeta({
-	path: 'jquery',
+	path: 'three',
 	test(code) {
 		const vol = Volume.fromJSON({ '/index.js': code });
 		const fsRequire = createFsRequire(vol);
-		const $ = fsRequire('/index');
+		const { Vector2 } = fsRequire('/index');
 
-		document.body.innerHTML = `<div id="findme">Hello</div>`;
-
-		assert($('#findme').text() === 'Hello');
+		assert(
+			(new Vector2(3, 4)).manhattanDistanceTo(
+				new Vector2(11, 38),
+			) === 42,
+		);
 	},
 });

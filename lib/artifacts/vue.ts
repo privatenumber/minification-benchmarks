@@ -1,8 +1,8 @@
-import { artifactMeta } from '../types';
 import assert from 'assert';
 import { Volume } from 'memfs';
 import { createFsRequire } from 'fs-require';
-import 'jsdom-global/register';
+import { artifactMeta } from '../types';
+import 'jsdom-global/register.js';
 
 export default artifactMeta({
 	path: 'vue/dist/vue.runtime.common.dev.js',
@@ -13,7 +13,9 @@ export default artifactMeta({
 		Vue.config.devtools = false;
 		Vue.config.productionTip = false;
 
-		document.body.innerHTML = `<div id="app"></div>`;
+		document.body.innerHTML = '<div id="app"></div>';
+
+		// eslint-disable-next-line no-new
 		new Vue({
 			el: '#app',
 			render: h => h('div', ['rendered']),

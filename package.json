@@ -66,6 +66,7 @@
 	},
 	"eslintConfig": {
 		"extends": "@pvtnbr/eslint-config-typescript",
+		"ignorePatterns": ["results"],
 		"rules": {
 			"@typescript-eslint/no-shadow": [
 				"error",

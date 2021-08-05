@@ -49,7 +49,7 @@ export const getArtifact = async (
 export const getArtifacts = async () => {
 	const artifactMetaFiles = await fs.readdir(artifactDir);
 	const artifactMetaObjects = artifactMetaFiles.filter(
-		artifactMetaPath => artifactMetaPath.endsWith('.js')
+		artifactMetaPath => artifactMetaPath.endsWith('.ts')
 	);
 
 	const artifacts = await Promise.all(artifactMetaObjects.map(

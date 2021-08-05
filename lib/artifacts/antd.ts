@@ -1,10 +1,10 @@
-import { artifactMeta } from '../types';
 import assert from 'assert';
 import { Volume } from 'memfs';
 import { createFsRequire } from 'fs-require';
 import { createElement } from 'react';
 import { render } from 'react-dom';
-import 'jsdom-global/register';
+import { artifactMeta } from '../types';
+import 'jsdom-global/register.js';
 
 export default artifactMeta({
 	path: 'antd/dist/antd.js',
@@ -16,7 +16,7 @@ export default artifactMeta({
 		const { Button } = fsRequire('/index');
 
 		const App = () => createElement(Button, null, 'rendered');
-		document.body.innerHTML = `<div id="app"></div>`;
+		document.body.innerHTML = '<div id="app"></div>';
 		render(createElement(App), window.app);
 
 		assert(
