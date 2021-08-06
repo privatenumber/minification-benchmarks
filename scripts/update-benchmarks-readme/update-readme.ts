@@ -52,7 +52,7 @@ function processData(results: MinifierBenchmarksResultObject) {
 			time: avgTime,
 		};
 	}).sort(
-		(a, b) => (a.minifiedSize ?? PositiveInfinity) - (b.minifiedSize ?? PositiveInfinity),
+		(a, b) => (a.minzippedSize ?? PositiveInfinity) - (b.minzippedSize ?? PositiveInfinity),
 	);
 }
 
