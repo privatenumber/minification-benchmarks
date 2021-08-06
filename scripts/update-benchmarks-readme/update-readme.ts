@@ -14,6 +14,8 @@ import type {
 	BenchmarkResult,
 } from '../../lib/types';
 
+byteSize.defaultOptions({ precision: 2 });
+
 const displayColumn = (
 	text: string,
 	annotation: string,
