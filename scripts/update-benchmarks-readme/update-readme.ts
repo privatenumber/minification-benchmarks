@@ -37,7 +37,7 @@ const compareSpeed = (
 );
 
 const PositiveInfinity = Number.POSITIVE_INFINITY;
-function processData(results: MinifierBenchmarksResultObject) {
+function processResults(results: MinifierBenchmarksResultObject) {
 	return Object.entries(results).map(([minifierName, benchmarks]) => {
 		const [result] = benchmarks;
 		// eslint-disable-next-line unicorn/no-array-reduce
@@ -58,22 +58,23 @@ function processData(results: MinifierBenchmarksResultObject) {
 
 function getBenchmarkTable(
 	artifact: Artifact,
-	asdf: MinifierBenchmarksResultObject,
+	minifierResults: MinifierBenchmarksResultObject,
 ) {
-	const results = processData(asdf);
+	const results = processResults(minifierResults);
+	const smallestMinifiedSize = minBy(results, 'minifiedSize');
 	const smallestMinzipped = minBy(results, 'minzippedSize');
 	const fastest = minBy(results, 'time');
 
 	return markdownTable([
 		['Minifier', 'Minified size', 'Minzipped size', 'Time'],
-		...results.map((min, index) => [
+		...results.map(min => [
 			mdu.link(min.name, `/lib/minifiers/${min.name}.js`) + (min.time ? '' : (` ${mdu.sub('_Failed_')}`)),
 			(
 				min.minifiedSize
 					? displayColumn(
 						byteSize(min.minifiedSize),
 						percent(artifact.size, min.minifiedSize),
-						index === 0,
+						min === smallestMinifiedSize,
 					)
 					: '—'
 			),
