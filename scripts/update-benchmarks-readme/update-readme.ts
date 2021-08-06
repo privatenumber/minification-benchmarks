@@ -61,7 +61,7 @@ function getBenchmarkTable(
 	minifierResults: MinifierBenchmarksResultObject,
 ) {
 	const results = processResults(minifierResults);
-	const smallestSize = minBy(results, 'size');
+	const smallestMinifiedSize = minBy(results, 'minifiedSize');
 	const smallestMinzipped = minBy(results, 'minzippedSize');
 	const fastest = minBy(results, 'time');
 
@@ -74,7 +74,7 @@ function getBenchmarkTable(
 					? displayColumn(
 						byteSize(min.minifiedSize),
 						percent(artifact.size, min.minifiedSize),
-						min === smallestSize,
+						min === smallestMinifiedSize,
 					)
 					: '—'
 			),
