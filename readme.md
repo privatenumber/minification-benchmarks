@@ -195,8 +195,8 @@ _Want to see more projects listed?_ PRs welcome! See the [contribution guide](/.
 
 ## 🥇 Results
 
-### Best minification performance
-[UglifyJS](https://github.com/mishoo/UglifyJS) takes first place for minification performance by winning 9 out of 11 races in both minified and minzipped size! Impressively, it's still written in ES5 but can handle ES6 up to ES2020.
+#### Best minification performance
+[UglifyJS](https://github.com/mishoo/UglifyJS) takes first place for the smallest uncompressed minified size for all races, and wins 9 out of 11 races for minzipped size! Impressively, it's still written in ES5 but can handle ES6 up to ES2020.
 
 [Terser](https://github.com/terser/terser) takes a very close second, only short by at most by 1% in minzipped size while performing twice as fast as Uglify! Terser is a fork of UglifyJS and comes with support for ES6+.
 
