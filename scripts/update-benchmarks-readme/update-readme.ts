@@ -70,7 +70,7 @@ function getBenchmarkTable(
 	return markdownTable([
 		['Minifier', 'Minified size', 'Minzipped size', 'Time'],
 		...results.map(min => [
-			mdu.link(min.name, `/lib/minifiers/${min.name}.js`) + (min.time ? '' : (` ${mdu.sub('_Failed_')}`)),
+			mdu.link(min.name, `/lib/minifiers/${min.name}.ts`) + (min.time ? '' : (` ${mdu.sub('_Failed_')}`)),
 			(
 				min.minifiedSize
 					? displayColumn(
