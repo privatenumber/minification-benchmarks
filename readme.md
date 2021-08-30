@@ -16,7 +16,7 @@ Benchmarks updated on <!-- lastUpdated:start -->Aug 30, 2021<!-- lastUpdated:end
 
 - Each minifier is executed in its own process with a 1 minute timeout
 - _"Time"_ is the average of 5 consecutive runs
-- _"Minzipped size"_ measures how well the minified file compresses with Gzip
+- _"Minzipped size"_ (minified & gzipped) measures how well the minified file compresses with Gzip
 - Results are sorted by smallest minzipped size
 - Each _"Time"_ is annotated with a multiplier relative to the fastest minifier
 - Minified artifacts are validated by a smoke test
