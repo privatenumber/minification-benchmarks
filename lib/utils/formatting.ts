@@ -1,6 +1,6 @@
 export const formatMs = (
 	ms: number,
-) => `${ms.toLocaleString(undefined, { maximumFractionDigits: 0 })}ms`;
+) => `${ms.toLocaleString(undefined, { maximumFractionDigits: 0 })} ms`;
 
 export const percent = (
 	from: number,
