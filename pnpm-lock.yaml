@@ -11,6 +11,7 @@ specifiers:
   byte-size: ^7.0.1
   comment-mark: ^1.0.0
   d3: ^6.3.1
+  date-fns: ^2.23.0
   echarts: ^5.1.1
   esbuild: ^0.12.23
   eslint: ^7.32.0
@@ -49,6 +50,7 @@ dependencies:
   byte-size: 7.0.1
   comment-mark: 1.0.0
   d3: 6.3.1
+  date-fns: 2.23.0
   echarts: 5.1.1
   esbuild: 0.12.23
   execa: 5.1.1
@@ -1830,6 +1832,11 @@ packages:
 
   /date-fns/2.22.1:
     resolution: {integrity: sha512-yUFPQjrxEmIsMqlHhAhmxkuH769baF21Kk+nZwZGyrMoyLA+LugaQtC0+Tqf9CBUUULWwUJt6Q5ySI3LJDDCGg==}
+    engines: {node: '>=0.11'}
+    dev: false
+
+  /date-fns/2.23.0:
+    resolution: {integrity: sha512-5ycpauovVyAk0kXNZz6ZoB9AYMZB4DObse7P3BPWmyEjXNORTI8EJ6X0uaSAq4sCHzM1uajzrkr6HnsLQpxGXA==}
     engines: {node: '>=0.11'}
     dev: false
 

@@ -5,6 +5,7 @@ import outdent from 'outdent';
 import commentMark from 'comment-mark';
 import byteSize from 'byte-size';
 import { minBy } from 'lodash';
+import { format } from 'date-fns';
 import * as mdu from '../../lib/utils/mdu';
 import { formatMs, percent } from '../../lib/utils/formatting';
 import type {
@@ -125,6 +126,7 @@ const README_PATH = path.resolve('./readme.md');
 
 export async function updateReadmeMd(benchmarks: string) {
 	const readmeMd = commentMark(await fs.readFile(README_PATH), {
+		lastUpdated: format(new Date(), 'MMM d, y'),
 		benchmarks,
 	});
 
