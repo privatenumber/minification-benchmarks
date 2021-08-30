@@ -8,7 +8,7 @@ The following JavaScript minifiers are benchmarked to compare quality and speed:
 - [terser](https://github.com/terser/terser)
 - [uglify-js](https://github.com/mishoo/UglifyJS)
 
-Benchmarks updated on <!-- lastUpdated:start -->Aug 30, 2021<!-- lastUpdated:end -->.
+_Benchmarks last updated on <!-- lastUpdated:start -->Aug 30, 2021<!-- lastUpdated:end -->._
 
 <sub>Support this project by ⭐️ starring and sharing it. [Follow me](https://github.com/privatenumber) to see what other cool projects I'm working on! ❤️</sub>
 
