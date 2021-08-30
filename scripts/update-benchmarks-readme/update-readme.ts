@@ -108,14 +108,21 @@ function getBenchmarkTable(
 export function getBenchmarkDataTables(artifactMinifierBenchmarks: ArtifactMinifierBenchmarks[]) {
 	return artifactMinifierBenchmarks.map(
 		({ artifact, results }) => outdent`
-			### ${
-				mdu.link(
-					`${artifact.moduleName} v${artifact.moduleVersion}`,
-					`https://www.npmjs.com/package/${artifact.moduleName}/v/${artifact.moduleVersion}`,
-				)
+			${
+				markdownTable([
+					['Artifact', 'Original size', 'Gzip size'],
+					[
+						mdu.link(
+							`${artifact.moduleName} v${artifact.moduleVersion}`,
+							`https://www.npmjs.com/package/${artifact.moduleName}/v/${artifact.moduleVersion}`,
+						),
+						mdu.c(byteSize(artifact.size)),
+						mdu.c(byteSize(artifact.gzipSize)),
+					],
+				], {
+					align: ['l', 'r', 'r'],
+				})
 			}
-			- Unminified size: ${mdu.c(byteSize(artifact.size))}
-			- Unminified Gzip size: ${mdu.c(byteSize(artifact.gzipSize))}
 
 			${getBenchmarkTable(artifact, results)}
 		`,
