@@ -21,7 +21,7 @@
 		"*.{ts,js}": "eslint"
 	},
 	"dependencies": {
-		"@swc/core": "^1.2.82",
+		"@swc/core": "^1.2.83",
 		"antd": "^4.16.1",
 		"babel-minify": "^0.5.1",
 		"byte-size": "^7.0.1",
@@ -29,7 +29,7 @@
 		"d3": "^6.3.1",
 		"date-fns": "^2.23.0",
 		"echarts": "^5.1.1",
-		"esbuild": "^0.12.23",
+		"esbuild": "^0.12.24",
 		"execa": "^5.1.1",
 		"fs-require": "^1.1.0",
 		"google-closure-compiler": "^20210808.0.0",
@@ -58,7 +58,7 @@
 		"@pvtnbr/eslint-config-typescript": "^0.1.22",
 		"@types/lodash": "^4.14.172",
 		"@types/minimist": "^1.2.2",
-		"@types/node": "^16.7.2",
+		"@types/node": "^16.7.7",
 		"eslint": "^7.32.0",
 		"esno": "^0.6.0",
 		"husky": "^4.3.8",
