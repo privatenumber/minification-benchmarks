@@ -113,7 +113,7 @@ export function getBenchmarkDataTables(artifactMinifierBenchmarks: ArtifactMinif
 					['Artifact', 'Original size', 'Gzip size'],
 					[
 						mdu.link(
-							`${artifact.moduleName} v${artifact.moduleVersion}`,
+							`**${artifact.moduleName} v${artifact.moduleVersion}**`,
 							`https://www.npmjs.com/package/${artifact.moduleName}/v/${artifact.moduleVersion}`,
 						),
 						mdu.c(byteSize(artifact.size)),
