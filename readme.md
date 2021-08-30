@@ -1,6 +1,6 @@
 # 🏃‍♂️🏃‍♀️🏃 JS minification benchmarks
 
-Benchmarks are gathered on the following minifiers:
+The following JavaScript minifiers are benchmarked to compare quality and speed:
 - [babel-minify](https://github.com/babel/minify)
 - [esbuild](https://github.com/evanw/esbuild)
 - [google-closure-compiler](https://github.com/google/closure-compiler-npm/tree/master/packages/google-closure-compiler)
