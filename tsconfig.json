@@ -2,6 +2,7 @@
 	"compilerOptions": {
 		"isolatedModules": true,
 		"esModuleInterop": true,
+		"resolveJsonModule": true
 	},
 	"include": [
 		"scripts",

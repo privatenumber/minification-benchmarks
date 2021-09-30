@@ -9,6 +9,7 @@
 	"scripts": {
 		"benchmark": "esno scripts/benchmark",
 		"benchmark-all": "esno scripts/benchmark-all",
+		"update-minifiers": "esno scripts/update-minifiers",
 		"update-benchmarks-readme": "esno scripts/update-benchmarks-readme/index.ts",
 		"lint": "eslint ."
 	},
