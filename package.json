@@ -22,7 +22,7 @@
 		"*.{ts,js}": "eslint"
 	},
 	"dependencies": {
-		"@swc/core": "^1.2.83",
+		"@swc/core": "^1.2.92",
 		"antd": "^4.16.1",
 		"babel-minify": "^0.5.1",
 		"byte-size": "^7.0.1",
@@ -30,10 +30,10 @@
 		"d3": "^6.3.1",
 		"date-fns": "^2.23.0",
 		"echarts": "^5.1.1",
-		"esbuild": "^0.12.24",
+		"esbuild": "^0.13.3",
 		"execa": "^5.1.1",
 		"fs-require": "^1.1.0",
-		"google-closure-compiler": "^20210808.0.0",
+		"google-closure-compiler": "^20210907.0.0",
 		"jquery": "^3.5.1",
 		"jsdom": "^17.0.0",
 		"jsdom-global": "^3.0.2",
@@ -49,9 +49,9 @@
 		"react-dom": "^17.0.2",
 		"read-pkg-up": "^8.0.0",
 		"tasuku": "^1.0.1",
-		"terser": "^5.7.2",
+		"terser": "^5.9.0",
 		"three": "^0.124.0",
-		"uglify-js": "^3.14.1",
+		"uglify-js": "^3.14.2",
 		"victory": "^35.8.4",
 		"vue": "^2.6.12"
 	},
