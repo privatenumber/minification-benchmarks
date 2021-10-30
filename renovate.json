@@ -6,7 +6,6 @@
     },
     {
       "groupName": "minifiers",
-      "extends": ["config:base"],
       "matchPackageNames": [
         "@swc/core",
         "babel-minify",
