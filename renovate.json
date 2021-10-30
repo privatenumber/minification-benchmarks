@@ -1,4 +1,12 @@
 {
+  "extends": [
+    ":dependencyDashboard",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":ignoreModulesAndTests",
+    ":prHourlyLimit2",
+    ":prConcurrentLimit20",
+    "workarounds:all"
+  ],
   "packageRules": [
     {
       "packagePatterns": ["*"],
@@ -14,6 +22,7 @@
         "terser",
         "uglify-js"
       ],
+      "rangeStrategy": "bump",
       "enabled": true
     }
   ]
