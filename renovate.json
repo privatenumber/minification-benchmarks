@@ -1,5 +1,4 @@
 {
-  "extends": ["config:base"],
   "packageRules": [
     {
       "packagePatterns": ["*"],
@@ -7,6 +6,7 @@
     },
     {
       "groupName": "minifiers",
+      "extends": ["config:base"],
       "matchPackageNames": [
         "@swc/core",
         "babel-minify",
@@ -14,7 +14,8 @@
         "google-closure-compiler",
         "terser",
         "uglify-js"
-      ]
+      ],
+      "enabled": true
     }
   ]
 }
