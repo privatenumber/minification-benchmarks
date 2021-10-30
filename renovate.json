@@ -1,5 +1,16 @@
 {
-  "extends": [
-    "config:base"
+  "packageRules": [
+    {
+      "extends": ["config:base"],
+      "groupName": "minifiers",
+      "matchPackageNames": [
+        "@swc/core",
+        "babel-minify",
+        "esbuild",
+        "google-closure-compiler",
+        "terser",
+        "uglify-js"
+      ]
+    }
   ]
 }
