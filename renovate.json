@@ -1,11 +1,11 @@
 {
+  "extends": ["config:base"],
   "packageRules": [
     {
       "packagePatterns": ["*"],
       "enabled": false
     },
     {
-      "extends": ["config:base"],
       "groupName": "minifiers",
       "matchPackageNames": [
         "@swc/core",
