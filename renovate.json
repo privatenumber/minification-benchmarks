@@ -1,6 +1,9 @@
 {
-  "enabled": false,
   "packageRules": [
+    {
+      "packagePatterns": ["*"],
+      "enabled": false
+    },
     {
       "extends": ["config:base"],
       "groupName": "minifiers",
