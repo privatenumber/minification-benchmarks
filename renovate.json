@@ -1,29 +1,29 @@
 {
-  "extends": [
-    ":dependencyDashboard",
-    ":semanticPrefixFixDepsChoreOthers",
-    ":ignoreModulesAndTests",
-    ":prHourlyLimit2",
-    ":prConcurrentLimit20",
-    "workarounds:all"
-  ],
-  "packageRules": [
-    {
-      "packagePatterns": ["*"],
-      "enabled": false
-    },
-    {
-      "groupName": "minifiers",
-      "matchPackageNames": [
-        "@swc/core",
-        "babel-minify",
-        "esbuild",
-        "google-closure-compiler",
-        "terser",
-        "uglify-js"
-      ],
-      "rangeStrategy": "bump",
-      "enabled": true
-    }
-  ]
+	"extends": [
+		":dependencyDashboard",
+		":semanticPrefixFixDepsChoreOthers",
+		":ignoreModulesAndTests",
+		":prHourlyLimit2",
+		":prConcurrentLimit20",
+		"workarounds:all"
+	],
+	"packageRules": [
+		{
+			"packagePatterns": ["*"],
+			"enabled": false
+		},
+		{
+			"groupName": "minifiers",
+			"matchPackageNames": [
+				"@swc/core",
+				"babel-minify",
+				"esbuild",
+				"google-closure-compiler",
+				"terser",
+				"uglify-js"
+			],
+			"rangeStrategy": "bump",
+			"enabled": true
+		}
+	]
 }

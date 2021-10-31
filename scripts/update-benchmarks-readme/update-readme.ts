@@ -43,7 +43,6 @@ const PositiveInfinity = Number.POSITIVE_INFINITY;
 function processResults(results: MinifierBenchmarksResultObject) {
 	return Object.entries(results).map(([minifierName, benchmarks]) => {
 		const [result] = benchmarks;
-		// eslint-disable-next-line unicorn/no-array-reduce
 		const avgTime = benchmarks.reduce(
 			(current, next) => current + next?.time,
 			0,

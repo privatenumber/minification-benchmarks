@@ -8,7 +8,7 @@ export default artifactMeta({
 		const moment = requireString(code);
 
 		assert(
-			moment.duration('9.22:23:24.25').asSeconds() === 858204.25,
+			moment.duration('9.22:23:24.25').asSeconds() === 858_204.25,
 		);
 	},
 });

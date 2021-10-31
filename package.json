@@ -55,7 +55,7 @@
 		"vue": "^2.6.12"
 	},
 	"devDependencies": {
-		"@pvtnbr/eslint-config-typescript": "^0.1.22",
+		"@pvtnbr/eslint-config": "^0.4.1",
 		"@types/lodash": "^4.14.172",
 		"@types/minimist": "^1.2.2",
 		"@types/node": "^16.7.7",
@@ -66,7 +66,7 @@
 		"typescript": "^4.3.5"
 	},
 	"eslintConfig": {
-		"extends": "@pvtnbr/eslint-config-typescript",
+		"extends": "@pvtnbr",
 		"ignorePatterns": [
 			"results"
 		],
