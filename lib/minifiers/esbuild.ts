@@ -6,6 +6,8 @@ export default minifier(async ({ code }) => {
 		minify: true,
 		sourcemap: false,
 		legalComments: 'none',
+		treeShaking: true,
+		format: "esm",
 	});
 
 	return minified.code;
