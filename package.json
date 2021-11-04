@@ -29,7 +29,7 @@
 		"d3": "^6.3.1",
 		"date-fns": "^2.23.0",
 		"echarts": "^5.1.1",
-		"esbuild": "^0.13.11",
+		"esbuild": "^0.13.12",
 		"execa": "^5.1.1",
 		"fs-require": "^1.1.0",
 		"google-closure-compiler": "^20210808.0.0",
@@ -50,7 +50,7 @@
 		"tasuku": "^1.0.1",
 		"terser": "^5.9.0",
 		"three": "^0.124.0",
-		"uglify-js": "^3.14.2",
+		"uglify-js": "^3.14.3",
 		"victory": "^35.8.4",
 		"vue": "^2.6.12"
 	},
