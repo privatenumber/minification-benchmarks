@@ -21,7 +21,7 @@
 		"*.{ts,js}": "eslint"
 	},
 	"dependencies": {
-		"@swc/core": "^1.2.105",
+		"@swc/core": "^1.2.106",
 		"antd": "^4.16.1",
 		"babel-minify": "^0.5.1",
 		"byte-size": "^7.0.1",
