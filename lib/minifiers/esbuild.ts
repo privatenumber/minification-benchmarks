@@ -6,7 +6,6 @@ export default minifier(async ({ code }) => {
 		minify: true,
 		sourcemap: false,
 		legalComments: 'none',
-		format: 'cjs',
 	});
 
 	return minified.code;
