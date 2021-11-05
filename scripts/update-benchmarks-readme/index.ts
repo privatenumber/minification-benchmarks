@@ -8,7 +8,7 @@ import { getBenchmarkDataTables, updateReadmeMd } from './update-readme';
 (async () => {
 	const minifiers = await getMinifiers();
 	const artifacts = await getArtifacts();
-	const sampleSize = 5;
+	const sampleSize = 1;
 	const artifactMinifierBenchmarks: ArtifactsMinifierBenchmarks = {};
 
 	await task.group(task => [
