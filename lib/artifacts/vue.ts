@@ -4,7 +4,7 @@ import { requireString } from '../utils/require-string';
 import { artifactMeta } from '../types';
 
 export default artifactMeta({
-	path: 'vue/dist/vue.runtime.common.dev.js',
+	path: 'vue/dist/vue.js',
 	test(code) {
 		const Vue = requireString(code);
 		Vue.config.devtools = false;
