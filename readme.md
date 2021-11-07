@@ -14,7 +14,7 @@ _Benchmarks last updated on <!-- lastUpdated:start -->Nov 7, 2021<!-- lastUpdate
 
 ## 👟 Methodology
 
-- Each minifier is executed in its own process with a 1 minute timeout
+- Each minifier is executed in its own process with a 20 second timeout
 - _"Time"_ is the average of 5 consecutive runs
 - _"Minzipped size"_ (minified & gzipped) measures how well the minified file compresses with Gzip
 - Results are sorted by smallest minzipped size
