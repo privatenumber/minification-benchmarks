@@ -10,7 +10,8 @@
 		"benchmark": "esno scripts/benchmark",
 		"benchmark-all": "esno scripts/benchmark-all",
 		"update-benchmarks-readme": "esno scripts/update-benchmarks-readme/index.ts",
-		"lint": "eslint ."
+		"lint": "eslint .",
+		"typecheck": "tsc --noEmit"
 	},
 	"husky": {
 		"hooks": {
@@ -25,7 +26,7 @@
 		"antd": "^4.16.1",
 		"babel-minify": "^0.5.1",
 		"byte-size": "^7.0.1",
-		"comment-mark": "^1.0.0",
+		"comment-mark": "^1.1.0",
 		"d3": "^6.3.1",
 		"date-fns": "^2.23.0",
 		"echarts": "^5.1.1",
@@ -56,6 +57,7 @@
 	},
 	"devDependencies": {
 		"@pvtnbr/eslint-config": "^0.4.1",
+		"@types/byte-size": "^8.1.0",
 		"@types/lodash": "^4.14.172",
 		"@types/minimist": "^1.2.2",
 		"@types/node": "^16.7.7",

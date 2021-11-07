@@ -6,12 +6,12 @@ import { getSize, getGzipSize } from './get-size';
 
 const readPublicPackageUp = async (cwd: string) => {
 	let packageFound = await readPackageUpAsync({ cwd });
-	while (packageFound.packageJson.private) {
+	while (packageFound!.packageJson.private) {
 		packageFound = await readPackageUpAsync({
-			cwd: path.join(path.dirname(packageFound.path), '..'),
+			cwd: path.join(path.dirname(packageFound!.path), '..'),
 		});
 	}
-	return packageFound.packageJson;
+	return packageFound!.packageJson;
 };
 
 const isFilePathPattern = /^[./]/;

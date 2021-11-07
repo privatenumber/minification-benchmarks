@@ -7,12 +7,12 @@ import byteSize from 'byte-size';
 import { minBy } from 'lodash';
 import { format } from 'date-fns';
 import * as mdu from '../../lib/utils/mdu';
-import { formatMs, percent } from '../../lib/utils/formatting';
+import { percent } from '../../lib/utils/formatting';
 import type {
 	Artifact,
-	ArtifactMinifierBenchmarks,
-	MinifierBenchmarksResultObject,
-	BenchmarkResult,
+	BenchmarkedArtifact,
+	MinifierResult,
+	MinifierResultSuccess,
 } from '../../lib/types';
 
 byteSize.defaultOptions({ precision: 2 });
@@ -31,82 +31,75 @@ const displayColumn = (
 };
 
 const compareSpeed = (
-	current: BenchmarkResult,
-	fastest: BenchmarkResult,
+	current: MinifierResultSuccess,
+	fastest?: MinifierResultSuccess,
 ) => (
 	(fastest === current)
 		? ''
-		: mdu.emphasize(`${Math.floor(current.time / fastest.time)}x`)
+		: mdu.emphasize(`${Math.floor(current.data.raw.averageTime / fastest!.data.raw.averageTime)}x`)
 );
 
 const PositiveInfinity = Number.POSITIVE_INFINITY;
-function processResults(results: MinifierBenchmarksResultObject) {
-	return Object.entries(results).map(([minifierName, benchmarks]) => {
-		const [result] = benchmarks;
-		const avgTime = benchmarks.reduce(
-			(current, next) => current + next?.time,
-			0,
-		) / benchmarks.length;
-
-		return {
-			name: minifierName,
-			...result,
-			time: avgTime,
-		};
-	}).sort(
-		(a, b) => (a.minzippedSize ?? PositiveInfinity) - (b.minzippedSize ?? PositiveInfinity),
-	);
-}
 
 function getBenchmarkTable(
 	artifact: Artifact,
-	minifierResults: MinifierBenchmarksResultObject,
+	minifierResults: MinifierResult[],
 ) {
-	const results = processResults(minifierResults);
-	const smallestMinifiedSize = minBy(results, 'minifiedSize');
-	const smallestMinzipped = minBy(results, 'minzippedSize');
-	const fastest = minBy(results, 'time');
+	const successfulMinifiers = minifierResults.filter(minifier => !('error' in minifier)) as MinifierResultSuccess[];
+	const bestMinified = minBy(successfulMinifiers, 'data.raw.minifiedSize');
+	const bestMinzipped = minBy(successfulMinifiers, 'data.raw.minzippedSize');
+	const bestSpeed = minBy(successfulMinifiers, 'data.raw.averageTime');
 
-	return markdownTable([
-		['Minifier', 'Minified size', 'Minzipped size', 'Time'],
-		...results.map(min => [
-			mdu.link(min.name, `/lib/minifiers/${min.name}.ts`) + (min.time ? '' : (` ${mdu.sub('_Failed_')}`)),
-			(
-				min.minifiedSize
-					? displayColumn(
-						byteSize(min.minifiedSize),
-						percent(artifact.size, min.minifiedSize),
-						min === smallestMinifiedSize,
-					)
-					: '—'
-			),
-			(
-				min.minzippedSize
-					? displayColumn(
-						byteSize(min.minzippedSize),
-						percent(artifact.gzipSize, min.minzippedSize),
-						min === smallestMinzipped,
-					)
-					: '—'
-			),
-			(
-				min.time
-					? displayColumn(
-						formatMs(min.time),
-						compareSpeed(min, fastest),
-						min === fastest,
-					)
-					: '—'
-			),
-		]),
-	], {
-		align: ['l', 'r', 'r', 'r'],
-	});
+	return markdownTable(
+		[
+			['Minifier', 'Minified size', 'Minzipped size', 'Time'],
+			...minifierResults
+				.sort(
+					(a, b) => ('error' in a ? PositiveInfinity : a.data.raw.minzippedSize) - ('error' in b ? PositiveInfinity : b.data.raw.minzippedSize),
+				)
+				.map((minifier) => {
+					const minifierLink = mdu.link(minifier.name, `/lib/minifiers/${minifier.name}.ts`);
+
+					if ('error' in minifier) {
+						return [
+							`${minifierLink} ${mdu.sub(`_${minifier.error}_`)}`,
+							'—',
+							'—',
+							'—',
+						];
+					}
+
+					return [
+						minifierLink,
+						displayColumn(
+							minifier.data.formatted.minifiedSize,
+							percent(artifact.size, minifier.data.raw.minifiedSize),
+							minifier === bestMinified,
+						),
+						displayColumn(
+							minifier.data.formatted.minzippedSize,
+							percent(artifact.gzipSize, minifier.data.raw.minzippedSize),
+							minifier === bestMinzipped,
+						),
+						displayColumn(
+							minifier.data.formatted.averageTime,
+							compareSpeed(minifier, bestSpeed),
+							minifier === bestSpeed,
+						),
+					];
+				}),
+		],
+		{
+			align: ['l', 'r', 'r', 'r'],
+		},
+	);
 }
 
-export function getBenchmarkDataTables(artifactMinifierBenchmarks: ArtifactMinifierBenchmarks[]) {
+export function getBenchmarkDataTables(
+	artifactMinifierBenchmarks: BenchmarkedArtifact[],
+) {
 	return artifactMinifierBenchmarks.map(
-		({ artifact, results }) => outdent`
+		({ artifact, benchmarkResults }) => outdent`
 			${
 				markdownTable([
 					['Artifact', 'Original size', 'Gzip size'],
@@ -115,15 +108,15 @@ export function getBenchmarkDataTables(artifactMinifierBenchmarks: ArtifactMinif
 							`**${artifact.moduleName} v${artifact.moduleVersion}**`,
 							`https://www.npmjs.com/package/${artifact.moduleName}/v/${artifact.moduleVersion}`,
 						),
-						mdu.c(byteSize(artifact.size)),
-						mdu.c(byteSize(artifact.gzipSize)),
+						mdu.c(byteSize(artifact.size).toString()),
+						mdu.c(byteSize(artifact.gzipSize).toString()),
 					],
 				], {
 					align: ['l', 'r', 'r'],
 				})
 			}
 
-			${getBenchmarkTable(artifact, results)}
+			${getBenchmarkTable(artifact, benchmarkResults)}
 		`,
 	).join('\n----\n');
 }

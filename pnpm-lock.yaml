@@ -3,13 +3,14 @@ lockfileVersion: 5.3
 specifiers:
   '@pvtnbr/eslint-config': ^0.4.1
   '@swc/core': ^1.2.106
+  '@types/byte-size': ^8.1.0
   '@types/lodash': ^4.14.172
   '@types/minimist': ^1.2.2
   '@types/node': ^16.7.7
   antd: ^4.16.1
   babel-minify: ^0.5.1
   byte-size: ^7.0.1
-  comment-mark: ^1.0.0
+  comment-mark: ^1.1.0
   d3: ^6.3.1
   date-fns: ^2.23.0
   echarts: ^5.1.1
@@ -48,7 +49,7 @@ dependencies:
   antd: 4.16.1_react-dom@17.0.2+react@17.0.1
   babel-minify: 0.5.1
   byte-size: 7.0.1
-  comment-mark: 1.0.0
+  comment-mark: 1.1.0
   d3: 6.3.1
   date-fns: 2.23.0
   echarts: 5.1.1
@@ -79,6 +80,7 @@ dependencies:
 
 devDependencies:
   '@pvtnbr/eslint-config': 0.4.1_eslint@7.32.0+typescript@4.3.5
+  '@types/byte-size': 8.1.0
   '@types/lodash': 4.14.172
   '@types/minimist': 1.2.2
   '@types/node': 16.7.7
@@ -751,6 +753,10 @@ packages:
     resolution: {integrity: sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==}
     engines: {node: '>= 6'}
     dev: false
+
+  /@types/byte-size/8.1.0:
+    resolution: {integrity: sha512-LCIlZh8vyx+I2fgRycE1D34c33QDppYY6quBYYoaOpQ1nGhJ/avSP2VlrAefVotjJxgSk6WkKo0rTcCJwGG7vA==}
+    dev: true
 
   /@types/json-schema/7.0.9:
     resolution: {integrity: sha512-qcUXuemtEu+E5wZSJHNxUXeCZhAfXKQ41D+duX+VYPde7xyEVZci+/oXKJL13tnRs9lR2pr4fod59GT6/X1/yQ==}
@@ -1481,8 +1487,8 @@ packages:
     engines: {node: '>= 10'}
     dev: true
 
-  /comment-mark/1.0.0:
-    resolution: {integrity: sha512-zDpcfnhcUbuHBEvg5esmXoCeuXWUEsNlizMJe77TEKVc9V+sFuotoO0rIKNajVBWgo3MZF0KVFEH85pcCFHTNw==}
+  /comment-mark/1.1.0:
+    resolution: {integrity: sha512-AWh+YG1jwfb7SeEvW1cNFMPfqHzUJplZXiVG1N5ucXju59DAkHSPzH1aNPcu1TgM/58dyHuwIYl6bakNbJa99g==}
     dev: false
 
   /comment-parser/1.2.3:
