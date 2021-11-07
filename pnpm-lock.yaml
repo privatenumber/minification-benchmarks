@@ -10,7 +10,7 @@ specifiers:
   antd: ^4.16.1
   babel-minify: ^0.5.1
   byte-size: ^7.0.1
-  comment-mark: github:privatenumber/comment-mark#built
+  comment-mark: ^1.1.0
   d3: ^6.3.1
   date-fns: ^2.23.0
   echarts: ^5.1.1
@@ -49,7 +49,7 @@ dependencies:
   antd: 4.16.1_react-dom@17.0.2+react@17.0.1
   babel-minify: 0.5.1
   byte-size: 7.0.1
-  comment-mark: github.com/privatenumber/comment-mark/effb6d24d2d87574502113c7d13da75a8ad81724
+  comment-mark: 1.1.0
   d3: 6.3.1
   date-fns: 2.23.0
   echarts: 5.1.1
@@ -1486,6 +1486,10 @@ packages:
     resolution: {integrity: sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==}
     engines: {node: '>= 10'}
     dev: true
+
+  /comment-mark/1.1.0:
+    resolution: {integrity: sha512-AWh+YG1jwfb7SeEvW1cNFMPfqHzUJplZXiVG1N5ucXju59DAkHSPzH1aNPcu1TgM/58dyHuwIYl6bakNbJa99g==}
+    dev: false
 
   /comment-parser/1.2.3:
     resolution: {integrity: sha512-vnqDwBSXSsdAkGS5NjwMIPelE47q+UkEgWKHvCDNhVIIaQSUFY6sNnEYGzdoPGMdpV+7KR3ZkRd7oyWIjtuvJg==}
@@ -5601,10 +5605,4 @@ packages:
     resolution: {integrity: sha512-c+8VRx52ycbmqwHeHLlo/BAfIHBl/JZNLM6cfDQFgzIH05yb+f5J9F/fbRsP+zGc8dW9XHuhdt8/iqukgMZSeg==}
     dependencies:
       tslib: 2.0.3
-    dev: false
-
-  github.com/privatenumber/comment-mark/effb6d24d2d87574502113c7d13da75a8ad81724:
-    resolution: {tarball: https://codeload.github.com/privatenumber/comment-mark/tar.gz/effb6d24d2d87574502113c7d13da75a8ad81724}
-    name: comment-mark
-    version: 0.0.0-semantic-release
     dev: false
