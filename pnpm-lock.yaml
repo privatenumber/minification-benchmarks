@@ -3,13 +3,14 @@ lockfileVersion: 5.3
 specifiers:
   '@pvtnbr/eslint-config': ^0.4.1
   '@swc/core': ^1.2.106
+  '@types/byte-size': ^8.1.0
   '@types/lodash': ^4.14.172
   '@types/minimist': ^1.2.2
   '@types/node': ^16.7.7
   antd: ^4.16.1
   babel-minify: ^0.5.1
   byte-size: ^7.0.1
-  comment-mark: ^1.0.0
+  comment-mark: github:privatenumber/comment-mark#built
   d3: ^6.3.1
   date-fns: ^2.23.0
   echarts: ^5.1.1
@@ -48,7 +49,7 @@ dependencies:
   antd: 4.16.1_react-dom@17.0.2+react@17.0.1
   babel-minify: 0.5.1
   byte-size: 7.0.1
-  comment-mark: 1.0.0
+  comment-mark: github.com/privatenumber/comment-mark/effb6d24d2d87574502113c7d13da75a8ad81724
   d3: 6.3.1
   date-fns: 2.23.0
   echarts: 5.1.1
@@ -79,6 +80,7 @@ dependencies:
 
 devDependencies:
   '@pvtnbr/eslint-config': 0.4.1_eslint@7.32.0+typescript@4.3.5
+  '@types/byte-size': 8.1.0
   '@types/lodash': 4.14.172
   '@types/minimist': 1.2.2
   '@types/node': 16.7.7
@@ -751,6 +753,10 @@ packages:
     resolution: {integrity: sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==}
     engines: {node: '>= 6'}
     dev: false
+
+  /@types/byte-size/8.1.0:
+    resolution: {integrity: sha512-LCIlZh8vyx+I2fgRycE1D34c33QDppYY6quBYYoaOpQ1nGhJ/avSP2VlrAefVotjJxgSk6WkKo0rTcCJwGG7vA==}
+    dev: true
 
   /@types/json-schema/7.0.9:
     resolution: {integrity: sha512-qcUXuemtEu+E5wZSJHNxUXeCZhAfXKQ41D+duX+VYPde7xyEVZci+/oXKJL13tnRs9lR2pr4fod59GT6/X1/yQ==}
@@ -1480,10 +1486,6 @@ packages:
     resolution: {integrity: sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==}
     engines: {node: '>= 10'}
     dev: true
-
-  /comment-mark/1.0.0:
-    resolution: {integrity: sha512-zDpcfnhcUbuHBEvg5esmXoCeuXWUEsNlizMJe77TEKVc9V+sFuotoO0rIKNajVBWgo3MZF0KVFEH85pcCFHTNw==}
-    dev: false
 
   /comment-parser/1.2.3:
     resolution: {integrity: sha512-vnqDwBSXSsdAkGS5NjwMIPelE47q+UkEgWKHvCDNhVIIaQSUFY6sNnEYGzdoPGMdpV+7KR3ZkRd7oyWIjtuvJg==}
@@ -5599,4 +5601,10 @@ packages:
     resolution: {integrity: sha512-c+8VRx52ycbmqwHeHLlo/BAfIHBl/JZNLM6cfDQFgzIH05yb+f5J9F/fbRsP+zGc8dW9XHuhdt8/iqukgMZSeg==}
     dependencies:
       tslib: 2.0.3
+    dev: false
+
+  github.com/privatenumber/comment-mark/effb6d24d2d87574502113c7d13da75a8ad81724:
+    resolution: {tarball: https://codeload.github.com/privatenumber/comment-mark/tar.gz/effb6d24d2d87574502113c7d13da75a8ad81724}
+    name: comment-mark
+    version: 0.0.0-semantic-release
     dev: false

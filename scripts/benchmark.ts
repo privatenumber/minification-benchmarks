@@ -3,9 +3,10 @@ import path from 'path';
 import fs from 'fs/promises';
 import minimist from 'minimist';
 import { getSize, getGzipSize } from '../lib/utils/get-size';
-import type { BenchmarkResult, MinifierFunction } from '../lib/types';
+import type { BenchmarkData, MinifierFunction } from '../lib/types';
 
 const getOptions = () => {
+	// TODO: typeflag
 	const argv = minimist<{
 		minifier: string;
 		outputPath?: string;
@@ -104,7 +105,9 @@ async function runTests(smokeTestPath: string, code: string) {
 	);
 
 	// Validate that it parses
-	await runTests(smokeTestPath, code);
+	if (smokeTestPath) {
+		await runTests(smokeTestPath, code);
+	}
 
 	const start = process.hrtime();
 	const minifiedCode = await minifier({
@@ -114,7 +117,9 @@ async function runTests(smokeTestPath: string, code: string) {
 	const hrtime = process.hrtime(start);
 
 	// Validate that it parses
-	await runTests(smokeTestPath, minifiedCode);
+	if (smokeTestPath) {
+		await runTests(smokeTestPath, minifiedCode);
+	}
 
 	const success = Boolean(minifiedCode);
 
@@ -122,7 +127,7 @@ async function runTests(smokeTestPath: string, code: string) {
 		minifiedSize: success && getSize(minifiedCode),
 		minzippedSize: success && getGzipSize(minifiedCode),
 		time: success && (hrtime[0] * 1000) + (hrtime[1] / 1e6),
-	} as BenchmarkResult));
+	} as BenchmarkData));
 
 	if (outputPath) {
 		await fs.writeFile(outputPath, minifiedCode);

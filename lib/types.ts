@@ -1,3 +1,7 @@
+import task from 'tasuku';
+
+export type Tasuku = typeof task;
+
 export type Artifact = {
 	artifactFilePath: string;
 	moduleName: string;
@@ -9,32 +13,48 @@ export type Artifact = {
 }
 
 // Result for a minifier benchmark given a file
-export type BenchmarkResult = {
+export type BenchmarkData = {
 	minifiedSize: number;
 	minzippedSize: number;
 	time: number;
 };
 
-// BenchmarkResult with minifier name
-export type MinifierBenchmarkResult = {
-	minifier: string;
-	result: BenchmarkResult;
+export type BenchmarkResultSuccess = {
+	data: BenchmarkData;
 };
 
-export type MinifierBenchmarksResultObject = {
-	[minifierName: string]: BenchmarkResult[];
+type BenchmarkResultFailed = {
+	error: string;
 };
 
-// Artifact and collection of minification results
-export type ArtifactMinifierBenchmarks = {
+export type BenchmarkResult = BenchmarkResultSuccess | BenchmarkResultFailed;
+
+export type AverageBenchmarkData<format = number> = {
+	minifiedSize: format;
+	minzippedSize: format;
+	averageTime: format;
+};
+
+type MinifierResultFailed = {
+	name: string;
+	error: string;
+};
+
+export type MinifierResultSuccess = {
+	name: string;
+	data: {
+		raw: AverageBenchmarkData;
+		formatted: AverageBenchmarkData<string>;
+	};
+	runs: BenchmarkData[];
+}
+
+export type MinifierResult = MinifierResultFailed | MinifierResultSuccess;
+
+export type BenchmarkedArtifact = {
 	artifact: Artifact;
-	results: MinifierBenchmarksResultObject;
-};
-
-// Collection of minification benchmarks for artifacts
-export type ArtifactsMinifierBenchmarks = {
-	[artifactName: string]: ArtifactMinifierBenchmarks;
-};
+	benchmarkResults: MinifierResult[];
+}
 
 export type MinifierFunction = (minifySubject: {
 	code: string;
