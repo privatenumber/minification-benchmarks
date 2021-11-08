@@ -1,24 +1,39 @@
 import assert from 'assert';
 import { inspect } from 'util';
-import minimist from 'minimist';
+import typeFlag from 'type-flag';
 import task from 'tasuku';
 import { getArtifacts } from '../lib/utils/get-artifacts';
 import { getMinifiers } from '../lib/utils/get-minifiers';
 import { benchmarkArtifacts } from '../lib/benchmark-artifacts';
 
 (async () => {
-	const argv = minimist(process.argv.slice(2));
+	const argv = typeFlag(process.argv.slice(2), {
+		artifact: {
+			type: String,
+			alias: 'a',
+		},
+		minifier: {
+			type: String,
+			alias: 'm',
+		},
+	});
 
 	let artifacts = await getArtifacts();
-	if (argv.artifact) {
-		artifacts = artifacts.filter(artifact => artifact.moduleName.match(argv.artifact));
+
+	const [artifactName] = argv.flags.artifact;
+	if (artifactName) {
+		artifacts = artifacts.filter(artifact => artifact.moduleName.match(artifactName));
 	}
+
 	assert(artifacts.length, 'No artifacts matched');
 
 	let minifiers = await getMinifiers();
-	if (argv.minifier) {
-		minifiers = minifiers.filter(minifier => minifier === argv.minifier);
+
+	const [minifierName] = argv.flags.minifier;
+	if (minifierName) {
+		minifiers = minifiers.filter(minifier => minifier === minifierName);
 	}
+
 	assert(minifiers.length, 'No minifiers matched');
 
 	const { results } = await benchmarkArtifacts(task, artifacts, minifiers);

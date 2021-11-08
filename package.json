@@ -42,7 +42,6 @@
 		"markdown-table": "^3.0.1",
 		"mem": "^8.1.1",
 		"memfs": "^3.2.2",
-		"minimist": "^1.2.5",
 		"moment": "^2.29.1",
 		"outdent": "^0.8.0",
 		"react": "^17.0.1",
@@ -51,6 +50,7 @@
 		"tasuku": "^1.0.1",
 		"terser": "^5.9.0",
 		"three": "^0.124.0",
+		"type-flag": "^1.0.0",
 		"uglify-js": "^3.14.3",
 		"victory": "^35.8.4",
 		"vue": "^2.6.12"

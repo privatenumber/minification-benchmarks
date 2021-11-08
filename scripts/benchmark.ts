@@ -1,36 +1,40 @@
 import assert from 'assert';
 import path from 'path';
 import fs from 'fs/promises';
-import minimist from 'minimist';
+import typeFlag from 'type-flag';
 import { getSize, getGzipSize } from '../lib/utils/get-size';
 import type { BenchmarkData, MinifierFunction } from '../lib/types';
 
 const getOptions = () => {
-	// TODO: typeflag
-	const argv = minimist<{
-		minifier: string;
-		outputPath?: string;
-		smokeTestPath?: string;
-	}>(process.argv.slice(2));
+	const argv = typeFlag(process.argv.slice(2), {
+		minifier: {
+			type: String,
+			alias: 'm',
+		},
+		outputPath: {
+			type: String,
+			alias: 'o',
+		},
+		smokeTestPath: {
+			type: String,
+			alias: 's',
+		},
+	});
 
-	const { minifier: minifierName } = argv;
-
+	const [minifierName] = argv.flags.minifier;
 	assert(minifierName?.length, 'Minifier name must be passed in');
 
-	let filePath = argv._[0];
+	let [filePath] = argv._;
 	assert(filePath?.length, 'File path must be passed in');
 
 	filePath = path.resolve(filePath);
 
-	let {
-		outputPath,
-		smokeTestPath,
-	} = argv;
-
+	let [outputPath] = argv.flags.outputPath;
 	if (outputPath) {
 		outputPath = path.resolve(outputPath);
 	}
 
+	let [smokeTestPath] = argv.flags.smokeTestPath;
 	if (smokeTestPath) {
 		smokeTestPath = path.resolve(smokeTestPath);
 	}
