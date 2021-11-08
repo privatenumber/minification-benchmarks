@@ -2,14 +2,20 @@ import task from 'tasuku';
 
 export type Tasuku = typeof task;
 
-export type Artifact = {
-	artifactFilePath: string;
-	moduleName: string;
-	moduleVersion: string;
+export type ArtifactMeta = {
+	package: string;
 	modulePath: string;
-	code: Buffer;
+};
+
+export type Artifact = {
+	packageName: string;
+	packageVersion: string;
+	modulePath: string;
+	fullModulePath: string;
+	artifactCode: Buffer;
 	size: number;
 	gzipSize: number;
+	testPath: string;
 }
 
 // Result for a minifier benchmark given a file
@@ -62,10 +68,3 @@ export type MinifierFunction = (minifySubject: {
 }) => Promise<string>;
 
 export const minifier = (minifierFunction: MinifierFunction): MinifierFunction => minifierFunction;
-
-export type ArtifactMeta = {
-	path: string;
-	test: (code: string) => void;
-};
-
-export const artifactMeta = (artifactMetaObject: ArtifactMeta): ArtifactMeta => artifactMetaObject;
