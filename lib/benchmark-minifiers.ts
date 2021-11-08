@@ -24,9 +24,9 @@ export async function benchmarkMinifiers(
 	minifiers: string[],
 	artifact: Artifact,
 	sampleSize = 1,
+	saveToDirectory = `results/benchmarks-${benchmarkTime}`,
 ) {
-	const directoryName = `results/benchmarks-${benchmarkTime}`;
-	await makeDir(directoryName);
+	await makeDir(saveToDirectory);
 
 	return await task.group(
 		task => minifiers.map(
@@ -37,12 +37,11 @@ export async function benchmarkMinifiers(
 					setOutput,
 					setError,
 				}): Promise<MinifierResult> => {
-					const artifactModulePath = path.basename(artifact.fullModulePath, '.js');
 					const runs: BenchmarkData[] = [];
 					let averageTime = 0;
 
 					for (let i = 1; i <= sampleSize; i += 1) {
-						const outputPath = path.join(directoryName, `${artifactModulePath}--${minifierName}-${i}.js`);
+						const outputPath = path.join(saveToDirectory, `${artifact.packageName}-${minifierName}.js`);
 						const result = await benchmark(
 							minifierName,
 							artifact.fullModulePath,
