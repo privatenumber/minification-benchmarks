@@ -20,7 +20,9 @@ export async function runTest(testPath: string, code: string) {
 	} catch (error) {
 		if (error instanceof Error) {
 			// eslint-disable-next-line unicorn/prefer-type-error
-			throw new Error(error.name);
+			throw new Error(`Invalid output: ${error.name}`);
 		}
+
+		throw new Error('Invalid output');
 	}
 }

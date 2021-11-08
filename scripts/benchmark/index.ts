@@ -26,10 +26,15 @@ import { runTest } from './run-test';
 	}
 
 	const start = process.hrtime();
-	const minifiedCode = await minifier({
-		filePath,
-		code,
-	});
+	let minifiedCode;
+	try {
+		minifiedCode = await minifier({
+			filePath,
+			code,
+		});
+	} catch {
+		throw new Error('Failed to minify');
+	}
 	const hrtime = process.hrtime(start);
 
 	if (testPath) {
