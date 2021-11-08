@@ -104,10 +104,10 @@ export function getBenchmarkDataTables(
 				markdownTable([
 					['Artifact', 'Original size', 'Gzip size'],
 					[
-						mdu.link(
+						`${mdu.link(
 							`**${artifact.packageName} v${artifact.packageVersion}**`,
 							`https://www.npmjs.com/package/${artifact.packageName}/v/${artifact.packageVersion}`,
-						),
+						)} (${mdu.link('Source', `https://unpkg.com/${artifact.packageName}@${artifact.packageVersion}${artifact.modulePath}`)})`,
 						mdu.c(byteSize(artifact.size).toString()),
 						mdu.c(byteSize(artifact.gzipSize).toString()),
 					],
