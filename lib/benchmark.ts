@@ -6,7 +6,7 @@ import type { BenchmarkResult } from './types';
 export const benchmark = async (
 	minifier: string,
 	artifactPath: string,
-	smokeTestPath?: string,
+	testPath?: string,
 	outputPath?: string,
 ): Promise<BenchmarkResult> => {
 	let stdout;
@@ -14,23 +14,23 @@ export const benchmark = async (
 		const minificationProcess = await execa(
 			require.resolve('esno/esno'),
 			[
-				path.join(__dirname, '../scripts/benchmark.ts'),
+				path.join(__dirname, '../scripts/benchmark/index.ts'),
 				'--minifier',
 				minifier,
 				artifactPath,
 				...(
 					outputPath
 						? [
-							'--outputPath',
+							'--output-path',
 							outputPath,
 						]
 						: []
 				),
 				...(
-					smokeTestPath
+					testPath
 						? [
-							'--smokeTestPath',
-							smokeTestPath,
+							'--test-path',
+							testPath,
 						]
 						: []
 				),
@@ -39,6 +39,11 @@ export const benchmark = async (
 				timeout: 1000 * 20,
 			},
 		);
+
+		const { stderr } = minificationProcess;
+		if (stderr) {
+			return safeJsonParse(stderr);
+		}
 
 		stdout = minificationProcess.stdout;
 	} catch (error) {

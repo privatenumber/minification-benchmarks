@@ -11,8 +11,10 @@ export async function benchmarkArtifacts(
 	return await task.group(
 		task => artifacts.map(
 			artifact => task(
-				`${artifact.moduleName} - ${path.relative(process.cwd(), artifact.modulePath)}`,
-				async ({ task }): Promise<BenchmarkedArtifact> => {
+				artifact.packageName,
+				async ({ task, setStatus }): Promise<BenchmarkedArtifact> => {
+					setStatus(path.relative('node_modules', artifact.fullModulePath));
+
 					const benchmarkingTask = await benchmarkMinifiers(
 						task,
 						minifiers,

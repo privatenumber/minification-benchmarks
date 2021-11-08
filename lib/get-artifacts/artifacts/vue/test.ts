@@ -1,12 +1,9 @@
 import 'jsdom-global/register.js';
 import assert from 'assert';
-import { requireString } from '../utils/require-string';
-import { artifactMeta } from '../types';
+import { defineTest } from '../..';
 
-export default artifactMeta({
-	path: 'vue/dist/vue.js',
-	test(code) {
-		const Vue = requireString(code);
+export default defineTest({
+	run(Vue) {
 		Vue.config.devtools = false;
 		Vue.config.productionTip = false;
 

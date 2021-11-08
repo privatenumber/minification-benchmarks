@@ -105,8 +105,8 @@ export function getBenchmarkDataTables(
 					['Artifact', 'Original size', 'Gzip size'],
 					[
 						mdu.link(
-							`**${artifact.moduleName} v${artifact.moduleVersion}**`,
-							`https://www.npmjs.com/package/${artifact.moduleName}/v/${artifact.moduleVersion}`,
+							`**${artifact.packageName} v${artifact.packageVersion}**`,
+							`https://www.npmjs.com/package/${artifact.packageName}/v/${artifact.packageVersion}`,
 						),
 						mdu.c(byteSize(artifact.size).toString()),
 						mdu.c(byteSize(artifact.gzipSize).toString()),

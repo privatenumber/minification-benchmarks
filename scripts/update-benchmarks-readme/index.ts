@@ -1,5 +1,5 @@
 import task from 'tasuku';
-import { getArtifacts } from '../../lib/utils/get-artifacts';
+import { getArtifacts } from '../../lib/get-artifacts';
 import { getMinifiers } from '../../lib/utils/get-minifiers';
 import { benchmarkArtifacts } from '../../lib/benchmark-artifacts';
 import type { BenchmarkedArtifact } from '../../lib/types';

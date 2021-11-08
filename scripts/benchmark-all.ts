@@ -2,7 +2,7 @@ import assert from 'assert';
 import { inspect } from 'util';
 import typeFlag from 'type-flag';
 import task from 'tasuku';
-import { getArtifacts } from '../lib/utils/get-artifacts';
+import { getArtifacts } from '../lib/get-artifacts';
 import { getMinifiers } from '../lib/utils/get-minifiers';
 import { benchmarkArtifacts } from '../lib/benchmark-artifacts';
 
@@ -22,7 +22,7 @@ import { benchmarkArtifacts } from '../lib/benchmark-artifacts';
 
 	const [artifactName] = argv.flags.artifact;
 	if (artifactName) {
-		artifacts = artifacts.filter(artifact => artifact.moduleName.match(artifactName));
+		artifacts = artifacts.filter(artifact => artifact.packageName.match(artifactName));
 	}
 
 	assert(artifacts.length, 'No artifacts matched');
