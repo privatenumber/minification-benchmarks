@@ -6,7 +6,8 @@ export async function benchmarkArtifacts(
 	task: Tasuku,
 	artifacts: Artifact[],
 	minifiers: string[],
-	sampleSize = 1,
+	sampleSize?: number,
+	saveToDirectory?: string,
 ) {
 	return await task.group(
 		task => artifacts.map(
@@ -20,6 +21,7 @@ export async function benchmarkArtifacts(
 						minifiers,
 						artifact,
 						sampleSize,
+						saveToDirectory,
 					);
 
 					benchmarkingTask.clear();
