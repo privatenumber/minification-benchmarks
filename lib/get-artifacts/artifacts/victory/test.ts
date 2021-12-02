@@ -8,6 +8,10 @@ const snapshot = '<div style="height: 100%; width: 100%; user-select: none; poin
 
 export default defineTest({
 	run({ VictoryChart }) {
+		console.log(111);
+		console.warn(222);
+		console.error(333);
+
 		const app = document.createElement('div');
 		document.body.append(app);
 
