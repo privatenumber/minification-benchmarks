@@ -15,10 +15,16 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
           repository: ${{ github.repository }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version-file: '.nvmrc'
+      - name: Install dependencies
+        run: npx ci
       - name: Benchmark
+        run: npm run update-benchmarks-readme
+      - name: Commit readme
         run: |
-          npx ci
-          npm run update-benchmarks-readme
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
