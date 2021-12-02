@@ -49,7 +49,9 @@ export const defineTest = (test: Test) => test;
 const artifactDirectory = path.join(__dirname, './artifacts');
 
 export const getArtifacts = async () => {
-	const artifactMetas = (await fs.readdir(artifactDirectory)).filter(
+	let artifactMetas = await fs.readdir(artifactDirectory);
+
+	artifactMetas = artifactMetas.filter(
 		fileName => !fileName.startsWith('.'),
 	);
 
