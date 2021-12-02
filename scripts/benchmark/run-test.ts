@@ -16,9 +16,9 @@ export async function runTest(testPath: string, code: string) {
 	}
 
 	try {
-		console.log('run');
+		console.warn('run');
 		await run(requireString(code));
-		console.log('run done');
+		console.warn('run done');
 	} catch (error) {
 		if (error instanceof Error) {
 			// eslint-disable-next-line unicorn/prefer-type-error
