@@ -1,14 +1,14 @@
 import fs from 'fs/promises';
 import path from 'path';
 import assert from 'assert';
-import { readPackageUpAsync } from 'read-pkg-up';
+import { readPackageUp } from 'read-pkg-up';
 import type { Artifact, ArtifactMeta } from '../types';
 import { getSize, getGzipSize } from '../utils/get-size';
 
 const readPublicPackageUp = async (cwd: string) => {
-	let packageFound = await readPackageUpAsync({ cwd });
+	let packageFound = await readPackageUp({ cwd });
 	while (packageFound!.packageJson.private) {
-		packageFound = await readPackageUpAsync({
+		packageFound = await readPackageUp({
 			cwd: path.join(path.dirname(packageFound!.path), '..'),
 		});
 	}

@@ -1,5 +1,5 @@
 import path from 'path';
-import execa, { ExecaError } from 'execa';
+import { execa, ExecaError } from 'execa';
 import { safeJsonParse } from './utils/safe-json-parse';
 import type { BenchmarkResult } from './types';
 
