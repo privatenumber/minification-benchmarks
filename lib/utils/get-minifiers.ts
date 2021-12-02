@@ -9,6 +9,7 @@ export const getMinifiers = mem(async () => {
 			minifierPath => (
 				!minifierPath.startsWith('_')
 				&& minifierPath.endsWith('.ts')
+				&& minifierPath.match('babel')
 			),
 		)
 		.map(minifier => minifier.slice(0, -3)); // remove ".ts"
