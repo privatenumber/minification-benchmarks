@@ -5,6 +5,7 @@ export const safeJsonParse = (
 		return JSON.parse(jsonString);
 	} catch {
 		console.log({ 'Failed to parse JSON': jsonString });
+		return jsonString;
 		return null;
 	}
 };
