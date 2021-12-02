@@ -50,7 +50,7 @@ const artifactDirectory = path.join(__dirname, './artifacts');
 
 export const getArtifacts = async () => {
 	const artifactMetas = (await fs.readdir(artifactDirectory)).filter(
-		fileName => !fileName.startsWith('.') && fileName.match('victory'),
+		fileName => !fileName.startsWith('.'),
 	);
 
 	const artifacts: Artifact[] = await Promise.all(artifactMetas.map(
