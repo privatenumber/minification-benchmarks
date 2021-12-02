@@ -50,49 +50,47 @@ function getBenchmarkTable(
 	const bestMinzipped = minBy(successfulMinifiers, 'data.raw.minzippedSize');
 	const bestSpeed = minBy(successfulMinifiers, 'data.raw.averageTime');
 
-	return markdownTable(
-		[
-			['Minifier', 'Minified size', 'Minzipped size', 'Time'],
-			...minifierResults
-				.sort(
-					(a, b) => ('error' in a ? PositiveInfinity : a.data.raw.minzippedSize) - ('error' in b ? PositiveInfinity : b.data.raw.minzippedSize),
-				)
-				.map((minifier) => {
-					const minifierLink = mdu.link(minifier.name, `/lib/minifiers/${minifier.name}.ts`);
+	return [
+		['Minifier', 'Minified size', 'Minzipped size', 'Time'].map(mdu.strong),
+		...minifierResults
+			.sort(
+				(a, b) => (
+					('error' in a ? PositiveInfinity : a.data.raw.minzippedSize)
+					- ('error' in b ? PositiveInfinity : b.data.raw.minzippedSize)
+				),
+			)
+			.map((minifier) => {
+				const minifierLink = mdu.link(minifier.name, `/lib/minifiers/${minifier.name}.ts`);
 
-					if ('error' in minifier) {
-						return [
-							`${minifierLink} ${mdu.sub(`_${minifier.error}_`)}`,
-							'—',
-							'—',
-							'—',
-						];
-					}
-
+				if ('error' in minifier) {
 					return [
-						minifierLink,
-						displayColumn(
-							minifier.data.formatted.minifiedSize,
-							percent(artifact.size, minifier.data.raw.minifiedSize),
-							minifier === bestMinified,
-						),
-						displayColumn(
-							minifier.data.formatted.minzippedSize,
-							percent(artifact.gzipSize, minifier.data.raw.minzippedSize),
-							minifier === bestMinzipped,
-						),
-						displayColumn(
-							minifier.data.formatted.averageTime,
-							compareSpeed(minifier, bestSpeed),
-							minifier === bestSpeed,
-						),
+						`${minifierLink} ${mdu.sub(`_${minifier.error}_`)}`,
+						'—',
+						'—',
+						'—',
 					];
-				}),
-		],
-		{
-			align: ['l', 'r', 'r', 'r'],
-		},
-	);
+				}
+
+				return [
+					minifierLink,
+					displayColumn(
+						minifier.data.formatted.minifiedSize,
+						percent(artifact.size, minifier.data.raw.minifiedSize),
+						minifier === bestMinified,
+					),
+					displayColumn(
+						minifier.data.formatted.minzippedSize,
+						percent(artifact.gzipSize, minifier.data.raw.minzippedSize),
+						minifier === bestMinzipped,
+					),
+					displayColumn(
+						minifier.data.formatted.averageTime,
+						compareSpeed(minifier, bestSpeed),
+						minifier === bestSpeed,
+					),
+				];
+			}),
+	];
 }
 
 export function getBenchmarkDataTables(
@@ -105,18 +103,19 @@ export function getBenchmarkDataTables(
 					['Artifact', 'Original size', 'Gzip size'],
 					[
 						`${mdu.link(
-							`**${artifact.packageName} v${artifact.packageVersion}**`,
+							`${artifact.packageName} v${artifact.packageVersion}`,
 							`https://www.npmjs.com/package/${artifact.packageName}/v/${artifact.packageVersion}`,
 						)} (${mdu.link('Source', `https://unpkg.com/${artifact.packageName}@${artifact.packageVersion}${artifact.modulePath}`)})`,
 						mdu.c(byteSize(artifact.size).toString()),
 						mdu.c(byteSize(artifact.gzipSize).toString()),
+						'',
 					],
+
+					...getBenchmarkTable(artifact, benchmarkResults),
 				], {
-					align: ['l', 'r', 'r'],
+					align: ['l', 'r', 'r', 'r'],
 				})
 			}
-
-			${getBenchmarkTable(artifact, benchmarkResults)}
 		`,
 	).join('\n----\n');
 }

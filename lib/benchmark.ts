@@ -42,6 +42,7 @@ export const benchmark = async (
 
 		const { stderr } = minificationProcess;
 		if (stderr) {
+			// script stderr should log { error: string }
 			return safeJsonParse(stderr);
 		}
 
