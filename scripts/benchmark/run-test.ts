@@ -8,6 +8,7 @@ export const requireString = (code: string) => {
 };
 
 function disablelogs() {
+	console.log('Logging disabled');
 	const stdoutWrite = process.stdout.write;
 	const stderrWrite = process.stderr.write;
 
@@ -32,6 +33,9 @@ export async function runTest(testPath: string, code: string) {
 
 	const reenableLogs = disablelogs();
 	
+	console.log(111);
+	console.warn(222);
+	console.error(333);
 	try {
 		await run(requireString(code));
 	} catch (error) {		
