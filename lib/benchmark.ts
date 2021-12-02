@@ -44,7 +44,7 @@ export const benchmark = async (
 		if (stderr) {
 			const error = safeJsonParse(stderr);
 
-			console.log({ stderr });
+			console.log({ minifier, artifactPath, stderr });
 
 			return { error };
 		}
