@@ -1,8 +1,12 @@
-import 'jsdom-global/register.js';
 import assert from 'assert';
+import jsdom from 'jsdom-global';
 import { createElement } from 'react';
 import { render } from 'react-dom';
 import { defineTest } from '../..';
+
+jsdom(undefined, {
+	pretendToBeVisual: true,
+});
 
 export default defineTest({
 	preprocess(code) {
