@@ -5,6 +5,7 @@ The following JavaScript minifiers are benchmarked to compare quality and speed:
 - [esbuild](https://github.com/evanw/esbuild)
 - [google-closure-compiler](https://github.com/google/closure-compiler-npm/tree/master/packages/google-closure-compiler)
 - [swc](https://github.com/swc-project/swc)
+- [tdewolff/minify](https://github.com/tdewolff/minify)
 - [terser](https://github.com/terser/terser)
 - [uglify-js](https://github.com/mishoo/UglifyJS)
 
