@@ -34,7 +34,7 @@
 		"esbuild": "^0.14.2",
 		"execa": "^6.0.0",
 		"fs-require": "^1.4.0",
-		"google-closure-compiler": "^20211107.0.0",
+		"google-closure-compiler": "^20211201.0.0",
 		"jquery": "^3.5.1",
 		"jsdom": "^19.0.0",
 		"jsdom-global": "^3.0.2",

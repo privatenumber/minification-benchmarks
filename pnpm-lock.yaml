@@ -21,7 +21,7 @@ specifiers:
   esno: ^0.12.1
   execa: ^6.0.0
   fs-require: ^1.4.0
-  google-closure-compiler: ^20211107.0.0
+  google-closure-compiler: ^20211201.0.0
   husky: ^4.3.8
   jquery: ^3.5.1
   jsdom: ^19.0.0
@@ -58,7 +58,7 @@ dependencies:
   esbuild: 0.14.2
   execa: 6.0.0
   fs-require: 1.4.0
-  google-closure-compiler: 20211107.0.0
+  google-closure-compiler: 20211201.0.0
   jquery: 3.5.1
   jsdom: 19.0.0
   jsdom-global: 3.0.2_jsdom@19.0.0
@@ -3114,48 +3114,48 @@ packages:
       slash: 3.0.0
     dev: true
 
-  /google-closure-compiler-java/20211107.0.0:
-    resolution: {integrity: sha512-WavJ1Rx+Fv98rNKClQD6b+GMCVqws7GkbI7sdxiIbrzeNiXwa5K8TKBaqyUx/G1myQ6+gml6GULgJi7nsBOXVQ==}
+  /google-closure-compiler-java/20211201.0.0:
+    resolution: {integrity: sha512-TQop4dF0k/mb9sPu0aZsvW8OVfuZG4+t4ITZeA/u43deiAA4AFScZQQUMUmoVmXzR8Jz0eeucKoZPTwKAwcSmQ==}
     dev: false
 
-  /google-closure-compiler-linux/20211107.0.0:
-    resolution: {integrity: sha512-ULk90c4IiuTcHZ892eFusN/WYfY+gvopy38msrmUnYrmLjq5Ssef7NtDRUhYe9SIX7Dd5NM2jo7u7XjEu/4NCQ==}
+  /google-closure-compiler-linux/20211201.0.0:
+    resolution: {integrity: sha512-7nMgBFZYYQTvDLcO+LqqwtibgZJu8qaFJbK84T12xneY1Yy1fUSn56NXaZ9cgdS7p30Hqy6tYcw9ZSuxK7fuEA==}
     cpu: [x64, x86]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /google-closure-compiler-osx/20211107.0.0:
-    resolution: {integrity: sha512-nTDR6oAQ6GHT1UakZc4OdyZh2AqwKce7aZQS+XLWojh98SEq7JS5dyEkFBK6a1lqWyOMLH2Mrr3XhNobY/umbA==}
+  /google-closure-compiler-osx/20211201.0.0:
+    resolution: {integrity: sha512-eJKmvYm5C82BAcfK64/7nR3RbR4bwIXO2Dmhmb5AR6FXxD/J1svaG3BMINlS+U/GT7NeV4Z7bKb2TcPIAfGO9A==}
     cpu: [x64, x86, arm64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /google-closure-compiler-windows/20211107.0.0:
-    resolution: {integrity: sha512-0G7Dd/ZoSPS6pSsOdA6N4LJU0zJddHcS+PiNixQVN50kuHH3DjfI+gCyLx7CkJUZEuGiGHDVkc0ZmKBR5iq4QA==}
+  /google-closure-compiler-windows/20211201.0.0:
+    resolution: {integrity: sha512-OPZYA0+tJSjutt1EYrECmXChNsY5USoMbQkBEmwI29riVvNnK5Ot+/SE66/NPHwm3qI/p3O7TnOTKhVpXKed5Q==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: false
     optional: true
 
-  /google-closure-compiler/20211107.0.0:
-    resolution: {integrity: sha512-CVP18mjlTz+T8D0J2/vNGAkCRd9cZb06kRb0Fp/VXntFvcYdNWNs780vkiplNGtuxyI6Kn3NQPlZZutFuME4ww==}
+  /google-closure-compiler/20211201.0.0:
+    resolution: {integrity: sha512-QPNp6uHR94EKbi17XCsdISHAqIgk1Ep7LpB+rmPDY7VoNAX4784WT/0bz6HyVK4QYRVLlNAy2X+1+VlFhS0FzQ==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
       chalk: 2.4.2
-      google-closure-compiler-java: 20211107.0.0
+      google-closure-compiler-java: 20211201.0.0
       minimist: 1.2.5
       vinyl: 2.2.1
       vinyl-sourcemaps-apply: 0.2.1
     optionalDependencies:
-      google-closure-compiler-linux: 20211107.0.0
-      google-closure-compiler-osx: 20211107.0.0
-      google-closure-compiler-windows: 20211107.0.0
+      google-closure-compiler-linux: 20211201.0.0
+      google-closure-compiler-osx: 20211201.0.0
+      google-closure-compiler-windows: 20211201.0.0
     dev: false
 
   /grapheme-splitter/1.0.4:
