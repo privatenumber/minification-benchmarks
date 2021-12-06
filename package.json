@@ -12,7 +12,7 @@
 		"update-benchmarks-readme": "esno scripts/update-benchmarks-readme/index.ts",
 		"lint": "eslint .",
 		"typecheck": "tsc --noEmit",
-		"prepare": "./scripts/install-tdewolff-minify.sh"
+		"postinstall": "./scripts/install-tdewolff-minify.sh"
 	},
 	"husky": {
 		"hooks": {
