@@ -1,6 +1,6 @@
 # 🏃‍♂️🏃‍♀️🏃 JS minification benchmarks
 
-The following JavaScript minifiers are benchmarked to compare quality and speed:
+This repo is routinely maintained to compare the quality and speed across the latest versions of the following JavaScript minifiers:
 - [babel-minify](https://github.com/babel/minify)
 - [esbuild](https://github.com/evanw/esbuild)
 - [google-closure-compiler](https://github.com/google/closure-compiler-npm/tree/master/packages/google-closure-compiler)
@@ -12,6 +12,12 @@ The following JavaScript minifiers are benchmarked to compare quality and speed:
 _Benchmarks last updated on <!-- lastUpdated:start -->Dec 20, 2021<!-- lastUpdated:end -->._
 
 <sub>Support this project by ⭐️ starring and sharing it. [Follow me](https://github.com/privatenumber) to see what other cool projects I'm working on! ❤️</sub>
+
+## 🙋‍♂️ Why?
+
+1. To help you pick a minifier that fits your needs
+2. To promote JS minifiers and document their performances
+3. To encourage healthy competition and improvement amongst minifiers
 
 ## 👟 Methodology
 
