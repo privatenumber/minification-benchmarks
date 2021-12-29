@@ -20,14 +20,29 @@ _Benchmarks last updated on <!-- lastUpdated:start -->Dec 26, 2021<!-- lastUpdat
 3. To encourage healthy competition and improvement amongst minifiers
 
 ## 👟 Methodology
-
 - Each minifier is executed in its own process with a 20 second timeout
-- _"Time"_ is the average of 5 consecutive runs
-- _"Minzipped size"_ (minified & gzipped) measures how well the minified file compresses with Gzip
-- Results are sorted by smallest minzipped size
-- Each _"Time"_ is annotated with a multiplier relative to the fastest minifier
-- Minified artifacts are validated by a smoke test
-- Minified artifacts can be downloaded and verified in each [action run](https://github.com/privatenumber/minification-benchmarks/actions/workflows/benchmark.yml)
+- Artifact integrity is verified by a test before and after minification
+- Minifier upgrade PRs are automated via [WhiteSource Renovate](https://www.whitesourcesoftware.com/free-developer-tools/renovate/)
+- Benchmarks are gathered on every PR via [GitHub Actions](https://github.com/privatenumber/minification-benchmarks/actions/workflows/benchmark.yml) (verifiable minified artifacts are uploaded on each run)
+
+## ⏱ Metrics
+Minifiers are ranked by smallest minzipped size.
+
+#### Minified size
+
+Size of the minified output.
+
+#### Minzipped size
+
+Size of the minified output with [Gzip compression](https://en.wikipedia.org/wiki/Gzip).
+
+For minifiers, this measures how compressable the output is.
+
+For users, this measures network transfer size, which is usually the metric that matters most.
+
+#### Time
+
+How long minification took (average of 5 runs). Each time is annotated with a multiplier relative to the fastest minifier.
 
 ## 📋 Results
 
