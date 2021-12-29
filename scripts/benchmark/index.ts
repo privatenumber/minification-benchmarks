@@ -1,18 +1,53 @@
 import fs from 'fs/promises';
+import assert from 'assert';
+import path from 'path';
 import { getSize, getGzipSize } from '../../lib/utils/get-size';
 import type { BenchmarkData } from '../../lib/types';
 import { getMinifier } from './get-minifier';
 import { unpreserveComment } from './unpreserve-comments';
-import { getOptions } from './get-options';
+import { cli } from 'cleye';
 import { runTest } from './run-test';
 
-(async ({
-	minifierName,
-	filePath,
-	outputPath,
-	testPath,
-}) => {
+(async () => {
+	const app = cli({
+		name: 'benchmark',
+
+		arguments: ['<file-path>'],
+
+		flags: {
+			minifier: {
+				type: String,
+				alias: 'm',
+				description: 'Minifier name from lib/minifiers',
+			},
+
+			outputPath: {
+				type: String,
+				alias: 'o',
+				description: 'Output path for minified code',
+			},
+
+			testPath: {
+				type: String,
+				alias: 't',
+				description: 'Path to test file. Executed before and after minification',
+			},
+		},
+	});
+
+	const {
+		minifier: minifierName,
+		outputPath,
+		testPath,
+	} = app.flags;
+
+	assert(minifierName, 'Minifier name must be passed in');
+
 	const minifier = getMinifier(minifierName);
+
+	assert(app._.filePath, 'File path must be passed in');
+
+	const filePath = path.resolve(app._.filePath);
 
 	let code = await fs.readFile(filePath, 'utf-8');
 
@@ -52,7 +87,7 @@ import { runTest } from './run-test';
 	if (outputPath) {
 		await fs.writeFile(outputPath, minifiedCode);
 	}
-})(getOptions()).catch((error) => {
+})().catch((error) => {
 	console.error(JSON.stringify({
 		error: error.message,
 	}));

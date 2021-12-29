@@ -13,6 +13,7 @@ specifiers:
   babel-minify: ^0.5.1
   bina: ^0.1.2
   byte-size: ^8.1.0
+  cleye: github:privatenumber/cleye
   comment-mark: ^1.1.1
   d3: ^6.3.1
   date-fns: ^2.27.0
@@ -52,6 +53,7 @@ dependencies:
   antd: 4.16.1_react-dom@17.0.2+react@17.0.1
   babel-minify: 0.5.1
   byte-size: 8.1.0
+  cleye: github.com/privatenumber/cleye/b3d203f9326afa1966e2e73d20869bafe3684940
   comment-mark: 1.1.1
   d3: 6.3.1
   date-fns: 2.27.0
@@ -5293,6 +5295,10 @@ packages:
       yoga-layout-prebuilt: 1.10.0
     dev: false
 
+  /terminal-columns/1.0.0:
+    resolution: {integrity: sha512-e446DfI4bvyNkJffnjx7583wMny0f2YFbenrNi6SZgK4xiPO6+eY6J6W4ugsh9OPkHcl13y0vpEQvTmaKK26Qw==}
+    dev: false
+
   /terser/5.10.0:
     resolution: {integrity: sha512-AMmF99DMfEDiRJfxfY5jj5wNH/bYO09cniSqhfoyxc8sFoYIgkJy86G04UoZU5VjlpnplVu0K6Tx6E9b5+DlHA==}
     engines: {node: '>=10'}
@@ -5423,6 +5429,10 @@ packages:
 
   /type-flag/1.0.0:
     resolution: {integrity: sha512-uew3DIiFzhDI6hv5mcyeoIHEtjGRQxldzKWnsi4JM3F4pYjTdHrHsShz/upBFdeIiN7l4g3i5WyOwc7/PAwdCw==}
+    dev: false
+
+  /type-flag/2.0.0:
+    resolution: {integrity: sha512-L0jgov26xVtNM23pL0Roh45Is/l8aIA6YyI9U8x8L8tcw2t+nwZHYzjBVB8CIJ2PFe3qb5hJSDynUmKP1GcHtw==}
     dev: false
 
   /typescript/4.5.2:
@@ -5942,4 +5952,13 @@ packages:
     resolution: {integrity: sha512-c+8VRx52ycbmqwHeHLlo/BAfIHBl/JZNLM6cfDQFgzIH05yb+f5J9F/fbRsP+zGc8dW9XHuhdt8/iqukgMZSeg==}
     dependencies:
       tslib: 2.0.3
+    dev: false
+
+  github.com/privatenumber/cleye/b3d203f9326afa1966e2e73d20869bafe3684940:
+    resolution: {commit: b3d203f9326afa1966e2e73d20869bafe3684940, repo: git+ssh://git@github.com/privatenumber/cleye.git, type: git}
+    name: cleye
+    version: 1.0.0
+    dependencies:
+      terminal-columns: 1.0.0
+      type-flag: 2.0.0
     dev: false
