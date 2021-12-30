@@ -23,6 +23,7 @@
 				"uglify-js"
 			],
 			"rangeStrategy": "bump",
+			"gitIgnoredAuthors": ["github-actions@github.com"],
 			"enabled": true
 		}
 	]
