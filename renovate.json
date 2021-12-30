@@ -7,6 +7,7 @@
 		":prConcurrentLimit20",
 		"workarounds:all"
 	],
+
 	"packageRules": [
 		{
 			"packagePatterns": ["*"],
@@ -23,8 +24,9 @@
 				"uglify-js"
 			],
 			"rangeStrategy": "bump",
-			"gitIgnoredAuthors": ["github-actions@github.com"],
 			"enabled": true
 		}
-	]
+	],
+
+	"gitIgnoredAuthors": ["github-actions@github.com"]
 }
