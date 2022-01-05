@@ -13,6 +13,7 @@ specifiers:
   babel-minify: ^0.5.1
   bina: ^0.1.3
   byte-size: ^8.1.0
+  cleye: ^1.0.1
   comment-mark: ^1.1.1
   d3: ^6.3.1
   date-fns: ^2.27.0
@@ -41,7 +42,6 @@ specifiers:
   tasuku: ^1.0.2
   terser: ^5.10.0
   three: ^0.124.0
-  type-flag: ^1.0.0
   typescript: ^4.5.2
   uglify-js: ^3.14.5
   victory: ^35.8.4
@@ -52,6 +52,7 @@ dependencies:
   antd: 4.16.1_react-dom@17.0.2+react@17.0.1
   babel-minify: 0.5.1
   byte-size: 8.1.0
+  cleye: 1.0.1
   comment-mark: 1.1.1
   d3: 6.3.1
   date-fns: 2.27.0
@@ -76,7 +77,6 @@ dependencies:
   tasuku: 1.0.2
   terser: 5.10.0
   three: 0.124.0
-  type-flag: 1.0.0
   uglify-js: 3.14.5
   victory: 35.8.4
   vue: 2.6.12
@@ -1456,6 +1456,13 @@ packages:
     resolution: {integrity: sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==}
     engines: {node: '>=6'}
     dev: true
+
+  /cleye/1.0.1:
+    resolution: {integrity: sha512-MackVW9Cwdy7n7h1R7522q8ofJZqXtdnmD1K7a4RbCUZ8KuM3RUkgcO3ooLZqQWff0eXpoTHbf5pU1Iwhx73EQ==}
+    dependencies:
+      terminal-columns: 1.4.0
+      type-flag: 2.0.0
+    dev: false
 
   /cli-cursor/3.1.0:
     resolution: {integrity: sha512-I/zHAwsKf9FqGoXM4WWRACob9+SNukZTd94DWF57E4toouRulbCxcUh6RKUEOQlYTHJnzkPMySvPNaaSLNfLZw==}
@@ -5281,6 +5288,10 @@ packages:
       yoga-layout-prebuilt: 1.10.0
     dev: false
 
+  /terminal-columns/1.4.0:
+    resolution: {integrity: sha512-Oh62O26xgOUjakUlGfjAEdgZmipNsqHPmvs8QQ8j6WH3c5iXhshCjr6yB6bW7CYXG5POoUrHLLLcKdRvv8LBZg==}
+    dev: false
+
   /terser/5.10.0:
     resolution: {integrity: sha512-AMmF99DMfEDiRJfxfY5jj5wNH/bYO09cniSqhfoyxc8sFoYIgkJy86G04UoZU5VjlpnplVu0K6Tx6E9b5+DlHA==}
     engines: {node: '>=10'}
@@ -5409,8 +5420,8 @@ packages:
     engines: {node: '>=12.20'}
     dev: false
 
-  /type-flag/1.0.0:
-    resolution: {integrity: sha512-uew3DIiFzhDI6hv5mcyeoIHEtjGRQxldzKWnsi4JM3F4pYjTdHrHsShz/upBFdeIiN7l4g3i5WyOwc7/PAwdCw==}
+  /type-flag/2.0.0:
+    resolution: {integrity: sha512-L0jgov26xVtNM23pL0Roh45Is/l8aIA6YyI9U8x8L8tcw2t+nwZHYzjBVB8CIJ2PFe3qb5hJSDynUmKP1GcHtw==}
     dev: false
 
   /typescript/4.5.2:

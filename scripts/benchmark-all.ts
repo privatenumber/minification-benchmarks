@@ -1,26 +1,35 @@
 import assert from 'assert';
 import { inspect } from 'util';
-import typeFlag from 'type-flag';
+import { cli } from 'cleye';
 import task from 'tasuku';
 import { getArtifacts } from '../lib/get-artifacts';
 import { getMinifiers } from '../lib/utils/get-minifiers';
 import { benchmarkArtifacts } from '../lib/benchmark-artifacts';
 
 (async () => {
-	const argv = typeFlag(process.argv.slice(2), {
-		artifact: {
-			type: String,
-			alias: 'a',
-		},
-		minifier: {
-			type: String,
-			alias: 'm',
+	const argv = cli({
+		name: 'benchmark-all',
+		flags: {
+			artifact: {
+				type: String,
+				alias: 'a',
+				description: 'Artifact name to filter all artifacts by',
+			},
+			minifier: {
+				type: String,
+				alias: 'm',
+				description: 'Minifier to benchmark. Options in `lib/minifiers`',
+			},
 		},
 	});
 
 	let artifacts = await getArtifacts();
 
-	const [artifactName] = argv.flags.artifact;
+	const {
+		artifact: artifactName,
+		minifier: minifierName,
+	} = argv.flags;
+
 	if (artifactName) {
 		artifacts = artifacts.filter(artifact => artifact.packageName.match(artifactName));
 	}
@@ -29,7 +38,6 @@ import { benchmarkArtifacts } from '../lib/benchmark-artifacts';
 
 	let minifiers = await getMinifiers();
 
-	const [minifierName] = argv.flags.minifier;
 	if (minifierName) {
 		minifiers = minifiers.filter(minifier => minifier === minifierName);
 	}
