@@ -1,3 +1,4 @@
+import path from 'path';
 import { Volume } from 'memfs';
 import { createFsRequire } from 'fs-require';
 
@@ -9,7 +10,7 @@ export const requireString = (code: string) => {
 
 export async function runTest(testPath: string, code: string) {
 	// eslint-disable-next-line node/global-require,@typescript-eslint/no-var-requires
-	const { preprocess, run } = require(testPath).default;
+	const { preprocess, run } = require(path.resolve(testPath)).default;
 
 	if (preprocess) {
 		code = preprocess(code);

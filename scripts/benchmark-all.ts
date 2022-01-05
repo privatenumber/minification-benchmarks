@@ -7,7 +7,7 @@ import { getMinifiers } from '../lib/utils/get-minifiers';
 import { benchmarkArtifacts } from '../lib/benchmark-artifacts';
 
 (async () => {
-	const app = cli({
+	const argv = cli({
 		name: 'benchmark-all',
 		flags: {
 			artifact: {
@@ -28,7 +28,7 @@ import { benchmarkArtifacts } from '../lib/benchmark-artifacts';
 	const {
 		artifact: artifactName,
 		minifier: minifierName,
-	} = app.flags;
+	} = argv.flags;
 
 	if (artifactName) {
 		artifacts = artifacts.filter(artifact => artifact.packageName.match(artifactName));

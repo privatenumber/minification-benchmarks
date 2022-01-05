@@ -1,18 +1,18 @@
 import fs from 'fs/promises';
 import assert from 'assert';
 import path from 'path';
+import { cli } from 'cleye';
 import { getSize, getGzipSize } from '../../lib/utils/get-size';
 import type { BenchmarkData } from '../../lib/types';
 import { getMinifier } from './get-minifier';
 import { unpreserveComment } from './unpreserve-comments';
-import { cli } from 'cleye';
 import { runTest } from './run-test';
 
 (async () => {
-	const app = cli({
+	const argv = cli({
 		name: 'benchmark',
 
-		arguments: ['<file-path>'],
+		parameters: ['<file-path>'],
 
 		flags: {
 			minifier: {
@@ -39,15 +39,15 @@ import { runTest } from './run-test';
 		minifier: minifierName,
 		outputPath,
 		testPath,
-	} = app.flags;
+	} = argv.flags;
 
 	assert(minifierName, 'Minifier name must be passed in');
 
 	const minifier = getMinifier(minifierName);
 
-	assert(app._.filePath, 'File path must be passed in');
+	assert(argv._.filePath, 'File path must be passed in');
 
-	const filePath = path.resolve(app._.filePath);
+	const filePath = path.resolve(argv._.filePath);
 
 	let code = await fs.readFile(filePath, 'utf-8');
 
