@@ -48,10 +48,11 @@ function getBenchmarkTable(
 	const successfulMinifiers = minifierResults.filter(minifier => !('error' in minifier)) as MinifierResultSuccess[];
 	const bestMinified = minBy(successfulMinifiers, 'data.raw.minifiedSize');
 	const bestMinzipped = minBy(successfulMinifiers, 'data.raw.minzippedSize');
+	const bestBrotliMinified = minBy(successfulMinifiers, 'data.raw.brotliMinifiedSize');
 	const bestSpeed = minBy(successfulMinifiers, 'data.raw.averageTime');
 
 	return [
-		['Minifier', 'Minified size', 'Minzipped size', 'Time'].map(mdu.strong),
+		['Minifier', 'Minified size', 'Minzipped size', 'Brotli size', 'Time'].map(mdu.strong),
 		...minifierResults
 			.sort(
 				(a, b) => (
@@ -84,6 +85,11 @@ function getBenchmarkTable(
 						minifier === bestMinzipped,
 					),
 					displayColumn(
+						minifier.data.formatted.brotliMinifiedSize,
+						percent(artifact.brotliSize, minifier.data.raw.brotliMinifiedSize),
+						minifier === bestBrotliMinified,
+					),
+					displayColumn(
 						minifier.data.formatted.averageTime,
 						compareSpeed(minifier, bestSpeed),
 						minifier === bestSpeed,
@@ -98,23 +104,23 @@ export function getBenchmarkDataTables(
 ) {
 	return artifactMinifierBenchmarks.map(
 		({ artifact, benchmarkResults }) => outdent`
-			${
-				markdownTable([
-					['Artifact', 'Original size', 'Gzip size'],
-					[
-						`${mdu.link(
-							`${artifact.packageName} v${artifact.packageVersion}`,
-							`https://www.npmjs.com/package/${artifact.packageName}/v/${artifact.packageVersion}`,
-						)} (${mdu.link('Source', `https://unpkg.com/${artifact.packageName}@${artifact.packageVersion}${artifact.modulePath}`)})`,
-						mdu.c(byteSize(artifact.size).toString()),
-						mdu.c(byteSize(artifact.gzipSize).toString()),
-						'',
-					],
+			${markdownTable([
+			['Artifact', 'Original size', 'Gzip size', 'Brotli size'],
+			[
+				`${mdu.link(
+					`${artifact.packageName} v${artifact.packageVersion}`,
+					`https://www.npmjs.com/package/${artifact.packageName}/v/${artifact.packageVersion}`,
+				)} (${mdu.link('Source', `https://unpkg.com/${artifact.packageName}@${artifact.packageVersion}${artifact.modulePath}`)})`,
+				mdu.c(byteSize(artifact.size).toString()),
+				mdu.c(byteSize(artifact.gzipSize).toString()),
+				mdu.c(byteSize(artifact.brotliSize).toString()),
+				'',
+			],
 
-					...getBenchmarkTable(artifact, benchmarkResults),
-				], {
-					align: ['l', 'r', 'r', 'r'],
-				})
+			...getBenchmarkTable(artifact, benchmarkResults),
+		], {
+			align: ['l', 'r', 'r', 'r'],
+		})
 			}
 		`,
 	).join('\n----\n');

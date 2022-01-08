@@ -71,11 +71,13 @@ export async function benchmarkMinifiers(
 					const raw = {
 						minifiedSize: firstRun.minifiedSize,
 						minzippedSize: firstRun.minzippedSize,
+						brotliMinifiedSize: firstRun.brotliMinifiedSize,
 						averageTime,
 					};
 					const formatted = {
 						minifiedSize: byteSize(raw.minifiedSize).toString(),
 						minzippedSize: byteSize(raw.minzippedSize).toString(),
+						brotliMinifiedSize: byteSize(raw.brotliMinifiedSize).toString(),
 						averageTime: formatMs(raw.averageTime),
 					};
 

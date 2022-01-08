@@ -3,7 +3,7 @@ import path from 'path';
 import assert from 'assert';
 import { readPackageUp } from 'read-pkg-up';
 import type { Artifact, ArtifactMeta } from '../types';
-import { getSize, getGzipSize } from '../utils/get-size';
+import { getSize, getGzipSize, getBrotliSize } from '../utils/get-size';
 
 const readPublicPackageUp = async (cwd: string) => {
 	let packageFound = await readPackageUp({ cwd });
@@ -37,6 +37,7 @@ export const defineArtifact = async (artifactMeta: ArtifactMeta): Promise<Artifa
 		artifactCode,
 		size: getSize(artifactCode),
 		gzipSize: getGzipSize(artifactCode),
+		brotliSize: getBrotliSize(artifactCode),
 	};
 };
 
