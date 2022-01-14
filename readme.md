@@ -26,15 +26,15 @@ _Benchmarks last updated on <!-- lastUpdated:start -->Jan 7, 2022<!-- lastUpdate
 - Benchmarks are gathered on every PR via [GitHub Actions](https://github.com/privatenumber/minification-benchmarks/actions/workflows/benchmark.yml) (verifiable minified artifacts are uploaded on each run)
 
 ## ⏱ Metrics
-Minifiers are ranked by smallest minzipped size.
+Minifiers are ranked by smallest minifed Brotli size.
 
 #### Minified size
 
 Size of the minified output.
 
-#### Minzipped size
+#### Minified and Brotli size
 
-Size of the minified output with [Gzip compression](https://en.wikipedia.org/wiki/Gzip).
+Size of the minified output with [Brotli compression](https://en.wikipedia.org/wiki/Brotli).
 
 For minifiers, this measures how compressable the output is.
 

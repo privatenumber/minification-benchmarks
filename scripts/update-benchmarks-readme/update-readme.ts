@@ -47,17 +47,16 @@ function getBenchmarkTable(
 ) {
 	const successfulMinifiers = minifierResults.filter(minifier => !('error' in minifier)) as MinifierResultSuccess[];
 	const bestMinified = minBy(successfulMinifiers, 'data.raw.minifiedSize');
-	const bestMinzipped = minBy(successfulMinifiers, 'data.raw.minzippedSize');
 	const bestBrotliMinified = minBy(successfulMinifiers, 'data.raw.brotliMinifiedSize');
 	const bestSpeed = minBy(successfulMinifiers, 'data.raw.averageTime');
 
 	return [
-		['Minifier', 'Minified size', 'Minzipped size', 'Brotli size', 'Time'].map(mdu.strong),
+		['Minifier', 'Minified size', 'Brotli size', 'Time'].map(mdu.strong),
 		...minifierResults
 			.sort(
 				(a, b) => (
-					('error' in a ? PositiveInfinity : a.data.raw.minzippedSize)
-					- ('error' in b ? PositiveInfinity : b.data.raw.minzippedSize)
+					('error' in a ? PositiveInfinity : a.data.raw.brotliMinifiedSize)
+					- ('error' in b ? PositiveInfinity : b.data.raw.brotliMinifiedSize)
 				),
 			)
 			.map((minifier) => {
@@ -80,11 +79,6 @@ function getBenchmarkTable(
 						minifier === bestMinified,
 					),
 					displayColumn(
-						minifier.data.formatted.minzippedSize,
-						percent(artifact.gzipSize, minifier.data.raw.minzippedSize),
-						minifier === bestMinzipped,
-					),
-					displayColumn(
 						minifier.data.formatted.brotliMinifiedSize,
 						percent(artifact.brotliSize, minifier.data.raw.brotliMinifiedSize),
 						minifier === bestBrotliMinified,
@@ -105,14 +99,13 @@ export function getBenchmarkDataTables(
 	return artifactMinifierBenchmarks.map(
 		({ artifact, benchmarkResults }) => outdent`
 			${markdownTable([
-			['Artifact', 'Original size', 'Gzip size', 'Brotli size'],
+			['Artifact', 'Original size', 'Brotli size'],
 			[
 				`${mdu.link(
 					`${artifact.packageName} v${artifact.packageVersion}`,
 					`https://www.npmjs.com/package/${artifact.packageName}/v/${artifact.packageVersion}`,
 				)} (${mdu.link('Source', `https://unpkg.com/${artifact.packageName}@${artifact.packageVersion}${artifact.modulePath}`)})`,
 				mdu.c(byteSize(artifact.size).toString()),
-				mdu.c(byteSize(artifact.gzipSize).toString()),
 				mdu.c(byteSize(artifact.brotliSize).toString()),
 				'',
 			],

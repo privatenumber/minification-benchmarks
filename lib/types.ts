@@ -14,7 +14,6 @@ export type Artifact = {
 	fullModulePath: string;
 	artifactCode: Buffer;
 	size: number;
-	gzipSize: number;
 	brotliSize: number;
 	testPath: string;
 }
@@ -22,7 +21,6 @@ export type Artifact = {
 // Result for a minifier benchmark given a file
 export type BenchmarkData = {
 	minifiedSize: number;
-	minzippedSize: number;
 	brotliMinifiedSize: number;
 	time: number;
 };
@@ -39,7 +37,6 @@ export type BenchmarkResult = BenchmarkResultSuccess | BenchmarkResultFailed;
 
 export type AverageBenchmarkData<format = number> = {
 	minifiedSize: format;
-	minzippedSize: format;
 	brotliMinifiedSize: format;
 	averageTime: format;
 };

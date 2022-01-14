@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 import assert from 'assert';
 import path from 'path';
 import { cli } from 'cleye';
-import { getSize, getGzipSize, getBrotliSize } from '../../lib/utils/get-size';
+import { getSize, getBrotliSize } from '../../lib/utils/get-size';
 import type { BenchmarkData } from '../../lib/types';
 import { getMinifier } from './get-minifier';
 import { unpreserveComment } from './unpreserve-comments';
@@ -80,7 +80,6 @@ import { runTest } from './run-test';
 
 	console.log(JSON.stringify({
 		minifiedSize: success && getSize(minifiedCode),
-		minzippedSize: success && getGzipSize(minifiedCode),
 		brotliMinifiedSize: success && getBrotliSize(minifiedCode),
 		time: success && (hrtime[0] * 1000) + (hrtime[1] / 1e6),
 	} as BenchmarkData));
