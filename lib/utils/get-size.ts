@@ -6,4 +6,4 @@ export const getSize = (
 
 export const getGzipSize = (
 	code: string | Buffer,
-) => zlib.gzipSync(code).length;
+) => zlib.gzipSync(code, { level: zlib.constants.Z_BEST_COMPRESSION }).length;
