@@ -1,6 +1,7 @@
 import path from 'path';
 import { Volume } from 'memfs';
 import { createFsRequire } from 'fs-require';
+import { blockConsoleLog } from './block-console-log';
 
 export const requireString = (code: string) => {
 	const vol = Volume.fromJSON({ '/index.js': code });
@@ -16,6 +17,7 @@ export async function runTest(testPath: string, code: string) {
 		code = preprocess(code);
 	}
 
+	const restoreConsoleLogs = blockConsoleLog();
 	try {
 		await run(requireString(code));
 	} catch (error) {
@@ -25,5 +27,7 @@ export async function runTest(testPath: string, code: string) {
 		}
 
 		throw new Error('Invalid output');
+	} finally {
+		restoreConsoleLogs();
 	}
 }
