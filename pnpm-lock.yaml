@@ -43,7 +43,7 @@ specifiers:
   terser: ^5.10.0
   three: ^0.124.0
   typescript: ^4.5.2
-  uglify-js: ^3.15.0
+  uglify-js: ^3.15.1
   victory: ^35.8.4
   vue: ^2.6.12
 
@@ -77,7 +77,7 @@ dependencies:
   tasuku: 1.0.2
   terser: 5.10.0
   three: 0.124.0
-  uglify-js: 3.15.0
+  uglify-js: 3.15.1
   victory: 35.8.4
   vue: 2.6.12
 
@@ -5437,8 +5437,8 @@ packages:
     hasBin: true
     dev: true
 
-  /uglify-js/3.15.0:
-    resolution: {integrity: sha512-x+xdeDWq7FiORDvyIJ0q/waWd4PhjBNOm5dQUOq2AKC0IEjxOS66Ha9tctiVDGcRQuh69K7fgU5oRuTK4cysSg==}
+  /uglify-js/3.15.1:
+    resolution: {integrity: sha512-FAGKF12fWdkpvNJZENacOH0e/83eG6JyVQyanIJaBXCN1J11TUQv1T1/z8S+Z0CG0ZPk1nPcreF/c7lrTd0TEQ==}
     engines: {node: '>=0.8.0'}
     hasBin: true
     dev: false
