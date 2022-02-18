@@ -1,9 +1,10 @@
 import path from 'path';
 import { benchmarkMinifiers } from './benchmark-minifiers';
-import type { Tasuku, Artifact, BenchmarkedArtifact } from './types';
+import type { Artifact, BenchmarkedArtifact } from './types';
+import type { Task } from 'tasuku';
 
 export async function benchmarkArtifacts(
-	task: Tasuku,
+	task: Task,
 	artifacts: Artifact[],
 	minifiers: string[],
 	sampleSize?: number,

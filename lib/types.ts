@@ -1,7 +1,3 @@
-import task from 'tasuku';
-
-export type Tasuku = typeof task;
-
 export type ArtifactMeta = {
 	package: string;
 	modulePath: string;

@@ -39,7 +39,7 @@ specifiers:
   react: ^17.0.1
   react-dom: ^17.0.2
   read-pkg-up: ^9.0.0
-  tasuku: ^1.0.2
+  tasuku: github:privatenumber/tasuku#built/develop
   terser: ^5.10.0
   three: ^0.124.0
   typescript: ^4.5.2
@@ -74,7 +74,7 @@ dependencies:
   react: 17.0.1
   react-dom: 17.0.2_react@17.0.1
   read-pkg-up: 9.0.0
-  tasuku: 1.0.2
+  tasuku: github.com/privatenumber/tasuku/38c498efedeafa9881d08a9e8f191d9cb2e92c3a
   terser: 5.10.0
   three: 0.124.0
   uglify-js: 3.15.1
@@ -5299,12 +5299,6 @@ packages:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
     dev: false
 
-  /tasuku/1.0.2:
-    resolution: {integrity: sha512-3rAYwGQbTITch8WvyKZV4PW/jG2VRLhDGT2fa2XBDYFFlQyJFKmU1wG/oX1Y40X5t0+BKRGGPN1jdUY755LvHg==}
-    dependencies:
-      yoga-layout-prebuilt: 1.10.0
-    dev: false
-
   /terminal-columns/1.4.0:
     resolution: {integrity: sha512-Oh62O26xgOUjakUlGfjAEdgZmipNsqHPmvs8QQ8j6WH3c5iXhshCjr6yB6bW7CYXG5POoUrHLLLcKdRvv8LBZg==}
     dev: false
@@ -5958,4 +5952,12 @@ packages:
     resolution: {integrity: sha512-c+8VRx52ycbmqwHeHLlo/BAfIHBl/JZNLM6cfDQFgzIH05yb+f5J9F/fbRsP+zGc8dW9XHuhdt8/iqukgMZSeg==}
     dependencies:
       tslib: 2.0.3
+    dev: false
+
+  github.com/privatenumber/tasuku/38c498efedeafa9881d08a9e8f191d9cb2e92c3a:
+    resolution: {tarball: https://codeload.github.com/privatenumber/tasuku/tar.gz/38c498efedeafa9881d08a9e8f191d9cb2e92c3a}
+    name: tasuku
+    version: 0.0.0-semantic-release
+    dependencies:
+      yoga-layout-prebuilt: 1.10.0
     dev: false
