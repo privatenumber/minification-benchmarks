@@ -23,7 +23,7 @@
 		"*.{ts,js}": "eslint"
 	},
 	"dependencies": {
-		"@swc/core": "^1.2.144",
+		"@swc/core": "^1.2.146",
 		"antd": "^4.16.1",
 		"babel-minify": "^0.5.1",
 		"byte-size": "^8.1.0",
@@ -52,7 +52,7 @@
 		"tasuku": "^1.0.2",
 		"terser": "^5.11.0",
 		"three": "^0.124.0",
-		"uglify-js": "^3.15.1",
+		"uglify-js": "^3.15.2",
 		"victory": "^35.8.4",
 		"vue": "^2.6.12"
 	},
