@@ -40,7 +40,7 @@ specifiers:
   react-dom: ^17.0.2
   read-pkg-up: ^9.0.0
   tasuku: ^1.0.2
-  terser: ^5.11.0
+  terser: ^5.12.0
   three: ^0.124.0
   typescript: ^4.5.2
   uglify-js: ^3.15.2
@@ -75,7 +75,7 @@ dependencies:
   react-dom: 17.0.2_react@17.0.1
   read-pkg-up: 9.0.0
   tasuku: 1.0.2
-  terser: 5.11.0
+  terser: 5.12.0
   three: 0.124.0
   uglify-js: 3.15.2
   victory: 35.8.4
@@ -5322,8 +5322,8 @@ packages:
     resolution: {integrity: sha512-Oh62O26xgOUjakUlGfjAEdgZmipNsqHPmvs8QQ8j6WH3c5iXhshCjr6yB6bW7CYXG5POoUrHLLLcKdRvv8LBZg==}
     dev: false
 
-  /terser/5.11.0:
-    resolution: {integrity: sha512-uCA9DLanzzWSsN1UirKwylhhRz3aKPInlfmpGfw8VN6jHsAtu8HJtIpeeHHK23rxnE/cDc+yvmq5wqkIC6Kn0A==}
+  /terser/5.12.0:
+    resolution: {integrity: sha512-R3AUhNBGWiFc77HXag+1fXpAxTAFRQTJemlJKjAgD9r8xXTpjNKqIXwHM/o7Rh+O0kUJtS3WQVdBeMKFk5sw9A==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
