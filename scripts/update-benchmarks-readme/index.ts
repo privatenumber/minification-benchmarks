@@ -26,7 +26,8 @@ import { getBenchmarkDataTables, updateReadmeMd } from './update-readme';
 				sampleSize,
 				saveToDirectory,
 			);
-			report = benchmarks.results;
+
+			report = benchmarks.map(task => task.result);
 		}),
 		task('Update README.md', async () => {
 			const reportStringified = JSON.stringify(

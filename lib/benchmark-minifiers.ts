@@ -1,9 +1,9 @@
 import path from 'path';
 import byteSize from 'byte-size';
 import makeDir from 'make-dir';
+import type { Task } from 'tasuku';
 import { percent, formatMs } from './utils/formatting';
 import type {
-	Tasuku,
 	Artifact,
 	MinifierResult,
 	BenchmarkData,
@@ -20,7 +20,7 @@ const getAverage = (numbers: number[]) => (
 const benchmarkTime = Date.now();
 
 export async function benchmarkMinifiers(
-	task: Tasuku,
+	task: Task,
 	minifiers: string[],
 	artifact: Artifact,
 	sampleSize = 1,

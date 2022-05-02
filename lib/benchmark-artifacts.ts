@@ -1,9 +1,10 @@
 import path from 'path';
+import type { Task } from 'tasuku';
 import { benchmarkMinifiers } from './benchmark-minifiers';
-import type { Tasuku, Artifact, BenchmarkedArtifact } from './types';
+import type { Artifact, BenchmarkedArtifact } from './types';
 
 export async function benchmarkArtifacts(
-	task: Tasuku,
+	task: Task,
 	artifacts: Artifact[],
 	minifiers: string[],
 	sampleSize?: number,
@@ -16,7 +17,7 @@ export async function benchmarkArtifacts(
 				async ({ task, setStatus }): Promise<BenchmarkedArtifact> => {
 					setStatus(path.relative('node_modules', artifact.fullModulePath));
 
-					const benchmarkingTask = await benchmarkMinifiers(
+					const benchmarkResults = await benchmarkMinifiers(
 						task,
 						minifiers,
 						artifact,
@@ -24,11 +25,11 @@ export async function benchmarkArtifacts(
 						saveToDirectory,
 					);
 
-					benchmarkingTask.clear();
+					benchmarkResults.clear();
 
 					return {
 						artifact,
-						benchmarkResults: benchmarkingTask.results,
+						benchmarkResults: benchmarkResults.map(task => task.result),
 					};
 				},
 			),
