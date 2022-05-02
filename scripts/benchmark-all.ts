@@ -44,7 +44,7 @@ import { benchmarkArtifacts } from '../lib/benchmark-artifacts';
 
 	assert(minifiers.length, 'No minifiers matched');
 
-	const { results } = await benchmarkArtifacts(task, artifacts, minifiers);
+	const results = await benchmarkArtifacts(task, artifacts, minifiers);
 
 	console.log(inspect(results, {
 		colors: true,

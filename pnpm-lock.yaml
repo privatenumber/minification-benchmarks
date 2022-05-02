@@ -39,7 +39,7 @@ specifiers:
   react: ^17.0.1
   react-dom: ^17.0.2
   read-pkg-up: ^9.0.0
-  tasuku: ^1.0.2
+  tasuku: ^2.0.0
   terser: ^5.13.1
   three: ^0.124.0
   typescript: ^4.5.5
@@ -74,7 +74,7 @@ dependencies:
   react: 17.0.1
   react-dom: 17.0.2_react@17.0.1
   read-pkg-up: 9.0.0
-  tasuku: 1.0.2
+  tasuku: 2.0.0
   terser: 5.13.1
   three: 0.124.0
   typescript: 4.6.2
@@ -5316,8 +5316,8 @@ packages:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
     dev: false
 
-  /tasuku/1.0.2:
-    resolution: {integrity: sha512-3rAYwGQbTITch8WvyKZV4PW/jG2VRLhDGT2fa2XBDYFFlQyJFKmU1wG/oX1Y40X5t0+BKRGGPN1jdUY755LvHg==}
+  /tasuku/2.0.0:
+    resolution: {integrity: sha512-8y1ZtIBzMfTy0/XxRW9gfGts/CPrt7zSMQEfjWXbLdEz09EcXaAZEAFg8vNV8WAlLUQfoIfaaikRJ0YrBWkGlA==}
     dependencies:
       yoga-layout-prebuilt: 1.10.0
     dev: false
