@@ -20,7 +20,7 @@ jobs:
         with:
           node-version-file: '.nvmrc'
       - name: Install dependencies
-        run: npx ci
+        run: npx 'privatenumber/ci#built/pnpm-v7'
       - name: Benchmark
         run: npm run update-benchmarks-readme
       - name: Commit readme

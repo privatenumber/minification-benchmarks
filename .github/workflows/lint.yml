@@ -19,6 +19,6 @@ jobs:
         with:
           node-version-file: '.nvmrc'
       - name: Install dependencies
-        run: npx ci
+        run: npx 'privatenumber/ci#built/pnpm-v7'
       - name: Lint
         run: npm run lint
