@@ -49,7 +49,7 @@ import { runTest } from './run-test';
 
 	const filePath = path.resolve(argv._.filePath);
 
-	let code = await fs.readFile(filePath, 'utf-8');
+	let code = await fs.readFile(filePath, 'utf8');
 
 	code = await unpreserveComment(
 		code,
