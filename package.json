@@ -25,7 +25,7 @@
 	"dependencies": {
 		"@swc/core": "^1.2.177",
 		"antd": "^4.16.1",
-		"babel-minify": "^0.5.1",
+		"babel-minify": "^0.5.2",
 		"byte-size": "^8.1.0",
 		"cleye": "^1.0.1",
 		"comment-mark": "^1.1.1",
