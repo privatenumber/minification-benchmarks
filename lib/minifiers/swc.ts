@@ -1,8 +1,8 @@
-import swc from '@swc/core';
+import { minify } from '@swc/core';
 import { minifier } from '../types';
 
 export default minifier(async ({ code }) => {
-	const minified = await swc.minify(code, {
+	const minified = await minify(code, {
 		compress: true,
 		mangle: true,
 		sourceMap: false,
