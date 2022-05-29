@@ -32,7 +32,7 @@
 		"d3": "^6.3.1",
 		"date-fns": "^2.27.0",
 		"echarts": "^5.1.1",
-		"esbuild": "^0.14.41",
+		"esbuild": "^0.14.42",
 		"execa": "^6.0.0",
 		"fs-require": "^1.4.0",
 		"google-closure-compiler": "^20220502.0.0",
