@@ -39,7 +39,7 @@ specifiers:
   react-dom: ^17.0.2
   read-pkg-up: ^9.0.0
   tasuku: ^2.0.0
-  terser: ^5.14.0
+  terser: ^5.14.1
   three: ^0.124.0
   tsx: ^3.1.0
   typescript: ^4.6.4
@@ -75,7 +75,7 @@ dependencies:
   react-dom: 17.0.2_react@17.0.2
   read-pkg-up: 9.0.0
   tasuku: 2.0.0
-  terser: 5.14.0
+  terser: 5.14.1
   three: 0.124.0
   typescript: 4.6.4
   uglify-js: 3.16.0
@@ -5040,7 +5040,7 @@ packages:
     dev: false
 
   /source-map/0.5.7:
-    resolution: {integrity: sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=}
+    resolution: {integrity: sha512-LbrmJOMUSdEVxIKvdcJzQC+nQhe8FUZQTXQy6+I75skNgn3OoQ0DZA8YnFa7gp8tqtL3KPf1kmo0R5DoApeSGQ==}
     engines: {node: '>=0.10.0'}
     dev: false
 
@@ -5203,8 +5203,8 @@ packages:
     resolution: {integrity: sha512-Oh62O26xgOUjakUlGfjAEdgZmipNsqHPmvs8QQ8j6WH3c5iXhshCjr6yB6bW7CYXG5POoUrHLLLcKdRvv8LBZg==}
     dev: false
 
-  /terser/5.14.0:
-    resolution: {integrity: sha512-JC6qfIEkPBd9j1SMO3Pfn+A6w2kQV54tv+ABQLgZr7dA3k/DL/OBoYSWxzVpZev3J+bUHXfr55L8Mox7AaNo6g==}
+  /terser/5.14.1:
+    resolution: {integrity: sha512-+ahUAE+iheqBTDxXhTisdA8hgvbEG1hHOQ9xmNjeUJSoi6DU/gMrKNcfZjHkyY6Alnuyc+ikYJaxxfHkT3+WuQ==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
