@@ -24,3 +24,6 @@ node_modules/
 
 # Minification results
 results
+
+# Cache
+.eslintcache

@@ -1,16 +1,16 @@
 {
 	"name": "minification-benchmarks",
+	"private": true,
 	"description": "JS minification benchmarks",
 	"license": "MIT",
 	"repository": "privatenumber/minification-benchmarks",
 	"author": "Hiroki Osame <hiroki.osame@gmail.com>",
-	"private": true,
 	"files": [],
 	"scripts": {
 		"benchmark": "tsx scripts/benchmark",
 		"benchmark-all": "tsx scripts/benchmark-all.ts",
 		"update-benchmarks-readme": "tsx scripts/update-benchmarks-readme/index.ts",
-		"lint": "eslint .",
+		"lint": "eslint --cache .",
 		"typecheck": "tsc --noEmit",
 		"postinstall": "bina tdewolff/minify --install-dir node_modules/.bin"
 	},
@@ -20,7 +20,7 @@
 		}
 	},
 	"lint-staged": {
-		"*.{ts,js}": "eslint"
+		"*.{ts,js}": "eslint --cache"
 	},
 	"dependencies": {
 		"@swc/core": "^1.2.207",
@@ -58,7 +58,7 @@
 		"vue": "^2.6.12"
 	},
 	"devDependencies": {
-		"@pvtnbr/eslint-config": "^0.20.2",
+		"@pvtnbr/eslint-config": "^0.25.0",
 		"@types/byte-size": "^8.1.0",
 		"@types/lodash": "^4.14.178",
 		"@types/minimist": "^1.2.2",
@@ -66,7 +66,7 @@
 		"@types/react": "^17.0.38",
 		"@types/react-dom": "^17.0.11",
 		"bina": "^0.1.3",
-		"eslint": "^8.14.0",
+		"eslint": "^8.18.0",
 		"husky": "^4.3.8",
 		"lint-staged": "^12.1.2",
 		"tsx": "^3.1.0"
@@ -75,17 +75,7 @@
 		"extends": "@pvtnbr",
 		"ignorePatterns": [
 			"results"
-		],
-		"rules": {
-			"@typescript-eslint/no-shadow": [
-				"error",
-				{
-					"allow": [
-						"task"
-					]
-				}
-			]
-		}
+		]
 	},
 	"pnpm": {
 		"peerDependencyRules": {
