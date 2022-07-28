@@ -12,7 +12,7 @@
 		"update-benchmarks-readme": "tsx scripts/update-benchmarks-readme/index.ts",
 		"lint": "eslint --cache .",
 		"typecheck": "tsc --noEmit",
-		"postinstall": "bina tdewolff/minify --install-dir node_modules/.bin"
+		"postinstall": "./postinstall.sh"
 	},
 	"husky": {
 		"hooks": {
@@ -23,6 +23,7 @@
 		"*.{ts,js}": "eslint --cache"
 	},
 	"dependencies": {
+		"@minify-js/node": "^0.1.5",
 		"@swc/core": "^1.2.219",
 		"antd": "^4.16.1",
 		"babel-minify": "^0.5.2",
