@@ -3,10 +3,14 @@
 		":dependencyDashboard",
 		":semanticPrefixFixDepsChoreOthers",
 		":ignoreModulesAndTests",
-		":prHourlyLimit2",
-		":prConcurrentLimit20",
 		"workarounds:all"
 	],
+
+	"prHourlyLimit": 24,
+
+	"prConcurrentLimit": 5,
+
+	"gitIgnoredAuthors": ["github-actions@github.com"],
 
 	"packageRules": [
 		{
@@ -26,7 +30,5 @@
 			"rangeStrategy": "bump",
 			"enabled": true
 		}
-	],
-
-	"gitIgnoredAuthors": ["github-actions@github.com"]
+	]
 }
