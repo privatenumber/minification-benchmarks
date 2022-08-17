@@ -7,6 +7,7 @@
 	"author": "Hiroki Osame <hiroki.osame@gmail.com>",
 	"files": [],
 	"scripts": {
+		"prepare": "simple-git-hooks",
 		"benchmark": "tsx scripts/benchmark",
 		"benchmark-all": "tsx scripts/benchmark-all.ts",
 		"update-benchmarks-readme": "tsx scripts/update-benchmarks-readme/index.ts",
@@ -14,10 +15,8 @@
 		"typecheck": "tsc --noEmit",
 		"postinstall": "bina tdewolff/minify --install-dir node_modules/.bin"
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
+	"simple-git-hooks": {
+		"pre-commit": "pnpm lint-staged"
 	},
 	"lint-staged": {
 		"*.{ts,js}": "eslint --cache"
@@ -67,8 +66,8 @@
 		"@types/react-dom": "^17.0.11",
 		"bina": "^0.1.3",
 		"eslint": "^8.22.0",
-		"husky": "^4.3.8",
 		"lint-staged": "^12.1.2",
+		"simple-git-hooks": "^2.8.0",
 		"tsx": "^3.1.0"
 	},
 	"eslintConfig": {
