@@ -28,7 +28,7 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "chore: updated benchmarks"
+          git commit -nm "chore: updated benchmarks"
           git push
       - name: Upload minification results
         uses: actions/upload-artifact@v2
