@@ -22,7 +22,7 @@ specifiers:
   eslint: ^8.22.0
   execa: ^6.0.0
   fs-require: ^1.4.0
-  google-closure-compiler: ^20220803.0.0
+  google-closure-compiler: ^20220905.0.0
   jquery: ^3.5.1
   jsdom: ^19.0.0
   jsdom-global: ^3.0.2
@@ -60,7 +60,7 @@ dependencies:
   esbuild: 0.15.7
   execa: 6.0.0
   fs-require: 1.4.0
-  google-closure-compiler: 20220803.0.0
+  google-closure-compiler: 20220905.0.0
   jquery: 3.5.1
   jsdom: 19.0.0
   jsdom-global: 3.0.2_jsdom@19.0.0
@@ -943,7 +943,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       color-convert: 2.0.1
-    dev: true
 
   /ansi-styles/6.1.0:
     resolution: {integrity: sha512-VbqNsoz55SYGczauuup0MFUyXNQviSpFTj1RQtFzmQLk18qbVSpTFFGMT293rmDaQuKCT6InmbuEyUne4mTuxQ==}
@@ -1320,7 +1319,6 @@ packages:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
-    dev: true
 
   /character-entities-legacy/1.1.4:
     resolution: {integrity: sha512-3Xnr+7ZFS1uxeiUDvV02wQ+QDbc55o97tIV5zHScSPJpcLm/r0DFPcoY3tYRp+VZukxuMeKgXYmsXQHO05zQeA==}
@@ -1416,14 +1414,12 @@ packages:
     engines: {node: '>=7.0.0'}
     dependencies:
       color-name: 1.1.4
-    dev: true
 
   /color-name/1.1.3:
     resolution: {integrity: sha512-72fSenhMw2HZMTVHeCA9KCmpEIbzWiQsjN+BHcBbS9vr1mtt+vJjPdksIBNUmKAW8TFUDPJK5SUU3QhE9NEXDw==}
 
   /color-name/1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
-    dev: true
 
   /colorette/2.0.16:
     resolution: {integrity: sha512-hUewv7oMjCp+wkBv5Rm0v87eJhq4woh5rSR+42YSQJKecCqgIqNkZ6lAlQms/BwHPJA5NKMRlpxPRv0n8HQW6g==}
@@ -3174,48 +3170,48 @@ packages:
     resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
     dev: true
 
-  /google-closure-compiler-java/20220803.0.0:
-    resolution: {integrity: sha512-Oevg580k6iRqOSgWe/TfmUCFHvCpXNzSslKt638mX+TkGA2E2oczzXJ9STo9OS6w9fBaqcUc/db9ZbNPdVdwnQ==}
+  /google-closure-compiler-java/20220905.0.0:
+    resolution: {integrity: sha512-wxGxNla/0UDS1Lm0cRxEy85KhVRd0vNlsTclnIJ9f1gRWzvvTsJ4lwz+PdT60R6y2hKAOBvydIJHh+B8XJastA==}
     dev: false
 
-  /google-closure-compiler-linux/20220803.0.0:
-    resolution: {integrity: sha512-dsu/y353+TtvfGHh3NeAgvR6tsqcubLNSbheOnpz3S1q2tuPk+bkmF21/LsTtDjvrCpEsfsI+a5zm/0L7nz0rA==}
+  /google-closure-compiler-linux/20220905.0.0:
+    resolution: {integrity: sha512-kH09S66sz9+6wZmYM22VX8vG8KhCKJwFwXCfHx/ZOU6DBEzni6KfWrP+87CzTmZFEivclBhWAndm5HgNhSOEXQ==}
     cpu: [x32, x64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /google-closure-compiler-osx/20220803.0.0:
-    resolution: {integrity: sha512-NgKw8V8mbQeGol5qFHJwFsiKL7RVWCAEG4nX42VZ8u3jS3RzOv6+IN2n+HeNdAr3ZB1IT48ymSJAwxWF4L5cYQ==}
+  /google-closure-compiler-osx/20220905.0.0:
+    resolution: {integrity: sha512-4uo2GAz77gI8nDt4OA8VUYh/FNdjmTLOIRDazl7si+BOjgp9bC6C3E/88o+YHETsVtrPmZk57/W7vH0lftyTAw==}
     cpu: [x32, x64, arm64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /google-closure-compiler-windows/20220803.0.0:
-    resolution: {integrity: sha512-/F6LedYo2ZM6sbjc8Bdxa9DdeTaZl9P9Wyxz0Onr1zF1VKmA5f6HV9AF0CgSlIHMSulAMMBCUxOE71T+cc9KaA==}
+  /google-closure-compiler-windows/20220905.0.0:
+    resolution: {integrity: sha512-TZKHu6RHnrmgV90Gyen8+TGc0vgjgds80ErR+al5CqmfP9p+AskBbOe5CWZJht0bANrUhaeBMCrbs+7loFv06Q==}
     cpu: [x32, x64]
     os: [win32]
     requiresBuild: true
     dev: false
     optional: true
 
-  /google-closure-compiler/20220803.0.0:
-    resolution: {integrity: sha512-lY1qOW1Wps+4Qfi8XVyqyK+ouDDu7oKqXLhUO+HAW1bp4d4JMpnY/+lT8vwWXuT+D0xS21K2J9or1kDotGVvxA==}
+  /google-closure-compiler/20220905.0.0:
+    resolution: {integrity: sha512-idZavy2vn91HCmqEepjmLFjfOdYoRsh9PggUbazUpjAOrBQz0HOm3WjOICMiywre+EnY1QGss0srEBtFtukM6w==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      chalk: 2.4.2
-      google-closure-compiler-java: 20220803.0.0
+      chalk: 4.1.2
+      google-closure-compiler-java: 20220905.0.0
       minimist: 1.2.6
       vinyl: 2.2.1
       vinyl-sourcemaps-apply: 0.2.1
     optionalDependencies:
-      google-closure-compiler-linux: 20220803.0.0
-      google-closure-compiler-osx: 20220803.0.0
-      google-closure-compiler-windows: 20220803.0.0
+      google-closure-compiler-linux: 20220905.0.0
+      google-closure-compiler-osx: 20220905.0.0
+      google-closure-compiler-windows: 20220905.0.0
     dev: false
 
   /graceful-fs/4.2.10:
@@ -3240,7 +3236,6 @@ packages:
   /has-flag/4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
-    dev: true
 
   /has-property-descriptors/1.0.0:
     resolution: {integrity: sha512-62DVLZGoiEBDHQyqG4w9xCuZ7eJEwNmJRWw2VY84Oedb7WFcA27fiEVe8oUQx9hAUJ4ekurquucTGwsyO1XGdQ==}
@@ -5342,7 +5337,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       has-flag: 4.0.0
-    dev: true
 
   /supports-color/9.2.1:
     resolution: {integrity: sha512-Obv7ycoCTG51N7y175StI9BlAXrmgZrFhZOb0/PyjHBher/NmsdBgbbQ1Inhq+gIhz6+7Gb+jWF2Vqi7Mf1xnQ==}
