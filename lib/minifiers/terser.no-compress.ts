@@ -10,5 +10,5 @@ export default minifier(async ({ code }) => {
 		},
 	});
 
-	return minified.code;
+	return minified.code!;
 });

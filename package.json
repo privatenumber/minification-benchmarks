@@ -12,8 +12,7 @@
 		"benchmark-all": "tsx scripts/benchmark-all.ts",
 		"update-benchmarks-readme": "tsx scripts/update-benchmarks-readme/index.ts",
 		"lint": "eslint --cache .",
-		"typecheck": "tsc --noEmit",
-		"postinstall": "bina tdewolff/minify --install-dir node_modules/.bin"
+		"typecheck": "tsc --noEmit"
 	},
 	"simple-git-hooks": {
 		"pre-commit": "pnpm lint-staged"
@@ -23,6 +22,7 @@
 	},
 	"dependencies": {
 		"@swc/core": "^1.3.3",
+		"@tdewolff/minify": "^2.12.2",
 		"antd": "^4.16.1",
 		"babel-minify": "^0.5.2",
 		"byte-size": "^8.1.0",
@@ -64,7 +64,6 @@
 		"@types/node": "^16.11.33",
 		"@types/react": "^17.0.38",
 		"@types/react-dom": "^17.0.11",
-		"bina": "^0.1.3",
 		"eslint": "^8.22.0",
 		"lint-staged": "^12.1.2",
 		"simple-git-hooks": "^2.8.0",
