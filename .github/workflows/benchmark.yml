@@ -8,30 +8,41 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     timeout-minutes: 60
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
-          repository: ${{ github.repository }}
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version-file: '.nvmrc'
-      - name: Install dependencies
-        run: npx ci
-      - name: Benchmark
-        run: npm run update-benchmarks-readme
-      - name: Commit readme
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -nm "chore: updated benchmarks"
-          git push
-      - name: Upload minification results
-        uses: actions/upload-artifact@v2
-        with:
-          name: minification-results
-          path: results/
+
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ github.head_ref }}
+        repository: ${{ github.repository }}
+
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version-file: '.nvmrc'
+
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v2.2.2
+      with:
+        version: 7
+        run_install: true
+
+    - name: Benchmark
+      run: pnpm update-benchmarks-readme
+
+    - name: Commit readme.md
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add .
+        git commit -nm "chore: updated benchmarks"
+        git push
+
+    - name: Upload minification results
+      uses: actions/upload-artifact@v3
+      with:
+        name: minification-results
+        path: results/
