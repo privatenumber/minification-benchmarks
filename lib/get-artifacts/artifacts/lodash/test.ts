@@ -3,6 +3,6 @@ import { defineTest } from '../..';
 
 export default defineTest({
 	run(_) {
-		assert(_.flow([_.add, x => x * x])(2, 3) === 25);
+		assert(_.flow([_.add, (x: number) => x * x])(2, 3) === 25);
 	},
 });
