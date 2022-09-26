@@ -40,7 +40,7 @@
 		"jsdom-global": "^3.0.2",
 		"lodash": "^4.17.21",
 		"make-dir": "^3.1.0",
-		"markdown-table": "^3.0.1",
+		"markdown-table": "^3.0.2",
 		"mem": "^9.0.2",
 		"memfs": "^3.4.7",
 		"moment": "^2.29.1",
@@ -69,7 +69,7 @@
 		"@types/uglify-js": "^3.17.0",
 		"bina": "^0.1.3",
 		"eslint": "^8.24.0",
-		"lint-staged": "^12.1.2",
+		"lint-staged": "^13.0.3",
 		"simple-git-hooks": "^2.8.0",
 		"tsx": "^3.1.0"
 	},
