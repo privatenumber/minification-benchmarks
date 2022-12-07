@@ -3,7 +3,9 @@ import { minifier } from '../types';
 
 export default minifier(async ({ code }) => {
 	const minified = await minify(code, {
-		compress: true,
+		compress: {
+			// passes: 1,
+		},
 		mangle: true,
 		sourceMap: false,
 	});
