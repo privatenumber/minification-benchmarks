@@ -1,9 +1,10 @@
 import 'jsdom-global/register.js';
 import assert from 'assert';
+import type { VueConstructor } from 'vue';
 import { defineTest } from '../..';
 
 export default defineTest({
-	run(Vue) {
+	run(Vue: VueConstructor) {
 		Vue.config.devtools = false;
 		Vue.config.productionTip = false;
 
