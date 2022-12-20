@@ -1,0 +1,39 @@
+diff --git a/index.js b/index.js
+index 5460da321f5bf1b77dba6f34563b2ef7c69b3c5e..e9f1249425a9401d5afd359b0c1fa5704522f93f 100644
+--- a/index.js
++++ b/index.js
+@@ -1,13 +1,13 @@
+-import { createRequire } from "node:module";
+-import { dirname } from 'path';
+-import { fileURLToPath } from 'url';
+-
+-const require = createRequire(import.meta.url);
+-const __dirname = dirname(fileURLToPath(import.meta.url));
+-
+ // https://nodejs.org/api/esm.html#no-native-module-loading
+-export const { string, config, file } = require('node-gyp-build')(__dirname);
++const { string, config, file } = require('node-gyp-build')(__dirname);
+ 
+ // Starting from node 16, json imports have been unflagged
+ // import pkg from "./package.json" assert { type: "json" }
+-export const version = require('./package.json').version;
++const version = require('@tdewolff/minify/package.json').version;
++
++module.exports = {
++	string,
++	config,
++	file,
++	version,
++};
+diff --git a/package.json b/package.json
+index 752149e2cca7dd24e646ad83835d69f976241dc4..075f8887cdb07c1ecf69653d8b1f4c1360b4db33 100644
+--- a/package.json
++++ b/package.json
+@@ -1,7 +1,6 @@
+ {
+   "name": "@tdewolff/minify",
+   "version": "2.12.4",
+-  "type": "module",
+   "author": "Taco de Wolff",
+   "license": "MIT",
+   "description": "Go minifiers for web formats",

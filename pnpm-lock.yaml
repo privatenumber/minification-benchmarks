@@ -1,8 +1,14 @@
 lockfileVersion: 5.4
 
+patchedDependencies:
+  '@tdewolff/minify@2.12.4':
+    hash: bkwac6aqvbzc42ey4jr3hiepku
+    path: patches/@tdewolff__minify@2.12.4.patch
+
 specifiers:
   '@pvtnbr/eslint-config': ^0.30.1
   '@swc/core': ^1.3.23
+  '@tdewolff/minify': ^2.12.4
   '@types/byte-size': ^8.1.0
   '@types/google-closure-compiler': ^0.0.19
   '@types/jsdom-global': ^3.0.3
@@ -14,7 +20,6 @@ specifiers:
   '@types/uglify-js': ^3.17.0
   antd: ^4.16.1
   babel-minify: ^0.5.2
-  bina: ^0.1.3
   byte-size: ^8.1.0
   cleye: ^1.2.1
   comment-mark: ^1.1.1
@@ -52,6 +57,7 @@ specifiers:
 
 dependencies:
   '@swc/core': 1.3.23
+  '@tdewolff/minify': 2.12.4_bkwac6aqvbzc42ey4jr3hiepku
   antd: 4.16.1_sfoxds7t5ydpegc3knd667wn6m
   babel-minify: 0.5.2
   byte-size: 8.1.0
@@ -96,7 +102,6 @@ devDependencies:
   '@types/react': 17.0.38
   '@types/react-dom': 17.0.11
   '@types/uglify-js': 3.17.0
-  bina: 0.1.3
   eslint: 8.24.0
   lint-staged: 13.0.3
   simple-git-hooks: 2.8.0
@@ -797,6 +802,14 @@ packages:
       '@swc/core-win32-x64-msvc': 1.3.23
     dev: false
 
+  /@tdewolff/minify/2.12.4_bkwac6aqvbzc42ey4jr3hiepku:
+    resolution: {integrity: sha512-8rWj77W0cggtcknrEvLNHe+t8aInYGHb96WaJ4vLA8Us0QcL9WGiKGP6d8svy7F8C22bhqsDqK+T8NbIZ9+rdg==}
+    requiresBuild: true
+    dependencies:
+      node-gyp-build: 4.5.0
+    dev: false
+    patched: true
+
   /@tootallnate/once/2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
     engines: {node: '>= 10'}
@@ -1413,11 +1426,6 @@ packages:
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
-    dev: true
-
-  /bina/0.1.3:
-    resolution: {integrity: sha512-ICp6uDCjqvVyf1yO0YcppA57c1GzY67azRV/9+BEEqNzRhNXxHJ2HQ6gzj9jK9pXSBR2Up4sGKK85ZUmlcOHlA==}
-    hasBin: true
     dev: true
 
   /boolbase/1.0.0:
@@ -3911,6 +3919,11 @@ packages:
   /natural-compare/1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
+
+  /node-gyp-build/4.5.0:
+    resolution: {integrity: sha512-2iGbaQBV+ITgCz76ZEjmhUKAKVf7xfY1sRl4UiKQspfZMH2h06SyhNsnSVy50cwkFQDGLyif6m/6uFXHkOZ6rg==}
+    hasBin: true
+    dev: false
 
   /normalize-package-data/2.5.0:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}
