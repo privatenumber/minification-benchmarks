@@ -83,6 +83,9 @@
 			"ignoreMissing": [
 				"dayjs"
 			]
+		},
+		"patchedDependencies": {
+			"@tdewolff/minify@2.12.4": "patches/@tdewolff__minify@2.12.4.patch"
 		}
 	}
 }
