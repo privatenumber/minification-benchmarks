@@ -21,6 +21,7 @@
 		"*.{ts,js}": "eslint --cache"
 	},
 	"dependencies": {
+		"@minify-js/node": "^0.4.3",
 		"@swc/core": "^1.3.32",
 		"@tdewolff/minify": "^2.12.4",
 		"antd": "^4.16.1",

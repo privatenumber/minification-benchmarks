@@ -20,6 +20,7 @@
 		{
 			"groupName": "minifiers",
 			"matchPackageNames": [
+				"@minify-js/node",
 				"@swc/core",
 				"babel-minify",
 				"esbuild",
