@@ -6,6 +6,7 @@ patchedDependencies:
     path: patches/@tdewolff__minify@2.12.4.patch
 
 specifiers:
+  '@minify-js/node': ^0.4.3
   '@pvtnbr/eslint-config': ^0.30.1
   '@swc/core': ^1.3.32
   '@tdewolff/minify': ^2.12.4
@@ -56,6 +57,7 @@ specifiers:
   vue: ^2.6.12
 
 dependencies:
+  '@minify-js/node': 0.4.3
   '@swc/core': 1.3.32
   '@tdewolff/minify': 2.12.4_bkwac6aqvbzc42ey4jr3hiepku
   antd: 4.16.1_sfoxds7t5ydpegc3knd667wn6m
@@ -631,6 +633,14 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.0.7
       '@jridgewell/sourcemap-codec': 1.4.13
+    dev: false
+
+  /@minify-js/node/0.4.3:
+    resolution: {integrity: sha512-BJa2FL1+IGarQhN3YCGevDdFY/odrn6pQ7K5Jxho8CrvpJTGLjhoD7EzyG2YsF2ZnhEAxL0Wquu33ikTXgOkUg==}
+    engines: {node: '>= 8.6.0'}
+    requiresBuild: true
+    dependencies:
+      cargo-cp-artifact: 0.1.7
     dev: false
 
   /@nodelib/fs.scandir/2.1.5:
@@ -1477,6 +1487,11 @@ packages:
   /camelcase/4.1.0:
     resolution: {integrity: sha1-1UVjW+HjPFQmScaRc+Xeas+uNN0=}
     engines: {node: '>=4'}
+    dev: false
+
+  /cargo-cp-artifact/0.1.7:
+    resolution: {integrity: sha512-pxEV9p1on8vu3BOKstVisF9TwMyGKCBRvzaVpQHuU2sLULCKrn3MJWx/4XlNzmG6xNCTPf78DJ7WCGgr2mOzjg==}
+    hasBin: true
     dev: false
 
   /chalk/2.4.2:
