@@ -12,7 +12,7 @@ export const benchmark = async (
 	let stdout;
 	try {
 		const minificationProcess = await execa(
-			require.resolve('tsx/dist/cli.js'),
+			'tsx',
 			[
 				path.join(__dirname, '../scripts/benchmark/index.ts'),
 				'--minifier',
