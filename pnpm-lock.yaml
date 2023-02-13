@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@minify-js/node': ^0.5.1
+  '@minify-js/node': ^0.5.2
   '@pvtnbr/eslint-config': ^0.30.2
   '@swc/core': ^1.3.35
   '@tdewolff/minify': ^2.12.4
@@ -52,7 +52,7 @@ specifiers:
   vue: ^2.6.12
 
 dependencies:
-  '@minify-js/node': 0.5.1
+  '@minify-js/node': 0.5.2
   '@swc/core': 1.3.35
   '@tdewolff/minify': 2.12.4
   antd: 4.16.1_sfoxds7t5ydpegc3knd667wn6m
@@ -644,8 +644,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.13
     dev: false
 
-  /@minify-js/node/0.5.1:
-    resolution: {integrity: sha512-/RXFogOdHzCzDmwKVaGvRupYk1/dgi1A3VHCaxFqwg4irsEJ7MUqRn7UVB1l0jYHq3Wa2EhqB9vSi0kvn7V6og==}
+  /@minify-js/node/0.5.2:
+    resolution: {integrity: sha512-jZ0kAT2WdWTkLjYgDpmmUAkH2ZJK+/qtGk2szAm4TWFdW0SBlHV+9cLmjoJTVR9+LCTS8jlHq2YzaOZfH9JP+g==}
     engines: {node: '>= 8.6.0'}
     requiresBuild: true
     dependencies:
