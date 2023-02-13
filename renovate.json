@@ -21,6 +21,7 @@
 			"groupName": "minifiers",
 			"matchPackageNames": [
 				"@minify-js/node",
+				"@tdewolff/minify",
 				"@swc/core",
 				"babel-minify",
 				"esbuild",
