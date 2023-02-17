@@ -43,7 +43,7 @@ specifiers:
   read-pkg-up: ^9.1.0
   simple-git-hooks: ^2.8.1
   tasuku: ^2.0.1
-  terser: ^5.16.3
+  terser: ^5.16.4
   three: ^0.124.0
   tsx: ^3.12.3
   typescript: ^4.8.3
@@ -81,7 +81,7 @@ dependencies:
   react-dom: 17.0.2_react@17.0.2
   read-pkg-up: 9.1.0
   tasuku: 2.0.1
-  terser: 5.16.3
+  terser: 5.16.4
   three: 0.124.0
   typescript: 4.8.3
   uglify-js: 3.17.4
@@ -5338,8 +5338,8 @@ packages:
     resolution: {integrity: sha512-IKVL/itiMy947XWVv4IHV7a0KQXvKjj4ptbi7Ew9MPMcOLzkiQeyx3Gyvh62hKrfJ0RZc4M1nbhzjNM39Kyujw==}
     dev: false
 
-  /terser/5.16.3:
-    resolution: {integrity: sha512-v8wWLaS/xt3nE9dgKEWhNUFP6q4kngO5B8eYFUuebsu7Dw/UNAnpUod6UHo04jSSkv8TzKHjZDSd7EXdDQAl8Q==}
+  /terser/5.16.4:
+    resolution: {integrity: sha512-5yEGuZ3DZradbogeYQ1NaGz7rXVBDWujWlx1PT8efXO6Txn+eWbfKqB2bTDVmFXmePFkoLU6XI8UektMIEA0ug==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
