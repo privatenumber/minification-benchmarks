@@ -89,8 +89,8 @@ dependencies:
     specifier: ^2.0.1
     version: 2.0.1
   terser:
-    specifier: ^5.17.0
-    version: 5.17.0
+    specifier: ^5.17.1
+    version: 5.17.1
   three:
     specifier: ^0.124.0
     version: 0.124.0
@@ -5773,8 +5773,8 @@ packages:
     resolution: {integrity: sha512-IKVL/itiMy947XWVv4IHV7a0KQXvKjj4ptbi7Ew9MPMcOLzkiQeyx3Gyvh62hKrfJ0RZc4M1nbhzjNM39Kyujw==}
     dev: false
 
-  /terser@5.17.0:
-    resolution: {integrity: sha512-3die3+pYW4mta4xF6K8Wtf7id8+oYyfqtAhjwzqY01+CfDSDMx/VA1Sp8sXWs5AVNIoAKoUfmp/gnPqRjBxuDA==}
+  /terser@5.17.1:
+    resolution: {integrity: sha512-hVl35zClmpisy6oaoKALOpS0rDYLxRFLHhRuDlEGTKey9qHjS1w9GMORjuwIMt70Wan4lwsLYyWDVnWgF+KUEw==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
