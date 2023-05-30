@@ -27,7 +27,7 @@ jobs:
     - name: Setup pnpm
       uses: pnpm/action-setup@v2
       with:
-        version: 7
+        version: 8
         run_install: true
 
     - name: Benchmark

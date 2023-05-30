@@ -6,6 +6,7 @@
 	"repository": "privatenumber/minification-benchmarks",
 	"author": "Hiroki Osame <hiroki.osame@gmail.com>",
 	"files": [],
+	"packageManager": "pnpm@8.5.1",
 	"scripts": {
 		"prepare": "simple-git-hooks",
 		"benchmark": "tsx scripts/benchmark",
