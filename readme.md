@@ -13,7 +13,7 @@ This repo is routinely maintained to compare the quality and speed across the la
 
 _Benchmarks last updated on <!-- lastUpdated:start -->Jul 15, 2023<!-- lastUpdated:end -->._
 
-<sub>Support this project by ⭐️ starring and sharing it. [Follow me](https://github.com/privatenumber) to see what other cool projects I'm working on! ❤️</sub>
+<sub>Found this useful? Show your support & appreciation by [sponsoring](https://github.com/sponsors/privatenumber)! ❤️</sub>
 
 ## 🙋‍♂️ Why?
 
@@ -232,6 +232,9 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | [uglify-js](/lib/minifiers/uglify-js.ts) <sub>_Timed out_</sub>                                                                        |                               — |                                 — |                            — |
 <!-- benchmarks:end -->
 
----
-
-_Want to see more projects listed?_ PRs welcome! See the [contribution guide](/.github/CONTRIBUTING.md) for more info.
+## Sponsors
+<p align="center">
+	<a href="https://github.com/sponsors/privatenumber">
+		<img src="https://cdn.jsdelivr.net/gh/privatenumber/sponsors/sponsorkit/sponsors.svg">
+	</a>
+</p>
