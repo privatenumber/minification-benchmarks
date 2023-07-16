@@ -20,6 +20,9 @@ dependencies:
   babel-minify:
     specifier: ^0.5.2
     version: 0.5.2
+  bun:
+    specifier: ^0.6.14
+    version: 0.6.14
   byte-size:
     specifier: ^8.1.0
     version: 8.1.0
@@ -142,9 +145,6 @@ devDependencies:
   '@types/uglify-js':
     specifier: ^3.17.0
     version: 3.17.0
-  bun:
-    specifier: ^0.6.14
-    version: 0.6.14
   eslint:
     specifier: ^8.33.0
     version: 8.33.0
@@ -753,7 +753,7 @@ packages:
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
-    dev: true
+    dev: false
     optional: true
 
   /@oven/bun-darwin-x64-baseline@0.6.14:
@@ -761,7 +761,7 @@ packages:
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
-    dev: true
+    dev: false
     optional: true
 
   /@oven/bun-darwin-x64@0.6.14:
@@ -769,7 +769,7 @@ packages:
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
-    dev: true
+    dev: false
     optional: true
 
   /@oven/bun-linux-aarch64@0.6.14:
@@ -777,7 +777,7 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: true
+    dev: false
     optional: true
 
   /@oven/bun-linux-x64-baseline@0.6.14:
@@ -785,7 +785,7 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: true
+    dev: false
     optional: true
 
   /@oven/bun-linux-x64@0.6.14:
@@ -793,7 +793,7 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: true
+    dev: false
     optional: true
 
   /@pkgr/utils@2.3.1:
@@ -1655,7 +1655,7 @@ packages:
       '@oven/bun-linux-aarch64': 0.6.14
       '@oven/bun-linux-x64': 0.6.14
       '@oven/bun-linux-x64-baseline': 0.6.14
-    dev: true
+    dev: false
 
   /byte-size@8.1.0:
     resolution: {integrity: sha512-FkgMTAg44I0JtEaUAvuZTtU2a2YDmBRbQxdsQNSMtLCjhG0hMcF5b1IMN9UjSCJaU4nvlj/GER7B9sI4nKdCgA==}

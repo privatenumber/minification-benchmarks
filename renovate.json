@@ -21,13 +21,15 @@
 			"groupName": "minifiers",
 			"matchPackageNames": [
 				"@minify-js/node",
-				"@tdewolff/minify",
 				"@swc/core",
+				"@tdewolff/minify",
 				"babel-minify",
+				"bun",
 				"esbuild",
 				"google-closure-compiler",
 				"terser",
-				"uglify-js"
+				"uglify-js",
+				"tedivm/jshrink"
 			],
 			"rangeStrategy": "bump",
 			"enabled": true
