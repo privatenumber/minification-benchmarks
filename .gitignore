@@ -30,3 +30,7 @@ results
 
 # Cache
 .eslintcache
+
+# Docker files from GitHub Actions
+DOCKER_ENV
+docker_tag
