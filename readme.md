@@ -5,6 +5,7 @@ This repo is routinely maintained to compare the quality and speed across the la
 - [babel-minify](https://github.com/babel/minify)
 - [esbuild](https://github.com/evanw/esbuild)
 - [google-closure-compiler](https://github.com/google/closure-compiler-npm/tree/master/packages/google-closure-compiler)
+- [JShrink](https://github.com/tedious/JShrink)
 - [minify-js](https://github.com/wilsonzlin/minify-js)
 - [swc](https://github.com/swc-project/swc)
 - [tdewolff/minify](https://github.com/tdewolff/minify)
