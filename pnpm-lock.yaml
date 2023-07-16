@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@minify-js/node':
     specifier: ^0.5.6
@@ -138,6 +142,9 @@ devDependencies:
   '@types/uglify-js':
     specifier: ^3.17.0
     version: 3.17.0
+  bun:
+    specifier: ^0.6.14
+    version: 0.6.14
   eslint:
     specifier: ^8.33.0
     version: 8.33.0
@@ -740,6 +747,54 @@ packages:
       mkdirp: 1.0.4
       rimraf: 3.0.2
     dev: false
+
+  /@oven/bun-darwin-aarch64@0.6.14:
+    resolution: {integrity: sha512-zdaXiab5UYHThmiKm+C1QFKYK08f6+AyEEpiVr7sVupWLnFPM/tabz/uglYGQeTudgKTUlUcOYevZ1IpU86AJQ==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@oven/bun-darwin-x64-baseline@0.6.14:
+    resolution: {integrity: sha512-ssRND1eXceAdAWWrec6tZ7pAZNAEvktyB7Tm9wgjBRMxyVi/0+HBq4yl7AJJ4VqQvyDqIMCAr7W8fv3xTi7gUw==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@oven/bun-darwin-x64@0.6.14:
+    resolution: {integrity: sha512-WAHTBJZwE0sKbHWFkiTLuRZo3AquFI8HEJZlz/lDL1YgYLvhNmuW7yMsGqYxCMTK3lL2tUgXlQK5IV+twSxCXw==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@oven/bun-linux-aarch64@0.6.14:
+    resolution: {integrity: sha512-66hnNPEX8QPdsGuCn2PSa5O/YEntJEUA5+a4mKq2EOIs3XyUziSMOJGg3x/v3faTIcDaQKZpcUwrBjYMAK9A8w==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@oven/bun-linux-x64-baseline@0.6.14:
+    resolution: {integrity: sha512-/ZpgWlkaWzcwYV0rJAOKv0CRFq73+/NNQfcNlyoEDY/TESYqYAIPVrMXTlZAmNe1ADhTSrueav11C6eoO/mr7g==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@oven/bun-linux-x64@0.6.14:
+    resolution: {integrity: sha512-nYvao1C0Nx5wO759cqFQmxDZo26wRfNsDHBhkcib/StTTjTaATvHQEMgSQpQLupbbuwE+aWFD6LY3GgeEqTrlQ==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
 
   /@pkgr/utils@2.3.1:
     resolution: {integrity: sha512-wfzX8kc1PMyUILA+1Z/EqoE4UCXGy0iRGMhPwdfae1+f0OXlLqCk+By+aMzgJBzR9AzS4CDizioG6Ss1gvAFJw==}
@@ -1585,6 +1640,21 @@ packages:
   /builtin-modules@3.3.0:
     resolution: {integrity: sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==}
     engines: {node: '>=6'}
+    dev: true
+
+  /bun@0.6.14:
+    resolution: {integrity: sha512-0EorJvs4Ung607UGTqno8Mlx1ToEcYPpzlEiXTiX+ySyoBcEIUUy0TlPloryp8/QVRL9+fAoMwhJNQAjF2GuQQ==}
+    cpu: [arm64, x64]
+    os: [darwin, linux]
+    hasBin: true
+    requiresBuild: true
+    optionalDependencies:
+      '@oven/bun-darwin-aarch64': 0.6.14
+      '@oven/bun-darwin-x64': 0.6.14
+      '@oven/bun-darwin-x64-baseline': 0.6.14
+      '@oven/bun-linux-aarch64': 0.6.14
+      '@oven/bun-linux-x64': 0.6.14
+      '@oven/bun-linux-x64-baseline': 0.6.14
     dev: true
 
   /byte-size@8.1.0:
