@@ -30,6 +30,9 @@ jobs:
         version: 8
         run_install: true
 
+    - name: Setup Composer
+      uses: php-actions/composer@v6
+
     - name: Benchmark
       run: pnpm update-benchmarks-readme
 
