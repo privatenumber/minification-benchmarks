@@ -13,7 +13,7 @@ const stream2buffer = (
 });
 
 export default minifier(async ({ filePath }) => {
-	const minify = spawn('bun', ['build', '--minify', filePath]);
+	const minify = spawn('bun', ['build', '--no-bundle', '--minify', filePath]);
 	const minified = await stream2buffer(minify.stdout);
 	return minified.toString();
 });
