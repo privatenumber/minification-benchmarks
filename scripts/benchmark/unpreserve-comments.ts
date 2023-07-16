@@ -3,10 +3,10 @@ import fs from 'fs/promises';
 const preservedComment = /\/\*!/g;
 const legalComment = /\* @license/g;
 
-export async function unpreserveComment(
+export const unpreserveComment = async (
 	code: string,
 	filePath: string,
-) {
+) => {
 	let strippedCode = code;
 
 	if (preservedComment.test(strippedCode)) {
@@ -23,4 +23,4 @@ export async function unpreserveComment(
 	}
 
 	return strippedCode;
-}
+};

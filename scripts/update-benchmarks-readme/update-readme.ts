@@ -93,11 +93,10 @@ function getBenchmarkTable(
 	];
 }
 
-export function getBenchmarkDataTables(
+export const getBenchmarkDataTables = (
 	artifactMinifierBenchmarks: BenchmarkedArtifact[],
-) {
-	return artifactMinifierBenchmarks.map(
-		({ artifact, benchmarkResults }) => outdent`
+) => artifactMinifierBenchmarks.map(
+	({ artifact, benchmarkResults }) => outdent`
 			${
 				markdownTable([
 					['Artifact', 'Original size', 'Gzip size'],
@@ -117,8 +116,7 @@ export function getBenchmarkDataTables(
 				})
 			}
 		`,
-	).join('\n----\n');
-}
+).join('\n----\n');
 
 const README_PATH = path.resolve('./readme.md');
 

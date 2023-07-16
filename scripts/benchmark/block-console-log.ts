@@ -7,16 +7,17 @@ const originalLogs = {
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 const noop = () => {};
 
-export function blockConsoleLog() {
+export const blockConsoleLog = () => {
 	const methods = Object.keys(originalLogs) as Array<keyof typeof originalLogs>;
 
 	for (const method of methods) {
 		console[method] = noop;
 	}
 
-	return function restore() {
+	// Restore original console methods
+	return () => {
 		for (const method of methods) {
 			console[method] = originalLogs[method];
 		}
 	};
-}
+};

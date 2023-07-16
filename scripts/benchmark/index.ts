@@ -60,8 +60,8 @@ import { runTest } from './run-test';
 		await runTest(testPath, code);
 	}
 
-	const start = process.hrtime();
-	let minifiedCode;
+	const startTime = process.hrtime();
+	let minifiedCode: Awaited<ReturnType<typeof minifier>>;
 	try {
 		minifiedCode = await minifier({
 			filePath,
@@ -70,7 +70,7 @@ import { runTest } from './run-test';
 	} catch {
 		throw new Error('Failed to minify');
 	}
-	const hrtime = process.hrtime(start);
+	const hrtime = process.hrtime(startTime);
 
 	if (testPath) {
 		await runTest(testPath, minifiedCode);

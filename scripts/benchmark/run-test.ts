@@ -3,13 +3,18 @@ import { Volume } from 'memfs';
 import { createFsRequire } from 'fs-require';
 import { blockConsoleLog } from './block-console-log';
 
-export const requireString = (code: string) => {
+export const requireString = (
+	code: string,
+) => {
 	const vol = Volume.fromJSON({ '/index.js': code });
 	const fsRequire = createFsRequire(vol);
 	return fsRequire('/index');
 };
 
-export async function runTest(testPath: string, code: string) {
+export const runTest = async (
+	testPath: string,
+	code: string,
+) => {
 	// eslint-disable-next-line node/global-require,@typescript-eslint/no-var-requires
 	const { preprocess, run } = require(path.resolve(testPath)).default;
 
@@ -30,4 +35,4 @@ export async function runTest(testPath: string, code: string) {
 	} finally {
 		restoreConsoleLogs();
 	}
-}
+};

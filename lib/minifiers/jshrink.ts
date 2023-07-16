@@ -1,17 +1,7 @@
 import path from 'path';
 import { spawn } from 'child_process';
-import type { Stream } from 'stream';
 import { minifier } from '../types';
-
-const stream2buffer = (
-	stream: Stream,
-) => new Promise<Buffer>((resolve, reject) => {
-	const bufferChunks = new Array<any>();
-
-	stream.on('error', reject);
-	stream.on('data', chunk => bufferChunks.push(chunk));
-	stream.on('end', () => resolve(Buffer.concat(bufferChunks)));
-});
+import { streamToBuffer } from '../utils/stream-to-buffer';
 
 export default minifier(async ({ code }) => {
 	const minify = spawn('php', [path.join(__dirname, './jshrink.php')]);
@@ -19,6 +9,6 @@ export default minifier(async ({ code }) => {
 	minify.stdin.write(code);
 	minify.stdin.end();
 
-	const minified = await stream2buffer(minify.stdout);
+	const minified = await streamToBuffer(minify.stdout);
 	return minified.toString();
 });
