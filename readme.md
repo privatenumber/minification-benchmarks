@@ -259,6 +259,11 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 <!-- benchmarks:end -->
 
 ## Sponsors
+
+> This page gets consistent traffic from Google and other dev resources.
+>
+> If you'd like to promote your banner here or my other projects, please reach out for sponsorship deals.
+
 <p align="center">
 	<a href="https://github.com/sponsors/privatenumber">
 		<img src="https://cdn.jsdelivr.net/gh/privatenumber/sponsors/sponsorkit/sponsors.svg">
