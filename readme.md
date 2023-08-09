@@ -15,7 +15,17 @@ This repo is routinely maintained to compare the quality and speed across the la
 
 _Benchmarks last updated on <!-- lastUpdated:start -->Aug 8, 2023<!-- lastUpdated:end -->._
 
-<sub>Found this useful? Show your support & appreciation by [sponsoring](https://github.com/sponsors/privatenumber)! ❤️</sub>
+<br>
+
+<p align="center">
+	<a href="https://privatenumber-sponsors.vercel.app/api/sponsor?tier=platinum">
+		<picture>
+			<source width="830" media="(prefers-color-scheme: dark)" srcset="https://privatenumber-sponsors.vercel.app/api/sponsor?tier=platinum&image=dark">
+			<source width="830" media="(prefers-color-scheme: light)" srcset="https://privatenumber-sponsors.vercel.app/api/sponsor?tier=platinum&image">
+			<img width="830" src="https://privatenumber-sponsors.vercel.app/api/sponsor?tier=platinum&image" alt="Premium sponsor banner">
+		</picture>
+	</a>
+</p>
 
 ## 🙋‍♂️ Why?
 
@@ -49,6 +59,18 @@ For users, this measures network transfer size, which is usually the metric that
 #### Time
 
 How long minification took (average of 5 runs). Each time is annotated with a multiplier relative to the fastest minifier.
+
+<br>
+
+<p align="center">
+	<a href="https://privatenumber-sponsors.vercel.app/api/sponsor?tier=gold">
+		<picture>
+			<source width="830" media="(prefers-color-scheme: dark)" srcset="https://privatenumber-sponsors.vercel.app/api/sponsor?tier=gold&image=dark">
+			<source width="830" media="(prefers-color-scheme: light)" srcset="https://privatenumber-sponsors.vercel.app/api/sponsor?tier=gold&image">
+			<img width="830" src="https://privatenumber-sponsors.vercel.app/api/sponsor?tier=gold&image" alt="Premium sponsor banner">
+		</picture>
+	</a>
+</p>
 
 ## 📋 Results
 
@@ -260,9 +282,22 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 
 ## Sponsors
 
-> This page gets consistent traffic from Google and other dev resources.
->
-> If you'd like to promote your banner here or my other projects, please reach out for sponsorship deals.
+<p align="center">
+	<a href="https://privatenumber-sponsors.vercel.app/api/sponsor?tier=silver1">
+		<picture>
+			<source width="410" media="(prefers-color-scheme: dark)" srcset="https://privatenumber-sponsors.vercel.app/api/sponsor?tier=silver1&image=dark">
+			<source width="410" media="(prefers-color-scheme: light)" srcset="https://privatenumber-sponsors.vercel.app/api/sponsor?tier=silver1&image">
+			<img width="410" src="https://privatenumber-sponsors.vercel.app/api/sponsor?tier=silver1&image" alt="Premium sponsor banner">
+		</picture>
+	</a>
+	<a href="https://privatenumber-sponsors.vercel.app/api/sponsor?tier=silver2">
+		<picture>
+			<source width="410" media="(prefers-color-scheme: dark)" srcset="https://privatenumber-sponsors.vercel.app/api/sponsor?tier=silver2&image=dark">
+			<source width="410" media="(prefers-color-scheme: light)" srcset="https://privatenumber-sponsors.vercel.app/api/sponsor?tier=silver2&image">
+			<img width="410" src="https://privatenumber-sponsors.vercel.app/api/sponsor?tier=silver2&image" alt="Premium sponsor banner">
+		</picture>
+	</a>
+</p>
 
 <p align="center">
 	<a href="https://github.com/sponsors/privatenumber">
