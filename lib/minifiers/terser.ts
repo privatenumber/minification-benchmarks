@@ -7,6 +7,9 @@ export default minifier(async ({ code }) => {
 		output: {
 			comments: false,
 		},
+		compress: {
+			passes: 2,
+		}
 	});
 
 	return minified.code!;
