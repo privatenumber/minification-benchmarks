@@ -17,8 +17,8 @@ dependencies:
     specifier: ^0.5.2
     version: 0.5.2
   bun:
-    specifier: ^1.0.3
-    version: 1.0.3
+    specifier: ^1.0.4
+    version: 1.0.4
   byte-size:
     specifier: ^8.1.0
     version: 8.1.0
@@ -92,8 +92,8 @@ dependencies:
     specifier: ^2.0.1
     version: 2.0.1
   terser:
-    specifier: ^5.20.0
-    version: 5.20.0
+    specifier: ^5.21.0
+    version: 5.21.0
   three:
     specifier: ^0.124.0
     version: 0.124.0
@@ -744,48 +744,48 @@ packages:
       rimraf: 3.0.2
     dev: false
 
-  /@oven/bun-darwin-aarch64@1.0.3:
-    resolution: {integrity: sha512-FvP7Kv51+Et68zOofN0+tpYjFmC8aUKl24+YjFnTTlhjVCpd2BIijJFohC6hYE6BeqqFzbsXwRtBXzTye32Jow==}
+  /@oven/bun-darwin-aarch64@1.0.4:
+    resolution: {integrity: sha512-HCfN2Uanf2eUU/CUbEJJFaeHoBgo/YGukt5V5keDRFSKALvdcITRbAPTZ1JjdRtul/ntue0oDMppJoHJEmzx+Q==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@oven/bun-darwin-x64-baseline@1.0.3:
-    resolution: {integrity: sha512-QKarwvjkBrD/LfIeGw9B9G8HU/JBZtmdaCJMSJG34S0esGoXiDNg1oMYScfR5eCod4v5Z6Gx2urhZFLzFLkb5Q==}
+  /@oven/bun-darwin-x64-baseline@1.0.4:
+    resolution: {integrity: sha512-+BSZ9EdfyIH+0zk48zm8fb0TvSdr1fxdPLV4wvofp+HNlkzPHt4745ibSLNGbOev/y6lwHrMNfbGoY9elCOtkw==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@oven/bun-darwin-x64@1.0.3:
-    resolution: {integrity: sha512-23rAnim46LZWaZ1K7D9QBdCur/5qvHosm17x18Py1OQvVXKpzq/gL23AJEjaeGntkoVWHx/mowkPhzzNMi16fA==}
+  /@oven/bun-darwin-x64@1.0.4:
+    resolution: {integrity: sha512-nER/1gBJL/e4D4woGDq+GwPDhzVs3oaoVZ7I4jlKv/LGHWJE5RAjH3qT4gbh/zwHlHaHi5RQw1pbRFgdN7n9EQ==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@oven/bun-linux-aarch64@1.0.3:
-    resolution: {integrity: sha512-wXPFtoyf0E9DFGkK+P3wYfOvZxWTjcs2nm32/dHdY4VhyMNUkOL5+5f/lJDazRnXWELb2bM9ZjCTD/DOYgS3yA==}
+  /@oven/bun-linux-aarch64@1.0.4:
+    resolution: {integrity: sha512-tnZN2CTDqeHh0OdXpraKKzmidNidVrdZocLfppMZklvHpmsvr/MdK96lcj2o5LzrjwhVGJKOUol8N32B/C8MBQ==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@oven/bun-linux-x64-baseline@1.0.3:
-    resolution: {integrity: sha512-1QMJh/s99xLqcUwu5PCCfYe++1/gY3+yeA/tcAdQT3tWxDitAeqC85xFgYslUWj5xQ7DLsEaGETBcQ2n5rHUpQ==}
+  /@oven/bun-linux-x64-baseline@1.0.4:
+    resolution: {integrity: sha512-OURqmY2Ln760KecV8I0taBMA/0LcmeMVGQXMh1hv5NZSfB9d6O/2LrHKv1zZfLRJm9hPjpPxxuqKWc46p95xZA==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@oven/bun-linux-x64@1.0.3:
-    resolution: {integrity: sha512-Tt2AaFvDcf1wW+EDbtYa/rySEan78cYEzElUU/Bb/Aq8mNT1wZfFvIgE2hnBa/rQzbNhGgbNE/4GBKJflJBx4A==}
+  /@oven/bun-linux-x64@1.0.4:
+    resolution: {integrity: sha512-yHk/ZALZR6Y7xgBW2Dhm6s+6NZ/HdhgByOPJmKbgFAt5ocuNpDRlEEhlLdaaxWwAL+RsG969OpV+bSzC9suCMw==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
@@ -1649,19 +1649,19 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /bun@1.0.3:
-    resolution: {integrity: sha512-BABgUgJIjSDG6nIviXMfpVx828ocCZW0siajECm51LLgXA9lyraEtZMV7fcDEVm2clb8sVZfd7vm+fqCJLFZJQ==}
+  /bun@1.0.4:
+    resolution: {integrity: sha512-gzMDYkfGYe8KWKUBZJKCFTHUlf1QJRSLyIiryi0atf/4tqPzMq3QDwAmBd/4CWjU5pWCJvPZxLPsAWxeQDayxw==}
     cpu: [arm64, x64]
     os: [darwin, linux]
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      '@oven/bun-darwin-aarch64': 1.0.3
-      '@oven/bun-darwin-x64': 1.0.3
-      '@oven/bun-darwin-x64-baseline': 1.0.3
-      '@oven/bun-linux-aarch64': 1.0.3
-      '@oven/bun-linux-x64': 1.0.3
-      '@oven/bun-linux-x64-baseline': 1.0.3
+      '@oven/bun-darwin-aarch64': 1.0.4
+      '@oven/bun-darwin-x64': 1.0.4
+      '@oven/bun-darwin-x64-baseline': 1.0.4
+      '@oven/bun-linux-aarch64': 1.0.4
+      '@oven/bun-linux-x64': 1.0.4
+      '@oven/bun-linux-x64-baseline': 1.0.4
     dev: false
 
   /byte-size@8.1.0:
@@ -5856,8 +5856,8 @@ packages:
     resolution: {integrity: sha512-IKVL/itiMy947XWVv4IHV7a0KQXvKjj4ptbi7Ew9MPMcOLzkiQeyx3Gyvh62hKrfJ0RZc4M1nbhzjNM39Kyujw==}
     dev: false
 
-  /terser@5.20.0:
-    resolution: {integrity: sha512-e56ETryaQDyebBwJIWYB2TT6f2EZ0fL0sW/JRXNMN26zZdKi2u/E/5my5lG6jNxym6qsrVXfFRmOdV42zlAgLQ==}
+  /terser@5.21.0:
+    resolution: {integrity: sha512-WtnFKrxu9kaoXuiZFSGrcAvvBqAdmKx0SFNmVNYdJamMu9yyN3I/QF0FbH4QcqJQ+y1CJnzxGIKH0cSj+FGYRw==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
