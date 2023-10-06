@@ -4,7 +4,6 @@ const originalLogs = {
 	error: console.error,
 };
 
-// eslint-disable-next-line @typescript-eslint/no-empty-function
 const noop = () => {};
 
 export const blockConsoleLog = () => {
