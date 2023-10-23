@@ -23,11 +23,11 @@
 	},
 	"dependencies": {
 		"@minify-js/node": "^0.5.6",
-		"@swc/core": "^1.3.93",
+		"@swc/core": "^1.3.94",
 		"@tdewolff/minify": "^2.12.5",
 		"antd": "^4.16.1",
 		"babel-minify": "^0.5.2",
-		"bun": "^1.0.6",
+		"bun": "^1.0.7",
 		"byte-size": "^8.1.0",
 		"cleye": "^1.3.1",
 		"comment-mark": "^1.1.1",
