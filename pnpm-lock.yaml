@@ -8,8 +8,8 @@ dependencies:
     specifier: ^1.3.96
     version: 1.3.96
   '@tdewolff/minify':
-    specifier: ^2.20.6
-    version: 2.20.6
+    specifier: ^2.20.7
+    version: 2.20.7
   antd:
     specifier: ^4.16.1
     version: 4.16.1(react-dom@17.0.2)(react@17.0.2)
@@ -993,11 +993,11 @@ packages:
     resolution: {integrity: sha512-myfUej5naTBWnqOCc/MdVOLVjXUXtIA+NpDrDBKJtLLg2shUjBu3cZmB/85RyitKc55+lUUyl7oRfLOvkr2hsw==}
     dev: false
 
-  /@tdewolff/minify@2.20.6:
-    resolution: {integrity: sha512-IjPDzA3W07KZK0rqnMgxQGny/snQyhuzsjomlHMWTy80JwzfstvwkFt2hj0nC0/COZy5u4kOhO/nddjQQ5ARzw==}
+  /@tdewolff/minify@2.20.7:
+    resolution: {integrity: sha512-09HvfRGADxauJgdQTnWRT7tdcrIfi5QCCwSQyCvKNGfISHZud2AsLSmVi8eNG5Jl7j6BoDr/2bfAGdaHOG05mQ==}
     requiresBuild: true
     dependencies:
-      node-gyp: 10.0.0
+      node-gyp: 10.0.1
       node-gyp-build: 4.6.1
     transitivePeerDependencies:
       - supports-color
@@ -4577,8 +4577,8 @@ packages:
     hasBin: true
     dev: false
 
-  /node-gyp@10.0.0:
-    resolution: {integrity: sha512-LkaKUbjyacJGRHiuhUeUblzZNxTF1/XNooyAl6aiaJ6ZpeurR4Mk9sjxncGNSI7pETqyqM+hLAER0788oSxt0A==}
+  /node-gyp@10.0.1:
+    resolution: {integrity: sha512-gg3/bHehQfZivQVfqIyy8wTdSymF9yTyP4CJifK73imyNMU8AIGQE2pUa7dNWfmMeG9cDVF2eehiRMv0LC1iAg==}
     engines: {node: ^16.14.0 || >=18.0.0}
     hasBin: true
     dependencies:
