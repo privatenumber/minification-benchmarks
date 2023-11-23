@@ -10,11 +10,11 @@ export const unpreserveComment = async (
 	let strippedCode = code;
 
 	if (preservedComment.test(strippedCode)) {
-		strippedCode = strippedCode.replace(preservedComment, '/*');
+		strippedCode = strippedCode.replaceAll(preservedComment, '/*');
 	}
 
 	if (legalComment.test(strippedCode)) {
-		strippedCode = strippedCode.replace(legalComment, '*');
+		strippedCode = strippedCode.replaceAll(legalComment, '*');
 	}
 
 	if (code !== strippedCode) {

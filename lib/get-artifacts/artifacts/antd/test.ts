@@ -10,7 +10,7 @@ jsdom(undefined, {
 
 export default defineTest({
 	preprocess(code) {
-		return code.replace(/console\.warn\(/g, '(');
+		return code.replaceAll('console.warn(', '(');
 	},
 
 	run({ Button }) {

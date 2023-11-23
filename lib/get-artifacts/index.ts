@@ -42,7 +42,7 @@ export const defineArtifact = async (artifactMeta: ArtifactMeta): Promise<Artifa
 
 type Test = {
 	preprocess?: (code: string) => string;
-	run: (exports: any) => void;
+	run: (exports: unknown) => void;
 };
 export const defineTest = (test: Test) => test;
 
@@ -57,7 +57,7 @@ export const getArtifacts = async () => {
 
 	const artifacts: Artifact[] = await Promise.all(artifactMetas.map(
 		async (artifactMetaPath) => {
-			// eslint-disable-next-line node/global-require,@typescript-eslint/no-var-requires
+			// eslint-disable-next-line @typescript-eslint/no-var-requires
 			const artifact = await require(path.join(artifactDirectory, artifactMetaPath)).default;
 			artifact.testPath = path.join(artifactDirectory, artifactMetaPath, 'test.ts');
 			return artifact;
