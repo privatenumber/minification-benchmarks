@@ -12,7 +12,7 @@
 		"benchmark": "tsx scripts/benchmark",
 		"benchmark-all": "tsx scripts/benchmark-all.ts",
 		"update-benchmarks-readme": "tsx scripts/update-benchmarks-readme/index.ts",
-		"lint": "eslint --cache .",
+		"lint": "lint --node --ignore-pattern results --cache .",
 		"typecheck": "tsc --noEmit"
 	},
 	"simple-git-hooks": {
@@ -60,7 +60,7 @@
 		"vue": "^2.6.12"
 	},
 	"devDependencies": {
-		"@pvtnbr/eslint-config": "^0.37.1",
+		"@pvtnbr/eslint-config": "github:privatenumber/eslint-config#npm/develop",
 		"@types/byte-size": "^8.1.0",
 		"@types/google-closure-compiler": "^0.0.19",
 		"@types/jsdom-global": "^3.0.3",
@@ -74,12 +74,6 @@
 		"lint-staged": "^15.2.0",
 		"simple-git-hooks": "^2.9.0",
 		"tsx": "^4.7.0"
-	},
-	"eslintConfig": {
-		"extends": "@pvtnbr",
-		"ignorePatterns": [
-			"results"
-		]
 	},
 	"pnpm": {
 		"peerDependencyRules": {
