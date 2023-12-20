@@ -13,38 +13,38 @@ jobs:
 
     steps:
 
-    - name: Checkout
-      uses: actions/checkout@v3
-      with:
-        ref: ${{ github.head_ref }}
-        repository: ${{ github.repository }}
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          repository: ${{ github.repository }}
 
-    - name: Use Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version-file: '.nvmrc'
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
 
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v2
-      with:
-        version: 8
-        run_install: true
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: true
 
-    - name: Setup Composer
-      uses: php-actions/composer@v6
+      - name: Setup Composer
+        uses: php-actions/composer@v6
 
-    - name: Benchmark
-      run: pnpm update-benchmarks-readme
+      - name: Benchmark
+        run: pnpm update-benchmarks-readme
 
-    - name: Commit readme.md
-      run: |
-        git config user.name github-actions
-        git config user.email github-actions@github.com
-        git commit -nam "chore: updated benchmarks"
-        git push
+      - name: Commit readme.md
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git commit -nam "chore: updated benchmarks"
+          git push
 
-    - name: Upload minification results
-      uses: actions/upload-artifact@v3
-      with:
-        name: minification-results
-        path: results/
+      - name: Upload minification results
+        uses: actions/upload-artifact@v3
+        with:
+          name: minification-results
+          path: results/

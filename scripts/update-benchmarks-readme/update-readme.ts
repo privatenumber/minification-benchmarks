@@ -41,10 +41,10 @@ const compareSpeed = (
 
 const PositiveInfinity = Number.POSITIVE_INFINITY;
 
-function getBenchmarkTable(
+const getBenchmarkTable = (
 	artifact: Artifact,
 	minifierResults: MinifierResult[],
-) {
+) => {
 	const successfulMinifiers = minifierResults.filter(minifier => !('error' in minifier)) as MinifierResultSuccess[];
 	const bestMinified = minBy(successfulMinifiers, 'data.raw.minifiedSize');
 	const bestMinzipped = minBy(successfulMinifiers, 'data.raw.minzippedSize');
@@ -91,7 +91,7 @@ function getBenchmarkTable(
 				];
 			}),
 	];
-}
+};
 
 export const getBenchmarkDataTables = (
 	artifactMinifierBenchmarks: BenchmarkedArtifact[],
@@ -120,11 +120,11 @@ export const getBenchmarkDataTables = (
 
 const README_PATH = path.resolve('./readme.md');
 
-export async function updateReadmeMd(benchmarks: string) {
+export const updateReadmeMd = async (benchmarks: string) => {
 	const readmeMd = commentMark(await fs.readFile(README_PATH), {
 		lastUpdated: format(new Date(), 'MMM d, y'),
 		benchmarks,
 	});
 
 	await fs.writeFile(README_PATH, readmeMd);
-}
+};

@@ -12,7 +12,7 @@ export type Artifact = {
 	size: number;
 	gzipSize: number;
 	testPath: string;
-}
+};
 
 // Result for a minifier benchmark given a file
 export type BenchmarkData = {
@@ -49,14 +49,14 @@ export type MinifierResultSuccess = {
 		formatted: AverageBenchmarkData<string>;
 	};
 	runs: BenchmarkData[];
-}
+};
 
 export type MinifierResult = MinifierResultFailed | MinifierResultSuccess;
 
 export type BenchmarkedArtifact = {
 	artifact: Artifact;
 	benchmarkResults: MinifierResult[];
-}
+};
 
 export type MinifierFunction = (minifySubject: {
 	code: string;

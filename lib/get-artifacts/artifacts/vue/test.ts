@@ -4,7 +4,7 @@ import type { VueConstructor } from 'vue';
 import { defineTest } from '../..';
 
 export default defineTest({
-	run(Vue: VueConstructor) {
+	run: (Vue: VueConstructor) => {
 		Vue.config.devtools = false;
 		Vue.config.productionTip = false;
 

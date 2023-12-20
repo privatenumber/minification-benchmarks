@@ -3,7 +3,7 @@ import assert from 'assert';
 import { defineTest } from '../..';
 
 export default defineTest({
-	run(echarts) {
+	run: (echarts) => {
 		const app = document.createElement('div');
 		document.body.append(app);
 

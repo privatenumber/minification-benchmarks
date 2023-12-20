@@ -19,13 +19,13 @@ const getAverage = (numbers: number[]) => (
 
 const benchmarkTime = Date.now();
 
-export async function benchmarkMinifiers(
+export const benchmarkMinifiers = async (
 	task: Task,
 	minifiers: string[],
 	artifact: Artifact,
 	sampleSize = 1,
 	saveToDirectory = `results/benchmarks-${benchmarkTime}`,
-) {
+) => {
 	await makeDir(saveToDirectory);
 
 	return await task.group(
@@ -91,4 +91,4 @@ export async function benchmarkMinifiers(
 			),
 		),
 	);
-}
+};

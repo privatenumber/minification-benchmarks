@@ -8,11 +8,9 @@ jsdom(undefined, {
 });
 
 export default defineTest({
-	preprocess(code) {
-		return code.replaceAll('console.warn(', '(');
-	},
+	preprocess: code => code.replaceAll('console.warn(', '('),
 
-	run(React) {
+	run: (React) => {
 		const app = document.createElement('div');
 		document.body.append(app);
 

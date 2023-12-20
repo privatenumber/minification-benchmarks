@@ -3,7 +3,7 @@ import assert from 'assert';
 import { defineTest } from '../..';
 
 export default defineTest({
-	run(d3) {
+	run: (d3) => {
 		document.body.innerHTML = '';
 
 		const svg = d3.select(document.body)
