@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 dependencies:
   '@minify-js/node':
     specifier: ^0.5.6
@@ -21,8 +17,8 @@ dependencies:
     specifier: ^0.5.2
     version: 0.5.2
   bun:
-    specifier: ^1.0.18
-    version: 1.0.18
+    specifier: ^1.0.19
+    version: 1.0.19
   byte-size:
     specifier: ^8.1.0
     version: 8.1.0
@@ -736,48 +732,48 @@ packages:
       semver: 7.5.4
     dev: false
 
-  /@oven/bun-darwin-aarch64@1.0.18:
-    resolution: {integrity: sha512-lXTdQpajIxP6cSAl4cvdKGVFrjPWKRVrK+PfvlX5Ub/fhyve8nKc5u1BcBG9448QqJ7xCD94bHFDgHxj3kwSmQ==}
+  /@oven/bun-darwin-aarch64@1.0.19:
+    resolution: {integrity: sha512-Ojj3ClVBeiQ1iXkI65EEKWoz/HjBaGR5EaaGjSlRPIr4PCddePKlxu0gKlTeH6pS9/TS913wwqb2ufi9Rr4rlg==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@oven/bun-darwin-x64-baseline@1.0.18:
-    resolution: {integrity: sha512-13Hkg2vfK6blR63OCJZxJGPPsozeQEP7djawopQBS/StWPxL7Ph+kLIqja7MUtgRC/n/t8mBDM4V8c8KYrursQ==}
+  /@oven/bun-darwin-x64-baseline@1.0.19:
+    resolution: {integrity: sha512-BhyJYhbgpaWDox4XrTnA3nn75TTwX8/x8HPYdQP+Up6nvZeQ2CESmqqzDFVuPCJvFdkFZl9TQXU/+kd8mgF80w==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@oven/bun-darwin-x64@1.0.18:
-    resolution: {integrity: sha512-WHdTNKjFq7n8RwDPQj6BSop/uDYMpTKU+DY6VzSo0Qv+Dx3n00TaWSdexGrJZfAaPD2Z1GWVuJsGlCJ6nFYehQ==}
+  /@oven/bun-darwin-x64@1.0.19:
+    resolution: {integrity: sha512-6OaKf4+gJPcfiyha9MzQrpVX8MWlCPMUcoBYGqHbd0gr9+tbuEfna149K30pz5nQ2Y8I4pUQgPD2Ew02vxY8gQ==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@oven/bun-linux-aarch64@1.0.18:
-    resolution: {integrity: sha512-TA4QG8nWXsnluwyi0tnzbTj0lpI18Nl/VZfuwUGfaXyRT6MSTnhhsdPu8nPKNvN6dtzfJLkKxejH8dw7FyfwPw==}
+  /@oven/bun-linux-aarch64@1.0.19:
+    resolution: {integrity: sha512-kkZkdytqgkISU5woqALUVVaGb3Cb4pU+v4TILCxeOv7bnMGUVk07WjMT0gBAozgPyejJY8QoZI7Z3O+gIi9ZrA==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@oven/bun-linux-x64-baseline@1.0.18:
-    resolution: {integrity: sha512-mfud9gyQI3dTxT7aTqUzCICQeJ6BoHfyDjyqo95v42whAhXL0C5HVDBSLjoBBIeLirJsqXoVCOnCZILFWS1Zrw==}
+  /@oven/bun-linux-x64-baseline@1.0.19:
+    resolution: {integrity: sha512-9sM1xS0hjUi6szUBLMOPrMPIucd6X/3ShK0Xddned6N+q0ABJY0XKQvTyPeRmVwREeoxfJEZ6OzXqM8ND1343g==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@oven/bun-linux-x64@1.0.18:
-    resolution: {integrity: sha512-4quR8sGCmE4XwH+tCnpgVFpO/VwDzaLGbXB3bZ7dOy9yp3UjDVVMbgq3kUAZwR915cjC9bvS0ham2E9QyFQMYw==}
+  /@oven/bun-linux-x64@1.0.19:
+    resolution: {integrity: sha512-DDaT+gXpNbt/20xsZtC1m7G/w/UMzniGPLf2q4AGupBwUSuZ6B2om8xBlH61WfTKDu7PzhrFU56vmwnqTNsX1Q==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
@@ -1698,19 +1694,19 @@ packages:
       semver: 7.5.4
     dev: true
 
-  /bun@1.0.18:
-    resolution: {integrity: sha512-l0GiCckLxetsUmZwiJCgXor6NCvZVXg+Avk9mVb1JmIukm2+4e5HZWpelVwjVzPLmAHlDv2VyoCx4OX+XiWKgA==}
+  /bun@1.0.19:
+    resolution: {integrity: sha512-aoSEWTjYqAAeYizPFkf5goR1f3e5jiapSKqonlBD7DPYQioktCwtyQxk2EsSA2srBIno2oiClakgoHykzSf28A==}
     cpu: [arm64, x64]
     os: [darwin, linux]
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      '@oven/bun-darwin-aarch64': 1.0.18
-      '@oven/bun-darwin-x64': 1.0.18
-      '@oven/bun-darwin-x64-baseline': 1.0.18
-      '@oven/bun-linux-aarch64': 1.0.18
-      '@oven/bun-linux-x64': 1.0.18
-      '@oven/bun-linux-x64-baseline': 1.0.18
+      '@oven/bun-darwin-aarch64': 1.0.19
+      '@oven/bun-darwin-x64': 1.0.19
+      '@oven/bun-darwin-x64-baseline': 1.0.19
+      '@oven/bun-linux-aarch64': 1.0.19
+      '@oven/bun-linux-x64': 1.0.19
+      '@oven/bun-linux-x64-baseline': 1.0.19
     dev: false
 
   /byte-size@8.1.0:
@@ -6646,3 +6642,7 @@ packages:
     dependencies:
       tslib: 2.0.3
     dev: false
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
