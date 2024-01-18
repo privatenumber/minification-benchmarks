@@ -4,7 +4,11 @@
 	"main": "./index.ts",
 	"dependencies": {
 		"@minification-benchmarks/utils": "*",
+		"jsdom": "^20.0.0",
+		"jsdom-global": "^3.0.2",
+		"read-pkg-up": "^9.1.0",
 		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
 		"moment": "^2.29.1",
 		"jquery": "^3.5.1",
 		"vue": "^2.6.12",
@@ -18,6 +22,7 @@
 		"typescript": "^4.8.3"
 	},
 	"devDependencies": {
-		"read-pkg-up": "^9.1.0"
+		"@types/jsdom-global": "^3.0.3",
+		"@types/react-dom": "^17.0.11"
 	}
 }
