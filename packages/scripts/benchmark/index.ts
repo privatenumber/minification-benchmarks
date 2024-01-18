@@ -67,8 +67,12 @@ import { runTest } from './run-test';
 			filePath,
 			code,
 		});
-	} catch {
-		throw new Error('Failed to minify');
+	} catch (error) {
+		throw new Error(`Failed to minify: ${
+			error instanceof Error
+				? error.message
+				: JSON.stringify(error)
+		}`);
 	}
 	const hrtime = process.hrtime(startTime);
 
