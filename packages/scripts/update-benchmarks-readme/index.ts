@@ -1,7 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
 import task from 'tasuku';
-import makeDir from 'make-dir';
 import { benchmarkArtifacts } from '@minification-benchmarks/bench/benchmark-artifacts';
 import type { BenchmarkedArtifact } from '@minification-benchmarks/bench/types';
 import { getMinifiers } from '@minification-benchmarks/minifiers';
@@ -42,7 +41,7 @@ import { getBenchmarkDataTables, updateReadmeMd } from './update-readme';
 				'\t',
 			);
 
-			await makeDir(saveToDirectory);
+			await fs.mkdir(saveToDirectory, { recursive: true });
 			await fs.writeFile(path.join(saveToDirectory, 'report.json'), reportStringified);
 
 			const benchmarkDataTables = getBenchmarkDataTables(report);

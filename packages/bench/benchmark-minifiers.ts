@@ -1,6 +1,6 @@
 import path from 'path';
+import fs from 'fs/promises';
 import byteSize from 'byte-size';
-import makeDir from 'make-dir';
 import type { Task } from 'tasuku';
 import { percent, formatMs } from '@minification-benchmarks/utils/formatting';
 import type { Artifact } from '@minification-benchmarks/artifacts';
@@ -26,7 +26,7 @@ export async function benchmarkMinifiers(
 	sampleSize = 1,
 	saveToDirectory = `results/benchmarks-${benchmarkTime}`,
 ) {
-	await makeDir(saveToDirectory);
+	await fs.mkdir(saveToDirectory, { recursive: true });
 
 	return await task.group(
 		task => minifiers.map(

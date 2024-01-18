@@ -5,7 +5,6 @@
 	"dependencies": {
 		"@minification-benchmarks/utils": "*",
 		"execa": "^6.1.0",
-		"make-dir": "^3.1.0",
 		"byte-size": "^8.1.0"
 	},
 	"devDependencies": {

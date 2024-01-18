@@ -120,9 +120,6 @@ importers:
       execa:
         specifier: ^6.1.0
         version: 6.1.0
-      make-dir:
-        specifier: ^3.1.0
-        version: 3.1.0
     devDependencies:
       '@types/byte-size':
         specifier: ^8.1.0
@@ -203,9 +200,6 @@ importers:
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
-      make-dir:
-        specifier: ^3.1.0
-        version: 3.1.0
       markdown-table:
         specifier: ^3.0.2
         version: 3.0.2
@@ -4388,13 +4382,6 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /make-dir@3.1.0:
-    resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
-    engines: {node: '>=8'}
-    dependencies:
-      semver: 6.3.1
-    dev: false
-
   /make-fetch-happen@13.0.0:
     resolution: {integrity: sha512-7ThobcL8brtGo9CavByQrQi+23aIfgYU++wg4B87AIS8Rb2ZBt/MEaDqzA00Xwv/jUjAjYkLHjVolYuTLKda2A==}
     engines: {node: ^16.14.0 || >=18.0.0}
@@ -5878,6 +5865,7 @@ packages:
   /semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
+    dev: true
 
   /semver@7.5.4:
     resolution: {integrity: sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==}
