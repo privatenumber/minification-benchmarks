@@ -1,4 +1,3 @@
-
 export const defineTest = <T>(
 	test: {
 		preprocess?: (code: string) => string;
