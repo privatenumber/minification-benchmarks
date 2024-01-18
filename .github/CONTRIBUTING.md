@@ -3,12 +3,12 @@
 ## Commands
 ### Get the benchmarks for a file given a minfier
 ```sh
-$ pnpm benchmark --minifier <minifier> <code-path>
+$ pnpm benchmark --minifier <minifier> <artifact>
 ```
 
 Example:
 ```
-$ pnpm benchmark --minifier esbuild ./packages/artifacts/node_modules/vue/dist/vue.runtime.common.dev.js
+$ pnpm benchmark --minifier esbuild vue
 ```
 
 ### Benchmark all artifacts & minifiers

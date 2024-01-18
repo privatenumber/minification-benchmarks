@@ -1,13 +1,13 @@
 import path from 'path';
-import type { Task } from 'tasuku';
+import _task, { type Task } from 'tasuku';
 import type { Artifact } from '@minification-benchmarks/artifacts';
 import { benchmarkMinifiers } from './benchmark-minifiers';
 import type { BenchmarkedArtifact } from './types';
 
 export const benchmarkArtifacts = async (
-	task: Task,
-	artifacts: Artifact[],
+	artifacts: string[],
 	minifiers: string[],
+	task: Task = _task,
 	sampleSize?: number,
 	saveToDirectory?: string,
 ) => await task.group(
