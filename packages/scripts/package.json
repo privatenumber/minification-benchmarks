@@ -3,23 +3,23 @@
 	"private": true,
 	"type": "module",
 	"dependencies": {
-		"@minification-benchmarks/bench": "*",
-		"@minification-benchmarks/utils": "*",
-		"@minification-benchmarks/minifiers": "*",
 		"@minification-benchmarks/artifacts": "*",
+		"@minification-benchmarks/bench": "*",
+		"@minification-benchmarks/minifiers": "*",
+		"@minification-benchmarks/utils": "*",
+		"byte-size": "^8.1.0",
 		"cleye": "^1.3.1",
-		"tasuku": "^2.0.1",
 		"comment-mark": "^1.1.1",
-		"markdown-table": "^3.0.2",
-		"outdent": "^0.8.0",
 		"date-fns": "^2.27.0",
 		"fs-require": "^1.6.0",
+		"lodash-es": "^4.17.21",
+		"markdown-table": "^3.0.2",
 		"memfs": "^3.4.13",
-		"byte-size": "^8.1.0",
-		"lodash": "^4.17.21"
+		"outdent": "^0.8.0",
+		"tasuku": "^2.0.1"
 	},
 	"devDependencies": {
 		"@types/byte-size": "^8.1.0",
-		"@types/lodash": "^4.14.178"
+		"@types/lodash-es": "^4.17.12"
 	}
 }

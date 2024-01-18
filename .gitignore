@@ -13,7 +13,7 @@ lerna-debug.log*
 node_modules/
 
 # PHP dependencies
-/vendor/
+vendor/
 
 # Output of 'npm pack'
 *.tgz

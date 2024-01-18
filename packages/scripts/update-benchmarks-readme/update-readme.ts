@@ -4,7 +4,7 @@ import { markdownTable } from 'markdown-table';
 import outdent from 'outdent';
 import commentMark from 'comment-mark';
 import byteSize from 'byte-size';
-import { minBy } from 'lodash';
+import { minBy } from 'lodash-es';
 import { format } from 'date-fns';
 import type {
 	BenchmarkedArtifact,
