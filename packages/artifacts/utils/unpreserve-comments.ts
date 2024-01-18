@@ -3,7 +3,7 @@ import fs from 'fs/promises';
 const preservedComment = /\/\*!/g;
 const legalComment = /\* @license/g;
 
-export const unpreserveComment = async (
+export const unpreserveComments = async (
 	code: string,
 	filePath: string,
 ) => {

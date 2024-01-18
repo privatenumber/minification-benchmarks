@@ -7,4 +7,7 @@ export type MinifierFunction = (
 
 export const createMinifier = (
 	minifierFunction: MinifierFunction,
-): MinifierFunction => minifierFunction;
+): MinifierFunction => {
+
+	return minifierFunction;
+};

@@ -29,8 +29,8 @@ export async function benchmarkMinifiers(
 	await fs.mkdir(saveToDirectory, { recursive: true });
 
 	return await task.group(
-		task => minifiers.map(
-			minifierName => task(
+		task => Object.entries(minifiers).map(
+			([minifierName]) => task(
 				minifierName,
 				async ({
 					setStatus,

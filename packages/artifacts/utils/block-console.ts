@@ -6,7 +6,7 @@ const originalLogs = {
 
 const noop = () => {};
 
-export const blockConsoleLog = () => {
+export const blockConsole = () => {
 	const methods = Object.keys(originalLogs) as Array<keyof typeof originalLogs>;
 
 	for (const method of methods) {

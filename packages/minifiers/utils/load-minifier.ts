@@ -1,13 +1,15 @@
-import { createRequire } from 'module';
+import path from 'path';
+import { minifiersDirectory } from './minifiers-directory.js';
 import type { MinifierFunction } from './create-minifier.js';
 
-const require = createRequire(import.meta.url);
-
-export const loadMinifier = (
+export const loadMinifier = async (
 	minifierName: string,
-): MinifierFunction => {
+) => {
 	try {
-		return require(`../minifiers/${minifierName}`).default;
+		const minifier = await import(
+			path.join(minifiersDirectory, minifierName)
+		);
+		return minifier.default as MinifierFunction;
 	} catch (error) {
 		console.error(error);
 		throw new Error(`Error loading minifier "${minifierName}":\n${

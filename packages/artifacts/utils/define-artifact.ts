@@ -1,43 +1,10 @@
-import fs from 'fs/promises';
-import path from 'path';
-import assert from 'assert';
-import { readPackageUp } from 'read-pkg-up';
-import { getSize, getGzipSize } from '@minification-benchmarks/utils/get-size';
-import type { Artifact, ArtifactMeta } from '../types';
+import { Artifact } from './artifact.js';
 
-const readPublicPackageUp = async (cwd: string) => {
-	let packageFound = await readPackageUp({ cwd });
-	while (packageFound!.packageJson.private) {
-		packageFound = await readPackageUp({
-			cwd: path.join(path.dirname(packageFound!.path), '..'),
-		});
-	}
-	return packageFound!.packageJson;
+export type ArtifactMeta = {
+	package: string;
+	filePath: string;
 };
 
-const nodeModulesPath = new URL('../node_modules', import.meta.url).pathname;
-
-export const defineArtifact = async (artifactMeta: ArtifactMeta): Promise<Artifact> => {
-	const packageName = artifactMeta.package;
-	const fullModulePath = path.join(nodeModulesPath, artifactMeta.package, artifactMeta.modulePath);
-	const [
-		packageJson,
-		artifactCode,
-	] = await Promise.all([
-		readPublicPackageUp(fullModulePath),
-		fs.readFile(fullModulePath),
-	]);
-
-	assert(packageName === packageJson.name, 'Mismatching package name');
-
-	return {
-		packageName,
-		packageVersion: packageJson.version,
-		modulePath: artifactMeta.modulePath,
-		fullModulePath,
-		testPath: '',
-		artifactCode,
-		size: getSize(artifactCode),
-		gzipSize: getGzipSize(artifactCode),
-	};
-};
+export const defineArtifact = (
+	artifactMeta: ArtifactMeta,
+) => new Artifact(artifactMeta);

@@ -53,6 +53,9 @@ importers:
       echarts:
         specifier: ^5.1.1
         version: 5.4.3
+      fs-require:
+        specifier: ^1.6.0
+        version: 1.6.0
       jquery:
         specifier: ^3.5.1
         version: 3.7.1
@@ -65,6 +68,9 @@ importers:
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
+      memfs:
+        specifier: ^3.4.13
+        version: 3.4.13
       moment:
         specifier: ^2.29.1
         version: 2.30.1

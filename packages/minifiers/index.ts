@@ -1,18 +1,3 @@
-import fs from 'fs/promises';
-import mem from 'mem';
-
-const minifiersDirectory = new URL('minifiers', import.meta.url).pathname;
-
-export const getMinifiers = mem(async () => {
-	const minifiers = await fs.readdir(minifiersDirectory);
-	return minifiers
-		.filter(
-			minifierPath => (
-				!minifierPath.startsWith('_')
-				&& minifierPath.endsWith('.ts')
-			),
-		)
-		.map(minifier => minifier.slice(0, -3)); // remove ".ts"
-});
-
+export { getMinifiers } from './utils/get-minifiers.js';
 export { loadMinifier } from './utils/load-minifier.js';
+export type { MinifierFunction } from './utils/create-minifier.js';

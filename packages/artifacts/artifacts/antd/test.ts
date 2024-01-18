@@ -9,6 +9,7 @@ jsdom(undefined, {
 });
 
 export default defineTest<typeof import('antd')>({
+	// TODO: Dont we silence console logs? removable?
 	preprocess(code) {
 		return code.replaceAll('console.warn(', '(');
 	},

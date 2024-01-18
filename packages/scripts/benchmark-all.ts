@@ -39,7 +39,7 @@ import { getMinifiers } from '@minification-benchmarks/minifiers';
 	let minifiers = await getMinifiers();
 
 	if (minifierName) {
-		minifiers = minifiers.filter(minifier => minifier === minifierName);
+		minifiers = minifiers.filter((minifier) => minifier === minifierName);
 	}
 
 	assert(minifiers.length, 'No minifiers matched');
