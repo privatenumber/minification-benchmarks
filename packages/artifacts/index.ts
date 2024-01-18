@@ -2,8 +2,8 @@ import fs from 'fs/promises';
 import path from 'path';
 import assert from 'assert';
 import { readPackageUp } from 'read-pkg-up';
-import type { Artifact, ArtifactMeta } from '../types';
-import { getSize, getGzipSize } from '../utils/get-size';
+import type { Artifact, ArtifactMeta } from './types';
+import { getSize, getGzipSize } from '@minification-benchmarks/utils/get-size';
 
 const readPublicPackageUp = async (cwd: string) => {
 	let packageFound = await readPackageUp({ cwd });
@@ -17,7 +17,7 @@ const readPublicPackageUp = async (cwd: string) => {
 
 export const defineArtifact = async (artifactMeta: ArtifactMeta): Promise<Artifact> => {
 	const packageName = artifactMeta.package;
-	const fullModulePath = path.join('node_modules', artifactMeta.package, artifactMeta.modulePath);
+	const fullModulePath = path.join(__dirname, 'node_modules', artifactMeta.package, artifactMeta.modulePath);
 	const [
 		packageJson,
 		artifactCode,
@@ -70,3 +70,5 @@ export const getArtifacts = async () => {
 
 	return artifacts;
 };
+
+export * from './types';

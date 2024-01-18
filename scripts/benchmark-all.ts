@@ -2,8 +2,8 @@ import assert from 'assert';
 import { inspect } from 'util';
 import { cli } from 'cleye';
 import task from 'tasuku';
-import { getArtifacts } from '../lib/get-artifacts';
-import { getMinifiers } from '../lib/utils/get-minifiers';
+import { getArtifacts } from '@minification-benchmarks/artifacts';
+import { getMinifiers } from '@minification-benchmarks/minifiers';
 import { benchmarkArtifacts } from '../lib/benchmark-artifacts';
 
 (async () => {

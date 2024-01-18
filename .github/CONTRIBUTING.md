@@ -8,7 +8,7 @@ $ pnpm benchmark --minifier <minifier> <code-path>
 
 Example:
 ```
-$ pnpm benchmark --minifier esbuild ./node_modules/vue/dist/vue.runtime.common.dev.js
+$ pnpm benchmark --minifier esbuild ./packages/artifacts/node_modules/vue/dist/vue.runtime.common.dev.js
 ```
 
 ### Benchmark all artifacts & minifiers

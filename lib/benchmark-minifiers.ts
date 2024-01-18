@@ -2,9 +2,9 @@ import path from 'path';
 import byteSize from 'byte-size';
 import makeDir from 'make-dir';
 import type { Task } from 'tasuku';
-import { percent, formatMs } from './utils/formatting';
+import { percent, formatMs } from '@minification-benchmarks/utils/formatting';
+import type { Artifact } from '@minification-benchmarks/artifacts';
 import type {
-	Artifact,
 	MinifierResult,
 	BenchmarkData,
 } from './types';
@@ -41,7 +41,7 @@ export async function benchmarkMinifiers(
 					let averageTime = 0;
 
 					for (let i = 1; i <= sampleSize; i += 1) {
-						const outputPath = path.join(saveToDirectory, `${artifact.packageName}-${minifierName}.js`);
+						const outputPath = path.resolve(saveToDirectory, `${artifact.packageName}-${minifierName}.js`);
 						const result = await benchmark(
 							minifierName,
 							artifact.fullModulePath,

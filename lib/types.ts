@@ -1,18 +1,4 @@
-export type ArtifactMeta = {
-	package: string;
-	modulePath: string;
-};
-
-export type Artifact = {
-	packageName: string;
-	packageVersion: string;
-	modulePath: string;
-	fullModulePath: string;
-	artifactCode: Buffer;
-	size: number;
-	gzipSize: number;
-	testPath: string;
-}
+import type { Artifact } from '@minification-benchmarks/artifacts';
 
 // Result for a minifier benchmark given a file
 export type BenchmarkData = {
@@ -57,10 +43,3 @@ export type BenchmarkedArtifact = {
 	artifact: Artifact;
 	benchmarkResults: MinifierResult[];
 }
-
-export type MinifierFunction = (minifySubject: {
-	code: string;
-	filePath: string;
-}) => Promise<string>;
-
-export const minifier = (minifierFunction: MinifierFunction): MinifierFunction => minifierFunction;

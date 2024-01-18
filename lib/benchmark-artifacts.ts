@@ -1,7 +1,8 @@
 import path from 'path';
 import type { Task } from 'tasuku';
+import type { Artifact } from '@minification-benchmarks/artifacts';
 import { benchmarkMinifiers } from './benchmark-minifiers';
-import type { Artifact, BenchmarkedArtifact } from './types';
+import type { BenchmarkedArtifact } from './types';
 
 export const benchmarkArtifacts = async (
 	task: Task,
@@ -24,6 +25,7 @@ export const benchmarkArtifacts = async (
 					saveToDirectory,
 				);
 
+				console.log(benchmarkResults);
 				benchmarkResults.clear();
 
 				return {

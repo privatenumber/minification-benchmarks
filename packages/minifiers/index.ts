@@ -3,7 +3,7 @@ import fs from 'fs/promises';
 import mem from 'mem';
 
 export const getMinifiers = mem(async () => {
-	const minifiers = await fs.readdir(path.resolve(__dirname, '../minifiers'));
+	const minifiers = await fs.readdir(path.resolve(__dirname, './minifiers'));
 	return minifiers
 		.filter(
 			minifierPath => (
@@ -13,3 +13,5 @@ export const getMinifiers = mem(async () => {
 		)
 		.map(minifier => minifier.slice(0, -3)); // remove ".ts"
 });
+
+export * from './types';
