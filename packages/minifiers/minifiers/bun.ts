@@ -1,9 +1,8 @@
-import path from 'path';
 import { spawn } from 'child_process';
 import { streamToBuffer } from '@minification-benchmarks/utils/stream-to-buffer';
 import { minifier } from '../types.js';
 
-const bunPath = path.join(__dirname, '../node_modules/.bin/bun');
+const bunPath = new URL('../node_modules/.bin/bun', import.meta.url).pathname;
 
 export default minifier(async ({ filePath }) => {
 	const minify = spawn(bunPath, ['build', '--no-bundle', '--minify', filePath]);

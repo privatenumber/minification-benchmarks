@@ -2,11 +2,11 @@ import fs from 'fs/promises';
 import path from 'path';
 import task from 'tasuku';
 import makeDir from 'make-dir';
-import { benchmarkArtifacts } from '../../lib/benchmark-artifacts';
-import type { BenchmarkedArtifact } from '../../lib/types';
-import { getBenchmarkDataTables, updateReadmeMd } from './update-readme';
+import { benchmarkArtifacts } from '@minification-benchmarks/bench/benchmark-artifacts';
+import type { BenchmarkedArtifact } from '@minification-benchmarks/bench/types';
 import { getMinifiers } from '@minification-benchmarks/minifiers';
 import { getArtifacts } from '@minification-benchmarks/artifacts';
+import { getBenchmarkDataTables, updateReadmeMd } from './update-readme';
 
 (async () => {
 	const benchmarkTime = Date.now();

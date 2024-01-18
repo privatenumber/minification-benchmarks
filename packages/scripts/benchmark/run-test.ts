@@ -1,7 +1,10 @@
 import path from 'path';
+import { createRequire } from 'module';
 import { Volume } from 'memfs';
 import { createFsRequire } from 'fs-require';
 import { blockConsoleLog } from './block-console-log';
+
+const require = createRequire(import.meta.url);
 
 export const requireString = (
 	code: string,
@@ -15,7 +18,6 @@ export const runTest = async (
 	testPath: string,
 	code: string,
 ) => {
-	// eslint-disable-next-line @typescript-eslint/no-var-requires
 	const { preprocess, run } = require(path.resolve(testPath)).default;
 
 	if (preprocess) {

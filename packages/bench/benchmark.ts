@@ -1,7 +1,9 @@
 import path from 'path';
 import { execa, ExecaError } from 'execa';
-import type { BenchmarkResult } from './types';
 import { safeJsonParse } from '@minification-benchmarks/utils/safe-json-parse';
+import type { BenchmarkResult } from './types';
+
+const scriptsPath = new URL('../scripts', import.meta.url).pathname;
 
 export const benchmark = async (
 	minifier: string,
@@ -14,7 +16,7 @@ export const benchmark = async (
 		const minificationProcess = await execa(
 			'tsx',
 			[
-				path.join(__dirname, '../scripts/benchmark/index.ts'),
+				path.join(scriptsPath, 'benchmark/index.ts'),
 				'--minifier',
 				minifier,
 				artifactPath,

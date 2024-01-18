@@ -2,7 +2,7 @@ import assert from 'assert';
 import { inspect } from 'util';
 import { cli } from 'cleye';
 import task from 'tasuku';
-import { benchmarkArtifacts } from '../lib/benchmark-artifacts';
+import { benchmarkArtifacts } from '@minification-benchmarks/bench/benchmark-artifacts';
 import { getArtifacts } from '@minification-benchmarks/artifacts';
 import { getMinifiers } from '@minification-benchmarks/minifiers';
 

@@ -10,7 +10,7 @@ import type {
 	BenchmarkedArtifact,
 	MinifierResult,
 	MinifierResultSuccess,
-} from '../../lib/types';
+} from '@minification-benchmarks/bench/types';
 import * as mdu from '@minification-benchmarks/utils/mdu';
 import { percent } from '@minification-benchmarks/utils/formatting';
 import type { Artifact } from '@minification-benchmarks/artifacts';

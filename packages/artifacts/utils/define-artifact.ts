@@ -15,9 +15,11 @@ const readPublicPackageUp = async (cwd: string) => {
 	return packageFound!.packageJson;
 };
 
+const nodeModulesPath = new URL('../node_modules', import.meta.url).pathname;
+
 export const defineArtifact = async (artifactMeta: ArtifactMeta): Promise<Artifact> => {
 	const packageName = artifactMeta.package;
-	const fullModulePath = path.join(__dirname, '..', 'node_modules', artifactMeta.package, artifactMeta.modulePath);
+	const fullModulePath = path.join(nodeModulesPath, artifactMeta.package, artifactMeta.modulePath);
 	const [
 		packageJson,
 		artifactCode,
