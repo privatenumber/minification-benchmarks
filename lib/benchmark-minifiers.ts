@@ -49,10 +49,16 @@ export async function benchmarkMinifiers(
 							outputPath,
 						);
 
-						if (
-							result
-							&& ('error' in result)
-						) {
+						if (!result) {
+							const error = 'No result';
+							setError(error);
+							return {
+								name: minifierName,
+								error,
+							};
+						}
+
+						if ('error' in result) {
 							setError(result.error);
 							return {
 								name: minifierName,
