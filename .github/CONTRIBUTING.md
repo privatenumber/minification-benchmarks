@@ -27,7 +27,7 @@ $ pnpm benchmark-all --minifier esbuild
 $ pnpm benchmark-all --artifact artifact-name
 ```
 
-### Benchmark all artifacts & minifiers and update readme.md
+### Benchmark all artifacts & minifiers and update README.md
 ```sh
 $ pnpm update-benchmarks-readme
 ```

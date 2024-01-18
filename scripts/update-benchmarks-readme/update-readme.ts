@@ -118,7 +118,7 @@ export const getBenchmarkDataTables = (
 		`,
 ).join('\n----\n');
 
-const README_PATH = path.resolve('./readme.md');
+const README_PATH = path.resolve('./README.md');
 
 export async function updateReadmeMd(benchmarks: string) {
 	const readmeMd = commentMark(await fs.readFile(README_PATH), {
