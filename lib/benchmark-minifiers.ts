@@ -49,7 +49,10 @@ export async function benchmarkMinifiers(
 							outputPath,
 						);
 
-						if ('error' in result) {
+						if (
+							result
+							&& ('error' in result)
+						) {
 							setError(result.error);
 							return {
 								name: minifierName,
