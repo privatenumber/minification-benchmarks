@@ -23,10 +23,15 @@ const nodeModulesPath = new URL('../node_modules', import.meta.url).pathname;
 
 export class Artifact {
 	meta: ArtifactMeta;
+
 	filePath: string;
+
 	code?: string;
+
 	size?: number;
+
 	gzipSize?: number;
+
 	packageJson?: NormalizedPackageJson;
 
 	loadTest?: () => Promise<Test>;

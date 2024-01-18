@@ -20,7 +20,7 @@ export const loadArtifact = async (
 	const artifactTestPath = path.join(artifactsDirectory, name, 'test.ts');
 	const testExists = await fs.access(artifactTestPath).then(() => true, () => false);
 	if (testExists) {
-		artifact.loadTest = () => import(artifactTestPath).then((module) => module.default as Test);
+		artifact.loadTest = () => import(artifactTestPath).then(module => module.default as Test);
 	}
 
 	await artifact.load();

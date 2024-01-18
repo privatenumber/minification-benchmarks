@@ -25,7 +25,7 @@ const runMinifier = async (
 				: JSON.stringify(error)
 		}`);
 	}
-	
+
 	const elapsed = process.hrtime(startTime);
 	return {
 		code: minifiedCode,
