@@ -2,8 +2,8 @@ import fs from 'fs/promises';
 import path from 'path';
 import assert from 'assert';
 import { readPackageUp } from 'read-pkg-up';
-import type { Artifact, ArtifactMeta } from './types';
 import { getSize, getGzipSize } from '@minification-benchmarks/utils/get-size';
+import type { Artifact, ArtifactMeta } from './types';
 
 const readPublicPackageUp = async (cwd: string) => {
 	let packageFound = await readPackageUp({ cwd });

@@ -6,14 +6,14 @@ import commentMark from 'comment-mark';
 import byteSize from 'byte-size';
 import { minBy } from 'lodash';
 import { format } from 'date-fns';
-import * as mdu from '@minification-benchmarks/utils/mdu';
-import { percent } from '@minification-benchmarks/utils/formatting';
-import type { Artifact } from '@minification-benchmarks/artifacts';
 import type {
 	BenchmarkedArtifact,
 	MinifierResult,
 	MinifierResultSuccess,
 } from '../../lib/types';
+import * as mdu from '@minification-benchmarks/utils/mdu';
+import { percent } from '@minification-benchmarks/utils/formatting';
+import type { Artifact } from '@minification-benchmarks/artifacts';
 
 byteSize.defaultOptions({ precision: 2 });
 

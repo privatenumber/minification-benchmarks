@@ -2,11 +2,11 @@ import fs from 'fs/promises';
 import assert from 'assert';
 import path from 'path';
 import { cli } from 'cleye';
-import { getSize, getGzipSize } from '@minification-benchmarks/utils/get-size';
 import type { BenchmarkData } from '../../lib/types';
 import { getMinifier } from './get-minifier';
 import { unpreserveComment } from './unpreserve-comments';
 import { runTest } from './run-test';
+import { getSize, getGzipSize } from '@minification-benchmarks/utils/get-size';
 
 (async () => {
 	const argv = cli({

@@ -2,9 +2,9 @@ import assert from 'assert';
 import { inspect } from 'util';
 import { cli } from 'cleye';
 import task from 'tasuku';
+import { benchmarkArtifacts } from '../lib/benchmark-artifacts';
 import { getArtifacts } from '@minification-benchmarks/artifacts';
 import { getMinifiers } from '@minification-benchmarks/minifiers';
-import { benchmarkArtifacts } from '../lib/benchmark-artifacts';
 
 (async () => {
 	const argv = cli({

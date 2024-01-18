@@ -3,6 +3,7 @@
 	"private": true,
 	"main": "index.ts",
 	"dependencies": {
+		"@minification-benchmarks/utils": "*",
 		"@minify-js/node": "^0.6.0",
 		"@swc/core": "^1.3.104",
 		"@tdewolff/minify": "^2.20.14",
@@ -15,7 +16,6 @@
 	},
 	"devDependencies": {
 		"@types/google-closure-compiler": "^0.0.19",
-		"@types/uglify-js": "^3.17.0",
-		"@minification-benchmarks/utils": "*"
+		"@types/uglify-js": "^3.17.0"
 	}
 }

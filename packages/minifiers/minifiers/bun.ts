@@ -1,6 +1,6 @@
 import { spawn } from 'child_process';
-import { minifier } from '../types.js';
 import { streamToBuffer } from '@minification-benchmarks/utils/stream-to-buffer';
+import { minifier } from '../types.js';
 
 export default minifier(async ({ filePath }) => {
 	const minify = spawn('bun', ['build', '--no-bundle', '--minify', filePath]);

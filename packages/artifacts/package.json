@@ -3,6 +3,7 @@
 	"private": true,
 	"main": "./index.ts",
 	"dependencies": {
+		"@minification-benchmarks/utils": "*",
 		"react": "^17.0.2",
 		"moment": "^2.29.1",
 		"jquery": "^3.5.1",
@@ -17,7 +18,6 @@
 		"typescript": "^4.8.3"
 	},
 	"devDependencies": {
-		"read-pkg-up": "^9.1.0",
-		"@minification-benchmarks/utils": "*"
+		"read-pkg-up": "^9.1.0"
 	}
 }

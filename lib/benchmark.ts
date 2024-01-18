@@ -1,7 +1,7 @@
 import path from 'path';
 import { execa, ExecaError } from 'execa';
-import { safeJsonParse } from '@minification-benchmarks/utils/safe-json-parse';
 import type { BenchmarkResult } from './types';
+import { safeJsonParse } from '@minification-benchmarks/utils/safe-json-parse';
 
 export const benchmark = async (
 	minifier: string,

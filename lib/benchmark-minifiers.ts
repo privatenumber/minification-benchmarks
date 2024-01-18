@@ -2,13 +2,13 @@ import path from 'path';
 import byteSize from 'byte-size';
 import makeDir from 'make-dir';
 import type { Task } from 'tasuku';
-import { percent, formatMs } from '@minification-benchmarks/utils/formatting';
-import type { Artifact } from '@minification-benchmarks/artifacts';
 import type {
 	MinifierResult,
 	BenchmarkData,
 } from './types';
 import { benchmark } from './benchmark';
+import { percent, formatMs } from '@minification-benchmarks/utils/formatting';
+import type { Artifact } from '@minification-benchmarks/artifacts';
 
 const getAverage = (numbers: number[]) => (
 	numbers.reduce(

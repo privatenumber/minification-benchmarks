@@ -102,6 +102,9 @@ importers:
 
   packages/artifacts:
     dependencies:
+      '@minification-benchmarks/utils':
+        specifier: '*'
+        version: link:../utils
       antd:
         specifier: ^4.16.1
         version: 4.24.15(react-dom@18.2.0)(react@17.0.2)
@@ -139,15 +142,15 @@ importers:
         specifier: ^2.6.12
         version: 2.7.16
     devDependencies:
-      '@minification-benchmarks/utils':
-        specifier: '*'
-        version: link:../utils
       read-pkg-up:
         specifier: ^9.1.0
         version: 9.1.0
 
   packages/minifiers:
     dependencies:
+      '@minification-benchmarks/utils':
+        specifier: '*'
+        version: link:../utils
       '@minify-js/node':
         specifier: ^0.6.0
         version: 0.6.0
@@ -176,9 +179,6 @@ importers:
         specifier: ^3.17.4
         version: 3.17.4
     devDependencies:
-      '@minification-benchmarks/utils':
-        specifier: '*'
-        version: link:../utils
       '@types/google-closure-compiler':
         specifier: ^0.0.19
         version: 0.0.19
