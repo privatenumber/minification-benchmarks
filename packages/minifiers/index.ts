@@ -1,9 +1,10 @@
-import path from 'path';
 import fs from 'fs/promises';
 import mem from 'mem';
 
+const minifiersDirectory = new URL('minifiers', import.meta.url).pathname;
+
 export const getMinifiers = mem(async () => {
-	const minifiers = await fs.readdir(path.resolve(__dirname, './minifiers'));
+	const minifiers = await fs.readdir(minifiersDirectory);
 	return minifiers
 		.filter(
 			minifierPath => (

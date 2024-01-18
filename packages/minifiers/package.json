@@ -1,6 +1,7 @@
 {
 	"name": "@minification-benchmarks/minifiers",
 	"private": true,
+	"type": "module",
 	"main": "index.ts",
 	"dependencies": {
 		"@minification-benchmarks/utils": "*",

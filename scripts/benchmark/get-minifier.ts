@@ -1,8 +1,10 @@
+import { createRequire } from 'module';
 import type { MinifierFunction } from '@minification-benchmarks/minifiers';
+
+const require = createRequire(import.meta.url);
 
 export const getMinifier = (minifierName: string): MinifierFunction => {
 	try {
-		// eslint-disable-next-line @typescript-eslint/no-var-requires
 		return require(`@minification-benchmarks/minifiers/minifiers/${minifierName}`).default;
 	} catch (error) {
 		console.error(error);

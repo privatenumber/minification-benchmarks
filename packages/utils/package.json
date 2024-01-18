@@ -1,3 +1,4 @@
 {
-	"name": "@minification-benchmarks/utils"
+	"name": "@minification-benchmarks/utils",
+	"type": "module"
 }

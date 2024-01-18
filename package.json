@@ -5,6 +5,7 @@
 	"license": "MIT",
 	"repository": "privatenumber/minification-benchmarks",
 	"author": "Hiroki Osame <hiroki.osame@gmail.com>",
+	"type": "module",
 	"files": [],
 	"packageManager": "pnpm@8.5.1",
 	"scripts": {

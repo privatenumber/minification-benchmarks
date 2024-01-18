@@ -6,7 +6,7 @@ import type { BenchmarkData } from '../../lib/types';
 import { getMinifier } from './get-minifier';
 import { unpreserveComment } from './unpreserve-comments';
 import { runTest } from './run-test';
-import { getSize, getGzipSize } from '@minification-benchmarks/utils/get-size';
+import { getSize, getGzipSize } from '@minification-benchmarks/utils/get-size.js';
 
 (async () => {
 	const argv = cli({
