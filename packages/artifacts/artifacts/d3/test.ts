@@ -1,8 +1,8 @@
 import 'jsdom-global/register.js';
 import assert from 'assert';
-import { defineTest } from '../..';
+import { defineTest } from '../../utils/define-test.js';
 
-export default defineTest({
+export default defineTest<typeof import('d3')>({
 	run(d3) {
 		document.body.innerHTML = '';
 

@@ -1,13 +1,13 @@
 import assert from 'assert';
 import jsdom from 'jsdom-global';
 import { render } from 'react-dom';
-import { defineTest } from '../..';
+import { defineTest } from '../../utils/define-test.js';
 
 jsdom(undefined, {
 	pretendToBeVisual: true,
 });
 
-export default defineTest({
+export default defineTest<typeof import('react')>({
 	preprocess(code) {
 		return code.replaceAll('console.warn(', '(');
 	},

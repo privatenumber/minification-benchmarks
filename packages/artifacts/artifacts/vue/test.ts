@@ -1,7 +1,7 @@
 import 'jsdom-global/register.js';
 import assert from 'assert';
 import type { VueConstructor } from 'vue';
-import { defineTest } from '../..';
+import { defineTest } from '../../utils/define-test.js';
 
 export default defineTest({
 	run(Vue: VueConstructor) {
