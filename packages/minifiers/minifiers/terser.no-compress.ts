@@ -1,7 +1,7 @@
 import { minify } from 'terser';
-import { minifier } from '../types.js';
+import { createMinifier } from '../utils/create-minifier.js';
 
-export default minifier(async ({ code }) => {
+export default createMinifier(async ({ code }) => {
 	const minified = await minify(code, {
 		sourceMap: false,
 		compress: false,

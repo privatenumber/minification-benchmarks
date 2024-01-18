@@ -1,7 +1,7 @@
 import { minify } from '@minify-js/node';
-import { minifier } from '../types.js';
+import { createMinifier } from '../utils/create-minifier.js';
 
-export default minifier(async ({ code }) => {
+export default createMinifier(async ({ code }) => {
 	const src = Buffer.from(code);
 	const minified = minify('module', src);
 

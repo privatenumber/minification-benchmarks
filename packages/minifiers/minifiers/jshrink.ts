@@ -1,10 +1,10 @@
 import { spawn } from 'child_process';
 import { streamToBuffer } from '@minification-benchmarks/utils/stream-to-buffer';
-import { minifier } from '../types.js';
+import { createMinifier } from '../utils/create-minifier.js';
 
 const jshrinkPath = new URL('jshrink.php', import.meta.url).pathname;
 
-export default minifier(async ({ code }) => {
+export default createMinifier(async ({ code }) => {
 	const minify = spawn('php', [jshrinkPath], {
 		// Needs to be context of composer install
 		cwd: new URL('..', import.meta.url).pathname,

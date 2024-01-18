@@ -5,11 +5,11 @@
 // https://github.com/google/closure-compiler-npm/blob/master/packages/google-closure-compiler-js/readme.md
 
 import googleClosureCompiler from 'google-closure-compiler';
-import { minifier } from '../types.js';
+import { createMinifier } from '../utils/create-minifier.js';
 
 const { compiler: Compiler } = googleClosureCompiler;
 
-export default minifier(async ({ filePath }) => {
+export default createMinifier(async ({ filePath }) => {
 	const compiler = new Compiler({
 		js: filePath,
 		compilation_level: 'ADVANCED',

@@ -1,7 +1,7 @@
 import { string } from '@tdewolff/minify';
-import { minifier } from '../types.js';
+import { createMinifier } from '../utils/create-minifier.js';
 
-export default minifier(async ({ code }) => {
+export default createMinifier(async ({ code }) => {
 	const minified = string('application/javascript', code);
 	return minified;
 });

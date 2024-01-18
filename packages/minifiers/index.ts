@@ -15,4 +15,4 @@ export const getMinifiers = mem(async () => {
 		.map(minifier => minifier.slice(0, -3)); // remove ".ts"
 });
 
-export * from './types';
+export { loadMinifier } from './utils/load-minifier.js';

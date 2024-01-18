@@ -4,8 +4,9 @@
 	"type": "module",
 	"dependencies": {
 		"@minification-benchmarks/utils": "*",
+		"byte-size": "^8.1.0",
 		"execa": "^6.1.0",
-		"byte-size": "^8.1.0"
+		"tasuku": "^2.0.1"
 	},
 	"devDependencies": {
 		"@types/byte-size": "^8.1.0"

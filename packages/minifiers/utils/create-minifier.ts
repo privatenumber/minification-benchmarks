@@ -5,6 +5,6 @@ export type MinifierFunction = (
 	},
 ) => Promise<string>;
 
-export const minifier = (
+export const createMinifier = (
 	minifierFunction: MinifierFunction,
 ): MinifierFunction => minifierFunction;

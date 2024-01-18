@@ -4,7 +4,7 @@ import path from 'path';
 import { cli } from 'cleye';
 import type { BenchmarkData } from '@minification-benchmarks/bench/types';
 import { getSize, getGzipSize } from '@minification-benchmarks/utils/get-size.js';
-import { getMinifier } from './get-minifier';
+import { loadMinifier } from '@minification-benchmarks/minifiers';
 import { unpreserveComment } from './unpreserve-comments';
 import { runTest } from './run-test';
 
@@ -43,7 +43,7 @@ import { runTest } from './run-test';
 
 	assert(minifierName, 'Minifier name must be passed in');
 
-	const minifier = getMinifier(minifierName);
+	const minifier = loadMinifier(minifierName);
 
 	assert(argv._.filePath, 'File path must be passed in');
 

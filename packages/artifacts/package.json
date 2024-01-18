@@ -26,6 +26,7 @@
 		"@types/d3": "^7.4.3",
 		"@types/jquery": "^3.5.29",
 		"@types/jsdom-global": "^3.0.3",
+		"@types/lodash": "^4.14.202",
 		"@types/react": "^17.0.38",
 		"@types/react-dom": "^17.0.11"
 	}

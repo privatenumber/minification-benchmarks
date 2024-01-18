@@ -1,11 +1,13 @@
 import { createRequire } from 'module';
-import type { MinifierFunction } from '@minification-benchmarks/minifiers';
+import type { MinifierFunction } from './create-minifier.js';
 
 const require = createRequire(import.meta.url);
 
-export const getMinifier = (minifierName: string): MinifierFunction => {
+export const loadMinifier = (
+	minifierName: string,
+): MinifierFunction => {
 	try {
-		return require(`@minification-benchmarks/minifiers/minifiers/${minifierName}`).default;
+		return require(`../minifiers/${minifierName}`).default;
 	} catch (error) {
 		console.error(error);
 		throw new Error(`Error loading minifier "${minifierName}":\n${

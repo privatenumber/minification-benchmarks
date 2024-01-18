@@ -102,6 +102,9 @@ importers:
       '@types/jsdom-global':
         specifier: ^3.0.3
         version: 3.0.3
+      '@types/lodash':
+        specifier: ^4.14.202
+        version: 4.14.202
       '@types/react':
         specifier: ^17.0.38
         version: 17.0.38
@@ -120,6 +123,9 @@ importers:
       execa:
         specifier: ^6.1.0
         version: 6.1.0
+      tasuku:
+        specifier: ^2.0.1
+        version: 2.0.1
     devDependencies:
       '@types/byte-size':
         specifier: ^8.1.0
@@ -1276,6 +1282,10 @@ packages:
 
   /@types/lodash@4.14.178:
     resolution: {integrity: sha512-0d5Wd09ItQWH1qFbEyQ7oTQ3GZrMfth5JkbN3EvTKLXcHLRDSXeLnlvlOn0wvxVIwK5o2M8JzP/OWz7T3NRsbw==}
+    dev: true
+
+  /@types/lodash@4.14.202:
+    resolution: {integrity: sha512-OvlIYQK9tNneDlS0VN54LLd5uiPCBOp7gS5Z0f1mjoJYBrtStzgmJBxONW3U6OZqdtNzZPmn9BS/7WI7BFFcFQ==}
     dev: true
 
   /@types/mdast@3.0.13:
