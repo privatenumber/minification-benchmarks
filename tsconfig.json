@@ -9,6 +9,7 @@
 		"lib": [
 			"ESNext",
 			"DOM",
-		]
+		],
+		"noEmit": true,
 	}
 }

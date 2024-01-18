@@ -7,5 +7,5 @@ export default minifier(async ({ code }) => {
 		comments: false,
 	});
 
-	return minified.code as string;
+	return minified.code;
 });

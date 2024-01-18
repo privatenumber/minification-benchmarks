@@ -13,7 +13,7 @@
 		"benchmark-all": "tsx scripts/benchmark-all.ts",
 		"update-benchmarks-readme": "tsx scripts/update-benchmarks-readme/index.ts",
 		"lint": "eslint --cache .",
-		"typecheck": "tsc --noEmit"
+		"type-check": "tsc --noEmit"
 	},
 	"simple-git-hooks": {
 		"pre-commit": "pnpm lint-staged"
