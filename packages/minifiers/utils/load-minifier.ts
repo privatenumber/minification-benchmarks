@@ -1,7 +1,7 @@
 import path from 'path';
 import fs from 'fs/promises';
 import { minifiersDirectory } from './minifiers-directory.js';
-import type { Minifier } from './create-minifier.js';
+import type { MinifierLoaded } from './create-minifier.js';
 
 export const loadMinifier = async (
 	minifierName: string,
@@ -15,7 +15,7 @@ export const loadMinifier = async (
 	try {
 		const minifierModule = await import(minifierPath);
 
-		const minifier: Minifier = minifierModule.default;
+		const minifier: MinifierLoaded = minifierModule.default;
 
 		await minifier.loadMeta();
 

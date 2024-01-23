@@ -1,13 +1,12 @@
 import { getMinifiers, loadMinifier } from './index.js';
 
 (async () => {
-	// const { default: terser } = await import('./minifiers/terser.js');
-	// await terser.loadMeta();
-	// console.log(terser);
-
 	const minifierNames = await getMinifiers();
 
 	const minifiers = await Promise.all(minifierNames.map(loadMinifier));
 
-	console.log(minifiers);
+	const markdown = minifiers.map(
+		(minifier) => `- [${minifier.meta.name}](${minifier.meta.repository}) v${minifier.meta.version}`,
+	).join('\n');
+	console.log(markdown);
 })();

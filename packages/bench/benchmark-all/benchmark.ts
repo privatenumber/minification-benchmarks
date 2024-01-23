@@ -5,19 +5,23 @@ import type { BenchmarkResult } from '../types';
 const benchmarkCliPath = new URL('../benchmark-cli.ts', import.meta.url).pathname;
 
 export const benchmark = async (
-	minifier: string,
 	artifact: string,
+	minifier: string,
+	minifierInstance: string,
 	outputPath?: string,
 	timeout = 1000 * 20,
 ): Promise<BenchmarkResult> => {
 	const minificationProcess = await execaNode(
 		benchmarkCliPath,
 		[
+			'--artifact',
+			artifact,
+
 			'--minifier',
 			minifier,
 
-			'--artifact',
-			artifact,
+			'--instance',
+			minifierInstance,
 
 			...(
 				outputPath

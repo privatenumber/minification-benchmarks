@@ -37,6 +37,21 @@ const loadArtifacts = async (
 	return artifacts;
 };
 
+const loadMinifiers = async (
+	filter?: string,
+) => {
+	let minifierNames = await getMinifiers();
+	if (filter) {
+		minifierNames = minifierNames.filter(minifier => minifier.match(filter));
+	}
+	assert(minifierNames.length, 'No minifiers matched');
+
+	const minifiers = await Promise.all(minifierNames.map(loadMinifier));
+
+	return minifiers;
+};
+
+
 (async () => {
 	process.stdin.on('data', () => {
 		process.exit();
@@ -49,11 +64,7 @@ const loadArtifacts = async (
 
 	const artifacts = await loadArtifacts(filterArtifacts);
 
-	let minifiers = await getMinifiers();
-	if (filterMinifier) {
-		minifiers = minifiers.filter(minifier => minifier.match(filterMinifier));
-	}
-	assert(minifiers.length, 'No minifiers matched');
+	let minifiers = await loadMinifiers(filterMinifier);
 	
 	const results = await benchmarkArtifacts(
 		artifacts,

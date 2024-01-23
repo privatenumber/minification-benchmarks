@@ -4,7 +4,7 @@ import byteSize from 'byte-size';
 import _task, { type Task } from 'tasuku';
 import { percent, formatMs } from '@minification-benchmarks/utils/formatting';
 import type { ArtifactLoaded } from '@minification-benchmarks/artifacts';
-import type { Minifier } from '@minification-benchmarks/minifiers';
+import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
 import type {
 	MinifierResult,
 	BenchmarkData,
@@ -68,36 +68,37 @@ const cache = {
 
 export const benchmarkMinifiers = async (
 	artifact: ArtifactLoaded,
-	minifiers: string[],
+	minifiers: MinifierLoaded[],
 	task: Task,
 	sampleSize = 1,
 	saveToDirectory = `results/benchmarks-${benchmarkTime}`,
 ) => task.group(
-	task => minifiers.map(
-		(minifierName) => task(
-			minifierName,
+	task => minifiers.flatMap(
+		(minifier) => Object.entries(minifier.instances).map(([minifierName, minifierFn]) => task(
+			minifier.name === minifierName ? minifierName : `${minifier.name}: ${minifierName}`,
 			async ({
 				setStatus,
 				setOutput,
 				setError,
 			}) => {
+				await setTimeout(10000);
 				// Here we want to cache the result
 				// const cacheKey = hash(artifact);
 
-				const result = await runMultiple(
-					minifierName,
-					artifact.name,
-					sampleSize,
-				);
+				// const result = await runMultiple(
+				// 	minifier,
+				// 	artifact.name,
+				// 	sampleSize,
+				// );
 
-				if ('error' in result) {
-					setError(`${result.error.context ? `[${result.error.context}]` : ''} ${result.error.message}`);
-					return;
-				}
+				// if ('error' in result) {
+				// 	setError(`${result.error.context ? `[${result.error.context}]` : ''} ${result.error.message}`);
+				// 	return;
+				// }
 
-				setOutput(
-					`${byteSize(result.result.minifiedSize)} (${percent(artifact.size, result.result.minifiedSize)})`,
-				);
+				// setOutput(
+				// 	`${byteSize(result.result.minifiedSize)} (${percent(artifact.size, result.result.minifiedSize)})`,
+				// );
 				// console.log(result);
 
 
@@ -161,6 +162,6 @@ export const benchmarkMinifiers = async (
 				// 	runs,
 				// };
 			},
-		),
+		)),
 	),
 );

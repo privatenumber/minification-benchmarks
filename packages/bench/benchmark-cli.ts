@@ -3,11 +3,10 @@ import assert from 'assert';
 import { cli } from 'cleye';
 import type {
 	BenchmarkResultSuccess,
-	BenchmarkData,
 	BenchmarkError,
 } from './types.js';
 import { getSize, getGzipSize } from '@minification-benchmarks/utils/get-size.js';
-import { loadMinifier, type Minifier } from '@minification-benchmarks/minifiers';
+import { loadMinifier, type MinifierLoaded, type MinifierFunction } from '@minification-benchmarks/minifiers';
 import { loadArtifact } from '@minification-benchmarks/artifacts';
 
 type Minified = {
@@ -54,14 +53,14 @@ const logError = (
 };
 
 const runMinifier = async (
-	minifier: Minifier,
+	minifier: MinifierFunction,
 	code: string,
 	filePath: string,
 ): Promise<Minified> => {
 	const startTime = process.hrtime();
 	let minifiedCode: string;
 	try {
-		minifiedCode = await minifier.minify({
+		minifiedCode = await minifier({
 			code,
 			filePath,
 		});
@@ -84,6 +83,12 @@ const argv = cli({
 			type: String,
 			alias: 'm',
 			description: 'Minifier name from lib/minifiers',
+		},
+
+		instance: {
+			type: String,
+			alias: 'i',
+			description: 'Minifier instance',
 		},
 
 		artifact: {
@@ -109,8 +114,20 @@ const {
 assert(minifierName, 'Minifier must be passed in');
 assert(artifactName, 'Artifact must be passed in');
 
-const minifier = await loadMinifier(minifierName);
 const artifact = await loadArtifact(artifactName);
+
+const minifier = await loadMinifier(minifierName);
+
+let minifierInstanceName = argv.flags.instance;
+
+const minifierInstances = Object.keys(minifier.instances);
+let minifierInstance: MinifierFunction;
+if (minifierInstances.length === 1) {
+	minifierInstance = minifier.instances[minifierInstances[0]];
+} else {
+	assert(minifierInstanceName, 'Minifier instance be passed in');
+	minifierInstance = minifier.instances[minifierInstanceName];
+}
 
 try {
 	await artifact.validate();
@@ -118,7 +135,7 @@ try {
 	logError(error, 'pre-minification');
 }
 
-const minified = await runMinifier(minifier, artifact.code!, artifact.filePath);
+const minified = await runMinifier(minifierInstance, artifact.code!, artifact.filePath);
 
 try {
 	await artifact.validate(minified.code);

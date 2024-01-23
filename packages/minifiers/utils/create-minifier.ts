@@ -8,7 +8,7 @@ export type MinifierFunction = (
 	},
 ) => Promise<string>;
 
-type Minifiers = Record<string, MinifierFunction>;
+type Instances = Record<string, MinifierFunction>;
 
 export type MetaData = {
 	name: string;
@@ -18,15 +18,15 @@ export type MetaData = {
 
 export class Minifier {
 	name: string;
-	minifiers: Minifiers;
+	instances: Instances;
 	meta?: MetaData;
 
 	constructor(
 		name: string,
-		minifiers: Minifiers,
+		instances: Instances,
 	) {
 		this.name = name;
-		this.minifiers = minifiers;
+		this.instances = instances;
 	}
 
 	async loadMeta() {
@@ -43,7 +43,11 @@ export class Minifier {
 	}
 }
 
+export interface MinifierLoaded extends Minifier {
+	meta: MetaData;
+}
+
 export const createMinifier = (
-	label: string,
-	minifiers: Minifiers,
-) => new Minifier(label, minifiers);
+	minifierName: string,
+	instances: Instances,
+) => new Minifier(minifierName, instances);
