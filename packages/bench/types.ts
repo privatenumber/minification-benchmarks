@@ -8,14 +8,18 @@ export type BenchmarkData = {
 };
 
 export type BenchmarkResultSuccess = {
-	data: BenchmarkData;
+	result: BenchmarkData;
 };
 
-type BenchmarkResultFailed = {
-	error: string;
+export type BenchmarkError = {
+	error: {
+		message: string;
+		stack?: string;
+		context?: string;
+	};
 };
 
-export type BenchmarkResult = BenchmarkResultSuccess | BenchmarkResultFailed;
+export type BenchmarkResult = BenchmarkResultSuccess | BenchmarkError;
 
 export type AverageBenchmarkData<format = number> = {
 	minifiedSize: format;

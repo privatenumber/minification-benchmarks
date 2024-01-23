@@ -4,8 +4,13 @@ import { createMinifier } from '../utils/create-minifier.js';
 
 const bunPath = new URL('../node_modules/.bin/bun', import.meta.url).pathname;
 
-export default createMinifier(async ({ filePath }) => {
-	const minify = spawn(bunPath, ['build', '--no-bundle', '--minify', filePath]);
-	const minified = await streamToBuffer(minify.stdout);
-	return minified.toString();
-});
+export default createMinifier(
+	'bun',
+	{
+		bun: async ({ filePath }) => {
+			const minify = spawn(bunPath, ['build', '--no-bundle', '--minify', filePath]);
+			const minified = await streamToBuffer(minify.stdout);
+			return minified.toString();
+		}
+	},
+);

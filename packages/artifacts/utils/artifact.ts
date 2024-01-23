@@ -1,13 +1,18 @@
 import fs from 'fs/promises';
 import path from 'path';
 import assert from 'assert';
+import crypto from 'crypto';
 import { readPackageUp, type NormalizedPackageJson } from 'read-pkg-up';
 import { getSize, getGzipSize } from '@minification-benchmarks/utils/get-size';
-import type { ArtifactMeta } from './define-artifact.js';
 import { unpreserveComments } from './unpreserve-comments.js';
 import type { Test } from './define-test.js';
 import { requireString } from './require-string.js';
 import { blockConsole } from './block-console.js';
+
+type ArtifactMeta = {
+	package: string;
+	filePath: string;
+};
 
 const readPublicPackageUp = async (cwd: string) => {
 	let packageFound = await readPackageUp({ cwd });
@@ -34,6 +39,8 @@ export class Artifact {
 
 	packageJson?: NormalizedPackageJson;
 
+	// Set by loadArtifact
+	name?: string;
 	loadTest?: () => Promise<Test>;
 
 	constructor(
@@ -64,6 +71,16 @@ export class Artifact {
 		this.packageJson = packageJson;
 	}
 
+	getId() {
+		if (!this.code) {
+			throw new Error('No code');
+		}
+
+		const hash = crypto.createHash('sha256').update(this.code).digest('hex');
+
+		return `${this.meta.package}@${this.packageJson!.version}#${hash}`;
+	}
+
 	async validate(
 		code?: string,
 	) {
@@ -92,3 +109,19 @@ export class Artifact {
 		restoreConsole();
 	}
 }
+
+export interface ArtifactLoaded extends Artifact {
+	name: string;
+
+	code: string;
+
+	size: number;
+
+	gzipSize: number;
+
+	packageJson: NormalizedPackageJson;
+};
+
+export const defineArtifact = (
+	artifactMeta: ArtifactMeta,
+) => new Artifact(artifactMeta);

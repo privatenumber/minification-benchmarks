@@ -1,16 +1,18 @@
 import fs from 'fs/promises';
-import mem from 'mem';
 import { minifiersDirectory } from './minifiers-directory.js';
 
-// TODO: is this actually called often?
-export const getMinifiers = mem(async () => {
+export const getMinifiers = async () => {
 	const files = await fs.readdir(minifiersDirectory);
-	return files
-		.filter(
-			filePath => (
-				!filePath.startsWith('_')
-				&& filePath.endsWith('.ts')
-			),
-		)
-		.map(filePath => filePath.slice(0, -3));
-});
+	const getFiles = files
+		.filter(filePath => !filePath.startsWith('_'))
+		.map(async (minifier) => {
+			const stat = await fs.stat(`${minifiersDirectory}/${minifier}`);
+			if (stat.isDirectory()) {
+				return minifier;
+			} else {
+				return minifier.slice(0, -'.ts'.length);
+			}
+		});
+		
+	return await Promise.all(getFiles);
+};

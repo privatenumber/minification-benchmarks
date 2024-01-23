@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { artifactsDirectory } from './artifacts-directory.js';
-import type { Artifact } from './artifact.js';
+import type { ArtifactLoaded } from './artifact.js';
 import type { Test } from './define-test.js';
 
 export const loadArtifact = async (
@@ -15,7 +15,7 @@ export const loadArtifact = async (
 		}`);
 	});
 
-	const artifact = artifactModule.default as Artifact;
+	const artifact = artifactModule.default as ArtifactLoaded;
 
 	const artifactTestPath = path.join(artifactsDirectory, name, 'test.ts');
 	const testExists = await fs.access(artifactTestPath).then(() => true, () => false);
@@ -24,5 +24,6 @@ export const loadArtifact = async (
 	}
 
 	await artifact.load();
-	return artifact;
+
+	return Object.assign(artifact, { name }) as ArtifactLoaded;
 };

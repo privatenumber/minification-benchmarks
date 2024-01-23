@@ -1,4 +1,4 @@
-import { defineArtifact } from '../../utils/define-artifact';
+import { defineArtifact } from '../../utils/artifact.js';
 
 export default defineArtifact({
 	package: 'three',

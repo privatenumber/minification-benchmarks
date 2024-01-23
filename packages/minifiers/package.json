@@ -12,12 +12,14 @@
 		"bun": "^1.0.23",
 		"esbuild": "^0.19.11",
 		"google-closure-compiler": "^20230802.0.0",
+		"mem": "^9.0.2",
 		"terser": "^5.27.0",
-		"uglify-js": "^3.17.4",
-		"mem": "^9.0.2"
+		"uglify-js": "^3.17.4"
 	},
 	"devDependencies": {
 		"@types/google-closure-compiler": "^0.0.19",
-		"@types/uglify-js": "^3.17.0"
+		"@types/uglify-js": "^3.17.0",
+		"find-up": "^7.0.0",
+		"type-fest": "^4.9.0"
 	}
 }
