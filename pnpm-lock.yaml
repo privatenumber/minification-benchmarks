@@ -8,8 +8,8 @@ dependencies:
     specifier: ^1.3.107
     version: 1.3.107
   '@tdewolff/minify':
-    specifier: ^2.20.15
-    version: 2.20.15
+    specifier: ^2.20.16
+    version: 2.20.16
   antd:
     specifier: ^4.16.1
     version: 4.16.1(react-dom@17.0.2)(react@17.0.2)
@@ -1170,8 +1170,8 @@ packages:
     resolution: {integrity: sha512-myfUej5naTBWnqOCc/MdVOLVjXUXtIA+NpDrDBKJtLLg2shUjBu3cZmB/85RyitKc55+lUUyl7oRfLOvkr2hsw==}
     dev: false
 
-  /@tdewolff/minify@2.20.15:
-    resolution: {integrity: sha512-i7EoOAzZmmuYykdGxPtk+CEr3bLliVM0qjB52/qNNWvs5SLQBk3/G90si+CyvVAk9+W4XU99SRD1xqDd3CT9Ig==}
+  /@tdewolff/minify@2.20.16:
+    resolution: {integrity: sha512-d/C748txYft4D+5vODcprtDRPbeBTSYqQUQ6ZG4UbBljn3b3LBqY9qY7ftt2cfUrDAMwKoRnphKluv8dEcC2lw==}
     requiresBuild: true
     dependencies:
       node-gyp: 10.0.1
