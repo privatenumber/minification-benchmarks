@@ -24,7 +24,7 @@
 	"dependencies": {
 		"@minify-js/node": "^0.6.0",
 		"@swc/core": "^1.3.107",
-		"@tdewolff/minify": "^2.20.15",
+		"@tdewolff/minify": "^2.20.16",
 		"antd": "^4.16.1",
 		"babel-minify": "^0.5.2",
 		"bun": "^1.0.25",
