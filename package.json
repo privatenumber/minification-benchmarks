@@ -24,7 +24,7 @@
 	"dependencies": {
 		"@minify-js/node": "^0.6.0",
 		"@swc/core": "^1.4.1",
-		"@tdewolff/minify": "^2.20.16",
+		"@tdewolff/minify": "^2.20.17",
 		"antd": "^4.16.1",
 		"babel-minify": "^0.5.2",
 		"bun": "^1.0.26",
@@ -52,7 +52,7 @@
 		"react-dom": "^17.0.2",
 		"read-pkg-up": "^9.1.0",
 		"tasuku": "^2.0.1",
-		"terser": "^5.27.0",
+		"terser": "^5.27.1",
 		"three": "^0.124.0",
 		"typescript": "^5.2.2",
 		"uglify-js": "^3.17.4",
