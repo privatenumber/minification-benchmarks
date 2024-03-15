@@ -32,6 +32,8 @@ jobs:
 
     - name: Setup Composer
       uses: php-actions/composer@v6
+      with:
+        working_dir: "packages/minifiers"
 
     - name: Benchmark
       run: pnpm update-benchmarks-readme
