@@ -7,22 +7,146 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@minify-js/node':
+        specifier: ^0.6.0
+        version: 0.6.0
+      '@swc/core':
+        specifier: ^1.3.104
+        version: 1.3.104
+      '@tdewolff/minify':
+        specifier: ^2.20.14
+        version: 2.20.14
+      antd:
+        specifier: ^4.16.1
+        version: 4.24.15(react-dom@17.0.2)(react@17.0.2)
+      babel-minify:
+        specifier: ^0.5.2
+        version: 0.5.2
+      bun:
+        specifier: ^1.0.23
+        version: 1.0.23
+      byte-size:
+        specifier: ^8.1.0
+        version: 8.1.0
+      cleye:
+        specifier: ^1.3.1
+        version: 1.3.1
+      comment-mark:
+        specifier: ^1.1.1
+        version: 1.1.1
+      d3:
+        specifier: ^6.3.1
+        version: 6.7.0
+      date-fns:
+        specifier: ^2.27.0
+        version: 2.27.0
+      echarts:
+        specifier: ^5.1.1
+        version: 5.4.3
+      esbuild:
+        specifier: ^0.19.11
+        version: 0.19.11
+      execa:
+        specifier: ^6.1.0
+        version: 6.1.0
+      fs-require:
+        specifier: ^1.6.0
+        version: 1.6.0
+      google-closure-compiler:
+        specifier: ^20230802.0.0
+        version: 20230802.0.0
+      jquery:
+        specifier: ^3.5.1
+        version: 3.7.1
+      jsdom:
+        specifier: ^20.0.0
+        version: 20.0.0
+      jsdom-global:
+        specifier: ^3.0.2
+        version: 3.0.2(jsdom@20.0.0)
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
+      make-dir:
+        specifier: ^3.1.0
+        version: 3.1.0
+      markdown-table:
+        specifier: ^3.0.2
+        version: 3.0.2
+      mem:
+        specifier: ^9.0.2
+        version: 9.0.2
+      memfs:
+        specifier: ^3.4.13
+        version: 3.4.13
+      moment:
+        specifier: ^2.29.1
+        version: 2.30.1
+      outdent:
+        specifier: ^0.8.0
+        version: 0.8.0
+      react:
+        specifier: ^17.0.2
+        version: 17.0.2
+      react-dom:
+        specifier: ^17.0.2
+        version: 17.0.2(react@17.0.2)
+      read-pkg-up:
+        specifier: ^9.1.0
+        version: 9.1.0
+      tasuku:
+        specifier: ^2.0.1
+        version: 2.0.1
+      terser:
+        specifier: ^5.27.0
+        version: 5.27.0
+      three:
+        specifier: ^0.124.0
+        version: 0.124.0
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
+      uglify-js:
+        specifier: ^3.17.4
+        version: 3.17.4
+      victory:
+        specifier: ^35.8.4
+        version: 35.11.4(react@17.0.2)
+      vue:
+        specifier: ^2.6.12
+        version: 2.7.16
     devDependencies:
-      '@minification-benchmarks/artifacts':
-        specifier: '*'
-        version: link:packages/artifacts
-      '@minification-benchmarks/minifiers':
-        specifier: '*'
-        version: link:packages/minifiers
-      '@minification-benchmarks/utils':
-        specifier: '*'
-        version: link:packages/utils
       '@pvtnbr/eslint-config':
         specifier: ^0.37.1
         version: 0.37.1(eslint@8.50.0)(typescript@5.2.2)
+      '@types/byte-size':
+        specifier: ^8.1.0
+        version: 8.1.0
+      '@types/google-closure-compiler':
+        specifier: ^0.0.19
+        version: 0.0.19
+      '@types/jsdom-global':
+        specifier: ^3.0.3
+        version: 3.0.3
+      '@types/lodash':
+        specifier: ^4.14.178
+        version: 4.14.202
+      '@types/minimist':
+        specifier: ^1.2.2
+        version: 1.2.5
       '@types/node':
         specifier: ^16.11.33
         version: 16.11.33
+      '@types/react':
+        specifier: ^17.0.38
+        version: 17.0.38
+      '@types/react-dom':
+        specifier: ^17.0.11
+        version: 17.0.11
+      '@types/uglify-js':
+        specifier: ^3.17.0
+        version: 3.17.0
       eslint:
         specifier: ^8.50.0
         version: 8.50.0
@@ -35,9 +159,6 @@ importers:
       tsx:
         specifier: ^4.7.0
         version: 4.7.0
-      typescript:
-        specifier: ^5.2.2
-        version: 5.2.2
 
   packages/artifacts:
     dependencies:
@@ -268,13 +389,6 @@ packages:
       throttle-debounce: 5.0.0
     dev: false
 
-  /@babel/code-frame@7.16.0:
-    resolution: {integrity: sha512-IF4EOMEV+bfYwOmNxGzSnjR2EmQod7f1UXOpZM3l4i4o4QNwzjtJAu/HxdjHq0aYBvdqMuQEY1eg0nqW9ZPORA==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/highlight': 7.18.6
-    dev: false
-
   /@babel/code-frame@7.18.6:
     resolution: {integrity: sha512-TDCmlK5eOvH+eH7cdAFlNXeVJqWIQ7gW9tY1GJIpUtFb6CmjVyq2VM3u71bOyR8CRihcCgMUYoDNyLXao3+70Q==}
     engines: {node: '>=6.9.0'}
@@ -285,11 +399,11 @@ packages:
     resolution: {integrity: sha512-eTAlQKq65zHfkHZV0sIVODCPGVgoo1HdBlbSLi9CqOzuZanMv2ihzY+4paiKr1mH+XmYESMAmJ/dpZ68eN6d8w==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/code-frame': 7.16.0
+      '@babel/code-frame': 7.18.6
       '@babel/generator': 7.12.11
       '@babel/helper-module-transforms': 7.12.1
       '@babel/helpers': 7.12.5
-      '@babel/parser': 7.12.11
+      '@babel/parser': 7.23.6
       '@babel/template': 7.12.7
       '@babel/traverse': 7.12.12
       '@babel/types': 7.12.12
@@ -345,7 +459,7 @@ packages:
       '@babel/helper-replace-supers': 7.12.11
       '@babel/helper-simple-access': 7.12.1
       '@babel/helper-split-export-declaration': 7.12.11
-      '@babel/helper-validator-identifier': 7.19.1
+      '@babel/helper-validator-identifier': 7.22.20
       '@babel/template': 7.12.7
       '@babel/traverse': 7.12.12
       '@babel/types': 7.12.12
@@ -390,7 +504,6 @@ packages:
   /@babel/helper-validator-identifier@7.22.20:
     resolution: {integrity: sha512-Y4OZ+ytlatR8AI+8KZfKuL5urKp7qey08ha31L8b3BwewJAoJamTzyvxPR/5D+KkdJCGPq/+8TukHBlY10FX9A==}
     engines: {node: '>=6.9.0'}
-    dev: true
 
   /@babel/helpers@7.12.5:
     resolution: {integrity: sha512-lgKGMQlKqA8meJqKsW6rUnc4MdUk35Ln0ATDqdM1a/UpARODdI4j5Y5lVfUScnSNkJcdCRAaWkspykNoFg9sJA==}
@@ -410,14 +523,6 @@ packages:
       chalk: 2.4.2
       js-tokens: 4.0.0
 
-  /@babel/parser@7.12.11:
-    resolution: {integrity: sha512-N3UxG+uuF4CMYoNj8AhnbAcJF0PiuJ9KHuy1lQmkYsxTer/MAH9UBNHsBoAX/4s6NvlDD047No8mYVGGzLL4hg==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-    dependencies:
-      '@babel/types': 7.12.12
-    dev: false
-
   /@babel/parser@7.23.6:
     resolution: {integrity: sha512-Z2uID7YJ7oNvAI20O9X0bblw7Qqs8Q2hFy0R9tAfnfLkp5MW0UH9eUvnDSnFwKZ0AvgS1ucqR4KzvVHgnke1VQ==}
     engines: {node: '>=6.0.0'}
@@ -436,19 +541,19 @@ packages:
   /@babel/template@7.12.7:
     resolution: {integrity: sha512-GkDzmHS6GV7ZeXfJZ0tLRBhZcMcY0/Lnb+eEbXDBfCAcZCjrZKe6p3J4we/D24O9Y8enxWAg1cWwof59yLh2ow==}
     dependencies:
-      '@babel/code-frame': 7.16.0
-      '@babel/parser': 7.12.11
+      '@babel/code-frame': 7.18.6
+      '@babel/parser': 7.23.6
       '@babel/types': 7.12.12
     dev: false
 
   /@babel/traverse@7.12.12:
     resolution: {integrity: sha512-s88i0X0lPy45RrLM8b9mz8RPH5FqO9G9p7ti59cToE44xFm1Q+Pjh5Gq4SXBbtb88X7Uy7pexeqRIQDDMNkL0w==}
     dependencies:
-      '@babel/code-frame': 7.16.0
+      '@babel/code-frame': 7.18.6
       '@babel/generator': 7.12.11
       '@babel/helper-function-name': 7.12.11
       '@babel/helper-split-export-declaration': 7.12.11
-      '@babel/parser': 7.12.11
+      '@babel/parser': 7.23.6
       '@babel/types': 7.12.12
       debug: 4.3.4
       globals: 11.12.0
@@ -1283,6 +1388,10 @@ packages:
       '@types/unist': 2.0.8
     dev: true
 
+  /@types/minimist@1.2.5:
+    resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
+    dev: true
+
   /@types/node@16.11.33:
     resolution: {integrity: sha512-0PJ0vg+JyU0MIan58IOIFRtSvsb7Ri+7Wltx2qAg94eMOrpg4+uuP3aUHCpxXc1i0jCXiC+zIamSZh3l9AbcQA==}
     dev: true
@@ -1518,12 +1627,6 @@ packages:
     resolution: {integrity: sha512-F0SAmZ8iUtS//m8DmCTA0jlh6TDKkHQyK6xc6V4KDTyZKA9dnvX9/3sRTVQrWm79glUAZbnmmNcdYwUIHWVybw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
-
-  /acorn@8.8.0:
-    resolution: {integrity: sha512-QOxyigPVrpZ2GXT+PFyZTl6TtOFc5egxHIP9IlQ+RbupQuX4RkT/Bee4/kQuC02Xkzg84JcT7oLYtDIQxp+v7w==}
-    engines: {node: '>=0.4.0'}
-    hasBin: true
-    dev: false
 
   /agent-base@6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
@@ -2586,7 +2689,6 @@ packages:
       get-intrinsic: 1.2.1
       gopd: 1.0.1
       has-property-descriptors: 1.0.0
-    dev: true
 
   /define-properties@1.1.3:
     resolution: {integrity: sha512-3MqfYKj2lLzdMSf8ZIZE/V+Zuy+BgD6f164e8K2w7dgnpKArBDerGYpM46IYYcjnkdPNMjPk9A6VFB8+3SKlXQ==}
@@ -2610,7 +2712,6 @@ packages:
       define-data-property: 1.1.0
       has-property-descriptors: 1.0.0
       object-keys: 1.1.1
-    dev: true
 
   /delaunator@4.0.1:
     resolution: {integrity: sha512-WNPWi1IRKZfCt/qIDMfERkDp93+iZEmOxN2yy4Jg+Xhv8SLk2UTqqbe1sfiipn0and9QrE914/ihdx82Y/Giag==}
@@ -3485,7 +3586,6 @@ packages:
       has: 1.0.4
       has-proto: 1.0.1
       has-symbols: 1.0.3
-    dev: true
 
   /get-set-props@0.1.0:
     resolution: {integrity: sha512-7oKuKzAGKj0ag+eWZwcGw2fjiZ78tXnXQoBgY0aU7ZOxTu4bB7hSuQSDgtKy978EDH062P5FmD2EWiDpQS9K9Q==}
@@ -3618,7 +3718,7 @@ packages:
     dependencies:
       chalk: 4.1.2
       google-closure-compiler-java: 20230802.0.0
-      minimist: 1.2.6
+      minimist: 1.2.8
       vinyl: 2.2.1
       vinyl-sourcemaps-apply: 0.2.1
     optionalDependencies:
@@ -3631,7 +3731,6 @@ packages:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==}
     dependencies:
       get-intrinsic: 1.2.1
-    dev: true
 
   /graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
@@ -3667,7 +3766,6 @@ packages:
   /has-proto@1.0.1:
     resolution: {integrity: sha512-7qE+iP+O+bgF9clE5+UoBFzE65mlBiVj3tKCrlNQ0Ogwm0BjpT/gK4SlLYDMybDh5I3TCTKnPPa0oMG7JDYrhg==}
     engines: {node: '>= 0.4'}
-    dev: true
 
   /has-symbols@1.0.2:
     resolution: {integrity: sha512-chXa79rL/UC2KlX17jo3vRGz0azaWEx5tGqZg5pO3NUyEJVB17dMruQlzCCOfUvElghKcm5194+BCRvi2Rv/Gw==}
@@ -4165,7 +4263,7 @@ packages:
         optional: true
     dependencies:
       abab: 2.0.6
-      acorn: 8.8.0
+      acorn: 8.10.0
       acorn-globals: 6.0.0
       cssom: 0.5.0
       cssstyle: 2.3.0
@@ -4251,7 +4349,7 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
     dependencies:
-      minimist: 1.2.6
+      minimist: 1.2.8
     dev: false
 
   /jsonc-eslint-parser@2.3.0:
@@ -4407,6 +4505,13 @@ packages:
     dependencies:
       yallist: 4.0.0
 
+  /make-dir@3.1.0:
+    resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
+    engines: {node: '>=8'}
+    dependencies:
+      semver: 6.3.1
+    dev: false
+
   /make-fetch-happen@13.0.0:
     resolution: {integrity: sha512-7ThobcL8brtGo9CavByQrQi+23aIfgYU++wg4B87AIS8Rb2ZBt/MEaDqzA00Xwv/jUjAjYkLHjVolYuTLKda2A==}
     engines: {node: ^16.14.0 || >=18.0.0}
@@ -4532,13 +4637,8 @@ packages:
       brace-expansion: 2.0.1
     dev: false
 
-  /minimist@1.2.6:
-    resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
-    dev: false
-
   /minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
-    dev: true
 
   /minipass-collect@1.0.2:
     resolution: {integrity: sha512-6T6lH0H8OG9kITm/Jm6tdooIbogG9e0tLgpY6mphXSm/A9u8Nq1ryBG+Qspiub9LjWlBPsPS3tWQ/Botq4FdxA==}
@@ -4608,7 +4708,7 @@ packages:
     resolution: {integrity: sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==}
     hasBin: true
     dependencies:
-      minimist: 1.2.6
+      minimist: 1.2.8
     dev: false
 
   /mkdirp@1.0.4:
@@ -5887,7 +5987,6 @@ packages:
   /semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
-    dev: true
 
   /semver@7.5.4:
     resolution: {integrity: sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==}
@@ -6392,7 +6491,6 @@ packages:
     resolution: {integrity: sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==}
     engines: {node: '>=14.17'}
     hasBin: true
-    dev: true
 
   /uglify-js@3.17.4:
     resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
@@ -6468,9 +6566,9 @@ packages:
     resolution: {integrity: sha512-/s3UsZUrIfa6xDhr7zZhnE9SLQ5RIXyYfiVnMMyMDzOc8WhWN4Nbh36H842OyurKbCDAesZOJaVyvmSl6fhGQw==}
     dependencies:
       call-bind: 1.0.2
-      define-properties: 1.1.3
+      define-properties: 1.2.1
       for-each: 0.3.3
-      has-symbols: 1.0.2
+      has-symbols: 1.0.3
       object.getownpropertydescriptors: 2.1.1
     dev: false
 
