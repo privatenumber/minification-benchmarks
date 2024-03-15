@@ -4,10 +4,13 @@
 		"esModuleInterop": true,
 		"strict": true,
 		"skipLibCheck": true,
-		"module": "Node16",
-	},
-	"include": [
-		"scripts",
-		"lib"
-	]
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"lib": [
+			"ESNext",
+			"DOM",
+		],
+		"noEmit": true,
+		"target": "ESNext"
+	}
 }
