@@ -1,4 +1,11 @@
-# 🏃‍♂️🏃‍♀️🏃 JS minification benchmarks
+<!-- cwebp -q 100 .github/logo-original.png -resize 300 0 -o .github/logo.webp -->
+<h1 align="center">
+	<img width="150" src=".github/logo.webp">
+	<br>
+	<sub>JavaScript</sub>
+	<br>
+	minifier race
+</h1>
 
 This repo is routinely maintained to compare the quality and speed across the latest versions of the following JavaScript minifiers:
 

@@ -71,12 +71,12 @@ export class Artifact {
 		this.packageJson = packageJson;
 	}
 
-	getId() {
+	cacheKey() {
 		if (!this.code) {
 			throw new Error('No code');
 		}
 
-		const hash = crypto.createHash('sha256').update(this.code).digest('hex');
+		const hash = crypto.createHash('sha256').update(this.code).digest('hex').slice(0, 10);
 
 		return `${this.meta.package}@${this.packageJson!.version}#${hash}`;
 	}

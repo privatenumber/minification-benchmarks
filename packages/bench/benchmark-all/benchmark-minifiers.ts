@@ -55,7 +55,7 @@ const runMultiple = async (
 const benchmarkTime = Date.now();
 
 const cache = {
-	['artifact-version-contentHash/']: {
+	['artifact-version-contentHash']: {
 		['minifier-version']: {
 			date: '',
 			minifiedSize: 0,
@@ -74,14 +74,15 @@ export const benchmarkMinifiers = async (
 	saveToDirectory = `results/benchmarks-${benchmarkTime}`,
 ) => task.group(
 	task => minifiers.flatMap(
-		(minifier) => Object.entries(minifier.instances).map(([minifierName, minifierFn]) => task(
-			minifier.name === minifierName ? minifierName : `${minifier.name}: ${minifierName}`,
+		(minifier) => Object.entries(minifier.instances).map(([minifierInstance, minifierFn]) => task(
+			minifier.name === minifierInstance ? minifierInstance : `${minifier.name}: ${minifierInstance}`,
 			async ({
 				setStatus,
 				setOutput,
 				setError,
 			}) => {
-				await setTimeout(10000);
+				console.log(artifact.cacheKey(), minifier.name, minifierInstance);
+				await setTimeout(3000);
 				// Here we want to cache the result
 				// const cacheKey = hash(artifact);
 
