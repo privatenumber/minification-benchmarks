@@ -15,7 +15,7 @@ export type BenchmarkError = {
 	error: {
 		message: string;
 		stack?: string;
-		context?: string;
+		stage?: string;
 	};
 };
 

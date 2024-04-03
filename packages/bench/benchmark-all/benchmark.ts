@@ -85,6 +85,7 @@ export const benchmarkAverage = async (
 		result: {
 			...results[0].result,
 			time: getAverage(results.map(({ result }) => result.time)),
+			runs: sampleSize,
 		},
 	};
 };

@@ -6,6 +6,7 @@
 		"@minification-benchmarks/artifacts": "*",
 		"@minification-benchmarks/minifiers": "*",
 		"@minification-benchmarks/utils": "*",
+		"@minification-benchmarks/data": "*",
 		"byte-size": "^8.1.0",
 		"execa": "^6.1.0",
 		"cleye": "^1.3.1",

@@ -20,7 +20,7 @@ export const logResult = (
 
 export const logError = (
 	thrown: unknown,
-	context?: string,
+	stage?: string,
 ) => {
 	let error: BenchmarkError['error'];
 	if (thrown instanceof Error) {
@@ -34,8 +34,8 @@ export const logError = (
 		};
 	}
 
-	if (context) {
-		error.context = context;
+	if (stage) {
+		error.stage = stage;
 	}
 
 	const stringified: BenchmarkError = { error };

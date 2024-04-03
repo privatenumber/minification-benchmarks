@@ -123,6 +123,9 @@ importers:
       '@minification-benchmarks/artifacts':
         specifier: '*'
         version: link:../artifacts
+      '@minification-benchmarks/data':
+        specifier: '*'
+        version: link:../data
       '@minification-benchmarks/minifiers':
         specifier: '*'
         version: link:../minifiers

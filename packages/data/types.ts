@@ -8,12 +8,14 @@ export type Minifier = {
 	};
 };
 
-export type Data = {
-	[artifact: string]: {
-		version: string;
-		path: string;
-		minified: {
-			[minifier: string]: Minifier;
-		};
+export type Artifact = {
+	version: string;
+	filePath: string;
+	minified: {
+		[minifierName: string]: Minifier;
 	};
+};
+
+export type Data = {
+	[artifact: string]: Artifact;
 };
