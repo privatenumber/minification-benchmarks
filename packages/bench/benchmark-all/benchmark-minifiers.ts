@@ -53,28 +53,36 @@ export const benchmarkMinifiers = async (
 				setOutput,
 				setError,
 			}) => {
-				const artifactId = `${artifact.name}-${artifact.packageJson.version}-${artifact.contentHash()}`;
-				let artifactEntry = data[artifactId];
+				console.log({
+					artifact: artifact.name,
+					artifactVersion: artifact.packageJson.version,
+					artifactFile: artifact.filePath,
 
-				if (!artifactEntry) {
-					artifactEntry = {};
-					data[artifactId] = artifactEntry;
-				}
+					minifier: minifier.minifier.id,
+					minifierVersion: minifier.minifier.meta.version,
+				});
+				// const artifactId = `${artifact.name}-${artifact.packageJson.version}-${artifact.contentHash()}`;
+				// let artifactEntry = data[artifactId];
 
-				const minifierId = `${minifier.instance}-${minifier.minifier.meta.version}`;
+				// if (!artifactEntry) {
+				// 	artifactEntry = {};
+				// 	data[artifactId] = artifactEntry;
+				// }
 
-				let minifierEntry = artifactEntry[minifierId];
-				if (minifierEntry) {
-					// Cache hit
-					return;
-					// minifierEntry = {
-					// 	date: '',
-					// 	minifiedSize: 0,
-					// 	minzippedSize: 0,
-					// 	time: 0,
-					// };
-					// artifactEntry[minifierId] = minifierEntry;
-				}
+				// const minifierId = `${minifier.instance}-${minifier.minifier.meta.version}`;
+
+				// let minifierEntry = artifactEntry[minifierId];
+				// if (minifierEntry) {
+				// 	// Cache hit
+				// 	return;
+				// 	// minifierEntry = {
+				// 	// 	date: '',
+				// 	// 	minifiedSize: 0,
+				// 	// 	minzippedSize: 0,
+				// 	// 	time: 0,
+				// 	// };
+				// 	// artifactEntry[minifierId] = minifierEntry;
+				// }
 
 				// let minifierResult = cacheEntry[minifierInstance.name];
 				// if (!minifierResult) {

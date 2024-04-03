@@ -5,7 +5,6 @@
 		"minified": {
 			"esbuild": {
 				"version": "",
-				"date": "",
 				"result": {
 					"minifiedSize": "",
 					"minzippedSize": "",

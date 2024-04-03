@@ -89,7 +89,7 @@ try {
 	logError(error, 'pre-validation');
 }
 
-const minified = await runMinifier(minifierInstance, artifact.code!, artifact.filePath);
+const minified = await runMinifier(minifierInstance, artifact.code!, artifact.fullFilePath);
 
 try {
 	await artifact.validate(minified.code);

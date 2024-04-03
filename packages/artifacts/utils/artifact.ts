@@ -31,6 +31,8 @@ export class Artifact {
 
 	filePath: string;
 
+	fullFilePath: string;
+
 	code?: string;
 
 	size?: number;
@@ -47,7 +49,8 @@ export class Artifact {
 		meta: ArtifactMeta,
 	) {
 		this.meta = meta;
-		this.filePath = path.join(nodeModulesPath, meta.package, meta.filePath);
+		this.filePath = path.join(meta.package, meta.filePath);
+		this.fullFilePath = path.join(nodeModulesPath, this.filePath);
 	}
 
 	async load() {
@@ -58,29 +61,17 @@ export class Artifact {
 	}
 
 	async loadCode() {
-		let code = await fs.readFile(this.filePath, 'utf8');
-		code = await unpreserveComments(code, this.filePath);
+		let code = await fs.readFile(this.fullFilePath, 'utf8');
+		code = await unpreserveComments(code, this.fullFilePath);
 		this.code = code;
 		this.size = getSize(code);
 		this.gzipSize = getGzipSize(code);
 	}
 
 	async loadMeta() {
-		const packageJson = await readPublicPackageUp(this.filePath);
+		const packageJson = await readPublicPackageUp(this.fullFilePath);
 		assert(this.meta.package === packageJson.name, 'Mismatching package name');
 		this.packageJson = packageJson;
-	}
-
-	contentHash() {
-		if (!this.code) {
-			throw new Error('No code');
-		}
-
-		return crypto.createHash('sha256').update(this.code).digest('hex').slice(0, 10);
-	}
-
-	id() {
-		return `${this.name!}-${this.packageJson!.version}-${this.contentHash()}`;
 	}
 
 	async validate(

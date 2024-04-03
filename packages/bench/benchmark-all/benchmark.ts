@@ -80,7 +80,7 @@ export const benchmarkAverage = async (
 
 		results.push(result);
 	}
-	
+
 	return {
 		result: {
 			...results[0].result,
