@@ -4,6 +4,7 @@ import type { ArtifactLoaded } from '@minification-benchmarks/artifacts';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
 import { benchmarkMinifiers } from './benchmark-minifiers.js';
 import type { BenchmarkedArtifact } from '../types';
+import type { MinifierInstance } from './types.js';
 import { setTimeout } from 'timers/promises';
 import { loadArtifact } from '@minification-benchmarks/artifacts';
 import byteSize from 'byte-size';
@@ -12,10 +13,9 @@ const cwd = process.cwd();
 
 export const benchmarkArtifacts = async (
 	artifacts: ArtifactLoaded[],
-	minifiers: MinifierLoaded[],
+	minifiers: MinifierInstance[],
 	task: Task = _task,
 	sampleSize?: number,
-	saveToDirectory?: string,
 ) => await task.group(
 	task => artifacts.map(
 		artifact => task(
@@ -31,7 +31,6 @@ export const benchmarkArtifacts = async (
 					minifiers,
 					task,
 					sampleSize,
-					saveToDirectory,
 				);
 
 				// console.log(benchmarkResults);

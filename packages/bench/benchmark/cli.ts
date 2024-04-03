@@ -1,56 +1,11 @@
 import fs from 'fs/promises';
+import path from 'path';
 import assert from 'assert';
 import { cli } from 'cleye';
-import type {
-	BenchmarkResultSuccess,
-	BenchmarkError,
-} from './types.js';
-import { getSize, getGzipSize } from '@minification-benchmarks/utils/get-size.js';
-import { loadMinifier, type MinifierLoaded, type MinifierFunction } from '@minification-benchmarks/minifiers';
+import { loadMinifier, type MinifierFunction } from '@minification-benchmarks/minifiers';
 import { loadArtifact } from '@minification-benchmarks/artifacts';
-
-type Minified = {
-	code: string;
-	time: number;
-};
-
-const logResult = (
-	minified: Minified,
-) => {
-	const stringified: BenchmarkResultSuccess = {
-		result: {
-			minifiedSize: getSize(minified.code),
-			minzippedSize: getGzipSize(minified.code),
-			time: minified.time,
-		},
-	};
-	console.log(JSON.stringify(stringified));
-};
-
-const logError = (
-	thrown: unknown,
-	context?: string,
-) => {
-	let error: BenchmarkError['error'];
-	if (thrown instanceof Error) {
-		error = {
-			message: thrown.message,
-			stack: thrown.stack,
-		};
-	} else {
-		error = {
-			message: JSON.stringify(thrown),
-		};
-	}
-
-	if (context) {
-		error.context = context;
-	}
-
-	const stringified: BenchmarkError = { error };
-	console.error(JSON.stringify(stringified));
-	process.exit(1);
-};
+import { logResult, logError } from './log.js';
+import type { Minified } from './types.js';
 
 const runMinifier = async (
 	minifier: MinifierFunction,
@@ -97,10 +52,10 @@ const argv = cli({
 			description: 'Artifact name from lib/artifacts',
 		},
 
-		outputPath: {
-			type: String,
-			alias: 'o',
-			description: 'Output path for minified code',
+		save: {
+			type: Boolean,
+			alias: 's',
+			description: 'Save minified code',
 		},
 	},
 });
@@ -108,14 +63,13 @@ const argv = cli({
 const {
 	minifier: minifierName,
 	artifact: artifactName,
-	outputPath,
+	save,
 } = argv.flags;
 
-assert(minifierName, 'Minifier must be passed in');
 assert(artifactName, 'Artifact must be passed in');
-
 const artifact = await loadArtifact(artifactName);
 
+assert(minifierName, 'Minifier must be passed in');
 const minifier = await loadMinifier(minifierName);
 
 let minifierInstanceName = argv.flags.instance;
@@ -125,7 +79,7 @@ let minifierInstance: MinifierFunction;
 if (minifierInstances.length === 1) {
 	minifierInstance = minifier.instances[minifierInstances[0]];
 } else {
-	assert(minifierInstanceName, 'Minifier instance be passed in');
+	assert(minifierInstanceName, 'Minifier has multiple instances. Specify via --instance');
 	minifierInstance = minifier.instances[minifierInstanceName];
 }
 
@@ -145,6 +99,14 @@ try {
 
 logResult(minified);
 
-if (outputPath) {
-	await fs.writeFile(outputPath, minified.code);
+if (save) {
+	const artifactId = artifact.id();
+	const minifierId = minifier.id(minifierInstanceName);
+	const saveToDirectory = path.join('results', artifactId, minifierId);
+	const saveTo = path.join(saveToDirectory, Date.now() + '.js');
+
+	await fs.mkdir(saveToDirectory, { recursive: true });
+	await fs.writeFile(saveTo, minified.code);
+
+	// console.log(`Saved to ${saveTo}`);
 }

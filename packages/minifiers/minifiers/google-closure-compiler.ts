@@ -9,7 +9,7 @@ const { compiler: Compiler } = googleClosureCompiler;
 export default createMinifier(
 	'google-closure-compiler',
 	{
-		'google-closure-compiler': async ({ filePath }) => {
+		default: async ({ filePath }) => {
 			const compiler = new Compiler({
 				js: filePath,
 			});

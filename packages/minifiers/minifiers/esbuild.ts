@@ -4,7 +4,7 @@ import { createMinifier } from '../utils/create-minifier.js';
 export default createMinifier(
 	'esbuild',
 	{
-		esbuild: async ({ code }) => {
+		default: async ({ code }) => {
 			const minified = await esbuild.transform(code, {
 				minify: true,
 				sourcemap: false,

@@ -5,84 +5,95 @@ import _task, { type Task } from 'tasuku';
 import { percent, formatMs } from '@minification-benchmarks/utils/formatting';
 import type { ArtifactLoaded } from '@minification-benchmarks/artifacts';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
+import type { MinifierInstance } from './types.js';
 import type {
 	MinifierResult,
 	BenchmarkData,
 	BenchmarkResult,
 	BenchmarkResultSuccess,
 } from '../types';
-import { benchmark } from './benchmark';
+import { benchmarkAverage } from './benchmark';
 import { setTimeout } from 'timers/promises';
 
-const getAverage = (numbers: number[]) => (
-	numbers.reduce(
-		(sum, next) => sum + next,
-		0,
-	) / numbers.length
-);
-
-const runMultiple = async (
-	minifierName: string,
-	artifactName: string,
-	n: number,
-) => {
-	const results: BenchmarkResultSuccess[] = [];
-	for (let i = 0; i < n; i += 1) {
-		// const outputPath = path.resolve(saveToDirectory, `${artifactName}-${minifierName}-${i}.js`);
-		const result = await benchmark(
-			minifierName,
-			artifactName,
-			// outputPath,
-		);
-
-		if ('error' in result) {
-			return result;
-		}
-
-		results.push(result);
-	}
-	
-	const averageTime = getAverage(results.map(({ result }) => result.time));
-	return {
-		result: {
-			...results[0].result,
-			time: averageTime,
-		},
-	};
+type MinfierResult = {
+	date: string;
+	minifiedSize: number;
+	minzippedSize: number;
+	time: number;
 };
 
+type ArtifactResult = {
+	[minifierName: string]: MinfierResult;
+};
 
-const benchmarkTime = Date.now();
+type Cache = { [id: string]: ArtifactResult };
 
-const cache = {
-	['artifact-version-contentHash']: {
-		['minifier-version']: {
+const data: Cache = {
+	'artifact': {
+		'minifier-name-version': {
 			date: '',
 			minifiedSize: 0,
 			minzippedSize: 0,
 			time: 0,
-		}
+		},
 	},
 };
 
-
 export const benchmarkMinifiers = async (
 	artifact: ArtifactLoaded,
-	minifiers: MinifierLoaded[],
+	minifiers: MinifierInstance[],
 	task: Task,
 	sampleSize = 1,
-	saveToDirectory = `results/benchmarks-${benchmarkTime}`,
 ) => task.group(
 	task => minifiers.flatMap(
-		(minifier) => Object.entries(minifier.instances).map(([minifierInstance, minifierFn]) => task(
-			minifier.name === minifierInstance ? minifierInstance : `${minifier.name}: ${minifierInstance}`,
+		(minifier) => task(
+			minifier.minifier.name + (minifier.instance === 'default' ? '' : ` (${minifier.instance})`),
 			async ({
 				setStatus,
 				setOutput,
 				setError,
 			}) => {
-				console.log(artifact.cacheKey(), minifier.name, minifierInstance);
-				await setTimeout(3000);
+				const artifactId = `${artifact.name}-${artifact.packageJson.version}-${artifact.contentHash()}`;
+				let artifactEntry = data[artifactId];
+
+				if (!artifactEntry) {
+					artifactEntry = {};
+					data[artifactId] = artifactEntry;
+				}
+
+				const minifierId = `${minifier.instance}-${minifier.minifier.meta.version}`;
+
+				let minifierEntry = artifactEntry[minifierId];
+				if (minifierEntry) {
+					// Cache hit
+					return;
+					// minifierEntry = {
+					// 	date: '',
+					// 	minifiedSize: 0,
+					// 	minzippedSize: 0,
+					// 	time: 0,
+					// };
+					// artifactEntry[minifierId] = minifierEntry;
+				}
+
+
+
+				console.dir(minifier, { colors: true, depth: null, maxArrayLength: null });
+
+				// let minifierResult = cacheEntry[minifierInstance.name];
+				// if (!minifierResult) {
+					const result = await benchmarkAverage(
+						artifact.name,
+						minifier.minifier.name,
+						minifier.instance,
+						sampleSize,
+					);
+
+					console.log(result);
+				// }
+				// await setTimeout(1000);
+
+				// console.log(artifact.cacheKey(), minifier.name, minifierInstance);
 				// Here we want to cache the result
 				// const cacheKey = hash(artifact);
 
@@ -163,6 +174,6 @@ export const benchmarkMinifiers = async (
 				// 	runs,
 				// };
 			},
-		)),
+		),
 	),
 );

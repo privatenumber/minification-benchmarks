@@ -9,8 +9,8 @@
 	"packageManager": "pnpm@8.5.1",
 	"scripts": {
 		"prepare": "simple-git-hooks",
-		"bench": "tsx packages/bench/benchmark-all/cli.ts",
-		"benchmark-cli": "tsx packages/bench/benchmark-cli.ts",
+		"bench": "tsx packages/bench/benchmark/cli.ts",
+		"bench-all": "tsx packages/bench/benchmark-all/cli.ts",
 		"update-benchmarks-readme": "tsx packages/bench/update-benchmarks-readme/index.ts",
 		"lint": "eslint --cache .",
 		"type-check": "tsc --noEmit"

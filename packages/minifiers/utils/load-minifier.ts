@@ -17,7 +17,7 @@ export const loadMinifier = async (
 
 		const minifier: MinifierLoaded = minifierModule.default;
 
-		await minifier.loadMeta();
+		await minifier.loadMeta(minifierName);
 
 		return minifier;
 	} catch (error) {

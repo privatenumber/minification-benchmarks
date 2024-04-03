@@ -17,6 +17,9 @@ export type MetaData = {
 };
 
 export class Minifier {
+	// Maps to file name in minfiers/*
+	id?: string;
+
 	name: string;
 	instances: Instances;
 	meta?: MetaData;
@@ -29,7 +32,8 @@ export class Minifier {
 		this.instances = instances;
 	}
 
-	async loadMeta() {
+	async loadMeta(id: string) {
+		this.id = id;
 		const packageJson = await loadPackageJson(this.name);
 		if (packageJson) {
 			this.meta = getPackageJsonMeta(packageJson);

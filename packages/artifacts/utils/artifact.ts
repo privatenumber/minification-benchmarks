@@ -71,14 +71,16 @@ export class Artifact {
 		this.packageJson = packageJson;
 	}
 
-	cacheKey() {
+	contentHash() {
 		if (!this.code) {
 			throw new Error('No code');
 		}
 
-		const hash = crypto.createHash('sha256').update(this.code).digest('hex').slice(0, 10);
+		return crypto.createHash('sha256').update(this.code).digest('hex').slice(0, 10);
+	}
 
-		return `${this.meta.package}@${this.packageJson!.version}#${hash}`;
+	id() {
+		return `${this.name!}-${this.packageJson!.version}-${this.contentHash()}`;
 	}
 
 	async validate(

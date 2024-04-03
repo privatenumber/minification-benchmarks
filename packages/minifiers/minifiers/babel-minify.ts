@@ -4,7 +4,7 @@ import { createMinifier } from '../utils/create-minifier.js';
 export default createMinifier(
 	'babel-minify',
 	{
-		'babel-minify': async ({ code }) => {
+		default: async ({ code }) => {
 			const minified = await babelMinify(code, undefined, {
 				sourceMaps: false,
 				comments: false,

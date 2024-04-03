@@ -5,7 +5,7 @@ import { createMinifier } from '../utils/create-minifier.js';
 export default createMinifier(
 	'uglify-js',
 	{
-		'uglify-js': async ({ code }) => {
+		default: async ({ code }) => {
 			const minified = await UglifyJs.minify(code, {
 				sourceMap: false,
 			});
@@ -14,7 +14,7 @@ export default createMinifier(
 
 			return minified.code;
 		},
-		'uglify-js (no compress)': async ({ code }) => {
+		'no compress': async ({ code }) => {
 			const minified = await UglifyJs.minify(code, {
 				sourceMap: false,
 				compress: false,

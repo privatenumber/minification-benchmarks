@@ -4,7 +4,7 @@ import { createMinifier } from '../utils/create-minifier.js';
 export default createMinifier(
 	'terser',
 	{
-		terser: async ({ code }) => {
+		default: async ({ code }) => {
 			const minified = await minify(code, {
 				ecma: 2018,
 				sourceMap: false,
@@ -15,7 +15,7 @@ export default createMinifier(
 	
 			return minified.code!;
 		},
-		'terser (no compress)': async({ code }) => {
+		'no compress': async({ code }) => {
 			const minified = await minify(code, {
 				ecma: 2018,
 				sourceMap: false,

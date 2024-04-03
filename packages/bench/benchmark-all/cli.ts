@@ -4,6 +4,7 @@ import task from 'tasuku';
 import { benchmarkArtifacts } from './benchmark-artifacts';
 import { getArtifacts, loadArtifact } from '@minification-benchmarks/artifacts';
 import { getMinifiers, loadMinifier } from '@minification-benchmarks/minifiers';
+import type { MinifierInstance } from './types.js';
 
 const argv = cli({
 	name: 'benchmark-all',
@@ -40,17 +41,34 @@ const loadArtifacts = async (
 const loadMinifiers = async (
 	filter?: string,
 ) => {
-	let minifierNames = await getMinifiers();
-	if (filter) {
-		minifierNames = minifierNames.filter(minifier => minifier.match(filter));
-	}
-	assert(minifierNames.length, 'No minifiers matched');
-
+	const minifierNames = await getMinifiers();
+	console.log({
+		minifierNames,
+	
+	});
 	const minifiers = await Promise.all(minifierNames.map(loadMinifier));
 
-	return minifiers;
-};
+	let minifierInstances = minifiers.flatMap(
+		minifier => (
+			Object.keys(minifier.instances)
+				.map((instance): MinifierInstance => ({
+					minifier,
+					instance,
+				}))
+		)
+	);
 
+	if (filter) {
+		minifierInstances = minifierInstances.filter(({ minifier, instance }) => (
+			minifier.name.match(filter)
+			|| instance.match(filter)
+		));
+	}
+
+	assert(minifierInstances.length, 'No minifiers matched');
+
+	return minifierInstances;
+};
 
 (async () => {
 	process.stdin.on('data', () => {
@@ -63,13 +81,13 @@ const loadMinifiers = async (
 	} = argv.flags;
 
 	const artifacts = await loadArtifacts(filterArtifacts);
-
 	let minifiers = await loadMinifiers(filterMinifier);
-	
-	const results = await benchmarkArtifacts(
-		artifacts,
-		minifiers,
-	);
+
+	console.dir(minifiers, { colors: true, depth: null, maxArrayLength: null });
+	// const results = await benchmarkArtifacts(
+	// 	artifacts,
+	// 	minifiers,
+	// );
 
 	// console.log(inspect(results, {
 	// 	colors: true,

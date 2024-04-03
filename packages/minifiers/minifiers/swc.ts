@@ -4,7 +4,7 @@ import { createMinifier } from '../utils/create-minifier.js';
 export default createMinifier(
 	'@swc/core',
 	{
-		swc: async ({ code }) => {
+		default: async ({ code }) => {
 			const minified = await minify(code, {
 				compress: true,
 				mangle: true,
