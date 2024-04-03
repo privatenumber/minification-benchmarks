@@ -36,7 +36,14 @@ const benchmark = async (
 		},
 	);
 
-	console.log(minificationProcess);
+	if (minificationProcess.timedOut) {
+		return {
+			error: {
+				message: 'Timed out',
+			},
+		};
+	}
+
 	if (minificationProcess.failed) {
 		return safeJsonParse(minificationProcess.stderr);
 	}
@@ -44,7 +51,9 @@ const benchmark = async (
 	return safeJsonParse(minificationProcess.stdout);
 };
 
-const getAverage = (numbers: number[]) => (
+const getAverage = (
+	numbers: number[],
+) => (
 	numbers.reduce(
 		(sum, next) => sum + next,
 		0,
@@ -72,12 +81,10 @@ export const benchmarkAverage = async (
 		results.push(result);
 	}
 	
-	const result = {
+	return {
 		result: {
 			...results[0].result,
 			time: getAverage(results.map(({ result }) => result.time)),
 		},
 	};
-
-	return result;
 };

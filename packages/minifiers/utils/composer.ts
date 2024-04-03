@@ -12,6 +12,10 @@ type ComposerPackage = {
 	};
 };
 
+type ComposerInstalled = {
+	packages: ComposerPackage[];
+};
+
 export const loadComposerInstalled = async (
 	packageName: string,
 ) => {
@@ -26,8 +30,8 @@ export const loadComposerInstalled = async (
 		return;
 	}
 
-	const installed = await readJsonFile(composerInstalledPath) as ComposerPackage[];
-	return installed.find(({ name }) => name === packageName);
+	const installed = await readJsonFile(composerInstalledPath) as ComposerInstalled;
+	return installed.packages.find(({ name }) => name === packageName);
 };
 
 export const getMeta = (

@@ -76,15 +76,11 @@ export const benchmarkMinifiers = async (
 					// artifactEntry[minifierId] = minifierEntry;
 				}
 
-
-
-				console.dir(minifier, { colors: true, depth: null, maxArrayLength: null });
-
 				// let minifierResult = cacheEntry[minifierInstance.name];
 				// if (!minifierResult) {
 					const result = await benchmarkAverage(
 						artifact.name,
-						minifier.minifier.name,
+						minifier.minifier.id!,
 						minifier.instance,
 						sampleSize,
 					);

@@ -42,10 +42,6 @@ const loadMinifiers = async (
 	filter?: string,
 ) => {
 	const minifierNames = await getMinifiers();
-	console.log({
-		minifierNames,
-	
-	});
 	const minifiers = await Promise.all(minifierNames.map(loadMinifier));
 
 	let minifierInstances = minifiers.flatMap(
@@ -83,11 +79,11 @@ const loadMinifiers = async (
 	const artifacts = await loadArtifacts(filterArtifacts);
 	let minifiers = await loadMinifiers(filterMinifier);
 
-	console.dir(minifiers, { colors: true, depth: null, maxArrayLength: null });
-	// const results = await benchmarkArtifacts(
-	// 	artifacts,
-	// 	minifiers,
-	// );
+	// console.dir(minifiers, { colors: true, depth: null, maxArrayLength: null });
+	const results = await benchmarkArtifacts(
+		artifacts,
+		minifiers,
+	);
 
 	// console.log(inspect(results, {
 	// 	colors: true,

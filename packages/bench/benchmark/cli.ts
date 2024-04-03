@@ -86,7 +86,7 @@ if (minifierInstances.length === 1) {
 try {
 	await artifact.validate();
 } catch (error) {
-	logError(error, 'pre-minification');
+	logError(error, 'pre-validation');
 }
 
 const minified = await runMinifier(minifierInstance, artifact.code!, artifact.filePath);
@@ -94,19 +94,19 @@ const minified = await runMinifier(minifierInstance, artifact.code!, artifact.fi
 try {
 	await artifact.validate(minified.code);
 } catch (error) {
-	logError(error, 'post-minification');
+	logError(error, 'post-validation');
 }
 
 logResult(minified);
 
-if (save) {
-	const artifactId = artifact.id();
-	const minifierId = minifier.id(minifierInstanceName);
-	const saveToDirectory = path.join('results', artifactId, minifierId);
-	const saveTo = path.join(saveToDirectory, Date.now() + '.js');
+// if (save) {
+// 	const artifactId = artifact.id();
+// 	const minifierId = minifier.id(minifierInstanceName);
+// 	const saveToDirectory = path.join('results', artifactId, minifierId);
+// 	const saveTo = path.join(saveToDirectory, Date.now() + '.js');
 
-	await fs.mkdir(saveToDirectory, { recursive: true });
-	await fs.writeFile(saveTo, minified.code);
+// 	await fs.mkdir(saveToDirectory, { recursive: true });
+// 	await fs.writeFile(saveTo, minified.code);
 
-	// console.log(`Saved to ${saveTo}`);
-}
+// 	// console.log(`Saved to ${saveTo}`);
+// }
