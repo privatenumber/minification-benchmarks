@@ -13,7 +13,7 @@ export default createMinifier(
 			const compiler = new Compiler({
 				js: filePath,
 			});
-		
+
 			const code = await new Promise((resolve, reject) => {
 				compiler.run((exitCode, stdOut, stdError) => {
 					if (exitCode > 0) {
@@ -23,7 +23,7 @@ export default createMinifier(
 					resolve(stdOut);
 				});
 			});
-		
+
 			return code as string;
 		},
 	},

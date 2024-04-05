@@ -21,7 +21,9 @@ export class Minifier {
 	id?: string;
 
 	name: string;
+
 	instances: Instances;
+
 	meta?: MetaData;
 
 	constructor(

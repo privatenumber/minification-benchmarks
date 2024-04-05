@@ -12,11 +12,11 @@ export default createMinifier(
 				// Needs to be context of composer install
 				cwd: new URL('..', import.meta.url).pathname,
 			});
-		
+
 			minify.stdin.end(code);
-		
+
 			const minified = await streamToBuffer(minify.stdout);
 			return minified.toString();
-		}
+		},
 	},
 );

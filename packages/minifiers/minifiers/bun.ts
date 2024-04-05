@@ -11,6 +11,6 @@ export default createMinifier(
 			const minify = spawn(bunPath, ['build', '--no-bundle', '--minify', filePath]);
 			const minified = await streamToBuffer(minify.stdout);
 			return minified.toString();
-		}
+		},
 	},
 );

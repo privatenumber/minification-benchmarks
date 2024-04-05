@@ -12,10 +12,10 @@ export default createMinifier(
 					comments: false,
 				},
 			});
-	
+
 			return minified.code!;
 		},
-		'no compress': async({ code }) => {
+		'no compress': async ({ code }) => {
 			const minified = await minify(code, {
 				ecma: 2018,
 				sourceMap: false,
@@ -24,7 +24,7 @@ export default createMinifier(
 				},
 				compress: false,
 			});
-		
+
 			return minified.code!;
 		},
 	},

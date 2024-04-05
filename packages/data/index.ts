@@ -5,11 +5,9 @@ import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
 
 import type { Data, Artifact } from './types.js';
 
-const dataPath = new URL('./data.json', import.meta.url).pathname;
+const dataPath = new URL('data.json', import.meta.url).pathname;
 
-export const getData = async () => {
-	return await readJsonFile(dataPath) as Data;
-};
+export const getData = async () => await readJsonFile(dataPath) as Data;
 
 const data = await getData();
 

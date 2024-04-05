@@ -19,9 +19,9 @@ export default createMinifier(
 				sourceMap: false,
 				compress: false,
 			});
-		
+
 			assert(!minified.error, minified.error);
-		
+
 			return minified.code;
 		},
 	},

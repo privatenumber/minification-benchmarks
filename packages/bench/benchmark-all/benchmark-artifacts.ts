@@ -1,15 +1,8 @@
-import path from 'path';
 import _task, { type Task } from 'tasuku';
 import type { ArtifactLoaded } from '@minification-benchmarks/artifacts';
-import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
-import { benchmarkMinifiers } from './benchmark-minifiers.js';
-import type { BenchmarkedArtifact } from '../types';
-import type { MinifierInstance } from './types.js';
-import { setTimeout } from 'timers/promises';
-import { loadArtifact } from '@minification-benchmarks/artifacts';
 import byteSize from 'byte-size';
-
-const cwd = process.cwd();
+import { benchmarkMinifiers } from './benchmark-minifiers.js';
+import type { MinifierInstance } from './types.js';
 
 export const benchmarkArtifacts = async (
 	artifacts: ArtifactLoaded[],
@@ -21,7 +14,6 @@ export const benchmarkArtifacts = async (
 		artifact => task(
 			artifact.name,
 			async ({ task, setOutput }) => {
-
 				setOutput(byteSize(artifact.size).toString());
 
 				// setStatus(path.relative(cwd, artifact.filePath));

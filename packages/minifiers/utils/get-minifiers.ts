@@ -9,10 +9,9 @@ export const getMinifiers = async () => {
 			const stat = await fs.stat(`${minifiersDirectory}/${minifier}`);
 			if (stat.isDirectory()) {
 				return minifier;
-			} else {
-				return minifier.slice(0, -'.ts'.length);
 			}
+			return minifier.slice(0, -'.ts'.length);
 		});
-		
+
 	return await Promise.all(getFiles);
 };

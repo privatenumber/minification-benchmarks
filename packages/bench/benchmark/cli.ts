@@ -72,7 +72,7 @@ const artifact = await loadArtifact(artifactName);
 assert(minifierName, 'Minifier must be passed in');
 const minifier = await loadMinifier(minifierName);
 
-let minifierInstanceName = argv.flags.instance;
+const minifierInstanceName = argv.flags.instance;
 
 const minifierInstances = Object.keys(minifier.instances);
 let minifierInstance: MinifierFunction;
@@ -97,7 +97,7 @@ try {
 	const error = _error as Error;
 	const cwd = process.cwd();
 	error.stack = error.stack!.replaceAll(cwd, '');
-	logError(error, 'post-validation');	
+	logError(error, 'post-validation');
 }
 
 logResult(minified);

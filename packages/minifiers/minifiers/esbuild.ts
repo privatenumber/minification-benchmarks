@@ -11,7 +11,7 @@ export default createMinifier(
 				legalComments: 'none',
 				treeShaking: true,
 			});
-		
+
 			return minified.code;
 		},
 	},

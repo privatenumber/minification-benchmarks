@@ -43,6 +43,7 @@ export class Artifact {
 
 	// Set by loadArtifact
 	name?: string;
+
 	loadTest?: () => Promise<Test>;
 
 	constructor(
@@ -115,7 +116,7 @@ export interface ArtifactLoaded extends Artifact {
 	gzipSize: number;
 
 	packageJson: NormalizedPackageJson;
-};
+}
 
 export const defineArtifact = (
 	artifactMeta: ArtifactMeta,

@@ -1,5 +1,5 @@
-import { findUp } from 'find-up';
 import path from 'path';
+import { findUp } from 'find-up';
 import type { PackageJson } from 'type-fest';
 import { readJsonFile } from '@minification-benchmarks/utils/read-json-file.js';
 import type { MetaData } from './create-minifier.js';
@@ -20,7 +20,7 @@ export const loadPackageJson = async (
 };
 
 export const getPackageJsonMeta = (
-	packageJson: PackageJson
+	packageJson: PackageJson,
 ): MetaData => {
 	let { repository } = packageJson;
 	if (!repository) {
@@ -45,4 +45,4 @@ export const getPackageJsonMeta = (
 		version: packageJson.version!,
 		repository,
 	};
-}
+};

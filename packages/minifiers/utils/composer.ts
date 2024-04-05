@@ -1,5 +1,5 @@
-import { findUp } from 'find-up';
 import path from 'path';
+import { findUp } from 'find-up';
 import { readJsonFile } from '@minification-benchmarks/utils/read-json-file.js';
 import type { MetaData } from './create-minifier.js';
 
@@ -39,7 +39,7 @@ export const getMeta = (
 		name,
 		version,
 		source,
-	}: ComposerPackage
+	}: ComposerPackage,
 ): MetaData => {
 	if (!source) {
 		throw new Error(`No source found for ${name}`);
@@ -63,4 +63,4 @@ export const getMeta = (
 		version,
 		repository,
 	};
-}
+};

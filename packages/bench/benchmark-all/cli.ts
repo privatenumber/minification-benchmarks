@@ -1,9 +1,9 @@
 import assert from 'assert';
 import { cli } from 'cleye';
 import task from 'tasuku';
-import { benchmarkArtifacts } from './benchmark-artifacts';
 import { getArtifacts, loadArtifact } from '@minification-benchmarks/artifacts';
 import { getMinifiers, loadMinifier } from '@minification-benchmarks/minifiers';
+import { benchmarkArtifacts } from './benchmark-artifacts';
 import type { MinifierInstance } from './types.js';
 
 const argv = cli({
@@ -51,7 +51,7 @@ const loadMinifiers = async (
 					minifier,
 					instance,
 				}))
-		)
+		),
 	);
 
 	if (filter) {
@@ -77,7 +77,7 @@ const loadMinifiers = async (
 	} = argv.flags;
 
 	const artifacts = await loadArtifacts(filterArtifacts);
-	let minifiers = await loadMinifiers(filterMinifier);
+	const minifiers = await loadMinifiers(filterMinifier);
 
 	// console.dir(minifiers, { colors: true, depth: null, maxArrayLength: null });
 	const results = await benchmarkArtifacts(
