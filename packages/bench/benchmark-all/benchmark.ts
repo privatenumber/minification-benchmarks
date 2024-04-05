@@ -1,4 +1,3 @@
-import path from 'path';
 import { execaNode } from 'execa';
 import { safeJsonParse } from '@minification-benchmarks/utils/safe-json-parse';
 import type { BenchmarkResult, BenchmarkResultSuccess } from '../types.js';

@@ -8,36 +8,21 @@
 	"files": [],
 	"packageManager": "pnpm@8.5.1",
 	"scripts": {
-		"prepare": "simple-git-hooks",
 		"bench": "tsx packages/bench/benchmark/cli.ts",
 		"bench-all": "tsx packages/bench/benchmark-all/cli.ts",
-		"update-benchmarks-readme": "tsx packages/bench/update-benchmarks-readme/index.ts",
-		"lint": "eslint --cache .",
+		"update-readme": "tsx packages/data/update-readme/index.ts",
+		"lint": "lint --cache .",
 		"type-check": "tsc --noEmit"
-	},
-	"simple-git-hooks": {
-		"pre-commit": "pnpm lint-staged"
-	},
-	"lint-staged": {
-		"*.{ts,js}": "eslint --cache"
 	},
 	"devDependencies": {
 		"@minification-benchmarks/artifacts": "*",
 		"@minification-benchmarks/minifiers": "*",
 		"@minification-benchmarks/utils": "*",
-		"@pvtnbr/eslint-config": "^0.37.1",
+		"@pvtnbr/eslint-config": "^1.2.0",
 		"@types/node": "^16.11.33",
-		"eslint": "^8.50.0",
-		"lint-staged": "^15.2.0",
-		"simple-git-hooks": "^2.9.0",
-		"tsx": "^4.7.1",
-		"typescript": "^5.4.3"
-	},
-	"eslintConfig": {
-		"extends": "@pvtnbr",
-		"ignorePatterns": [
-			"results"
-		]
+		"eslint": "^8.57.0",
+		"tsx": "^4.7.2",
+		"typescript": "^5.4.4"
 	},
 	"pnpm": {
 		"peerDependencyRules": {

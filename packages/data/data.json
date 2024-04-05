@@ -1,4 +1,1290 @@
 {
+	"react": {
+		"version": "17.0.2",
+		"filePath": "/cjs/react.development.js",
+		"size": 72132,
+		"gzipSize": 19385,
+		"minified": {
+			"bun": {
+				"version": "1.0.30",
+				"result": {
+					"result": {
+						"minifiedSize": 24011,
+						"minzippedSize": 8650,
+						"time": 66.134834,
+						"runs": 1
+					}
+				}
+			},
+			"babel-minify": {
+				"version": "0.5.2",
+				"result": {
+					"result": {
+						"minifiedSize": 23601,
+						"minzippedSize": 8448,
+						"time": 435.849042,
+						"runs": 1
+					}
+				}
+			},
+			"esbuild": {
+				"version": "0.19.12",
+				"result": {
+					"result": {
+						"minifiedSize": 23697,
+						"minzippedSize": 8543,
+						"time": 37.923333,
+						"runs": 1
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"version": "20230802.0.0",
+				"result": {
+					"result": {
+						"minifiedSize": 22825,
+						"minzippedSize": 8193,
+						"time": 2278.959375,
+						"runs": 1
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"version": "1.7.0",
+				"result": {
+					"result": {
+						"minifiedSize": 40821,
+						"minzippedSize": 11040,
+						"time": 1498.141792,
+						"runs": 1
+					}
+				}
+			},
+			"@swc/core": {
+				"version": "1.4.8",
+				"result": {
+					"result": {
+						"minifiedSize": 22866,
+						"minzippedSize": 8173,
+						"time": 18.737708,
+						"runs": 1
+					}
+				}
+			},
+			"terser": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 23141,
+						"minzippedSize": 8317,
+						"time": 143.759666,
+						"runs": 1
+					}
+				}
+			},
+			"terser (no compress)": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 25081,
+						"minzippedSize": 8746,
+						"time": 56.55825,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 22668,
+						"minzippedSize": 8184,
+						"time": 320.439333,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 25030,
+						"minzippedSize": 8668,
+						"time": 44.958542,
+						"runs": 1
+					}
+				}
+			}
+		}
+	},
+	"moment": {
+		"version": "2.29.1",
+		"filePath": "/moment.js",
+		"size": 173902,
+		"gzipSize": 36231,
+		"minified": {
+			"bun": {
+				"version": "1.0.30",
+				"result": {
+					"result": {
+						"minifiedSize": 61856,
+						"minzippedSize": 19873,
+						"time": 44.34475,
+						"runs": 1
+					}
+				}
+			},
+			"babel-minify": {
+				"version": "0.5.2",
+				"result": {
+					"result": {
+						"minifiedSize": 59703,
+						"minzippedSize": 19119,
+						"time": 884.861042,
+						"runs": 1
+					}
+				}
+			},
+			"esbuild": {
+				"version": "0.19.12",
+				"result": {
+					"result": {
+						"minifiedSize": 59824,
+						"minzippedSize": 19334,
+						"time": 25.404458,
+						"runs": 1
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"version": "20230802.0.0",
+				"result": {
+					"result": {
+						"minifiedSize": 58273,
+						"minzippedSize": 18910,
+						"time": 2340.492792,
+						"runs": 1
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"version": "1.7.0",
+				"result": {
+					"result": {
+						"minifiedSize": 97632,
+						"minzippedSize": 24998,
+						"time": 99.188958,
+						"runs": 1
+					}
+				}
+			},
+			"@swc/core": {
+				"version": "1.4.8",
+				"result": {
+					"result": {
+						"minifiedSize": 58210,
+						"minzippedSize": 18686,
+						"time": 28.778375,
+						"runs": 1
+					}
+				}
+			},
+			"terser": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 59162,
+						"minzippedSize": 18694,
+						"time": 298.977208,
+						"runs": 1
+					}
+				}
+			},
+			"terser (no compress)": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 63151,
+						"minzippedSize": 19683,
+						"time": 143.510375,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 57865,
+						"minzippedSize": 18567,
+						"time": 555.251416,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 62495,
+						"minzippedSize": 19569,
+						"time": 93.312,
+						"runs": 1
+					}
+				}
+			}
+		}
+	},
+	"jquery": {
+		"version": "3.5.1",
+		"filePath": "/dist/jquery.js",
+		"size": 287628,
+		"gzipSize": 84498,
+		"minified": {
+			"bun": {
+				"version": "1.0.30",
+				"result": {
+					"result": {
+						"minifiedSize": 92559,
+						"minzippedSize": 32703,
+						"time": 95.104417,
+						"runs": 1
+					}
+				}
+			},
+			"babel-minify": {
+				"version": "0.5.2",
+				"result": {
+					"result": {
+						"minifiedSize": 92103,
+						"minzippedSize": 31799,
+						"time": 1455.597542,
+						"runs": 1
+					}
+				}
+			},
+			"esbuild": {
+				"version": "0.19.12",
+				"result": {
+					"result": {
+						"minifiedSize": 90065,
+						"minzippedSize": 31954,
+						"time": 23.970667,
+						"runs": 1
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"version": "20230802.0.0",
+				"result": {
+					"result": {
+						"minifiedSize": 92704,
+						"minzippedSize": 33086,
+						"time": 2421.269625,
+						"runs": 1
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"version": "1.7.0",
+				"result": {
+					"result": {
+						"minifiedSize": 144144,
+						"minzippedSize": 40879,
+						"time": 119.240875,
+						"runs": 1
+					}
+				}
+			},
+			"@swc/core": {
+				"version": "1.4.8",
+				"result": {
+					"result": {
+						"minifiedSize": 89158,
+						"minzippedSize": 30870,
+						"time": 81.721916,
+						"runs": 1
+					}
+				}
+			},
+			"terser": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 89540,
+						"minzippedSize": 30912,
+						"time": 453.905833,
+						"runs": 1
+					}
+				}
+			},
+			"terser (no compress)": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 94554,
+						"minzippedSize": 31621,
+						"time": 179.813625,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 88539,
+						"minzippedSize": 30891,
+						"time": 788.048084,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 94082,
+						"minzippedSize": 31470,
+						"time": 167.308042,
+						"runs": 1
+					}
+				}
+			}
+		}
+	},
+	"vue": {
+		"version": "2.6.12",
+		"filePath": "/dist/vue.js",
+		"size": 342146,
+		"gzipSize": 89668,
+		"minified": {
+			"bun": {
+				"version": "1.0.30",
+				"result": {
+					"result": {
+						"minifiedSize": 121703,
+						"minzippedSize": 45340,
+						"time": 46.613125,
+						"runs": 1
+					}
+				}
+			},
+			"babel-minify": {
+				"version": "0.5.2",
+				"result": {
+					"result": {
+						"minifiedSize": 117896,
+						"minzippedSize": 43925,
+						"time": 1544.8843339999999,
+						"runs": 1
+					}
+				}
+			},
+			"esbuild": {
+				"version": "0.19.12",
+				"result": {
+					"result": {
+						"minifiedSize": 118141,
+						"minzippedSize": 44368,
+						"time": 46.555458,
+						"runs": 1
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"version": "20230802.0.0",
+				"result": {
+					"result": {
+						"minifiedSize": 115604,
+						"minzippedSize": 44226,
+						"time": 2751.783542,
+						"runs": 1
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"version": "1.7.0",
+				"result": {
+					"result": {
+						"minifiedSize": 197357,
+						"minzippedSize": 57169,
+						"time": 204.038042,
+						"runs": 1
+					}
+				}
+			},
+			"@swc/core": {
+				"version": "1.4.8",
+				"result": {
+					"result": {
+						"minifiedSize": 115461,
+						"minzippedSize": 42477,
+						"time": 76.337709,
+						"runs": 1
+					}
+				}
+			},
+			"terser": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 116826,
+						"minzippedSize": 42939,
+						"time": 527.9525,
+						"runs": 1
+					}
+				}
+			},
+			"terser (no compress)": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 126580,
+						"minzippedSize": 44679,
+						"time": 209.964416,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 113982,
+						"minzippedSize": 42948,
+						"time": 913.545334,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 126137,
+						"minzippedSize": 44450,
+						"time": 179.153333,
+						"runs": 1
+					}
+				}
+			}
+		}
+	},
+	"lodash": {
+		"version": "4.17.21",
+		"filePath": "/lodash.js",
+		"size": 544089,
+		"gzipSize": 96690,
+		"minified": {
+			"bun": {
+				"version": "1.0.30",
+				"result": {
+					"result": {
+						"minifiedSize": 74116,
+						"minzippedSize": 26500,
+						"time": 48.228959,
+						"runs": 1
+					}
+				}
+			},
+			"babel-minify": {
+				"version": "0.5.2",
+				"result": {
+					"result": {
+						"minifiedSize": 72367,
+						"minzippedSize": 25503,
+						"time": 1261.618416,
+						"runs": 1
+					}
+				}
+			},
+			"esbuild": {
+				"version": "0.19.12",
+				"result": {
+					"result": {
+						"minifiedSize": 72483,
+						"minzippedSize": 26200,
+						"time": 29.590166,
+						"runs": 1
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"version": "20230802.0.0",
+				"result": {
+					"result": {
+						"minifiedSize": 73466,
+						"minzippedSize": 24972,
+						"time": 2562.919375,
+						"runs": 1
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"version": "1.7.0",
+				"result": {
+					"result": {
+						"minifiedSize": 148780,
+						"minzippedSize": 36327,
+						"time": 142.022833,
+						"runs": 1
+					}
+				}
+			},
+			"@swc/core": {
+				"version": "1.4.8",
+				"result": {
+					"result": {
+						"minifiedSize": 69827,
+						"minzippedSize": 25183,
+						"time": 71.920833,
+						"runs": 1
+					}
+				}
+			},
+			"terser": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 70666,
+						"minzippedSize": 25186,
+						"time": 444.101875,
+						"runs": 1
+					}
+				}
+			},
+			"terser (no compress)": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 75293,
+						"minzippedSize": 26221,
+						"time": 239.544916,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 68242,
+						"minzippedSize": 24659,
+						"time": 1038.699125,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 74607,
+						"minzippedSize": 25862,
+						"time": 164.164583,
+						"runs": 1
+					}
+				}
+			}
+		}
+	},
+	"d3": {
+		"version": "6.3.1",
+		"filePath": "/dist/d3.js",
+		"size": 555767,
+		"gzipSize": 130686,
+		"minified": {
+			"bun": {
+				"version": "1.0.30",
+				"result": {
+					"result": {
+						"minifiedSize": 273630,
+						"minzippedSize": 92375,
+						"time": 102.06175,
+						"runs": 1
+					}
+				}
+			},
+			"babel-minify": {
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "unknown: Cannot read properties of undefined (reading 'add')",
+						"stack": "TypeError: unknown: Cannot read properties of undefined (reading 'add')\n    at ScopeTracker.addReference (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/scope-tracker.js:47:34)\n    at ReferencedIdentifier (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:202:26)\n    at newFn (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:216:17)\n    at bfsTraverse (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/bfs-traverse.js:38:43)\n    at Mangler.collect (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:235:7)\n    at Mangler.run (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:60:12)\n    at PluginPass.exit (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:546:19)\n    at newFn (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:175:21)\n    at NodePath._call (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:55:20)\n    at NodePath.call (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:42:17)",
+						"stage": "minification"
+					}
+				}
+			},
+			"esbuild": {
+				"version": "0.19.12",
+				"result": {
+					"result": {
+						"minifiedSize": 270129,
+						"minzippedSize": 90800,
+						"time": 46.416958,
+						"runs": 1
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"version": "20230802.0.0",
+				"result": {
+					"result": {
+						"minifiedSize": 270298,
+						"minzippedSize": 94121,
+						"time": 4338.558417,
+						"runs": 1
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"version": "1.7.0",
+				"result": {
+					"error": {
+						"message": "Unexpected identifier 'error'",
+						"stack": "fs-require://2/index.js:2\nFatal error: Uncaught RuntimeException: Unclosed regex pattern at position: 289075 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643\n      ^^^^^\n\nSyntaxError: Unexpected identifier 'error'\n    at new Script (node:vm:99:7)\n    at createScript (node:vm:255:10)\n    at Object.runInThisContext (node:vm:303:10)\n    at p. (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1165)\n    at s (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1657)\n    at requireString (/packages/artifacts/utils/require-string.ts:9:9)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:99:22)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:2)",
+						"stage": "post-validation"
+					}
+				}
+			},
+			"@swc/core": {
+				"version": "1.4.8",
+				"result": {
+					"result": {
+						"minifiedSize": 265266,
+						"minzippedSize": 87283,
+						"time": 168.403584,
+						"runs": 1
+					}
+				}
+			},
+			"terser": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 267904,
+						"minzippedSize": 88343,
+						"time": 1036.516791,
+						"runs": 1
+					}
+				}
+			},
+			"terser (no compress)": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 276467,
+						"minzippedSize": 89156,
+						"time": 516.984333,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 263905,
+						"minzippedSize": 87114,
+						"time": 1829.284667,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 275347,
+						"minzippedSize": 88319,
+						"time": 516.532542,
+						"runs": 1
+					}
+				}
+			}
+		}
+	},
+	"terser": {
+		"version": "5.29.2",
+		"filePath": "/dist/bundle.min.js",
+		"size": 1007265,
+		"gzipSize": 193423,
+		"minified": {
+			"bun": {
+				"version": "1.0.30",
+				"result": {
+					"result": {
+						"minifiedSize": 466036,
+						"minzippedSize": 127405,
+						"time": 188.710709,
+						"runs": 1
+					}
+				}
+			},
+			"babel-minify": {
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "unknown: Cannot read properties of undefined (reading 'add')",
+						"stack": "TypeError: unknown: Cannot read properties of undefined (reading 'add')\n    at ScopeTracker.addReference (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/scope-tracker.js:47:34)\n    at ReferencedIdentifier (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:202:26)\n    at newFn (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:216:17)\n    at bfsTraverse (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/bfs-traverse.js:38:43)\n    at Mangler.collect (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:235:7)\n    at Mangler.run (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:60:12)\n    at PluginPass.exit (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:546:19)\n    at newFn (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:175:21)\n    at NodePath._call (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:55:20)\n    at NodePath.call (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:42:17)",
+						"stage": "minification"
+					}
+				}
+			},
+			"esbuild": {
+				"version": "0.19.12",
+				"result": {
+					"result": {
+						"minifiedSize": 457996,
+						"minzippedSize": 126550,
+						"time": 68.850709,
+						"runs": 1
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"version": "20230802.0.0",
+				"result": {
+					"result": {
+						"minifiedSize": 439067,
+						"minzippedSize": 126313,
+						"time": 3762.925083,
+						"runs": 1
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"version": "1.7.0",
+				"result": {
+					"result": {
+						"minifiedSize": 632255,
+						"minzippedSize": 144940,
+						"time": 393.983917,
+						"runs": 1
+					}
+				}
+			},
+			"@swc/core": {
+				"version": "1.4.8",
+				"result": {
+					"result": {
+						"minifiedSize": 454727,
+						"minzippedSize": 122922,
+						"time": 154.961792,
+						"runs": 1
+					}
+				}
+			},
+			"terser": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 457381,
+						"minzippedSize": 123333,
+						"time": 1103.773083,
+						"runs": 1
+					}
+				}
+			},
+			"terser (no compress)": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 473361,
+						"minzippedSize": 124223,
+						"time": 447.79825,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 450915,
+						"minzippedSize": 123211,
+						"time": 1661.8102920000001,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 471138,
+						"minzippedSize": 124388,
+						"time": 359.292166,
+						"runs": 1
+					}
+				}
+			}
+		}
+	},
+	"three": {
+		"version": "0.124.0",
+		"filePath": "/build/three.js",
+		"size": 1247235,
+		"gzipSize": 248267,
+		"minified": {
+			"bun": {
+				"version": "1.0.30",
+				"result": {
+					"result": {
+						"minifiedSize": 662756,
+						"minzippedSize": 166480,
+						"time": 151.528625,
+						"runs": 1
+					}
+				}
+			},
+			"babel-minify": {
+				"version": "0.5.2",
+				"result": {
+					"result": {
+						"minifiedSize": 648830,
+						"minzippedSize": 162498,
+						"time": 6965.859417,
+						"runs": 1
+					}
+				}
+			},
+			"esbuild": {
+				"version": "0.19.12",
+				"result": {
+					"result": {
+						"minifiedSize": 646759,
+						"minzippedSize": 163725,
+						"time": 88.094,
+						"runs": 1
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"version": "20230802.0.0",
+				"result": {
+					"result": {
+						"minifiedSize": 644453,
+						"minzippedSize": 162971,
+						"time": 4789.412208,
+						"runs": 1
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"version": "1.7.0",
+				"result": {
+					"result": {
+						"minifiedSize": 952007,
+						"minzippedSize": 193471,
+						"time": 526.938417,
+						"runs": 1
+					}
+				}
+			},
+			"@swc/core": {
+				"version": "1.4.8",
+				"result": {
+					"result": {
+						"minifiedSize": 642879,
+						"minzippedSize": 158368,
+						"time": 237.64125,
+						"runs": 1
+					}
+				}
+			},
+			"terser": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 653986,
+						"minzippedSize": 159729,
+						"time": 1360.8125420000001,
+						"runs": 1
+					}
+				}
+			},
+			"terser (no compress)": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 675504,
+						"minzippedSize": 163198,
+						"time": 657.671709,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 642220,
+						"minzippedSize": 158907,
+						"time": 2409.5618329999998,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 674490,
+						"minzippedSize": 163036,
+						"time": 518.39425,
+						"runs": 1
+					}
+				}
+			}
+		}
+	},
+	"victory": {
+		"version": "35.8.4",
+		"filePath": "/dist/victory.js",
+		"size": 2132722,
+		"gzipSize": 309942,
+		"minified": {
+			"bun": {
+				"version": "1.0.30",
+				"result": {
+					"result": {
+						"minifiedSize": 728200,
+						"minzippedSize": 182567,
+						"time": 103.41275,
+						"runs": 1
+					}
+				}
+			},
+			"babel-minify": {
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "unknown: Cannot read properties of undefined (reading 'add')",
+						"stack": "TypeError: unknown: Cannot read properties of undefined (reading 'add')\n    at ScopeTracker.addReference (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/scope-tracker.js:47:34)\n    at ReferencedIdentifier (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:202:26)\n    at newFn (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:216:17)\n    at bfsTraverse (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/bfs-traverse.js:38:43)\n    at Mangler.collect (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:235:7)\n    at Mangler.run (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:60:12)\n    at PluginPass.exit (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:546:19)\n    at newFn (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:175:21)\n    at NodePath._call (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:55:20)\n    at NodePath.call (/Users/osame/Developer/github/privatenumber/minification-benchmarks/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:42:17)",
+						"stage": "minification"
+					}
+				}
+			},
+			"esbuild": {
+				"version": "0.19.12",
+				"result": {
+					"result": {
+						"minifiedSize": 724140,
+						"minzippedSize": 181071,
+						"time": 103.5695,
+						"runs": 1
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"version": "20230802.0.0",
+				"result": {
+					"result": {
+						"minifiedSize": 705866,
+						"minzippedSize": 175473,
+						"time": 5554.570875,
+						"runs": 1
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"version": "1.7.0",
+				"result": {
+					"error": {
+						"message": "Unexpected token '~'",
+						"stack": "fs-require://2/index.js:594\nreturn function(key,value){if(stack.length>0){var thisPos=stack.indexOf(this)~thisPos?stack.splice(thisPos+1):stack.push(this)~thisPos?keys.splice(thisPos,Infinity,key):keys.push(key)\n                                                                             ^\n\nSyntaxError: Unexpected token '~'\n    at new Script (node:vm:99:7)\n    at createScript (node:vm:255:10)\n    at Object.runInThisContext (node:vm:303:10)\n    at p. (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1165)\n    at s (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1657)\n    at requireString (/packages/artifacts/utils/require-string.ts:9:9)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:99:22)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:2)",
+						"stage": "post-validation"
+					}
+				}
+			},
+			"@swc/core": {
+				"version": "1.4.8",
+				"result": {
+					"result": {
+						"minifiedSize": 707209,
+						"minzippedSize": 157859,
+						"time": 348.021667,
+						"runs": 1
+					}
+				}
+			},
+			"terser": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 715587,
+						"minzippedSize": 158718,
+						"time": 1948.061791,
+						"runs": 1
+					}
+				}
+			},
+			"terser (no compress)": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 759337,
+						"minzippedSize": 166386,
+						"time": 791.861041,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 702670,
+						"minzippedSize": 158218,
+						"time": 3123.467416,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 756530,
+						"minzippedSize": 167579,
+						"time": 648.574375,
+						"runs": 1
+					}
+				}
+			}
+		}
+	},
+	"echarts": {
+		"version": "5.1.1",
+		"filePath": "/dist/echarts.js",
+		"size": 3196329,
+		"gzipSize": 684611,
+		"minified": {
+			"bun": {
+				"version": "1.0.30",
+				"result": {
+					"result": {
+						"minifiedSize": 1026633,
+						"minzippedSize": 337782,
+						"time": 107.226792,
+						"runs": 1
+					}
+				}
+			},
+			"babel-minify": {
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "Timed out"
+					}
+				}
+			},
+			"esbuild": {
+				"version": "0.19.12",
+				"result": {
+					"result": {
+						"minifiedSize": 1011234,
+						"minzippedSize": 331563,
+						"time": 149.880584,
+						"runs": 1
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"version": "20230802.0.0",
+				"result": {
+					"result": {
+						"minifiedSize": 990876,
+						"minzippedSize": 328229,
+						"time": 7250.9676660000005,
+						"runs": 1
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"version": "1.7.0",
+				"result": {
+					"error": {
+						"message": "Unexpected identifier 'error'",
+						"stack": "fs-require://2/index.js:2\nFatal error: Uncaught RuntimeException: Unclosed regex pattern at position: 37315 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643\n      ^^^^^\n\nSyntaxError: Unexpected identifier 'error'\n    at new Script (node:vm:99:7)\n    at createScript (node:vm:255:10)\n    at Object.runInThisContext (node:vm:303:10)\n    at p. (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1165)\n    at s (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1657)\n    at requireString (/packages/artifacts/utils/require-string.ts:9:9)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:99:22)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:2)",
+						"stage": "post-validation"
+					}
+				}
+			},
+			"@swc/core": {
+				"version": "1.4.8",
+				"result": {
+					"result": {
+						"minifiedSize": 993066,
+						"minzippedSize": 320246,
+						"time": 651.413167,
+						"runs": 1
+					}
+				}
+			},
+			"terser": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 1000982,
+						"minzippedSize": 322106,
+						"time": 3166.538416,
+						"runs": 1
+					}
+				}
+			},
+			"terser (no compress)": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 1071527,
+						"minzippedSize": 330736,
+						"time": 1449.616542,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 980140,
+						"minzippedSize": 326772,
+						"time": 5595.073875,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 1068386,
+						"minzippedSize": 331412,
+						"time": 1023.899417,
+						"runs": 1
+					}
+				}
+			}
+		}
+	},
+	"antd": {
+		"version": "4.16.1",
+		"filePath": "/dist/antd.js",
+		"size": 6672611,
+		"gzipSize": 825175,
+		"minified": {
+			"bun": {
+				"version": "1.0.30",
+				"result": {
+					"result": {
+						"minifiedSize": 2297027,
+						"minzippedSize": 491752,
+						"time": 182.096166,
+						"runs": 1
+					}
+				}
+			},
+			"babel-minify": {
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "Timed out"
+					}
+				}
+			},
+			"esbuild": {
+				"version": "0.19.12",
+				"result": {
+					"result": {
+						"minifiedSize": 2306394,
+						"minzippedSize": 488279,
+						"time": 209.133166,
+						"runs": 1
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"version": "20230802.0.0",
+				"result": {
+					"result": {
+						"minifiedSize": 2249302,
+						"minzippedSize": 482470,
+						"time": 7509.249166,
+						"runs": 1
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"version": "1.7.0",
+				"result": {
+					"result": {
+						"minifiedSize": 4449283,
+						"minzippedSize": 626675,
+						"time": 2368.353125,
+						"runs": 1
+					}
+				}
+			},
+			"@swc/core": {
+				"version": "1.4.8",
+				"result": {
+					"result": {
+						"minifiedSize": 2148550,
+						"minzippedSize": 452873,
+						"time": 787.195959,
+						"runs": 1
+					}
+				}
+			},
+			"terser": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 2249045,
+						"minzippedSize": 457817,
+						"time": 3716.6065,
+						"runs": 1
+					}
+				}
+			},
+			"terser (no compress)": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 2425048,
+						"minzippedSize": 475480,
+						"time": 1859.746,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 2227673,
+						"minzippedSize": 453926,
+						"time": 6697.139083,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 2420587,
+						"minzippedSize": 478572,
+						"time": 1360.878,
+						"runs": 1
+					}
+				}
+			}
+		}
+	},
 	"typescript": {
 		"version": "4.9.5",
 		"filePath": "/lib/typescript.js",
@@ -10,8 +1296,103 @@
 				"result": {
 					"error": {
 						"message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'",
-						"stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'\n    at Object.run (/packages/artifacts/artifacts/typescript/test.ts:13:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:101:9)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:2)",
+						"stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'\n    at Object.run (/packages/artifacts/artifacts/typescript/test.ts:13:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:102:9)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:2)",
 						"stage": "post-validation"
+					}
+				}
+			},
+			"babel-minify": {
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "Timed out"
+					}
+				}
+			},
+			"esbuild": {
+				"version": "0.19.12",
+				"result": {
+					"result": {
+						"minifiedSize": 3489518,
+						"minzippedSize": 915495,
+						"time": 354.033792,
+						"runs": 1
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"version": "20230802.0.0",
+				"result": {
+					"result": {
+						"minifiedSize": 3401759,
+						"minzippedSize": 902952,
+						"time": 12736.082,
+						"runs": 1
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"version": "1.7.0",
+				"result": {
+					"error": {
+						"message": "Unexpected identifier 'error'",
+						"stack": "fs-require://2/index.js:2\nFatal error: Uncaught RuntimeException: Unclosed regex pattern at position: 8365076 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643\n      ^^^^^\n\nSyntaxError: Unexpected identifier 'error'\n    at new Script (node:vm:99:7)\n    at createScript (node:vm:255:10)\n    at Object.runInThisContext (node:vm:303:10)\n    at p. (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1165)\n    at s (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1657)\n    at requireString (/packages/artifacts/utils/require-string.ts:9:9)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:99:22)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:2)",
+						"stage": "post-validation"
+					}
+				}
+			},
+			"@swc/core": {
+				"version": "1.4.8",
+				"result": {
+					"result": {
+						"minifiedSize": 3309542,
+						"minzippedSize": 852335,
+						"time": 1277.545333,
+						"runs": 1
+					}
+				}
+			},
+			"terser": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 3349343,
+						"minzippedSize": 854273,
+						"time": 7289.81225,
+						"runs": 1
+					}
+				}
+			},
+			"terser (no compress)": {
+				"version": "5.29.2",
+				"result": {
+					"result": {
+						"minifiedSize": 3530223,
+						"minzippedSize": 879301,
+						"time": 2534.084208,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 3269923,
+						"minzippedSize": 845107,
+						"time": 10821.187292,
+						"runs": 1
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"version": "3.17.4",
+				"result": {
+					"result": {
+						"minifiedSize": 3538024,
+						"minzippedSize": 876535,
+						"time": 1882.908625,
+						"runs": 1
 					}
 				}
 			}

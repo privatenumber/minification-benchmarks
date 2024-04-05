@@ -4,6 +4,8 @@
 	"type": "module",
 	"main": "index.ts",
 	"dependencies": {
-		"@minification-benchmarks/utils": "*"
+		"@minification-benchmarks/utils": "*",
+		"comment-mark": "^1.1.1",
+		"date-fns": "^3.6.0"
 	}
 }
