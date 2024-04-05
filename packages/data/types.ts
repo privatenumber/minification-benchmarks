@@ -11,6 +11,8 @@ export type Minifier = {
 export type Artifact = {
 	version: string;
 	filePath: string;
+	size: number;
+	gzipSize: number;
 	minified: {
 		[minifierName: string]: Minifier;
 	};

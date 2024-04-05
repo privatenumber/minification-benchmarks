@@ -49,8 +49,8 @@ export class Artifact {
 		meta: ArtifactMeta,
 	) {
 		this.meta = meta;
-		this.filePath = path.join(meta.package, meta.filePath);
-		this.fullFilePath = path.join(nodeModulesPath, this.filePath);
+		this.filePath = meta.filePath; // path.join(meta.package, meta.filePath);
+		this.fullFilePath = path.join(nodeModulesPath, meta.package, this.filePath);
 	}
 
 	async load() {
@@ -91,15 +91,17 @@ export class Artifact {
 		}
 
 		const test = await this.loadTest();
-
 		if (test.preprocess) {
 			code = test.preprocess(code);
 		}
 
 		const codeExport = requireString(code);
-		const restoreConsole = blockConsole();
-		test.run(codeExport);
-		restoreConsole();
+		const privateConsole = blockConsole();
+		try {
+			test.run(codeExport);
+		} finally {
+			privateConsole.restore();
+		}
 	}
 }
 

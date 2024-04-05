@@ -93,8 +93,11 @@ const minified = await runMinifier(minifierInstance, artifact.code!, artifact.fu
 
 try {
 	await artifact.validate(minified.code);
-} catch (error) {
-	logError(error, 'post-validation');
+} catch (_error) {
+	const error = _error as Error;
+	const cwd = process.cwd();
+	error.stack = error.stack!.replaceAll(cwd, '');
+	logError(error, 'post-validation');	
 }
 
 logResult(minified);

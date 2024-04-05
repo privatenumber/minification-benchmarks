@@ -33,6 +33,9 @@ const benchmark = async (
 		{
 			timeout,
 			reject: false,
+			env: {
+				NO_COLOR: '1',
+			},
 		},
 	);
 
@@ -45,10 +48,10 @@ const benchmark = async (
 	}
 
 	if (minificationProcess.failed) {
-		return safeJsonParse(minificationProcess.stderr);
+		return safeJsonParse(minificationProcess.stderr) as BenchmarkResult;
 	}
 
-	return safeJsonParse(minificationProcess.stdout);
+	return safeJsonParse(minificationProcess.stdout) as BenchmarkResult;
 };
 
 const getAverage = (

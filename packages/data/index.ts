@@ -72,6 +72,8 @@ export const saveResults = async (
 		foundArtifact = {
 			version: artifact.packageJson.version,
 			filePath: artifact.filePath,
+			size: artifact.size,
+			gzipSize: artifact.gzipSize,
 			minified: {},
 		};
 		data[artifact.name] = foundArtifact;
