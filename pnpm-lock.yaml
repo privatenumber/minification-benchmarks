@@ -127,8 +127,8 @@ importers:
         specifier: '*'
         version: link:../utils
       byte-size:
-        specifier: ^8.1.0
-        version: 8.1.0
+        specifier: ^8.1.1
+        version: 8.1.1
       cleye:
         specifier: ^1.3.1
         version: 1.3.1
@@ -138,12 +138,6 @@ importers:
       fs-require:
         specifier: ^1.6.0
         version: 1.6.0
-      lodash-es:
-        specifier: ^4.17.21
-        version: 4.17.21
-      markdown-table:
-        specifier: ^3.0.2
-        version: 3.0.2
       memfs:
         specifier: ^3.4.13
         version: 3.4.13
@@ -157,21 +151,37 @@ importers:
       '@types/byte-size':
         specifier: ^8.1.0
         version: 8.1.0
-      '@types/lodash-es':
-        specifier: ^4.17.12
-        version: 4.17.12
 
   packages/data:
     dependencies:
+      '@minification-benchmarks/bench':
+        specifier: '*'
+        version: link:../bench
       '@minification-benchmarks/utils':
         specifier: '*'
         version: link:../utils
+      byte-size:
+        specifier: ^8.1.1
+        version: 8.1.1
       comment-mark:
         specifier: ^1.1.1
         version: 1.1.1
       date-fns:
         specifier: ^3.6.0
         version: 3.6.0
+      lodash-es:
+        specifier: ^4.17.21
+        version: 4.17.21
+      markdown-table:
+        specifier: ^3.0.3
+        version: 3.0.3
+    devDependencies:
+      '@types/byte-size':
+        specifier: ^8.1.0
+        version: 8.1.0
+      '@types/lodash-es':
+        specifier: ^4.17.12
+        version: 4.17.12
 
   packages/minifiers:
     dependencies:
@@ -2174,8 +2184,8 @@ packages:
       '@oven/bun-linux-x64-baseline': 1.0.30
     dev: false
 
-  /byte-size@8.1.0:
-    resolution: {integrity: sha512-FkgMTAg44I0JtEaUAvuZTtU2a2YDmBRbQxdsQNSMtLCjhG0hMcF5b1IMN9UjSCJaU4nvlj/GER7B9sI4nKdCgA==}
+  /byte-size@8.1.1:
+    resolution: {integrity: sha512-tUkzZWK0M/qdoLEqikxBWe4kumyuwjl3HO6zHTr4yEI23EojPtLYXdG1+AQY7MN0cGyNDvEaJ8wiYQm6P2bPxg==}
     engines: {node: '>=12.17'}
     dev: false
 
@@ -4691,8 +4701,8 @@ packages:
       p-defer: 1.0.0
     dev: false
 
-  /markdown-table@3.0.2:
-    resolution: {integrity: sha512-y8j3a5/DkJCmS5x4dMCQL+OR0+2EAq3DOtio1COSHsmW2BGXnNCK3v12hJt1LrUz5iZH5g0LmuYOjDdI+czghA==}
+  /markdown-table@3.0.3:
+    resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
     dev: false
 
   /mdast-util-from-markdown@0.8.5:

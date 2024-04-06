@@ -5,24 +5,24 @@
 		"size": 72132,
 		"gzipSize": 19385,
 		"minified": {
-			"bun": {
-				"version": "1.0.30",
+			"babel-minify": {
+				"version": "0.5.2",
 				"result": {
-					"result": {
-						"minifiedSize": 24011,
-						"minzippedSize": 8650,
-						"time": 66.134834,
+					"data": {
+						"minifiedSize": 23601,
+						"minzippedSize": 8448,
+						"time": 340.484291,
 						"runs": 1
 					}
 				}
 			},
-			"babel-minify": {
-				"version": "0.5.2",
+			"bun": {
+				"version": "1.0.30",
 				"result": {
-					"result": {
-						"minifiedSize": 23601,
-						"minzippedSize": 8448,
-						"time": 435.849042,
+					"data": {
+						"minifiedSize": 24011,
+						"minzippedSize": 8650,
+						"time": 1482.963125,
 						"runs": 1
 					}
 				}
@@ -30,10 +30,10 @@
 			"esbuild": {
 				"version": "0.19.12",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 23697,
 						"minzippedSize": 8543,
-						"time": 37.923333,
+						"time": 13.339625,
 						"runs": 1
 					}
 				}
@@ -41,10 +41,10 @@
 			"google-closure-compiler": {
 				"version": "20230802.0.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 22825,
 						"minzippedSize": 8193,
-						"time": 2278.959375,
+						"time": 1988.927792,
 						"runs": 1
 					}
 				}
@@ -52,10 +52,10 @@
 			"tedivm/jshrink": {
 				"version": "1.7.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 40821,
 						"minzippedSize": 11040,
-						"time": 1498.141792,
+						"time": 554.78925,
 						"runs": 1
 					}
 				}
@@ -63,10 +63,10 @@
 			"@swc/core": {
 				"version": "1.4.8",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 22866,
 						"minzippedSize": 8173,
-						"time": 18.737708,
+						"time": 41.326042,
 						"runs": 1
 					}
 				}
@@ -74,10 +74,10 @@
 			"terser": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 23141,
 						"minzippedSize": 8317,
-						"time": 143.759666,
+						"time": 115.209125,
 						"runs": 1
 					}
 				}
@@ -85,10 +85,10 @@
 			"terser (no compress)": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 25081,
 						"minzippedSize": 8746,
-						"time": 56.55825,
+						"time": 48.31475,
 						"runs": 1
 					}
 				}
@@ -96,10 +96,10 @@
 			"uglify-js": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 22668,
 						"minzippedSize": 8184,
-						"time": 320.439333,
+						"time": 201.882375,
 						"runs": 1
 					}
 				}
@@ -107,10 +107,10 @@
 			"uglify-js (no compress)": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 25030,
 						"minzippedSize": 8668,
-						"time": 44.958542,
+						"time": 37.335,
 						"runs": 1
 					}
 				}
@@ -123,24 +123,24 @@
 		"size": 173902,
 		"gzipSize": 36231,
 		"minified": {
-			"bun": {
-				"version": "1.0.30",
+			"babel-minify": {
+				"version": "0.5.2",
 				"result": {
-					"result": {
-						"minifiedSize": 61856,
-						"minzippedSize": 19873,
-						"time": 44.34475,
+					"data": {
+						"minifiedSize": 59703,
+						"minzippedSize": 19119,
+						"time": 681.066,
 						"runs": 1
 					}
 				}
 			},
-			"babel-minify": {
-				"version": "0.5.2",
+			"bun": {
+				"version": "1.0.30",
 				"result": {
-					"result": {
-						"minifiedSize": 59703,
-						"minzippedSize": 19119,
-						"time": 884.861042,
+					"data": {
+						"minifiedSize": 61856,
+						"minzippedSize": 19873,
+						"time": 42.572709,
 						"runs": 1
 					}
 				}
@@ -148,10 +148,10 @@
 			"esbuild": {
 				"version": "0.19.12",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 59824,
 						"minzippedSize": 19334,
-						"time": 25.404458,
+						"time": 17.853584,
 						"runs": 1
 					}
 				}
@@ -159,10 +159,10 @@
 			"google-closure-compiler": {
 				"version": "20230802.0.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 58273,
 						"minzippedSize": 18910,
-						"time": 2340.492792,
+						"time": 2004.515,
 						"runs": 1
 					}
 				}
@@ -170,10 +170,10 @@
 			"tedivm/jshrink": {
 				"version": "1.7.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 97632,
 						"minzippedSize": 24998,
-						"time": 99.188958,
+						"time": 112.798083,
 						"runs": 1
 					}
 				}
@@ -181,10 +181,10 @@
 			"@swc/core": {
 				"version": "1.4.8",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 58210,
 						"minzippedSize": 18686,
-						"time": 28.778375,
+						"time": 34.220667,
 						"runs": 1
 					}
 				}
@@ -192,10 +192,10 @@
 			"terser": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 59162,
 						"minzippedSize": 18694,
-						"time": 298.977208,
+						"time": 258.757292,
 						"runs": 1
 					}
 				}
@@ -203,10 +203,10 @@
 			"terser (no compress)": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 63151,
 						"minzippedSize": 19683,
-						"time": 143.510375,
+						"time": 112.753666,
 						"runs": 1
 					}
 				}
@@ -214,10 +214,10 @@
 			"uglify-js": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 57865,
 						"minzippedSize": 18567,
-						"time": 555.251416,
+						"time": 445.81725,
 						"runs": 1
 					}
 				}
@@ -225,10 +225,10 @@
 			"uglify-js (no compress)": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 62495,
 						"minzippedSize": 19569,
-						"time": 93.312,
+						"time": 82.904875,
 						"runs": 1
 					}
 				}
@@ -241,24 +241,24 @@
 		"size": 287628,
 		"gzipSize": 84498,
 		"minified": {
-			"bun": {
-				"version": "1.0.30",
+			"babel-minify": {
+				"version": "0.5.2",
 				"result": {
-					"result": {
-						"minifiedSize": 92559,
-						"minzippedSize": 32703,
-						"time": 95.104417,
+					"data": {
+						"minifiedSize": 92103,
+						"minzippedSize": 31799,
+						"time": 1125.653083,
 						"runs": 1
 					}
 				}
 			},
-			"babel-minify": {
-				"version": "0.5.2",
+			"bun": {
+				"version": "1.0.30",
 				"result": {
-					"result": {
-						"minifiedSize": 92103,
-						"minzippedSize": 31799,
-						"time": 1455.597542,
+					"data": {
+						"minifiedSize": 92559,
+						"minzippedSize": 32703,
+						"time": 44.116458,
 						"runs": 1
 					}
 				}
@@ -266,10 +266,10 @@
 			"esbuild": {
 				"version": "0.19.12",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 90065,
 						"minzippedSize": 31954,
-						"time": 23.970667,
+						"time": 23.337334,
 						"runs": 1
 					}
 				}
@@ -277,10 +277,10 @@
 			"google-closure-compiler": {
 				"version": "20230802.0.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 92704,
 						"minzippedSize": 33086,
-						"time": 2421.269625,
+						"time": 1964.42225,
 						"runs": 1
 					}
 				}
@@ -288,10 +288,10 @@
 			"tedivm/jshrink": {
 				"version": "1.7.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 144144,
 						"minzippedSize": 40879,
-						"time": 119.240875,
+						"time": 101.455042,
 						"runs": 1
 					}
 				}
@@ -299,10 +299,10 @@
 			"@swc/core": {
 				"version": "1.4.8",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 89158,
 						"minzippedSize": 30870,
-						"time": 81.721916,
+						"time": 46.8295,
 						"runs": 1
 					}
 				}
@@ -310,10 +310,10 @@
 			"terser": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 89540,
 						"minzippedSize": 30912,
-						"time": 453.905833,
+						"time": 334.864708,
 						"runs": 1
 					}
 				}
@@ -321,10 +321,10 @@
 			"terser (no compress)": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 94554,
 						"minzippedSize": 31621,
-						"time": 179.813625,
+						"time": 148.7445,
 						"runs": 1
 					}
 				}
@@ -332,10 +332,10 @@
 			"uglify-js": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 88539,
 						"minzippedSize": 30891,
-						"time": 788.048084,
+						"time": 605.712875,
 						"runs": 1
 					}
 				}
@@ -343,10 +343,10 @@
 			"uglify-js (no compress)": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 94082,
 						"minzippedSize": 31470,
-						"time": 167.308042,
+						"time": 118.011542,
 						"runs": 1
 					}
 				}
@@ -359,24 +359,24 @@
 		"size": 342146,
 		"gzipSize": 89668,
 		"minified": {
-			"bun": {
-				"version": "1.0.30",
+			"babel-minify": {
+				"version": "0.5.2",
 				"result": {
-					"result": {
-						"minifiedSize": 121703,
-						"minzippedSize": 45340,
-						"time": 46.613125,
+					"data": {
+						"minifiedSize": 117896,
+						"minzippedSize": 43925,
+						"time": 1208.051917,
 						"runs": 1
 					}
 				}
 			},
-			"babel-minify": {
-				"version": "0.5.2",
+			"bun": {
+				"version": "1.0.30",
 				"result": {
-					"result": {
-						"minifiedSize": 117896,
-						"minzippedSize": 43925,
-						"time": 1544.8843339999999,
+					"data": {
+						"minifiedSize": 121703,
+						"minzippedSize": 45340,
+						"time": 37.815959,
 						"runs": 1
 					}
 				}
@@ -384,10 +384,10 @@
 			"esbuild": {
 				"version": "0.19.12",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 118141,
 						"minzippedSize": 44368,
-						"time": 46.555458,
+						"time": 26.188084,
 						"runs": 1
 					}
 				}
@@ -395,10 +395,10 @@
 			"google-closure-compiler": {
 				"version": "20230802.0.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 115604,
 						"minzippedSize": 44226,
-						"time": 2751.783542,
+						"time": 2245.920417,
 						"runs": 1
 					}
 				}
@@ -406,10 +406,10 @@
 			"tedivm/jshrink": {
 				"version": "1.7.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 197357,
 						"minzippedSize": 57169,
-						"time": 204.038042,
+						"time": 129.425542,
 						"runs": 1
 					}
 				}
@@ -417,10 +417,10 @@
 			"@swc/core": {
 				"version": "1.4.8",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 115461,
 						"minzippedSize": 42477,
-						"time": 76.337709,
+						"time": 68.250416,
 						"runs": 1
 					}
 				}
@@ -428,10 +428,10 @@
 			"terser": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 116826,
 						"minzippedSize": 42939,
-						"time": 527.9525,
+						"time": 423.950083,
 						"runs": 1
 					}
 				}
@@ -439,10 +439,10 @@
 			"terser (no compress)": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 126580,
 						"minzippedSize": 44679,
-						"time": 209.964416,
+						"time": 208.838333,
 						"runs": 1
 					}
 				}
@@ -450,10 +450,10 @@
 			"uglify-js": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 113982,
 						"minzippedSize": 42948,
-						"time": 913.545334,
+						"time": 820.988583,
 						"runs": 1
 					}
 				}
@@ -461,10 +461,10 @@
 			"uglify-js (no compress)": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 126137,
 						"minzippedSize": 44450,
-						"time": 179.153333,
+						"time": 157.298917,
 						"runs": 1
 					}
 				}
@@ -477,24 +477,24 @@
 		"size": 544089,
 		"gzipSize": 96690,
 		"minified": {
-			"bun": {
-				"version": "1.0.30",
+			"babel-minify": {
+				"version": "0.5.2",
 				"result": {
-					"result": {
-						"minifiedSize": 74116,
-						"minzippedSize": 26500,
-						"time": 48.228959,
+					"data": {
+						"minifiedSize": 72367,
+						"minzippedSize": 25503,
+						"time": 969.588375,
 						"runs": 1
 					}
 				}
 			},
-			"babel-minify": {
-				"version": "0.5.2",
+			"bun": {
+				"version": "1.0.30",
 				"result": {
-					"result": {
-						"minifiedSize": 72367,
-						"minzippedSize": 25503,
-						"time": 1261.618416,
+					"data": {
+						"minifiedSize": 74116,
+						"minzippedSize": 26500,
+						"time": 47.67025,
 						"runs": 1
 					}
 				}
@@ -502,10 +502,10 @@
 			"esbuild": {
 				"version": "0.19.12",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 72483,
 						"minzippedSize": 26200,
-						"time": 29.590166,
+						"time": 24.329667,
 						"runs": 1
 					}
 				}
@@ -513,10 +513,10 @@
 			"google-closure-compiler": {
 				"version": "20230802.0.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 73466,
 						"minzippedSize": 24972,
-						"time": 2562.919375,
+						"time": 2022.095208,
 						"runs": 1
 					}
 				}
@@ -524,10 +524,10 @@
 			"tedivm/jshrink": {
 				"version": "1.7.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 148780,
 						"minzippedSize": 36327,
-						"time": 142.022833,
+						"time": 109.288625,
 						"runs": 1
 					}
 				}
@@ -535,10 +535,10 @@
 			"@swc/core": {
 				"version": "1.4.8",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 69827,
 						"minzippedSize": 25183,
-						"time": 71.920833,
+						"time": 64.367834,
 						"runs": 1
 					}
 				}
@@ -546,10 +546,10 @@
 			"terser": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 70666,
 						"minzippedSize": 25186,
-						"time": 444.101875,
+						"time": 363.199333,
 						"runs": 1
 					}
 				}
@@ -557,10 +557,10 @@
 			"terser (no compress)": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 75293,
 						"minzippedSize": 26221,
-						"time": 239.544916,
+						"time": 163.324625,
 						"runs": 1
 					}
 				}
@@ -568,10 +568,10 @@
 			"uglify-js": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 68242,
 						"minzippedSize": 24659,
-						"time": 1038.699125,
+						"time": 629.087,
 						"runs": 1
 					}
 				}
@@ -579,10 +579,10 @@
 			"uglify-js (no compress)": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 74607,
 						"minzippedSize": 25862,
-						"time": 164.164583,
+						"time": 138.039542,
 						"runs": 1
 					}
 				}
@@ -595,17 +595,6 @@
 		"size": 555767,
 		"gzipSize": 130686,
 		"minified": {
-			"bun": {
-				"version": "1.0.30",
-				"result": {
-					"result": {
-						"minifiedSize": 273630,
-						"minzippedSize": 92375,
-						"time": 102.06175,
-						"runs": 1
-					}
-				}
-			},
 			"babel-minify": {
 				"version": "0.5.2",
 				"result": {
@@ -616,13 +605,24 @@
 					}
 				}
 			},
+			"bun": {
+				"version": "1.0.30",
+				"result": {
+					"data": {
+						"minifiedSize": 273630,
+						"minzippedSize": 92375,
+						"time": 53.475458,
+						"runs": 1
+					}
+				}
+			},
 			"esbuild": {
 				"version": "0.19.12",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 270129,
 						"minzippedSize": 90800,
-						"time": 46.416958,
+						"time": 41.525666,
 						"runs": 1
 					}
 				}
@@ -630,10 +630,10 @@
 			"google-closure-compiler": {
 				"version": "20230802.0.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 270298,
 						"minzippedSize": 94121,
-						"time": 4338.558417,
+						"time": 3363.691417,
 						"runs": 1
 					}
 				}
@@ -651,10 +651,10 @@
 			"@swc/core": {
 				"version": "1.4.8",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 265266,
 						"minzippedSize": 87283,
-						"time": 168.403584,
+						"time": 155.272833,
 						"runs": 1
 					}
 				}
@@ -662,10 +662,10 @@
 			"terser": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 267904,
 						"minzippedSize": 88343,
-						"time": 1036.516791,
+						"time": 901.1995,
 						"runs": 1
 					}
 				}
@@ -673,10 +673,10 @@
 			"terser (no compress)": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 276467,
 						"minzippedSize": 89156,
-						"time": 516.984333,
+						"time": 463.789042,
 						"runs": 1
 					}
 				}
@@ -684,10 +684,10 @@
 			"uglify-js": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 263905,
 						"minzippedSize": 87114,
-						"time": 1829.284667,
+						"time": 1526.456042,
 						"runs": 1
 					}
 				}
@@ -695,10 +695,10 @@
 			"uglify-js (no compress)": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 275347,
 						"minzippedSize": 88319,
-						"time": 516.532542,
+						"time": 286.955334,
 						"runs": 1
 					}
 				}
@@ -711,17 +711,6 @@
 		"size": 1007265,
 		"gzipSize": 193423,
 		"minified": {
-			"bun": {
-				"version": "1.0.30",
-				"result": {
-					"result": {
-						"minifiedSize": 466036,
-						"minzippedSize": 127405,
-						"time": 188.710709,
-						"runs": 1
-					}
-				}
-			},
 			"babel-minify": {
 				"version": "0.5.2",
 				"result": {
@@ -732,13 +721,24 @@
 					}
 				}
 			},
+			"bun": {
+				"version": "1.0.30",
+				"result": {
+					"data": {
+						"minifiedSize": 466036,
+						"minzippedSize": 127405,
+						"time": 54.540042,
+						"runs": 1
+					}
+				}
+			},
 			"esbuild": {
 				"version": "0.19.12",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 457996,
 						"minzippedSize": 126550,
-						"time": 68.850709,
+						"time": 48.663458,
 						"runs": 1
 					}
 				}
@@ -746,10 +746,10 @@
 			"google-closure-compiler": {
 				"version": "20230802.0.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 439067,
 						"minzippedSize": 126313,
-						"time": 3762.925083,
+						"time": 2910.4315,
 						"runs": 1
 					}
 				}
@@ -757,10 +757,10 @@
 			"tedivm/jshrink": {
 				"version": "1.7.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 632255,
 						"minzippedSize": 144940,
-						"time": 393.983917,
+						"time": 327.304625,
 						"runs": 1
 					}
 				}
@@ -768,10 +768,10 @@
 			"@swc/core": {
 				"version": "1.4.8",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 454727,
 						"minzippedSize": 122922,
-						"time": 154.961792,
+						"time": 142.457666,
 						"runs": 1
 					}
 				}
@@ -779,10 +779,10 @@
 			"terser": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 457381,
 						"minzippedSize": 123333,
-						"time": 1103.773083,
+						"time": 842.86225,
 						"runs": 1
 					}
 				}
@@ -790,10 +790,10 @@
 			"terser (no compress)": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 473361,
 						"minzippedSize": 124223,
-						"time": 447.79825,
+						"time": 396.019917,
 						"runs": 1
 					}
 				}
@@ -801,10 +801,10 @@
 			"uglify-js": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 450915,
 						"minzippedSize": 123211,
-						"time": 1661.8102920000001,
+						"time": 1444.046,
 						"runs": 1
 					}
 				}
@@ -812,10 +812,10 @@
 			"uglify-js (no compress)": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 471138,
 						"minzippedSize": 124388,
-						"time": 359.292166,
+						"time": 326.30175,
 						"runs": 1
 					}
 				}
@@ -828,24 +828,24 @@
 		"size": 1247235,
 		"gzipSize": 248267,
 		"minified": {
-			"bun": {
-				"version": "1.0.30",
+			"babel-minify": {
+				"version": "0.5.2",
 				"result": {
-					"result": {
-						"minifiedSize": 662756,
-						"minzippedSize": 166480,
-						"time": 151.528625,
+					"data": {
+						"minifiedSize": 648830,
+						"minzippedSize": 162498,
+						"time": 6241.97,
 						"runs": 1
 					}
 				}
 			},
-			"babel-minify": {
-				"version": "0.5.2",
+			"bun": {
+				"version": "1.0.30",
 				"result": {
-					"result": {
-						"minifiedSize": 648830,
-						"minzippedSize": 162498,
-						"time": 6965.859417,
+					"data": {
+						"minifiedSize": 662756,
+						"minzippedSize": 166480,
+						"time": 74.27475,
 						"runs": 1
 					}
 				}
@@ -853,10 +853,10 @@
 			"esbuild": {
 				"version": "0.19.12",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 646759,
 						"minzippedSize": 163725,
-						"time": 88.094,
+						"time": 57.191542,
 						"runs": 1
 					}
 				}
@@ -864,10 +864,10 @@
 			"google-closure-compiler": {
 				"version": "20230802.0.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 644453,
 						"minzippedSize": 162971,
-						"time": 4789.412208,
+						"time": 3597.697583,
 						"runs": 1
 					}
 				}
@@ -875,10 +875,10 @@
 			"tedivm/jshrink": {
 				"version": "1.7.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 952007,
 						"minzippedSize": 193471,
-						"time": 526.938417,
+						"time": 471.125875,
 						"runs": 1
 					}
 				}
@@ -886,10 +886,10 @@
 			"@swc/core": {
 				"version": "1.4.8",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 642879,
 						"minzippedSize": 158368,
-						"time": 237.64125,
+						"time": 197.4335,
 						"runs": 1
 					}
 				}
@@ -897,10 +897,10 @@
 			"terser": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 653986,
 						"minzippedSize": 159729,
-						"time": 1360.8125420000001,
+						"time": 1196.070959,
 						"runs": 1
 					}
 				}
@@ -908,10 +908,10 @@
 			"terser (no compress)": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 675504,
 						"minzippedSize": 163198,
-						"time": 657.671709,
+						"time": 587.04975,
 						"runs": 1
 					}
 				}
@@ -919,10 +919,10 @@
 			"uglify-js": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 642220,
 						"minzippedSize": 158907,
-						"time": 2409.5618329999998,
+						"time": 1963.376,
 						"runs": 1
 					}
 				}
@@ -930,10 +930,10 @@
 			"uglify-js (no compress)": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 674490,
 						"minzippedSize": 163036,
-						"time": 518.39425,
+						"time": 445.078792,
 						"runs": 1
 					}
 				}
@@ -946,17 +946,6 @@
 		"size": 2132722,
 		"gzipSize": 309942,
 		"minified": {
-			"bun": {
-				"version": "1.0.30",
-				"result": {
-					"result": {
-						"minifiedSize": 728200,
-						"minzippedSize": 182567,
-						"time": 103.41275,
-						"runs": 1
-					}
-				}
-			},
 			"babel-minify": {
 				"version": "0.5.2",
 				"result": {
@@ -967,13 +956,24 @@
 					}
 				}
 			},
+			"bun": {
+				"version": "1.0.30",
+				"result": {
+					"data": {
+						"minifiedSize": 728200,
+						"minzippedSize": 182567,
+						"time": 69.041125,
+						"runs": 1
+					}
+				}
+			},
 			"esbuild": {
 				"version": "0.19.12",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 724140,
 						"minzippedSize": 181071,
-						"time": 103.5695,
+						"time": 79.807417,
 						"runs": 1
 					}
 				}
@@ -981,10 +981,10 @@
 			"google-closure-compiler": {
 				"version": "20230802.0.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 705866,
 						"minzippedSize": 175473,
-						"time": 5554.570875,
+						"time": 4068.814708,
 						"runs": 1
 					}
 				}
@@ -1002,10 +1002,10 @@
 			"@swc/core": {
 				"version": "1.4.8",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 707209,
 						"minzippedSize": 157859,
-						"time": 348.021667,
+						"time": 281.431,
 						"runs": 1
 					}
 				}
@@ -1013,10 +1013,10 @@
 			"terser": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 715587,
 						"minzippedSize": 158718,
-						"time": 1948.061791,
+						"time": 1646.3222919999998,
 						"runs": 1
 					}
 				}
@@ -1024,10 +1024,10 @@
 			"terser (no compress)": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 759337,
 						"minzippedSize": 166386,
-						"time": 791.861041,
+						"time": 703.551292,
 						"runs": 1
 					}
 				}
@@ -1035,10 +1035,10 @@
 			"uglify-js": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 702670,
 						"minzippedSize": 158218,
-						"time": 3123.467416,
+						"time": 2584.0065,
 						"runs": 1
 					}
 				}
@@ -1046,10 +1046,10 @@
 			"uglify-js (no compress)": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 756530,
 						"minzippedSize": 167579,
-						"time": 648.574375,
+						"time": 565.119125,
 						"runs": 1
 					}
 				}
@@ -1062,17 +1062,6 @@
 		"size": 3196329,
 		"gzipSize": 684611,
 		"minified": {
-			"bun": {
-				"version": "1.0.30",
-				"result": {
-					"result": {
-						"minifiedSize": 1026633,
-						"minzippedSize": 337782,
-						"time": 107.226792,
-						"runs": 1
-					}
-				}
-			},
 			"babel-minify": {
 				"version": "0.5.2",
 				"result": {
@@ -1081,13 +1070,24 @@
 					}
 				}
 			},
+			"bun": {
+				"version": "1.0.30",
+				"result": {
+					"data": {
+						"minifiedSize": 1026633,
+						"minzippedSize": 337782,
+						"time": 113.620708,
+						"runs": 1
+					}
+				}
+			},
 			"esbuild": {
 				"version": "0.19.12",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 1011234,
 						"minzippedSize": 331563,
-						"time": 149.880584,
+						"time": 123.692084,
 						"runs": 1
 					}
 				}
@@ -1095,10 +1095,10 @@
 			"google-closure-compiler": {
 				"version": "20230802.0.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 990876,
 						"minzippedSize": 328229,
-						"time": 7250.9676660000005,
+						"time": 5793.596375,
 						"runs": 1
 					}
 				}
@@ -1116,10 +1116,10 @@
 			"@swc/core": {
 				"version": "1.4.8",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 993066,
 						"minzippedSize": 320246,
-						"time": 651.413167,
+						"time": 578.406125,
 						"runs": 1
 					}
 				}
@@ -1127,10 +1127,10 @@
 			"terser": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 1000982,
 						"minzippedSize": 322106,
-						"time": 3166.538416,
+						"time": 2600.701375,
 						"runs": 1
 					}
 				}
@@ -1138,10 +1138,10 @@
 			"terser (no compress)": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 1071527,
 						"minzippedSize": 330736,
-						"time": 1449.616542,
+						"time": 1222.612833,
 						"runs": 1
 					}
 				}
@@ -1149,10 +1149,10 @@
 			"uglify-js": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 980140,
 						"minzippedSize": 326772,
-						"time": 5595.073875,
+						"time": 4689.141458,
 						"runs": 1
 					}
 				}
@@ -1160,10 +1160,10 @@
 			"uglify-js (no compress)": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 1068386,
 						"minzippedSize": 331412,
-						"time": 1023.899417,
+						"time": 774.754541,
 						"runs": 1
 					}
 				}
@@ -1176,17 +1176,6 @@
 		"size": 6672611,
 		"gzipSize": 825175,
 		"minified": {
-			"bun": {
-				"version": "1.0.30",
-				"result": {
-					"result": {
-						"minifiedSize": 2297027,
-						"minzippedSize": 491752,
-						"time": 182.096166,
-						"runs": 1
-					}
-				}
-			},
 			"babel-minify": {
 				"version": "0.5.2",
 				"result": {
@@ -1195,13 +1184,24 @@
 					}
 				}
 			},
+			"bun": {
+				"version": "1.0.30",
+				"result": {
+					"data": {
+						"minifiedSize": 2297027,
+						"minzippedSize": 491752,
+						"time": 139.574958,
+						"runs": 1
+					}
+				}
+			},
 			"esbuild": {
 				"version": "0.19.12",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 2306394,
 						"minzippedSize": 488279,
-						"time": 209.133166,
+						"time": 184.347542,
 						"runs": 1
 					}
 				}
@@ -1209,10 +1209,10 @@
 			"google-closure-compiler": {
 				"version": "20230802.0.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 2249302,
 						"minzippedSize": 482470,
-						"time": 7509.249166,
+						"time": 5940.434166,
 						"runs": 1
 					}
 				}
@@ -1220,10 +1220,10 @@
 			"tedivm/jshrink": {
 				"version": "1.7.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 4449283,
 						"minzippedSize": 626675,
-						"time": 2368.353125,
+						"time": 1715.6295420000001,
 						"runs": 1
 					}
 				}
@@ -1231,10 +1231,10 @@
 			"@swc/core": {
 				"version": "1.4.8",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 2148550,
 						"minzippedSize": 452873,
-						"time": 787.195959,
+						"time": 657.044209,
 						"runs": 1
 					}
 				}
@@ -1242,10 +1242,10 @@
 			"terser": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 2249045,
 						"minzippedSize": 457817,
-						"time": 3716.6065,
+						"time": 2915.629375,
 						"runs": 1
 					}
 				}
@@ -1253,10 +1253,10 @@
 			"terser (no compress)": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 2425048,
 						"minzippedSize": 475480,
-						"time": 1859.746,
+						"time": 1490.914542,
 						"runs": 1
 					}
 				}
@@ -1264,10 +1264,10 @@
 			"uglify-js": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 2227673,
 						"minzippedSize": 453926,
-						"time": 6697.139083,
+						"time": 4573.044167,
 						"runs": 1
 					}
 				}
@@ -1275,10 +1275,10 @@
 			"uglify-js (no compress)": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 2420587,
 						"minzippedSize": 478572,
-						"time": 1360.878,
+						"time": 1130.76375,
 						"runs": 1
 					}
 				}
@@ -1291,6 +1291,14 @@
 		"size": 10945727,
 		"gzipSize": 1884998,
 		"minified": {
+			"babel-minify": {
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "Timed out"
+					}
+				}
+			},
 			"bun": {
 				"version": "1.0.30",
 				"result": {
@@ -1301,21 +1309,13 @@
 					}
 				}
 			},
-			"babel-minify": {
-				"version": "0.5.2",
-				"result": {
-					"error": {
-						"message": "Timed out"
-					}
-				}
-			},
 			"esbuild": {
 				"version": "0.19.12",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 3489518,
 						"minzippedSize": 915495,
-						"time": 354.033792,
+						"time": 307.712875,
 						"runs": 1
 					}
 				}
@@ -1323,10 +1323,10 @@
 			"google-closure-compiler": {
 				"version": "20230802.0.0",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 3401759,
 						"minzippedSize": 902952,
-						"time": 12736.082,
+						"time": 9583.234375,
 						"runs": 1
 					}
 				}
@@ -1344,10 +1344,10 @@
 			"@swc/core": {
 				"version": "1.4.8",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 3309542,
 						"minzippedSize": 852335,
-						"time": 1277.545333,
+						"time": 1284.874625,
 						"runs": 1
 					}
 				}
@@ -1355,10 +1355,10 @@
 			"terser": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 3349343,
 						"minzippedSize": 854273,
-						"time": 7289.81225,
+						"time": 5908.344667,
 						"runs": 1
 					}
 				}
@@ -1366,10 +1366,10 @@
 			"terser (no compress)": {
 				"version": "5.29.2",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 3530223,
 						"minzippedSize": 879301,
-						"time": 2534.084208,
+						"time": 2505.7095,
 						"runs": 1
 					}
 				}
@@ -1377,10 +1377,10 @@
 			"uglify-js": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 3269923,
 						"minzippedSize": 845107,
-						"time": 10821.187292,
+						"time": 10753.889917,
 						"runs": 1
 					}
 				}
@@ -1388,10 +1388,10 @@
 			"uglify-js (no compress)": {
 				"version": "3.17.4",
 				"result": {
-					"result": {
+					"data": {
 						"minifiedSize": 3538024,
 						"minzippedSize": 876535,
-						"time": 1882.908625,
+						"time": 1817.422584,
 						"runs": 1
 					}
 				}

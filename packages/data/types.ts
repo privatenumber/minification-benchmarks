@@ -1,11 +1,8 @@
+import type { BenchmarkResultWithRuns } from '@minification-benchmarks/bench/benchmark-all/benchmark.js';
+
 export type Minifier = {
 	version: string;
-	result: {
-		minifiedSize: string;
-		minzippedSize: string;
-		time: string;
-		runs: number;
-	};
+	result: BenchmarkResultWithRuns;
 };
 
 export type Artifact = {

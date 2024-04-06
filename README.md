@@ -13,7 +13,7 @@ This repo is routinely maintained to compare the quality and speed across the la
 - [terser](https://github.com/terser/terser)
 - [uglify-js](https://github.com/mishoo/UglifyJS)
 
-_Benchmarks last updated on <!-- lastUpdated:start -->Mar 14, 2024<!-- lastUpdated:end -->._
+_Benchmarks last updated on <!-- lastUpdated:start -->Apr 5, 2024<!-- lastUpdated:end -->._
 
 <br>
 

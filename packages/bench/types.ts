@@ -7,8 +7,8 @@ export type BenchmarkData = {
 	time: number;
 };
 
-export type BenchmarkResultSuccess = {
-	result: BenchmarkData;
+export type BenchmarkResultSuccess<Extended = {}> = {
+	data: BenchmarkData & Extended;
 };
 
 export type BenchmarkError = {
@@ -19,7 +19,7 @@ export type BenchmarkError = {
 	};
 };
 
-export type BenchmarkResult = BenchmarkResultSuccess | BenchmarkError;
+export type BenchmarkResult<Extended = {}> = BenchmarkResultSuccess<Extended> | BenchmarkError;
 
 export type AverageBenchmarkData<format = number> = {
 	minifiedSize: format;

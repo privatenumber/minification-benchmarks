@@ -62,12 +62,14 @@ const getAverage = (
 	) / numbers.length
 );
 
+export type BenchmarkResultWithRuns = BenchmarkResult<{ runs: number; }>;
+
 export const benchmarkAverage = async (
 	artifact: string,
 	minifier: string,
 	minifierInstance: string | undefined,
 	sampleSize: number,
-): Promise<BenchmarkResult> => {
+): Promise<BenchmarkResultWithRuns> => {
 	const results: BenchmarkResultSuccess[] = [];
 	for (let i = 0; i < sampleSize; i += 1) {
 		const result = await benchmark(
@@ -84,9 +86,9 @@ export const benchmarkAverage = async (
 	}
 
 	return {
-		result: {
-			...results[0].result,
-			time: getAverage(results.map(({ result }) => result.time)),
+		data: {
+			...results[0].data,
+			time: getAverage(results.map(({ data: result }) => result.time)),
 			runs: sampleSize,
 		},
 	};

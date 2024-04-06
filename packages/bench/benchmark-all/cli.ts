@@ -1,6 +1,5 @@
 import assert from 'assert';
 import { cli } from 'cleye';
-import task from 'tasuku';
 import { getArtifacts, loadArtifact } from '@minification-benchmarks/artifacts';
 import { getMinifiers, loadMinifier } from '@minification-benchmarks/minifiers';
 import { benchmarkArtifacts } from './benchmark-artifacts';
