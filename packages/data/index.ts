@@ -1,5 +1,6 @@
 import fs from 'fs/promises';
 import { readJsonFile } from '@minification-benchmarks/utils/read-json-file.js';
+import { sortObjectKeys } from '@minification-benchmarks/utils/sort-object-keys.js';
 import type { ArtifactLoaded } from '@minification-benchmarks/artifacts';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
 import type { BenchmarkResultWithRuns } from '@minification-benchmarks/bench/types.js';
@@ -10,25 +11,7 @@ const dataPath = new URL('data.json', import.meta.url).pathname;
 export const data = await readJsonFile(dataPath) as Data;
 
 export const saveData = async () => {
-	const dataEntries = Object.entries(data);
-	dataEntries.sort(([, a], [, b]) => a.size - b.size);
-
-	for (const [, artifact] of dataEntries) {
-		const minifiedEntries = Object.entries(artifact.minified);
-		minifiedEntries.sort(([, a], [, b]) => {
-			if ('error' in a.result) {
-				return 1;
-			}
-			if ('error' in b.result) {
-				return -1;
-			}
-			return a.result.data.minzippedSize - b.result.data.minzippedSize;
-		});
-		artifact.minified = Object.fromEntries(minifiedEntries);
-	}
-
-	const sortedData = Object.fromEntries(dataEntries);
-
+	const sortedData = sortObjectKeys(data, ([, a], [, b]) => a.size - b.size);
 	await fs.writeFile(dataPath, JSON.stringify(sortedData, null, '\t'));
 };
 
@@ -102,6 +85,14 @@ export const saveResults = async (
 			result,
 		};
 		foundArtifact.minified[minifierName] = foundMinifier;
+		foundArtifact.minified = sortObjectKeys(
+			foundArtifact.minified,
+			([, a], [, b]) => {
+				if ('error' in a.result) { return 1; }
+				if ('error' in b.result) { return -1; }
+				return a.result.data.minzippedSize - b.result.data.minzippedSize;
+			},
+		);
 	}
 
 	await saveData();
