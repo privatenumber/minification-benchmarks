@@ -10,7 +10,26 @@ const dataPath = new URL('data.json', import.meta.url).pathname;
 export const data = await readJsonFile(dataPath) as Data;
 
 export const saveData = async () => {
-	await fs.writeFile(dataPath, JSON.stringify(data, null, '\t'));
+	const dataEntries = Object.entries(data);
+	dataEntries.sort(([, a], [, b]) => a.size - b.size);
+
+	for (const [, artifact] of dataEntries) {
+		const minifiedEntries = Object.entries(artifact.minified);
+		minifiedEntries.sort(([, a], [, b]) => {
+			if ('error' in a.result) {
+				return 1;
+			}
+			if ('error' in b.result) {
+				return -1;
+			}
+			return a.result.data.minzippedSize - b.result.data.minzippedSize;
+		});
+		artifact.minified = Object.fromEntries(minifiedEntries);
+	}
+
+	const sortedData = Object.fromEntries(dataEntries);
+
+	await fs.writeFile(dataPath, JSON.stringify(sortedData, null, '\t'));
 };
 
 const getArtifact = (

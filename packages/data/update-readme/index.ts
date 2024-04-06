@@ -41,18 +41,6 @@ const generateBenchmarkTable = (
 	artifact: Artifact,
 ) => {
 	const minified = Object.entries(artifact.minified);
-
-	// Move this to save JSON (JSON should be sorted)
-	minified.sort(([, a], [, b]) => {
-		if ('error' in a.result) {
-			return 1;
-		}
-		if ('error' in b.result) {
-			return -1;
-		}
-		return a.result.data.minzippedSize - b.result.data.minzippedSize;
-	});
-
 	const bestMinified = minBy(minified, '1.result.data.minifiedSize')!;
 	const bestMinzipped = minBy(minified, '1.result.data.minzippedSize')!;
 	const bestSpeed = minBy(minified, '1.result.data.time')!;
