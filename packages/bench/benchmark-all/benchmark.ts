@@ -1,6 +1,10 @@
 import { execaNode } from 'execa';
 import { safeJsonParse } from '@minification-benchmarks/utils/safe-json-parse';
-import type { BenchmarkResult, BenchmarkResultSuccess } from '../types.js';
+import type {
+	BenchmarkResult,
+	BenchmarkResultSuccess,
+	BenchmarkResultWithRuns,
+} from '../types.js';
 
 const benchmarkCliPath = new URL('../benchmark/cli.ts', import.meta.url).pathname;
 
@@ -61,8 +65,6 @@ const getAverage = (
 		0,
 	) / numbers.length
 );
-
-export type BenchmarkResultWithRuns = BenchmarkResult<{ runs: number; }>;
 
 export const benchmarkAverage = async (
 	artifact: string,

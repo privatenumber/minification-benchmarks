@@ -20,6 +20,9 @@ importers:
       '@pvtnbr/eslint-config':
         specifier: ^1.2.0
         version: 1.2.0(eslint@8.57.0)(typescript@5.4.4)
+      '@total-typescript/ts-reset':
+        specifier: ^0.5.1
+        version: 0.5.1
       '@types/node':
         specifier: ^16.11.33
         version: 16.11.33
@@ -1129,6 +1132,10 @@ packages:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
     engines: {node: '>= 10'}
     dev: false
+
+  /@total-typescript/ts-reset@0.5.1:
+    resolution: {integrity: sha512-AqlrT8YA1o7Ff5wPfMOL0pvL+1X+sw60NN6CcOCqs658emD6RfiXhF7Gu9QcfKBH7ELY2nInLhKSCWVoNL70MQ==}
+    dev: true
 
   /@types/byte-size@8.1.0:
     resolution: {integrity: sha512-LCIlZh8vyx+I2fgRycE1D34c33QDppYY6quBYYoaOpQ1nGhJ/avSP2VlrAefVotjJxgSk6WkKo0rTcCJwGG7vA==}

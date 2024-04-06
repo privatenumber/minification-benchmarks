@@ -3,19 +3,14 @@ import commentMark from 'comment-mark';
 import { format } from 'date-fns';
 import { markdownTable } from 'markdown-table';
 import * as mdu from './mdu.js';
-// import path from 'path';
-// import outdent from 'outdent';
 import byteSize from 'byte-size';
 import { minBy } from 'lodash-es';
-
-// import { minBy } from 'lodash-es';
-// import * as mdu from '@minification-benchmarks/utils/mdu';
+import type { BenchmarkResultSuccessWithRuns } from '@minification-benchmarks/bench/types.js';
 import { percent, formatMs } from './formatting.js';
 import { data } from '../index.js';
 import type { Data, Artifact } from '../types.js';
 
 byteSize.defaultOptions({ precision: 2 });
-
 
 const displayColumn = (
 	text: string,
@@ -30,6 +25,16 @@ const displayColumn = (
 	return isWinner ? mdu.strong(columnText) : columnText;
 };
 
+const compareSpeed = (
+	current: BenchmarkResultSuccessWithRuns,
+	fastest?: BenchmarkResultSuccessWithRuns,
+) => (
+	(fastest === current)
+		? ''
+		: mdu.emphasize(
+			`${Math.floor(current.data.time / fastest!.data.time)}x`
+		)
+);
 
 const generateBenchmarkTable = (
 	artifactName: string,
@@ -37,6 +42,7 @@ const generateBenchmarkTable = (
 ) => {
 	const minified = Object.entries(artifact.minified);
 	
+	// Move this to save JSON (JSON should be sorted)
 	minified.sort(([, a], [, b]) => {
 		if ('error' in a.result) {
 			return 1;
@@ -47,9 +53,9 @@ const generateBenchmarkTable = (
 		return a.result.data.minzippedSize - b.result.data.minzippedSize;
 	});
 
-	// const bestMinified = minBy(minified, 'data.raw.minifiedSize');
-	// const bestMinzipped = minBy(successfulMinifiers, 'data.raw.minzippedSize');
-	// const bestSpeed = minBy(successfulMinifiers, 'data.raw.averageTime');
+	const bestMinified = minBy(minified, '1.result.data.minifiedSize')!;
+	const bestMinzipped = minBy(minified, '1.result.data.minzippedSize')!;
+	const bestSpeed = minBy(minified, '1.result.data.time')!;
 
 	return markdownTable(
 		[
@@ -66,11 +72,6 @@ const generateBenchmarkTable = (
 
 			['Minifier', 'Minified size', 'Minzipped size', 'Time'].map(mdu.strong),
 			...minified.map(([minifierName, minifier]) => {
-				console.dir({
-					minifierName,
-					minifier,
-				}, { colors: true, depth: null, maxArrayLength: null });
-
 				const { result } = minifier;
 				if ('error' in result) {
 					return [
@@ -80,39 +81,24 @@ const generateBenchmarkTable = (
 						'-',
 					];
 				}
-				// return [
-				// 	'a',
-				// 	'b',
-				// 	'c',
-				// 	'd',
-				// ];
 
 				return [
 					minifierName,
-
 					displayColumn(
 						byteSize(result.data.minifiedSize).toString(),
 						percent(artifact.size, result.data.minifiedSize),
-						false,
-						// minifier === bestMinified,
+						minifierName === bestMinified[0],
 					),
 					displayColumn(
 						byteSize(result.data.minzippedSize).toString(),
 						percent(artifact.gzipSize, result.data.minzippedSize),
-						// minifier === bestMinzipped,
-						false,
+						minifierName === bestMinzipped[0],
 					),
 					displayColumn(
 						formatMs(result.data.time),
-						'',
-						false,
-						// compareSpeed(minifier, bestSpeed),
-						// minifier === bestSpeed,
+						compareSpeed(result, bestSpeed[1].result as BenchmarkResultSuccessWithRuns),
+						minifierName === bestSpeed[0],
 					),
-
-					// minifier.result.minifiedSize,
-					// minifier.result.minzippedSize,
-					// minifier.result.time,
 				];
 			}),
 		],
@@ -124,37 +110,22 @@ const generateBenchmarkTable = (
 
 const generateBenchmarks = (data: Data) => {
 	const artifacts = Object.entries(data);
-	artifacts.sort(([, { size: sizeA }], [, { size: sizeB }]) => sizeA - sizeB);
 
+	artifacts.sort(
+		([, { size: sizeA }], [, { size: sizeB }]) => sizeA - sizeB,
+	);
 
-
-	return artifacts.map(([name, artifact]) => {
-
-		console.log(artifact);
-
-		return generateBenchmarkTable(name, artifact);
-
-	}).join('\n----\n');
-
+	return artifacts
+		.map(([name, artifact]) => generateBenchmarkTable(name, artifact))
+		.join('\n----\n');
 };
 
+const readmePath = './README.md';
+const readme = await fs.readFile(readmePath, 'utf8');
 
-const updateReadme = async (
-	benchmarks: string,
-) => {
-	const readmePath = './README.md';
-	const readme = await fs.readFile(readmePath, 'utf8');
-	const newReadme = commentMark(readme, {
-		lastUpdated: format(new Date(), 'MMM d, y'),
-		// benchmarks,
-	});
-	await fs.writeFile(readmePath, newReadme);	
-};
+const newReadme = commentMark(readme, {
+	lastUpdated: format(new Date(), 'MMM d, y'),
+	benchmarks: generateBenchmarks(data),
+});
 
-
-const asdf = generateBenchmarks(data);
-
-console.log(asdf);
-// console.dir(asdf, { colors: true, depth: null, maxArrayLength: null });
-
-// await updateReadme(asdf);
+await fs.writeFile(readmePath, newReadme);	

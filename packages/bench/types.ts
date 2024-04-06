@@ -21,6 +21,9 @@ export type BenchmarkError = {
 
 export type BenchmarkResult<Extended = {}> = BenchmarkResultSuccess<Extended> | BenchmarkError;
 
+export type BenchmarkResultSuccessWithRuns = BenchmarkResultSuccess<{ runs: number; }>;
+export type BenchmarkResultWithRuns = BenchmarkResult<{ runs: number; }>;
+
 export type AverageBenchmarkData<format = number> = {
 	minifiedSize: format;
 	minzippedSize: format;
