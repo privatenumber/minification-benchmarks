@@ -2,8 +2,8 @@ import fs from 'fs/promises';
 import { readJsonFile } from '@minification-benchmarks/utils/read-json-file.js';
 import type { ArtifactLoaded } from '@minification-benchmarks/artifacts';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
-import type { Data, Artifact } from './types.js';
 import type { BenchmarkResultWithRuns } from '@minification-benchmarks/bench/types.js';
+import type { Data, Artifact } from './types.js';
 
 const dataPath = new URL('data.json', import.meta.url).pathname;
 

@@ -10,11 +10,9 @@ jsdom(undefined, {
 
 export default defineTest<typeof import('antd')>({
 	// TODO: Dont we silence console logs? removable?
-	preprocess(code) {
-		return code.replaceAll('console.warn(', '(');
-	},
+	preprocess: code => code.replaceAll('console.warn(', '('),
 
-	run({ Button }) {
+	run: ({ Button }) => {
 		const app = document.createElement('div');
 		document.body.append(app);
 

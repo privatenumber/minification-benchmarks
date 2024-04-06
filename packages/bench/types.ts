@@ -21,8 +21,8 @@ export type BenchmarkError = {
 
 export type BenchmarkResult<Extended = {}> = BenchmarkResultSuccess<Extended> | BenchmarkError;
 
-export type BenchmarkResultSuccessWithRuns = BenchmarkResultSuccess<{ runs: number; }>;
-export type BenchmarkResultWithRuns = BenchmarkResult<{ runs: number; }>;
+export type BenchmarkResultSuccessWithRuns = BenchmarkResultSuccess<{ runs: number }>;
+export type BenchmarkResultWithRuns = BenchmarkResult<{ runs: number }>;
 
 export type AverageBenchmarkData<format = number> = {
 	minifiedSize: format;
@@ -42,11 +42,11 @@ export type MinifierResultSuccess = {
 		formatted: AverageBenchmarkData<string>;
 	};
 	runs: BenchmarkData[];
-}
+};
 
 export type MinifierResult = MinifierResultFailed | MinifierResultSuccess;
 
 export type BenchmarkedArtifact = {
 	artifact: Artifact;
 	benchmarkResults: MinifierResult[];
-}
+};

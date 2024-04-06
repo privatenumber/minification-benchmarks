@@ -2,13 +2,13 @@ import fs from 'fs/promises';
 import commentMark from 'comment-mark';
 import { format } from 'date-fns';
 import { markdownTable } from 'markdown-table';
-import * as mdu from './mdu.js';
 import byteSize from 'byte-size';
 import { minBy } from 'lodash-es';
 import type { BenchmarkResultSuccessWithRuns } from '@minification-benchmarks/bench/types.js';
-import { percent, formatMs } from './formatting.js';
 import { data } from '../index.js';
 import type { Data, Artifact } from '../types.js';
+import { percent, formatMs } from './formatting.js';
+import * as mdu from './mdu.js';
 
 byteSize.defaultOptions({ precision: 2 });
 
@@ -32,7 +32,7 @@ const compareSpeed = (
 	(fastest === current)
 		? ''
 		: mdu.emphasize(
-			`${Math.floor(current.data.time / fastest!.data.time)}x`
+			`${Math.floor(current.data.time / fastest!.data.time)}x`,
 		)
 );
 
@@ -41,7 +41,7 @@ const generateBenchmarkTable = (
 	artifact: Artifact,
 ) => {
 	const minified = Object.entries(artifact.minified);
-	
+
 	// Move this to save JSON (JSON should be sorted)
 	minified.sort(([, a], [, b]) => {
 		if ('error' in a.result) {
@@ -128,4 +128,4 @@ const newReadme = commentMark(readme, {
 	benchmarks: generateBenchmarks(data),
 });
 
-await fs.writeFile(readmePath, newReadme);	
+await fs.writeFile(readmePath, newReadme);

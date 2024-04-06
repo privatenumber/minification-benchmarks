@@ -13,34 +13,34 @@ jobs:
 
     steps:
 
-    - name: Checkout
-      uses: actions/checkout@v3
-      with:
-        ref: ${{ github.head_ref }}
-        repository: ${{ github.repository }}
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          repository: ${{ github.repository }}
 
-    - name: Use Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version-file: '.nvmrc'
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
 
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v3
-      with:
-        version: 8
-        run_install: true
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+          run_install: true
 
-    - name: Setup Composer
-      uses: php-actions/composer@v6
-      with:
-        working_dir: "packages/minifiers"
+      - name: Setup Composer
+        uses: php-actions/composer@v6
+        with:
+          working_dir: packages/minifiers
 
-    - name: Benchmark
-      run: pnpm update-benchmarks-readme
+      - name: Benchmark
+        run: pnpm update-benchmarks-readme
 
-    - name: Commit README.md
-      run: |
-        git config user.name Hiroki Osame
-        git config user.email hiroki.osame@gmail.com
-        git commit -nam "chore: updated benchmarks"
-        git push
+      - name: Commit README.md
+        run: |
+          git config user.name Hiroki Osame
+          git config user.email hiroki.osame@gmail.com
+          git commit -nam "chore: updated benchmarks"
+          git push

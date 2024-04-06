@@ -1,16 +1,16 @@
 {
 	"compilerOptions": {
-		"isolatedModules": true,
-		"esModuleInterop": true,
-		"strict": true,
-		"skipLibCheck": true,
-		"module": "ESNext",
-		"moduleResolution": "Bundler",
+		"target": "ESNext",
 		"lib": [
 			"ESNext",
 			"DOM",
 		],
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"strict": true,
 		"noEmit": true,
-		"target": "ESNext"
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"skipLibCheck": true
 	}
 }
