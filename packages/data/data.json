@@ -1,0 +1,1489 @@
+{
+	"react": {
+		"version": "17.0.2",
+		"filePath": "/cjs/react.development.js",
+		"size": 72132,
+		"gzipSize": 19385,
+		"minified": {
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.4.12",
+				"result": {
+					"data": {
+						"minifiedSize": 22866,
+						"minzippedSize": 8173,
+						"time": 19.938140800000003,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 22668,
+						"minzippedSize": 8184,
+						"time": 458.90767859999994,
+						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20230802.0.0",
+				"result": {
+					"data": {
+						"minifiedSize": 22825,
+						"minzippedSize": 8193,
+						"time": 2907.6115086,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 23141,
+						"minzippedSize": 8317,
+						"time": 254.44019659999998,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"data": {
+						"minifiedSize": 23601,
+						"minzippedSize": 8448,
+						"time": 589.8394367999999,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.19.12",
+				"result": {
+					"data": {
+						"minifiedSize": 23697,
+						"minzippedSize": 8543,
+						"time": 11.858238,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.1.2",
+				"result": {
+					"data": {
+						"minifiedSize": 24011,
+						"minzippedSize": 8650,
+						"time": 13.8451996,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 25030,
+						"minzippedSize": 8668,
+						"time": 83.16246579999999,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 25081,
+						"minzippedSize": 8746,
+						"time": 107.1681732,
+						"runs": 5
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"data": {
+						"minifiedSize": 40821,
+						"minzippedSize": 11040,
+						"time": 104.82450639999999,
+						"runs": 5
+					}
+				}
+			}
+		}
+	},
+	"moment": {
+		"version": "2.29.1",
+		"filePath": "/moment.js",
+		"size": 173902,
+		"gzipSize": 36231,
+		"minified": {
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 57865,
+						"minzippedSize": 18567,
+						"time": 1029.4759935999998,
+						"runs": 5
+					}
+				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.4.12",
+				"result": {
+					"data": {
+						"minifiedSize": 58210,
+						"minzippedSize": 18686,
+						"time": 47.9650604,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 59162,
+						"minzippedSize": 18694,
+						"time": 626.6091113999998,
+						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20230802.0.0",
+				"result": {
+					"data": {
+						"minifiedSize": 58273,
+						"minzippedSize": 18910,
+						"time": 3285.1333533999996,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"data": {
+						"minifiedSize": 59703,
+						"minzippedSize": 19119,
+						"time": 1367.4468160000001,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.19.12",
+				"result": {
+					"data": {
+						"minifiedSize": 59824,
+						"minzippedSize": 19334,
+						"time": 17.048247399999997,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 62495,
+						"minzippedSize": 19569,
+						"time": 193.6424618,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 63151,
+						"minzippedSize": 19683,
+						"time": 259.420118,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.1.2",
+				"result": {
+					"data": {
+						"minifiedSize": 61856,
+						"minzippedSize": 19873,
+						"time": 15.7999378,
+						"runs": 5
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"data": {
+						"minifiedSize": 97632,
+						"minzippedSize": 24998,
+						"time": 245.9180108,
+						"runs": 5
+					}
+				}
+			}
+		}
+	},
+	"jquery": {
+		"version": "3.5.1",
+		"filePath": "/dist/jquery.js",
+		"size": 287628,
+		"gzipSize": 84498,
+		"minified": {
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.4.12",
+				"result": {
+					"data": {
+						"minifiedSize": 89158,
+						"minzippedSize": 30870,
+						"time": 80.8811596,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 88539,
+						"minzippedSize": 30891,
+						"time": 1400.807001,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 89540,
+						"minzippedSize": 30912,
+						"time": 816.4092898,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 94082,
+						"minzippedSize": 31470,
+						"time": 274.4157116,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 94554,
+						"minzippedSize": 31621,
+						"time": 339.2504528,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"data": {
+						"minifiedSize": 92103,
+						"minzippedSize": 31799,
+						"time": 2254.6742282,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.19.12",
+				"result": {
+					"data": {
+						"minifiedSize": 90065,
+						"minzippedSize": 31954,
+						"time": 24.2799646,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.1.2",
+				"result": {
+					"data": {
+						"minifiedSize": 92559,
+						"minzippedSize": 32703,
+						"time": 18.9458946,
+						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20230802.0.0",
+				"result": {
+					"data": {
+						"minifiedSize": 92704,
+						"minzippedSize": 33086,
+						"time": 3612.0355356,
+						"runs": 5
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"data": {
+						"minifiedSize": 144144,
+						"minzippedSize": 40879,
+						"time": 315.4893338,
+						"runs": 5
+					}
+				}
+			}
+		}
+	},
+	"vue": {
+		"version": "2.6.12",
+		"filePath": "/dist/vue.js",
+		"size": 342146,
+		"gzipSize": 89668,
+		"minified": {
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.4.12",
+				"result": {
+					"data": {
+						"minifiedSize": 115461,
+						"minzippedSize": 42477,
+						"time": 117.3433896,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 116826,
+						"minzippedSize": 42939,
+						"time": 1024.0083752,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 113982,
+						"minzippedSize": 42948,
+						"time": 1924.1260871999998,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"data": {
+						"minifiedSize": 117896,
+						"minzippedSize": 43925,
+						"time": 2475.664257,
+						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20230802.0.0",
+				"result": {
+					"data": {
+						"minifiedSize": 115604,
+						"minzippedSize": 44226,
+						"time": 4122.6762858,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.19.12",
+				"result": {
+					"data": {
+						"minifiedSize": 118141,
+						"minzippedSize": 44368,
+						"time": 29.686674000000004,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 126137,
+						"minzippedSize": 44450,
+						"time": 336.93346999999994,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 126580,
+						"minzippedSize": 44679,
+						"time": 399.9357594,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.1.2",
+				"result": {
+					"data": {
+						"minifiedSize": 121703,
+						"minzippedSize": 45340,
+						"time": 21.1282322,
+						"runs": 5
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"data": {
+						"minifiedSize": 197357,
+						"minzippedSize": 57169,
+						"time": 415.8620476,
+						"runs": 5
+					}
+				}
+			}
+		}
+	},
+	"lodash": {
+		"version": "4.17.21",
+		"filePath": "/lodash.js",
+		"size": 544089,
+		"gzipSize": 96690,
+		"minified": {
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 68242,
+						"minzippedSize": 24659,
+						"time": 1526.4257619999998,
+						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20230802.0.0",
+				"result": {
+					"data": {
+						"minifiedSize": 73466,
+						"minzippedSize": 24972,
+						"time": 3980.9214068,
+						"runs": 5
+					}
+				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.4.12",
+				"result": {
+					"data": {
+						"minifiedSize": 69827,
+						"minzippedSize": 25183,
+						"time": 106.26585579999998,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 70666,
+						"minzippedSize": 25186,
+						"time": 848.650028,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"data": {
+						"minifiedSize": 72367,
+						"minzippedSize": 25503,
+						"time": 1940.0666896000002,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 74607,
+						"minzippedSize": 25862,
+						"time": 314.7557476,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.19.12",
+				"result": {
+					"data": {
+						"minifiedSize": 72483,
+						"minzippedSize": 26200,
+						"time": 30.5776206,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 75293,
+						"minzippedSize": 26221,
+						"time": 355.7020954000001,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.1.2",
+				"result": {
+					"data": {
+						"minifiedSize": 74116,
+						"minzippedSize": 26500,
+						"time": 22.451709799999996,
+						"runs": 5
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"data": {
+						"minifiedSize": 148780,
+						"minzippedSize": 36327,
+						"time": 328.3610038,
+						"runs": 5
+					}
+				}
+			}
+		}
+	},
+	"d3": {
+		"version": "6.3.1",
+		"filePath": "/dist/d3.js",
+		"size": 555767,
+		"gzipSize": 130686,
+		"minified": {
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 263905,
+						"minzippedSize": 87114,
+						"time": 3555.0303341999997,
+						"runs": 5
+					}
+				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.4.12",
+				"result": {
+					"data": {
+						"minifiedSize": 265266,
+						"minzippedSize": 87283,
+						"time": 264.1087136,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 275347,
+						"minzippedSize": 88319,
+						"time": 653.4367304,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 267904,
+						"minzippedSize": 88343,
+						"time": 2127.2728126,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 276467,
+						"minzippedSize": 89156,
+						"time": 945.4013107999999,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.19.12",
+				"result": {
+					"data": {
+						"minifiedSize": 270129,
+						"minzippedSize": 90800,
+						"time": 58.446973,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.1.2",
+				"result": {
+					"data": {
+						"minifiedSize": 273630,
+						"minzippedSize": 92375,
+						"time": 35.394391199999994,
+						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20230802.0.0",
+				"result": {
+					"data": {
+						"minifiedSize": 270298,
+						"minzippedSize": 94121,
+						"time": 6151.2199468,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "unknown: Cannot read properties of undefined (reading 'add')",
+						"stack": "TypeError: unknown: Cannot read properties of undefined (reading 'add')\n    at ScopeTracker.addReference (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/scope-tracker.js:47:34)\n    at ReferencedIdentifier (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:202:26)\n    at newFn (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:216:17)\n    at bfsTraverse (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/bfs-traverse.js:38:43)\n    at Mangler.collect (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:235:7)\n    at Mangler.run (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:60:12)\n    at PluginPass.exit (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:546:19)\n    at newFn (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:175:21)\n    at NodePath._call (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:55:20)\n    at NodePath.call (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:42:17)",
+						"stage": "minification"
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"error": {
+						"message": "RuntimeException: Unclosed regex pattern at position: 289075 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643",
+						"stack": "Stack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString()\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify()\n#4 {main}",
+						"stage": "minification"
+					}
+				}
+			}
+		}
+	},
+	"terser": {
+		"version": "5.30.3",
+		"filePath": "/dist/bundle.min.js",
+		"size": 1009635,
+		"gzipSize": 193763,
+		"minified": {
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.4.12",
+				"result": {
+					"data": {
+						"minifiedSize": 455579,
+						"minzippedSize": 123059,
+						"time": 229.86002939999997,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 451769,
+						"minzippedSize": 123351,
+						"time": 3368.0139351999997,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 458305,
+						"minzippedSize": 123502,
+						"time": 1981.0670785999998,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 474395,
+						"minzippedSize": 124428,
+						"time": 891.7073204000001,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 472162,
+						"minzippedSize": 124609,
+						"time": 717.7651675999999,
+						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20230802.0.0",
+				"result": {
+					"data": {
+						"minifiedSize": 439949,
+						"minzippedSize": 126562,
+						"time": 5407.3883682,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.19.12",
+				"result": {
+					"data": {
+						"minifiedSize": 458890,
+						"minzippedSize": 126706,
+						"time": 57.5784856,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.1.2",
+				"result": {
+					"data": {
+						"minifiedSize": 466961,
+						"minzippedSize": 127551,
+						"time": 34.432973399999995,
+						"runs": 5
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"data": {
+						"minifiedSize": 633710,
+						"minzippedSize": 145178,
+						"time": 1184.6564776,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "unknown: Cannot read properties of undefined (reading 'add')",
+						"stack": "TypeError: unknown: Cannot read properties of undefined (reading 'add')\n    at ScopeTracker.addReference (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/scope-tracker.js:47:34)\n    at ReferencedIdentifier (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:202:26)\n    at newFn (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:216:17)\n    at bfsTraverse (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/bfs-traverse.js:38:43)\n    at Mangler.collect (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:235:7)\n    at Mangler.run (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:60:12)\n    at PluginPass.exit (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:546:19)\n    at newFn (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:175:21)\n    at NodePath._call (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:55:20)\n    at NodePath.call (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:42:17)",
+						"stage": "minification"
+					}
+				}
+			}
+		}
+	},
+	"three": {
+		"version": "0.124.0",
+		"filePath": "/build/three.js",
+		"size": 1247235,
+		"gzipSize": 248267,
+		"minified": {
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.4.12",
+				"result": {
+					"data": {
+						"minifiedSize": 642879,
+						"minzippedSize": 158368,
+						"time": 341.80425180000003,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 642220,
+						"minzippedSize": 158907,
+						"time": 4534.1523494,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 653986,
+						"minzippedSize": 159729,
+						"time": 2733.8181059999997,
+						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20230802.0.0",
+				"result": {
+					"data": {
+						"minifiedSize": 644453,
+						"minzippedSize": 162971,
+						"time": 7263.5183363999995,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 674490,
+						"minzippedSize": 163036,
+						"time": 932.344289,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 675504,
+						"minzippedSize": 163198,
+						"time": 1210.4485585999998,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.19.12",
+				"result": {
+					"data": {
+						"minifiedSize": 646759,
+						"minzippedSize": 163725,
+						"time": 82.26928960000001,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.1.2",
+				"result": {
+					"data": {
+						"minifiedSize": 662756,
+						"minzippedSize": 166480,
+						"time": 44.438804000000005,
+						"runs": 5
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"data": {
+						"minifiedSize": 952007,
+						"minzippedSize": 193471,
+						"time": 1518.9614511999998,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "Timed out"
+					}
+				}
+			}
+		}
+	},
+	"victory": {
+		"version": "35.8.4",
+		"filePath": "/dist/victory.js",
+		"size": 2132722,
+		"gzipSize": 309942,
+		"minified": {
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.4.12",
+				"result": {
+					"data": {
+						"minifiedSize": 707209,
+						"minzippedSize": 157859,
+						"time": 512.3249748000001,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 702670,
+						"minzippedSize": 158218,
+						"time": 5951.495466599999,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 715587,
+						"minzippedSize": 158718,
+						"time": 3705.290446599999,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 759337,
+						"minzippedSize": 166386,
+						"time": 1475.6439235999999,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 756530,
+						"minzippedSize": 167579,
+						"time": 1190.2317662,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.19.12",
+				"result": {
+					"data": {
+						"minifiedSize": 724140,
+						"minzippedSize": 181071,
+						"time": 114.72182739999998,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.1.2",
+				"result": {
+					"data": {
+						"minifiedSize": 728200,
+						"minzippedSize": 182567,
+						"time": 60.972152200000004,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "unknown: Cannot read properties of undefined (reading 'add')",
+						"stack": "TypeError: unknown: Cannot read properties of undefined (reading 'add')\n    at ScopeTracker.addReference (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/scope-tracker.js:47:34)\n    at ReferencedIdentifier (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:202:26)\n    at newFn (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:216:17)\n    at bfsTraverse (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/bfs-traverse.js:38:43)\n    at Mangler.collect (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:235:7)\n    at Mangler.run (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:60:12)\n    at PluginPass.exit (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:546:19)\n    at newFn (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:175:21)\n    at NodePath._call (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:55:20)\n    at NodePath.call (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:42:17)",
+						"stage": "minification"
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20230802.0.0",
+				"result": {
+					"error": {
+						"message": "Timed out"
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"error": {
+						"message": "Unexpected token '~'",
+						"stack": "fs-require://2/index.js:594\nreturn function(key,value){if(stack.length>0){var thisPos=stack.indexOf(this)~thisPos?stack.splice(thisPos+1):stack.push(this)~thisPos?keys.splice(thisPos,Infinity,key):keys.push(key)\n                                                                             ^\n\nSyntaxError: Unexpected token '~'\n    at new Script (node:vm:99:7)\n    at createScript (node:vm:255:10)\n    at Object.runInThisContext (node:vm:303:10)\n    at p. (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1165)\n    at s (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1657)\n    at requireString (/packages/artifacts/utils/require-string.ts:9:9)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:98:22)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:98:2)",
+						"stage": "post-validation"
+					}
+				}
+			}
+		}
+	},
+	"echarts": {
+		"version": "5.1.1",
+		"filePath": "/dist/echarts.js",
+		"size": 3196329,
+		"gzipSize": 684611,
+		"minified": {
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.4.12",
+				"result": {
+					"data": {
+						"minifiedSize": 993066,
+						"minzippedSize": 320246,
+						"time": 967.8989627999999,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 1000982,
+						"minzippedSize": 322106,
+						"time": 5583.1967948,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 1071527,
+						"minzippedSize": 330736,
+						"time": 2449.9585538,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 1068386,
+						"minzippedSize": 331412,
+						"time": 1664.9033488,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.19.12",
+				"result": {
+					"data": {
+						"minifiedSize": 1011234,
+						"minzippedSize": 331563,
+						"time": 185.0453564,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.1.2",
+				"result": {
+					"data": {
+						"minifiedSize": 1026633,
+						"minzippedSize": 337782,
+						"time": 101.1566008,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "Timed out"
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20230802.0.0",
+				"result": {
+					"error": {
+						"message": "Timed out"
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"error": {
+						"message": "RuntimeException: Unclosed regex pattern at position: 37315 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643",
+						"stack": "Stack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString()\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify()\n#4 {main}",
+						"stage": "minification"
+					}
+				}
+			},
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"error": {
+						"message": "Timed out"
+					}
+				}
+			}
+		}
+	},
+	"antd": {
+		"version": "4.16.1",
+		"filePath": "/dist/antd.js",
+		"size": 6672611,
+		"gzipSize": 825175,
+		"minified": {
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.4.12",
+				"result": {
+					"data": {
+						"minifiedSize": 2148550,
+						"minzippedSize": 452873,
+						"time": 1223.1645032000001,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 2249045,
+						"minzippedSize": 457817,
+						"time": 6312.3467292000005,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 2425048,
+						"minzippedSize": 475480,
+						"time": 2892.2567778,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 2420587,
+						"minzippedSize": 478572,
+						"time": 2284.919801,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.19.12",
+				"result": {
+					"data": {
+						"minifiedSize": 2306394,
+						"minzippedSize": 488279,
+						"time": 272.881827,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.1.2",
+				"result": {
+					"data": {
+						"minifiedSize": 2297027,
+						"minzippedSize": 491752,
+						"time": 133.8057194,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "Timed out"
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20230802.0.0",
+				"result": {
+					"error": {
+						"message": "Timed out"
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"error": {
+						"message": "Timed out"
+					}
+				}
+			},
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"error": {
+						"message": "Timed out"
+					}
+				}
+			}
+		}
+	},
+	"typescript": {
+		"version": "4.9.5",
+		"filePath": "/lib/typescript.js",
+		"size": 10945727,
+		"gzipSize": 1884998,
+		"minified": {
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.4.12",
+				"result": {
+					"data": {
+						"minifiedSize": 3309542,
+						"minzippedSize": 852335,
+						"time": 3035.1667141999997,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"data": {
+						"minifiedSize": 3538024,
+						"minzippedSize": 876535,
+						"time": 3665.8923047999997,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 3530223,
+						"minzippedSize": 879301,
+						"time": 4854.449586,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.19.12",
+				"result": {
+					"data": {
+						"minifiedSize": 3489518,
+						"minzippedSize": 915495,
+						"time": 470.6170414,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "Timed out"
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.1.2",
+				"result": {
+					"error": {
+						"message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'",
+						"stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'\n    at Object.run (/packages/artifacts/artifacts/typescript/test.ts:13:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:101:9)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:98:2)",
+						"stage": "post-validation"
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20230802.0.0",
+				"result": {
+					"error": {
+						"message": "Timed out"
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"error": {
+						"message": "Timed out"
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"error": {
+						"message": "Timed out"
+					}
+				}
+			},
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"error": {
+						"message": "Timed out"
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"name": "@minification-benchmarks/data",
+	"private": true,
+	"type": "module",
+	"main": "index.ts",
+	"dependencies": {
+		"@minification-benchmarks/bench": "*",
+		"@minification-benchmarks/minifiers": "*",
+		"@minification-benchmarks/utils": "*",
+		"byte-size": "^8.1.1",
+		"comment-mark": "^1.1.1",
+		"date-fns": "^3.6.0",
+		"lodash-es": "^4.17.21",
+		"markdown-table": "^3.0.3"
+	},
+	"devDependencies": {
+		"@types/byte-size": "^8.1.0",
+		"@types/lodash-es": "^4.17.12"
+	}
+}
