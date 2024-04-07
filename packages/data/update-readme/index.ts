@@ -1,6 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import commentMark from 'comment-mark';
+import outdent from 'outdent';
 import { format } from 'date-fns';
 import { markdownTable } from 'markdown-table';
 import byteSize from 'byte-size';
@@ -62,14 +63,14 @@ const generateBenchmarkTable = (
 			],
 
 			['Minifier', 'Minified size', 'Minzipped size', 'Time'].map(mdu.strong),
-			...minified.map(([minifierName, minifier]) => {
+			...minified.map(([minifierName, minifier], index) => {
 				const { result } = minifier;
 
 				const columns = [
-					mdu.link(
+					`${(index + 1).toString()}. ${mdu.link(
 						minifierName,
 						path.relative(process.cwd(), path.join(minifiersDirectory, minifier.minifierPath)),
-					),
+					)}`,
 				];
 
 				if ('error' in result) {
@@ -77,7 +78,7 @@ const generateBenchmarkTable = (
 					columns[0] += ` ${
 						mdu.sub(
 							`❌ ${capitalize(result.error.stage || message)}`,
-							message,
+							{ title: message },
 						)
 					}`;
 					columns.push('-', '-', '-');
@@ -110,6 +111,42 @@ const generateBenchmarkTable = (
 	);
 };
 
+const generateMermaidGraph = (
+	name: string,
+	artifact: Artifact,
+) => {
+	const minifiers = Object.entries(artifact.minified)
+		.map(([minifierName, { result }]) => {
+			if ('error' in result) {
+				return;
+			}
+			return [minifierName, result.data.minzippedSize] as const;
+		})
+		.filter(Boolean);
+
+	return mdu.mermaid(outdent`
+	---
+	config:
+	    xyChart:
+	        width: 720
+	        height: 360
+	        xAxis:
+	            labelPadding: 20
+	        yAxis:
+	            labelPadding: 10
+	---
+	xychart-beta
+		title ${JSON.stringify(`${name} v${artifact.version}`)}
+		x-axis ${
+			JSON.stringify(['Original', ...minifiers.map((_, index) => index + 1)])
+		}
+		y-axis "Gzip size" 0 --> ${artifact.gzipSize}
+		bar ${
+			JSON.stringify([artifact.gzipSize, ...minifiers.map(([, size]) => size)])
+		}
+	`);
+};
+
 const generateBenchmarks = (benchmarkData: Data) => {
 	const artifacts = Object.entries(benchmarkData);
 
@@ -118,8 +155,15 @@ const generateBenchmarks = (benchmarkData: Data) => {
 	);
 
 	return artifacts
-		.map(([name, artifact]) => generateBenchmarkTable(name, artifact))
-		.join('\n----\n');
+		.map(
+			([name, artifact]) => [
+				generateMermaidGraph(name, artifact),
+				mdu.div(generateBenchmarkTable(name, artifact), {
+					align: 'center',
+				}),
+			].join('\n\n'),
+		)
+		.join('\n\n----\n\n');
 };
 
 const minifiers = await getMinifiers();
