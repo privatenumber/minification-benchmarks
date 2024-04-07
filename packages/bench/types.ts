@@ -1,5 +1,8 @@
 import type { Artifact } from '@minification-benchmarks/artifacts';
 
+// Because eslint disallows {} to indicate empty object
+type EmptyObject = Record<string, never>;
+
 // Result for a minifier benchmark given a file
 export type BenchmarkData = {
 	minifiedSize: number;
@@ -7,7 +10,7 @@ export type BenchmarkData = {
 	time: number;
 };
 
-export type BenchmarkResultSuccess<Extended = {}> = {
+export type BenchmarkResultSuccess<Extended = EmptyObject> = {
 	data: BenchmarkData & Extended;
 };
 
@@ -19,7 +22,7 @@ export type BenchmarkError = {
 	};
 };
 
-export type BenchmarkResult<Extended = {}> = BenchmarkResultSuccess<Extended> | BenchmarkError;
+export type BenchmarkResult<Extended = EmptyObject> = BenchmarkResultSuccess<Extended> | BenchmarkError;
 
 export type BenchmarkResultSuccessWithRuns = BenchmarkResultSuccess<{ runs: number }>;
 export type BenchmarkResultWithRuns = BenchmarkResult<{ runs: number }>;

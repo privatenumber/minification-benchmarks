@@ -4,7 +4,7 @@ import commentMark from 'comment-mark';
 import { format } from 'date-fns';
 import { markdownTable } from 'markdown-table';
 import byteSize from 'byte-size';
-import { minBy } from 'lodash-es';
+import { minBy, capitalize } from 'lodash-es';
 import type { BenchmarkResultSuccessWithRuns } from '@minification-benchmarks/bench/types.js';
 import { minifiersDirectory } from '@minification-benchmarks/minifiers/utils/minifiers-directory.js';
 import { data } from '../index.js';
@@ -69,10 +69,10 @@ const generateBenchmarkTable = (
 				];
 
 				if ('error' in result) {
-					const message = result.error.message;
+					const { message } = result.error;
 					columns[0] += ` ${
 						mdu.sub(
-							`❌ ${result.error.stage || message}`,
+							`❌ ${capitalize(result.error.stage || message)}`,
 							message,
 						)
 					}`;

@@ -1,7 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
 import assert from 'assert';
-import crypto from 'crypto';
 import { readPackageUp, type NormalizedPackageJson } from 'read-pkg-up';
 import { getSize, getGzipSize } from '@minification-benchmarks/utils/get-size';
 import { unpreserveComments } from './unpreserve-comments.js';
