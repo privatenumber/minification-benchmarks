@@ -6,5 +6,5 @@ export const requireString = (
 ) => {
 	const vol = Volume.fromJSON({ '/index.js': code });
 	const fsRequire = createFsRequire(vol);
-	return fsRequire('/index');
+	return fsRequire('/index.js');
 };

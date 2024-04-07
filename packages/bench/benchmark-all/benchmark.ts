@@ -42,10 +42,12 @@ const benchmark = async (
 		},
 	);
 
+	// This actually includes time to pre and post validate the code
 	if (minificationProcess.timedOut) {
 		return {
 			error: {
 				message: 'Timed out',
+				stage: 'minification',
 			},
 		};
 	}

@@ -28,7 +28,7 @@ export const getMinifier = async (
 ) => {
 	const stat = await fs.stat(path.join(minifiersDirectory, minifierName)).catch(() => null);
 	if (!stat) {
-		minifierName = minifierName + '.ts';
+		minifierName += '.ts';
 	} else if (stat.isDirectory()) {
 		minifierName = path.join(minifierName, 'index.ts');
 	}

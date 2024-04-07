@@ -7,6 +7,9 @@ import { loadArtifact } from '@minification-benchmarks/artifacts';
 import { logResult, logError } from './log.js';
 import type { Minified } from './types.js';
 
+// In case 'node:assert' is used by the artifact tests
+process.env.NO_COLOR = '1';
+
 const runMinifier = async (
 	minifier: MinifierFunction,
 	code: string,
@@ -20,7 +23,6 @@ const runMinifier = async (
 			filePath,
 		});
 	} catch (error) {
-		console.log(error);
 		return logError(error, 'minification');
 	}
 

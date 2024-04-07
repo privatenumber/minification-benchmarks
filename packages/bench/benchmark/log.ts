@@ -26,7 +26,7 @@ export const logError = (
 	if (thrown instanceof Error) {
 		const cwd = process.cwd();
 		error = {
-			message: thrown.message,
+			message: thrown.message.replaceAll(cwd, ''),
 			stack: thrown.stack!.replaceAll(cwd, ''),
 		};
 	} else {

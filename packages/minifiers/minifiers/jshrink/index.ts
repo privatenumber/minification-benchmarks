@@ -21,7 +21,10 @@ export default createMinifier(
 			]);
 
 			if (error) {
-				throw new Error(error);
+				const [message, ...stackLines] = error.split('\n');
+				const errorObject = new Error(message);
+				errorObject.stack = stackLines.join('\n');
+				throw errorObject;
 			}
 
 			return minified;

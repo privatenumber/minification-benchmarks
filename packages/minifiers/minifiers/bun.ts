@@ -9,7 +9,19 @@ export default createMinifier(
 	{
 		default: async ({ filePath }) => {
 			const minify = spawn(bunPath, ['build', '--no-bundle', '--minify', filePath]);
-			return await collectStream(minify.stdout);
+			const [error, minified] = await Promise.all([
+				collectStream(minify.stderr),
+				collectStream(minify.stdout),
+			]);
+
+			if (error) {
+				const [message, ...stackLines] = error.split('\n');
+				const errorObject = new Error(message);
+				errorObject.stack = stackLines.join('\n');
+				throw errorObject;
+			}
+
+			return minified;
 		},
 	},
 );

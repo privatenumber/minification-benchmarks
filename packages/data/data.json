@@ -12,7 +12,7 @@
 					"data": {
 						"minifiedSize": 22866,
 						"minzippedSize": 8173,
-						"time": 12.580708,
+						"time": 38.456291,
 						"runs": 1
 					}
 				}
@@ -24,7 +24,7 @@
 					"data": {
 						"minifiedSize": 22668,
 						"minzippedSize": 8184,
-						"time": 217.350292,
+						"time": 200.156584,
 						"runs": 1
 					}
 				}
@@ -36,7 +36,7 @@
 					"data": {
 						"minifiedSize": 22825,
 						"minzippedSize": 8193,
-						"time": 1529.7191659999999,
+						"time": 1625.8620409999999,
 						"runs": 1
 					}
 				}
@@ -48,7 +48,7 @@
 					"data": {
 						"minifiedSize": 23141,
 						"minzippedSize": 8317,
-						"time": 118.317041,
+						"time": 115.731334,
 						"runs": 1
 					}
 				}
@@ -60,7 +60,7 @@
 					"data": {
 						"minifiedSize": 23601,
 						"minzippedSize": 8448,
-						"time": 275.585584,
+						"time": 306.225541,
 						"runs": 1
 					}
 				}
@@ -72,7 +72,7 @@
 					"data": {
 						"minifiedSize": 23697,
 						"minzippedSize": 8543,
-						"time": 13.267375,
+						"time": 13.543333,
 						"runs": 1
 					}
 				}
@@ -84,7 +84,7 @@
 					"data": {
 						"minifiedSize": 24011,
 						"minzippedSize": 8650,
-						"time": 38.296875,
+						"time": 58.085417,
 						"runs": 1
 					}
 				}
@@ -96,7 +96,7 @@
 					"data": {
 						"minifiedSize": 25030,
 						"minzippedSize": 8668,
-						"time": 40.790583,
+						"time": 37.27925,
 						"runs": 1
 					}
 				}
@@ -108,7 +108,7 @@
 					"data": {
 						"minifiedSize": 25081,
 						"minzippedSize": 8746,
-						"time": 56.59325,
+						"time": 80.728041,
 						"runs": 1
 					}
 				}
@@ -120,7 +120,7 @@
 					"data": {
 						"minifiedSize": 40821,
 						"minzippedSize": 11040,
-						"time": 52.335917,
+						"time": 112.952333,
 						"runs": 1
 					}
 				}
@@ -140,7 +140,7 @@
 					"data": {
 						"minifiedSize": 57865,
 						"minzippedSize": 18567,
-						"time": 450.89325,
+						"time": 455.993709,
 						"runs": 1
 					}
 				}
@@ -152,7 +152,7 @@
 					"data": {
 						"minifiedSize": 58210,
 						"minzippedSize": 18686,
-						"time": 33.343916,
+						"time": 27.976125,
 						"runs": 1
 					}
 				}
@@ -164,7 +164,7 @@
 					"data": {
 						"minifiedSize": 59162,
 						"minzippedSize": 18694,
-						"time": 271.93425,
+						"time": 257.102208,
 						"runs": 1
 					}
 				}
@@ -176,7 +176,7 @@
 					"data": {
 						"minifiedSize": 58273,
 						"minzippedSize": 18910,
-						"time": 1827.44475,
+						"time": 1936.501541,
 						"runs": 1
 					}
 				}
@@ -188,7 +188,7 @@
 					"data": {
 						"minifiedSize": 59703,
 						"minzippedSize": 19119,
-						"time": 833.713167,
+						"time": 671.646459,
 						"runs": 1
 					}
 				}
@@ -200,7 +200,7 @@
 					"data": {
 						"minifiedSize": 59824,
 						"minzippedSize": 19334,
-						"time": 17.429375,
+						"time": 17.750958,
 						"runs": 1
 					}
 				}
@@ -212,7 +212,7 @@
 					"data": {
 						"minifiedSize": 62495,
 						"minzippedSize": 19569,
-						"time": 84.024333,
+						"time": 84.216708,
 						"runs": 1
 					}
 				}
@@ -224,7 +224,7 @@
 					"data": {
 						"minifiedSize": 63151,
 						"minzippedSize": 19683,
-						"time": 118.261125,
+						"time": 111.072125,
 						"runs": 1
 					}
 				}
@@ -236,7 +236,7 @@
 					"data": {
 						"minifiedSize": 61856,
 						"minzippedSize": 19873,
-						"time": 30.471375,
+						"time": 43.584875,
 						"runs": 1
 					}
 				}
@@ -248,7 +248,7 @@
 					"data": {
 						"minifiedSize": 97632,
 						"minzippedSize": 24998,
-						"time": 91.540208,
+						"time": 86.428209,
 						"runs": 1
 					}
 				}
@@ -268,7 +268,7 @@
 					"data": {
 						"minifiedSize": 89158,
 						"minzippedSize": 30870,
-						"time": 47.107083,
+						"time": 51.072625,
 						"runs": 1
 					}
 				}
@@ -280,7 +280,7 @@
 					"data": {
 						"minifiedSize": 88539,
 						"minzippedSize": 30891,
-						"time": 611.864042,
+						"time": 630.82,
 						"runs": 1
 					}
 				}
@@ -292,7 +292,7 @@
 					"data": {
 						"minifiedSize": 89540,
 						"minzippedSize": 30912,
-						"time": 349.957375,
+						"time": 333.068541,
 						"runs": 1
 					}
 				}
@@ -304,7 +304,7 @@
 					"data": {
 						"minifiedSize": 94082,
 						"minzippedSize": 31470,
-						"time": 114.478958,
+						"time": 116.143375,
 						"runs": 1
 					}
 				}
@@ -316,7 +316,7 @@
 					"data": {
 						"minifiedSize": 94554,
 						"minzippedSize": 31621,
-						"time": 154.603041,
+						"time": 145.999959,
 						"runs": 1
 					}
 				}
@@ -328,7 +328,7 @@
 					"data": {
 						"minifiedSize": 92103,
 						"minzippedSize": 31799,
-						"time": 1146.048667,
+						"time": 1105.686041,
 						"runs": 1
 					}
 				}
@@ -340,7 +340,7 @@
 					"data": {
 						"minifiedSize": 90065,
 						"minzippedSize": 31954,
-						"time": 23.705125,
+						"time": 23.895458,
 						"runs": 1
 					}
 				}
@@ -352,7 +352,7 @@
 					"data": {
 						"minifiedSize": 92559,
 						"minzippedSize": 32703,
-						"time": 42.13075,
+						"time": 37.889875,
 						"runs": 1
 					}
 				}
@@ -364,7 +364,7 @@
 					"data": {
 						"minifiedSize": 92704,
 						"minzippedSize": 33086,
-						"time": 1992.731292,
+						"time": 2072.499542,
 						"runs": 1
 					}
 				}
@@ -376,7 +376,7 @@
 					"data": {
 						"minifiedSize": 144144,
 						"minzippedSize": 40879,
-						"time": 105.005375,
+						"time": 102.134583,
 						"runs": 1
 					}
 				}
@@ -396,7 +396,7 @@
 					"data": {
 						"minifiedSize": 115461,
 						"minzippedSize": 42477,
-						"time": 67.412125,
+						"time": 68.563625,
 						"runs": 1
 					}
 				}
@@ -408,7 +408,7 @@
 					"data": {
 						"minifiedSize": 116826,
 						"minzippedSize": 42939,
-						"time": 483.156625,
+						"time": 422.378292,
 						"runs": 1
 					}
 				}
@@ -420,7 +420,7 @@
 					"data": {
 						"minifiedSize": 113982,
 						"minzippedSize": 42948,
-						"time": 821.202958,
+						"time": 803.201833,
 						"runs": 1
 					}
 				}
@@ -432,7 +432,7 @@
 					"data": {
 						"minifiedSize": 117896,
 						"minzippedSize": 43925,
-						"time": 1333.615125,
+						"time": 1227.4056249999999,
 						"runs": 1
 					}
 				}
@@ -444,7 +444,7 @@
 					"data": {
 						"minifiedSize": 115604,
 						"minzippedSize": 44226,
-						"time": 2259.436625,
+						"time": 2257.846125,
 						"runs": 1
 					}
 				}
@@ -456,7 +456,7 @@
 					"data": {
 						"minifiedSize": 118141,
 						"minzippedSize": 44368,
-						"time": 27.053459,
+						"time": 23.991208,
 						"runs": 1
 					}
 				}
@@ -468,7 +468,7 @@
 					"data": {
 						"minifiedSize": 126137,
 						"minzippedSize": 44450,
-						"time": 149.7575,
+						"time": 181.872209,
 						"runs": 1
 					}
 				}
@@ -480,7 +480,7 @@
 					"data": {
 						"minifiedSize": 126580,
 						"minzippedSize": 44679,
-						"time": 192.160541,
+						"time": 187.811916,
 						"runs": 1
 					}
 				}
@@ -492,7 +492,7 @@
 					"data": {
 						"minifiedSize": 121703,
 						"minzippedSize": 45340,
-						"time": 39.7845,
+						"time": 43.725042,
 						"runs": 1
 					}
 				}
@@ -504,7 +504,7 @@
 					"data": {
 						"minifiedSize": 197357,
 						"minzippedSize": 57169,
-						"time": 128.912041,
+						"time": 130.922833,
 						"runs": 1
 					}
 				}
@@ -524,7 +524,7 @@
 					"data": {
 						"minifiedSize": 68242,
 						"minzippedSize": 24659,
-						"time": 663.412292,
+						"time": 661.347959,
 						"runs": 1
 					}
 				}
@@ -536,7 +536,7 @@
 					"data": {
 						"minifiedSize": 73466,
 						"minzippedSize": 24972,
-						"time": 2113.922,
+						"time": 2106.737125,
 						"runs": 1
 					}
 				}
@@ -548,7 +548,7 @@
 					"data": {
 						"minifiedSize": 69827,
 						"minzippedSize": 25183,
-						"time": 69.760959,
+						"time": 66.054667,
 						"runs": 1
 					}
 				}
@@ -560,7 +560,7 @@
 					"data": {
 						"minifiedSize": 70666,
 						"minzippedSize": 25186,
-						"time": 418.9765,
+						"time": 365.691875,
 						"runs": 1
 					}
 				}
@@ -572,7 +572,7 @@
 					"data": {
 						"minifiedSize": 72367,
 						"minzippedSize": 25503,
-						"time": 974.072208,
+						"time": 982.588791,
 						"runs": 1
 					}
 				}
@@ -584,7 +584,7 @@
 					"data": {
 						"minifiedSize": 74607,
 						"minzippedSize": 25862,
-						"time": 136.897916,
+						"time": 134.285625,
 						"runs": 1
 					}
 				}
@@ -596,7 +596,7 @@
 					"data": {
 						"minifiedSize": 72483,
 						"minzippedSize": 26200,
-						"time": 25.634833,
+						"time": 26.284375,
 						"runs": 1
 					}
 				}
@@ -608,7 +608,7 @@
 					"data": {
 						"minifiedSize": 75293,
 						"minzippedSize": 26221,
-						"time": 190.394709,
+						"time": 168.421833,
 						"runs": 1
 					}
 				}
@@ -620,7 +620,7 @@
 					"data": {
 						"minifiedSize": 74116,
 						"minzippedSize": 26500,
-						"time": 50.39975,
+						"time": 41.813708,
 						"runs": 1
 					}
 				}
@@ -632,7 +632,7 @@
 					"data": {
 						"minifiedSize": 148780,
 						"minzippedSize": 36327,
-						"time": 110.619208,
+						"time": 110.394792,
 						"runs": 1
 					}
 				}
@@ -652,7 +652,7 @@
 					"data": {
 						"minifiedSize": 263905,
 						"minzippedSize": 87114,
-						"time": 1550.3886670000002,
+						"time": 1556.9068750000001,
 						"runs": 1
 					}
 				}
@@ -664,7 +664,7 @@
 					"data": {
 						"minifiedSize": 265266,
 						"minzippedSize": 87283,
-						"time": 171.2955,
+						"time": 150.696209,
 						"runs": 1
 					}
 				}
@@ -676,7 +676,7 @@
 					"data": {
 						"minifiedSize": 275347,
 						"minzippedSize": 88319,
-						"time": 293.509916,
+						"time": 272.3175,
 						"runs": 1
 					}
 				}
@@ -688,7 +688,7 @@
 					"data": {
 						"minifiedSize": 267904,
 						"minzippedSize": 88343,
-						"time": 930.645917,
+						"time": 908.1675,
 						"runs": 1
 					}
 				}
@@ -700,7 +700,7 @@
 					"data": {
 						"minifiedSize": 276467,
 						"minzippedSize": 89156,
-						"time": 439.757041,
+						"time": 427.8315,
 						"runs": 1
 					}
 				}
@@ -712,7 +712,7 @@
 					"data": {
 						"minifiedSize": 270129,
 						"minzippedSize": 90800,
-						"time": 41.923709,
+						"time": 43.47525,
 						"runs": 1
 					}
 				}
@@ -724,7 +724,7 @@
 					"data": {
 						"minifiedSize": 273630,
 						"minzippedSize": 92375,
-						"time": 51.994625,
+						"time": 52.07775,
 						"runs": 1
 					}
 				}
@@ -736,7 +736,7 @@
 					"data": {
 						"minifiedSize": 270298,
 						"minzippedSize": 94121,
-						"time": 3249.031791,
+						"time": 3228.2695830000002,
 						"runs": 1
 					}
 				}
@@ -757,8 +757,8 @@
 				"version": "1.7.0",
 				"result": {
 					"error": {
-						"message": "RuntimeException: Unclosed regex pattern at position: 289075 in /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643\nStack trace:\n#0 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString('// https://d3js...', Array)\n#3 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify('// https://d3js...')\n#4 {main}",
-						"stack": "Error: RuntimeException: Unclosed regex pattern at position: 289075 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643\nStack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString('// https://d3js...', Array)\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify('// https://d3js...')\n#4 {main}\n    at default (/packages/minifiers/minifiers/jshrink/index.ts:24:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at runMinifier (/packages/bench/benchmark/cli.ts:18:18)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:93:18)",
+						"message": "RuntimeException: Unclosed regex pattern at position: 289075 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643",
+						"stack": "Stack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString('// https://d3js...', Array)\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify('// https://d3js...')\n#4 {main}",
 						"stage": "minification"
 					}
 				}
@@ -778,7 +778,7 @@
 					"data": {
 						"minifiedSize": 454727,
 						"minzippedSize": 122922,
-						"time": 141.413875,
+						"time": 130.112708,
 						"runs": 1
 					}
 				}
@@ -790,7 +790,7 @@
 					"data": {
 						"minifiedSize": 450915,
 						"minzippedSize": 123211,
-						"time": 1423.885041,
+						"time": 1440.930959,
 						"runs": 1
 					}
 				}
@@ -802,7 +802,7 @@
 					"data": {
 						"minifiedSize": 457381,
 						"minzippedSize": 123333,
-						"time": 900.573333,
+						"time": 847.119709,
 						"runs": 1
 					}
 				}
@@ -814,7 +814,7 @@
 					"data": {
 						"minifiedSize": 473361,
 						"minzippedSize": 124223,
-						"time": 398.10475,
+						"time": 417.94025,
 						"runs": 1
 					}
 				}
@@ -826,7 +826,7 @@
 					"data": {
 						"minifiedSize": 471138,
 						"minzippedSize": 124388,
-						"time": 314.701833,
+						"time": 316.857792,
 						"runs": 1
 					}
 				}
@@ -838,7 +838,7 @@
 					"data": {
 						"minifiedSize": 439067,
 						"minzippedSize": 126313,
-						"time": 2926.556375,
+						"time": 2999.799958,
 						"runs": 1
 					}
 				}
@@ -850,7 +850,7 @@
 					"data": {
 						"minifiedSize": 457996,
 						"minzippedSize": 126550,
-						"time": 52.4045,
+						"time": 42.855417,
 						"runs": 1
 					}
 				}
@@ -862,7 +862,7 @@
 					"data": {
 						"minifiedSize": 466036,
 						"minzippedSize": 127405,
-						"time": 55.944208,
+						"time": 56.120208,
 						"runs": 1
 					}
 				}
@@ -874,7 +874,7 @@
 					"data": {
 						"minifiedSize": 632255,
 						"minzippedSize": 144940,
-						"time": 318.646458,
+						"time": 320.299334,
 						"runs": 1
 					}
 				}
@@ -905,7 +905,7 @@
 					"data": {
 						"minifiedSize": 642879,
 						"minzippedSize": 158368,
-						"time": 221.687708,
+						"time": 203.285125,
 						"runs": 1
 					}
 				}
@@ -917,7 +917,7 @@
 					"data": {
 						"minifiedSize": 642220,
 						"minzippedSize": 158907,
-						"time": 2127.4065,
+						"time": 1992.623333,
 						"runs": 1
 					}
 				}
@@ -929,7 +929,7 @@
 					"data": {
 						"minifiedSize": 653986,
 						"minzippedSize": 159729,
-						"time": 1260.771917,
+						"time": 1179.254333,
 						"runs": 1
 					}
 				}
@@ -941,7 +941,7 @@
 					"data": {
 						"minifiedSize": 648830,
 						"minzippedSize": 162498,
-						"time": 6302.761209,
+						"time": 6272.467125,
 						"runs": 1
 					}
 				}
@@ -953,7 +953,7 @@
 					"data": {
 						"minifiedSize": 644453,
 						"minzippedSize": 162971,
-						"time": 3635.207209,
+						"time": 3659.196041,
 						"runs": 1
 					}
 				}
@@ -965,7 +965,7 @@
 					"data": {
 						"minifiedSize": 674490,
 						"minzippedSize": 163036,
-						"time": 452.033542,
+						"time": 436.869583,
 						"runs": 1
 					}
 				}
@@ -977,7 +977,7 @@
 					"data": {
 						"minifiedSize": 675504,
 						"minzippedSize": 163198,
-						"time": 582.139458,
+						"time": 588.77025,
 						"runs": 1
 					}
 				}
@@ -989,7 +989,7 @@
 					"data": {
 						"minifiedSize": 646759,
 						"minzippedSize": 163725,
-						"time": 59.937042,
+						"time": 61.635708,
 						"runs": 1
 					}
 				}
@@ -1001,7 +1001,7 @@
 					"data": {
 						"minifiedSize": 662756,
 						"minzippedSize": 166480,
-						"time": 60.383334,
+						"time": 60.043375,
 						"runs": 1
 					}
 				}
@@ -1013,7 +1013,7 @@
 					"data": {
 						"minifiedSize": 952007,
 						"minzippedSize": 193471,
-						"time": 407.581833,
+						"time": 460.415,
 						"runs": 1
 					}
 				}
@@ -1033,7 +1033,7 @@
 					"data": {
 						"minifiedSize": 707209,
 						"minzippedSize": 157859,
-						"time": 288.070416,
+						"time": 285.911375,
 						"runs": 1
 					}
 				}
@@ -1045,7 +1045,7 @@
 					"data": {
 						"minifiedSize": 702670,
 						"minzippedSize": 158218,
-						"time": 2724.824083,
+						"time": 2617.652792,
 						"runs": 1
 					}
 				}
@@ -1057,7 +1057,7 @@
 					"data": {
 						"minifiedSize": 715587,
 						"minzippedSize": 158718,
-						"time": 1665.882125,
+						"time": 1654.203375,
 						"runs": 1
 					}
 				}
@@ -1069,7 +1069,7 @@
 					"data": {
 						"minifiedSize": 759337,
 						"minzippedSize": 166386,
-						"time": 718.467375,
+						"time": 705.813458,
 						"runs": 1
 					}
 				}
@@ -1081,7 +1081,7 @@
 					"data": {
 						"minifiedSize": 756530,
 						"minzippedSize": 167579,
-						"time": 600.239916,
+						"time": 547.208333,
 						"runs": 1
 					}
 				}
@@ -1093,7 +1093,7 @@
 					"data": {
 						"minifiedSize": 705866,
 						"minzippedSize": 175473,
-						"time": 4035.726708,
+						"time": 4165.313,
 						"runs": 1
 					}
 				}
@@ -1105,7 +1105,7 @@
 					"data": {
 						"minifiedSize": 724140,
 						"minzippedSize": 181071,
-						"time": 78.893041,
+						"time": 78.904208,
 						"runs": 1
 					}
 				}
@@ -1117,7 +1117,7 @@
 					"data": {
 						"minifiedSize": 728200,
 						"minzippedSize": 182567,
-						"time": 66.675,
+						"time": 72.598916,
 						"runs": 1
 					}
 				}
@@ -1139,7 +1139,7 @@
 				"result": {
 					"error": {
 						"message": "Unexpected token '~'",
-						"stack": "fs-require://2/index.js:594\nreturn function(key,value){if(stack.length>0){var thisPos=stack.indexOf(this)~thisPos?stack.splice(thisPos+1):stack.push(this)~thisPos?keys.splice(thisPos,Infinity,key):keys.push(key)\n                                                                             ^\n\nSyntaxError: Unexpected token '~'\n    at new Script (node:vm:99:7)\n    at createScript (node:vm:255:10)\n    at Object.runInThisContext (node:vm:303:10)\n    at p. (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1165)\n    at s (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1657)\n    at requireString (/packages/artifacts/utils/require-string.ts:9:9)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:99:22)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:96:2)",
+						"stack": "fs-require://2/index.js:594\nreturn function(key,value){if(stack.length>0){var thisPos=stack.indexOf(this)~thisPos?stack.splice(thisPos+1):stack.push(this)~thisPos?keys.splice(thisPos,Infinity,key):keys.push(key)\n                                                                             ^\n\nSyntaxError: Unexpected token '~'\n    at new Script (node:vm:99:7)\n    at createScript (node:vm:255:10)\n    at Object.runInThisContext (node:vm:303:10)\n    at p. (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1165)\n    at s (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1657)\n    at requireString (/packages/artifacts/utils/require-string.ts:9:9)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:99:22)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:98:2)",
 						"stage": "post-validation"
 					}
 				}
@@ -1159,7 +1159,7 @@
 					"data": {
 						"minifiedSize": 993066,
 						"minzippedSize": 320246,
-						"time": 575.934917,
+						"time": 575.15325,
 						"runs": 1
 					}
 				}
@@ -1171,7 +1171,7 @@
 					"data": {
 						"minifiedSize": 1000982,
 						"minzippedSize": 322106,
-						"time": 2647.7610839999998,
+						"time": 2612.746291,
 						"runs": 1
 					}
 				}
@@ -1183,7 +1183,7 @@
 					"data": {
 						"minifiedSize": 980140,
 						"minzippedSize": 326772,
-						"time": 4778.52075,
+						"time": 4769.237833,
 						"runs": 1
 					}
 				}
@@ -1195,7 +1195,7 @@
 					"data": {
 						"minifiedSize": 990876,
 						"minzippedSize": 328229,
-						"time": 8501.51525,
+						"time": 5577.209958,
 						"runs": 1
 					}
 				}
@@ -1207,7 +1207,7 @@
 					"data": {
 						"minifiedSize": 1071527,
 						"minzippedSize": 330736,
-						"time": 1270.865333,
+						"time": 1295.4926249999999,
 						"runs": 1
 					}
 				}
@@ -1219,7 +1219,7 @@
 					"data": {
 						"minifiedSize": 1068386,
 						"minzippedSize": 331412,
-						"time": 780.800959,
+						"time": 776.2285,
 						"runs": 1
 					}
 				}
@@ -1231,7 +1231,7 @@
 					"data": {
 						"minifiedSize": 1011234,
 						"minzippedSize": 331563,
-						"time": 121.270667,
+						"time": 122.192375,
 						"runs": 1
 					}
 				}
@@ -1240,11 +1240,10 @@
 				"minifierPath": "bun.ts",
 				"version": "1.0.30",
 				"result": {
-					"data": {
-						"minifiedSize": 1026633,
-						"minzippedSize": 337782,
-						"time": 381.728166,
-						"runs": 1
+					"error": {
+						"message": "36 |     \"lib/chart/*.js\",",
+						"stack": "         ^\nwarn: wildcard sideEffects are not supported yet, which means this package will be deoptimized\n   at /packages/artifacts/node_modules/echarts/package.json:36:5\n",
+						"stage": "minification"
 					}
 				}
 			},
@@ -1253,7 +1252,8 @@
 				"version": "0.5.2",
 				"result": {
 					"error": {
-						"message": "Timed out"
+						"message": "Timed out",
+						"stage": "minification"
 					}
 				}
 			},
@@ -1262,8 +1262,8 @@
 				"version": "1.7.0",
 				"result": {
 					"error": {
-						"message": "RuntimeException: Unclosed regex pattern at position: 37315 in /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643\nStack trace:\n#0 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString('\\n/*\\n* Licensed ...', Array)\n#3 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify('\\n/*\\n* Licensed ...')\n#4 {main}",
-						"stack": "Error: RuntimeException: Unclosed regex pattern at position: 37315 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643\nStack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString('\\n/*\\n* Licensed ...', Array)\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify('\\n/*\\n* Licensed ...')\n#4 {main}\n    at default (/packages/minifiers/minifiers/jshrink/index.ts:24:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at runMinifier (/packages/bench/benchmark/cli.ts:18:18)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:93:18)",
+						"message": "RuntimeException: Unclosed regex pattern at position: 37315 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643",
+						"stack": "Stack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString('\\n/*\\n* Licensed ...', Array)\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify('\\n/*\\n* Licensed ...')\n#4 {main}",
 						"stage": "minification"
 					}
 				}
@@ -1283,7 +1283,7 @@
 					"data": {
 						"minifiedSize": 2148550,
 						"minzippedSize": 452873,
-						"time": 680.302416,
+						"time": 705.08475,
 						"runs": 1
 					}
 				}
@@ -1295,7 +1295,7 @@
 					"data": {
 						"minifiedSize": 2227673,
 						"minzippedSize": 453926,
-						"time": 4725.0623749999995,
+						"time": 4686.606833,
 						"runs": 1
 					}
 				}
@@ -1307,7 +1307,7 @@
 					"data": {
 						"minifiedSize": 2249045,
 						"minzippedSize": 457817,
-						"time": 2922.058625,
+						"time": 3135.873166,
 						"runs": 1
 					}
 				}
@@ -1319,7 +1319,7 @@
 					"data": {
 						"minifiedSize": 2425048,
 						"minzippedSize": 475480,
-						"time": 1488.465208,
+						"time": 1503.8394170000001,
 						"runs": 1
 					}
 				}
@@ -1331,7 +1331,7 @@
 					"data": {
 						"minifiedSize": 2420587,
 						"minzippedSize": 478572,
-						"time": 1176.633708,
+						"time": 1144.16625,
 						"runs": 1
 					}
 				}
@@ -1343,7 +1343,7 @@
 					"data": {
 						"minifiedSize": 2249302,
 						"minzippedSize": 482470,
-						"time": 5811.669583,
+						"time": 7507.997708,
 						"runs": 1
 					}
 				}
@@ -1355,19 +1355,7 @@
 					"data": {
 						"minifiedSize": 2306394,
 						"minzippedSize": 488279,
-						"time": 198.506125,
-						"runs": 1
-					}
-				}
-			},
-			"bun": {
-				"minifierPath": "bun.ts",
-				"version": "1.0.30",
-				"result": {
-					"data": {
-						"minifiedSize": 2297027,
-						"minzippedSize": 491752,
-						"time": 139.020375,
+						"time": 185.654166,
 						"runs": 1
 					}
 				}
@@ -1379,8 +1367,19 @@
 					"data": {
 						"minifiedSize": 4449283,
 						"minzippedSize": 626675,
-						"time": 1727.7795,
+						"time": 1740.255375,
 						"runs": 1
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.0.30",
+				"result": {
+					"error": {
+						"message": "39 |     \"dist/*\",",
+						"stack": "         ^\nwarn: wildcard sideEffects are not supported yet, which means this package will be deoptimized\n   at /packages/artifacts/node_modules/antd/package.json:39:5\n",
+						"stage": "minification"
 					}
 				}
 			},
@@ -1389,7 +1388,8 @@
 				"version": "0.5.2",
 				"result": {
 					"error": {
-						"message": "Timed out"
+						"message": "Timed out",
+						"stage": "minification"
 					}
 				}
 			}
@@ -1408,7 +1408,7 @@
 					"data": {
 						"minifiedSize": 3269923,
 						"minzippedSize": 845107,
-						"time": 10795.618417,
+						"time": 11238.00375,
 						"runs": 1
 					}
 				}
@@ -1420,7 +1420,7 @@
 					"data": {
 						"minifiedSize": 3309542,
 						"minzippedSize": 852335,
-						"time": 1432.68425,
+						"time": 1366.792917,
 						"runs": 1
 					}
 				}
@@ -1432,7 +1432,7 @@
 					"data": {
 						"minifiedSize": 3349343,
 						"minzippedSize": 854273,
-						"time": 6143.800042,
+						"time": 6349.982125,
 						"runs": 1
 					}
 				}
@@ -1444,7 +1444,7 @@
 					"data": {
 						"minifiedSize": 3538024,
 						"minzippedSize": 876535,
-						"time": 1903.840916,
+						"time": 1898.1604160000002,
 						"runs": 1
 					}
 				}
@@ -1456,7 +1456,7 @@
 					"data": {
 						"minifiedSize": 3530223,
 						"minzippedSize": 879301,
-						"time": 2600.656458,
+						"time": 2649.576042,
 						"runs": 1
 					}
 				}
@@ -1468,7 +1468,7 @@
 					"data": {
 						"minifiedSize": 3401759,
 						"minzippedSize": 902952,
-						"time": 10198.670334,
+						"time": 10100.36975,
 						"runs": 1
 					}
 				}
@@ -1480,7 +1480,7 @@
 					"data": {
 						"minifiedSize": 3489518,
 						"minzippedSize": 915495,
-						"time": 312.920542,
+						"time": 318.552875,
 						"runs": 1
 					}
 				}
@@ -1490,7 +1490,8 @@
 				"version": "0.5.2",
 				"result": {
 					"error": {
-						"message": "Timed out"
+						"message": "Timed out",
+						"stage": "minification"
 					}
 				}
 			},
@@ -1500,7 +1501,7 @@
 				"result": {
 					"error": {
 						"message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'",
-						"stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'\n    at Object.run (/packages/artifacts/artifacts/typescript/test.ts:13:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:102:9)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:96:2)",
+						"stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'\n    at Object.run (/packages/artifacts/artifacts/typescript/test.ts:13:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:102:9)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:98:2)",
 						"stage": "post-validation"
 					}
 				}
@@ -1510,8 +1511,8 @@
 				"version": "1.7.0",
 				"result": {
 					"error": {
-						"message": "RuntimeException: Unclosed regex pattern at position: 8365076 in /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643\nStack trace:\n#0 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString('/* ************...', Array)\n#3 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify('/* ************...')\n#4 {main}",
-						"stack": "Error: RuntimeException: Unclosed regex pattern at position: 8365076 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643\nStack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString('/* ************...', Array)\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify('/* ************...')\n#4 {main}\n    at default (/packages/minifiers/minifiers/jshrink/index.ts:24:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at runMinifier (/packages/bench/benchmark/cli.ts:18:18)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:93:18)",
+						"message": "RuntimeException: Unclosed regex pattern at position: 8365076 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643",
+						"stack": "Stack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString('/* ************...', Array)\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify('/* ************...')\n#4 {main}",
 						"stage": "minification"
 					}
 				}

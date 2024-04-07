@@ -69,8 +69,8 @@ const generateBenchmarkTable = (
 				];
 
 				if ('error' in result) {
-					console.log(result.error);
-					columns[0] += ' ' + mdu.sub('❌ ' + result.error.message);
+					console.log(minifierName, result.error);
+					columns[0] += ` ${mdu.sub(`❌ ${result.error.stage}`)}`;
 					columns.push('-', '-', '-');
 				} else {
 					columns.push(
@@ -113,8 +113,6 @@ const generateBenchmarks = (data: Data) => {
 		.join('\n----\n');
 };
 
-
-
 // (async () => {
 
 // 	const minifiers = await Promise.all(minifierNames.map());
@@ -124,7 +122,6 @@ const generateBenchmarks = (data: Data) => {
 // 	).join('\n');
 // 	console.log(markdown);
 // })();
-
 
 const readmePath = './README.md';
 const readme = await fs.readFile(readmePath, 'utf8');

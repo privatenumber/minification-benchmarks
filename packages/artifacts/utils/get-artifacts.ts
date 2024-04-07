@@ -8,10 +8,5 @@ export const getArtifacts = async () => {
 		fileName => !fileName.startsWith('.'),
 	);
 
-	// TODO: Sort by size somewhere else
-	// artifacts.sort(
-	// 	(a, b) => a.size - b.size,
-	// );
-
 	return fileNames;
 };
