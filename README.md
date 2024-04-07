@@ -2,16 +2,16 @@
 
 This repo is routinely maintained to compare the quality and speed across the latest versions of the following JavaScript minifiers:
 
-- [babel-minify](https://github.com/babel/minify)
-- [bun](https://github.com/oven-sh/bun)
-- [esbuild](https://github.com/evanw/esbuild)
-- [google-closure-compiler](https://github.com/google/closure-compiler-npm/tree/master/packages/google-closure-compiler)
-- [JShrink](https://github.com/tedious/JShrink)
-- [minify-js](https://github.com/wilsonzlin/minify-js)
-- [swc](https://github.com/swc-project/swc)
-- [tdewolff/minify](https://github.com/tdewolff/minify)
-- [terser](https://github.com/terser/terser)
-- [uglify-js](https://github.com/mishoo/UglifyJS)
+<!-- minifiers:start -->
+- [babel-minify <sub>v0.5.2</sub>](https://github.com/babel/minify/tree/master/packages/babel-minify)
+- [bun <sub>v1.0.30</sub>](https://github.com/oven-sh/bun)
+- [esbuild <sub>v0.19.12</sub>](https://github.com/evanw/esbuild)
+- [google-closure-compiler <sub>v20230802.0.0</sub>](https://github.com/google/closure-compiler-npm/tree/master/packages/google-closure-compiler)
+- [tedivm/jshrink <sub>v1.7.0</sub>](https://github.com/tedious/JShrink)
+- [@swc/core <sub>v1.4.8</sub>](https://github.com/swc-project/swc)
+- [terser <sub>v5.29.2</sub>](https://github.com/terser/terser)
+- [uglify-js <sub>v3.17.4</sub>](https://github.com/mishoo/UglifyJS)
+<!-- minifiers:end -->
 
 _Benchmarks last updated on <!-- lastUpdated:start -->Apr 7, 2024<!-- lastUpdated:end -->._
 
@@ -240,20 +240,20 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts)                                                    |       <sup>-33% </sup>`4.45 MB` |       <sup>-24% </sup>`626.68 kB` | <sup>*14x* </sup>`1,740 ms` |
 | [babel-minify](packages/minifiers/minifiers/babel-minify.ts) <sub title="Timed out">❌ Timed out</sub>              |                               - |                                 - |                           - |
 ----
-| Artifact                                                                                                                                                                                                                                            |                   Original size |                         Gzip size |                              |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------: | --------------------------------: | ---------------------------: |
-| [typescript v4.9.5](https://www.npmjs.com/package/typescript/v/4.9.5) ([Source](https://unpkg.com/typescript@4.9.5/lib/typescript.js))                                                                                                              |                      `10.95 MB` |                         `1.88 MB` |                              |
-| **Minifier**                                                                                                                                                                                                                                        |               **Minified size** |                **Minzipped size** |                     **Time** |
-| [uglify-js](packages/minifiers/minifiers/uglify-js.ts)                                                                                                                                                                                              | **<sup>🏆-70% </sup>`3.27 MB`** | **<sup>🏆-55% </sup>`845.11 kB`** | <sup>*35x* </sup>`11,238 ms` |
-| [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                                                                                                                                                    |       <sup>-70% </sup>`3.31 MB` |       <sup>-55% </sup>`852.34 kB` |   <sup>*4x* </sup>`1,367 ms` |
-| [terser](packages/minifiers/minifiers/terser.ts)                                                                                                                                                                                                    |       <sup>-69% </sup>`3.35 MB` |       <sup>-55% </sup>`854.27 kB` |  <sup>*19x* </sup>`6,350 ms` |
-| [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts)                                                                                                                                                                                |       <sup>-68% </sup>`3.54 MB` |       <sup>-53% </sup>`876.54 kB` |   <sup>*5x* </sup>`1,898 ms` |
-| [terser (no compress)](packages/minifiers/minifiers/terser.ts)                                                                                                                                                                                      |       <sup>-68% </sup>`3.53 MB` |       <sup>-53% </sup>`879.30 kB` |   <sup>*8x* </sup>`2,650 ms` |
-| [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                                                                                                                                                  |       <sup>-69% </sup>`3.40 MB` |       <sup>-52% </sup>`902.95 kB` | <sup>*31x* </sup>`10,100 ms` |
-| [esbuild](packages/minifiers/minifiers/esbuild.ts)                                                                                                                                                                                                  |       <sup>-68% </sup>`3.49 MB` |       <sup>-51% </sup>`915.50 kB` |   **<sup>🏆 </sup>`319 ms`** |
-| [babel-minify](packages/minifiers/minifiers/babel-minify.ts) <sub title="Timed out">❌ Timed out</sub>                                                                                                                                               |                               - |                                 - |                            - |
-| [bun](packages/minifiers/minifiers/bun.ts) <sub title="Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return 'string'; };\\r\\n'\n- 'var x = function () { return 'string'; };\\n'">❌ Post-validation</sub> |                               - |                                 - |                            - |
-| [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts) <sub title="RuntimeException: Unclosed regex pattern at position: 8365076 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643">❌ Minification</sub>           |                               - |                                 - |                            - |
+| Artifact                                                                                                                                                                                                                                                |                   Original size |                         Gzip size |                              |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------: | --------------------------------: | ---------------------------: |
+| [typescript v4.9.5](https://www.npmjs.com/package/typescript/v/4.9.5) ([Source](https://unpkg.com/typescript@4.9.5/lib/typescript.js))                                                                                                                  |                      `10.95 MB` |                         `1.88 MB` |                              |
+| **Minifier**                                                                                                                                                                                                                                            |               **Minified size** |                **Minzipped size** |                     **Time** |
+| [uglify-js](packages/minifiers/minifiers/uglify-js.ts)                                                                                                                                                                                                  | **<sup>🏆-70% </sup>`3.27 MB`** | **<sup>🏆-55% </sup>`845.11 kB`** | <sup>*35x* </sup>`11,238 ms` |
+| [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                                                                                                                                                        |       <sup>-70% </sup>`3.31 MB` |       <sup>-55% </sup>`852.34 kB` |   <sup>*4x* </sup>`1,367 ms` |
+| [terser](packages/minifiers/minifiers/terser.ts)                                                                                                                                                                                                        |       <sup>-69% </sup>`3.35 MB` |       <sup>-55% </sup>`854.27 kB` |  <sup>*19x* </sup>`6,350 ms` |
+| [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts)                                                                                                                                                                                    |       <sup>-68% </sup>`3.54 MB` |       <sup>-53% </sup>`876.54 kB` |   <sup>*5x* </sup>`1,898 ms` |
+| [terser (no compress)](packages/minifiers/minifiers/terser.ts)                                                                                                                                                                                          |       <sup>-68% </sup>`3.53 MB` |       <sup>-53% </sup>`879.30 kB` |   <sup>*8x* </sup>`2,650 ms` |
+| [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                                                                                                                                                      |       <sup>-69% </sup>`3.40 MB` |       <sup>-52% </sup>`902.95 kB` | <sup>*31x* </sup>`10,100 ms` |
+| [esbuild](packages/minifiers/minifiers/esbuild.ts)                                                                                                                                                                                                      |       <sup>-68% </sup>`3.49 MB` |       <sup>-51% </sup>`915.50 kB` |   **<sup>🏆 </sup>`319 ms`** |
+| [babel-minify](packages/minifiers/minifiers/babel-minify.ts) <sub title="Timed out">❌ Timed out</sub>                                                                                                                                                   |                               - |                                 - |                            - |
+| [bun](packages/minifiers/minifiers/bun.ts) <sub title="Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'">❌ Post-validation</sub> |                               - |                                 - |                            - |
+| [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts) <sub title="RuntimeException: Unclosed regex pattern at position: 8365076 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643">❌ Minification</sub>               |                               - |                                 - |                            - |
 <!-- benchmarks:end -->
 
 ## Sponsors

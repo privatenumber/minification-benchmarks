@@ -11,6 +11,7 @@
 		"babel-minify": "^0.5.2",
 		"bun": "^1.0.23",
 		"esbuild": "^0.19.11",
+		"find-up": "^7.0.0",
 		"google-closure-compiler": "^20230802.0.0",
 		"mem": "^9.0.2",
 		"terser": "^5.27.0",
@@ -19,7 +20,6 @@
 	"devDependencies": {
 		"@types/google-closure-compiler": "^0.0.19",
 		"@types/uglify-js": "^3.17.0",
-		"find-up": "^7.0.0",
 		"type-fest": "^4.9.0"
 	}
 }

@@ -22,7 +22,10 @@ export type BenchmarkError = {
 	};
 };
 
-export type BenchmarkResult<Extended = EmptyObject> = BenchmarkResultSuccess<Extended> | BenchmarkError;
+export type BenchmarkResult<Extended = EmptyObject> = (
+	BenchmarkResultSuccess<Extended>
+	| BenchmarkError
+);
 
 export type BenchmarkResultSuccessWithRuns = BenchmarkResultSuccess<{ runs: number }>;
 export type BenchmarkResultWithRuns = BenchmarkResult<{ runs: number }>;

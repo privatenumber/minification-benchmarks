@@ -7,6 +7,7 @@ import byteSize from 'byte-size';
 import { minBy, capitalize } from 'lodash-es';
 import type { BenchmarkResultSuccessWithRuns } from '@minification-benchmarks/bench/types.js';
 import { minifiersDirectory } from '@minification-benchmarks/minifiers/utils/minifiers-directory.js';
+import { getMinifiers } from '@minification-benchmarks/minifiers';
 import { data } from '../index.js';
 import type { Data, Artifact } from '../types.js';
 import { percent, formatMs } from './formatting.js';
@@ -65,7 +66,10 @@ const generateBenchmarkTable = (
 				const { result } = minifier;
 
 				const columns = [
-					mdu.link(minifierName, path.relative(process.cwd(), path.join(minifiersDirectory, minifier.minifierPath))),
+					mdu.link(
+						minifierName,
+						path.relative(process.cwd(), path.join(minifiersDirectory, minifier.minifierPath)),
+					),
 				];
 
 				if ('error' in result) {
@@ -106,8 +110,8 @@ const generateBenchmarkTable = (
 	);
 };
 
-const generateBenchmarks = (data: Data) => {
-	const artifacts = Object.entries(data);
+const generateBenchmarks = (benchmarkData: Data) => {
+	const artifacts = Object.entries(benchmarkData);
 
 	artifacts.sort(
 		([, { size: sizeA }], [, { size: sizeB }]) => sizeA - sizeB,
@@ -118,15 +122,7 @@ const generateBenchmarks = (data: Data) => {
 		.join('\n----\n');
 };
 
-// (async () => {
-
-// 	const minifiers = await Promise.all(minifierNames.map());
-
-// 	const markdown = minifiers.map(
-// 		minifier => `- [${minifier.meta.name}](${minifier.meta.repository}) v${minifier.meta.version}`,
-// 	).join('\n');
-// 	console.log(markdown);
-// })();
+const minifiers = await getMinifiers();
 
 const readmePath = './README.md';
 const readme = await fs.readFile(readmePath, 'utf8');
@@ -134,6 +130,9 @@ const readme = await fs.readFile(readmePath, 'utf8');
 const newReadme = commentMark(readme, {
 	lastUpdated: format(new Date(), 'MMM d, y'),
 	benchmarks: generateBenchmarks(data),
+	minifiers: minifiers.map(
+		({ meta }) => `- ${mdu.link(`${meta.name} ${mdu.sub(`v${meta.version}`)}`, meta.repository)}`,
+	).join('\n'),
 });
 
 await fs.writeFile(readmePath, newReadme);
