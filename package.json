@@ -11,7 +11,7 @@
 		"bench": "tsx packages/bench/benchmark/cli.ts",
 		"bench-all": "tsx packages/bench/benchmark-all/cli.ts",
 		"update-readme": "tsx packages/data/update-readme/index.ts",
-		"lint": "lint --cache .",
+		"lint": "lint --cache . --ignore-pattern results",
 		"type-check": "tsc --noEmit"
 	},
 	"devDependencies": {

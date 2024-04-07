@@ -49,7 +49,7 @@ export class Artifact {
 		meta: ArtifactMeta,
 	) {
 		this.meta = meta;
-		this.filePath = meta.filePath; // path.join(meta.package, meta.filePath);
+		this.filePath = meta.filePath;
 		this.fullFilePath = path.join(nodeModulesPath, meta.package, this.filePath);
 	}
 

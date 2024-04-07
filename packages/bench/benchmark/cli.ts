@@ -102,14 +102,12 @@ try {
 
 logResult(minified);
 
-// if (save) {
-// 	const artifactId = artifact.id();
-// 	const minifierId = minifier.id(minifierInstanceName);
-// 	const saveToDirectory = path.join('results', artifactId, minifierId);
-// 	const saveTo = path.join(saveToDirectory, Date.now() + '.js');
+if (save) {
+	const saveToDirectory = path.join('results', artifact.name, minifier.name);
+	const saveTo = path.join(saveToDirectory, `${Date.now()}.js`);
 
-// 	await fs.mkdir(saveToDirectory, { recursive: true });
-// 	await fs.writeFile(saveTo, minified.code);
+	await fs.mkdir(saveToDirectory, { recursive: true });
+	await fs.writeFile(saveTo, minified.code);
 
-// 	// console.log(`Saved to ${saveTo}`);
-// }
+	console.log(`Saved to ${saveTo}`);
+}
