@@ -45,5 +45,6 @@ jobs:
         run: |
           git config user.name Hiroki Osame
           git config user.email hiroki.osame@gmail.com
-          git commit -nam "chore: updated benchmarks"
+          git add -u
+          git diff-index --quiet HEAD || git commit -nm "chore: updated benchmarks"
           git push
