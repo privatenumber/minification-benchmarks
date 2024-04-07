@@ -12,7 +12,7 @@ const benchmark = async (
 	artifact: string,
 	minifier: string,
 	minifierInstance: string | undefined,
-	timeout = 1000 * 20,
+	timeout = 1000 * 10,
 ): Promise<BenchmarkResult> => {
 	const minificationProcess = await execaNode(
 		benchmarkCliPath,
