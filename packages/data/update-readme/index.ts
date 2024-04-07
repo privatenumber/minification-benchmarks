@@ -69,8 +69,13 @@ const generateBenchmarkTable = (
 				];
 
 				if ('error' in result) {
-					console.log(minifierName, result.error);
-					columns[0] += ` ${mdu.sub(`❌ ${result.error.stage}`)}`;
+					const message = result.error.message;
+					columns[0] += ` ${
+						mdu.sub(
+							`❌ ${result.error.stage || message}`,
+							message,
+						)
+					}`;
 					columns.push('-', '-', '-');
 				} else {
 					columns.push(

@@ -60,7 +60,7 @@
 					"data": {
 						"minifiedSize": 23601,
 						"minzippedSize": 8448,
-						"time": 306.225541,
+						"time": 339.191666,
 						"runs": 1
 					}
 				}
@@ -84,7 +84,7 @@
 					"data": {
 						"minifiedSize": 24011,
 						"minzippedSize": 8650,
-						"time": 58.085417,
+						"time": 56.84,
 						"runs": 1
 					}
 				}
@@ -188,7 +188,7 @@
 					"data": {
 						"minifiedSize": 59703,
 						"minzippedSize": 19119,
-						"time": 671.646459,
+						"time": 665.609166,
 						"runs": 1
 					}
 				}
@@ -236,7 +236,7 @@
 					"data": {
 						"minifiedSize": 61856,
 						"minzippedSize": 19873,
-						"time": 43.584875,
+						"time": 37.489458,
 						"runs": 1
 					}
 				}
@@ -328,7 +328,7 @@
 					"data": {
 						"minifiedSize": 92103,
 						"minzippedSize": 31799,
-						"time": 1105.686041,
+						"time": 1122.845833,
 						"runs": 1
 					}
 				}
@@ -352,7 +352,7 @@
 					"data": {
 						"minifiedSize": 92559,
 						"minzippedSize": 32703,
-						"time": 37.889875,
+						"time": 46.067,
 						"runs": 1
 					}
 				}
@@ -432,7 +432,7 @@
 					"data": {
 						"minifiedSize": 117896,
 						"minzippedSize": 43925,
-						"time": 1227.4056249999999,
+						"time": 1376.324541,
 						"runs": 1
 					}
 				}
@@ -492,7 +492,7 @@
 					"data": {
 						"minifiedSize": 121703,
 						"minzippedSize": 45340,
-						"time": 43.725042,
+						"time": 40.487208,
 						"runs": 1
 					}
 				}
@@ -572,7 +572,7 @@
 					"data": {
 						"minifiedSize": 72367,
 						"minzippedSize": 25503,
-						"time": 982.588791,
+						"time": 984.875,
 						"runs": 1
 					}
 				}
@@ -620,7 +620,7 @@
 					"data": {
 						"minifiedSize": 74116,
 						"minzippedSize": 26500,
-						"time": 41.813708,
+						"time": 40.861541,
 						"runs": 1
 					}
 				}
@@ -724,7 +724,7 @@
 					"data": {
 						"minifiedSize": 273630,
 						"minzippedSize": 92375,
-						"time": 52.07775,
+						"time": 41.597042,
 						"runs": 1
 					}
 				}
@@ -862,7 +862,7 @@
 					"data": {
 						"minifiedSize": 466036,
 						"minzippedSize": 127405,
-						"time": 56.120208,
+						"time": 49.044709,
 						"runs": 1
 					}
 				}
@@ -941,7 +941,7 @@
 					"data": {
 						"minifiedSize": 648830,
 						"minzippedSize": 162498,
-						"time": 6272.467125,
+						"time": 6399.418292,
 						"runs": 1
 					}
 				}
@@ -1001,7 +1001,7 @@
 					"data": {
 						"minifiedSize": 662756,
 						"minzippedSize": 166480,
-						"time": 60.043375,
+						"time": 57.30825,
 						"runs": 1
 					}
 				}
@@ -1117,7 +1117,7 @@
 					"data": {
 						"minifiedSize": 728200,
 						"minzippedSize": 182567,
-						"time": 72.598916,
+						"time": 67.422792,
 						"runs": 1
 					}
 				}
@@ -1240,10 +1240,11 @@
 				"minifierPath": "bun.ts",
 				"version": "1.0.30",
 				"result": {
-					"error": {
-						"message": "36 |     \"lib/chart/*.js\",",
-						"stack": "         ^\nwarn: wildcard sideEffects are not supported yet, which means this package will be deoptimized\n   at /packages/artifacts/node_modules/echarts/package.json:36:5\n",
-						"stage": "minification"
+					"data": {
+						"minifiedSize": 1026633,
+						"minzippedSize": 337782,
+						"time": 121.023667,
+						"runs": 1
 					}
 				}
 			},
@@ -1252,8 +1253,7 @@
 				"version": "0.5.2",
 				"result": {
 					"error": {
-						"message": "Timed out",
-						"stage": "minification"
+						"message": "Timed out"
 					}
 				}
 			},
@@ -1360,6 +1360,18 @@
 					}
 				}
 			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.0.30",
+				"result": {
+					"data": {
+						"minifiedSize": 2297027,
+						"minzippedSize": 491752,
+						"time": 123.06875,
+						"runs": 1
+					}
+				}
+			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
@@ -1372,24 +1384,12 @@
 					}
 				}
 			},
-			"bun": {
-				"minifierPath": "bun.ts",
-				"version": "1.0.30",
-				"result": {
-					"error": {
-						"message": "39 |     \"dist/*\",",
-						"stack": "         ^\nwarn: wildcard sideEffects are not supported yet, which means this package will be deoptimized\n   at /packages/artifacts/node_modules/antd/package.json:39:5\n",
-						"stage": "minification"
-					}
-				}
-			},
 			"babel-minify": {
 				"minifierPath": "babel-minify.ts",
 				"version": "0.5.2",
 				"result": {
 					"error": {
-						"message": "Timed out",
-						"stage": "minification"
+						"message": "Timed out"
 					}
 				}
 			}
@@ -1490,8 +1490,7 @@
 				"version": "0.5.2",
 				"result": {
 					"error": {
-						"message": "Timed out",
-						"stage": "minification"
+						"message": "Timed out"
 					}
 				}
 			},

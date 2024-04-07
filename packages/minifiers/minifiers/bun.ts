@@ -14,11 +14,8 @@ export default createMinifier(
 				collectStream(minify.stdout),
 			]);
 
-			if (error) {
-				const [message, ...stackLines] = error.split('\n');
-				const errorObject = new Error(message);
-				errorObject.stack = stackLines.join('\n');
-				throw errorObject;
+			if (error && error.includes('\nerror: ')) {
+				throw error;
 			}
 
 			return minified;

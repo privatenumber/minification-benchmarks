@@ -47,7 +47,6 @@ const benchmark = async (
 		return {
 			error: {
 				message: 'Timed out',
-				stage: 'minification',
 			},
 		};
 	}
