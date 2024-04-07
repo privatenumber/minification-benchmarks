@@ -1,6 +1,13 @@
-# 🏃‍♂️🏃‍♀️🏃 JS minification benchmarks
+<p align="center">
+	<img width="130" src=".github/logo.webp">
+</p>
+<h1 align="center">
+	<sup>minification benchmarks</sup>
+</h1>
 
-This repo is routinely maintained to compare the quality and speed across the latest versions of the following JavaScript minifiers:
+> What's the fastest JavaScript minifier?
+
+Here's a comparison of the speed & quality across the following JavaScript minifiers:
 
 <!-- minifiers:start -->
 - [babel-minify <sub>v0.5.2</sub>](https://github.com/babel/minify/tree/master/packages/babel-minify)
