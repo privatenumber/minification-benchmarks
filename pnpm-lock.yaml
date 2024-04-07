@@ -24,8 +24,8 @@ importers:
         specifier: ^0.5.1
         version: 0.5.1
       '@types/node':
-        specifier: ^16.11.33
-        version: 16.11.33
+        specifier: ^20.12.5
+        version: 20.12.5
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -82,7 +82,7 @@ importers:
         version: 9.1.0
       terser:
         specifier: ^5.27.0
-        version: 5.29.2
+        version: 5.30.3
       three:
         specifier: ^0.124.0
         version: 0.124.0
@@ -199,7 +199,7 @@ importers:
         version: 0.6.0
       '@swc/core':
         specifier: ^1.3.104
-        version: 1.4.8
+        version: 1.4.12
       '@tdewolff/minify':
         specifier: ^2.20.14
         version: 2.20.19
@@ -208,7 +208,7 @@ importers:
         version: 0.5.2
       bun:
         specifier: ^1.0.23
-        version: 1.0.30
+        version: 1.1.2
       esbuild:
         specifier: ^0.19.11
         version: 0.19.12
@@ -223,7 +223,7 @@ importers:
         version: 9.0.2
       terser:
         specifier: ^5.27.0
-        version: 5.29.2
+        version: 5.30.3
       uglify-js:
         specifier: ^3.17.4
         version: 3.17.4
@@ -1014,8 +1014,8 @@ packages:
       - typescript
     dev: true
 
-  /@swc/core-darwin-arm64@1.4.8:
-    resolution: {integrity: sha512-hhQCffRTgzpTIbngSnC30vV6IJVTI9FFBF954WEsshsecVoCGFiMwazBbrkLG+RwXENTrMhgeREEFh6R3KRgKQ==}
+  /@swc/core-darwin-arm64@1.4.12:
+    resolution: {integrity: sha512-BZUUq91LGJsLI2BQrhYL3yARkcdN4TS3YGNS6aRYUtyeWrGCTKHL90erF2BMU2rEwZLLkOC/U899R4o4oiSHfA==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [darwin]
@@ -1357,7 +1357,7 @@ packages:
   /@types/google-closure-compiler@0.0.19:
     resolution: {integrity: sha512-5fs1oWR2H84+54UU0fWKlGxjekBH03+nyWav8+0xlUDl0lEQ9abI2cUc7SJJsnf7lC/cJofxeTQ2R4x3vWENmw==}
     dependencies:
-      '@types/node': 16.11.33
+      '@types/node': 20.12.5
     dev: true
 
   /@types/jquery@3.5.29:
@@ -1375,7 +1375,7 @@ packages:
   /@types/jsdom@20.0.0:
     resolution: {integrity: sha512-YfAchFs0yM1QPDrLm2VHe+WHGtqms3NXnXAMolrgrVP6fgBHHXy1ozAbo/dFtPNtZC/m66bPiCTWYmqp1F14gA==}
     dependencies:
-      '@types/node': 16.11.33
+      '@types/node': 20.12.5
       '@types/tough-cookie': 4.0.2
       parse5: 7.1.1
     dev: true
@@ -1404,8 +1404,10 @@ packages:
       '@types/unist': 2.0.10
     dev: true
 
-  /@types/node@16.11.33:
-    resolution: {integrity: sha512-0PJ0vg+JyU0MIan58IOIFRtSvsb7Ri+7Wltx2qAg94eMOrpg4+uuP3aUHCpxXc1i0jCXiC+zIamSZh3l9AbcQA==}
+  /@types/node@20.12.5:
+    resolution: {integrity: sha512-BD+BjQ9LS/D8ST9p5uqBxghlN+S42iuNxjsUGjeZobe/ciXzk2qb1B6IXc6AnRLS+yFJRpN2IPEHMzwspfDJNw==}
+    dependencies:
+      undici-types: 5.26.5
     dev: true
 
   /@types/normalize-package-data@2.4.1:
@@ -1697,17 +1699,10 @@ packages:
     hasBin: true
     dev: false
 
-  /acorn@8.10.0:
-    resolution: {integrity: sha512-F0SAmZ8iUtS//m8DmCTA0jlh6TDKkHQyK6xc6V4KDTyZKA9dnvX9/3sRTVQrWm79glUAZbnmmNcdYwUIHWVybw==}
-    engines: {node: '>=0.4.0'}
-    hasBin: true
-    dev: false
-
   /acorn@8.11.3:
     resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
-    dev: true
 
   /acorn@8.8.0:
     resolution: {integrity: sha512-QOxyigPVrpZ2GXT+PFyZTl6TtOFc5egxHIP9IlQ+RbupQuX4RkT/Bee4/kQuC02Xkzg84JcT7oLYtDIQxp+v7w==}
@@ -6467,7 +6462,7 @@ packages:
     hasBin: true
     dependencies:
       '@jridgewell/source-map': 0.3.3
-      acorn: 8.10.0
+      acorn: 8.11.3
       commander: 2.20.3
       source-map-support: 0.5.21
     dev: false
@@ -6670,6 +6665,10 @@ packages:
       has-bigints: 1.0.2
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
+    dev: true
+
+  /undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
     dev: true
 
   /unicorn-magic@0.1.0:

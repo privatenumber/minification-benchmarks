@@ -109,5 +109,5 @@ if (save) {
 	await fs.mkdir(saveToDirectory, { recursive: true });
 	await fs.writeFile(saveTo, minified.code);
 
-	console.log(`Saved to ${saveTo}`);
+	// console.log(`Saved to ${saveTo}`);
 }

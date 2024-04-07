@@ -20,7 +20,7 @@
 		"@minification-benchmarks/utils": "*",
 		"@pvtnbr/eslint-config": "^1.2.0",
 		"@total-typescript/ts-reset": "^0.5.1",
-		"@types/node": "^16.11.33",
+		"@types/node": "^20.12.5",
 		"eslint": "^8.57.0",
 		"tsx": "^4.7.2",
 		"typescript": "^5.4.4"
