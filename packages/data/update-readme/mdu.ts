@@ -5,7 +5,7 @@ const stringifyAttributes = (
 		.map(([key, value]) => (
 			value === undefined
 				? ''
-				: ` ${key}=${JSON.stringify(value)}`
+				: ` ${key}=${JSON.stringify(value.replaceAll('"', '\''))}`
 		))
 		.join('')
 );
