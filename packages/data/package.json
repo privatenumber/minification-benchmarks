@@ -5,6 +5,7 @@
 	"main": "index.ts",
 	"dependencies": {
 		"@minification-benchmarks/bench": "*",
+		"@minification-benchmarks/minifiers": "*",
 		"@minification-benchmarks/utils": "*",
 		"byte-size": "^8.1.1",
 		"comment-mark": "^1.1.1",

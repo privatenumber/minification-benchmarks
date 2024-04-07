@@ -77,23 +77,20 @@ export const saveResults = async (
 		data[artifact.name] = foundArtifact;
 	}
 
-	let foundMinifier = getMinifier(foundArtifact, minifier, minifierInstance);
-	if (!foundMinifier) {
-		const minifierName = getMinifierName(minifier, minifierInstance);
-		foundMinifier = {
-			version: minifier.meta.version,
-			result,
-		};
-		foundArtifact.minified[minifierName] = foundMinifier;
-		foundArtifact.minified = sortObjectKeys(
-			foundArtifact.minified,
-			([, a], [, b]) => {
-				if ('error' in a.result) { return 1; }
-				if ('error' in b.result) { return -1; }
-				return a.result.data.minzippedSize - b.result.data.minzippedSize;
-			},
-		);
-	}
+	const minifierName = getMinifierName(minifier, minifierInstance);
+	foundArtifact.minified[minifierName] = {
+		minifierPath: minifier.minifierPath!,
+		version: minifier.meta.version,
+		result,
+	};
+	foundArtifact.minified = sortObjectKeys(
+		foundArtifact.minified,
+		([, a], [, b]) => {
+			if ('error' in a.result) { return 1; }
+			if ('error' in b.result) { return -1; }
+			return a.result.data.minzippedSize - b.result.data.minzippedSize;
+		},
+	);
 
 	await saveData();
 };

@@ -24,9 +24,10 @@ export const logError = (
 ) => {
 	let error: BenchmarkError['error'];
 	if (thrown instanceof Error) {
+		const cwd = process.cwd();
 		error = {
 			message: thrown.message,
-			stack: thrown.stack,
+			stack: thrown.stack!.replaceAll(cwd, ''),
 		};
 	} else {
 		error = {

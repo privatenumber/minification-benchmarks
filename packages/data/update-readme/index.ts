@@ -1,10 +1,12 @@
 import fs from 'fs/promises';
+import path from 'path';
 import commentMark from 'comment-mark';
 import { format } from 'date-fns';
 import { markdownTable } from 'markdown-table';
 import byteSize from 'byte-size';
 import { minBy } from 'lodash-es';
 import type { BenchmarkResultSuccessWithRuns } from '@minification-benchmarks/bench/types.js';
+import { minifiersDirectory } from '@minification-benchmarks/minifiers/utils/minifiers-directory.js';
 import { data } from '../index.js';
 import type { Data, Artifact } from '../types.js';
 import { percent, formatMs } from './formatting.js';
@@ -61,33 +63,36 @@ const generateBenchmarkTable = (
 			['Minifier', 'Minified size', 'Minzipped size', 'Time'].map(mdu.strong),
 			...minified.map(([minifierName, minifier]) => {
 				const { result } = minifier;
+
+				const columns = [
+					mdu.link(minifierName, path.relative(process.cwd(), path.join(minifiersDirectory, minifier.minifierPath))),
+				];
+
 				if ('error' in result) {
-					return [
-						minifierName,
-						'-',
-						'-',
-						'-',
-					];
+					console.log(result.error);
+					columns[0] += ' ' + mdu.sub('❌ ' + result.error.message);
+					columns.push('-', '-', '-');
+				} else {
+					columns.push(
+						displayColumn(
+							byteSize(result.data.minifiedSize).toString(),
+							percent(artifact.size, result.data.minifiedSize),
+							minifierName === bestMinified[0],
+						),
+						displayColumn(
+							byteSize(result.data.minzippedSize).toString(),
+							percent(artifact.gzipSize, result.data.minzippedSize),
+							minifierName === bestMinzipped[0],
+						),
+						displayColumn(
+							formatMs(result.data.time),
+							compareSpeed(result, bestSpeed[1].result as BenchmarkResultSuccessWithRuns),
+							minifierName === bestSpeed[0],
+						),
+					);
 				}
 
-				return [
-					minifierName,
-					displayColumn(
-						byteSize(result.data.minifiedSize).toString(),
-						percent(artifact.size, result.data.minifiedSize),
-						minifierName === bestMinified[0],
-					),
-					displayColumn(
-						byteSize(result.data.minzippedSize).toString(),
-						percent(artifact.gzipSize, result.data.minzippedSize),
-						minifierName === bestMinzipped[0],
-					),
-					displayColumn(
-						formatMs(result.data.time),
-						compareSpeed(result, bestSpeed[1].result as BenchmarkResultSuccessWithRuns),
-						minifierName === bestSpeed[0],
-					),
-				];
+				return columns;
 			}),
 		],
 		{
@@ -107,6 +112,19 @@ const generateBenchmarks = (data: Data) => {
 		.map(([name, artifact]) => generateBenchmarkTable(name, artifact))
 		.join('\n----\n');
 };
+
+
+
+// (async () => {
+
+// 	const minifiers = await Promise.all(minifierNames.map());
+
+// 	const markdown = minifiers.map(
+// 		minifier => `- [${minifier.meta.name}](${minifier.meta.repository}) v${minifier.meta.version}`,
+// 	).join('\n');
+// 	console.log(markdown);
+// })();
+
 
 const readmePath = './README.md';
 const readme = await fs.readFile(readmePath, 'utf8');

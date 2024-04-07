@@ -4,6 +4,12 @@ include(__DIR__ . '/../../vendor/autoload.php');
 
 $code = stream_get_contents(STDIN);
 
-$minifiedCode = \JShrink\Minifier::minify($code);
+try {
+	$minifiedCode = \JShrink\Minifier::minify($code);
+	fwrite(STDOUT, $minifiedCode);
+} catch (\Exception $e) {
+	fwrite(STDERR, $e);
+	exit(1);
+}
 
-fwrite(STDOUT, $minifiedCode);
+exit(0);

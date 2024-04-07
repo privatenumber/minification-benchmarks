@@ -1,6 +1,7 @@
 import type { BenchmarkResultWithRuns } from '@minification-benchmarks/bench/types.js';
 
 export type Minifier = {
+	minifierPath: string;
 	version: string;
 	result: BenchmarkResultWithRuns;
 };

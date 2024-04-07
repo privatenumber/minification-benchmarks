@@ -71,9 +71,11 @@ export const benchmarkAverage = async (
 	minifier: string,
 	minifierInstance: string | undefined,
 	sampleSize: number,
+	setStatus: (status: string) => void,
 ): Promise<BenchmarkResultWithRuns> => {
 	const results: BenchmarkResultSuccess[] = [];
 	for (let i = 0; i < sampleSize; i += 1) {
+		setStatus(`${i + 1}/${sampleSize}`);
 		const result = await benchmark(
 			artifact,
 			minifier,

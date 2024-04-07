@@ -7,8 +7,9 @@ import type { MinifierInstance } from './types.js';
 export const benchmarkArtifacts = async (
 	artifacts: ArtifactLoaded[],
 	minifiers: MinifierInstance[],
+	sampleSize: number,
+	force: boolean | undefined,
 	task: Task = _task,
-	sampleSize?: number,
 ) => await task.group(
 	task => artifacts.map(
 		artifact => task(
@@ -16,22 +17,15 @@ export const benchmarkArtifacts = async (
 			async ({ task, setOutput }) => {
 				setOutput(byteSize(artifact.size).toString());
 
-				// setStatus(path.relative(cwd, artifact.filePath));
-
 				const benchmarkResults = await benchmarkMinifiers(
 					artifact,
 					minifiers,
-					task,
 					sampleSize,
+					task,
+					force,
 				);
 
-				// console.log(benchmarkResults);
 				benchmarkResults.clear();
-
-				// return {
-				// 	artifact,
-				// 	benchmarkResults: benchmarkResults.map(task => task.result),
-				// } as BenchmarkedArtifact;
 			},
 		),
 	),

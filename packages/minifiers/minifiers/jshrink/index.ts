@@ -1,5 +1,5 @@
 import { spawn } from 'child_process';
-import { streamToBuffer } from '@minification-benchmarks/utils/stream-to-buffer';
+import { collectStream } from '@minification-benchmarks/utils/collect-stream';
 import { createMinifier } from '../../utils/create-minifier.js';
 
 const jshrinkPath = new URL('jshrink.php', import.meta.url).pathname;
@@ -15,8 +15,16 @@ export default createMinifier(
 
 			minify.stdin.end(code);
 
-			const minified = await streamToBuffer(minify.stdout);
-			return minified.toString();
+			const [error, minified] = await Promise.all([
+				collectStream(minify.stderr),
+				collectStream(minify.stdout),
+			]);
+
+			if (error) {
+				throw new Error(error);
+			}
+
+			return minified;
 		},
 	},
 );

@@ -160,6 +160,9 @@ importers:
       '@minification-benchmarks/bench':
         specifier: '*'
         version: link:../bench
+      '@minification-benchmarks/minifiers':
+        specifier: '*'
+        version: link:../minifiers
       '@minification-benchmarks/utils':
         specifier: '*'
         version: link:../utils

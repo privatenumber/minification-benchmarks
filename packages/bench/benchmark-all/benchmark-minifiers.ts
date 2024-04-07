@@ -1,39 +1,32 @@
-import { setTimeout } from 'timers/promises';
 import _task, { type Task } from 'tasuku';
 import type { ArtifactLoaded } from '@minification-benchmarks/artifacts';
 import { hasResults, saveResults } from '@minification-benchmarks/data';
-import type {
-	MinifierResult,
-	BenchmarkData,
-	BenchmarkResult,
-	BenchmarkResultSuccess,
-} from '../types';
 import type { MinifierInstance } from './types.js';
 import { benchmarkAverage } from './benchmark.js';
 
 export const benchmarkMinifiers = async (
 	artifact: ArtifactLoaded,
 	minifiers: MinifierInstance[],
+	sampleSize: number,
 	task: Task,
-	sampleSize = 1,
+	force?: boolean,
 ) => task.group(
 	task => minifiers.flatMap(
 		minifier => task(
 			minifier.minifier.name + (minifier.instance === 'default' ? '' : ` (${minifier.instance})`),
-			async ({
-				setStatus,
-				setOutput,
-				setError,
-			}) => {
-				if (hasResults(artifact, minifier.minifier, minifier.instance)) {
+			async ({ setStatus }) => {
+				if (
+					!force && hasResults(artifact, minifier.minifier, minifier.instance)
+				) {
 					return;
 				}
 
 				const result = await benchmarkAverage(
 					artifact.name,
-					minifier.minifier.id!,
+					minifier.minifier.minifierPath!,
 					minifier.instance,
 					sampleSize,
+					setStatus,
 				);
 
 				await saveResults(artifact, minifier.minifier, minifier.instance, result);

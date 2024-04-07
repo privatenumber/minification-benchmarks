@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import assert from 'assert';
 import { cli } from 'cleye';
-import { loadMinifier, type MinifierFunction } from '@minification-benchmarks/minifiers';
+import { getMinifier, type MinifierFunction } from '@minification-benchmarks/minifiers';
 import { loadArtifact } from '@minification-benchmarks/artifacts';
 import { logResult, logError } from './log.js';
 import type { Minified } from './types.js';
@@ -20,6 +20,7 @@ const runMinifier = async (
 			filePath,
 		});
 	} catch (error) {
+		console.log(error);
 		return logError(error, 'minification');
 	}
 
@@ -70,7 +71,7 @@ assert(artifactName, 'Artifact must be passed in');
 const artifact = await loadArtifact(artifactName);
 
 assert(minifierName, 'Minifier must be passed in');
-const minifier = await loadMinifier(minifierName);
+const minifier = await getMinifier(minifierName);
 
 const minifierInstanceName = argv.flags.instance;
 
@@ -93,10 +94,7 @@ const minified = await runMinifier(minifierInstance, artifact.code!, artifact.fu
 
 try {
 	await artifact.validate(minified.code);
-} catch (_error) {
-	const error = _error as Error;
-	const cwd = process.cwd();
-	error.stack = error.stack!.replaceAll(cwd, '');
+} catch (error) {
 	logError(error, 'post-validation');
 }
 
