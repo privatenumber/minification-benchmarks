@@ -18,7 +18,7 @@
 		"@minification-benchmarks/artifacts": "*",
 		"@minification-benchmarks/minifiers": "*",
 		"@minification-benchmarks/utils": "*",
-		"@pvtnbr/eslint-config": "^1.2.0",
+		"@pvtnbr/eslint-config": "^1.2.1",
 		"@total-typescript/ts-reset": "^0.5.1",
 		"@types/node": "^20.12.5",
 		"eslint": "^8.57.0",

@@ -18,8 +18,8 @@ importers:
         specifier: '*'
         version: link:packages/utils
       '@pvtnbr/eslint-config':
-        specifier: ^1.2.0
-        version: 1.2.0(eslint@8.57.0)(typescript@5.4.4)
+        specifier: ^1.2.1
+        version: 1.2.1(eslint@8.57.0)(typescript@5.4.4)
       '@total-typescript/ts-reset':
         specifier: ^0.5.1
         version: 0.5.1
@@ -133,8 +133,8 @@ importers:
         specifier: ^8.1.1
         version: 8.1.1
       cleye:
-        specifier: ^1.3.1
-        version: 1.3.1
+        specifier: ^1.3.2
+        version: 1.3.2
       execa:
         specifier: ^6.1.0
         version: 6.1.0
@@ -235,8 +235,8 @@ importers:
         specifier: ^3.17.0
         version: 3.17.0
       type-fest:
-        specifier: ^4.9.0
-        version: 4.12.0
+        specifier: ^4.15.0
+        version: 4.15.0
 
   packages/utils: {}
 
@@ -900,8 +900,8 @@ packages:
     dev: false
     optional: true
 
-  /@pvtnbr/eslint-config@1.2.0(eslint@8.57.0)(typescript@5.4.4):
-    resolution: {integrity: sha512-W9esuTFiYqlmZ/daMQx0Pts74RAY5xAzKD+4RVM/qGMu51q3LOVgGIqbjNQSdwYRrmfjPwXmd1Hqv4wm6MQHoQ==}
+  /@pvtnbr/eslint-config@1.2.1(eslint@8.57.0)(typescript@5.4.4):
+    resolution: {integrity: sha512-MTkWdq36xR5goYgc+7bzDQISrEDXN7h8Tt7MopXf53hTTzrD8TcFQTbXyCQoD06izN0dLfHPx9IKkwsmMloyxg==}
     hasBin: true
     peerDependencies:
       eslint: ^8.50.0
@@ -2319,19 +2319,11 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
-  /cleye@1.3.1:
-    resolution: {integrity: sha512-8Za9ohNiygniCAHj6sVKJFI1FkEdmJM7XGA+tI3TVMSf9wQ1o8k0I6CZSRDx4AG5WZuqr0Zj4i/6Bw1TdoMyJQ==}
-    dependencies:
-      terminal-columns: 1.4.1
-      type-flag: 3.0.0
-    dev: false
-
   /cleye@1.3.2:
     resolution: {integrity: sha512-MngIC2izcCz07iRKr3Pe8Z6ZBv4zbKFl/YnQEN/aMHis6PpH+MxI2e6n0bMUAmSVlMoAyQkdBCSTbfDmtcSovQ==}
     dependencies:
       terminal-columns: 1.4.1
       type-flag: 3.0.0
-    dev: true
 
   /clone-buffer@1.0.0:
     resolution: {integrity: sha512-KLLTJWrvwIP+OPfMn0x2PheDEP20RPUcGXj/ERegTgdmPEZylALQldygiqrPPu8P45uNuPs7ckmReLY6v/iA5g==}
@@ -6579,8 +6571,8 @@ packages:
     engines: {node: '>=12.20'}
     dev: false
 
-  /type-fest@4.12.0:
-    resolution: {integrity: sha512-5Y2/pp2wtJk8o08G0CMkuFPCO354FGwk/vbidxrdhRGZfd0tFnb4Qb8anp9XxXriwBgVPjdWbKpGl4J9lJY2jQ==}
+  /type-fest@4.15.0:
+    resolution: {integrity: sha512-tB9lu0pQpX5KJq54g+oHOLumOx+pMep4RaM6liXh2PKmVRFF+/vAtUP0ZaJ0kOySfVNjF6doBWPHhBhISKdlIA==}
     engines: {node: '>=16'}
     dev: true
 

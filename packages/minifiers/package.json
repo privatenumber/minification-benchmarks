@@ -20,6 +20,6 @@
 	"devDependencies": {
 		"@types/google-closure-compiler": "^0.0.19",
 		"@types/uglify-js": "^3.17.0",
-		"type-fest": "^4.9.0"
+		"type-fest": "^4.15.0"
 	}
 }
