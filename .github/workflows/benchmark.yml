@@ -36,7 +36,10 @@ jobs:
           working_dir: packages/minifiers
 
       - name: Benchmark
-        run: pnpm update-benchmarks-readme
+        run: pnpm bench-all
+
+      - name: Update README
+        run: pnpm update-readme
 
       - name: Commit README.md
         run: |
