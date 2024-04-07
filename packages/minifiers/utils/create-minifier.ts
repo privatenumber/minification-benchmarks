@@ -13,7 +13,7 @@ type Instances = Record<string, MinifierFunction>;
 export type MetaData = {
 	name: string;
 	version: string;
-	repository: string;
+	url: string;
 };
 
 export class Minifier {

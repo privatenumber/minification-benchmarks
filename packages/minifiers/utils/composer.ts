@@ -60,6 +60,6 @@ export const getMeta = (
 	return {
 		name,
 		version,
-		repository,
+		url: repository,
 	};
 };

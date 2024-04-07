@@ -19,30 +19,40 @@ export const loadPackageJson = async (
 	}
 };
 
+const parseRepository = (
+	packageJson: PackageJson,
+) => {
+	let { repository } = packageJson;
+
+	if (repository) {
+		if (typeof repository === 'object') {
+			let { url } = repository;
+			if (repository.type === 'git') {
+				const gitHub = url.match(/^git\+(http.+)\.git$/);
+				url = gitHub ? gitHub[1] : url;
+			}
+			repository = url;
+		}
+
+		if (!repository.startsWith('http')) {
+			repository = `https://github.com/${repository}`;
+		}
+	}
+
+	return repository;
+};
+
 export const getPackageJsonMeta = (
 	packageJson: PackageJson,
 ): MetaData => {
-	let { repository } = packageJson;
-	if (!repository) {
-		throw new Error(`No repository found for ${packageJson.name}`);
-	}
-
-	if (typeof repository === 'object') {
-		let { url } = repository;
-		if (repository.type === 'git') {
-			const gitHub = url.match(/^git\+(http.+)\.git$/);
-			url = gitHub ? gitHub[1] : url;
-		}
-		repository = url;
-	}
-
-	if (!repository.startsWith('http')) {
-		repository = `https://github.com/${repository}`;
+	const url = parseRepository(packageJson) ?? packageJson.homepage;
+	if (!url) {
+		throw new Error(`No url found in ${packageJson.name} package.json`);
 	}
 
 	return {
 		name: packageJson.name!,
 		version: packageJson.version!,
-		repository,
+		url,
 	};
 };
