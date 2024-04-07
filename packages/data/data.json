@@ -12,8 +12,8 @@
 					"data": {
 						"minifiedSize": 22866,
 						"minzippedSize": 8173,
-						"time": 11.7343584,
-						"runs": 5
+						"time": 12.580708,
+						"runs": 1
 					}
 				}
 			},
@@ -24,8 +24,8 @@
 					"data": {
 						"minifiedSize": 22668,
 						"minzippedSize": 8184,
-						"time": 210.970433,
-						"runs": 5
+						"time": 217.350292,
+						"runs": 1
 					}
 				}
 			},
@@ -36,8 +36,8 @@
 					"data": {
 						"minifiedSize": 22825,
 						"minzippedSize": 8193,
-						"time": 1671.6704918,
-						"runs": 5
+						"time": 1529.7191659999999,
+						"runs": 1
 					}
 				}
 			},
@@ -48,8 +48,8 @@
 					"data": {
 						"minifiedSize": 23141,
 						"minzippedSize": 8317,
-						"time": 117.977567,
-						"runs": 5
+						"time": 118.317041,
+						"runs": 1
 					}
 				}
 			},
@@ -60,8 +60,8 @@
 					"data": {
 						"minifiedSize": 23601,
 						"minzippedSize": 8448,
-						"time": 287.534,
-						"runs": 5
+						"time": 275.585584,
+						"runs": 1
 					}
 				}
 			},
@@ -72,8 +72,8 @@
 					"data": {
 						"minifiedSize": 23697,
 						"minzippedSize": 8543,
-						"time": 14.3820336,
-						"runs": 5
+						"time": 13.267375,
+						"runs": 1
 					}
 				}
 			},
@@ -84,8 +84,8 @@
 					"data": {
 						"minifiedSize": 24011,
 						"minzippedSize": 8650,
-						"time": 36.213258399999994,
-						"runs": 5
+						"time": 38.296875,
+						"runs": 1
 					}
 				}
 			},
@@ -96,8 +96,8 @@
 					"data": {
 						"minifiedSize": 25030,
 						"minzippedSize": 8668,
-						"time": 40.38255,
-						"runs": 5
+						"time": 40.790583,
+						"runs": 1
 					}
 				}
 			},
@@ -108,8 +108,8 @@
 					"data": {
 						"minifiedSize": 25081,
 						"minzippedSize": 8746,
-						"time": 49.780232999999996,
-						"runs": 5
+						"time": 56.59325,
+						"runs": 1
 					}
 				}
 			},
@@ -117,10 +117,11 @@
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
 				"result": {
-					"error": {
-						"message": "Cannot read properties of undefined (reading 'toString')",
-						"stack": "TypeError: Cannot read properties of undefined (reading 'toString')\n    at default (/packages/minifiers/minifiers/jshrink/index.ts:27:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at runMinifier (/packages/bench/benchmark/cli.ts:18:18)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:92:18)",
-						"stage": "minification"
+					"data": {
+						"minifiedSize": 40821,
+						"minzippedSize": 11040,
+						"time": 52.335917,
+						"runs": 1
 					}
 				}
 			}
@@ -139,8 +140,8 @@
 					"data": {
 						"minifiedSize": 57865,
 						"minzippedSize": 18567,
-						"time": 432.8884832,
-						"runs": 5
+						"time": 450.89325,
+						"runs": 1
 					}
 				}
 			},
@@ -151,8 +152,8 @@
 					"data": {
 						"minifiedSize": 58210,
 						"minzippedSize": 18686,
-						"time": 29.1902082,
-						"runs": 5
+						"time": 33.343916,
+						"runs": 1
 					}
 				}
 			},
@@ -163,8 +164,8 @@
 					"data": {
 						"minifiedSize": 59162,
 						"minzippedSize": 18694,
-						"time": 266.16764159999997,
-						"runs": 5
+						"time": 271.93425,
+						"runs": 1
 					}
 				}
 			},
@@ -175,8 +176,8 @@
 					"data": {
 						"minifiedSize": 58273,
 						"minzippedSize": 18910,
-						"time": 1956.0565001999998,
-						"runs": 5
+						"time": 1827.44475,
+						"runs": 1
 					}
 				}
 			},
@@ -187,8 +188,8 @@
 					"data": {
 						"minifiedSize": 59703,
 						"minzippedSize": 19119,
-						"time": 704.71605,
-						"runs": 5
+						"time": 833.713167,
+						"runs": 1
 					}
 				}
 			},
@@ -199,8 +200,8 @@
 					"data": {
 						"minifiedSize": 59824,
 						"minzippedSize": 19334,
-						"time": 18.972175,
-						"runs": 5
+						"time": 17.429375,
+						"runs": 1
 					}
 				}
 			},
@@ -211,8 +212,8 @@
 					"data": {
 						"minifiedSize": 62495,
 						"minzippedSize": 19569,
-						"time": 87.39192520000002,
-						"runs": 5
+						"time": 84.024333,
+						"runs": 1
 					}
 				}
 			},
@@ -223,8 +224,8 @@
 					"data": {
 						"minifiedSize": 63151,
 						"minzippedSize": 19683,
-						"time": 120.74295,
-						"runs": 5
+						"time": 118.261125,
+						"runs": 1
 					}
 				}
 			},
@@ -235,8 +236,8 @@
 					"data": {
 						"minifiedSize": 61856,
 						"minzippedSize": 19873,
-						"time": 44.2716248,
-						"runs": 5
+						"time": 30.471375,
+						"runs": 1
 					}
 				}
 			},
@@ -244,10 +245,11 @@
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
 				"result": {
-					"error": {
-						"message": "Cannot read properties of undefined (reading 'toString')",
-						"stack": "TypeError: Cannot read properties of undefined (reading 'toString')\n    at default (/packages/minifiers/minifiers/jshrink/index.ts:27:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at runMinifier (/packages/bench/benchmark/cli.ts:18:18)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:92:18)",
-						"stage": "minification"
+					"data": {
+						"minifiedSize": 97632,
+						"minzippedSize": 24998,
+						"time": 91.540208,
+						"runs": 1
 					}
 				}
 			}
@@ -266,8 +268,8 @@
 					"data": {
 						"minifiedSize": 89158,
 						"minzippedSize": 30870,
-						"time": 56.5626748,
-						"runs": 5
+						"time": 47.107083,
+						"runs": 1
 					}
 				}
 			},
@@ -278,8 +280,8 @@
 					"data": {
 						"minifiedSize": 88539,
 						"minzippedSize": 30891,
-						"time": 618.6268582,
-						"runs": 5
+						"time": 611.864042,
+						"runs": 1
 					}
 				}
 			},
@@ -290,8 +292,8 @@
 					"data": {
 						"minifiedSize": 89540,
 						"minzippedSize": 30912,
-						"time": 364.3917164,
-						"runs": 5
+						"time": 349.957375,
+						"runs": 1
 					}
 				}
 			},
@@ -302,8 +304,8 @@
 					"data": {
 						"minifiedSize": 94082,
 						"minzippedSize": 31470,
-						"time": 127.27249179999998,
-						"runs": 5
+						"time": 114.478958,
+						"runs": 1
 					}
 				}
 			},
@@ -314,8 +316,8 @@
 					"data": {
 						"minifiedSize": 94554,
 						"minzippedSize": 31621,
-						"time": 161.017175,
-						"runs": 5
+						"time": 154.603041,
+						"runs": 1
 					}
 				}
 			},
@@ -326,8 +328,8 @@
 					"data": {
 						"minifiedSize": 92103,
 						"minzippedSize": 31799,
-						"time": 1192.2708331999997,
-						"runs": 5
+						"time": 1146.048667,
+						"runs": 1
 					}
 				}
 			},
@@ -338,8 +340,8 @@
 					"data": {
 						"minifiedSize": 90065,
 						"minzippedSize": 31954,
-						"time": 26.180008599999997,
-						"runs": 5
+						"time": 23.705125,
+						"runs": 1
 					}
 				}
 			},
@@ -350,8 +352,8 @@
 					"data": {
 						"minifiedSize": 92559,
 						"minzippedSize": 32703,
-						"time": 49.27597519999999,
-						"runs": 5
+						"time": 42.13075,
+						"runs": 1
 					}
 				}
 			},
@@ -362,8 +364,8 @@
 					"data": {
 						"minifiedSize": 92704,
 						"minzippedSize": 33086,
-						"time": 2126.1272498,
-						"runs": 5
+						"time": 1992.731292,
+						"runs": 1
 					}
 				}
 			},
@@ -371,10 +373,11 @@
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
 				"result": {
-					"error": {
-						"message": "Cannot read properties of undefined (reading 'toString')",
-						"stack": "TypeError: Cannot read properties of undefined (reading 'toString')\n    at default (/packages/minifiers/minifiers/jshrink/index.ts:27:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at runMinifier (/packages/bench/benchmark/cli.ts:18:18)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:92:18)",
-						"stage": "minification"
+					"data": {
+						"minifiedSize": 144144,
+						"minzippedSize": 40879,
+						"time": 105.005375,
+						"runs": 1
 					}
 				}
 			}
@@ -393,8 +396,8 @@
 					"data": {
 						"minifiedSize": 115461,
 						"minzippedSize": 42477,
-						"time": 69.162975,
-						"runs": 5
+						"time": 67.412125,
+						"runs": 1
 					}
 				}
 			},
@@ -405,8 +408,8 @@
 					"data": {
 						"minifiedSize": 116826,
 						"minzippedSize": 42939,
-						"time": 450.2265334,
-						"runs": 5
+						"time": 483.156625,
+						"runs": 1
 					}
 				}
 			},
@@ -417,8 +420,8 @@
 					"data": {
 						"minifiedSize": 113982,
 						"minzippedSize": 42948,
-						"time": 842.7752254000001,
-						"runs": 5
+						"time": 821.202958,
+						"runs": 1
 					}
 				}
 			},
@@ -429,8 +432,8 @@
 					"data": {
 						"minifiedSize": 117896,
 						"minzippedSize": 43925,
-						"time": 1270.0618920000002,
-						"runs": 5
+						"time": 1333.615125,
+						"runs": 1
 					}
 				}
 			},
@@ -441,8 +444,8 @@
 					"data": {
 						"minifiedSize": 115604,
 						"minzippedSize": 44226,
-						"time": 2450.2382752000003,
-						"runs": 5
+						"time": 2259.436625,
+						"runs": 1
 					}
 				}
 			},
@@ -453,8 +456,8 @@
 					"data": {
 						"minifiedSize": 118141,
 						"minzippedSize": 44368,
-						"time": 31.192608200000002,
-						"runs": 5
+						"time": 27.053459,
+						"runs": 1
 					}
 				}
 			},
@@ -465,8 +468,8 @@
 					"data": {
 						"minifiedSize": 126137,
 						"minzippedSize": 44450,
-						"time": 166.1808336,
-						"runs": 5
+						"time": 149.7575,
+						"runs": 1
 					}
 				}
 			},
@@ -477,8 +480,8 @@
 					"data": {
 						"minifiedSize": 126580,
 						"minzippedSize": 44679,
-						"time": 201.159383,
-						"runs": 5
+						"time": 192.160541,
+						"runs": 1
 					}
 				}
 			},
@@ -489,8 +492,8 @@
 					"data": {
 						"minifiedSize": 121703,
 						"minzippedSize": 45340,
-						"time": 45.60365,
-						"runs": 5
+						"time": 39.7845,
+						"runs": 1
 					}
 				}
 			},
@@ -498,10 +501,11 @@
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
 				"result": {
-					"error": {
-						"message": "Cannot read properties of undefined (reading 'toString')",
-						"stack": "TypeError: Cannot read properties of undefined (reading 'toString')\n    at default (/packages/minifiers/minifiers/jshrink/index.ts:27:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at runMinifier (/packages/bench/benchmark/cli.ts:18:18)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:92:18)",
-						"stage": "minification"
+					"data": {
+						"minifiedSize": 197357,
+						"minzippedSize": 57169,
+						"time": 128.912041,
+						"runs": 1
 					}
 				}
 			}
@@ -520,8 +524,8 @@
 					"data": {
 						"minifiedSize": 68242,
 						"minzippedSize": 24659,
-						"time": 690.8205168000001,
-						"runs": 5
+						"time": 663.412292,
+						"runs": 1
 					}
 				}
 			},
@@ -532,8 +536,8 @@
 					"data": {
 						"minifiedSize": 73466,
 						"minzippedSize": 24972,
-						"time": 2287.7282416000003,
-						"runs": 5
+						"time": 2113.922,
+						"runs": 1
 					}
 				}
 			},
@@ -544,8 +548,8 @@
 					"data": {
 						"minifiedSize": 69827,
 						"minzippedSize": 25183,
-						"time": 68.42150840000001,
-						"runs": 5
+						"time": 69.760959,
+						"runs": 1
 					}
 				}
 			},
@@ -556,8 +560,8 @@
 					"data": {
 						"minifiedSize": 70666,
 						"minzippedSize": 25186,
-						"time": 416.0597248,
-						"runs": 5
+						"time": 418.9765,
+						"runs": 1
 					}
 				}
 			},
@@ -568,8 +572,8 @@
 					"data": {
 						"minifiedSize": 72367,
 						"minzippedSize": 25503,
-						"time": 1017.0616333999999,
-						"runs": 5
+						"time": 974.072208,
+						"runs": 1
 					}
 				}
 			},
@@ -580,8 +584,8 @@
 					"data": {
 						"minifiedSize": 74607,
 						"minzippedSize": 25862,
-						"time": 153.7525248,
-						"runs": 5
+						"time": 136.897916,
+						"runs": 1
 					}
 				}
 			},
@@ -592,8 +596,8 @@
 					"data": {
 						"minifiedSize": 72483,
 						"minzippedSize": 26200,
-						"time": 36.36055,
-						"runs": 5
+						"time": 25.634833,
+						"runs": 1
 					}
 				}
 			},
@@ -604,8 +608,8 @@
 					"data": {
 						"minifiedSize": 75293,
 						"minzippedSize": 26221,
-						"time": 182.39049200000002,
-						"runs": 5
+						"time": 190.394709,
+						"runs": 1
 					}
 				}
 			},
@@ -616,8 +620,8 @@
 					"data": {
 						"minifiedSize": 74116,
 						"minzippedSize": 26500,
-						"time": 40.15650000000001,
-						"runs": 5
+						"time": 50.39975,
+						"runs": 1
 					}
 				}
 			},
@@ -625,10 +629,11 @@
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
 				"result": {
-					"error": {
-						"message": "Cannot read properties of undefined (reading 'toString')",
-						"stack": "TypeError: Cannot read properties of undefined (reading 'toString')\n    at default (/packages/minifiers/minifiers/jshrink/index.ts:27:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at runMinifier (/packages/bench/benchmark/cli.ts:18:18)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:92:18)",
-						"stage": "minification"
+					"data": {
+						"minifiedSize": 148780,
+						"minzippedSize": 36327,
+						"time": 110.619208,
+						"runs": 1
 					}
 				}
 			}
@@ -647,8 +652,8 @@
 					"data": {
 						"minifiedSize": 263905,
 						"minzippedSize": 87114,
-						"time": 1529.248813,
-						"runs": 2
+						"time": 1550.3886670000002,
+						"runs": 1
 					}
 				}
 			},
@@ -659,8 +664,8 @@
 					"data": {
 						"minifiedSize": 265266,
 						"minzippedSize": 87283,
-						"time": 149.2434664,
-						"runs": 5
+						"time": 171.2955,
+						"runs": 1
 					}
 				}
 			},
@@ -671,8 +676,8 @@
 					"data": {
 						"minifiedSize": 275347,
 						"minzippedSize": 88319,
-						"time": 333.712333,
-						"runs": 2
+						"time": 293.509916,
+						"runs": 1
 					}
 				}
 			},
@@ -683,8 +688,8 @@
 					"data": {
 						"minifiedSize": 267904,
 						"minzippedSize": 88343,
-						"time": 937.003271,
-						"runs": 2
+						"time": 930.645917,
+						"runs": 1
 					}
 				}
 			},
@@ -695,8 +700,8 @@
 					"data": {
 						"minifiedSize": 276467,
 						"minzippedSize": 89156,
-						"time": 444.301041,
-						"runs": 2
+						"time": 439.757041,
+						"runs": 1
 					}
 				}
 			},
@@ -707,8 +712,8 @@
 					"data": {
 						"minifiedSize": 270129,
 						"minzippedSize": 90800,
-						"time": 44.15231659999999,
-						"runs": 5
+						"time": 41.923709,
+						"runs": 1
 					}
 				}
 			},
@@ -719,8 +724,8 @@
 					"data": {
 						"minifiedSize": 273630,
 						"minzippedSize": 92375,
-						"time": 52.489217,
-						"runs": 5
+						"time": 51.994625,
+						"runs": 1
 					}
 				}
 			},
@@ -731,8 +736,8 @@
 					"data": {
 						"minifiedSize": 270298,
 						"minzippedSize": 94121,
-						"time": 3188.1241918,
-						"runs": 5
+						"time": 3249.031791,
+						"runs": 1
 					}
 				}
 			},
@@ -752,8 +757,8 @@
 				"version": "1.7.0",
 				"result": {
 					"error": {
-						"message": "82",
-						"stack": "Error: 82\n    at default (/packages/minifiers/minifiers/jshrink/index.ts:24:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at runMinifier (/packages/bench/benchmark/cli.ts:18:18)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:92:18)",
+						"message": "RuntimeException: Unclosed regex pattern at position: 289075 in /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643\nStack trace:\n#0 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString('// https://d3js...', Array)\n#3 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify('// https://d3js...')\n#4 {main}",
+						"stack": "Error: RuntimeException: Unclosed regex pattern at position: 289075 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643\nStack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString('// https://d3js...', Array)\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify('// https://d3js...')\n#4 {main}\n    at default (/packages/minifiers/minifiers/jshrink/index.ts:24:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at runMinifier (/packages/bench/benchmark/cli.ts:18:18)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:93:18)",
 						"stage": "minification"
 					}
 				}
@@ -773,8 +778,8 @@
 					"data": {
 						"minifiedSize": 454727,
 						"minzippedSize": 122922,
-						"time": 132.164937,
-						"runs": 2
+						"time": 141.413875,
+						"runs": 1
 					}
 				}
 			},
@@ -785,8 +790,8 @@
 					"data": {
 						"minifiedSize": 450915,
 						"minzippedSize": 123211,
-						"time": 1464.9465209999998,
-						"runs": 2
+						"time": 1423.885041,
+						"runs": 1
 					}
 				}
 			},
@@ -797,8 +802,8 @@
 					"data": {
 						"minifiedSize": 457381,
 						"minzippedSize": 123333,
-						"time": 896.7156665,
-						"runs": 2
+						"time": 900.573333,
+						"runs": 1
 					}
 				}
 			},
@@ -809,8 +814,8 @@
 					"data": {
 						"minifiedSize": 473361,
 						"minzippedSize": 124223,
-						"time": 411.8093335,
-						"runs": 2
+						"time": 398.10475,
+						"runs": 1
 					}
 				}
 			},
@@ -821,8 +826,8 @@
 					"data": {
 						"minifiedSize": 471138,
 						"minzippedSize": 124388,
-						"time": 334.75104150000004,
-						"runs": 2
+						"time": 314.701833,
+						"runs": 1
 					}
 				}
 			},
@@ -833,8 +838,8 @@
 					"data": {
 						"minifiedSize": 439067,
 						"minzippedSize": 126313,
-						"time": 3318.368625,
-						"runs": 2
+						"time": 2926.556375,
+						"runs": 1
 					}
 				}
 			},
@@ -845,8 +850,8 @@
 					"data": {
 						"minifiedSize": 457996,
 						"minzippedSize": 126550,
-						"time": 45.223558600000004,
-						"runs": 5
+						"time": 52.4045,
+						"runs": 1
 					}
 				}
 			},
@@ -857,8 +862,8 @@
 					"data": {
 						"minifiedSize": 466036,
 						"minzippedSize": 127405,
-						"time": 59.838396,
-						"runs": 2
+						"time": 55.944208,
+						"runs": 1
 					}
 				}
 			},
@@ -866,10 +871,11 @@
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
 				"result": {
-					"error": {
-						"message": "Cannot read properties of undefined (reading 'toString')",
-						"stack": "TypeError: Cannot read properties of undefined (reading 'toString')\n    at default (/packages/minifiers/minifiers/jshrink/index.ts:27:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at runMinifier (/packages/bench/benchmark/cli.ts:18:18)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:92:18)",
-						"stage": "minification"
+					"data": {
+						"minifiedSize": 632255,
+						"minzippedSize": 144940,
+						"time": 318.646458,
+						"runs": 1
 					}
 				}
 			},
@@ -899,8 +905,8 @@
 					"data": {
 						"minifiedSize": 642879,
 						"minzippedSize": 158368,
-						"time": 206.9514375,
-						"runs": 2
+						"time": 221.687708,
+						"runs": 1
 					}
 				}
 			},
@@ -911,8 +917,8 @@
 					"data": {
 						"minifiedSize": 642220,
 						"minzippedSize": 158907,
-						"time": 2037.7105005,
-						"runs": 2
+						"time": 2127.4065,
+						"runs": 1
 					}
 				}
 			},
@@ -923,8 +929,8 @@
 					"data": {
 						"minifiedSize": 653986,
 						"minzippedSize": 159729,
-						"time": 1243.6619375,
-						"runs": 2
+						"time": 1260.771917,
+						"runs": 1
 					}
 				}
 			},
@@ -935,8 +941,8 @@
 					"data": {
 						"minifiedSize": 648830,
 						"minzippedSize": 162498,
-						"time": 6426.2007085000005,
-						"runs": 2
+						"time": 6302.761209,
+						"runs": 1
 					}
 				}
 			},
@@ -947,8 +953,8 @@
 					"data": {
 						"minifiedSize": 644453,
 						"minzippedSize": 162971,
-						"time": 3940.7498539999997,
-						"runs": 2
+						"time": 3635.207209,
+						"runs": 1
 					}
 				}
 			},
@@ -959,8 +965,8 @@
 					"data": {
 						"minifiedSize": 674490,
 						"minzippedSize": 163036,
-						"time": 444.261229,
-						"runs": 2
+						"time": 452.033542,
+						"runs": 1
 					}
 				}
 			},
@@ -971,8 +977,8 @@
 					"data": {
 						"minifiedSize": 675504,
 						"minzippedSize": 163198,
-						"time": 600.245229,
-						"runs": 2
+						"time": 582.139458,
+						"runs": 1
 					}
 				}
 			},
@@ -983,8 +989,8 @@
 					"data": {
 						"minifiedSize": 646759,
 						"minzippedSize": 163725,
-						"time": 62.048716999999996,
-						"runs": 5
+						"time": 59.937042,
+						"runs": 1
 					}
 				}
 			},
@@ -995,8 +1001,8 @@
 					"data": {
 						"minifiedSize": 662756,
 						"minzippedSize": 166480,
-						"time": 76.3571455,
-						"runs": 2
+						"time": 60.383334,
+						"runs": 1
 					}
 				}
 			},
@@ -1004,10 +1010,11 @@
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
 				"result": {
-					"error": {
-						"message": "Cannot read properties of undefined (reading 'toString')",
-						"stack": "TypeError: Cannot read properties of undefined (reading 'toString')\n    at default (/packages/minifiers/minifiers/jshrink/index.ts:27:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at runMinifier (/packages/bench/benchmark/cli.ts:18:18)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:92:18)",
-						"stage": "minification"
+					"data": {
+						"minifiedSize": 952007,
+						"minzippedSize": 193471,
+						"time": 407.581833,
+						"runs": 1
 					}
 				}
 			}
@@ -1026,8 +1033,8 @@
 					"data": {
 						"minifiedSize": 707209,
 						"minzippedSize": 157859,
-						"time": 295.6167295,
-						"runs": 2
+						"time": 288.070416,
+						"runs": 1
 					}
 				}
 			},
@@ -1038,7 +1045,7 @@
 					"data": {
 						"minifiedSize": 702670,
 						"minzippedSize": 158218,
-						"time": 2650.710542,
+						"time": 2724.824083,
 						"runs": 1
 					}
 				}
@@ -1050,7 +1057,7 @@
 					"data": {
 						"minifiedSize": 715587,
 						"minzippedSize": 158718,
-						"time": 1641.0148749999998,
+						"time": 1665.882125,
 						"runs": 1
 					}
 				}
@@ -1062,7 +1069,7 @@
 					"data": {
 						"minifiedSize": 759337,
 						"minzippedSize": 166386,
-						"time": 694.470542,
+						"time": 718.467375,
 						"runs": 1
 					}
 				}
@@ -1074,7 +1081,7 @@
 					"data": {
 						"minifiedSize": 756530,
 						"minzippedSize": 167579,
-						"time": 555.243542,
+						"time": 600.239916,
 						"runs": 1
 					}
 				}
@@ -1086,8 +1093,8 @@
 					"data": {
 						"minifiedSize": 705866,
 						"minzippedSize": 175473,
-						"time": 4289.502979,
-						"runs": 2
+						"time": 4035.726708,
+						"runs": 1
 					}
 				}
 			},
@@ -1098,8 +1105,8 @@
 					"data": {
 						"minifiedSize": 724140,
 						"minzippedSize": 181071,
-						"time": 82.32827499999999,
-						"runs": 5
+						"time": 78.893041,
+						"runs": 1
 					}
 				}
 			},
@@ -1110,8 +1117,8 @@
 					"data": {
 						"minifiedSize": 728200,
 						"minzippedSize": 182567,
-						"time": 68.53593749999999,
-						"runs": 2
+						"time": 66.675,
+						"runs": 1
 					}
 				}
 			},
@@ -1131,9 +1138,9 @@
 				"version": "1.7.0",
 				"result": {
 					"error": {
-						"message": "Cannot read properties of undefined (reading 'toString')",
-						"stack": "TypeError: Cannot read properties of undefined (reading 'toString')\n    at default (/packages/minifiers/minifiers/jshrink/index.ts:27:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at runMinifier (/packages/bench/benchmark/cli.ts:18:18)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:92:18)",
-						"stage": "minification"
+						"message": "Unexpected token '~'",
+						"stack": "fs-require://2/index.js:594\nreturn function(key,value){if(stack.length>0){var thisPos=stack.indexOf(this)~thisPos?stack.splice(thisPos+1):stack.push(this)~thisPos?keys.splice(thisPos,Infinity,key):keys.push(key)\n                                                                             ^\n\nSyntaxError: Unexpected token '~'\n    at new Script (node:vm:99:7)\n    at createScript (node:vm:255:10)\n    at Object.runInThisContext (node:vm:303:10)\n    at p. (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1165)\n    at s (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1657)\n    at requireString (/packages/artifacts/utils/require-string.ts:9:9)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:99:22)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:96:2)",
+						"stage": "post-validation"
 					}
 				}
 			}
@@ -1152,7 +1159,7 @@
 					"data": {
 						"minifiedSize": 993066,
 						"minzippedSize": 320246,
-						"time": 549.3765,
+						"time": 575.934917,
 						"runs": 1
 					}
 				}
@@ -1164,7 +1171,7 @@
 					"data": {
 						"minifiedSize": 1000982,
 						"minzippedSize": 322106,
-						"time": 2659.388042,
+						"time": 2647.7610839999998,
 						"runs": 1
 					}
 				}
@@ -1176,7 +1183,7 @@
 					"data": {
 						"minifiedSize": 980140,
 						"minzippedSize": 326772,
-						"time": 4865.269791,
+						"time": 4778.52075,
 						"runs": 1
 					}
 				}
@@ -1188,7 +1195,7 @@
 					"data": {
 						"minifiedSize": 990876,
 						"minzippedSize": 328229,
-						"time": 5536.14475,
+						"time": 8501.51525,
 						"runs": 1
 					}
 				}
@@ -1200,7 +1207,7 @@
 					"data": {
 						"minifiedSize": 1071527,
 						"minzippedSize": 330736,
-						"time": 1315.839041,
+						"time": 1270.865333,
 						"runs": 1
 					}
 				}
@@ -1212,7 +1219,7 @@
 					"data": {
 						"minifiedSize": 1068386,
 						"minzippedSize": 331412,
-						"time": 803.183917,
+						"time": 780.800959,
 						"runs": 1
 					}
 				}
@@ -1224,8 +1231,8 @@
 					"data": {
 						"minifiedSize": 1011234,
 						"minzippedSize": 331563,
-						"time": 127.92717499999999,
-						"runs": 5
+						"time": 121.270667,
+						"runs": 1
 					}
 				}
 			},
@@ -1236,7 +1243,7 @@
 					"data": {
 						"minifiedSize": 1026633,
 						"minzippedSize": 337782,
-						"time": 99.3525,
+						"time": 381.728166,
 						"runs": 1
 					}
 				}
@@ -1255,8 +1262,8 @@
 				"version": "1.7.0",
 				"result": {
 					"error": {
-						"message": "82",
-						"stack": "Error: 82\n    at default (/packages/minifiers/minifiers/jshrink/index.ts:24:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at runMinifier (/packages/bench/benchmark/cli.ts:18:18)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:92:18)",
+						"message": "RuntimeException: Unclosed regex pattern at position: 37315 in /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643\nStack trace:\n#0 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString('\\n/*\\n* Licensed ...', Array)\n#3 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify('\\n/*\\n* Licensed ...')\n#4 {main}",
+						"stack": "Error: RuntimeException: Unclosed regex pattern at position: 37315 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643\nStack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString('\\n/*\\n* Licensed ...', Array)\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify('\\n/*\\n* Licensed ...')\n#4 {main}\n    at default (/packages/minifiers/minifiers/jshrink/index.ts:24:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at runMinifier (/packages/bench/benchmark/cli.ts:18:18)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:93:18)",
 						"stage": "minification"
 					}
 				}
@@ -1276,7 +1283,7 @@
 					"data": {
 						"minifiedSize": 2148550,
 						"minzippedSize": 452873,
-						"time": 713.104333,
+						"time": 680.302416,
 						"runs": 1
 					}
 				}
@@ -1288,7 +1295,7 @@
 					"data": {
 						"minifiedSize": 2227673,
 						"minzippedSize": 453926,
-						"time": 4742.656959,
+						"time": 4725.0623749999995,
 						"runs": 1
 					}
 				}
@@ -1300,7 +1307,7 @@
 					"data": {
 						"minifiedSize": 2249045,
 						"minzippedSize": 457817,
-						"time": 3061.728583,
+						"time": 2922.058625,
 						"runs": 1
 					}
 				}
@@ -1312,7 +1319,7 @@
 					"data": {
 						"minifiedSize": 2425048,
 						"minzippedSize": 475480,
-						"time": 1488.721958,
+						"time": 1488.465208,
 						"runs": 1
 					}
 				}
@@ -1324,7 +1331,7 @@
 					"data": {
 						"minifiedSize": 2420587,
 						"minzippedSize": 478572,
-						"time": 1174.36125,
+						"time": 1176.633708,
 						"runs": 1
 					}
 				}
@@ -1336,7 +1343,7 @@
 					"data": {
 						"minifiedSize": 2249302,
 						"minzippedSize": 482470,
-						"time": 6066.10025,
+						"time": 5811.669583,
 						"runs": 1
 					}
 				}
@@ -1348,8 +1355,8 @@
 					"data": {
 						"minifiedSize": 2306394,
 						"minzippedSize": 488279,
-						"time": 188.0912916,
-						"runs": 5
+						"time": 198.506125,
+						"runs": 1
 					}
 				}
 			},
@@ -1360,7 +1367,7 @@
 					"data": {
 						"minifiedSize": 2297027,
 						"minzippedSize": 491752,
-						"time": 120.596958,
+						"time": 139.020375,
 						"runs": 1
 					}
 				}
@@ -1369,10 +1376,11 @@
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
 				"result": {
-					"error": {
-						"message": "Cannot read properties of undefined (reading 'toString')",
-						"stack": "TypeError: Cannot read properties of undefined (reading 'toString')\n    at default (/packages/minifiers/minifiers/jshrink/index.ts:27:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at runMinifier (/packages/bench/benchmark/cli.ts:18:18)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:92:18)",
-						"stage": "minification"
+					"data": {
+						"minifiedSize": 4449283,
+						"minzippedSize": 626675,
+						"time": 1727.7795,
+						"runs": 1
 					}
 				}
 			},
@@ -1400,7 +1408,7 @@
 					"data": {
 						"minifiedSize": 3269923,
 						"minzippedSize": 845107,
-						"time": 10967.898417,
+						"time": 10795.618417,
 						"runs": 1
 					}
 				}
@@ -1412,7 +1420,7 @@
 					"data": {
 						"minifiedSize": 3309542,
 						"minzippedSize": 852335,
-						"time": 1235.678209,
+						"time": 1432.68425,
 						"runs": 1
 					}
 				}
@@ -1424,7 +1432,7 @@
 					"data": {
 						"minifiedSize": 3349343,
 						"minzippedSize": 854273,
-						"time": 6091.406583,
+						"time": 6143.800042,
 						"runs": 1
 					}
 				}
@@ -1436,7 +1444,7 @@
 					"data": {
 						"minifiedSize": 3538024,
 						"minzippedSize": 876535,
-						"time": 1915.5234169999999,
+						"time": 1903.840916,
 						"runs": 1
 					}
 				}
@@ -1448,7 +1456,7 @@
 					"data": {
 						"minifiedSize": 3530223,
 						"minzippedSize": 879301,
-						"time": 2667.966041,
+						"time": 2600.656458,
 						"runs": 1
 					}
 				}
@@ -1460,7 +1468,7 @@
 					"data": {
 						"minifiedSize": 3401759,
 						"minzippedSize": 902952,
-						"time": 10205.300083,
+						"time": 10198.670334,
 						"runs": 1
 					}
 				}
@@ -1472,8 +1480,8 @@
 					"data": {
 						"minifiedSize": 3489518,
 						"minzippedSize": 915495,
-						"time": 312.2753498,
-						"runs": 5
+						"time": 312.920542,
+						"runs": 1
 					}
 				}
 			},
@@ -1492,7 +1500,7 @@
 				"result": {
 					"error": {
 						"message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'",
-						"stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'\n    at Object.run (/packages/artifacts/artifacts/typescript/test.ts:13:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:102:9)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:2)",
+						"stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'\n    at Object.run (/packages/artifacts/artifacts/typescript/test.ts:13:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:102:9)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:96:2)",
 						"stage": "post-validation"
 					}
 				}
@@ -1502,8 +1510,8 @@
 				"version": "1.7.0",
 				"result": {
 					"error": {
-						"message": "82",
-						"stack": "Error: 82\n    at default (/packages/minifiers/minifiers/jshrink/index.ts:24:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at runMinifier (/packages/bench/benchmark/cli.ts:18:18)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:92:18)",
+						"message": "RuntimeException: Unclosed regex pattern at position: 8365076 in /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643\nStack trace:\n#0 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString('/* ************...', Array)\n#3 /Users/osame/Developer/github/privatenumber/minification-benchmarks/packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify('/* ************...')\n#4 {main}",
+						"stack": "Error: RuntimeException: Unclosed regex pattern at position: 8365076 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643\nStack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString('/* ************...', Array)\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify('/* ************...')\n#4 {main}\n    at default (/packages/minifiers/minifiers/jshrink/index.ts:24:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at runMinifier (/packages/bench/benchmark/cli.ts:18:18)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:93:18)",
 						"stage": "minification"
 					}
 				}
