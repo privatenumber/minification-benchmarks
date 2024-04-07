@@ -131,7 +131,7 @@ const newReadme = commentMark(readme, {
 	lastUpdated: format(new Date(), 'MMM d, y'),
 	benchmarks: generateBenchmarks(data),
 	minifiers: minifiers.map(
-		({ meta }) => `- ${mdu.link(`${meta.name} ${mdu.sub(`v${meta.version}`)}`, meta.repository)}`,
+		({ meta }) => `- ${mdu.link(meta.name, meta.repository)} ${mdu.sub(`v${meta.version}`)}`,
 	).join('\n'),
 });
 

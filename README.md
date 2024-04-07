@@ -5,19 +5,19 @@
 	<sup>minification benchmarks</sup>
 </h1>
 
-> What's the fastest JavaScript minifier?
+> What's the best JavaScript minifier?
 
 Here's a comparison of the speed & quality across the following JavaScript minifiers:
 
 <!-- minifiers:start -->
-- [babel-minify <sub>v0.5.2</sub>](https://github.com/babel/minify/tree/master/packages/babel-minify)
-- [bun <sub>v1.1.2</sub>](https://github.com/oven-sh/bun)
-- [esbuild <sub>v0.19.12</sub>](https://github.com/evanw/esbuild)
-- [google-closure-compiler <sub>v20230802.0.0</sub>](https://github.com/google/closure-compiler-npm/tree/master/packages/google-closure-compiler)
-- [tedivm/jshrink <sub>v1.7.0</sub>](https://github.com/tedious/JShrink)
-- [@swc/core <sub>v1.4.12</sub>](https://github.com/swc-project/swc)
-- [terser <sub>v5.30.3</sub>](https://github.com/terser/terser)
-- [uglify-js <sub>v3.17.4</sub>](https://github.com/mishoo/UglifyJS)
+- [babel-minify](https://github.com/babel/minify/tree/master/packages/babel-minify) <sub>v0.5.2</sub>
+- [bun](https://github.com/oven-sh/bun) <sub>v1.1.2</sub>
+- [esbuild](https://github.com/evanw/esbuild) <sub>v0.19.12</sub>
+- [google-closure-compiler](https://github.com/google/closure-compiler-npm/tree/master/packages/google-closure-compiler) <sub>v20230802.0.0</sub>
+- [tedivm/jshrink](https://github.com/tedious/JShrink) <sub>v1.7.0</sub>
+- [@swc/core](https://github.com/swc-project/swc) <sub>v1.4.12</sub>
+- [terser](https://github.com/terser/terser) <sub>v5.30.3</sub>
+- [uglify-js](https://github.com/mishoo/UglifyJS) <sub>v3.17.4</sub>
 <!-- minifiers:end -->
 
 _Benchmarks last updated on <!-- lastUpdated:start -->Apr 7, 2024<!-- lastUpdated:end -->._
