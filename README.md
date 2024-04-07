@@ -7,7 +7,7 @@
 
 > What's the best JavaScript minifier?
 
-Here's a comparison of the speed & quality across the following JavaScript minifiers:
+This project benchmarks the following minifiers:
 
 <!-- minifiers:start -->
 - [babel-minify](https://github.com/babel/minify/tree/master/packages/babel-minify) <sub>v0.5.2</sub>
