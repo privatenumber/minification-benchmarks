@@ -1,5 +1,5 @@
 <p align="center">
-	<img width="130" src=".github/logo.webp">
+	<img width="160" src=".github/logo.webp">
 </p>
 <h1 align="center">
 	<sup>minification benchmarks</sup>
