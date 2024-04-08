@@ -85,7 +85,7 @@ const generateBenchmarkTable = (
 					}`;
 
 					if (message === 'timeout') {
-						columns.push('-', '-', `${mdu.sup(':warning:')} ${mdu.c('+10,000ms')}`);
+						columns.push('-', '-', `${mdu.sup(':warning:')} ${mdu.c('+10,000 ms')}`);
 					} else {
 						columns.push('❌', '❌ ', '-');
 					}
