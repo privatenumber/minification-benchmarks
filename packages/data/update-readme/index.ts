@@ -77,12 +77,14 @@ const generateBenchmarkTable = (
 					const message = result.error.stage || result.error.message;
 					columns[0] += ` ${
 						mdu.sub(
-							`❌ ${capitalize(message)}`,
-							{ title: message },
+							`❌ ${message === 'timeout' ? 'Timed out' : capitalize(message)}`,
+							{
+								title: `Failed: ${message}`,
+							},
 						)
 					}`;
 
-					if (message === 'Timed out') {
+					if (message === 'timeout') {
 						columns.push('-', '-', `${mdu.sup(':warning:')} ${mdu.c('+10,000ms')}`);
 					} else {
 						columns.push('❌', '❌ ', '-');

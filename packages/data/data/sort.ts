@@ -16,6 +16,14 @@ export const sortMinifiers = (
 		if (a.result.error.message === b.result.error.message) {
 			return 0;
 		}
+
+		if (a.result.error.message === 'timeout') {
+			return -1;
+		}
+		if (b.result.error.message === 'timeout') {
+			return 1;
+		}
+
 		return a.result.error.message < b.result.error.message ? 1 : -1;
 	}
 	if ('error' in a.result) { return 1; }

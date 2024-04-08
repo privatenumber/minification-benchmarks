@@ -1107,7 +1107,7 @@
 				"version": "0.5.2",
 				"result": {
 					"error": {
-						"message": "Timed out"
+						"message": "timeout"
 					}
 				}
 			}
@@ -1215,6 +1215,15 @@
 					}
 				}
 			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20230802.0.0",
+				"result": {
+					"error": {
+						"message": "timeout"
+					}
+				}
+			},
 			"babel-minify": {
 				"minifierPath": "babel-minify.ts",
 				"version": "0.5.2",
@@ -1234,15 +1243,6 @@
 						"message": "Unexpected token '~'",
 						"stack": "fs-require://2/index.js:594\nreturn function(key,value){if(stack.length>0){var thisPos=stack.indexOf(this)~thisPos?stack.splice(thisPos+1):stack.push(this)~thisPos?keys.splice(thisPos,Infinity,key):keys.push(key)\n                                                                             ^\n\nSyntaxError: Unexpected token '~'\n    at new Script (node:vm:99:7)\n    at createScript (node:vm:255:10)\n    at Object.runInThisContext (node:vm:303:10)\n    at p. (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1165)\n    at s (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1657)\n    at requireString (/packages/artifacts/utils/require-string.ts:9:9)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:98:22)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:98:2)",
 						"stage": "post-validation"
-					}
-				}
-			},
-			"google-closure-compiler": {
-				"minifierPath": "google-closure-compiler.ts",
-				"version": "20230802.0.0",
-				"result": {
-					"error": {
-						"message": "Timed out"
 					}
 				}
 			}
@@ -1343,7 +1343,7 @@
 				"version": "0.5.2",
 				"result": {
 					"error": {
-						"message": "Timed out"
+						"message": "timeout"
 					}
 				}
 			},
@@ -1352,7 +1352,7 @@
 				"version": "20230802.0.0",
 				"result": {
 					"error": {
-						"message": "Timed out"
+						"message": "timeout"
 					}
 				}
 			},
@@ -1361,7 +1361,7 @@
 				"version": "3.17.4",
 				"result": {
 					"error": {
-						"message": "Timed out"
+						"message": "timeout"
 					}
 				}
 			},
@@ -1473,7 +1473,7 @@
 				"version": "0.5.2",
 				"result": {
 					"error": {
-						"message": "Timed out"
+						"message": "timeout"
 					}
 				}
 			},
@@ -1482,7 +1482,7 @@
 				"version": "20230802.0.0",
 				"result": {
 					"error": {
-						"message": "Timed out"
+						"message": "timeout"
 					}
 				}
 			},
@@ -1491,7 +1491,7 @@
 				"version": "1.7.0",
 				"result": {
 					"error": {
-						"message": "Timed out"
+						"message": "timeout"
 					}
 				}
 			},
@@ -1500,7 +1500,7 @@
 				"version": "3.17.4",
 				"result": {
 					"error": {
-						"message": "Timed out"
+						"message": "timeout"
 					}
 				}
 			}
@@ -1589,7 +1589,7 @@
 				"version": "0.5.2",
 				"result": {
 					"error": {
-						"message": "Timed out"
+						"message": "timeout"
 					}
 				}
 			},
@@ -1598,7 +1598,7 @@
 				"version": "20230802.0.0",
 				"result": {
 					"error": {
-						"message": "Timed out"
+						"message": "timeout"
 					}
 				}
 			},
@@ -1607,7 +1607,7 @@
 				"version": "3.17.4",
 				"result": {
 					"error": {
-						"message": "Timed out"
+						"message": "timeout"
 					}
 				}
 			},

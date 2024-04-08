@@ -46,7 +46,7 @@ const benchmark = async (
 	if (minificationProcess.timedOut) {
 		return {
 			error: {
-				message: 'Timed out',
+				message: 'timeout',
 			},
 		};
 	}
