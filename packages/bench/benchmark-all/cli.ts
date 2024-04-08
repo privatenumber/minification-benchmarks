@@ -2,6 +2,7 @@ import assert from 'assert';
 import { cli } from 'cleye';
 import { getArtifacts, loadArtifact } from '@minification-benchmarks/artifacts';
 import { getMinifiers } from '@minification-benchmarks/minifiers';
+import { saveData } from '@minification-benchmarks/data';
 import { benchmarkArtifacts } from './benchmark-artifacts';
 import type { MinifierInstance } from './types.js';
 
@@ -28,6 +29,11 @@ const argv = cli({
 			type: Boolean,
 			alias: 'f',
 			description: 'Re-run minifiers and overwrite existing results',
+		},
+		sort: {
+			type: Boolean,
+			alias: 's',
+			description: 'Re-sort data',
 		},
 	},
 });
@@ -85,6 +91,7 @@ const loadMinifiers = async (
 		minifier: filterMinifier,
 		runs,
 		force,
+		sort,
 	} = argv.flags;
 
 	const artifacts = await loadArtifacts(filterArtifacts);
@@ -96,6 +103,10 @@ const loadMinifiers = async (
 		runs,
 		force,
 	);
+
+	if (sort) {
+		await saveData(true);
+	}
 
 	process.exit();
 })();

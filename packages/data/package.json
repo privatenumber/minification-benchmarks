@@ -2,7 +2,7 @@
 	"name": "@minification-benchmarks/data",
 	"private": true,
 	"type": "module",
-	"main": "index.ts",
+	"main": "./index.ts",
 	"dependencies": {
 		"@minification-benchmarks/bench": "*",
 		"@minification-benchmarks/minifiers": "*",

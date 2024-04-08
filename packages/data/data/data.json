@@ -1226,15 +1226,6 @@
 					}
 				}
 			},
-			"google-closure-compiler": {
-				"minifierPath": "google-closure-compiler.ts",
-				"version": "20230802.0.0",
-				"result": {
-					"error": {
-						"message": "Timed out"
-					}
-				}
-			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
@@ -1243,6 +1234,15 @@
 						"message": "Unexpected token '~'",
 						"stack": "fs-require://2/index.js:594\nreturn function(key,value){if(stack.length>0){var thisPos=stack.indexOf(this)~thisPos?stack.splice(thisPos+1):stack.push(this)~thisPos?keys.splice(thisPos,Infinity,key):keys.push(key)\n                                                                             ^\n\nSyntaxError: Unexpected token '~'\n    at new Script (node:vm:99:7)\n    at createScript (node:vm:255:10)\n    at Object.runInThisContext (node:vm:303:10)\n    at p. (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1165)\n    at s (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1657)\n    at requireString (/packages/artifacts/utils/require-string.ts:9:9)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:98:22)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:98:2)",
 						"stage": "post-validation"
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20230802.0.0",
+				"result": {
+					"error": {
+						"message": "Timed out"
 					}
 				}
 			}
@@ -1356,6 +1356,15 @@
 					}
 				}
 			},
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.17.4",
+				"result": {
+					"error": {
+						"message": "Timed out"
+					}
+				}
+			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
@@ -1364,15 +1373,6 @@
 						"message": "RuntimeException: Unclosed regex pattern at position: 37315 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643",
 						"stack": "Stack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString()\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify()\n#4 {main}",
 						"stage": "minification"
-					}
-				}
-			},
-			"uglify-js": {
-				"minifierPath": "uglify-js.ts",
-				"version": "3.17.4",
-				"result": {
-					"error": {
-						"message": "Timed out"
 					}
 				}
 			}
@@ -1519,7 +1519,19 @@
 					"data": {
 						"minifiedSize": 3309542,
 						"minzippedSize": 852335,
-						"time": 3035.1667141999997,
+						"time": 1406.9240752,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.30.3",
+				"result": {
+					"data": {
+						"minifiedSize": 3349343,
+						"minzippedSize": 854273,
+						"time": 6859.1557166,
 						"runs": 5
 					}
 				}
@@ -1531,7 +1543,7 @@
 					"data": {
 						"minifiedSize": 3538024,
 						"minzippedSize": 876535,
-						"time": 3665.8923047999997,
+						"time": 2099.1048500000006,
 						"runs": 5
 					}
 				}
@@ -1543,7 +1555,7 @@
 					"data": {
 						"minifiedSize": 3364009,
 						"minzippedSize": 876924,
-						"time": 166.03341700000001,
+						"time": 174.5559002,
 						"runs": 5
 					}
 				}
@@ -1555,7 +1567,7 @@
 					"data": {
 						"minifiedSize": 3530223,
 						"minzippedSize": 879301,
-						"time": 4854.449586,
+						"time": 3250.0969665999996,
 						"runs": 5
 					}
 				}
@@ -1567,7 +1579,7 @@
 					"data": {
 						"minifiedSize": 3489518,
 						"minzippedSize": 915495,
-						"time": 470.6170414,
+						"time": 322.5272582,
 						"runs": 5
 					}
 				}
@@ -1581,38 +1593,9 @@
 					}
 				}
 			},
-			"bun": {
-				"minifierPath": "bun.ts",
-				"version": "1.1.2",
-				"result": {
-					"error": {
-						"message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'",
-						"stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'\n    at Object.run (/packages/artifacts/artifacts/typescript/test.ts:13:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:101:9)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:98:2)",
-						"stage": "post-validation"
-					}
-				}
-			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20230802.0.0",
-				"result": {
-					"error": {
-						"message": "Timed out"
-					}
-				}
-			},
-			"tedivm/jshrink": {
-				"minifierPath": "jshrink/index.ts",
-				"version": "1.7.0",
-				"result": {
-					"error": {
-						"message": "Timed out"
-					}
-				}
-			},
-			"terser": {
-				"minifierPath": "terser.ts",
-				"version": "5.30.3",
 				"result": {
 					"error": {
 						"message": "Timed out"
@@ -1625,6 +1608,28 @@
 				"result": {
 					"error": {
 						"message": "Timed out"
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"error": {
+						"message": "RuntimeException: Unclosed regex pattern at position: 8365076 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643",
+						"stack": "Stack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString('/* ************...', Array)\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify('/* ************...')\n#4 {main}",
+						"stage": "minification"
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.1.2",
+				"result": {
+					"error": {
+						"message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'",
+						"stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'\n    at Object.run (/packages/artifacts/artifacts/typescript/test.ts:13:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:101:9)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:98:2)",
+						"stage": "post-validation"
 					}
 				}
 			}

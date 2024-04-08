@@ -9,7 +9,7 @@ import { minBy, capitalize } from 'lodash-es';
 import type { BenchmarkResultSuccessWithRuns } from '@minification-benchmarks/bench/types.js';
 import { minifiersDirectory } from '@minification-benchmarks/minifiers/utils/minifiers-directory.js';
 import { getMinifiers } from '@minification-benchmarks/minifiers';
-import { data } from '../index.js';
+import { data } from '../data/index.js';
 import type { Data, Artifact } from '../types.js';
 import { percent, formatMs } from './formatting.js';
 import * as mdu from './mdu.js';
@@ -74,14 +74,19 @@ const generateBenchmarkTable = (
 				];
 
 				if ('error' in result) {
-					const { message } = result.error;
+					const message = result.error.stage || result.error.message;
 					columns[0] += ` ${
 						mdu.sub(
-							`❌ ${capitalize(result.error.stage || message)}`,
+							`❌ ${capitalize(message)}`,
 							{ title: message },
 						)
 					}`;
-					columns.push('-', '-', '-');
+
+					if (message === 'Timed out') {
+						columns.push('-', '-', `${mdu.sup(':warning:')} ${mdu.c('+10,000ms')}`);
+					} else {
+						columns.push('❌', '❌ ', '-');
+					}
 				} else {
 					columns.push(
 						displayColumn(
