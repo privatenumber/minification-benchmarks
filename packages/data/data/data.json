@@ -31,12 +31,12 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20230802.0.0",
+				"version": "20240317.0.0",
 				"result": {
 					"data": {
 						"minifiedSize": 22825,
 						"minzippedSize": 8193,
-						"time": 2907.6115086,
+						"time": 3268.6023042,
 						"runs": 5
 					}
 				}
@@ -183,12 +183,12 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20230802.0.0",
+				"version": "20240317.0.0",
 				"result": {
 					"data": {
 						"minifiedSize": 58273,
 						"minzippedSize": 18910,
-						"time": 3285.1333533999996,
+						"time": 3855.890944,
 						"runs": 5
 					}
 				}
@@ -395,12 +395,12 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20230802.0.0",
+				"version": "20240317.0.0",
 				"result": {
 					"data": {
 						"minifiedSize": 92704,
 						"minzippedSize": 33086,
-						"time": 3612.0355356,
+						"time": 4363.2543366,
 						"runs": 5
 					}
 				}
@@ -475,12 +475,12 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20230802.0.0",
+				"version": "20240317.0.0",
 				"result": {
 					"data": {
-						"minifiedSize": 115604,
-						"minzippedSize": 44226,
-						"time": 4122.6762858,
+						"minifiedSize": 115612,
+						"minzippedSize": 44230,
+						"time": 4717.4148944,
 						"runs": 5
 					}
 				}
@@ -579,12 +579,12 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20230802.0.0",
+				"version": "20240317.0.0",
 				"result": {
 					"data": {
 						"minifiedSize": 73466,
 						"minzippedSize": 24972,
-						"time": 3980.9214068,
+						"time": 4632.9640936,
 						"runs": 5
 					}
 				}
@@ -803,12 +803,12 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20230802.0.0",
+				"version": "20240317.0.0",
 				"result": {
 					"data": {
 						"minifiedSize": 270298,
 						"minzippedSize": 94121,
-						"time": 6151.2199468,
+						"time": 7109.5721066,
 						"runs": 5
 					}
 				}
@@ -917,12 +917,12 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20230802.0.0",
+				"version": "20240317.0.0",
 				"result": {
 					"data": {
 						"minifiedSize": 439949,
 						"minzippedSize": 126562,
-						"time": 5407.3883682,
+						"time": 6631.285446600001,
 						"runs": 5
 					}
 				}
@@ -1020,12 +1020,12 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20230802.0.0",
+				"version": "20240317.0.0",
 				"result": {
 					"data": {
-						"minifiedSize": 644453,
-						"minzippedSize": 162971,
-						"time": 7263.5183363999995,
+						"minifiedSize": 644450,
+						"minzippedSize": 162998,
+						"time": 8208.225974199999,
 						"runs": 5
 					}
 				}
@@ -1217,7 +1217,7 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20230802.0.0",
+				"version": "20240317.0.0",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -1349,7 +1349,7 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20230802.0.0",
+				"version": "20240317.0.0",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -1479,7 +1479,7 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20230802.0.0",
+				"version": "20240317.0.0",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -1595,7 +1595,7 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20230802.0.0",
+				"version": "20240317.0.0",
 				"result": {
 					"error": {
 						"message": "timeout"
