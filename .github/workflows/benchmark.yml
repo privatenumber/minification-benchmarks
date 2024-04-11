@@ -43,8 +43,9 @@ jobs:
 
       - name: Commit README.md
         run: |
-          git config user.name Hiroki Osame
-          git config user.email hiroki.osame@gmail.com
+          # Ignored by Renovate
+          git config user.name GitHub Actions
+          git config user.email github-actions@github.com
           git add -u
           git diff-index --quiet HEAD || git commit -nm "chore: updated benchmarks"
           git push
