@@ -8,12 +8,12 @@
 		"@swc/core": "^1.5.2",
 		"@tdewolff/minify": "^2.20.19",
 		"babel-minify": "^0.5.2",
-		"bun": "^1.1.5",
+		"bun": "^1.1.6",
 		"esbuild": "^0.20.2",
 		"find-up": "^7.0.0",
 		"google-closure-compiler": "^20240317.0.0",
 		"mem": "^9.0.2",
-		"terser": "^5.30.4",
+		"terser": "^5.31.0",
 		"uglify-js": "^3.17.4"
 	},
 	"devDependencies": {
