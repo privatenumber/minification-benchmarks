@@ -197,8 +197,8 @@ importers:
         specifier: ^1.5.7
         version: 1.5.7
       '@tdewolff/minify':
-        specifier: ^2.20.26
-        version: 2.20.26
+        specifier: ^2.20.28
+        version: 2.20.28
       babel-minify:
         specifier: ^0.5.2
         version: 0.5.2
@@ -1357,8 +1357,8 @@ packages:
       '@swc/counter': 0.1.3
     dev: false
 
-  /@tdewolff/minify@2.20.26:
-    resolution: {integrity: sha512-9e0Tj9ZMfbwCbNWgJamMs0T+EkMLl1pBzjc1voFKMKnejwqr4esroglP1dzlQYg7TSBWvusqRUJFyCJ057IB4Q==}
+  /@tdewolff/minify@2.20.28:
+    resolution: {integrity: sha512-q59GksLJP9uo8ZkfrJJ3Q7XNWiiAjuhmNp1WOPDpGhGqHvegLMscSjnl8QC0//PITmAUgjIYG6Jc3dY/0rskDg==}
     requiresBuild: true
     dependencies:
       node-gyp: 10.1.0
