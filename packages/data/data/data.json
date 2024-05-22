@@ -79,24 +79,24 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.24",
+				"version": "2.20.26",
 				"result": {
 					"data": {
 						"minifiedSize": 23534,
 						"minzippedSize": 8631,
-						"time": 2.5018825999999996,
+						"time": 3.3894654,
 						"runs": 5
 					}
 				}
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.8",
+				"version": "1.1.9",
 				"result": {
 					"data": {
 						"minifiedSize": 24011,
 						"minzippedSize": 8651,
-						"time": 14.632612,
+						"time": 16.6360094,
 						"runs": 5
 					}
 				}
@@ -219,12 +219,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.24",
+				"version": "2.20.26",
 				"result": {
 					"data": {
 						"minifiedSize": 59951,
 						"minzippedSize": 19496,
-						"time": 5.801888,
+						"time": 5.5180538,
 						"runs": 5
 					}
 				}
@@ -255,12 +255,12 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.8",
+				"version": "1.1.9",
 				"result": {
 					"data": {
 						"minifiedSize": 61856,
 						"minzippedSize": 19858,
-						"time": 17.3565972,
+						"time": 20.8693784,
 						"runs": 5
 					}
 				}
@@ -335,12 +335,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.24",
+				"version": "2.20.26",
 				"result": {
 					"data": {
 						"minifiedSize": 89848,
 						"minzippedSize": 31474,
-						"time": 9.2251522,
+						"time": 10.783049600000002,
 						"runs": 5
 					}
 				}
@@ -383,12 +383,12 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.8",
+				"version": "1.1.9",
 				"result": {
 					"data": {
 						"minifiedSize": 92559,
 						"minzippedSize": 32630,
-						"time": 20.4792126,
+						"time": 24.0263052,
 						"runs": 5
 					}
 				}
@@ -499,12 +499,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.24",
+				"version": "2.20.26",
 				"result": {
 					"data": {
 						"minifiedSize": 117808,
 						"minzippedSize": 44376,
-						"time": 13.447410999999999,
+						"time": 15.8809778,
 						"runs": 5
 					}
 				}
@@ -535,12 +535,12 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.8",
+				"version": "1.1.9",
 				"result": {
 					"data": {
 						"minifiedSize": 121703,
 						"minzippedSize": 45340,
-						"time": 22.9409494,
+						"time": 26.9424868,
 						"runs": 5
 					}
 				}
@@ -663,24 +663,24 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.8",
+				"version": "1.1.9",
 				"result": {
 					"data": {
 						"minifiedSize": 74116,
 						"minzippedSize": 26473,
-						"time": 23.7992598,
+						"time": 28.0462648,
 						"runs": 5
 					}
 				}
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.24",
+				"version": "2.20.26",
 				"result": {
 					"data": {
 						"minifiedSize": 71895,
 						"minzippedSize": 26498,
-						"time": 11.4791284,
+						"time": 14.2045424,
 						"runs": 5
 					}
 				}
@@ -767,12 +767,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.24",
+				"version": "2.20.26",
 				"result": {
 					"data": {
 						"minifiedSize": 269925,
 						"minzippedSize": 89892,
-						"time": 32.9136016,
+						"time": 37.873789800000004,
 						"runs": 5
 					}
 				}
@@ -791,12 +791,12 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.8",
+				"version": "1.1.9",
 				"result": {
 					"data": {
 						"minifiedSize": 273630,
 						"minzippedSize": 92395,
-						"time": 39.5390116,
+						"time": 45.201747,
 						"runs": 5
 					}
 				}
@@ -905,12 +905,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.24",
+				"version": "2.20.26",
 				"result": {
 					"data": {
 						"minifiedSize": 456688,
 						"minzippedSize": 124900,
-						"time": 29.5558038,
+						"time": 32.06583500000001,
 						"runs": 5
 					}
 				}
@@ -941,12 +941,12 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.8",
+				"version": "1.1.9",
 				"result": {
 					"data": {
 						"minifiedSize": 466961,
 						"minzippedSize": 127551,
-						"time": 36.8725996,
+						"time": 45.0226336,
 						"runs": 5
 					}
 				}
@@ -1068,24 +1068,24 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.24",
+				"version": "2.20.26",
 				"result": {
 					"data": {
 						"minifiedSize": 644551,
 						"minzippedSize": 164737,
-						"time": 48.248071200000005,
+						"time": 51.3128968,
 						"runs": 5
 					}
 				}
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.8",
+				"version": "1.1.9",
 				"result": {
 					"data": {
 						"minifiedSize": 662756,
 						"minzippedSize": 166483,
-						"time": 49.177042,
+						"time": 61.0160888,
 						"runs": 5
 					}
 				}
@@ -1157,12 +1157,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.24",
+				"version": "2.20.26",
 				"result": {
 					"data": {
 						"minifiedSize": 718730,
 						"minzippedSize": 165131,
-						"time": 54.17839740000001,
+						"time": 60.8857728,
 						"runs": 5
 					}
 				}
@@ -1205,12 +1205,12 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.8",
+				"version": "1.1.9",
 				"result": {
 					"data": {
 						"minifiedSize": 728186,
 						"minzippedSize": 182659,
-						"time": 67.62094400000001,
+						"time": 100.3741978,
 						"runs": 5
 					}
 				}
@@ -1316,24 +1316,24 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.24",
+				"version": "2.20.26",
 				"result": {
 					"data": {
 						"minifiedSize": 1014367,
 						"minzippedSize": 331791,
-						"time": 117.4689172,
+						"time": 136.79180499999998,
 						"runs": 5
 					}
 				}
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.8",
+				"version": "1.1.9",
 				"result": {
 					"data": {
 						"minifiedSize": 1026633,
 						"minzippedSize": 337786,
-						"time": 110.0309882,
+						"time": 177.6044396,
 						"runs": 5
 					}
 				}
@@ -1410,12 +1410,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.24",
+				"version": "2.20.26",
 				"result": {
 					"data": {
 						"minifiedSize": 2295407,
 						"minzippedSize": 472053,
-						"time": 131.0566454,
+						"time": 154.6535462,
 						"runs": 5
 					}
 				}
@@ -1458,12 +1458,12 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.8",
+				"version": "1.1.9",
 				"result": {
 					"data": {
 						"minifiedSize": 2297027,
 						"minzippedSize": 491753,
-						"time": 151.62360280000001,
+						"time": 238.2715086,
 						"runs": 5
 					}
 				}
@@ -1538,12 +1538,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.24",
+				"version": "2.20.26",
 				"result": {
 					"data": {
 						"minifiedSize": 3362854,
 						"minzippedSize": 876675,
-						"time": 247.6034092,
+						"time": 298.17706080000005,
 						"runs": 5
 					}
 				}
@@ -1621,7 +1621,7 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.8",
+				"version": "1.1.9",
 				"result": {
 					"error": {
 						"message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'",
