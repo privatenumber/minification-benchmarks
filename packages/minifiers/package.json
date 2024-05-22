@@ -6,9 +6,9 @@
 	"dependencies": {
 		"@minification-benchmarks/utils": "*",
 		"@swc/core": "^1.5.7",
-		"@tdewolff/minify": "^2.20.24",
+		"@tdewolff/minify": "^2.20.26",
 		"babel-minify": "^0.5.2",
-		"bun": "^1.1.8",
+		"bun": "^1.1.9",
 		"esbuild": "^0.21.3",
 		"find-up": "^7.0.0",
 		"google-closure-compiler": "^20240317.0.0",
