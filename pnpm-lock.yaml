@@ -197,8 +197,8 @@ importers:
         specifier: ^1.5.7
         version: 1.5.7
       '@tdewolff/minify':
-        specifier: ^2.20.31
-        version: 2.20.31
+        specifier: ^2.20.32
+        version: 2.20.32
       babel-minify:
         specifier: ^0.5.2
         version: 0.5.2
@@ -1357,8 +1357,8 @@ packages:
       '@swc/counter': 0.1.3
     dev: false
 
-  /@tdewolff/minify@2.20.31:
-    resolution: {integrity: sha512-wOcb5y5JjA+EwJ9HgtKI0AHk3l4NJ5GN8R2PWR76CapGUkOaUpO9IwkMkKJkW5cva6wbV8F5lU3m23Qz+1H+gw==}
+  /@tdewolff/minify@2.20.32:
+    resolution: {integrity: sha512-QDD65ki3/RJgJ2cIWvPZv3aU6KPY0/84F77eOnYV2saUMMyKddeC4EI6/AnRwuGkeRRX4VfEszQBjr9bo7f+Qw==}
     requiresBuild: true
     dependencies:
       node-gyp: 10.1.0
@@ -4096,6 +4096,7 @@ packages:
 
   /glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
     dependencies:
       fs.realpath: 1.0.0
       inflight: 1.0.6
