@@ -21,7 +21,7 @@
 		"@total-typescript/ts-reset": "^0.5.1",
 		"@types/node": "^20.12.5",
 		"lintroll": "^1.6.1",
-		"tsx": "^4.7.2",
+		"tsx": "4.11.0",
 		"typescript": "^5.4.4"
 	},
 	"pnpm": {
