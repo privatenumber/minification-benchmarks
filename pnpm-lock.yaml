@@ -198,8 +198,8 @@ importers:
         specifier: ^1.5.25
         version: 1.5.25
       '@tdewolff/minify':
-        specifier: ^2.20.32
-        version: 2.20.32
+        specifier: ^2.20.33
+        version: 2.20.33
       babel-minify:
         specifier: ^0.5.2
         version: 0.5.2
@@ -1316,8 +1316,8 @@ packages:
       '@swc/counter': 0.1.3
     dev: false
 
-  /@tdewolff/minify@2.20.32:
-    resolution: {integrity: sha512-QDD65ki3/RJgJ2cIWvPZv3aU6KPY0/84F77eOnYV2saUMMyKddeC4EI6/AnRwuGkeRRX4VfEszQBjr9bo7f+Qw==}
+  /@tdewolff/minify@2.20.33:
+    resolution: {integrity: sha512-SeaKMCBrzTOnw5W8bI1oiAUelqnNnhGO3QoDVMsM5MVHMZ5FywXcDxmmUHxVmqwB3xgshyJLzw4yiZoBinYkkw==}
     requiresBuild: true
     dependencies:
       node-gyp: 10.1.0
@@ -3535,7 +3535,7 @@ packages:
       eslint-import-resolver-node: 0.3.9
       get-tsconfig: 4.7.5
       is-glob: 4.0.3
-      minimatch: 9.0.3
+      minimatch: 9.0.4
       semver: 7.6.0
       tslib: 2.6.2
     transitivePeerDependencies:
@@ -3619,7 +3619,7 @@ packages:
       get-tsconfig: 4.7.5
       globals: 15.4.0
       ignore: 5.3.1
-      minimatch: 9.0.3
+      minimatch: 9.0.4
       semver: 7.6.0
     dev: true
 
@@ -4153,7 +4153,7 @@ packages:
     dependencies:
       foreground-child: 3.1.1
       jackspeak: 2.3.6
-      minimatch: 9.0.3
+      minimatch: 9.0.4
       minipass: 7.0.4
       path-scurry: 1.10.1
     dev: false
@@ -5162,13 +5162,13 @@ packages:
     engines: {node: '>=16 || 14 >=14.17'}
     dependencies:
       brace-expansion: 2.0.1
+    dev: true
 
   /minimatch@9.0.4:
     resolution: {integrity: sha512-KqWh+VchfxcMNRAJjj2tnsSJdNbHsVgnkBhTNrW7AjVo6OvLtxw8zfT9oLw1JSohlFzJ8jCoTgaoXvJ+kHt6fw==}
     engines: {node: '>=16 || 14 >=14.17'}
     dependencies:
       brace-expansion: 2.0.1
-    dev: true
 
   /minimist@1.2.6:
     resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
