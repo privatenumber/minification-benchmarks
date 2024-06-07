@@ -6,22 +6,21 @@
 	"author": "Hiroki Osame <hiroki.osame@gmail.com>",
 	"private": true,
 	"files": [],
-	"packageManager": "pnpm@9.2.0",
+	"packageManager": "pnpm@8.15.8",
 	"scripts": {
 		"bench": "tsx packages/bench/benchmark/cli.ts",
 		"bench-all": "tsx packages/bench/benchmark-all/cli.ts",
 		"update-readme": "tsx packages/data/update-readme/index.ts",
-		"lint": "lint --cache . --ignore-pattern results",
+		"lint": "lintroll --cache . --ignore-pattern results",
 		"type-check": "tsc --noEmit"
 	},
 	"devDependencies": {
 		"@minification-benchmarks/artifacts": "*",
 		"@minification-benchmarks/minifiers": "*",
 		"@minification-benchmarks/utils": "*",
-		"@pvtnbr/eslint-config": "^1.2.1",
 		"@total-typescript/ts-reset": "^0.5.1",
 		"@types/node": "^20.12.5",
-		"eslint": "^8.57.0",
+		"lintroll": "^1.6.1",
 		"tsx": "^4.7.2",
 		"typescript": "^5.4.4"
 	},
