@@ -8,7 +8,7 @@ $ pnpm bench --minifier <minifier> <artifact>
 
 Example:
 ```
-$ pnpm bench --minifier esbuild vue
+$ pnpm bench --minifier esbuild --artifact vue
 ```
 
 ### Benchmark all artifacts & minifiers

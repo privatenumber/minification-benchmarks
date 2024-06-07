@@ -95,10 +95,10 @@ export class Artifact {
 			code = test.preprocess(code);
 		}
 
-		const codeExport = requireString(code);
 		const privateConsole = blockConsole();
 		try {
-			test.run(codeExport);
+			const codeExport = requireString(code);
+			await test.run(codeExport);
 		} finally {
 			privateConsole.restore();
 		}
