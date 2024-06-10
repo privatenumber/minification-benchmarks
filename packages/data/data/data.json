@@ -7,12 +7,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.25",
+				"version": "1.5.27",
 				"result": {
 					"data": {
 						"minifiedSize": 22866,
 						"minzippedSize": 8173,
-						"time": 21.085846,
+						"time": 21.261122,
 						"runs": 5
 					}
 				}
@@ -159,12 +159,12 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.25",
+				"version": "1.5.27",
 				"result": {
 					"data": {
 						"minifiedSize": 58210,
 						"minzippedSize": 18686,
-						"time": 51.4045844,
+						"time": 52.2595284,
 						"runs": 5
 					}
 				}
@@ -287,12 +287,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.25",
+				"version": "1.5.27",
 				"result": {
 					"data": {
 						"minifiedSize": 89153,
 						"minzippedSize": 30867,
-						"time": 91.4627612,
+						"time": 92.346441,
 						"runs": 5
 					}
 				}
@@ -427,12 +427,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.25",
+				"version": "1.5.27",
 				"result": {
 					"data": {
 						"minifiedSize": 115466,
 						"minzippedSize": 42477,
-						"time": 128.52082339999998,
+						"time": 131.36721319999998,
 						"runs": 5
 					}
 				}
@@ -591,12 +591,12 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.25",
+				"version": "1.5.27",
 				"result": {
 					"data": {
 						"minifiedSize": 69831,
 						"minzippedSize": 25178,
-						"time": 111.1480872,
+						"time": 112.9914688,
 						"runs": 5
 					}
 				}
@@ -719,12 +719,12 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.25",
+				"version": "1.5.27",
 				"result": {
 					"data": {
 						"minifiedSize": 265268,
 						"minzippedSize": 87283,
-						"time": 285.1796808,
+						"time": 298.6384514,
 						"runs": 5
 					}
 				}
@@ -964,7 +964,7 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.25",
+				"version": "1.5.27",
 				"result": {
 					"error": {
 						"message": "Cannot read properties of undefined (reading 'transform')",
@@ -983,12 +983,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.25",
+				"version": "1.5.27",
 				"result": {
 					"data": {
 						"minifiedSize": 642905,
 						"minzippedSize": 158374,
-						"time": 374.3430572,
+						"time": 391.06450720000004,
 						"runs": 5
 					}
 				}
@@ -1120,12 +1120,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.25",
+				"version": "1.5.27",
 				"result": {
 					"data": {
 						"minifiedSize": 707210,
-						"minzippedSize": 157862,
-						"time": 545.1551122000001,
+						"minzippedSize": 157859,
+						"time": 577.6002096,
 						"runs": 5
 					}
 				}
@@ -1255,12 +1255,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.25",
+				"version": "1.5.27",
 				"result": {
 					"data": {
 						"minifiedSize": 993108,
 						"minzippedSize": 320244,
-						"time": 1101.0277886,
+						"time": 1091.7929008,
 						"runs": 5
 					}
 				}
@@ -1385,12 +1385,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.25",
+				"version": "1.5.27",
 				"result": {
 					"data": {
 						"minifiedSize": 2148541,
 						"minzippedSize": 452864,
-						"time": 1351.00136,
+						"time": 1364.6249748,
 						"runs": 5
 					}
 				}
@@ -1513,12 +1513,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.25",
+				"version": "1.5.27",
 				"result": {
 					"data": {
 						"minifiedSize": 3308761,
 						"minzippedSize": 852013,
-						"time": 2746.0041216,
+						"time": 2761.2985274,
 						"runs": 5
 					}
 				}
