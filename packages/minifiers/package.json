@@ -9,12 +9,12 @@
 		"@tdewolff/minify": "^2.20.33",
 		"babel-minify": "^0.5.2",
 		"bun": "^1.1.12",
-		"esbuild": "^0.21.4",
+		"esbuild": "^0.21.5",
 		"find-up": "^7.0.0",
 		"google-closure-compiler": "^20240317.0.0",
 		"mem": "^9.0.2",
 		"terser": "^5.31.1",
-		"uglify-js": "^3.17.4"
+		"uglify-js": "^3.18.0"
 	},
 	"devDependencies": {
 		"@types/google-closure-compiler": "^0.0.19",
