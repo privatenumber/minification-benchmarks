@@ -7,12 +7,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.27",
+				"version": "1.5.28",
 				"result": {
 					"data": {
 						"minifiedSize": 22866,
 						"minzippedSize": 8173,
-						"time": 21.261122,
+						"time": 20.8123058,
 						"runs": 5
 					}
 				}
@@ -159,12 +159,12 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.27",
+				"version": "1.5.28",
 				"result": {
 					"data": {
 						"minifiedSize": 58210,
 						"minzippedSize": 18686,
-						"time": 52.2595284,
+						"time": 51.379981799999996,
 						"runs": 5
 					}
 				}
@@ -287,12 +287,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.27",
+				"version": "1.5.28",
 				"result": {
 					"data": {
-						"minifiedSize": 89153,
-						"minzippedSize": 30867,
-						"time": 92.346441,
+						"minifiedSize": 89158,
+						"minzippedSize": 30870,
+						"time": 91.00432640000001,
 						"runs": 5
 					}
 				}
@@ -427,12 +427,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.27",
+				"version": "1.5.28",
 				"result": {
 					"data": {
-						"minifiedSize": 115466,
-						"minzippedSize": 42477,
-						"time": 131.36721319999998,
+						"minifiedSize": 115471,
+						"minzippedSize": 42478,
+						"time": 127.8135106,
 						"runs": 5
 					}
 				}
@@ -591,12 +591,12 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.27",
+				"version": "1.5.28",
 				"result": {
 					"data": {
-						"minifiedSize": 69831,
-						"minzippedSize": 25178,
-						"time": 112.9914688,
+						"minifiedSize": 69836,
+						"minzippedSize": 25180,
+						"time": 111.57981199999999,
 						"runs": 5
 					}
 				}
@@ -719,12 +719,12 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.27",
+				"version": "1.5.28",
 				"result": {
 					"data": {
 						"minifiedSize": 265268,
 						"minzippedSize": 87283,
-						"time": 298.6384514,
+						"time": 283.848481,
 						"runs": 5
 					}
 				}
@@ -843,6 +843,18 @@
 		"size": 1009635,
 		"gzipSize": 193763,
 		"minified": {
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.5.28",
+				"result": {
+					"data": {
+						"minifiedSize": 455579,
+						"minzippedSize": 123068,
+						"time": 245.20363819999997,
+						"runs": 5
+					}
+				}
+			},
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.18.0",
@@ -961,17 +973,6 @@
 						"stage": "minification"
 					}
 				}
-			},
-			"@swc/core": {
-				"minifierPath": "swc.ts",
-				"version": "1.5.27",
-				"result": {
-					"error": {
-						"message": "Cannot read properties of undefined (reading 'transform')",
-						"stack": "TypeError: Cannot read properties of undefined (reading 'transform')\n    at fs-require://2/index.js:1:108548\n    at ri.before (fs-require://2/index.js:1:246555)\n    at eb.$documentation.transform (fs-require://2/index.js:1:105669)\n    at e (fs-require://2/index.js:1:1073)\n    at fs-require://2/index.js:1:108037\n    at ri.before (fs-require://2/index.js:1:246565)\n    at eb.$documentation.transform (fs-require://2/index.js:1:105669)\n    at fs-require://2/index.js:1:106374\n    at ri.before (fs-require://2/index.js:1:246555)\n    at eb.$documentation.transform (fs-require://2/index.js:1:105669)",
-						"stage": "post-validation"
-					}
-				}
 			}
 		}
 	},
@@ -983,12 +984,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.27",
+				"version": "1.5.28",
 				"result": {
 					"data": {
 						"minifiedSize": 642905,
 						"minzippedSize": 158374,
-						"time": 391.06450720000004,
+						"time": 373.5541630000001,
 						"runs": 5
 					}
 				}
@@ -1120,12 +1121,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.27",
+				"version": "1.5.28",
 				"result": {
 					"data": {
-						"minifiedSize": 707210,
-						"minzippedSize": 157859,
-						"time": 577.6002096,
+						"minifiedSize": 707215,
+						"minzippedSize": 157861,
+						"time": 535.0284727999999,
 						"runs": 5
 					}
 				}
@@ -1255,12 +1256,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.27",
+				"version": "1.5.28",
 				"result": {
 					"data": {
 						"minifiedSize": 993108,
 						"minzippedSize": 320244,
-						"time": 1091.7929008,
+						"time": 1037.5059538,
 						"runs": 5
 					}
 				}
@@ -1385,12 +1386,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.27",
+				"version": "1.5.28",
 				"result": {
 					"data": {
-						"minifiedSize": 2148541,
-						"minzippedSize": 452864,
-						"time": 1364.6249748,
+						"minifiedSize": 2148561,
+						"minzippedSize": 452876,
+						"time": 1298.3915548,
 						"runs": 5
 					}
 				}
@@ -1513,12 +1514,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.5.27",
+				"version": "1.5.28",
 				"result": {
 					"data": {
-						"minifiedSize": 3308761,
-						"minzippedSize": 852013,
-						"time": 2761.2985274,
+						"minifiedSize": 3309546,
+						"minzippedSize": 852337,
+						"time": 2663.3504352000004,
 						"runs": 5
 					}
 				}
