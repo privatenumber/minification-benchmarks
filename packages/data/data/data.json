@@ -91,12 +91,12 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.12",
+				"version": "1.1.13",
 				"result": {
 					"data": {
 						"minifiedSize": 24011,
 						"minzippedSize": 8651,
-						"time": 14.491571400000002,
+						"time": 14.513497600000003,
 						"runs": 5
 					}
 				}
@@ -255,12 +255,12 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.12",
+				"version": "1.1.13",
 				"result": {
 					"data": {
-						"minifiedSize": 61856,
-						"minzippedSize": 19858,
-						"time": 17.3025794,
+						"minifiedSize": 61839,
+						"minzippedSize": 19850,
+						"time": 17.3111722,
 						"runs": 5
 					}
 				}
@@ -383,12 +383,12 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.12",
+				"version": "1.1.13",
 				"result": {
 					"data": {
 						"minifiedSize": 92559,
 						"minzippedSize": 32630,
-						"time": 20.307533799999998,
+						"time": 27.933144600000002,
 						"runs": 5
 					}
 				}
@@ -535,12 +535,12 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.12",
+				"version": "1.1.13",
 				"result": {
 					"data": {
 						"minifiedSize": 121703,
 						"minzippedSize": 45340,
-						"time": 22.881638200000005,
+						"time": 29.773042800000002,
 						"runs": 5
 					}
 				}
@@ -663,12 +663,12 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.12",
+				"version": "1.1.13",
 				"result": {
 					"data": {
-						"minifiedSize": 74116,
-						"minzippedSize": 26473,
-						"time": 24.2125174,
+						"minifiedSize": 74106,
+						"minzippedSize": 26469,
+						"time": 22.339385999999998,
 						"runs": 5
 					}
 				}
@@ -791,12 +791,12 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.12",
+				"version": "1.1.13",
 				"result": {
 					"data": {
-						"minifiedSize": 273630,
-						"minzippedSize": 92395,
-						"time": 37.4220562,
+						"minifiedSize": 273427,
+						"minzippedSize": 92374,
+						"time": 43.13916999999999,
 						"runs": 5
 					}
 				}
@@ -941,12 +941,12 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.12",
+				"version": "1.1.13",
 				"result": {
 					"data": {
-						"minifiedSize": 466961,
+						"minifiedSize": 466951,
 						"minzippedSize": 127551,
-						"time": 36.80901239999999,
+						"time": 40.8233992,
 						"runs": 5
 					}
 				}
@@ -1080,12 +1080,12 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.12",
+				"version": "1.1.13",
 				"result": {
 					"data": {
-						"minifiedSize": 662756,
-						"minzippedSize": 166483,
-						"time": 48.034266599999995,
+						"minifiedSize": 662504,
+						"minzippedSize": 166442,
+						"time": 49.6503302,
 						"runs": 5
 					}
 				}
@@ -1205,12 +1205,12 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.12",
+				"version": "1.1.13",
 				"result": {
 					"data": {
-						"minifiedSize": 728186,
-						"minzippedSize": 182659,
-						"time": 67.8465266,
+						"minifiedSize": 727990,
+						"minzippedSize": 182626,
+						"time": 70.53353280000002,
 						"runs": 5
 					}
 				}
@@ -1328,12 +1328,12 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.12",
+				"version": "1.1.13",
 				"result": {
 					"data": {
-						"minifiedSize": 1026633,
-						"minzippedSize": 337786,
-						"time": 110.8726942,
+						"minifiedSize": 1025851,
+						"minzippedSize": 337702,
+						"time": 116.9633716,
 						"runs": 5
 					}
 				}
@@ -1458,12 +1458,12 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.12",
+				"version": "1.1.13",
 				"result": {
 					"data": {
-						"minifiedSize": 2297027,
-						"minzippedSize": 491753,
-						"time": 152.1182886,
+						"minifiedSize": 2297007,
+						"minzippedSize": 491747,
+						"time": 155.1304084,
 						"runs": 5
 					}
 				}
@@ -1621,11 +1621,11 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.1.12",
+				"version": "1.1.13",
 				"result": {
 					"error": {
 						"message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'",
-						"stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'\n    at Object.run (/packages/artifacts/artifacts/typescript/test.ts:13:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:101:9)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:98:2)",
+						"stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'\n    at Object.run (/packages/artifacts/artifacts/typescript/test.ts:13:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:101:15)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:98:2)",
 						"stage": "post-validation"
 					}
 				}
