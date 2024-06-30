@@ -9,7 +9,7 @@
 		"@tdewolff/minify": "^2.20.34",
 		"babel-minify": "^0.5.2",
 		"bun": "^1.1.17",
-		"esbuild": "^0.21.5",
+		"esbuild": "^0.22.0",
 		"find-up": "^7.0.0",
 		"google-closure-compiler": "^20240317.0.0",
 		"mem": "^9.0.2",
