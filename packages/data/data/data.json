@@ -67,12 +67,12 @@
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.22.0",
+				"version": "0.23.0",
 				"result": {
 					"data": {
 						"minifiedSize": 23697,
 						"minzippedSize": 8543,
-						"time": 12.5038706,
+						"time": 12.853758,
 						"runs": 5
 					}
 				}
@@ -207,12 +207,12 @@
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.22.0",
+				"version": "0.23.0",
 				"result": {
 					"data": {
 						"minifiedSize": 59824,
 						"minzippedSize": 19334,
-						"time": 17.8114162,
+						"time": 22.944336,
 						"runs": 5
 					}
 				}
@@ -371,12 +371,12 @@
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.22.0",
+				"version": "0.23.0",
 				"result": {
 					"data": {
 						"minifiedSize": 90065,
 						"minzippedSize": 31954,
-						"time": 36.0244242,
+						"time": 38.8988116,
 						"runs": 5
 					}
 				}
@@ -487,12 +487,12 @@
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.22.0",
+				"version": "0.23.0",
 				"result": {
 					"data": {
 						"minifiedSize": 118141,
 						"minzippedSize": 44368,
-						"time": 39.772436,
+						"time": 40.0428748,
 						"runs": 5
 					}
 				}
@@ -639,12 +639,12 @@
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.22.0",
+				"version": "0.23.0",
 				"result": {
 					"data": {
 						"minifiedSize": 72483,
 						"minzippedSize": 26200,
-						"time": 28.3582814,
+						"time": 28.982629600000003,
 						"runs": 5
 					}
 				}
@@ -779,12 +779,12 @@
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.22.0",
+				"version": "0.23.0",
 				"result": {
 					"data": {
 						"minifiedSize": 270129,
 						"minzippedSize": 90800,
-						"time": 70.9936644,
+						"time": 70.15838219999999,
 						"runs": 5
 					}
 				}
@@ -929,12 +929,12 @@
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.22.0",
+				"version": "0.23.0",
 				"result": {
 					"data": {
 						"minifiedSize": 458890,
 						"minzippedSize": 126706,
-						"time": 62.477577399999994,
+						"time": 61.7410748,
 						"runs": 5
 					}
 				}
@@ -1056,12 +1056,12 @@
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.22.0",
+				"version": "0.23.0",
 				"result": {
 					"data": {
 						"minifiedSize": 646759,
 						"minzippedSize": 163725,
-						"time": 92.41697359999999,
+						"time": 87.227945,
 						"runs": 5
 					}
 				}
@@ -1193,12 +1193,12 @@
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.22.0",
+				"version": "0.23.0",
 				"result": {
 					"data": {
 						"minifiedSize": 724140,
 						"minzippedSize": 181071,
-						"time": 119.8711026,
+						"time": 116.1961002,
 						"runs": 5
 					}
 				}
@@ -1304,12 +1304,12 @@
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.22.0",
+				"version": "0.23.0",
 				"result": {
 					"data": {
 						"minifiedSize": 1011234,
 						"minzippedSize": 331563,
-						"time": 199.01759480000004,
+						"time": 194.27452060000002,
 						"runs": 5
 					}
 				}
@@ -1446,12 +1446,12 @@
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.22.0",
+				"version": "0.23.0",
 				"result": {
 					"data": {
 						"minifiedSize": 2306394,
 						"minzippedSize": 488279,
-						"time": 295.9902406,
+						"time": 290.3833758,
 						"runs": 5
 					}
 				}
@@ -1562,12 +1562,12 @@
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.22.0",
+				"version": "0.23.0",
 				"result": {
 					"data": {
 						"minifiedSize": 3489518,
 						"minzippedSize": 915495,
-						"time": 485.31469580000004,
+						"time": 480.63763140000003,
 						"runs": 5
 					}
 				}
