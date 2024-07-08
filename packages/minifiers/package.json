@@ -6,7 +6,7 @@
 	"dependencies": {
 		"@minification-benchmarks/utils": "*",
 		"@swc/core": "^1.6.13",
-		"@tdewolff/minify": "^2.20.35",
+		"@tdewolff/minify": "^2.20.36",
 		"babel-minify": "^0.5.2",
 		"bun": "^1.1.18",
 		"esbuild": "^0.23.0",
