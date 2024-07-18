@@ -5,7 +5,7 @@
 	"main": "index.ts",
 	"dependencies": {
 		"@minification-benchmarks/utils": "*",
-		"@swc/core": "^1.6.13",
+		"@swc/core": "^1.7.0",
 		"@tdewolff/minify": "^2.20.37",
 		"babel-minify": "^0.5.2",
 		"bun": "^1.1.20",
