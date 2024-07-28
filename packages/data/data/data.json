@@ -19,12 +19,12 @@
 			},
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 22655,
 						"minzippedSize": 8177,
-						"time": 484.6832788,
+						"time": 481.68416779999995,
 						"runs": 5
 					}
 				}
@@ -103,12 +103,12 @@
 			},
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 25030,
 						"minzippedSize": 8668,
-						"time": 89.86725859999999,
+						"time": 89.99587179999999,
 						"runs": 5
 					}
 				}
@@ -147,12 +147,12 @@
 		"minified": {
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 57852,
 						"minzippedSize": 18560,
-						"time": 1110.1796602,
+						"time": 1130.7503365999999,
 						"runs": 5
 					}
 				}
@@ -231,12 +231,12 @@
 			},
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 62495,
 						"minzippedSize": 19569,
-						"time": 215.61377720000002,
+						"time": 216.55379920000001,
 						"runs": 5
 					}
 				}
@@ -299,12 +299,12 @@
 			},
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 88511,
 						"minzippedSize": 30879,
-						"time": 1539.1838222000001,
+						"time": 1544.3779808000002,
 						"runs": 5
 					}
 				}
@@ -335,12 +335,12 @@
 			},
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 94082,
 						"minzippedSize": 31470,
-						"time": 318.27397299999996,
+						"time": 310.4535978,
 						"runs": 5
 					}
 				}
@@ -439,12 +439,12 @@
 			},
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 113976,
-						"minzippedSize": 42930,
-						"time": 2106.3383408,
+						"minzippedSize": 42927,
+						"time": 2119.0378539999997,
 						"runs": 5
 					}
 				}
@@ -511,12 +511,12 @@
 			},
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 126137,
 						"minzippedSize": 44450,
-						"time": 361.36529299999995,
+						"time": 364.90980440000004,
 						"runs": 5
 					}
 				}
@@ -567,12 +567,12 @@
 		"minified": {
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 68242,
 						"minzippedSize": 24659,
-						"time": 1650.4370761999999,
+						"time": 1657.4193936,
 						"runs": 5
 					}
 				}
@@ -627,12 +627,12 @@
 			},
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 74607,
 						"minzippedSize": 25862,
-						"time": 332.798461,
+						"time": 336.08159399999994,
 						"runs": 5
 					}
 				}
@@ -707,12 +707,12 @@
 		"minified": {
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 263731,
 						"minzippedSize": 86959,
-						"time": 3900.4529586000003,
+						"time": 3928.3689679999998,
 						"runs": 5
 					}
 				}
@@ -731,12 +731,12 @@
 			},
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 275347,
 						"minzippedSize": 88319,
-						"time": 698.7974784,
+						"time": 711.3067038,
 						"runs": 5
 					}
 				}
@@ -857,12 +857,12 @@
 			},
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 451536,
 						"minzippedSize": 123276,
-						"time": 3705.1237342,
+						"time": 3710.5334536,
 						"runs": 5
 					}
 				}
@@ -893,12 +893,12 @@
 			},
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 472162,
 						"minzippedSize": 124609,
-						"time": 779.3340161999998,
+						"time": 778.5174989999999,
 						"runs": 5
 					}
 				}
@@ -996,12 +996,12 @@
 			},
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 642225,
 						"minzippedSize": 158963,
-						"time": 4946.3103624,
+						"time": 4973.1942858,
 						"runs": 5
 					}
 				}
@@ -1032,12 +1032,12 @@
 			},
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 674490,
 						"minzippedSize": 163036,
-						"time": 998.7266018,
+						"time": 988.5346162,
 						"runs": 5
 					}
 				}
@@ -1121,12 +1121,12 @@
 		"minified": {
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
-						"minifiedSize": 696493,
-						"minzippedSize": 157416,
-						"time": 6297.8199314,
+						"minifiedSize": 696346,
+						"minzippedSize": 157388,
+						"time": 6304.908412000001,
 						"runs": 5
 					}
 				}
@@ -1181,12 +1181,12 @@
 			},
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 756530,
 						"minzippedSize": 167579,
-						"time": 1344.0757914,
+						"time": 1330.1557648000003,
 						"runs": 5
 					}
 				}
@@ -1292,12 +1292,12 @@
 			},
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 1068386,
 						"minzippedSize": 331412,
-						"time": 1777.1710016000002,
+						"time": 1751.1452366,
 						"runs": 5
 					}
 				}
@@ -1358,7 +1358,7 @@
 			},
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -1434,12 +1434,12 @@
 			},
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 2420587,
 						"minzippedSize": 478572,
-						"time": 2455.676923,
+						"time": 2449.2982325999997,
 						"runs": 5
 					}
 				}
@@ -1497,7 +1497,7 @@
 			},
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -1526,12 +1526,12 @@
 			},
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"data": {
 						"minifiedSize": 3538024,
 						"minzippedSize": 876535,
-						"time": 3930.6008408000002,
+						"time": 3832.7828916,
 						"runs": 5
 					}
 				}
@@ -1601,7 +1601,7 @@
 			},
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
-				"version": "3.19.0",
+				"version": "3.19.1",
 				"result": {
 					"error": {
 						"message": "timeout"
