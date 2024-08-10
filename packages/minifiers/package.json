@@ -14,7 +14,7 @@
 		"google-closure-compiler": "^20240317.0.0",
 		"mem": "^9.0.2",
 		"terser": "^5.31.5",
-		"uglify-js": "^3.19.1"
+		"uglify-js": "^3.19.2"
 	},
 	"devDependencies": {
 		"@types/google-closure-compiler": "^0.0.19",
