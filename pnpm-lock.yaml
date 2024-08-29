@@ -222,8 +222,8 @@ importers:
         specifier: ^5.31.6
         version: 5.31.6
       uglify-js:
-        specifier: ^3.19.2
-        version: 3.19.2
+        specifier: ^3.19.3
+        version: 3.19.3
     devDependencies:
       '@types/google-closure-compiler':
         specifier: ^0.0.19
@@ -7009,8 +7009,8 @@ packages:
     hasBin: true
     dev: true
 
-  /uglify-js@3.19.2:
-    resolution: {integrity: sha512-S8KA6DDI47nQXJSi2ctQ629YzwOVs+bQML6DAtvy0wgNdpi+0ySpQK0g2pxBq2xfF2z3YCscu7NNA8nXT9PlIQ==}
+  /uglify-js@3.19.3:
+    resolution: {integrity: sha512-v3Xu+yuwBXisp6QYTcH4UbH+xYJXqnq2m/LtQVWKWzYc1iehYnLixoQDN9FH6/j9/oybfd6W9Ghwkl8+UMKTKQ==}
     engines: {node: '>=0.8.0'}
     hasBin: true
     dev: false
