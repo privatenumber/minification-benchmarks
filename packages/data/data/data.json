@@ -7,12 +7,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.25",
+				"version": "1.7.26",
 				"result": {
 					"data": {
 						"minifiedSize": 22866,
 						"minzippedSize": 8173,
-						"time": 21.3756634,
+						"time": 21.125239999999998,
 						"runs": 5
 					}
 				}
@@ -159,12 +159,12 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.25",
+				"version": "1.7.26",
 				"result": {
 					"data": {
 						"minifiedSize": 58210,
 						"minzippedSize": 18686,
-						"time": 51.2326126,
+						"time": 51.60300540000001,
 						"runs": 5
 					}
 				}
@@ -287,12 +287,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.25",
+				"version": "1.7.26",
 				"result": {
 					"data": {
 						"minifiedSize": 89154,
 						"minzippedSize": 30867,
-						"time": 91.1188986,
+						"time": 91.62395039999998,
 						"runs": 5
 					}
 				}
@@ -427,12 +427,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.25",
+				"version": "1.7.26",
 				"result": {
 					"data": {
 						"minifiedSize": 115497,
 						"minzippedSize": 42515,
-						"time": 129.79212280000002,
+						"time": 129.5436032,
 						"runs": 5
 					}
 				}
@@ -591,12 +591,12 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.25",
+				"version": "1.7.26",
 				"result": {
 					"data": {
 						"minifiedSize": 69836,
-						"minzippedSize": 25180,
-						"time": 112.1405336,
+						"minzippedSize": 25156,
+						"time": 112.32074259999999,
 						"runs": 5
 					}
 				}
@@ -719,12 +719,12 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.25",
+				"version": "1.7.26",
 				"result": {
 					"data": {
-						"minifiedSize": 265268,
-						"minzippedSize": 87283,
-						"time": 282.2719942,
+						"minifiedSize": 265257,
+						"minzippedSize": 87207,
+						"time": 287.66281519999995,
 						"runs": 5
 					}
 				}
@@ -845,12 +845,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.25",
+				"version": "1.7.26",
 				"result": {
 					"data": {
 						"minifiedSize": 455609,
 						"minzippedSize": 123089,
-						"time": 241.61737039999997,
+						"time": 249.4060312,
 						"runs": 5
 					}
 				}
@@ -984,12 +984,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.25",
+				"version": "1.7.26",
 				"result": {
 					"data": {
-						"minifiedSize": 645271,
-						"minzippedSize": 158626,
-						"time": 374.82092040000003,
+						"minifiedSize": 645273,
+						"minzippedSize": 158497,
+						"time": 378.0667952,
 						"runs": 5
 					}
 				}
@@ -1133,12 +1133,12 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.25",
+				"version": "1.7.26",
 				"result": {
 					"data": {
 						"minifiedSize": 712610,
-						"minzippedSize": 158113,
-						"time": 543.6296542,
+						"minzippedSize": 158054,
+						"time": 564.7347936,
 						"runs": 5
 					}
 				}
@@ -1256,12 +1256,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.25",
+				"version": "1.7.26",
 				"result": {
 					"data": {
-						"minifiedSize": 993262,
-						"minzippedSize": 320303,
-						"time": 1066.9994279999999,
+						"minifiedSize": 993242,
+						"minzippedSize": 320265,
+						"time": 1039.3180472,
 						"runs": 5
 					}
 				}
@@ -1386,12 +1386,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.25",
+				"version": "1.7.26",
 				"result": {
 					"data": {
 						"minifiedSize": 2177887,
-						"minzippedSize": 454529,
-						"time": 1328.133337,
+						"minzippedSize": 454517,
+						"time": 1317.5449904000002,
 						"runs": 5
 					}
 				}
@@ -1514,12 +1514,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.25",
+				"version": "1.7.26",
 				"result": {
 					"data": {
-						"minifiedSize": 3309541,
-						"minzippedSize": 852317,
-						"time": 2683.6862658,
+						"minifiedSize": 3310162,
+						"minzippedSize": 851730,
+						"time": 2678.1984110000003,
 						"runs": 5
 					}
 				}
