@@ -198,8 +198,8 @@ importers:
         specifier: ^1.7.35
         version: 1.7.35
       '@tdewolff/minify':
-        specifier: ^2.20.37
-        version: 2.20.37
+        specifier: ^2.21.0
+        version: 2.21.0
       babel-minify:
         specifier: ^0.5.2
         version: 0.5.2
@@ -1325,12 +1325,12 @@ packages:
       '@swc/counter': 0.1.3
     dev: false
 
-  /@tdewolff/minify@2.20.37:
-    resolution: {integrity: sha512-dzo4ja8yaPx//yjgckQhSXt265BzQa7fdvRdMzkmnp5exNvNSpN9q1R0qJ1LqzvCiX5pMn/3xMpP1j089YHJYw==}
+  /@tdewolff/minify@2.21.0:
+    resolution: {integrity: sha512-EuL1y467WqNjftMIveM79IKLT0brDGPvUZrPT4SDr3+aDOUn3192yH7HJ5D45qlBN0HyrKwvVVkGNusHyA56fA==}
     requiresBuild: true
     dependencies:
-      node-gyp: 10.1.0
-      node-gyp-build: 4.8.1
+      node-gyp: 10.2.0
+      node-gyp-build: 4.8.2
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -2465,7 +2465,7 @@ packages:
       minipass-pipeline: 1.2.4
       p-map: 4.0.0
       ssri: 10.0.5
-      tar: 6.1.13
+      tar: 6.2.1
       unique-filename: 3.0.0
     dev: false
 
@@ -5233,8 +5233,8 @@ packages:
       yallist: 4.0.0
     dev: false
 
-  /minipass@4.2.5:
-    resolution: {integrity: sha512-+yQl7SX3bIT83Lhb4BVorMAHVuqsskxRdlmO9kTpyukp8vsm2Sn/fUOV9xlnG8/a5JsypJzap21lz/y3FBMJ8Q==}
+  /minipass@5.0.0:
+    resolution: {integrity: sha512-3FnjYuehv9k6ovOEbyOswadCDPX1piCfhV8ncmYtHOjuPwylVWsghTLo7rabjC3Rx5xD4HDx8Wm1xnMF7S5qFQ==}
     engines: {node: '>=8'}
     dev: false
 
@@ -5284,13 +5284,13 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /node-gyp-build@4.8.1:
-    resolution: {integrity: sha512-OSs33Z9yWr148JZcbZd5WiAXhh/n9z8TxQcdMhIOlpN9AhWpLfvVFO73+m77bBABQMaY9XSvIa+qk0jlI7Gcaw==}
+  /node-gyp-build@4.8.2:
+    resolution: {integrity: sha512-IRUxE4BVsHWXkV/SFOut4qTlagw2aM8T5/vnTsmrHJvVoKueJHRc/JaFND7QDDc61kLYUJ6qlZM3sqTSyx2dTw==}
     hasBin: true
     dev: false
 
-  /node-gyp@10.1.0:
-    resolution: {integrity: sha512-B4J5M1cABxPc5PwfjhbV5hoy2DP9p8lFXASnEN6hugXOa61416tnTZ29x9sSwAd0o99XNIcpvDDy1swAExsVKA==}
+  /node-gyp@10.2.0:
+    resolution: {integrity: sha512-sp3FonBAaFe4aYTcFdZUn2NYkbP7xroPGYvQmP4Nl5PxamznItBnNCgjrVTKrEfQynInMsJvZrdmqUnysCJ8rw==}
     engines: {node: ^16.14.0 || >=18.0.0}
     hasBin: true
     dependencies:
@@ -5300,9 +5300,9 @@ packages:
       graceful-fs: 4.2.11
       make-fetch-happen: 13.0.0
       nopt: 7.2.0
-      proc-log: 3.0.0
+      proc-log: 4.2.0
       semver: 7.6.0
-      tar: 6.1.13
+      tar: 6.2.1
       which: 4.0.0
     transitivePeerDependencies:
       - supports-color
@@ -5672,8 +5672,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /proc-log@3.0.0:
-    resolution: {integrity: sha512-++Vn7NS4Xf9NacaU9Xq3URUuqZETPsf8L4j5/ckhaRYsfPeRyzGw+iDjFhV/Jr3uNmTvvddEJFWh5R1gRgUH8A==}
+  /proc-log@4.2.0:
+    resolution: {integrity: sha512-g8+OnU/L2v+wyiVK+D5fA34J7EH8jZ8DDlvwhRCMxmMj7UCBvxiO1mGeN+36JXIKF4zevU4kRBd8lVgG9vLelA==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dev: false
 
@@ -6790,13 +6790,13 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /tar@6.1.13:
-    resolution: {integrity: sha512-jdIBIN6LTIe2jqzay/2vtYLlBHa3JF42ot3h1dW8Q0PaAG4v8rm0cvpVePtau5C6OKXGGcgO9q2AMNSWxiLqKw==}
+  /tar@6.2.1:
+    resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
     engines: {node: '>=10'}
     dependencies:
       chownr: 2.0.0
       fs-minipass: 2.1.0
-      minipass: 4.2.5
+      minipass: 5.0.0
       minizlib: 2.1.2
       mkdirp: 1.0.4
       yallist: 4.0.0

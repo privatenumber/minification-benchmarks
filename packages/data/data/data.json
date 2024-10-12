@@ -79,12 +79,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.37",
+				"version": "2.21.0",
 				"result": {
 					"data": {
 						"minifiedSize": 23534,
 						"minzippedSize": 8631,
-						"time": 2.5305294,
+						"time": 2.8714944,
 						"runs": 5
 					}
 				}
@@ -219,12 +219,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.37",
+				"version": "2.21.0",
 				"result": {
 					"data": {
 						"minifiedSize": 59951,
 						"minzippedSize": 19496,
-						"time": 5.422544,
+						"time": 5.561473,
 						"runs": 5
 					}
 				}
@@ -323,12 +323,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.37",
+				"version": "2.21.0",
 				"result": {
 					"data": {
 						"minifiedSize": 89851,
 						"minzippedSize": 31468,
-						"time": 8.529929000000001,
+						"time": 8.538566600000001,
 						"runs": 5
 					}
 				}
@@ -499,12 +499,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.37",
+				"version": "2.21.0",
 				"result": {
 					"data": {
 						"minifiedSize": 117808,
 						"minzippedSize": 44376,
-						"time": 11.6852656,
+						"time": 11.681303000000002,
 						"runs": 5
 					}
 				}
@@ -675,12 +675,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.37",
+				"version": "2.21.0",
 				"result": {
 					"data": {
 						"minifiedSize": 71895,
 						"minzippedSize": 26498,
-						"time": 11.855293,
+						"time": 12.1292818,
 						"runs": 5
 					}
 				}
@@ -767,12 +767,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.37",
+				"version": "2.21.0",
 				"result": {
 					"data": {
 						"minifiedSize": 269926,
 						"minzippedSize": 89891,
-						"time": 34.5297418,
+						"time": 33.874713400000005,
 						"runs": 5
 					}
 				}
@@ -905,12 +905,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.37",
+				"version": "2.21.0",
 				"result": {
 					"data": {
 						"minifiedSize": 456695,
 						"minzippedSize": 124897,
-						"time": 32.31346979999999,
+						"time": 32.723210400000006,
 						"runs": 5
 					}
 				}
@@ -1068,12 +1068,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.37",
+				"version": "2.21.0",
 				"result": {
 					"data": {
 						"minifiedSize": 644551,
 						"minzippedSize": 164737,
-						"time": 48.1705288,
+						"time": 49.165603999999995,
 						"runs": 5
 					}
 				}
@@ -1157,12 +1157,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.37",
+				"version": "2.21.0",
 				"result": {
 					"data": {
 						"minifiedSize": 718730,
 						"minzippedSize": 165131,
-						"time": 59.4653232,
+						"time": 59.354625600000006,
 						"runs": 5
 					}
 				}
@@ -1316,12 +1316,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.37",
+				"version": "2.21.0",
 				"result": {
 					"data": {
 						"minifiedSize": 1014368,
 						"minzippedSize": 331791,
-						"time": 123.3600126,
+						"time": 123.816293,
 						"runs": 5
 					}
 				}
@@ -1410,12 +1410,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.37",
+				"version": "2.21.0",
 				"result": {
 					"data": {
-						"minifiedSize": 2295408,
-						"minzippedSize": 472052,
-						"time": 146.7093506,
+						"minifiedSize": 2295397,
+						"minzippedSize": 472044,
+						"time": 145.93993940000001,
 						"runs": 5
 					}
 				}
@@ -1538,12 +1538,12 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.20.37",
+				"version": "2.21.0",
 				"result": {
 					"data": {
 						"minifiedSize": 3362866,
 						"minzippedSize": 876658,
-						"time": 264.367382,
+						"time": 261.6496316,
 						"runs": 5
 					}
 				}
