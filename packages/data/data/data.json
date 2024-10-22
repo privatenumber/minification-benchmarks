@@ -7,12 +7,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.36",
+				"version": "1.7.39",
 				"result": {
 					"data": {
 						"minifiedSize": 22866,
 						"minzippedSize": 8173,
-						"time": 20.153741000000004,
+						"time": 20.8895774,
 						"runs": 5
 					}
 				}
@@ -159,12 +159,12 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.36",
+				"version": "1.7.39",
 				"result": {
 					"data": {
 						"minifiedSize": 58213,
 						"minzippedSize": 18687,
-						"time": 49.4794952,
+						"time": 50.943115999999996,
 						"runs": 5
 					}
 				}
@@ -287,12 +287,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.36",
+				"version": "1.7.39",
 				"result": {
 					"data": {
 						"minifiedSize": 89154,
 						"minzippedSize": 30867,
-						"time": 89.75243180000001,
+						"time": 90.9113564,
 						"runs": 5
 					}
 				}
@@ -427,12 +427,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.36",
+				"version": "1.7.39",
 				"result": {
 					"data": {
 						"minifiedSize": 115497,
 						"minzippedSize": 42515,
-						"time": 127.7753746,
+						"time": 129.402269,
 						"runs": 5
 					}
 				}
@@ -591,12 +591,12 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.36",
+				"version": "1.7.39",
 				"result": {
 					"data": {
 						"minifiedSize": 69836,
 						"minzippedSize": 25156,
-						"time": 111.67691339999999,
+						"time": 114.07144799999999,
 						"runs": 5
 					}
 				}
@@ -719,12 +719,12 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.36",
+				"version": "1.7.39",
 				"result": {
 					"data": {
 						"minifiedSize": 265257,
 						"minzippedSize": 87207,
-						"time": 282.88717640000004,
+						"time": 299.6538919999999,
 						"runs": 5
 					}
 				}
@@ -845,12 +845,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.36",
+				"version": "1.7.39",
 				"result": {
 					"data": {
 						"minifiedSize": 455609,
 						"minzippedSize": 123089,
-						"time": 247.4269816,
+						"time": 258.0354956,
 						"runs": 5
 					}
 				}
@@ -984,12 +984,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.36",
+				"version": "1.7.39",
 				"result": {
 					"data": {
 						"minifiedSize": 645273,
 						"minzippedSize": 158497,
-						"time": 373.2841818,
+						"time": 395.439922,
 						"runs": 5
 					}
 				}
@@ -1133,12 +1133,12 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.36",
+				"version": "1.7.39",
 				"result": {
 					"data": {
 						"minifiedSize": 712610,
 						"minzippedSize": 158054,
-						"time": 552.3485142,
+						"time": 596.6348048,
 						"runs": 5
 					}
 				}
@@ -1256,12 +1256,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.36",
+				"version": "1.7.39",
 				"result": {
 					"data": {
 						"minifiedSize": 993245,
 						"minzippedSize": 320265,
-						"time": 1089.3646284000001,
+						"time": 1133.7754664,
 						"runs": 5
 					}
 				}
@@ -1386,12 +1386,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.36",
+				"version": "1.7.39",
 				"result": {
 					"data": {
 						"minifiedSize": 2177887,
 						"minzippedSize": 454517,
-						"time": 1351.22953,
+						"time": 1395.6964388000001,
 						"runs": 5
 					}
 				}
@@ -1514,12 +1514,12 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.7.36",
+				"version": "1.7.39",
 				"result": {
 					"data": {
 						"minifiedSize": 3310240,
 						"minzippedSize": 851747,
-						"time": 2715.8538524000005,
+						"time": 2733.6357728,
 						"runs": 5
 					}
 				}
