@@ -13,7 +13,7 @@ This project benchmarks the following minifiers:
 - [babel-minify](https://github.com/babel/minify/tree/master/packages/babel-minify) <sub>v0.5.2</sub>
 - [bun](https://github.com/oven-sh/bun) <sub>v1.1.38</sub>
 - [esbuild](https://github.com/evanw/esbuild) <sub>v0.24.0</sub>
-- [google-closure-compiler](https://github.com/google/closure-compiler-npm/tree/master/packages/google-closure-compiler) <sub>v20240317.0.0</sub>
+- [google-closure-compiler](https://github.com/google/closure-compiler-npm/tree/master/packages/google-closure-compiler) <sub>v20240317.0.0, advanced optimizations disabled</sub>
 - [tedivm/jshrink](https://github.com/tedious/JShrink) <sub>v1.7.0</sub>
 - [@swc/core](https://github.com/swc-project/swc) <sub>v1.10.1</sub>
 - [@tdewolff/minify](https://github.com/tdewolff/minify#readme) <sub>v2.21.2</sub>
@@ -42,6 +42,10 @@ _Benchmarks last updated on <!-- lastUpdated:start -->Dec 9, 2024<!-- lastUpdate
 - Artifact integrity is verified by a test before and after minification
 - Minifier upgrade PRs are automated via [WhiteSource Renovate](https://www.whitesourcesoftware.com/free-developer-tools/renovate/)
 - Benchmarks are updated on every PR via [GitHub Actions](https://github.com/privatenumber/minification-benchmarks/actions/workflows/benchmark.yml)
+
+## Caveats
+
+- Google Closure Compiler has an ["advanced optimizations" feature](https://developers.google.com/closure/compiler/docs/api-tutorial3), but using those optimizations requires structuring code in a certain way. Our benchmarks focus on popular libraries with the assumption that we cannot alter the code we're minifying. Thus, our Closure Compiler tests don't use advanced optimizations.
 
 ## ⏱ Metrics
 
