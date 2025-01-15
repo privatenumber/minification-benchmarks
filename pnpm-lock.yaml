@@ -198,8 +198,8 @@ importers:
         specifier: ^1.10.7
         version: 1.10.7
       '@tdewolff/minify':
-        specifier: ^2.21.2
-        version: 2.21.2
+        specifier: ^2.21.3
+        version: 2.21.3
       babel-minify:
         specifier: ^0.5.2
         version: 0.5.2
@@ -1358,12 +1358,12 @@ packages:
       '@swc/counter': 0.1.3
     dev: false
 
-  /@tdewolff/minify@2.21.2:
-    resolution: {integrity: sha512-yf5Vk1+DHG0GE7bw2sLyrpDSBKs/BN74xVVnegqoYSmAaPynMDTPGQlzuUzJrca6xYx2fHA8BT2Qm2/mp5dSrg==}
+  /@tdewolff/minify@2.21.3:
+    resolution: {integrity: sha512-ZWKIxi9gAuAQgJZY1DKeRewFoKzxYeQHrTOwUq/rCFy/fzkfWlsF+92O1mnyq0RgtemMHkKPvcTGz6dNX988nA==}
     requiresBuild: true
     dependencies:
       node-gyp: 10.2.0
-      node-gyp-build: 4.8.2
+      node-gyp-build: 4.8.4
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -5321,8 +5321,8 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /node-gyp-build@4.8.2:
-    resolution: {integrity: sha512-IRUxE4BVsHWXkV/SFOut4qTlagw2aM8T5/vnTsmrHJvVoKueJHRc/JaFND7QDDc61kLYUJ6qlZM3sqTSyx2dTw==}
+  /node-gyp-build@4.8.4:
+    resolution: {integrity: sha512-LA4ZjwlnUblHVgq0oBF3Jl/6h/Nvs5fzBLwdEF4nuxnFdsfajde4WfxtJr3CaiH+F6ewcIB/q4jQ4UzPyid+CQ==}
     hasBin: true
     dev: false
 
