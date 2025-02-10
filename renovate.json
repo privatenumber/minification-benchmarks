@@ -26,6 +26,7 @@
 				"bun",
 				"esbuild",
 				"google-closure-compiler",
+				"oxc-minify",
 				"terser",
 				"uglify-js",
 				"tedivm/jshrink"
