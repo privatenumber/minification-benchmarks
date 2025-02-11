@@ -222,8 +222,8 @@ importers:
         specifier: ^0.49.0
         version: 0.49.0
       terser:
-        specifier: ^5.38.1
-        version: 5.38.1
+        specifier: ^5.38.2
+        version: 5.38.2
       uglify-js:
         specifier: ^3.19.3
         version: 3.19.3
@@ -6939,8 +6939,8 @@ packages:
       source-map-support: 0.5.21
     dev: false
 
-  /terser@5.38.1:
-    resolution: {integrity: sha512-GWANVlPM/ZfYzuPHjq0nxT+EbOEDDN3Jwhwdg1D8TU8oSkktp8w64Uq4auuGLxFSoNTRDncTq2hQHX1Ld9KHkA==}
+  /terser@5.38.2:
+    resolution: {integrity: sha512-w8CXxxbFA5zfNsR/i8HZq5bvn18AK0O9jj7hyo1YqkovLxEFa0uP0LCVGZRqiRaKRFxXhELBp8SteeAjEnfeJg==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
