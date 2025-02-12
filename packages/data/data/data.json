@@ -67,12 +67,12 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.49.0",
+				"version": "0.50.0",
 				"result": {
 					"data": {
 						"minifiedSize": 23521,
 						"minzippedSize": 8493,
-						"time": 2.6331556,
+						"time": 2.9133258,
 						"runs": 5
 					}
 				}
@@ -219,12 +219,12 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.49.0",
+				"version": "0.50.0",
 				"result": {
 					"data": {
 						"minifiedSize": 59516,
 						"minzippedSize": 19260,
-						"time": 8.6336424,
+						"time": 8.6256618,
 						"runs": 5
 					}
 				}
@@ -347,12 +347,12 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.49.0",
+				"version": "0.50.0",
 				"result": {
 					"data": {
 						"minifiedSize": 89337,
 						"minzippedSize": 30972,
-						"time": 14.973415399999999,
+						"time": 14.8862572,
 						"runs": 5
 					}
 				}
@@ -499,12 +499,12 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.49.0",
+				"version": "0.50.0",
 				"result": {
 					"data": {
 						"minifiedSize": 117251,
 						"minzippedSize": 43373,
-						"time": 18.2688274,
+						"time": 18.443545,
 						"runs": 5
 					}
 				}
@@ -687,12 +687,12 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.49.0",
+				"version": "0.50.0",
 				"result": {
 					"data": {
 						"minifiedSize": 71380,
 						"minzippedSize": 25979,
-						"time": 14.151327,
+						"time": 14.140052200000003,
 						"runs": 5
 					}
 				}
@@ -803,12 +803,12 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.49.0",
+				"version": "0.50.0",
 				"result": {
 					"data": {
 						"minifiedSize": 270833,
 						"minzippedSize": 88164,
-						"time": 41.306889,
+						"time": 41.5611488,
 						"runs": 5
 					}
 				}
@@ -917,12 +917,12 @@
 		"minified": {
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.49.0",
+				"version": "0.50.0",
 				"result": {
 					"data": {
 						"minifiedSize": 440170,
 						"minzippedSize": 122365,
-						"time": 43.5318956,
+						"time": 41.2555178,
 						"runs": 5
 					}
 				}
@@ -1104,12 +1104,12 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.49.0",
+				"version": "0.50.0",
 				"result": {
 					"data": {
-						"minifiedSize": 647049,
-						"minzippedSize": 160821,
-						"time": 63.7851098,
+						"minifiedSize": 647029,
+						"minzippedSize": 160834,
+						"time": 59.2945282,
 						"runs": 5
 					}
 				}
@@ -1253,12 +1253,12 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.49.0",
+				"version": "0.50.0",
 				"result": {
 					"data": {
 						"minifiedSize": 716144,
 						"minzippedSize": 162266,
-						"time": 89.1375448,
+						"time": 85.8021306,
 						"runs": 5
 					}
 				}
@@ -1388,12 +1388,12 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.49.0",
+				"version": "0.50.0",
 				"result": {
 					"data": {
 						"minifiedSize": 1006801,
 						"minzippedSize": 324641,
-						"time": 181.5396446,
+						"time": 173.2962818,
 						"runs": 5
 					}
 				}
@@ -1530,12 +1530,12 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.49.0",
+				"version": "0.50.0",
 				"result": {
 					"data": {
 						"minifiedSize": 2278740,
 						"minzippedSize": 463358,
-						"time": 245.9475504,
+						"time": 234.69578499999997,
 						"runs": 5
 					}
 				}
@@ -1658,12 +1658,12 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.49.0",
+				"version": "0.50.0",
 				"result": {
 					"data": {
-						"minifiedSize": 3349745,
-						"minzippedSize": 860734,
-						"time": 462.1057012,
+						"minifiedSize": 3349732,
+						"minzippedSize": 860727,
+						"time": 454.6152448000001,
 						"runs": 5
 					}
 				}
