@@ -43,12 +43,12 @@
 			},
 			"terser": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 23069,
 						"minzippedSize": 8265,
-						"time": 277.8863316,
+						"time": 324.72621,
 						"runs": 5
 					}
 				}
@@ -127,12 +127,12 @@
 			},
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 25081,
 						"minzippedSize": 8746,
-						"time": 121.0190814,
+						"time": 141.911228,
 						"runs": 5
 					}
 				}
@@ -171,12 +171,12 @@
 			},
 			"terser": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 59138,
 						"minzippedSize": 18690,
-						"time": 678.8686187999999,
+						"time": 810.3096205999999,
 						"runs": 5
 					}
 				}
@@ -267,12 +267,12 @@
 			},
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 63151,
 						"minzippedSize": 19683,
-						"time": 277.48287459999995,
+						"time": 339.4026784,
 						"runs": 5
 					}
 				}
@@ -335,12 +335,12 @@
 			},
 			"terser": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 89540,
 						"minzippedSize": 30912,
-						"time": 905.9927627999999,
+						"time": 1110.8904652,
 						"runs": 5
 					}
 				}
@@ -383,12 +383,12 @@
 			},
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 94554,
 						"minzippedSize": 31621,
-						"time": 365.6347734,
+						"time": 423.43772659999996,
 						"runs": 5
 					}
 				}
@@ -475,12 +475,12 @@
 			},
 			"terser": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 116797,
 						"minzippedSize": 42919,
-						"time": 1127.7479644,
+						"time": 1319.9989633999999,
 						"runs": 5
 					}
 				}
@@ -571,12 +571,12 @@
 			},
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 126580,
 						"minzippedSize": 44679,
-						"time": 442.5341372,
+						"time": 536.3530328,
 						"runs": 5
 					}
 				}
@@ -639,12 +639,12 @@
 			},
 			"terser": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 70666,
 						"minzippedSize": 25186,
-						"time": 966.8854282,
+						"time": 1127.3540618000002,
 						"runs": 5
 					}
 				}
@@ -711,12 +711,12 @@
 			},
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 75293,
 						"minzippedSize": 26221,
-						"time": 385.0448588,
+						"time": 447.05853320000006,
 						"runs": 5
 					}
 				}
@@ -791,12 +791,12 @@
 			},
 			"terser": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 267768,
 						"minzippedSize": 88087,
-						"time": 2314.6640588,
+						"time": 2682.1990189999997,
 						"runs": 5
 					}
 				}
@@ -827,12 +827,12 @@
 			},
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 276467,
 						"minzippedSize": 89156,
-						"time": 1027.1196181999999,
+						"time": 1186.1101234000002,
 						"runs": 5
 					}
 				}
@@ -953,24 +953,24 @@
 			},
 			"terser": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 458289,
 						"minzippedSize": 123482,
-						"time": 2238.5245583999995,
+						"time": 2544.2810317999997,
 						"runs": 5
 					}
 				}
 			},
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 474395,
 						"minzippedSize": 124428,
-						"time": 985.6227124000001,
+						"time": 1138.7273202000001,
 						"runs": 5
 					}
 				}
@@ -1092,12 +1092,12 @@
 			},
 			"terser": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 653248,
 						"minzippedSize": 159198,
-						"time": 2995.3130618000005,
+						"time": 3404.5074136000003,
 						"runs": 5
 					}
 				}
@@ -1140,12 +1140,12 @@
 			},
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 675504,
 						"minzippedSize": 163198,
-						"time": 1302.3613386,
+						"time": 1508.2923564,
 						"runs": 5
 					}
 				}
@@ -1241,12 +1241,12 @@
 			},
 			"terser": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 715581,
 						"minzippedSize": 158706,
-						"time": 3984.0365786,
+						"time": 4551.989690200001,
 						"runs": 5
 					}
 				}
@@ -1277,12 +1277,12 @@
 			},
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 759337,
 						"minzippedSize": 166386,
-						"time": 1625.690519,
+						"time": 1863.8761696000001,
 						"runs": 5
 					}
 				}
@@ -1376,12 +1376,12 @@
 			},
 			"terser": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 1000714,
 						"minzippedSize": 321987,
-						"time": 6078.653712400001,
+						"time": 6919.131898199999,
 						"runs": 5
 					}
 				}
@@ -1400,12 +1400,12 @@
 			},
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 1071527,
 						"minzippedSize": 330736,
-						"time": 2682.7485944000005,
+						"time": 3123.6588335999995,
 						"runs": 5
 					}
 				}
@@ -1518,12 +1518,12 @@
 			},
 			"terser": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 2249014,
 						"minzippedSize": 457786,
-						"time": 6915.2541732,
+						"time": 8104.211034,
 						"runs": 5
 					}
 				}
@@ -1554,12 +1554,12 @@
 			},
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 2425048,
 						"minzippedSize": 475480,
-						"time": 3083.9462892,
+						"time": 3685.8722587999996,
 						"runs": 5
 					}
 				}
@@ -1694,12 +1694,12 @@
 			},
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"data": {
 						"minifiedSize": 3530223,
 						"minzippedSize": 879301,
-						"time": 5296.6242378,
+						"time": 6433.3752355999995,
 						"runs": 5
 					}
 				}
@@ -1718,7 +1718,7 @@
 			},
 			"terser": {
 				"minifierPath": "terser.ts",
-				"version": "5.38.2",
+				"version": "5.39.0",
 				"result": {
 					"error": {
 						"message": "timeout"
