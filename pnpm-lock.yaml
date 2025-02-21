@@ -219,8 +219,8 @@ importers:
         specifier: ^9.0.2
         version: 9.0.2
       oxc-minify:
-        specifier: ^0.51.0
-        version: 0.51.0
+        specifier: ^0.52.0
+        version: 0.52.0
       terser:
         specifier: ^5.39.0
         version: 5.39.0
@@ -1157,64 +1157,64 @@ packages:
     dev: false
     optional: true
 
-  /@oxc-minify/binding-darwin-arm64@0.51.0:
-    resolution: {integrity: sha512-Ks+iiInbRDUCXIj89vy1YoRBtIpyNgKAdEoipaiKR3g9ZwrI6rpFakX06QIL743ZgtJhBGbxI4pmdpWU2O5tgw==}
+  /@oxc-minify/binding-darwin-arm64@0.52.0:
+    resolution: {integrity: sha512-jJg6nL8hDQgcrUCTnuQsDMH6CtLdl13zl9xkDFIE2m9kxswE4vuIIAeaCSw2pO/kla3r/Vs3Ucos4fPyK3/DyA==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@oxc-minify/binding-darwin-x64@0.51.0:
-    resolution: {integrity: sha512-mVUM25XkJPEI8POli6RD7xg2wu0CSRYdws+rmytXyf8weKBvcg17iL+xQmpJBRUc1/zohUrGauh2ClLKHXvUKw==}
+  /@oxc-minify/binding-darwin-x64@0.52.0:
+    resolution: {integrity: sha512-AQV1rP0SsNIyv8riQuNbOVveNy+tr/08/MljxiWBUFA09SBctl/zbl1MWLFWhvAMsJpMT+HrNWM6FXLemPtLEQ==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@oxc-minify/binding-linux-arm64-gnu@0.51.0:
-    resolution: {integrity: sha512-P5iNmsJj7h/+O/yMVBbPlxxW4VKiywyKI/0ikVjmoIXfkAm2tWBMsjFrVo1FwzdBMpkB2y8AF18ikJ+PnI0SOQ==}
+  /@oxc-minify/binding-linux-arm64-gnu@0.52.0:
+    resolution: {integrity: sha512-/5RLBXI0fuk01RkCdajLYeGLmCxVsBLTPO3uIkEr809KrnbAXjJ6kFNKhuEVNJp6/wlN62pA+8f2aTkIXLuyzg==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@oxc-minify/binding-linux-arm64-musl@0.51.0:
-    resolution: {integrity: sha512-V4oWKgtgFP4bc1RL/sJxn6uqq/m7yt9mNtjG6zmVAjonUKgJgXVkyILVxOmBt7rUkNU3eelYNuoyZ4mIlHqspg==}
+  /@oxc-minify/binding-linux-arm64-musl@0.52.0:
+    resolution: {integrity: sha512-oBZSkc0y7EeOyjWrHoGHKIh04g9vHjUHjma3mxLGMSN10sQoARqejBELkhl/cfV14iRvLITpwzZR8qs3cvZFeQ==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@oxc-minify/binding-linux-x64-gnu@0.51.0:
-    resolution: {integrity: sha512-EQ8qrnXp4dQJ++jpswUld6xDPLgIxVMncPgSOAlKmiQ6whYOAjvLWag0PXg+zSxyS+xupSIAj50sEwGnGq0tPw==}
+  /@oxc-minify/binding-linux-x64-gnu@0.52.0:
+    resolution: {integrity: sha512-7fdoMyLLNp25Yk+4QyfO0O1XD6rTWzCRz9RIWb5eDOUIwNaRszFAlOaMxrFlZWJu35IQoSR6aiFmQ7wU1UfGhA==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@oxc-minify/binding-linux-x64-musl@0.51.0:
-    resolution: {integrity: sha512-O9S1BOv3Rst97YyrN7qrnhQY3O6v2TOq1a6suRjRAXMGDk0V2KySS1JvSJ8THSrtiYEGuBzuH8CbhPuAIYbd5w==}
+  /@oxc-minify/binding-linux-x64-musl@0.52.0:
+    resolution: {integrity: sha512-ncCrHXc+ofeQ6gzjcYOrVItsCq6dB0G8ea54PzY5n2KEyXOePhoZsYhO1aquftGxiijw3wToAidDpPZM3oLAhw==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@oxc-minify/binding-win32-arm64-msvc@0.51.0:
-    resolution: {integrity: sha512-lRDunhnPQKF5nD7fD7WPoe5PQ3QkrS4I4ZcEzRMxXqATzPVvUPsUF8j4YG/mcAB71at96aNbv4i/EkpPlyWZmQ==}
+  /@oxc-minify/binding-win32-arm64-msvc@0.52.0:
+    resolution: {integrity: sha512-rch/Vo+Ho1CSvSXEc5m5gGiMy7vAP574S3PTNq3MiA95N3npni3nBCql+JaCTf7ehT9aDPecIK5wn4imzhPGXw==}
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@oxc-minify/binding-win32-x64-msvc@0.51.0:
-    resolution: {integrity: sha512-0egDfB1/WvEQWKw7Qum7jJE7smawD+T00yoD/x5FtJXwVoG8seXb4kDPNd4tsN0AJVEoukk0uuilvGds/OcJgQ==}
+  /@oxc-minify/binding-win32-x64-msvc@0.52.0:
+    resolution: {integrity: sha512-S2Doi93QR8pGMio2Y6gYtHUzIDBZVJo5bkOdjGtYnAtwipKSe+nTf/qWT8R+dQaHDZBB672bqkm0cme0Z8kWhg==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
@@ -5603,17 +5603,17 @@ packages:
     resolution: {integrity: sha512-KiOAIsdpUTcAXuykya5fnVVT+/5uS0Q1mrkRHcF89tpieSmY33O/tmc54CqwA+bfhbtEfZUNLHaPUiB9X3jt1A==}
     dev: false
 
-  /oxc-minify@0.51.0:
-    resolution: {integrity: sha512-j1p1BwnBT8RxmflbkXwRaoc/yG8o+znpXhYSMk+9vZkhyJo6Yxc2fSQn2bu8JusWDTzqa5EAsUEXnd7H3cFYqw==}
+  /oxc-minify@0.52.0:
+    resolution: {integrity: sha512-PLdx0x5WNARs7NxwoWlU9p0Yjn+23eyTtNV9qwOHuKO1Pro2dIcLTzECe3HRzZp8w7wMZbpXRSaC76gXNRewwQ==}
     optionalDependencies:
-      '@oxc-minify/binding-darwin-arm64': 0.51.0
-      '@oxc-minify/binding-darwin-x64': 0.51.0
-      '@oxc-minify/binding-linux-arm64-gnu': 0.51.0
-      '@oxc-minify/binding-linux-arm64-musl': 0.51.0
-      '@oxc-minify/binding-linux-x64-gnu': 0.51.0
-      '@oxc-minify/binding-linux-x64-musl': 0.51.0
-      '@oxc-minify/binding-win32-arm64-msvc': 0.51.0
-      '@oxc-minify/binding-win32-x64-msvc': 0.51.0
+      '@oxc-minify/binding-darwin-arm64': 0.52.0
+      '@oxc-minify/binding-darwin-x64': 0.52.0
+      '@oxc-minify/binding-linux-arm64-gnu': 0.52.0
+      '@oxc-minify/binding-linux-arm64-musl': 0.52.0
+      '@oxc-minify/binding-linux-x64-gnu': 0.52.0
+      '@oxc-minify/binding-linux-x64-musl': 0.52.0
+      '@oxc-minify/binding-win32-arm64-msvc': 0.52.0
+      '@oxc-minify/binding-win32-x64-msvc': 0.52.0
     dev: false
 
   /p-defer@1.0.0:
