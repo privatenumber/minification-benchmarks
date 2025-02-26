@@ -5,15 +5,15 @@
 	"main": "index.ts",
 	"dependencies": {
 		"@minification-benchmarks/utils": "*",
-		"@swc/core": "^1.10.18",
+		"@swc/core": "^1.11.1",
 		"@tdewolff/minify": "^2.21.3",
 		"babel-minify": "^0.5.2",
-		"bun": "^1.2.3",
+		"bun": "^1.2.4",
 		"esbuild": "^0.25.0",
 		"find-up": "^7.0.0",
 		"google-closure-compiler": "^20240317.0.0",
 		"mem": "^9.0.2",
-		"oxc-minify": "^0.52.0",
+		"oxc-minify": "^0.53.0",
 		"terser": "^5.39.0",
 		"uglify-js": "^3.19.3"
 	},
