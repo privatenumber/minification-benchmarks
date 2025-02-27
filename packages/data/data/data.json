@@ -5,6 +5,18 @@
 		"size": 72132,
 		"gzipSize": 19385,
 		"minified": {
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.1",
+				"result": {
+					"data": {
+						"minifiedSize": 22862,
+						"minzippedSize": 8173,
+						"time": 14.501191599999999,
+						"runs": 5
+					}
+				}
+			},
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
@@ -136,15 +148,6 @@
 						"runs": 5
 					}
 				}
-			},
-			"@swc/core": {
-				"minifierPath": "swc.ts",
-				"version": "1.11.1",
-				"result": {
-					"error": {
-						"message": "No result"
-					}
-				}
 			}
 		}
 	},
@@ -174,6 +177,18 @@
 						"minifiedSize": 59138,
 						"minzippedSize": 18690,
 						"time": 810.3096205999999,
+						"runs": 5
+					}
+				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.1",
+				"result": {
+					"data": {
+						"minifiedSize": 58273,
+						"minzippedSize": 18699,
+						"time": 24.4959252,
 						"runs": 5
 					}
 				}
@@ -285,15 +300,6 @@
 						"runs": 5
 					}
 				}
-			},
-			"@swc/core": {
-				"minifierPath": "swc.ts",
-				"version": "1.11.1",
-				"result": {
-					"error": {
-						"message": "No result"
-					}
-				}
 			}
 		}
 	},
@@ -303,6 +309,18 @@
 		"size": 287628,
 		"gzipSize": 84498,
 		"minified": {
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.1",
+				"result": {
+					"data": {
+						"minifiedSize": 89179,
+						"minzippedSize": 30883,
+						"time": 37.107241599999995,
+						"runs": 5
+					}
+				}
+			},
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
@@ -434,15 +452,6 @@
 						"runs": 5
 					}
 				}
-			},
-			"@swc/core": {
-				"minifierPath": "swc.ts",
-				"version": "1.11.1",
-				"result": {
-					"error": {
-						"message": "No result"
-					}
-				}
 			}
 		}
 	},
@@ -452,6 +461,18 @@
 		"size": 342146,
 		"gzipSize": 89668,
 		"minified": {
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.1",
+				"result": {
+					"data": {
+						"minifiedSize": 115748,
+						"minzippedSize": 42710,
+						"time": 51.104925200000004,
+						"runs": 5
+					}
+				}
+			},
 			"terser": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
@@ -583,15 +604,6 @@
 						"runs": 5
 					}
 				}
-			},
-			"@swc/core": {
-				"minifierPath": "swc.ts",
-				"version": "1.11.1",
-				"result": {
-					"error": {
-						"message": "No result"
-					}
-				}
 			}
 		}
 	},
@@ -709,17 +721,6 @@
 					}
 				}
 			},
-			"@swc/core": {
-				"minifierPath": "swc.ts",
-				"version": "1.11.1",
-				"result": {
-					"error": {
-						"message": "No code",
-						"stack": "Error: No code\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:90:10)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:90:17)",
-						"stage": "pre-validation"
-					}
-				}
-			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
 				"version": "0.53.0",
@@ -741,6 +742,15 @@
 						"stage": "pre-validation"
 					}
 				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.1",
+				"result": {
+					"error": {
+						"message": "Failed to find JSON start"
+					}
+				}
 			}
 		}
 	},
@@ -758,6 +768,18 @@
 						"minifiedSize": 263558,
 						"minzippedSize": 87016,
 						"time": 4066.8747001999996,
+						"runs": 5
+					}
+				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.1",
+				"result": {
+					"data": {
+						"minifiedSize": 265323,
+						"minzippedSize": 87224,
+						"time": 106.2532418,
 						"runs": 5
 					}
 				}
@@ -879,15 +901,6 @@
 						"stage": "minification"
 					}
 				}
-			},
-			"@swc/core": {
-				"minifierPath": "swc.ts",
-				"version": "1.11.1",
-				"result": {
-					"error": {
-						"message": "No result"
-					}
-				}
 			}
 		}
 	},
@@ -905,6 +918,18 @@
 						"minifiedSize": 440173,
 						"minzippedSize": 122364,
 						"time": 24.506016600000002,
+						"runs": 5
+					}
+				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.1",
+				"result": {
+					"data": {
+						"minifiedSize": 455672,
+						"minzippedSize": 123114,
+						"time": 101.59598319999999,
 						"runs": 5
 					}
 				}
@@ -1027,15 +1052,6 @@
 						"stage": "minification"
 					}
 				}
-			},
-			"@swc/core": {
-				"minifierPath": "swc.ts",
-				"version": "1.11.1",
-				"result": {
-					"error": {
-						"message": "No result"
-					}
-				}
 			}
 		}
 	},
@@ -1045,6 +1061,18 @@
 		"size": 1247235,
 		"gzipSize": 248267,
 		"minified": {
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.1",
+				"result": {
+					"data": {
+						"minifiedSize": 643133,
+						"minzippedSize": 158751,
+						"time": 151.46581680000003,
+						"runs": 5
+					}
+				}
+			},
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
@@ -1173,15 +1201,6 @@
 						"message": "timeout"
 					}
 				}
-			},
-			"@swc/core": {
-				"minifierPath": "swc.ts",
-				"version": "1.11.1",
-				"result": {
-					"error": {
-						"message": "No result"
-					}
-				}
 			}
 		}
 	},
@@ -1199,6 +1218,18 @@
 						"minifiedSize": 694781,
 						"minzippedSize": 157435,
 						"time": 6627.1753182,
+						"runs": 5
+					}
+				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.1",
+				"result": {
+					"data": {
+						"minifiedSize": 707604,
+						"minzippedSize": 157897,
+						"time": 217.1934416,
 						"runs": 5
 					}
 				}
@@ -1294,15 +1325,6 @@
 					}
 				}
 			},
-			"@swc/core": {
-				"minifierPath": "swc.ts",
-				"version": "1.11.1",
-				"result": {
-					"error": {
-						"message": "No result"
-					}
-				}
-			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
 				"version": "0.53.0",
@@ -1329,6 +1351,18 @@
 		"size": 3196329,
 		"gzipSize": 684611,
 		"minified": {
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.1",
+				"result": {
+					"data": {
+						"minifiedSize": 994508,
+						"minzippedSize": 321244,
+						"time": 381.57246660000004,
+						"runs": 5
+					}
+				}
+			},
 			"terser": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
@@ -1439,15 +1473,6 @@
 					}
 				}
 			},
-			"@swc/core": {
-				"minifierPath": "swc.ts",
-				"version": "1.11.1",
-				"result": {
-					"error": {
-						"message": "No result"
-					}
-				}
-			},
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.2.4",
@@ -1465,6 +1490,18 @@
 		"size": 6672611,
 		"gzipSize": 825175,
 		"minified": {
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.1",
+				"result": {
+					"data": {
+						"minifiedSize": 2148025,
+						"minzippedSize": 452819,
+						"time": 523.3444498,
+						"runs": 5
+					}
+				}
+			},
 			"terser": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
@@ -1584,15 +1621,6 @@
 						"message": "timeout"
 					}
 				}
-			},
-			"@swc/core": {
-				"minifierPath": "swc.ts",
-				"version": "1.11.1",
-				"result": {
-					"error": {
-						"message": "No result"
-					}
-				}
 			}
 		}
 	},
@@ -1602,6 +1630,18 @@
 		"size": 10945727,
 		"gzipSize": 1884998,
 		"minified": {
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.1",
+				"result": {
+					"data": {
+						"minifiedSize": 3328255,
+						"minzippedSize": 859369,
+						"time": 967.3025502,
+						"runs": 5
+					}
+				}
+			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
 				"version": "0.53.0",
@@ -1706,15 +1746,6 @@
 						"message": "RuntimeException: Unclosed regex pattern at position: 8365076 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643",
 						"stack": "Stack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString('/* ************...', Array)\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify('/* ************...')\n#4 {main}",
 						"stage": "minification"
-					}
-				}
-			},
-			"@swc/core": {
-				"minifierPath": "swc.ts",
-				"version": "1.11.1",
-				"result": {
-					"error": {
-						"message": "No result"
 					}
 				}
 			},
