@@ -1,5 +1,5 @@
 import { execaNode } from 'execa';
-import { safeJsonParse } from '@minification-benchmarks/utils/safe-json-parse';
+import { parseJsonResult } from '@minification-benchmarks/utils/parse-json-result.js';
 import type {
 	BenchmarkResult,
 	BenchmarkResultSuccess,
@@ -52,10 +52,10 @@ const benchmark = async (
 	}
 
 	if (minificationProcess.failed) {
-		return safeJsonParse(minificationProcess.stderr) as BenchmarkResult;
+		return parseJsonResult(minificationProcess.stderr) as BenchmarkResult;
 	}
 
-	return safeJsonParse(minificationProcess.stdout) as BenchmarkResult;
+	return parseJsonResult(minificationProcess.stdout) as BenchmarkResult;
 };
 
 const getAverage = (

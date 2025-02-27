@@ -2,9 +2,9 @@ import type { BenchmarkError } from '../bench/types.js';
 
 const JSON_START = '<JSON>';
 const JSON_END = '</JSON>';
-export const safeJsonParse = (
+export const parseJsonResult = (
 	jsonString: string,
-) => {
+): unknown | BenchmarkError => {
 	const findParseStart = jsonString.indexOf(JSON_START);
 	if (findParseStart === -1) {
 		return {
@@ -28,11 +28,10 @@ export const safeJsonParse = (
 	try {
 		return JSON.parse(jsonString) as unknown;
 	} catch {
-		const error: BenchmarkError = {
+		return {
 			error: {
 				message: 'Failed to parse JSON',
 			},
 		};
-		return error;
 	}
 };
