@@ -7,7 +7,7 @@ export const parseJsonResult = (
 	if (findParseStart === -1) {
 		return {
 			error: {
-				message: `Failed to parse:\n${jsonString}`,
+				message: `Failed to find JSON start:\n${jsonString}`,
 			},
 		};
 	}
@@ -16,7 +16,7 @@ export const parseJsonResult = (
 	if (findParseEnd === -1) {
 		return {
 			error: {
-				message: `Failed to parse:\n${jsonString}`,
+				message: `Failed to find JSON end:\n${jsonString}`,
 			},
 		};
 	}
