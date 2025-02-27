@@ -15,7 +15,7 @@ export const logResult = (
 			time: minified.time,
 		},
 	};
-	console.log(`<JSON>${JSON.stringify(stringified)}</JSON>`);
+	console.log(JSON.stringify(stringified));
 };
 
 export const logError = (

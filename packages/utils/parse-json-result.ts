@@ -1,29 +1,27 @@
 import type { BenchmarkError } from '../bench/types.js';
 
-const JSON_START = '<JSON>';
-const JSON_END = '</JSON>';
 export const parseJsonResult = (
 	jsonString: string,
 ): unknown | BenchmarkError => {
-	const findParseStart = jsonString.indexOf(JSON_START);
+	const findParseStart = jsonString.indexOf('{');
 	if (findParseStart === -1) {
 		return {
 			error: {
-				message: `Failed to find <JSON>:\n${jsonString}`,
+				message: `Failed to parse:\n${jsonString}`,
 			},
 		};
 	}
 
-	const findParseEnd = jsonString.indexOf(JSON_END, findParseStart);
+	const findParseEnd = jsonString.lastIndexOf('}');
 	if (findParseEnd === -1) {
 		return {
 			error: {
-				message: `Failed to find </JSON>:\n${jsonString}`,
+				message: `Failed to parse:\n${jsonString}`,
 			},
 		};
 	}
 
-	jsonString = jsonString.slice(findParseStart + JSON_START.length, findParseEnd);
+	jsonString = jsonString.slice(findParseStart, findParseEnd);
 
 	try {
 		return JSON.parse(jsonString) as unknown;
