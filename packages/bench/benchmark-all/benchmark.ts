@@ -83,6 +83,14 @@ export const benchmarkAverage = async (
 			minifierInstance,
 		);
 
+		if (!result) {
+			return {
+				error: {
+					message: 'No result',
+				},
+			};
+		}
+
 		if ('error' in result) {
 			return result;
 		}
