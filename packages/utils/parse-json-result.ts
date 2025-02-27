@@ -21,7 +21,7 @@ export const parseJsonResult = (
 		};
 	}
 
-	jsonString = jsonString.slice(findParseStart, findParseEnd);
+	jsonString = jsonString.slice(findParseStart, findParseEnd + 1);
 
 	try {
 		return JSON.parse(jsonString) as unknown;

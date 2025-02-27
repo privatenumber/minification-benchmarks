@@ -1253,12 +1253,12 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.52.0",
+				"version": "0.53.0",
 				"result": {
 					"data": {
-						"minifiedSize": 716142,
-						"minzippedSize": 162264,
-						"time": 96.8652064,
+						"minifiedSize": 716144,
+						"minzippedSize": 162262,
+						"time": 48.5143414,
 						"runs": 5
 					}
 				}
