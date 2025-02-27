@@ -9,7 +9,7 @@ export const parseJsonResult = (
 	if (findParseStart === -1) {
 		return {
 			error: {
-				message: 'Failed to find JSON start',
+				message: 'Failed to find <JSON>:\n' + jsonString,
 			},
 		};
 	}
@@ -18,7 +18,7 @@ export const parseJsonResult = (
 	if (findParseEnd === -1) {
 		return {
 			error: {
-				message: 'Failed to find JSON end',
+				message: 'Failed to find </JSON>:\n' + jsonString,
 			},
 		};
 	}
@@ -30,7 +30,7 @@ export const parseJsonResult = (
 	} catch {
 		return {
 			error: {
-				message: 'Failed to parse JSON',
+				message: 'Failed to parse JSON:\n' + jsonString,
 			},
 		};
 	}
