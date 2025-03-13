@@ -6,7 +6,7 @@ export default createMinifier(
 	{
 		default: async ({ code }) => {
 			const minified = await minify(code, {
-				ecma: 2018,
+				ecma: 2020,
 				sourceMap: false,
 				output: {
 					comments: false,
@@ -17,7 +17,7 @@ export default createMinifier(
 		},
 		'no compress': async ({ code }) => {
 			const minified = await minify(code, {
-				ecma: 2018,
+				ecma: 2020,
 				sourceMap: false,
 				output: {
 					comments: false,

@@ -5,7 +5,11 @@ export default createMinifier(
 	'oxc-minify',
 	{
 		default: async ({ filePath, code }) => {
-			const minified = await minify(filePath, code);
+			const minified = minify(filePath, code, {
+				compress: {
+					target: 'es2020',
+				},
+			});
 			return minified.code;
 		},
 	},

@@ -6,6 +6,7 @@ export default createMinifier(
 	{
 		default: async ({ code }) => {
 			const minified = await esbuild.transform(code, {
+				target: 'es2020',
 				minify: true,
 				sourcemap: false,
 				legalComments: 'none',
