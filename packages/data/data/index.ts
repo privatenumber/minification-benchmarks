@@ -9,7 +9,7 @@ import { sortArtifacts, sortMinifiers } from './sort.js';
 
 const dataPath = new URL('data.json', import.meta.url).pathname;
 
-export const data = await readJsonFile(dataPath) as Data;
+export const data = await readJsonFile(dataPath).catch(() => ({})) as Data;
 
 export const saveData = async (
 	minifiersSort = false,
