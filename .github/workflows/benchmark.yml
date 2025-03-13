@@ -45,6 +45,6 @@ jobs:
           # Ignored by Renovate
           git config user.name GitHub Actions
           git config user.email github-actions@github.com
-          git add -u
+          git add README.md packages/data/data/data.json
           git diff-index --quiet HEAD || git commit -nm "chore: updated benchmarks"
           git push
