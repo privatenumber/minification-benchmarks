@@ -1,0 +1,1741 @@
+{
+	"react": {
+		"version": "17.0.2",
+		"filePath": "/cjs/react.development.js",
+		"size": 72132,
+		"gzipSize": 19385,
+		"minified": {
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 22641,
+						"minzippedSize": 8177,
+						"time": 497.8774864,
+						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20240317.0.0",
+				"result": {
+					"data": {
+						"minifiedSize": 22825,
+						"minzippedSize": 8193,
+						"time": 3201.2554556000005,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 23069,
+						"minzippedSize": 8265,
+						"time": 277.93784559999995,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"data": {
+						"minifiedSize": 23601,
+						"minzippedSize": 8448,
+						"time": 689.1661338,
+						"runs": 5
+					}
+				}
+			},
+			"oxc-minify": {
+				"minifierPath": "oxc-minify.ts",
+				"version": "0.57.0",
+				"result": {
+					"data": {
+						"minifiedSize": 23521,
+						"minzippedSize": 8493,
+						"time": 2.8660136,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.25.1",
+				"result": {
+					"data": {
+						"minifiedSize": 23697,
+						"minzippedSize": 8543,
+						"time": 13.321635199999998,
+						"runs": 5
+					}
+				}
+			},
+			"@tdewolff/minify": {
+				"minifierPath": "tdewolff-minify.ts",
+				"version": "2.21.3",
+				"result": {
+					"data": {
+						"minifiedSize": 23534,
+						"minzippedSize": 8631,
+						"time": 2.7973437999999997,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.2.5",
+				"result": {
+					"data": {
+						"minifiedSize": 23993,
+						"minzippedSize": 8661,
+						"time": 15.234384600000002,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 25030,
+						"minzippedSize": 8668,
+						"time": 91.88712319999999,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 25081,
+						"minzippedSize": 8746,
+						"time": 120.21233600000001,
+						"runs": 5
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"data": {
+						"minifiedSize": 40821,
+						"minzippedSize": 11040,
+						"time": 124.4953538,
+						"runs": 5
+					}
+				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.9",
+				"result": {
+					"error": {
+						"message": "Failed to parse JSON:\n{ kind: InvalidDigit }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n{\"error\":{\"message\":\"failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stack\":\"Error: failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stage\":\"minification\"}}"
+					}
+				}
+			}
+		}
+	},
+	"moment": {
+		"version": "2.29.1",
+		"filePath": "/moment.js",
+		"size": 173902,
+		"gzipSize": 36231,
+		"minified": {
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 57728,
+						"minzippedSize": 18568,
+						"time": 1169.0425484000002,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 59133,
+						"minzippedSize": 18689,
+						"time": 676.2907302,
+						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20240317.0.0",
+				"result": {
+					"data": {
+						"minifiedSize": 58273,
+						"minzippedSize": 18910,
+						"time": 3753.4836724,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"data": {
+						"minifiedSize": 59703,
+						"minzippedSize": 19119,
+						"time": 1504.7830787999999,
+						"runs": 5
+					}
+				}
+			},
+			"oxc-minify": {
+				"minifierPath": "oxc-minify.ts",
+				"version": "0.57.0",
+				"result": {
+					"data": {
+						"minifiedSize": 59407,
+						"minzippedSize": 19216,
+						"time": 8.8598712,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.25.1",
+				"result": {
+					"data": {
+						"minifiedSize": 59824,
+						"minzippedSize": 19334,
+						"time": 19.832757200000003,
+						"runs": 5
+					}
+				}
+			},
+			"@tdewolff/minify": {
+				"minifierPath": "tdewolff-minify.ts",
+				"version": "2.21.3",
+				"result": {
+					"data": {
+						"minifiedSize": 59951,
+						"minzippedSize": 19496,
+						"time": 6.133118,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 62495,
+						"minzippedSize": 19569,
+						"time": 221.96932379999998,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 63151,
+						"minzippedSize": 19683,
+						"time": 284.09084160000003,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.2.5",
+				"result": {
+					"data": {
+						"minifiedSize": 61836,
+						"minzippedSize": 19857,
+						"time": 18.090487200000002,
+						"runs": 5
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"data": {
+						"minifiedSize": 97632,
+						"minzippedSize": 24998,
+						"time": 276.20240739999997,
+						"runs": 5
+					}
+				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.9",
+				"result": {
+					"error": {
+						"message": "Failed to parse JSON:\n{ kind: InvalidDigit }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n{\"error\":{\"message\":\"failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stack\":\"Error: failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stage\":\"minification\"}}"
+					}
+				}
+			}
+		}
+	},
+	"jquery": {
+		"version": "3.5.1",
+		"filePath": "/dist/jquery.js",
+		"size": 287628,
+		"gzipSize": 84498,
+		"minified": {
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 88448,
+						"minzippedSize": 30903,
+						"time": 1614.0474688,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 89507,
+						"minzippedSize": 30906,
+						"time": 910.8126390000001,
+						"runs": 5
+					}
+				}
+			},
+			"oxc-minify": {
+				"minifierPath": "oxc-minify.ts",
+				"version": "0.57.0",
+				"result": {
+					"data": {
+						"minifiedSize": 89333,
+						"minzippedSize": 30970,
+						"time": 15.1600472,
+						"runs": 5
+					}
+				}
+			},
+			"@tdewolff/minify": {
+				"minifierPath": "tdewolff-minify.ts",
+				"version": "2.21.3",
+				"result": {
+					"data": {
+						"minifiedSize": 89851,
+						"minzippedSize": 31468,
+						"time": 9.0037566,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 94082,
+						"minzippedSize": 31470,
+						"time": 315.67552939999996,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 94554,
+						"minzippedSize": 31621,
+						"time": 368.303697,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"data": {
+						"minifiedSize": 92103,
+						"minzippedSize": 31799,
+						"time": 2428.4976512000003,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.25.1",
+				"result": {
+					"data": {
+						"minifiedSize": 90065,
+						"minzippedSize": 31954,
+						"time": 36.16260179999999,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.2.5",
+				"result": {
+					"data": {
+						"minifiedSize": 92548,
+						"minzippedSize": 32653,
+						"time": 29.2818406,
+						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20240317.0.0",
+				"result": {
+					"data": {
+						"minifiedSize": 92704,
+						"minzippedSize": 33086,
+						"time": 4179.264121800001,
+						"runs": 5
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"data": {
+						"minifiedSize": 144144,
+						"minzippedSize": 40879,
+						"time": 361.2661996,
+						"runs": 5
+					}
+				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.9",
+				"result": {
+					"error": {
+						"message": "Failed to parse JSON:\n{ kind: InvalidDigit }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n{\"error\":{\"message\":\"failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stack\":\"Error: failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stage\":\"minification\"}}"
+					}
+				}
+			}
+		}
+	},
+	"vue": {
+		"version": "2.6.12",
+		"filePath": "/dist/vue.js",
+		"size": 342146,
+		"gzipSize": 89668,
+		"minified": {
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 116790,
+						"minzippedSize": 42916,
+						"time": 1130.1397367999998,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 113796,
+						"minzippedSize": 43036,
+						"time": 2228.1170608,
+						"runs": 5
+					}
+				}
+			},
+			"oxc-minify": {
+				"minifierPath": "oxc-minify.ts",
+				"version": "0.57.0",
+				"result": {
+					"data": {
+						"minifiedSize": 116529,
+						"minzippedSize": 43095,
+						"time": 18.7932906,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"data": {
+						"minifiedSize": 117896,
+						"minzippedSize": 43925,
+						"time": 2719.8044466,
+						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20240317.0.0",
+				"result": {
+					"data": {
+						"minifiedSize": 115612,
+						"minzippedSize": 44230,
+						"time": 4519.656542799999,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.25.1",
+				"result": {
+					"data": {
+						"minifiedSize": 118141,
+						"minzippedSize": 44368,
+						"time": 41.5030578,
+						"runs": 5
+					}
+				}
+			},
+			"@tdewolff/minify": {
+				"minifierPath": "tdewolff-minify.ts",
+				"version": "2.21.3",
+				"result": {
+					"data": {
+						"minifiedSize": 117808,
+						"minzippedSize": 44376,
+						"time": 12.433350599999999,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 126137,
+						"minzippedSize": 44450,
+						"time": 364.96096620000003,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 126580,
+						"minzippedSize": 44679,
+						"time": 439.808296,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.2.5",
+				"result": {
+					"data": {
+						"minifiedSize": 121496,
+						"minzippedSize": 45400,
+						"time": 31.434837199999997,
+						"runs": 5
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"data": {
+						"minifiedSize": 197357,
+						"minzippedSize": 57169,
+						"time": 473.44272540000003,
+						"runs": 5
+					}
+				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.9",
+				"result": {
+					"error": {
+						"message": "Failed to parse JSON:\n{ kind: InvalidDigit }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n{\"error\":{\"message\":\"failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stack\":\"Error: failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stage\":\"minification\"}}"
+					}
+				}
+			}
+		}
+	},
+	"lodash": {
+		"version": "4.17.21",
+		"filePath": "/lodash.js",
+		"size": 544089,
+		"gzipSize": 96690,
+		"minified": {
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 68167,
+						"minzippedSize": 24686,
+						"time": 1709.0428582,
+						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20240317.0.0",
+				"result": {
+					"data": {
+						"minifiedSize": 73466,
+						"minzippedSize": 24972,
+						"time": 4362.7635616,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 70659,
+						"minzippedSize": 25186,
+						"time": 965.9101746,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"data": {
+						"minifiedSize": 72367,
+						"minzippedSize": 25503,
+						"time": 2110.3613895999997,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 74607,
+						"minzippedSize": 25862,
+						"time": 342.3358696,
+						"runs": 5
+					}
+				}
+			},
+			"oxc-minify": {
+				"minifierPath": "oxc-minify.ts",
+				"version": "0.57.0",
+				"result": {
+					"data": {
+						"minifiedSize": 71380,
+						"minzippedSize": 25979,
+						"time": 14.412072,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.25.1",
+				"result": {
+					"data": {
+						"minifiedSize": 72483,
+						"minzippedSize": 26200,
+						"time": 29.4310712,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 75293,
+						"minzippedSize": 26221,
+						"time": 390.0165386,
+						"runs": 5
+					}
+				}
+			},
+			"@tdewolff/minify": {
+				"minifierPath": "tdewolff-minify.ts",
+				"version": "2.21.3",
+				"result": {
+					"data": {
+						"minifiedSize": 71895,
+						"minzippedSize": 26498,
+						"time": 12.3399934,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.2.5",
+				"result": {
+					"data": {
+						"minifiedSize": 73448,
+						"minzippedSize": 26655,
+						"time": 24.083941,
+						"runs": 5
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"data": {
+						"minifiedSize": 148780,
+						"minzippedSize": 36327,
+						"time": 370.2799084,
+						"runs": 5
+					}
+				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.9",
+				"result": {
+					"error": {
+						"message": "Failed to parse JSON:\n{ kind: InvalidDigit }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n{\"error\":{\"message\":\"failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stack\":\"Error: failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stage\":\"minification\"}}"
+					}
+				}
+			}
+		}
+	},
+	"d3": {
+		"version": "6.3.1",
+		"filePath": "/dist/d3.js",
+		"size": 555767,
+		"gzipSize": 130686,
+		"minified": {
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 263558,
+						"minzippedSize": 87016,
+						"time": 4024.0841994,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 267569,
+						"minzippedSize": 88059,
+						"time": 2312.1528074000003,
+						"runs": 5
+					}
+				}
+			},
+			"oxc-minify": {
+				"minifierPath": "oxc-minify.ts",
+				"version": "0.57.0",
+				"result": {
+					"data": {
+						"minifiedSize": 270836,
+						"minzippedSize": 88162,
+						"time": 41.77353000000001,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 275347,
+						"minzippedSize": 88319,
+						"time": 720.7917406,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 276467,
+						"minzippedSize": 89156,
+						"time": 1016.2460744,
+						"runs": 5
+					}
+				}
+			},
+			"@tdewolff/minify": {
+				"minifierPath": "tdewolff-minify.ts",
+				"version": "2.21.3",
+				"result": {
+					"data": {
+						"minifiedSize": 269926,
+						"minzippedSize": 89891,
+						"time": 35.1853222,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.25.1",
+				"result": {
+					"data": {
+						"minifiedSize": 270129,
+						"minzippedSize": 90800,
+						"time": 70.1974066,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.2.5",
+				"result": {
+					"data": {
+						"minifiedSize": 273406,
+						"minzippedSize": 92395,
+						"time": 49.0771044,
+						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20240317.0.0",
+				"result": {
+					"data": {
+						"minifiedSize": 270298,
+						"minzippedSize": 94121,
+						"time": 6836.615170200001,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "unknown: Cannot read properties of undefined (reading 'add')",
+						"stack": "TypeError: unknown: Cannot read properties of undefined (reading 'add')\n    at ScopeTracker.addReference (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/scope-tracker.js:47:34)\n    at ReferencedIdentifier (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:202:26)\n    at newFn (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:216:17)\n    at bfsTraverse (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/bfs-traverse.js:38:43)\n    at Mangler.collect (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:235:7)\n    at Mangler.run (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:60:12)\n    at PluginPass.exit (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:546:19)\n    at newFn (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:175:21)\n    at NodePath._call (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:55:20)\n    at NodePath.call (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:42:17)",
+						"stage": "minification"
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"error": {
+						"message": "RuntimeException: Unclosed regex pattern at position: 289075 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643",
+						"stack": "Stack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString()\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify()\n#4 {main}",
+						"stage": "minification"
+					}
+				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.9",
+				"result": {
+					"error": {
+						"message": "Failed to parse JSON:\n{ kind: InvalidDigit }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n{\"error\":{\"message\":\"failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stack\":\"Error: failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stage\":\"minification\"}}"
+					}
+				}
+			}
+		}
+	},
+	"terser": {
+		"version": "5.30.3",
+		"filePath": "/dist/bundle.min.js",
+		"size": 1009635,
+		"gzipSize": 193763,
+		"minified": {
+			"oxc-minify": {
+				"minifierPath": "oxc-minify.ts",
+				"version": "0.57.0",
+				"result": {
+					"data": {
+						"minifiedSize": 439577,
+						"minzippedSize": 122163,
+						"time": 44.6321754,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 451192,
+						"minzippedSize": 123334,
+						"time": 3876.1914876,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 458282,
+						"minzippedSize": 123482,
+						"time": 2298.7881526,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 474395,
+						"minzippedSize": 124428,
+						"time": 983.9577466000001,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 472162,
+						"minzippedSize": 124609,
+						"time": 793.8669537999999,
+						"runs": 5
+					}
+				}
+			},
+			"@tdewolff/minify": {
+				"minifierPath": "tdewolff-minify.ts",
+				"version": "2.21.3",
+				"result": {
+					"data": {
+						"minifiedSize": 456695,
+						"minzippedSize": 124897,
+						"time": 32.904909,
+						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20240317.0.0",
+				"result": {
+					"data": {
+						"minifiedSize": 439949,
+						"minzippedSize": 126562,
+						"time": 7147.7547818,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.25.1",
+				"result": {
+					"data": {
+						"minifiedSize": 458893,
+						"minzippedSize": 126707,
+						"time": 69.12618040000001,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.2.5",
+				"result": {
+					"data": {
+						"minifiedSize": 466803,
+						"minzippedSize": 127653,
+						"time": 50.426533799999994,
+						"runs": 5
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"data": {
+						"minifiedSize": 633710,
+						"minzippedSize": 145178,
+						"time": 1408.020804,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "unknown: Cannot read properties of undefined (reading 'add')",
+						"stack": "TypeError: unknown: Cannot read properties of undefined (reading 'add')\n    at ScopeTracker.addReference (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/scope-tracker.js:47:34)\n    at ReferencedIdentifier (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:202:26)\n    at newFn (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:216:17)\n    at bfsTraverse (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/bfs-traverse.js:38:43)\n    at Mangler.collect (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:235:7)\n    at Mangler.run (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:60:12)\n    at PluginPass.exit (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:546:19)\n    at newFn (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:175:21)\n    at NodePath._call (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:55:20)\n    at NodePath.call (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:42:17)",
+						"stage": "minification"
+					}
+				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.9",
+				"result": {
+					"error": {
+						"message": "Failed to parse JSON:\n{ kind: InvalidDigit }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n{\"error\":{\"message\":\"failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stack\":\"Error: failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stage\":\"minification\"}}"
+					}
+				}
+			}
+		}
+	},
+	"three": {
+		"version": "0.124.0",
+		"filePath": "/build/three.js",
+		"size": 1247235,
+		"gzipSize": 248267,
+		"minified": {
+			"oxc-minify": {
+				"minifierPath": "oxc-minify.ts",
+				"version": "0.57.0",
+				"result": {
+					"data": {
+						"minifiedSize": 603026,
+						"minzippedSize": 152926,
+						"time": 60.784689,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 641593,
+						"minzippedSize": 159071,
+						"time": 5154.32125,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 653248,
+						"minzippedSize": 159198,
+						"time": 3017.303427,
+						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20240317.0.0",
+				"result": {
+					"data": {
+						"minifiedSize": 644450,
+						"minzippedSize": 162998,
+						"time": 8427.6770634,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 674490,
+						"minzippedSize": 163036,
+						"time": 997.3057598000001,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 675504,
+						"minzippedSize": 163198,
+						"time": 1303.2494308,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.25.1",
+				"result": {
+					"data": {
+						"minifiedSize": 646759,
+						"minzippedSize": 163725,
+						"time": 89.988301,
+						"runs": 5
+					}
+				}
+			},
+			"@tdewolff/minify": {
+				"minifierPath": "tdewolff-minify.ts",
+				"version": "2.21.3",
+				"result": {
+					"data": {
+						"minifiedSize": 644551,
+						"minzippedSize": 164737,
+						"time": 47.2041208,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.2.5",
+				"result": {
+					"data": {
+						"minifiedSize": 655932,
+						"minzippedSize": 166210,
+						"time": 58.732119,
+						"runs": 5
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"data": {
+						"minifiedSize": 952007,
+						"minzippedSize": 193471,
+						"time": 1697.972266,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "timeout"
+					}
+				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.9",
+				"result": {
+					"error": {
+						"message": "Failed to parse JSON:\n{ kind: InvalidDigit }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n{\"error\":{\"message\":\"failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stack\":\"Error: failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stage\":\"minification\"}}"
+					}
+				}
+			}
+		}
+	},
+	"victory": {
+		"version": "35.8.4",
+		"filePath": "/dist/victory.js",
+		"size": 2132722,
+		"gzipSize": 309942,
+		"minified": {
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 694781,
+						"minzippedSize": 157435,
+						"time": 6593.301255999999,
+						"runs": 5
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 715441,
+						"minzippedSize": 158679,
+						"time": 4044.984547,
+						"runs": 5
+					}
+				}
+			},
+			"oxc-minify": {
+				"minifierPath": "oxc-minify.ts",
+				"version": "0.57.0",
+				"result": {
+					"data": {
+						"minifiedSize": 715761,
+						"minzippedSize": 162104,
+						"time": 86.3164428,
+						"runs": 5
+					}
+				}
+			},
+			"@tdewolff/minify": {
+				"minifierPath": "tdewolff-minify.ts",
+				"version": "2.21.3",
+				"result": {
+					"data": {
+						"minifiedSize": 718730,
+						"minzippedSize": 165131,
+						"time": 56.5799982,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 759337,
+						"minzippedSize": 166386,
+						"time": 1628.824846,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 756530,
+						"minzippedSize": 167579,
+						"time": 1310.513582,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.25.1",
+				"result": {
+					"data": {
+						"minifiedSize": 724140,
+						"minzippedSize": 181071,
+						"time": 124.88811419999999,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.2.5",
+				"result": {
+					"data": {
+						"minifiedSize": 727899,
+						"minzippedSize": 182671,
+						"time": 83.1852172,
+						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20240317.0.0",
+				"result": {
+					"error": {
+						"message": "timeout"
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "unknown: Cannot read properties of undefined (reading 'add')",
+						"stack": "TypeError: unknown: Cannot read properties of undefined (reading 'add')\n    at ScopeTracker.addReference (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/scope-tracker.js:47:34)\n    at ReferencedIdentifier (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:202:26)\n    at newFn (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:216:17)\n    at bfsTraverse (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/bfs-traverse.js:38:43)\n    at Mangler.collect (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:235:7)\n    at Mangler.run (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:60:12)\n    at PluginPass.exit (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:546:19)\n    at newFn (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:175:21)\n    at NodePath._call (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:55:20)\n    at NodePath.call (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:42:17)",
+						"stage": "minification"
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"error": {
+						"message": "Unexpected token '~'",
+						"stack": "fs-require://2/index.js:594\nreturn function(key,value){if(stack.length>0){var thisPos=stack.indexOf(this)~thisPos?stack.splice(thisPos+1):stack.push(this)~thisPos?keys.splice(thisPos,Infinity,key):keys.push(key)\n                                                                             ^\n\nSyntaxError: Unexpected token '~'\n    at new Script (node:vm:116:7)\n    at createScript (node:vm:268:10)\n    at Object.runInThisContext (node:vm:316:10)\n    at p. (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1165)\n    at s (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1657)\n    at requireString (/packages/artifacts/utils/require-string.ts:9:9)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:100:23)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:98:2)",
+						"stage": "post-validation"
+					}
+				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.9",
+				"result": {
+					"error": {
+						"message": "Failed to parse JSON:\n{ kind: InvalidDigit }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n{\"error\":{\"message\":\"failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stack\":\"Error: failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stage\":\"minification\"}}"
+					}
+				}
+			}
+		}
+	},
+	"echarts": {
+		"version": "5.1.1",
+		"filePath": "/dist/echarts.js",
+		"size": 3196329,
+		"gzipSize": 684611,
+		"minified": {
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 1000528,
+						"minzippedSize": 321931,
+						"time": 5994.86186,
+						"runs": 5
+					}
+				}
+			},
+			"oxc-minify": {
+				"minifierPath": "oxc-minify.ts",
+				"version": "0.57.0",
+				"result": {
+					"data": {
+						"minifiedSize": 1003161,
+						"minzippedSize": 322924,
+						"time": 230.04878700000003,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 1071527,
+						"minzippedSize": 330736,
+						"time": 2630.7499614,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 1068386,
+						"minzippedSize": 331412,
+						"time": 1734.518059,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.25.1",
+				"result": {
+					"data": {
+						"minifiedSize": 1011234,
+						"minzippedSize": 331563,
+						"time": 192.57502240000002,
+						"runs": 5
+					}
+				}
+			},
+			"@tdewolff/minify": {
+				"minifierPath": "tdewolff-minify.ts",
+				"version": "2.21.3",
+				"result": {
+					"data": {
+						"minifiedSize": 1014368,
+						"minzippedSize": 331791,
+						"time": 115.112067,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.2.5",
+				"result": {
+					"data": {
+						"minifiedSize": 1024688,
+						"minzippedSize": 337934,
+						"time": 130.84318539999998,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "timeout"
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20240317.0.0",
+				"result": {
+					"error": {
+						"message": "timeout"
+					}
+				}
+			},
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"error": {
+						"message": "timeout"
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"error": {
+						"message": "RuntimeException: Unclosed regex pattern at position: 37315 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643",
+						"stack": "Stack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString()\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify()\n#4 {main}",
+						"stage": "minification"
+					}
+				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.9",
+				"result": {
+					"error": {
+						"message": "Failed to parse JSON:\n{ kind: InvalidDigit }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n{\"error\":{\"message\":\"failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stack\":\"Error: failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stage\":\"minification\"}}"
+					}
+				}
+			}
+		}
+	},
+	"antd": {
+		"version": "4.16.1",
+		"filePath": "/dist/antd.js",
+		"size": 6672611,
+		"gzipSize": 825175,
+		"minified": {
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 2249000,
+						"minzippedSize": 457785,
+						"time": 6807.808881800001,
+						"runs": 5
+					}
+				}
+			},
+			"oxc-minify": {
+				"minifierPath": "oxc-minify.ts",
+				"version": "0.57.0",
+				"result": {
+					"data": {
+						"minifiedSize": 2277186,
+						"minzippedSize": 462688,
+						"time": 232.65782,
+						"runs": 5
+					}
+				}
+			},
+			"@tdewolff/minify": {
+				"minifierPath": "tdewolff-minify.ts",
+				"version": "2.21.3",
+				"result": {
+					"data": {
+						"minifiedSize": 2295397,
+						"minzippedSize": 472044,
+						"time": 138.4377368,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 2425048,
+						"minzippedSize": 475480,
+						"time": 3051.9608698,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 2420587,
+						"minzippedSize": 478572,
+						"time": 2415.7370682,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.25.1",
+				"result": {
+					"data": {
+						"minifiedSize": 2306394,
+						"minzippedSize": 488279,
+						"time": 294.3737798,
+						"runs": 5
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.2.5",
+				"result": {
+					"data": {
+						"minifiedSize": 2296786,
+						"minzippedSize": 491833,
+						"time": 182.7548008,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "timeout"
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20240317.0.0",
+				"result": {
+					"error": {
+						"message": "timeout"
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"error": {
+						"message": "timeout"
+					}
+				}
+			},
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"error": {
+						"message": "timeout"
+					}
+				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.9",
+				"result": {
+					"error": {
+						"message": "Failed to parse JSON:\n{ kind: InvalidDigit }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n{\"error\":{\"message\":\"failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stack\":\"Error: failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stage\":\"minification\"}}"
+					}
+				}
+			}
+		}
+	},
+	"typescript": {
+		"version": "4.9.5",
+		"filePath": "/lib/typescript.js",
+		"size": 10945727,
+		"gzipSize": 1884998,
+		"minified": {
+			"oxc-minify": {
+				"minifierPath": "oxc-minify.ts",
+				"version": "0.57.0",
+				"result": {
+					"data": {
+						"minifiedSize": 3349487,
+						"minzippedSize": 860655,
+						"time": 668.3099415999999,
+						"runs": 5
+					}
+				}
+			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"data": {
+						"minifiedSize": 3538024,
+						"minzippedSize": 876535,
+						"time": 3912.029523800001,
+						"runs": 5
+					}
+				}
+			},
+			"@tdewolff/minify": {
+				"minifierPath": "tdewolff-minify.ts",
+				"version": "2.21.3",
+				"result": {
+					"data": {
+						"minifiedSize": 3362866,
+						"minzippedSize": 876658,
+						"time": 259.69306439999997,
+						"runs": 5
+					}
+				}
+			},
+			"terser (no compress)": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"data": {
+						"minifiedSize": 3530223,
+						"minzippedSize": 879301,
+						"time": 5174.9478078,
+						"runs": 5
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.25.1",
+				"result": {
+					"data": {
+						"minifiedSize": 3489707,
+						"minzippedSize": 915551,
+						"time": 486.2791486,
+						"runs": 5
+					}
+				}
+			},
+			"babel-minify": {
+				"minifierPath": "babel-minify.ts",
+				"version": "0.5.2",
+				"result": {
+					"error": {
+						"message": "timeout"
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20240317.0.0",
+				"result": {
+					"error": {
+						"message": "timeout"
+					}
+				}
+			},
+			"tedivm/jshrink": {
+				"minifierPath": "jshrink/index.ts",
+				"version": "1.7.0",
+				"result": {
+					"error": {
+						"message": "timeout"
+					}
+				}
+			},
+			"terser": {
+				"minifierPath": "terser.ts",
+				"version": "5.39.0",
+				"result": {
+					"error": {
+						"message": "timeout"
+					}
+				}
+			},
+			"uglify-js": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"result": {
+					"error": {
+						"message": "timeout"
+					}
+				}
+			},
+			"@swc/core": {
+				"minifierPath": "swc.ts",
+				"version": "1.11.9",
+				"result": {
+					"error": {
+						"message": "Failed to parse JSON:\n{ kind: InvalidDigit }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n{\"error\":{\"message\":\"failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stack\":\"Error: failed to handle: failed to parse version of ecmascript: ParseIntError { kind: InvalidDigit }\",\"stage\":\"minification\"}}"
+					}
+				}
+			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.2.5",
+				"result": {
+					"error": {
+						"message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'",
+						"stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'\n    at Object.run (/packages/artifacts/artifacts/typescript/test.ts:13:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:101:15)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:98:2)",
+						"stage": "post-validation"
+					}
+				}
+			}
+		}
+	}
+}
