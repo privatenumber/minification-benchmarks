@@ -3,7 +3,7 @@
 ## Commands
 ### Get the benchmarks for a file given a minfier
 ```sh
-$ pnpm bench --minifier <minifier> <artifact>
+$ pnpm bench --minifier <minifier> --artifact <artifact>
 ```
 
 Example:
