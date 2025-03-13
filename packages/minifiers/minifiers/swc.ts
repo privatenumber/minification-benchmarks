@@ -6,7 +6,9 @@ export default createMinifier(
 	{
 		default: async ({ code }) => {
 			const minified = await minify(code, {
-				compress: true,
+				compress: {
+					ecma: 'es2020',
+				},
 				mangle: true,
 				sourceMap: false,
 			});
