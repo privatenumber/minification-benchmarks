@@ -28,8 +28,8 @@ export type BenchmarkResultSuccessWithRuns = BenchmarkResultSuccess<{ runs: numb
 export type BenchmarkResultWithRuns = BenchmarkResult<{ runs: number }>;
 
 export type AverageBenchmarkData<format = number> = {
-	minifiedSize: format;
-	minzippedSize: format;
+	minifiedBytes: format;
+	minzippedBytes: format;
 	averageTime: format;
 };
 
