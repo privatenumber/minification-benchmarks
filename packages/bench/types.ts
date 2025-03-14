@@ -2,8 +2,8 @@ import type { Artifact } from '@minification-benchmarks/artifacts';
 
 // Result for a minifier benchmark given a file
 export type BenchmarkData = {
-	minifiedSize: number;
-	minzippedSize: number;
+	minifiedBytes: number;
+	minzippedBytes: number;
 	time: number;
 };
 

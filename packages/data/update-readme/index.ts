@@ -92,13 +92,13 @@ const generateBenchmarkTable = (
 				} else {
 					columns.push(
 						displayColumn(
-							byteSize(result.data.minifiedSize).toString(),
-							percent(artifact.size, result.data.minifiedSize),
+							byteSize(result.data.minifiedBytes).toString(),
+							percent(artifact.size, result.data.minifiedBytes),
 							minifierName === bestMinified[0],
 						),
 						displayColumn(
-							byteSize(result.data.minzippedSize).toString(),
-							percent(artifact.gzipSize, result.data.minzippedSize),
+							byteSize(result.data.minzippedBytes).toString(),
+							percent(artifact.gzipSize, result.data.minzippedBytes),
 							minifierName === bestMinzipped[0],
 						),
 						displayColumn(
@@ -127,7 +127,7 @@ const generateMermaidGraph = (
 			if ('error' in result) {
 				return;
 			}
-			return [minifierName, result.data.minzippedSize] as const;
+			return [minifierName, result.data.minzippedBytes] as const;
 		})
 		.filter(Boolean);
 

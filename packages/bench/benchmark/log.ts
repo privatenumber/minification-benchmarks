@@ -10,8 +10,8 @@ export const logResult = (
 ) => {
 	const stringified: BenchmarkResultSuccess = {
 		data: {
-			minifiedSize: getSize(minified.code),
-			minzippedSize: getGzipSize(minified.code),
+			minifiedBytes: getSize(minified.code),
+			minzippedBytes: getGzipSize(minified.code),
 			time: minified.time,
 		},
 	};
