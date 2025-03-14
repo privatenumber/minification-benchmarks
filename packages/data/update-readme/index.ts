@@ -45,8 +45,8 @@ const generateBenchmarkTable = (
 	artifact: Artifact,
 ) => {
 	const minified = Object.entries(artifact.minified);
-	const bestMinified = minBy(minified, '1.result.data.minifiedSize')!;
-	const bestMinzipped = minBy(minified, '1.result.data.minzippedSize')!;
+	const bestMinified = minBy(minified, '1.result.data.minifiedBytes')!;
+	const bestMinzipped = minBy(minified, '1.result.data.minzippedBytes')!;
 	const bestSpeed = minBy(minified, '1.result.data.time')!;
 
 	return markdownTable(
