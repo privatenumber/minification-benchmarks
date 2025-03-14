@@ -50,8 +50,9 @@ const getMinifier = (
 	const minifierName = getMinifierName(minifier, minifierInstance);
 	const foundMinifier = artifact.minified[minifierName];
 	return (
-		foundMinifier?.version === minifier.meta.version
-		&& foundMinifier
+		foundMinifier
+		&& foundMinifier.version === minifier.meta.version
+		&& foundMinifier.configHash === minifier.configHash
 	);
 };
 
@@ -91,6 +92,7 @@ export const saveResults = async (
 	foundArtifact.minified[minifierName] = {
 		minifierPath: minifier.minifierPath!,
 		version: minifier.meta.version,
+		configHash: minifier.configHash!,
 		result,
 	};
 	foundArtifact.minified = sortObjectKeys(foundArtifact.minified, sortMinifiers);

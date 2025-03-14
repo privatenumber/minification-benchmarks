@@ -25,6 +25,8 @@ export class Minifier {
 
 	meta?: MetaData;
 
+	configHash?: string;
+
 	constructor(
 		name: string,
 		instances: Instances,
@@ -33,8 +35,13 @@ export class Minifier {
 		this.instances = instances;
 	}
 
-	async loadMeta(minifierPath: string) {
+	async loadMeta(
+		minifierPath: string,
+		configHash: string,
+	) {
 		this.minifierPath = minifierPath;
+		this.configHash = configHash;
+
 		const packageJson = await loadPackageJson(this.name);
 		if (packageJson) {
 			this.meta = getPackageJsonMeta(packageJson);
