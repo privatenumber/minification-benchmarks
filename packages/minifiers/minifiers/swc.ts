@@ -9,6 +9,10 @@ export default createMinifier(
 				compress: true,
 				mangle: true,
 				sourceMap: false,
+				toplevel: true,
+				format: {
+					comments: false,
+				},
 			});
 
 			return minified.code;
