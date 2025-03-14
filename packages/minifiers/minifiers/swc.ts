@@ -11,8 +11,8 @@ export default createMinifier(
 				sourceMap: false,
 				toplevel: true,
 				format: {
-					comments: false
-				}
+					comments: false,
+				},
 			});
 
 			return minified.code;
