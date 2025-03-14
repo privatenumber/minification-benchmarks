@@ -41,8 +41,10 @@ _Benchmarks last updated on <!-- lastUpdated:start -->Mar 14, 2025<!-- lastUpdat
 
 - Each minifier is executed in its own process with a 10s timeout
 - Artifact integrity is verified by a test before and after minification
+- Each minifier is minimally configured (sourcemaps & comments disabled), comparing out-of-the-box experience
 - Minifier upgrade PRs are automated via [WhiteSource Renovate](https://www.whitesourcesoftware.com/free-developer-tools/renovate/)
 - Benchmarks are updated on every PR via [GitHub Actions](https://github.com/privatenumber/minification-benchmarks/actions/workflows/benchmark.yml)
+- The raw benchmark data is available in [`/packages/data/data/data.json`](/packages/data/data/data.json)
 
 ## ⏱ Metrics
 
