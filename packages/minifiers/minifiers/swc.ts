@@ -6,9 +6,14 @@ export default createMinifier(
 	{
 		default: async ({ code }) => {
 			const minified = await minify(code, {
-				compress: true,
-				mangle: true,
+				compress: {
+					toplevel: true,
+				},
+				mangle: {
+					topLevel: true
+				},
 				sourceMap: false,
+				module: true
 			});
 
 			return minified.code;
