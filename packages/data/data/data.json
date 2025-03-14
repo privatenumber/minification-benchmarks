@@ -11,8 +11,8 @@
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedSize": 22862,
-						"minzippedSize": 8173,
+						"minifiedBytes": 22862,
+						"minzippedBytes": 8173,
 						"time": 17.0376032,
 						"runs": 5
 					}
@@ -24,8 +24,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 22641,
-						"minzippedSize": 8177,
+						"minifiedBytes": 22641,
+						"minzippedBytes": 8177,
 						"time": 496.9757794,
 						"runs": 5
 					}
@@ -37,8 +37,8 @@
 				"configHash": "a90ea71116",
 				"result": {
 					"data": {
-						"minifiedSize": 22825,
-						"minzippedSize": 8193,
+						"minifiedBytes": 22825,
+						"minzippedBytes": 8193,
 						"time": 3069.56459,
 						"runs": 5
 					}
@@ -50,8 +50,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 23069,
-						"minzippedSize": 8265,
+						"minifiedBytes": 23069,
+						"minzippedBytes": 8265,
 						"time": 275.1993118,
 						"runs": 5
 					}
@@ -63,8 +63,8 @@
 				"configHash": "0774252772",
 				"result": {
 					"data": {
-						"minifiedSize": 23601,
-						"minzippedSize": 8448,
+						"minifiedBytes": 23601,
+						"minzippedBytes": 8448,
 						"time": 646.9409106,
 						"runs": 5
 					}
@@ -76,8 +76,8 @@
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
-						"minifiedSize": 23521,
-						"minzippedSize": 8493,
+						"minifiedBytes": 23521,
+						"minzippedBytes": 8493,
 						"time": 2.6795561999999995,
 						"runs": 5
 					}
@@ -89,8 +89,8 @@
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
-						"minifiedSize": 23697,
-						"minzippedSize": 8543,
+						"minifiedBytes": 23697,
+						"minzippedBytes": 8543,
 						"time": 12.407266400000001,
 						"runs": 5
 					}
@@ -102,8 +102,8 @@
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
-						"minifiedSize": 23494,
-						"minzippedSize": 8628,
+						"minifiedBytes": 23494,
+						"minzippedBytes": 8628,
 						"time": 2.6487482,
 						"runs": 5
 					}
@@ -115,8 +115,8 @@
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
-						"minifiedSize": 23993,
-						"minzippedSize": 8661,
+						"minifiedBytes": 23993,
+						"minzippedBytes": 8661,
 						"time": 14.765455399999999,
 						"runs": 5
 					}
@@ -128,8 +128,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 25030,
-						"minzippedSize": 8668,
+						"minifiedBytes": 25030,
+						"minzippedBytes": 8668,
 						"time": 91.1176644,
 						"runs": 5
 					}
@@ -141,8 +141,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 25081,
-						"minzippedSize": 8746,
+						"minifiedBytes": 25081,
+						"minzippedBytes": 8746,
 						"time": 118.08719679999999,
 						"runs": 5
 					}
@@ -154,8 +154,8 @@
 				"configHash": "97050c77cb",
 				"result": {
 					"data": {
-						"minifiedSize": 40821,
-						"minzippedSize": 11040,
+						"minifiedBytes": 40821,
+						"minzippedBytes": 11040,
 						"time": 123.0999712,
 						"runs": 5
 					}
@@ -175,8 +175,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 57728,
-						"minzippedSize": 18568,
+						"minifiedBytes": 57728,
+						"minzippedBytes": 18568,
 						"time": 1148.7919532,
 						"runs": 5
 					}
@@ -188,8 +188,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 59138,
-						"minzippedSize": 18690,
+						"minifiedBytes": 59138,
+						"minzippedBytes": 18690,
 						"time": 667.9383707999999,
 						"runs": 5
 					}
@@ -201,8 +201,8 @@
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedSize": 58273,
-						"minzippedSize": 18699,
+						"minifiedBytes": 58273,
+						"minzippedBytes": 18699,
 						"time": 42.621466600000005,
 						"runs": 5
 					}
@@ -214,8 +214,8 @@
 				"configHash": "a90ea71116",
 				"result": {
 					"data": {
-						"minifiedSize": 58273,
-						"minzippedSize": 18910,
+						"minifiedBytes": 58273,
+						"minzippedBytes": 18910,
 						"time": 3753.2190910000004,
 						"runs": 5
 					}
@@ -227,8 +227,8 @@
 				"configHash": "0774252772",
 				"result": {
 					"data": {
-						"minifiedSize": 59703,
-						"minzippedSize": 19119,
+						"minifiedBytes": 59703,
+						"minzippedBytes": 19119,
 						"time": 1465.0631562,
 						"runs": 5
 					}
@@ -240,8 +240,8 @@
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
-						"minifiedSize": 59516,
-						"minzippedSize": 19260,
+						"minifiedBytes": 59516,
+						"minzippedBytes": 19260,
 						"time": 8.892656800000001,
 						"runs": 5
 					}
@@ -253,8 +253,8 @@
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
-						"minifiedSize": 59824,
-						"minzippedSize": 19334,
+						"minifiedBytes": 59824,
+						"minzippedBytes": 19334,
 						"time": 18.4361838,
 						"runs": 5
 					}
@@ -266,8 +266,8 @@
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
-						"minifiedSize": 59871,
-						"minzippedSize": 19482,
+						"minifiedBytes": 59871,
+						"minzippedBytes": 19482,
 						"time": 5.5021227999999995,
 						"runs": 5
 					}
@@ -279,8 +279,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 62495,
-						"minzippedSize": 19569,
+						"minifiedBytes": 62495,
+						"minzippedBytes": 19569,
 						"time": 214.5709446,
 						"runs": 5
 					}
@@ -292,8 +292,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 63151,
-						"minzippedSize": 19683,
+						"minifiedBytes": 63151,
+						"minzippedBytes": 19683,
 						"time": 270.488454,
 						"runs": 5
 					}
@@ -305,8 +305,8 @@
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
-						"minifiedSize": 61836,
-						"minzippedSize": 19857,
+						"minifiedBytes": 61836,
+						"minzippedBytes": 19857,
 						"time": 18.564540599999997,
 						"runs": 5
 					}
@@ -318,8 +318,8 @@
 				"configHash": "97050c77cb",
 				"result": {
 					"data": {
-						"minifiedSize": 97632,
-						"minzippedSize": 24998,
+						"minifiedBytes": 97632,
+						"minzippedBytes": 24998,
 						"time": 282.018791,
 						"runs": 5
 					}
@@ -339,8 +339,8 @@
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedSize": 89180,
-						"minzippedSize": 30881,
+						"minifiedBytes": 89180,
+						"minzippedBytes": 30881,
 						"time": 75.2330054,
 						"runs": 5
 					}
@@ -352,8 +352,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 88448,
-						"minzippedSize": 30903,
+						"minifiedBytes": 88448,
+						"minzippedBytes": 30903,
 						"time": 1592.905865,
 						"runs": 5
 					}
@@ -365,8 +365,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 89540,
-						"minzippedSize": 30912,
+						"minifiedBytes": 89540,
+						"minzippedBytes": 30912,
 						"time": 891.4111378000001,
 						"runs": 5
 					}
@@ -378,8 +378,8 @@
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
-						"minifiedSize": 89333,
-						"minzippedSize": 30970,
+						"minifiedBytes": 89333,
+						"minzippedBytes": 30970,
 						"time": 15.282888199999999,
 						"runs": 5
 					}
@@ -391,8 +391,8 @@
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
-						"minifiedSize": 89681,
-						"minzippedSize": 31446,
+						"minifiedBytes": 89681,
+						"minzippedBytes": 31446,
 						"time": 7.9091314000000015,
 						"runs": 5
 					}
@@ -404,8 +404,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 94082,
-						"minzippedSize": 31470,
+						"minifiedBytes": 94082,
+						"minzippedBytes": 31470,
 						"time": 313.6579852,
 						"runs": 5
 					}
@@ -417,8 +417,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 94554,
-						"minzippedSize": 31621,
+						"minifiedBytes": 94554,
+						"minzippedBytes": 31621,
 						"time": 353.40287320000004,
 						"runs": 5
 					}
@@ -430,8 +430,8 @@
 				"configHash": "0774252772",
 				"result": {
 					"data": {
-						"minifiedSize": 92103,
-						"minzippedSize": 31799,
+						"minifiedBytes": 92103,
+						"minzippedBytes": 31799,
 						"time": 2397.5567532,
 						"runs": 5
 					}
@@ -443,8 +443,8 @@
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
-						"minifiedSize": 90065,
-						"minzippedSize": 31954,
+						"minifiedBytes": 90065,
+						"minzippedBytes": 31954,
 						"time": 35.71228419999999,
 						"runs": 5
 					}
@@ -456,8 +456,8 @@
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
-						"minifiedSize": 92548,
-						"minzippedSize": 32653,
+						"minifiedBytes": 92548,
+						"minzippedBytes": 32653,
 						"time": 28.6112684,
 						"runs": 5
 					}
@@ -469,8 +469,8 @@
 				"configHash": "a90ea71116",
 				"result": {
 					"data": {
-						"minifiedSize": 92704,
-						"minzippedSize": 33086,
+						"minifiedBytes": 92704,
+						"minzippedBytes": 33086,
 						"time": 4056.3981264000004,
 						"runs": 5
 					}
@@ -482,8 +482,8 @@
 				"configHash": "97050c77cb",
 				"result": {
 					"data": {
-						"minifiedSize": 144144,
-						"minzippedSize": 40879,
+						"minifiedBytes": 144144,
+						"minzippedBytes": 40879,
 						"time": 362.8597456,
 						"runs": 5
 					}
@@ -503,8 +503,8 @@
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedSize": 115737,
-						"minzippedSize": 42728,
+						"minifiedBytes": 115737,
+						"minzippedBytes": 42728,
 						"time": 100.03172479999999,
 						"runs": 5
 					}
@@ -516,8 +516,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 116797,
-						"minzippedSize": 42919,
+						"minifiedBytes": 116797,
+						"minzippedBytes": 42919,
 						"time": 1102.0185632,
 						"runs": 5
 					}
@@ -529,8 +529,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 113796,
-						"minzippedSize": 43036,
+						"minifiedBytes": 113796,
+						"minzippedBytes": 43036,
 						"time": 2205.7858818,
 						"runs": 5
 					}
@@ -542,8 +542,8 @@
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
-						"minifiedSize": 117249,
-						"minzippedSize": 43370,
+						"minifiedBytes": 117249,
+						"minzippedBytes": 43370,
 						"time": 19.3419342,
 						"runs": 5
 					}
@@ -555,8 +555,8 @@
 				"configHash": "0774252772",
 				"result": {
 					"data": {
-						"minifiedSize": 117896,
-						"minzippedSize": 43925,
+						"minifiedBytes": 117896,
+						"minzippedBytes": 43925,
 						"time": 2695.911624,
 						"runs": 5
 					}
@@ -568,8 +568,8 @@
 				"configHash": "a90ea71116",
 				"result": {
 					"data": {
-						"minifiedSize": 115612,
-						"minzippedSize": 44230,
+						"minifiedBytes": 115612,
+						"minzippedBytes": 44230,
 						"time": 4686.440797,
 						"runs": 5
 					}
@@ -581,8 +581,8 @@
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
-						"minifiedSize": 117667,
-						"minzippedSize": 44354,
+						"minifiedBytes": 117667,
+						"minzippedBytes": 44354,
 						"time": 13.712431,
 						"runs": 5
 					}
@@ -594,8 +594,8 @@
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
-						"minifiedSize": 118141,
-						"minzippedSize": 44368,
+						"minifiedBytes": 118141,
+						"minzippedBytes": 44368,
 						"time": 41.0612286,
 						"runs": 5
 					}
@@ -607,8 +607,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 126137,
-						"minzippedSize": 44450,
+						"minifiedBytes": 126137,
+						"minzippedBytes": 44450,
 						"time": 364.40576219999997,
 						"runs": 5
 					}
@@ -620,8 +620,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 126580,
-						"minzippedSize": 44679,
+						"minifiedBytes": 126580,
+						"minzippedBytes": 44679,
 						"time": 442.958473,
 						"runs": 5
 					}
@@ -633,8 +633,8 @@
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
-						"minifiedSize": 121496,
-						"minzippedSize": 45400,
+						"minifiedBytes": 121496,
+						"minzippedBytes": 45400,
 						"time": 32.326555400000004,
 						"runs": 5
 					}
@@ -646,8 +646,8 @@
 				"configHash": "97050c77cb",
 				"result": {
 					"data": {
-						"minifiedSize": 197357,
-						"minzippedSize": 57169,
+						"minifiedBytes": 197357,
+						"minzippedBytes": 57169,
 						"time": 479.0927914,
 						"runs": 5
 					}
@@ -667,8 +667,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 68167,
-						"minzippedSize": 24686,
+						"minifiedBytes": 68167,
+						"minzippedBytes": 24686,
 						"time": 1688.5425219999997,
 						"runs": 5
 					}
@@ -680,8 +680,8 @@
 				"configHash": "a90ea71116",
 				"result": {
 					"data": {
-						"minifiedSize": 73466,
-						"minzippedSize": 24972,
+						"minifiedBytes": 73466,
+						"minzippedBytes": 24972,
 						"time": 4401.7094618,
 						"runs": 5
 					}
@@ -693,8 +693,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 70666,
-						"minzippedSize": 25186,
+						"minifiedBytes": 70666,
+						"minzippedBytes": 25186,
 						"time": 946.6027126000001,
 						"runs": 5
 					}
@@ -706,8 +706,8 @@
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedSize": 69913,
-						"minzippedSize": 25219,
+						"minifiedBytes": 69913,
+						"minzippedBytes": 25219,
 						"time": 77.2781732,
 						"runs": 5
 					}
@@ -719,8 +719,8 @@
 				"configHash": "0774252772",
 				"result": {
 					"data": {
-						"minifiedSize": 72367,
-						"minzippedSize": 25503,
+						"minifiedBytes": 72367,
+						"minzippedBytes": 25503,
 						"time": 2082.6992265999997,
 						"runs": 5
 					}
@@ -732,8 +732,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 74607,
-						"minzippedSize": 25862,
+						"minifiedBytes": 74607,
+						"minzippedBytes": 25862,
 						"time": 332.6733872,
 						"runs": 5
 					}
@@ -745,8 +745,8 @@
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
-						"minifiedSize": 71380,
-						"minzippedSize": 25979,
+						"minifiedBytes": 71380,
+						"minzippedBytes": 25979,
 						"time": 14.419443000000001,
 						"runs": 5
 					}
@@ -758,8 +758,8 @@
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
-						"minifiedSize": 72483,
-						"minzippedSize": 26200,
+						"minifiedBytes": 72483,
+						"minzippedBytes": 26200,
 						"time": 29.813153399999997,
 						"runs": 5
 					}
@@ -771,8 +771,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 75293,
-						"minzippedSize": 26221,
+						"minifiedBytes": 75293,
+						"minzippedBytes": 26221,
 						"time": 377.20047399999993,
 						"runs": 5
 					}
@@ -784,8 +784,8 @@
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
-						"minifiedSize": 71895,
-						"minzippedSize": 26498,
+						"minifiedBytes": 71895,
+						"minzippedBytes": 26498,
 						"time": 11.126901,
 						"runs": 5
 					}
@@ -797,8 +797,8 @@
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
-						"minifiedSize": 73448,
-						"minzippedSize": 26655,
+						"minifiedBytes": 73448,
+						"minzippedBytes": 26655,
 						"time": 24.4499548,
 						"runs": 5
 					}
@@ -810,8 +810,8 @@
 				"configHash": "97050c77cb",
 				"result": {
 					"data": {
-						"minifiedSize": 148780,
-						"minzippedSize": 36327,
+						"minifiedBytes": 148780,
+						"minzippedBytes": 36327,
 						"time": 365.30044680000003,
 						"runs": 5
 					}
@@ -831,8 +831,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 263558,
-						"minzippedSize": 87016,
+						"minifiedBytes": 263558,
+						"minzippedBytes": 87016,
 						"time": 3926.9689769999995,
 						"runs": 5
 					}
@@ -844,8 +844,8 @@
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedSize": 265341,
-						"minzippedSize": 87229,
+						"minifiedBytes": 265341,
+						"minzippedBytes": 87229,
 						"time": 206.7482598,
 						"runs": 5
 					}
@@ -857,8 +857,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 267768,
-						"minzippedSize": 88087,
+						"minifiedBytes": 267768,
+						"minzippedBytes": 88087,
 						"time": 2273.5127708,
 						"runs": 5
 					}
@@ -870,8 +870,8 @@
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
-						"minifiedSize": 270836,
-						"minzippedSize": 88162,
+						"minifiedBytes": 270836,
+						"minzippedBytes": 88162,
 						"time": 41.8796076,
 						"runs": 5
 					}
@@ -883,8 +883,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 275347,
-						"minzippedSize": 88319,
+						"minifiedBytes": 275347,
+						"minzippedBytes": 88319,
 						"time": 710.7314338,
 						"runs": 5
 					}
@@ -896,8 +896,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 276467,
-						"minzippedSize": 89156,
+						"minifiedBytes": 276467,
+						"minzippedBytes": 89156,
 						"time": 1010.7878210000001,
 						"runs": 5
 					}
@@ -909,8 +909,8 @@
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
-						"minifiedSize": 270129,
-						"minzippedSize": 90800,
+						"minifiedBytes": 270129,
+						"minzippedBytes": 90800,
 						"time": 69.97504740000001,
 						"runs": 5
 					}
@@ -922,8 +922,8 @@
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
-						"minifiedSize": 273406,
-						"minzippedSize": 92395,
+						"minifiedBytes": 273406,
+						"minzippedBytes": 92395,
 						"time": 49.9926596,
 						"runs": 5
 					}
@@ -935,8 +935,8 @@
 				"configHash": "a90ea71116",
 				"result": {
 					"data": {
-						"minifiedSize": 270298,
-						"minzippedSize": 94121,
+						"minifiedBytes": 270298,
+						"minzippedBytes": 94121,
 						"time": 7048.4731662,
 						"runs": 5
 					}
@@ -992,8 +992,8 @@
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
-						"minifiedSize": 440173,
-						"minzippedSize": 122364,
+						"minifiedBytes": 440173,
+						"minzippedBytes": 122364,
 						"time": 41.265816400000006,
 						"runs": 5
 					}
@@ -1005,8 +1005,8 @@
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedSize": 455488,
-						"minzippedSize": 123071,
+						"minifiedBytes": 455488,
+						"minzippedBytes": 123071,
 						"time": 186.3980818,
 						"runs": 5
 					}
@@ -1018,8 +1018,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 451192,
-						"minzippedSize": 123334,
+						"minifiedBytes": 451192,
+						"minzippedBytes": 123334,
 						"time": 3786.5722984,
 						"runs": 5
 					}
@@ -1031,8 +1031,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 458289,
-						"minzippedSize": 123482,
+						"minifiedBytes": 458289,
+						"minzippedBytes": 123482,
 						"time": 2171.6753252,
 						"runs": 5
 					}
@@ -1044,8 +1044,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 474395,
-						"minzippedSize": 124428,
+						"minifiedBytes": 474395,
+						"minzippedBytes": 124428,
 						"time": 967.2575268,
 						"runs": 5
 					}
@@ -1057,8 +1057,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 472162,
-						"minzippedSize": 124609,
+						"minifiedBytes": 472162,
+						"minzippedBytes": 124609,
 						"time": 778.440208,
 						"runs": 5
 					}
@@ -1070,8 +1070,8 @@
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
-						"minifiedSize": 456582,
-						"minzippedSize": 124885,
+						"minifiedBytes": 456582,
+						"minzippedBytes": 124885,
 						"time": 30.1128418,
 						"runs": 5
 					}
@@ -1083,8 +1083,8 @@
 				"configHash": "a90ea71116",
 				"result": {
 					"data": {
-						"minifiedSize": 439949,
-						"minzippedSize": 126562,
+						"minifiedBytes": 439949,
+						"minzippedBytes": 126562,
 						"time": 6579.302069799999,
 						"runs": 5
 					}
@@ -1096,8 +1096,8 @@
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
-						"minifiedSize": 458893,
-						"minzippedSize": 126707,
+						"minifiedBytes": 458893,
+						"minzippedBytes": 126707,
 						"time": 62.22584340000001,
 						"runs": 5
 					}
@@ -1109,8 +1109,8 @@
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
-						"minifiedSize": 466803,
-						"minzippedSize": 127653,
+						"minifiedBytes": 466803,
+						"minzippedBytes": 127653,
 						"time": 47.1122248,
 						"runs": 5
 					}
@@ -1122,8 +1122,8 @@
 				"configHash": "97050c77cb",
 				"result": {
 					"data": {
-						"minifiedSize": 633710,
-						"minzippedSize": 145178,
+						"minifiedBytes": 633710,
+						"minzippedBytes": 145178,
 						"time": 1340.8835525999998,
 						"runs": 5
 					}
@@ -1155,8 +1155,8 @@
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedSize": 643133,
-						"minzippedSize": 158751,
+						"minifiedBytes": 643133,
+						"minzippedBytes": 158751,
 						"time": 283.18131220000004,
 						"runs": 5
 					}
@@ -1168,8 +1168,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 641593,
-						"minzippedSize": 159071,
+						"minifiedBytes": 641593,
+						"minzippedBytes": 159071,
 						"time": 5046.1294526,
 						"runs": 5
 					}
@@ -1181,8 +1181,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 653248,
-						"minzippedSize": 159198,
+						"minifiedBytes": 653248,
+						"minzippedBytes": 159198,
 						"time": 2933.5729346,
 						"runs": 5
 					}
@@ -1194,8 +1194,8 @@
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
-						"minifiedSize": 647005,
-						"minzippedSize": 160831,
+						"minifiedBytes": 647005,
+						"minzippedBytes": 160831,
 						"time": 59.637500599999996,
 						"runs": 5
 					}
@@ -1207,8 +1207,8 @@
 				"configHash": "a90ea71116",
 				"result": {
 					"data": {
-						"minifiedSize": 644450,
-						"minzippedSize": 162998,
+						"minifiedBytes": 644450,
+						"minzippedBytes": 162998,
 						"time": 8569.1615614,
 						"runs": 5
 					}
@@ -1220,8 +1220,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 674490,
-						"minzippedSize": 163036,
+						"minifiedBytes": 674490,
+						"minzippedBytes": 163036,
 						"time": 993.953499,
 						"runs": 5
 					}
@@ -1233,8 +1233,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 675504,
-						"minzippedSize": 163198,
+						"minifiedBytes": 675504,
+						"minzippedBytes": 163198,
 						"time": 1287.4313405999999,
 						"runs": 5
 					}
@@ -1246,8 +1246,8 @@
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
-						"minifiedSize": 646759,
-						"minzippedSize": 163725,
+						"minifiedBytes": 646759,
+						"minzippedBytes": 163725,
 						"time": 88.54193520000001,
 						"runs": 5
 					}
@@ -1259,8 +1259,8 @@
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
-						"minifiedSize": 642458,
-						"minzippedSize": 164608,
+						"minifiedBytes": 642458,
+						"minzippedBytes": 164608,
 						"time": 46.3360296,
 						"runs": 5
 					}
@@ -1272,8 +1272,8 @@
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
-						"minifiedSize": 655932,
-						"minzippedSize": 166210,
+						"minifiedBytes": 655932,
+						"minzippedBytes": 166210,
 						"time": 59.0061818,
 						"runs": 5
 					}
@@ -1285,8 +1285,8 @@
 				"configHash": "97050c77cb",
 				"result": {
 					"data": {
-						"minifiedSize": 952007,
-						"minzippedSize": 193471,
+						"minifiedBytes": 952007,
+						"minzippedBytes": 193471,
 						"time": 1715.3083073999999,
 						"runs": 5
 					}
@@ -1316,8 +1316,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 694781,
-						"minzippedSize": 157435,
+						"minifiedBytes": 694781,
+						"minzippedBytes": 157435,
 						"time": 6578.685240199999,
 						"runs": 5
 					}
@@ -1329,8 +1329,8 @@
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedSize": 707604,
-						"minzippedSize": 157900,
+						"minifiedBytes": 707604,
+						"minzippedBytes": 157900,
 						"time": 393.0267498,
 						"runs": 5
 					}
@@ -1342,8 +1342,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 715581,
-						"minzippedSize": 158706,
+						"minifiedBytes": 715581,
+						"minzippedBytes": 158706,
 						"time": 3977.41004,
 						"runs": 5
 					}
@@ -1355,8 +1355,8 @@
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
-						"minifiedSize": 716144,
-						"minzippedSize": 162262,
+						"minifiedBytes": 716144,
+						"minzippedBytes": 162262,
 						"time": 79.9024302,
 						"runs": 5
 					}
@@ -1368,8 +1368,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 759337,
-						"minzippedSize": 166386,
+						"minifiedBytes": 759337,
+						"minzippedBytes": 166386,
 						"time": 1605.82709,
 						"runs": 5
 					}
@@ -1381,8 +1381,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 756530,
-						"minzippedSize": 167579,
+						"minifiedBytes": 756530,
+						"minzippedBytes": 167579,
 						"time": 1314.1042733999998,
 						"runs": 5
 					}
@@ -1394,8 +1394,8 @@
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
-						"minifiedSize": 724140,
-						"minzippedSize": 181071,
+						"minifiedBytes": 724140,
+						"minzippedBytes": 181071,
 						"time": 123.85141800000001,
 						"runs": 5
 					}
@@ -1407,8 +1407,8 @@
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
-						"minifiedSize": 727899,
-						"minzippedSize": 182671,
+						"minifiedBytes": 727899,
+						"minzippedBytes": 182671,
 						"time": 82.5055826,
 						"runs": 5
 					}
@@ -1474,8 +1474,8 @@
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedSize": 994576,
-						"minzippedSize": 321269,
+						"minifiedBytes": 994576,
+						"minzippedBytes": 321269,
 						"time": 752.1531124,
 						"runs": 5
 					}
@@ -1487,8 +1487,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 1000714,
-						"minzippedSize": 321987,
+						"minifiedBytes": 1000714,
+						"minzippedBytes": 321987,
 						"time": 6004.7721796,
 						"runs": 5
 					}
@@ -1500,8 +1500,8 @@
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
-						"minifiedSize": 1006799,
-						"minzippedSize": 324635,
+						"minifiedBytes": 1006799,
+						"minzippedBytes": 324635,
 						"time": 217.7205078,
 						"runs": 5
 					}
@@ -1513,8 +1513,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 1071527,
-						"minzippedSize": 330736,
+						"minifiedBytes": 1071527,
+						"minzippedBytes": 330736,
 						"time": 2649.3046856,
 						"runs": 5
 					}
@@ -1526,8 +1526,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 1068386,
-						"minzippedSize": 331412,
+						"minifiedBytes": 1068386,
+						"minzippedBytes": 331412,
 						"time": 1756.3432927999997,
 						"runs": 5
 					}
@@ -1539,8 +1539,8 @@
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
-						"minifiedSize": 1011234,
-						"minzippedSize": 331563,
+						"minifiedBytes": 1011234,
+						"minzippedBytes": 331563,
 						"time": 193.1410484,
 						"runs": 5
 					}
@@ -1552,8 +1552,8 @@
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
-						"minifiedSize": 1013507,
-						"minzippedSize": 331914,
+						"minifiedBytes": 1013507,
+						"minzippedBytes": 331914,
 						"time": 115.4423268,
 						"runs": 5
 					}
@@ -1565,8 +1565,8 @@
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
-						"minifiedSize": 1024688,
-						"minzippedSize": 337934,
+						"minifiedBytes": 1024688,
+						"minzippedBytes": 337934,
 						"time": 131.16065059999997,
 						"runs": 5
 					}
@@ -1628,8 +1628,8 @@
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedSize": 2148032,
-						"minzippedSize": 452827,
+						"minifiedBytes": 2148032,
+						"minzippedBytes": 452827,
 						"time": 1101.4142178,
 						"runs": 5
 					}
@@ -1641,8 +1641,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 2249014,
-						"minzippedSize": 457786,
+						"minifiedBytes": 2249014,
+						"minzippedBytes": 457786,
 						"time": 6822.6902542,
 						"runs": 5
 					}
@@ -1654,8 +1654,8 @@
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
-						"minifiedSize": 2278720,
-						"minzippedSize": 463357,
+						"minifiedBytes": 2278720,
+						"minzippedBytes": 463357,
 						"time": 229.60452699999996,
 						"runs": 5
 					}
@@ -1667,8 +1667,8 @@
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
-						"minifiedSize": 2292198,
-						"minzippedSize": 471728,
+						"minifiedBytes": 2292198,
+						"minzippedBytes": 471728,
 						"time": 140.0334058,
 						"runs": 5
 					}
@@ -1680,8 +1680,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 2425048,
-						"minzippedSize": 475480,
+						"minifiedBytes": 2425048,
+						"minzippedBytes": 475480,
 						"time": 3110.5994888,
 						"runs": 5
 					}
@@ -1693,8 +1693,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 2420587,
-						"minzippedSize": 478572,
+						"minifiedBytes": 2420587,
+						"minzippedBytes": 478572,
 						"time": 2524.760631,
 						"runs": 5
 					}
@@ -1706,8 +1706,8 @@
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
-						"minifiedSize": 2306394,
-						"minzippedSize": 488279,
+						"minifiedBytes": 2306394,
+						"minzippedBytes": 488279,
 						"time": 290.7972456,
 						"runs": 5
 					}
@@ -1719,8 +1719,8 @@
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
-						"minifiedSize": 2296786,
-						"minzippedSize": 491833,
+						"minifiedBytes": 2296786,
+						"minzippedBytes": 491833,
 						"time": 183.6512868,
 						"runs": 5
 					}
@@ -1780,8 +1780,8 @@
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedSize": 3318834,
-						"minzippedSize": 858287,
+						"minifiedBytes": 3318834,
+						"minzippedBytes": 858287,
 						"time": 2227.6926154000002,
 						"runs": 5
 					}
@@ -1793,8 +1793,8 @@
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
-						"minifiedSize": 3349566,
-						"minzippedSize": 860673,
+						"minifiedBytes": 3349566,
+						"minzippedBytes": 860673,
 						"time": 729.573708,
 						"runs": 5
 					}
@@ -1806,8 +1806,8 @@
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
-						"minifiedSize": 3348140,
-						"minzippedSize": 875811,
+						"minifiedBytes": 3348140,
+						"minzippedBytes": 875811,
 						"time": 254.95946659999998,
 						"runs": 5
 					}
@@ -1819,8 +1819,8 @@
 				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
-						"minifiedSize": 3538024,
-						"minzippedSize": 876535,
+						"minifiedBytes": 3538024,
+						"minzippedBytes": 876535,
 						"time": 4029.2976471999996,
 						"runs": 5
 					}
@@ -1832,8 +1832,8 @@
 				"configHash": "fb23c51035",
 				"result": {
 					"data": {
-						"minifiedSize": 3530223,
-						"minzippedSize": 879301,
+						"minifiedBytes": 3530223,
+						"minzippedBytes": 879301,
 						"time": 5317.868483,
 						"runs": 5
 					}
@@ -1845,8 +1845,8 @@
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
-						"minifiedSize": 3489707,
-						"minzippedSize": 915551,
+						"minifiedBytes": 3489707,
+						"minzippedBytes": 915551,
 						"time": 495.944652,
 						"runs": 5
 					}

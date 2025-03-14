@@ -28,5 +28,5 @@ export const sortMinifiers = (
 	}
 	if ('error' in a.result) { return 1; }
 	if ('error' in b.result) { return -1; }
-	return a.result.data.minzippedSize - b.result.data.minzippedSize;
+	return a.result.data.minzippedBytes - b.result.data.minzippedBytes;
 };
