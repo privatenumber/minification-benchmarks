@@ -8,11 +8,12 @@
 			"@swc/core": {
 				"minifierPath": "swc.ts",
 				"version": "1.11.9",
+				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedSize": 22862,
 						"minzippedSize": 8173,
-						"time": 17.0861638,
+						"time": 17.0376032,
 						"runs": 5
 					}
 				}
@@ -20,11 +21,12 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 22641,
 						"minzippedSize": 8177,
-						"time": 536.2527908,
+						"time": 496.9757794,
 						"runs": 5
 					}
 				}
@@ -32,11 +34,12 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20240317.0.0",
+				"configHash": "a90ea71116",
 				"result": {
 					"data": {
 						"minifiedSize": 22825,
 						"minzippedSize": 8193,
-						"time": 3268.6023042,
+						"time": 3069.56459,
 						"runs": 5
 					}
 				}
@@ -44,11 +47,12 @@
 			"terser": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 23069,
 						"minzippedSize": 8265,
-						"time": 324.72621,
+						"time": 275.1993118,
 						"runs": 5
 					}
 				}
@@ -56,11 +60,12 @@
 			"babel-minify": {
 				"minifierPath": "babel-minify.ts",
 				"version": "0.5.2",
+				"configHash": "0774252772",
 				"result": {
 					"data": {
 						"minifiedSize": 23601,
 						"minzippedSize": 8448,
-						"time": 589.8394367999999,
+						"time": 646.9409106,
 						"runs": 5
 					}
 				}
@@ -68,11 +73,12 @@
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
 				"version": "0.58.1",
+				"configHash": "adfabf738f",
 				"result": {
 					"data": {
 						"minifiedSize": 23521,
 						"minzippedSize": 8493,
-						"time": 2.6834876,
+						"time": 2.6795561999999995,
 						"runs": 5
 					}
 				}
@@ -80,11 +86,12 @@
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
 				"version": "0.25.1",
+				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedSize": 23697,
 						"minzippedSize": 8543,
-						"time": 12.491082600000002,
+						"time": 12.407266400000001,
 						"runs": 5
 					}
 				}
@@ -92,11 +99,12 @@
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
 				"version": "2.21.3",
+				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedSize": 23534,
 						"minzippedSize": 8631,
-						"time": 3.0394232,
+						"time": 3.1077831999999996,
 						"runs": 5
 					}
 				}
@@ -104,11 +112,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.2.5",
+				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedSize": 23993,
 						"minzippedSize": 8661,
-						"time": 14.486305999999999,
+						"time": 14.765455399999999,
 						"runs": 5
 					}
 				}
@@ -116,11 +125,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 25030,
 						"minzippedSize": 8668,
-						"time": 94.7911052,
+						"time": 91.1176644,
 						"runs": 5
 					}
 				}
@@ -128,11 +138,12 @@
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 25081,
 						"minzippedSize": 8746,
-						"time": 141.911228,
+						"time": 118.08719679999999,
 						"runs": 5
 					}
 				}
@@ -140,11 +151,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
+				"configHash": "97050c77cb",
 				"result": {
 					"data": {
 						"minifiedSize": 40821,
 						"minzippedSize": 11040,
-						"time": 104.82450639999999,
+						"time": 123.0999712,
 						"runs": 5
 					}
 				}
@@ -160,11 +172,12 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 57728,
 						"minzippedSize": 18568,
-						"time": 1180.6388187999999,
+						"time": 1148.7919532,
 						"runs": 5
 					}
 				}
@@ -172,11 +185,12 @@
 			"terser": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 59138,
 						"minzippedSize": 18690,
-						"time": 810.3096205999999,
+						"time": 667.9383707999999,
 						"runs": 5
 					}
 				}
@@ -184,11 +198,12 @@
 			"@swc/core": {
 				"minifierPath": "swc.ts",
 				"version": "1.11.9",
+				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedSize": 58273,
 						"minzippedSize": 18699,
-						"time": 42.0146734,
+						"time": 42.621466600000005,
 						"runs": 5
 					}
 				}
@@ -196,11 +211,12 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20240317.0.0",
+				"configHash": "a90ea71116",
 				"result": {
 					"data": {
 						"minifiedSize": 58273,
 						"minzippedSize": 18910,
-						"time": 3855.890944,
+						"time": 3753.2190910000004,
 						"runs": 5
 					}
 				}
@@ -208,11 +224,12 @@
 			"babel-minify": {
 				"minifierPath": "babel-minify.ts",
 				"version": "0.5.2",
+				"configHash": "0774252772",
 				"result": {
 					"data": {
 						"minifiedSize": 59703,
 						"minzippedSize": 19119,
-						"time": 1367.4468160000001,
+						"time": 1465.0631562,
 						"runs": 5
 					}
 				}
@@ -220,11 +237,12 @@
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
 				"version": "0.58.1",
+				"configHash": "adfabf738f",
 				"result": {
 					"data": {
 						"minifiedSize": 59516,
 						"minzippedSize": 19260,
-						"time": 8.5898558,
+						"time": 8.892656800000001,
 						"runs": 5
 					}
 				}
@@ -232,11 +250,12 @@
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
 				"version": "0.25.1",
+				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedSize": 59824,
 						"minzippedSize": 19334,
-						"time": 18.0405922,
+						"time": 18.4361838,
 						"runs": 5
 					}
 				}
@@ -244,11 +263,12 @@
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
 				"version": "2.21.3",
+				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedSize": 59951,
 						"minzippedSize": 19496,
-						"time": 5.8614628,
+						"time": 5.8710492,
 						"runs": 5
 					}
 				}
@@ -256,11 +276,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 62495,
 						"minzippedSize": 19569,
-						"time": 216.51477500000001,
+						"time": 214.5709446,
 						"runs": 5
 					}
 				}
@@ -268,11 +289,12 @@
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 63151,
 						"minzippedSize": 19683,
-						"time": 339.4026784,
+						"time": 270.488454,
 						"runs": 5
 					}
 				}
@@ -280,11 +302,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.2.5",
+				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedSize": 61836,
 						"minzippedSize": 19857,
-						"time": 18.5708448,
+						"time": 18.564540599999997,
 						"runs": 5
 					}
 				}
@@ -292,11 +315,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
+				"configHash": "97050c77cb",
 				"result": {
 					"data": {
 						"minifiedSize": 97632,
 						"minzippedSize": 24998,
-						"time": 245.9180108,
+						"time": 282.018791,
 						"runs": 5
 					}
 				}
@@ -312,11 +336,12 @@
 			"@swc/core": {
 				"minifierPath": "swc.ts",
 				"version": "1.11.9",
+				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedSize": 89180,
 						"minzippedSize": 30881,
-						"time": 75.281305,
+						"time": 75.2330054,
 						"runs": 5
 					}
 				}
@@ -324,11 +349,12 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 88448,
 						"minzippedSize": 30903,
-						"time": 1639.4666642,
+						"time": 1592.905865,
 						"runs": 5
 					}
 				}
@@ -336,11 +362,12 @@
 			"terser": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 89540,
 						"minzippedSize": 30912,
-						"time": 1110.8904652,
+						"time": 891.4111378000001,
 						"runs": 5
 					}
 				}
@@ -348,11 +375,12 @@
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
 				"version": "0.58.1",
+				"configHash": "adfabf738f",
 				"result": {
 					"data": {
 						"minifiedSize": 89333,
 						"minzippedSize": 30970,
-						"time": 15.7611662,
+						"time": 15.282888199999999,
 						"runs": 5
 					}
 				}
@@ -360,11 +388,12 @@
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
 				"version": "2.21.3",
+				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedSize": 89851,
 						"minzippedSize": 31468,
-						"time": 8.699329599999999,
+						"time": 8.9089554,
 						"runs": 5
 					}
 				}
@@ -372,11 +401,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 94082,
 						"minzippedSize": 31470,
-						"time": 323.650063,
+						"time": 313.6579852,
 						"runs": 5
 					}
 				}
@@ -384,11 +414,12 @@
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 94554,
 						"minzippedSize": 31621,
-						"time": 423.43772659999996,
+						"time": 353.40287320000004,
 						"runs": 5
 					}
 				}
@@ -396,11 +427,12 @@
 			"babel-minify": {
 				"minifierPath": "babel-minify.ts",
 				"version": "0.5.2",
+				"configHash": "0774252772",
 				"result": {
 					"data": {
 						"minifiedSize": 92103,
 						"minzippedSize": 31799,
-						"time": 2254.6742282,
+						"time": 2397.5567532,
 						"runs": 5
 					}
 				}
@@ -408,11 +440,12 @@
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
 				"version": "0.25.1",
+				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedSize": 90065,
 						"minzippedSize": 31954,
-						"time": 36.2204354,
+						"time": 35.71228419999999,
 						"runs": 5
 					}
 				}
@@ -420,11 +453,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.2.5",
+				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedSize": 92548,
 						"minzippedSize": 32653,
-						"time": 28.843477999999998,
+						"time": 28.6112684,
 						"runs": 5
 					}
 				}
@@ -432,11 +466,12 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20240317.0.0",
+				"configHash": "a90ea71116",
 				"result": {
 					"data": {
 						"minifiedSize": 92704,
 						"minzippedSize": 33086,
-						"time": 4363.2543366,
+						"time": 4056.3981264000004,
 						"runs": 5
 					}
 				}
@@ -444,11 +479,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
+				"configHash": "97050c77cb",
 				"result": {
 					"data": {
 						"minifiedSize": 144144,
 						"minzippedSize": 40879,
-						"time": 315.4893338,
+						"time": 362.8597456,
 						"runs": 5
 					}
 				}
@@ -464,11 +500,12 @@
 			"@swc/core": {
 				"minifierPath": "swc.ts",
 				"version": "1.11.9",
+				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedSize": 115737,
 						"minzippedSize": 42728,
-						"time": 99.8726762,
+						"time": 100.03172479999999,
 						"runs": 5
 					}
 				}
@@ -476,11 +513,12 @@
 			"terser": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 116797,
 						"minzippedSize": 42919,
-						"time": 1319.9989633999999,
+						"time": 1102.0185632,
 						"runs": 5
 					}
 				}
@@ -488,11 +526,12 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 113796,
 						"minzippedSize": 43036,
-						"time": 2282.3332772000003,
+						"time": 2205.7858818,
 						"runs": 5
 					}
 				}
@@ -500,11 +539,12 @@
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
 				"version": "0.58.1",
+				"configHash": "adfabf738f",
 				"result": {
 					"data": {
 						"minifiedSize": 117249,
 						"minzippedSize": 43370,
-						"time": 18.847701800000003,
+						"time": 19.3419342,
 						"runs": 5
 					}
 				}
@@ -512,11 +552,12 @@
 			"babel-minify": {
 				"minifierPath": "babel-minify.ts",
 				"version": "0.5.2",
+				"configHash": "0774252772",
 				"result": {
 					"data": {
 						"minifiedSize": 117896,
 						"minzippedSize": 43925,
-						"time": 2475.664257,
+						"time": 2695.911624,
 						"runs": 5
 					}
 				}
@@ -524,11 +565,12 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20240317.0.0",
+				"configHash": "a90ea71116",
 				"result": {
 					"data": {
 						"minifiedSize": 115612,
 						"minzippedSize": 44230,
-						"time": 4717.4148944,
+						"time": 4686.440797,
 						"runs": 5
 					}
 				}
@@ -536,11 +578,12 @@
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
 				"version": "0.25.1",
+				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedSize": 118141,
 						"minzippedSize": 44368,
-						"time": 40.1351302,
+						"time": 41.0612286,
 						"runs": 5
 					}
 				}
@@ -548,11 +591,12 @@
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
 				"version": "2.21.3",
+				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedSize": 117808,
 						"minzippedSize": 44376,
-						"time": 12.7882466,
+						"time": 13.4362314,
 						"runs": 5
 					}
 				}
@@ -560,11 +604,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 126137,
 						"minzippedSize": 44450,
-						"time": 375.35508760000005,
+						"time": 364.40576219999997,
 						"runs": 5
 					}
 				}
@@ -572,11 +617,12 @@
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 126580,
 						"minzippedSize": 44679,
-						"time": 536.3530328,
+						"time": 442.958473,
 						"runs": 5
 					}
 				}
@@ -584,11 +630,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.2.5",
+				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedSize": 121496,
 						"minzippedSize": 45400,
-						"time": 30.940024,
+						"time": 32.326555400000004,
 						"runs": 5
 					}
 				}
@@ -596,11 +643,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
+				"configHash": "97050c77cb",
 				"result": {
 					"data": {
 						"minifiedSize": 197357,
 						"minzippedSize": 57169,
-						"time": 415.8620476,
+						"time": 479.0927914,
 						"runs": 5
 					}
 				}
@@ -616,11 +664,12 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 68167,
 						"minzippedSize": 24686,
-						"time": 1756.291083,
+						"time": 1688.5425219999997,
 						"runs": 5
 					}
 				}
@@ -628,11 +677,12 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20240317.0.0",
+				"configHash": "a90ea71116",
 				"result": {
 					"data": {
 						"minifiedSize": 73466,
 						"minzippedSize": 24972,
-						"time": 4632.9640936,
+						"time": 4401.7094618,
 						"runs": 5
 					}
 				}
@@ -640,11 +690,12 @@
 			"terser": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 70666,
 						"minzippedSize": 25186,
-						"time": 1127.3540618000002,
+						"time": 946.6027126000001,
 						"runs": 5
 					}
 				}
@@ -652,11 +703,12 @@
 			"@swc/core": {
 				"minifierPath": "swc.ts",
 				"version": "1.11.9",
+				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedSize": 69913,
 						"minzippedSize": 25219,
-						"time": 77.6939086,
+						"time": 77.2781732,
 						"runs": 5
 					}
 				}
@@ -664,11 +716,12 @@
 			"babel-minify": {
 				"minifierPath": "babel-minify.ts",
 				"version": "0.5.2",
+				"configHash": "0774252772",
 				"result": {
 					"data": {
 						"minifiedSize": 72367,
 						"minzippedSize": 25503,
-						"time": 1940.0666896000002,
+						"time": 2082.6992265999997,
 						"runs": 5
 					}
 				}
@@ -676,11 +729,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 74607,
 						"minzippedSize": 25862,
-						"time": 341.0494795999999,
+						"time": 332.6733872,
 						"runs": 5
 					}
 				}
@@ -688,11 +742,12 @@
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
 				"version": "0.58.1",
+				"configHash": "adfabf738f",
 				"result": {
 					"data": {
 						"minifiedSize": 71380,
 						"minzippedSize": 25979,
-						"time": 13.9458582,
+						"time": 14.419443000000001,
 						"runs": 5
 					}
 				}
@@ -700,11 +755,12 @@
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
 				"version": "0.25.1",
+				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedSize": 72483,
 						"minzippedSize": 26200,
-						"time": 29.582286,
+						"time": 29.813153399999997,
 						"runs": 5
 					}
 				}
@@ -712,11 +768,12 @@
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 75293,
 						"minzippedSize": 26221,
-						"time": 447.05853320000006,
+						"time": 377.20047399999993,
 						"runs": 5
 					}
 				}
@@ -724,11 +781,12 @@
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
 				"version": "2.21.3",
+				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedSize": 71895,
 						"minzippedSize": 26498,
-						"time": 12.2903988,
+						"time": 13.768479199999998,
 						"runs": 5
 					}
 				}
@@ -736,11 +794,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.2.5",
+				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedSize": 73448,
 						"minzippedSize": 26655,
-						"time": 24.295824400000004,
+						"time": 24.4499548,
 						"runs": 5
 					}
 				}
@@ -748,11 +807,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
+				"configHash": "97050c77cb",
 				"result": {
 					"data": {
 						"minifiedSize": 148780,
 						"minzippedSize": 36327,
-						"time": 328.3610038,
+						"time": 365.30044680000003,
 						"runs": 5
 					}
 				}
@@ -768,11 +828,12 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 263558,
 						"minzippedSize": 87016,
-						"time": 4066.8747001999996,
+						"time": 3926.9689769999995,
 						"runs": 5
 					}
 				}
@@ -780,11 +841,12 @@
 			"@swc/core": {
 				"minifierPath": "swc.ts",
 				"version": "1.11.9",
+				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedSize": 265341,
 						"minzippedSize": 87229,
-						"time": 222.09397359999997,
+						"time": 206.7482598,
 						"runs": 5
 					}
 				}
@@ -792,11 +854,12 @@
 			"terser": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 267768,
 						"minzippedSize": 88087,
-						"time": 2682.1990189999997,
+						"time": 2273.5127708,
 						"runs": 5
 					}
 				}
@@ -804,11 +867,12 @@
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
 				"version": "0.58.1",
+				"configHash": "adfabf738f",
 				"result": {
 					"data": {
 						"minifiedSize": 270836,
 						"minzippedSize": 88162,
-						"time": 40.841478800000004,
+						"time": 41.8796076,
 						"runs": 5
 					}
 				}
@@ -816,11 +880,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 275347,
 						"minzippedSize": 88319,
-						"time": 748.7223293999999,
+						"time": 710.7314338,
 						"runs": 5
 					}
 				}
@@ -828,11 +893,12 @@
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 276467,
 						"minzippedSize": 89156,
-						"time": 1186.1101234000002,
+						"time": 1010.7878210000001,
 						"runs": 5
 					}
 				}
@@ -840,11 +906,12 @@
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
 				"version": "2.21.3",
+				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedSize": 269926,
 						"minzippedSize": 89891,
-						"time": 32.9770064,
+						"time": 34.2746796,
 						"runs": 5
 					}
 				}
@@ -852,11 +919,12 @@
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
 				"version": "0.25.1",
+				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedSize": 270129,
 						"minzippedSize": 90800,
-						"time": 71.2292588,
+						"time": 69.97504740000001,
 						"runs": 5
 					}
 				}
@@ -864,11 +932,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.2.5",
+				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedSize": 273406,
 						"minzippedSize": 92395,
-						"time": 49.3677754,
+						"time": 49.9926596,
 						"runs": 5
 					}
 				}
@@ -876,11 +945,12 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20240317.0.0",
+				"configHash": "a90ea71116",
 				"result": {
 					"data": {
 						"minifiedSize": 270298,
 						"minzippedSize": 94121,
-						"time": 7109.5721066,
+						"time": 7048.4731662,
 						"runs": 5
 					}
 				}
@@ -888,6 +958,7 @@
 			"babel-minify": {
 				"minifierPath": "babel-minify.ts",
 				"version": "0.5.2",
+				"configHash": "0774252772",
 				"result": {
 					"error": {
 						"message": "unknown: Cannot read properties of undefined (reading 'add')",
@@ -899,6 +970,7 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
+				"configHash": "97050c77cb",
 				"result": {
 					"error": {
 						"message": "RuntimeException: Unclosed regex pattern at position: 289075 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643",
@@ -918,11 +990,12 @@
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
 				"version": "0.58.1",
+				"configHash": "adfabf738f",
 				"result": {
 					"data": {
 						"minifiedSize": 440173,
 						"minzippedSize": 122364,
-						"time": 40.827677800000004,
+						"time": 41.265816400000006,
 						"runs": 5
 					}
 				}
@@ -930,11 +1003,12 @@
 			"@swc/core": {
 				"minifierPath": "swc.ts",
 				"version": "1.11.9",
+				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedSize": 455488,
 						"minzippedSize": 123071,
-						"time": 190.704611,
+						"time": 186.3980818,
 						"runs": 5
 					}
 				}
@@ -942,11 +1016,12 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 451192,
 						"minzippedSize": 123334,
-						"time": 3878.0645921999994,
+						"time": 3786.5722984,
 						"runs": 5
 					}
 				}
@@ -954,11 +1029,12 @@
 			"terser": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 458289,
 						"minzippedSize": 123482,
-						"time": 2544.2810317999997,
+						"time": 2171.6753252,
 						"runs": 5
 					}
 				}
@@ -966,11 +1042,12 @@
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 474395,
 						"minzippedSize": 124428,
-						"time": 1138.7273202000001,
+						"time": 967.2575268,
 						"runs": 5
 					}
 				}
@@ -978,11 +1055,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 472162,
 						"minzippedSize": 124609,
-						"time": 789.8577383999999,
+						"time": 778.440208,
 						"runs": 5
 					}
 				}
@@ -990,11 +1068,12 @@
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
 				"version": "2.21.3",
+				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedSize": 456695,
 						"minzippedSize": 124897,
-						"time": 32.1634204,
+						"time": 31.755959800000007,
 						"runs": 5
 					}
 				}
@@ -1002,11 +1081,12 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20240317.0.0",
+				"configHash": "a90ea71116",
 				"result": {
 					"data": {
 						"minifiedSize": 439949,
 						"minzippedSize": 126562,
-						"time": 6631.285446600001,
+						"time": 6579.302069799999,
 						"runs": 5
 					}
 				}
@@ -1014,11 +1094,12 @@
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
 				"version": "0.25.1",
+				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedSize": 458893,
 						"minzippedSize": 126707,
-						"time": 63.80239300000001,
+						"time": 62.22584340000001,
 						"runs": 5
 					}
 				}
@@ -1026,11 +1107,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.2.5",
+				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedSize": 466803,
 						"minzippedSize": 127653,
-						"time": 48.198783199999994,
+						"time": 47.1122248,
 						"runs": 5
 					}
 				}
@@ -1038,11 +1120,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
+				"configHash": "97050c77cb",
 				"result": {
 					"data": {
 						"minifiedSize": 633710,
 						"minzippedSize": 145178,
-						"time": 1184.6564776,
+						"time": 1340.8835525999998,
 						"runs": 5
 					}
 				}
@@ -1050,6 +1133,7 @@
 			"babel-minify": {
 				"minifierPath": "babel-minify.ts",
 				"version": "0.5.2",
+				"configHash": "0774252772",
 				"result": {
 					"error": {
 						"message": "unknown: Cannot read properties of undefined (reading 'add')",
@@ -1069,11 +1153,12 @@
 			"@swc/core": {
 				"minifierPath": "swc.ts",
 				"version": "1.11.9",
+				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedSize": 643133,
 						"minzippedSize": 158751,
-						"time": 311.5872762,
+						"time": 283.18131220000004,
 						"runs": 5
 					}
 				}
@@ -1081,11 +1166,12 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 641593,
 						"minzippedSize": 159071,
-						"time": 5130.4603604,
+						"time": 5046.1294526,
 						"runs": 5
 					}
 				}
@@ -1093,11 +1179,12 @@
 			"terser": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 653248,
 						"minzippedSize": 159198,
-						"time": 3404.5074136000003,
+						"time": 2933.5729346,
 						"runs": 5
 					}
 				}
@@ -1105,11 +1192,12 @@
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
 				"version": "0.58.1",
+				"configHash": "adfabf738f",
 				"result": {
 					"data": {
 						"minifiedSize": 647005,
 						"minzippedSize": 160831,
-						"time": 58.83749620000001,
+						"time": 59.637500599999996,
 						"runs": 5
 					}
 				}
@@ -1117,11 +1205,12 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20240317.0.0",
+				"configHash": "a90ea71116",
 				"result": {
 					"data": {
 						"minifiedSize": 644450,
 						"minzippedSize": 162998,
-						"time": 8208.225974199999,
+						"time": 8569.1615614,
 						"runs": 5
 					}
 				}
@@ -1129,11 +1218,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 674490,
 						"minzippedSize": 163036,
-						"time": 1015.4029618000001,
+						"time": 993.953499,
 						"runs": 5
 					}
 				}
@@ -1141,11 +1231,12 @@
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 675504,
 						"minzippedSize": 163198,
-						"time": 1508.2923564,
+						"time": 1287.4313405999999,
 						"runs": 5
 					}
 				}
@@ -1153,11 +1244,12 @@
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
 				"version": "0.25.1",
+				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedSize": 646759,
 						"minzippedSize": 163725,
-						"time": 91.165407,
+						"time": 88.54193520000001,
 						"runs": 5
 					}
 				}
@@ -1165,11 +1257,12 @@
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
 				"version": "2.21.3",
+				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedSize": 644551,
 						"minzippedSize": 164737,
-						"time": 49.6017054,
+						"time": 48.656281,
 						"runs": 5
 					}
 				}
@@ -1177,11 +1270,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.2.5",
+				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedSize": 655932,
 						"minzippedSize": 166210,
-						"time": 56.961662000000004,
+						"time": 59.0061818,
 						"runs": 5
 					}
 				}
@@ -1189,11 +1283,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
+				"configHash": "97050c77cb",
 				"result": {
 					"data": {
 						"minifiedSize": 952007,
 						"minzippedSize": 193471,
-						"time": 1518.9614511999998,
+						"time": 1715.3083073999999,
 						"runs": 5
 					}
 				}
@@ -1201,6 +1296,7 @@
 			"babel-minify": {
 				"minifierPath": "babel-minify.ts",
 				"version": "0.5.2",
+				"configHash": "0774252772",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -1218,11 +1314,12 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 694781,
 						"minzippedSize": 157435,
-						"time": 6627.1753182,
+						"time": 6578.685240199999,
 						"runs": 5
 					}
 				}
@@ -1230,11 +1327,12 @@
 			"@swc/core": {
 				"minifierPath": "swc.ts",
 				"version": "1.11.9",
+				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedSize": 707604,
 						"minzippedSize": 157900,
-						"time": 409.69726520000006,
+						"time": 393.0267498,
 						"runs": 5
 					}
 				}
@@ -1242,11 +1340,12 @@
 			"terser": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 715581,
 						"minzippedSize": 158706,
-						"time": 4551.989690200001,
+						"time": 3977.41004,
 						"runs": 5
 					}
 				}
@@ -1254,11 +1353,12 @@
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
 				"version": "0.58.1",
+				"configHash": "adfabf738f",
 				"result": {
 					"data": {
 						"minifiedSize": 716144,
 						"minzippedSize": 162262,
-						"time": 84.511518,
+						"time": 79.9024302,
 						"runs": 5
 					}
 				}
@@ -1266,11 +1366,12 @@
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
 				"version": "2.21.3",
+				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedSize": 718730,
 						"minzippedSize": 165131,
-						"time": 56.709526800000006,
+						"time": 56.1276174,
 						"runs": 5
 					}
 				}
@@ -1278,11 +1379,12 @@
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 759337,
 						"minzippedSize": 166386,
-						"time": 1863.8761696000001,
+						"time": 1605.82709,
 						"runs": 5
 					}
 				}
@@ -1290,11 +1392,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 756530,
 						"minzippedSize": 167579,
-						"time": 1344.9993586,
+						"time": 1314.1042733999998,
 						"runs": 5
 					}
 				}
@@ -1302,11 +1405,12 @@
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
 				"version": "0.25.1",
+				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedSize": 724140,
 						"minzippedSize": 181071,
-						"time": 123.1600398,
+						"time": 123.85141800000001,
 						"runs": 5
 					}
 				}
@@ -1314,11 +1418,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.2.5",
+				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedSize": 727899,
 						"minzippedSize": 182671,
-						"time": 84.9228758,
+						"time": 82.5055826,
 						"runs": 5
 					}
 				}
@@ -1326,6 +1431,7 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20240317.0.0",
+				"configHash": "a90ea71116",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -1335,6 +1441,7 @@
 			"babel-minify": {
 				"minifierPath": "babel-minify.ts",
 				"version": "0.5.2",
+				"configHash": "0774252772",
 				"result": {
 					"error": {
 						"message": "unknown: Cannot read properties of undefined (reading 'add')",
@@ -1346,10 +1453,11 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
+				"configHash": "97050c77cb",
 				"result": {
 					"error": {
 						"message": "Unexpected token '~'",
-						"stack": "fs-require://2/index.js:594\nreturn function(key,value){if(stack.length>0){var thisPos=stack.indexOf(this)~thisPos?stack.splice(thisPos+1):stack.push(this)~thisPos?keys.splice(thisPos,Infinity,key):keys.push(key)\n                                                                             ^\n\nSyntaxError: Unexpected token '~'\n    at new Script (node:vm:99:7)\n    at createScript (node:vm:255:10)\n    at Object.runInThisContext (node:vm:303:10)\n    at p. (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1165)\n    at s (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1657)\n    at requireString (/packages/artifacts/utils/require-string.ts:9:9)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:98:22)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:98:2)",
+						"stack": "fs-require://2/index.js:594\nreturn function(key,value){if(stack.length>0){var thisPos=stack.indexOf(this)~thisPos?stack.splice(thisPos+1):stack.push(this)~thisPos?keys.splice(thisPos,Infinity,key):keys.push(key)\n                                                                             ^\n\nSyntaxError: Unexpected token '~'\n    at new Script (node:vm:116:7)\n    at createScript (node:vm:268:10)\n    at Object.runInThisContext (node:vm:316:10)\n    at p. (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1165)\n    at s (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1657)\n    at requireString (/packages/artifacts/utils/require-string.ts:9:9)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:100:23)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:98:2)",
 						"stage": "post-validation"
 					}
 				}
@@ -1365,11 +1473,12 @@
 			"@swc/core": {
 				"minifierPath": "swc.ts",
 				"version": "1.11.9",
+				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedSize": 994576,
 						"minzippedSize": 321269,
-						"time": 758.1695573999999,
+						"time": 752.1531124,
 						"runs": 5
 					}
 				}
@@ -1377,11 +1486,12 @@
 			"terser": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 1000714,
 						"minzippedSize": 321987,
-						"time": 6919.131898199999,
+						"time": 6004.7721796,
 						"runs": 5
 					}
 				}
@@ -1389,11 +1499,12 @@
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
 				"version": "0.58.1",
+				"configHash": "adfabf738f",
 				"result": {
 					"data": {
 						"minifiedSize": 1006799,
 						"minzippedSize": 324635,
-						"time": 165.0318688,
+						"time": 217.7205078,
 						"runs": 5
 					}
 				}
@@ -1401,11 +1512,12 @@
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 1071527,
 						"minzippedSize": 330736,
-						"time": 3123.6588335999995,
+						"time": 2649.3046856,
 						"runs": 5
 					}
 				}
@@ -1413,11 +1525,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 1068386,
 						"minzippedSize": 331412,
-						"time": 1776.45138,
+						"time": 1756.3432927999997,
 						"runs": 5
 					}
 				}
@@ -1425,11 +1538,12 @@
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
 				"version": "0.25.1",
+				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedSize": 1011234,
 						"minzippedSize": 331563,
-						"time": 198.93568639999998,
+						"time": 193.1410484,
 						"runs": 5
 					}
 				}
@@ -1437,11 +1551,12 @@
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
 				"version": "2.21.3",
+				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedSize": 1014368,
 						"minzippedSize": 331791,
-						"time": 119.6293924,
+						"time": 116.7841854,
 						"runs": 5
 					}
 				}
@@ -1449,11 +1564,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.2.5",
+				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedSize": 1024688,
 						"minzippedSize": 337934,
-						"time": 131.5804302,
+						"time": 131.16065059999997,
 						"runs": 5
 					}
 				}
@@ -1461,6 +1577,7 @@
 			"babel-minify": {
 				"minifierPath": "babel-minify.ts",
 				"version": "0.5.2",
+				"configHash": "0774252772",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -1470,6 +1587,7 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20240317.0.0",
+				"configHash": "a90ea71116",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -1479,6 +1597,7 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -1488,6 +1607,7 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
+				"configHash": "97050c77cb",
 				"result": {
 					"error": {
 						"message": "RuntimeException: Unclosed regex pattern at position: 37315 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643",
@@ -1507,11 +1627,12 @@
 			"@swc/core": {
 				"minifierPath": "swc.ts",
 				"version": "1.11.9",
+				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedSize": 2148032,
 						"minzippedSize": 452827,
-						"time": 1104.6707356000002,
+						"time": 1101.4142178,
 						"runs": 5
 					}
 				}
@@ -1519,11 +1640,12 @@
 			"terser": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 2249014,
 						"minzippedSize": 457786,
-						"time": 8104.211034,
+						"time": 6822.6902542,
 						"runs": 5
 					}
 				}
@@ -1531,11 +1653,12 @@
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
 				"version": "0.58.1",
+				"configHash": "adfabf738f",
 				"result": {
 					"data": {
 						"minifiedSize": 2278720,
 						"minzippedSize": 463357,
-						"time": 234.41963419999996,
+						"time": 229.60452699999996,
 						"runs": 5
 					}
 				}
@@ -1543,11 +1666,12 @@
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
 				"version": "2.21.3",
+				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedSize": 2295397,
 						"minzippedSize": 472044,
-						"time": 142.5491288,
+						"time": 139.15045400000002,
 						"runs": 5
 					}
 				}
@@ -1555,11 +1679,12 @@
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 2425048,
 						"minzippedSize": 475480,
-						"time": 3685.8722587999996,
+						"time": 3110.5994888,
 						"runs": 5
 					}
 				}
@@ -1567,11 +1692,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 2420587,
 						"minzippedSize": 478572,
-						"time": 2504.3838831999997,
+						"time": 2524.760631,
 						"runs": 5
 					}
 				}
@@ -1579,11 +1705,12 @@
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
 				"version": "0.25.1",
+				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedSize": 2306394,
 						"minzippedSize": 488279,
-						"time": 301.95929939999996,
+						"time": 290.7972456,
 						"runs": 5
 					}
 				}
@@ -1591,11 +1718,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.2.5",
+				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedSize": 2296786,
 						"minzippedSize": 491833,
-						"time": 184.0251448,
+						"time": 183.6512868,
 						"runs": 5
 					}
 				}
@@ -1603,6 +1731,7 @@
 			"babel-minify": {
 				"minifierPath": "babel-minify.ts",
 				"version": "0.5.2",
+				"configHash": "0774252772",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -1612,6 +1741,7 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20240317.0.0",
+				"configHash": "a90ea71116",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -1621,6 +1751,7 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
+				"configHash": "97050c77cb",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -1630,6 +1761,7 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -1647,11 +1779,12 @@
 			"@swc/core": {
 				"minifierPath": "swc.ts",
 				"version": "1.11.9",
+				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedSize": 3318834,
 						"minzippedSize": 858287,
-						"time": 2179.1022445999997,
+						"time": 2227.6926154000002,
 						"runs": 5
 					}
 				}
@@ -1659,11 +1792,12 @@
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
 				"version": "0.58.1",
+				"configHash": "adfabf738f",
 				"result": {
 					"data": {
 						"minifiedSize": 3349566,
 						"minzippedSize": 860673,
-						"time": 441.01796679999995,
+						"time": 729.573708,
 						"runs": 5
 					}
 				}
@@ -1671,11 +1805,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"data": {
 						"minifiedSize": 3538024,
 						"minzippedSize": 876535,
-						"time": 3927.9992222,
+						"time": 4029.2976471999996,
 						"runs": 5
 					}
 				}
@@ -1683,11 +1818,12 @@
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
 				"version": "2.21.3",
+				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedSize": 3362866,
 						"minzippedSize": 876658,
-						"time": 266.65556000000004,
+						"time": 264.57912619999996,
 						"runs": 5
 					}
 				}
@@ -1695,11 +1831,12 @@
 			"terser (no compress)": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"data": {
 						"minifiedSize": 3530223,
 						"minzippedSize": 879301,
-						"time": 6433.3752355999995,
+						"time": 5317.868483,
 						"runs": 5
 					}
 				}
@@ -1707,11 +1844,12 @@
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
 				"version": "0.25.1",
+				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedSize": 3489707,
 						"minzippedSize": 915551,
-						"time": 492.43559539999995,
+						"time": 495.944652,
 						"runs": 5
 					}
 				}
@@ -1719,6 +1857,7 @@
 			"terser": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.0",
+				"configHash": "fb23c51035",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -1728,6 +1867,7 @@
 			"babel-minify": {
 				"minifierPath": "babel-minify.ts",
 				"version": "0.5.2",
+				"configHash": "0774252772",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -1737,6 +1877,7 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20240317.0.0",
+				"configHash": "a90ea71116",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -1746,6 +1887,7 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
+				"configHash": "4beb4311b5",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -1755,17 +1897,17 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
+				"configHash": "97050c77cb",
 				"result": {
 					"error": {
-						"message": "RuntimeException: Unclosed regex pattern at position: 8365076 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643",
-						"stack": "Stack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString('/* ************...', Array)\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify('/* ************...')\n#4 {main}",
-						"stage": "minification"
+						"message": "timeout"
 					}
 				}
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.2.5",
+				"configHash": "cd9d902c70",
 				"result": {
 					"error": {
 						"message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'",
