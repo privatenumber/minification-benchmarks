@@ -1,5 +1,6 @@
-import path from 'path';
-import fs from 'fs/promises';
+import path from 'node:path';
+import fs from 'node:fs/promises';
+import crypto from 'node:crypto';
 import { minifiersDirectory } from './minifiers-directory.js';
 import type { MinifierLoaded } from './create-minifier.js';
 
@@ -8,10 +9,13 @@ const loadMinifierByPath = async (
 ) => {
 	try {
 		const fullMinifierPath = path.join(minifiersDirectory, minifierPath);
+		const minifierConfig = await fs.readFile(fullMinifierPath, 'utf8');
+		const configHash = crypto.createHash('sha256').update(minifierConfig).digest('hex').slice(0, 10);
+
 		const minifierModule = await import(fullMinifierPath);
 		const minifier: MinifierLoaded = minifierModule.default;
 
-		await minifier.loadMeta(minifierPath);
+		await minifier.loadMeta(minifierPath, configHash);
 
 		return minifier;
 	} catch (error) {

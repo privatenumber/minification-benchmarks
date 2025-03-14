@@ -3,6 +3,7 @@ import type { BenchmarkResultWithRuns } from '@minification-benchmarks/bench/typ
 export type Minifier = {
 	minifierPath: string;
 	version: string;
+	configHash: string;
 	result: BenchmarkResultWithRuns;
 };
 
