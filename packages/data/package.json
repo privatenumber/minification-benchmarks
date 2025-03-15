@@ -12,6 +12,7 @@
 		"date-fns": "^3.6.0",
 		"lodash-es": "^4.17.21",
 		"markdown-table": "^3.0.3",
+		"openai": "^4.87.3",
 		"outdent": "^0.8.0"
 	},
 	"devDependencies": {
