@@ -557,41 +557,29 @@ xychart-beta
 > 🤖 This analysis is AI generated
 
 <!-- analysis:start -->
-Wow! What a nail-biting contest among JavaScript minifiers. This race was packed with blazing speeds, daring compressions, and a few spectacular stumbles. Buckle up as we dive into the thrilling results!
-
----
+The JavaScript minification contest is over, and the results are in! The arena has seen speed demons, size savants, and a few stumblers who didn’t make it past the finish line. Let’s break it all down.
 
 ### Best minifier
-**@swc/core** takes the crown! It delivered the smallest gzip sizes in 9 out of 12 rounds, all while maintaining consistently low processing times. In heavyweights like `antd` (825.18 kB) and `typescript` (1.88 MB), it crushed the competition with outstanding compression ratios of 54.88% and 45.53%, respectively, proving it’s the Stephen Curry of minifiers—fast, precise, and dominating across the board.
-
-While not always the fastest, it boasted the best overall balance of size and speed. You win, @swc/core. Take a bow!
-
----
+**@swc/core** takes the crown! It consistently delivered competitive Gzip sizes while maintaining blazing fast speeds, making it the ultimate choice for both size-conscious and performance-focused developers. Most notably, it absolutely dominated larger files (like `antd` and `echarts`) with unbeatable compression-vs-speed balance. In the `antd` round, it slashed the file down by 54.88% in just 1.1 seconds—truly astonishing for its size. Even in head-to-head compression battles like `react`, it tied or nearly tied the champions for Gzip efficiency. No other contestant combined such versatility, speed, and size mastery.
 
 ### Honorable mentions
-- **oxc-minify** was blisteringly fast in every single round, often processing files in a fraction of its competitors' times. While slightly less aggressive on size (e.g., `jquery` at 36.65% vs. @swc/core's 36.55%), it outperformed others in being absurdly quick, making it a fabulous choice for developers seeking rapid minification without sacrificing too much compression.
-
-- **uglify-js** showed its age, but oh, boy, did it still pack a punch. It claimed the top compression spot for the tightest squeeze in `lodash` (25.53%) and `d3` (66.58%). That said, its glacial speed (over 3 seconds—and sometimes over 6!) means it’s best reserved for situations where ultimate compression can justify the wait.
-
-- **terser** was a capable middleweight: decent size optimization with faster speeds than uglify-js in most cases. However, it’s challenging to recommend over @swc/core, which consistently one-upped it in size *and* speed.
-
-- **esbuild** might not have snatched the smallest sizes, but its speed was reliably excellent, especially in massive artifacts like `typescript` (1.88 MB), where it processed the file in under 500ms! When time is critical, esbuild is your go-to.
-
----
+- **oxc-minify**: The juggernaut of speed! It dominated as the fastest minifier in almost every round, often completing its tasks in milliseconds. While its Gzip compression ratios were slightly less aggressive than the top competitors, they remained impressive across the board. Use oxc-minify if you prioritize processing speed and still want solid compression performance.
+  
+- **uglify-js**: The meticulous master of compression! While slow (brutally so—hello, `victory` and `echarts`), uglify-js triumphed with the absolute smallest Gzip sizes in many rounds, such as `moment`, `lodash`, and `d3`. Perfect for projects requiring the tightest micro-optimizations and where time isn't a pressing factor.
+  
+- **esbuild**: The unsung hero! While it wasn’t the smallest or the fastest in most rounds, it delivered consistently good speed and compression. Best of all, esbuild handled gigantic files like `typescript` and `echarts` like a pro—poster child for "speedy without giving up too much."
 
 ### Eliminated
-Here come the casualties. These minifiers couldn’t even complete the gauntlet, and trusting your code to them is a gamble:
+- **babel-minify**: Ouch! It stumbled completely, failing the `d3` round with a catastrophic error. If it can’t handle large and complex files, it’s a non-starter. Best avoided until rock-solid fixes appear.
+  
+- **@tdewolff/minify**: A promising entry that faltered on technical correctness. Parenthesis issues with `d3` reveal an underlying flaw that risks breaking your code. Not worth the gamble!
+  
+- **tedivm/jshrink**: A regex-related mishap in `d3` took this competitor out of the game early. Reliable minification is crucial, and this stumble puts its dependability into question.
+  
+- **bun**: Surprising disqualification! A quirky issue with line endings tripped it up in the `typescript` round. A minor (but impactful) reliability hiccup that proved fatal for production-ready workflows.
 
-1. **babel-minify** stumbled hard on `d3`, crashing with a baffling error. A failure in the minification stage is as catastrophic as being disqualified at the starting line.
-2. **@tdewolff/minify** failed `d3` in post-validation, tripped up by a precedence issue with the exponentiation operator. Yikes!  
-3. **tedivm/jshrink** outright broke in `d3` due to unclosed regex havoc. Regex is always tricky, but this is not reassuring.
-4. **bun** couldn’t pass post-validation with `typescript`. Unequal line breaks took this hopeful minifier out of the competition.
-
-It’s best to steer clear of these for serious use cases!
-
----
-
-Congratulations to all the valid competitors. **@swc/core** emerges as the best all-around minifier for both gzip size and speed, while **oxc-minify** deserves applause as the fastest by leaps and bounds. Everyone brought their A-game, and the JavaScript ecosystem is better for it!
+### Final words
+What an incredible lineup of challengers this year! While **@swc/core** emerged as the clear victor with its speed-and-size combo, **oxc-minify**, **uglify-js**, and **esbuild** demonstrated their unique strengths for various use cases. So whether you favor raw speed, precise compression, or balanced pragmatism, there’s a minifier here for everyone. Hats off to the competitors—it’s been an exhilarating race!
 <!-- analysis:end -->
 
 ## Sponsors
