@@ -98,13 +98,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.22.1",
+				"version": "2.22.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 23494,
 						"minzippedBytes": 8628,
-						"time": 2.6487482,
+						"time": 2.7139884,
 						"runs": 5
 					}
 				}
@@ -262,13 +262,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.22.1",
+				"version": "2.22.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 59871,
 						"minzippedBytes": 19482,
-						"time": 5.5021227999999995,
+						"time": 5.7261574,
 						"runs": 5
 					}
 				}
@@ -387,13 +387,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.22.1",
+				"version": "2.22.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 89681,
 						"minzippedBytes": 31446,
-						"time": 7.9091314000000015,
+						"time": 7.9596532,
 						"runs": 5
 					}
 				}
@@ -577,13 +577,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.22.1",
+				"version": "2.22.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 117667,
 						"minzippedBytes": 44354,
-						"time": 13.712431,
+						"time": 12.987638,
 						"runs": 5
 					}
 				}
@@ -780,13 +780,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.22.1",
+				"version": "2.22.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 71895,
 						"minzippedBytes": 26498,
-						"time": 11.126901,
+						"time": 11.258985999999998,
 						"runs": 5
 					}
 				}
@@ -956,7 +956,7 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.22.1",
+				"version": "2.22.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"error": {
@@ -1066,13 +1066,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.22.1",
+				"version": "2.22.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 456582,
 						"minzippedBytes": 124885,
-						"time": 30.1128418,
+						"time": 30.295844800000005,
 						"runs": 5
 					}
 				}
@@ -1255,13 +1255,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.22.1",
+				"version": "2.22.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 642458,
 						"minzippedBytes": 164608,
-						"time": 46.3360296,
+						"time": 46.936125200000006,
 						"runs": 5
 					}
 				}
@@ -1450,7 +1450,7 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.22.1",
+				"version": "2.22.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"error": {
@@ -1548,13 +1548,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.22.1",
+				"version": "2.22.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 1013507,
 						"minzippedBytes": 331914,
-						"time": 115.4423268,
+						"time": 117.14670119999998,
 						"runs": 5
 					}
 				}
@@ -1663,13 +1663,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.22.1",
+				"version": "2.22.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 2292198,
 						"minzippedBytes": 471728,
-						"time": 140.0334058,
+						"time": 134.536608,
 						"runs": 5
 					}
 				}
@@ -1802,13 +1802,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.22.1",
+				"version": "2.22.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 3348140,
 						"minzippedBytes": 875811,
-						"time": 254.95946659999998,
+						"time": 258.1562128,
 						"runs": 5
 					}
 				}
