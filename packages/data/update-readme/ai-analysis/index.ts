@@ -31,5 +31,7 @@ export const getAiAnalysis = async (
 		],
 	});
 
-	return response.choices[0].message.content!;
+	let analysis = response.choices[0].message.content!;
+	analysis = analysis.replaceAll('\n---\n', '');
+	return analysis;
 };
