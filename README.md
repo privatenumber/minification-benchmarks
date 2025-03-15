@@ -22,7 +22,7 @@ This project benchmarks the following minifiers:
 - [uglify-js](https://github.com/mishoo/UglifyJS) <sub>v3.19.3</sub>
 <!-- minifiers:end -->
 
-_Benchmarks last updated on <!-- lastUpdated:start -->Mar 14, 2025<!-- lastUpdated:end -->._
+_Benchmarks last updated on <!-- lastUpdated:start -->Mar 15, 2025<!-- lastUpdated:end -->._
 
 <br>
 
@@ -67,6 +67,9 @@ For users, this measures network transfer size, which is usually the metric that
 How long minification took (average of 5 runs). Each time is annotated with a multiplier relative to the fastest minifier.
 
 ## 📋 Results
+
+> [!TIP]
+> [⚔️ See the _Minifier showdown_ (analysis & recommendation)](#%EF%B8%8F-minifier-showdown)
 
 <!-- benchmarks:start -->
 ```mermaid
@@ -547,6 +550,37 @@ xychart-beta
 | 12. [bun](packages/minifiers/minifiers/bun.ts) <sub title="Failed: post-validation">❌ Post-validation</sub>                            |                               ❌ |                                ❌  |                                 - |
 </div>
 <!-- benchmarks:end -->
+
+## ⚔️ Minifier showdown
+
+> [!NOTE]
+> 🤖 This analysis is AI generated
+
+<!-- analysis:start -->
+The JavaScript minification contest is over, and the results are in! The arena has seen speed demons, size savants, and a few stumblers who didn’t make it past the finish line. Let’s break it all down.
+
+### Best minifier
+**@swc/core** takes the crown! It consistently delivered competitive Gzip sizes while maintaining blazing fast speeds, making it the ultimate choice for both size-conscious and performance-focused developers. Most notably, it absolutely dominated larger files (like `antd` and `echarts`) with unbeatable compression-vs-speed balance. In the `antd` round, it slashed the file down by 54.88% in just 1.1 seconds—truly astonishing for its size. Even in head-to-head compression battles like `react`, it tied or nearly tied the champions for Gzip efficiency. No other contestant combined such versatility, speed, and size mastery.
+
+### Honorable mentions
+- **oxc-minify**: The juggernaut of speed! It dominated as the fastest minifier in almost every round, often completing its tasks in milliseconds. While its Gzip compression ratios were slightly less aggressive than the top competitors, they remained impressive across the board. Use oxc-minify if you prioritize processing speed and still want solid compression performance.
+  
+- **uglify-js**: The meticulous master of compression! While slow (brutally so—hello, `victory` and `echarts`), uglify-js triumphed with the absolute smallest Gzip sizes in many rounds, such as `moment`, `lodash`, and `d3`. Perfect for projects requiring the tightest micro-optimizations and where time isn't a pressing factor.
+  
+- **esbuild**: The unsung hero! While it wasn’t the smallest or the fastest in most rounds, it delivered consistently good speed and compression. Best of all, esbuild handled gigantic files like `typescript` and `echarts` like a pro—poster child for "speedy without giving up too much."
+
+### Eliminated
+- **babel-minify**: Ouch! It stumbled completely, failing the `d3` round with a catastrophic error. If it can’t handle large and complex files, it’s a non-starter. Best avoided until rock-solid fixes appear.
+  
+- **@tdewolff/minify**: A promising entry that faltered on technical correctness. Parenthesis issues with `d3` reveal an underlying flaw that risks breaking your code. Not worth the gamble!
+  
+- **tedivm/jshrink**: A regex-related mishap in `d3` took this competitor out of the game early. Reliable minification is crucial, and this stumble puts its dependability into question.
+  
+- **bun**: Surprising disqualification! A quirky issue with line endings tripped it up in the `typescript` round. A minor (but impactful) reliability hiccup that proved fatal for production-ready workflows.
+
+### Final words
+What an incredible lineup of challengers this year! While **@swc/core** emerged as the clear victor with its speed-and-size combo, **oxc-minify**, **uglify-js**, and **esbuild** demonstrated their unique strengths for various use cases. So whether you favor raw speed, precise compression, or balanced pragmatism, there’s a minifier here for everyone. Hats off to the competitors—it’s been an exhilarating race!
+<!-- analysis:end -->
 
 ## Sponsors
 

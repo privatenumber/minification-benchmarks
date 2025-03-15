@@ -4,17 +4,16 @@ import commentMark from 'comment-mark';
 import outdent from 'outdent';
 import { format } from 'date-fns';
 import { markdownTable } from 'markdown-table';
-import byteSize from 'byte-size';
 import { minBy, capitalize } from 'lodash-es';
 import type { BenchmarkResultSuccessWithRuns } from '@minification-benchmarks/bench/types.js';
 import { minifiersDirectory } from '@minification-benchmarks/minifiers/utils/minifiers-directory.js';
 import { getMinifiers } from '@minification-benchmarks/minifiers';
+import { byteSize } from '../utils/byte-size.js';
 import { data } from '../data/index.js';
 import type { Data, Artifact } from '../types.js';
 import { percent, formatMs } from './formatting.js';
 import * as mdu from './mdu.js';
-
-byteSize.defaultOptions({ precision: 2 });
+import { getAiAnalysis } from './ai-analysis/index.js';
 
 const displayColumn = (
 	text: string,
@@ -175,6 +174,11 @@ const generateBenchmarks = (benchmarkData: Data) => {
 
 const minifiers = await getMinifiers();
 
+const analysis = await getAiAnalysis(
+	minifiers,
+	data,
+);
+
 const readmePath = './README.md';
 const readme = await fs.readFile(readmePath, 'utf8');
 
@@ -184,6 +188,7 @@ const newReadme = commentMark(readme, {
 	minifiers: minifiers.map(
 		({ meta }) => `- ${mdu.link(meta.name, meta.url)} ${mdu.sub(`v${meta.version}`)}`,
 	).join('\n'),
+	analysis,
 });
 
 await fs.writeFile(readmePath, newReadme);
