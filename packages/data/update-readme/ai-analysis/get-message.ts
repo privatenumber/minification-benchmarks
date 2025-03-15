@@ -1,8 +1,8 @@
 import outdent from 'outdent';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
+import { format } from 'date-fns';
 import { byteSize } from '../../utils/byte-size.js';
 import type { Data, Minifier } from '../../types.js';
-import { format } from 'date-fns';
 
 const roundNumber = (
 	number: number,

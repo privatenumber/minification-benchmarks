@@ -4,7 +4,7 @@ import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
 import type { Data } from '../../types.js';
 import { getMessage } from './get-message.js';
 
-const token = process.env.GH_TOKEN
+const token = process.env.GH_TOKEN;
 
 export const getAiAnalysis = async (
 	minifiers: MinifierLoaded[],
