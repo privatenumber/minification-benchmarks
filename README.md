@@ -68,6 +68,8 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 
 ## 📋 Results
 
+[↓ Jump to the result analysis & recommendation](#%EF%B8%8F-minifier-showdown)
+
 <!-- benchmarks:start -->
 ```mermaid
 ---
@@ -551,7 +553,7 @@ xychart-beta
 ## ⚔️ Minifier showdown
 
 > [!NOTE]
-> This analysis is AI generated
+> 🤖 This analysis is AI generated
 
 <!-- analysis:start -->
 Hold onto your hats, folks, because the JavaScript minifier face-off was nothing short of electrifying! Competitors collided in a no-holds-barred battle of speed, size, and compression grit. Let’s dive in to find out who conquered the leaderboard and who got left behind in the dust.
