@@ -557,30 +557,22 @@ xychart-beta
 > 🤖 This analysis is AI generated
 
 <!-- analysis:start -->
-The competition for the best JavaScript minifier has been intense! With a mix of lightning-fast execution, tight compression, and a touch of drama, let's dive into the overall results.
+Folks, we’ve got a heavyweight showdown in JavaScript minification! From lightning-fast contenders to the most disciplined compressors, the results are in, and the competition was fierce across a dazzling lineup of scenarios. Let’s dive in!
 
-### Best Minifier
-**The champion: @swc/core!**  
-@swc/core consistently delivered exceptional Gzip compression ratios across all tests while maintaining solid speed. Whether it was smaller libraries like React or giants like TypeScript, @swc/core kept up its stellar performance, often achieving results as good as—or better than—the likes of UglifyJS or Terser. It struck the perfect balance between size reduction and processing times that didn’t sacrifice your day waiting for results. Truly an all-terrain minifier!
+### Best minifier
+**@swc/core** takes the crown for overall excellence! This remarkable tool crushed every significant challenge with consistent top-tier compression percentages (like 36.55% for jQuery and 45.53% for TypeScript) and blistering speeds (e.g., 393.03ms for Victory or 752.15ms for ECharts). Sure, some minifiers managed to scrape a fractionally better size, but @swc/core's combination of world-class compression, fast processing, and reliability makes it the champion for the *average user*. It’s hard to beat a tool that balances power and speed so gracefully!
 
-**Standout results:** Smallest Gzips for libraries like Vue (42.73 kB) and performance consistency even with 1.88 MB TypeScript projects.
-
-### Honorable Mentions
-- **Oxc-minify:** The fastest minifier on record! If speed is the name of the game, you can't do better than Oxc-minify. From blazing through React in **just 2.68ms** to handling the massive TypeScript library in under a second, Oxc-minify dominated speed tests. It did compromise slightly on compression (e.g., 324.64 kB Gzip for ECharts vs. @swc/core’s 321.27 kB), so consider this the top pick when time is critical.
-- **UglifyJS:** For maximum compression enthusiasts, UglifyJS still leads the pack. It achieved unbeatable Gzip sizes for Moment (18.57 kB, 51.25% reduction) and even massive libraries like D3 (87.02 kB, 66.58% reduction). However, its Achilles' heel is speed; processing times (e.g., 6578ms with Victory.js) are by far the slowest among competitors.
-- **Terser:** A balanced contender for strong compression and middle-ground speed. While both @swc/core and UglifyJS edged it out in size in many cases, it managed an impressive 123.48 kB Gzip size on the Terser benchmark itself with reasonably faster results than UglifyJS. Reliable but overshadowed in this fierce competition.
-- **Esbuild:** While consistent, Esbuild sacrificed size for speed. It was the fastest in handling giant libraries like ECharts (193ms) and TypeScript (496ms). However, compression efficiency wasn’t as sharp (e.g., 915.55 kB for TypeScript wasn’t even close to @swc/core’s 858.29 kB). Esbuild is a speedrunner’s friend!
+### Honorable mentions
+- **oxc-minify**, the sprinter in our race! Boasting unmatched speeds, it consistently completed compression in milliseconds—even for large files like Victory (79.9ms) and TypeScript (729.57ms). A tiny trade-off in size (e.g., 26.87% for Lodash vs. Uglify's 25.53%) keeps it from gold, but it’s hands-down the fastest minifier for when you’re in a crunch.
+- **uglify-js** stands as the grandmaster of compression. This champion achieved the smallest sizes across several rounds (25.53% for Lodash, 50.79% for Victory, and 66.58% for d3). But its painstakingly slow speeds (e.g., 6578.69ms for Victory) mean you'll need patience to revel in its tighter results. Worth it if transfer times trump processing speeds for you!
+- **esbuild**, while slightly less aggressive in compression, turned in a strong performance and blazingly fast times (like 290.8ms for AntD and 495.94ms for TypeScript). It's recommended for developers prioritizing "good enough" compression delivered at warp speed.
 
 ### Eliminated
-- **Babel-minify:** A dramatic early exit as it failed to minify D3 due to an internal error. A lack of updates since 2022 also casts doubt on its reliability in 2025.
-- **@tdewolff/minify:** Promising, but failed on D3 due to incorrect handling of operator precedence. It’s fast, but trade-offs here might not be worth it for production-grade projects.
-- **Tedivm/JShrink:** Another misstep on D3, failing during minification due to regex issues. Likely not robust enough for modern JavaScript.
-- **Bun:** Impressively fast but stumbled on TypeScript validation due to mismatched expectations. Needs more polish for broader use cases.
+- **babel-minify**, **@tdewolff/minify**, and **tedivm/jshrink** fumbled hard by tripping over improper handling of JavaScript edge cases. Runtime errors during standard minification (e.g., D3) make them a risky choice—you wouldn’t want your build to fail at the worst moment!
+- **bun**, while promising, failed validation for a critical file format difference (`\r\n` vs. `\n`). Standards compliance matters in production tools, so Bun has some brushing up to do.
+- **google-closure-compiler**, the tortoise in this race, delivers respectably tight compression but at an astronomical price: massive delays in every test. It even timed out entirely on larger packages (like Victory and ECharts). Best left for specialized cases requiring its advanced closure features, not in general battle.
 
-### The Final Call
-If you’re after compression quality and speedy minification all rolled into one, @swc/core is the reigning champ for the average user. For high-speed workflows, Oxc-minify is the quintessential rocket. Special use cases? UglifyJS has your extreme compression needs covered, while Esbuild dominates with fast, near-lossless builds.
-
-Congratulations to all the minifiers for a thrilling competition! It’s clear that the JavaScript minification ecosystem is alive and racing headstrong into the future.
+Everyone, let’s give these tools a round of applause—they’ve all come a long way to compete today. Whether you’re after absolute size savings, blazing speeds, or a balanced compromise, it’s clear there’s a tool tailored for your needs in this thrilling bunch!
 <!-- analysis:end -->
 
 ## Sponsors
