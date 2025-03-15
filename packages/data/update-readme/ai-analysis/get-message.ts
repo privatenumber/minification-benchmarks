@@ -21,15 +21,12 @@ const getEliminated = (
 ) => {
 	const eliminated: Eliminated = {};
 
-	for (const artifactName in data) {
-		const artifact = data[artifactName];
-		for (const minifierName in artifact.minified) {
-			const minified = artifact.minified[minifierName];
-
+	for (const [artifactName, artifact] of Object.entries(data)) {
+		for (const [minifierName, minified] of Object.entries(artifact.minified)) {
 			if (
 				'error' in minified.result
-                && minified.result.error.message !== 'timeout'
-             	&& !eliminated[minifierName]
+				&& minified.result.error.message !== 'timeout'
+				&& !eliminated[minifierName]
 			) {
 				eliminated[minifierName] = {
 					reason: `Failed "${artifactName}" in ${minified.result.error.stage} stage`,
@@ -63,68 +60,70 @@ const getFastestMinifier = (
 	return fastestMinifier![0];
 };
 
-export const getMessage =  (
-    minifiers: MinifierLoaded[],
+export const getMessage = (
+	minifiers: MinifierLoaded[],
 	data: Data,
 ) => {
 	const eliminated = getEliminated(data);
 
 	return outdent`
-    # Minifiers
-    ${
+	# Minifiers
+	${
 		// TODO: include release date
 		minifiers.map(minifier => `- ${minifier.name} v${minifier.meta.version}`).join('\n')
 	}
 
-    # Race results
-    ${
-        Object.entries(data)
-        	.sort(([, artifactA], [, artifactB]) => artifactA.gzipSize - artifactB.gzipSize)
-        	.map(([artifactName, artifact], artifactIndex) => {
-        		const round = artifactIndex + 1;
-        		const minified = Object.entries(artifact.minified)
-        			.filter(([minifierName]) => !eliminated[minifierName])
-        			.sort(([, minA], [, minB]) => {
-        				if ('error' in minA.result) {
-        					return 1;
-        				}
-        				if ('error' in minB.result) {
-        					return -1;
-        				}
-        				return minA.result.data.minzippedBytes - minB.result.data.minzippedBytes;
-        			});
+	# Race results
+	${
+		Object.entries(data)
+			.sort(([, artifactA], [, artifactB]) => artifactA.gzipSize - artifactB.gzipSize)
+			.map(([artifactName, artifact], artifactIndex) => {
+				const round = artifactIndex + 1;
+				const minified = Object.entries(artifact.minified)
+					.filter(([minifierName]) => !eliminated[minifierName])
+					.sort(([, minA], [, minB]) => {
+						if ('error' in minA.result) {
+							return 1;
+						}
+						if ('error' in minB.result) {
+							return -1;
+						}
+						return minA.result.data.minzippedBytes - minB.result.data.minzippedBytes;
+					});
 
 				const fastestMinifier = getFastestMinifier(minified);
 
-        		return outdent`
-                ## Round ${round}: ${artifactName} (${byteSize(artifact.gzipSize).toString()})
-                ${
-                    minified.map(([minifierName, minified], index) => {
-                    	if ('error' in minified.result) {
-                    		return outdent`
-                            ❌ ${minifierName}: ${minified.result.error.message}
-                            `;
-                    	}
+				return outdent`
+				## Round ${round}: ${artifactName} (${byteSize(artifact.gzipSize).toString()})
+				${
+					minified.map(([minifierName, { result }], index) => {
+						if ('error' in result) {
+							return outdent`
+							❌ ${minifierName}: ${result.error.message}
+							`;
+						}
 
-                    	const { minzippedBytes, time } = minified.result.data;
-                    	const percent = roundNumber((minzippedBytes / artifact.gzipSize) * 100, 2);
-                    	return outdent`
-                        ${index + 1}. ${minifierName}: ${byteSize(minzippedBytes).toString()} (${percent}%) in ${roundNumber(time, 2)}ms
-                        `;
-                    }).join('\n')
-                }
-                
-                - Fastest minifier: ${fastestMinifier}
-                `;
-        	})
-        	.join('\n\n')
-    }
+						const { minzippedBytes, time } = result.data;
+						const percent = roundNumber((minzippedBytes / artifact.gzipSize) * 100, 2);
+						return outdent`
+						${index + 1}. ${minifierName}: ${byteSize(minzippedBytes).toString()} (${percent}%) in ${roundNumber(time, 2)}ms
+						`;
+					}).join('\n')
+				}
 
-    # Eliminated
-    ${Object.entries(eliminated).map(([minifierName, { reason, error }]) => outdent`
-    ## ${minifierName}
-    ${reason}:
-    ${JSON.stringify(error)}
-    `).join('\n\n')}
-    `;
+				- Fastest minifier: ${fastestMinifier}
+				`;
+			})
+			.join('\n\n')
+	}
+
+	# Eliminated
+	${
+		Object.entries(eliminated).map(([minifierName, { reason, error }]) => outdent`
+		## ${minifierName}
+		${reason}:
+		${JSON.stringify(error)}
+		`).join('\n\n')
+	}
+	`;
 };
