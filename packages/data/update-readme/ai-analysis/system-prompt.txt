@@ -33,7 +33,7 @@ Within each, the `minified` property contains:
 <List of minifiers that stood out. Reference results.>
 
 ### Eliminated
-<List eliminated minifiers and warn against using them as it could produce erroneous code>
+<List eliminated minifiers and warn against using them as it could corrupt code>
 
 <Quick outro. Congratulate everyone on impressive results>
 ```
