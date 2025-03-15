@@ -10,16 +10,16 @@
 This project benchmarks the following minifiers:
 
 <!-- minifiers:start -->
-- [babel-minify](https://github.com/babel/minify/tree/master/packages/babel-minify) <sub>v0.5.2</sub>
-- [bun](https://github.com/oven-sh/bun) <sub>v1.2.5</sub>
-- [esbuild](https://github.com/evanw/esbuild) <sub>v0.25.1</sub>
-- [google-closure-compiler](https://github.com/google/closure-compiler-npm/tree/master/packages/google-closure-compiler) <sub>v20240317.0.0</sub>
+- [babel-minify](https://github.com/babel/minify/tree/master/packages/babel-minify) <sub>v0.5.2 (released 2022-05-06)</sub>
+- [bun](https://github.com/oven-sh/bun) <sub>v1.2.5 (released 2025-03-11)</sub>
+- [esbuild](https://github.com/evanw/esbuild) <sub>v0.25.1 (released 2025-03-10)</sub>
+- [google-closure-compiler](https://github.com/google/closure-compiler-npm/tree/master/packages/google-closure-compiler) <sub>v20240317.0.0 (released 2024-03-19)</sub>
 - [tedivm/jshrink](https://github.com/tedious/JShrink) <sub>v1.7.0</sub>
-- [oxc-minify](https://github.com/oxc-project/oxc.git) <sub>v0.58.1</sub>
-- [@swc/core](https://github.com/swc-project/swc) <sub>v1.11.9</sub>
-- [@tdewolff/minify](https://github.com/tdewolff/minify#readme) <sub>v2.22.2</sub>
-- [terser](https://github.com/terser/terser) <sub>v5.39.0</sub>
-- [uglify-js](https://github.com/mishoo/UglifyJS) <sub>v3.19.3</sub>
+- [oxc-minify](https://github.com/oxc-project/oxc.git) <sub>v0.58.1 (released 2025-03-13)</sub>
+- [@swc/core](https://github.com/swc-project/swc) <sub>v1.11.9 (released 2025-03-12)</sub>
+- [@tdewolff/minify](https://github.com/tdewolff/minify#readme) <sub>v2.22.2 (released 2025-03-14)</sub>
+- [terser](https://github.com/terser/terser) <sub>v5.39.0 (released 2025-02-13)</sub>
+- [uglify-js](https://github.com/mishoo/UglifyJS) <sub>v3.19.3 (released 2024-08-29)</sub>
 <!-- minifiers:end -->
 
 _Benchmarks last updated on <!-- lastUpdated:start -->Mar 15, 2025<!-- lastUpdated:end -->._
@@ -557,27 +557,30 @@ xychart-beta
 > 🤖 This analysis is AI generated
 
 <!-- analysis:start -->
-Welcome to the highly competitive world of JavaScript minifiers, where size and speed dictate who gets crowned the ultimate champion. Today, we dive into an analysis of the fiercest contenders based on the battle-tested data.
+The competition for the best JavaScript minifier has been intense! With a mix of lightning-fast execution, tight compression, and a touch of drama, let's dive into the overall results.
 
-### Best minifier
-The crown goes to **@swc/core** for its consistent ability to achieve excellent compression with competitive speed across all test files. It topped charts in terms of the smallest Gzip size for many massive assets like `typescript`, `antd`, and `echarts`, and delivered these results within a very reasonable processing time. Its balance of compression ratio and runtime efficiency makes it the all-around champion for those who demand the best size reductions without sacrificing too much speed.
+### Best Minifier
+**The champion: @swc/core!**  
+@swc/core consistently delivered exceptional Gzip compression ratios across all tests while maintaining solid speed. Whether it was smaller libraries like React or giants like TypeScript, @swc/core kept up its stellar performance, often achieving results as good as—or better than—the likes of UglifyJS or Terser. It struck the perfect balance between size reduction and processing times that didn’t sacrifice your day waiting for results. Truly an all-terrain minifier!
 
-### Honorable mentions
-Several minifiers put up stellar fights and deserve applause:
-- **oxc-minify**: The speed demon! If you value blazing-fast performance and are okay with slightly larger sizes, oxc-minify is a fantastic choice. It consistently clocked the fastest times while staying within 1-2% of the smallest gzip size. It's the go-to for developers squeezing for time over space.
-- **uglify-js**: The old guard showed it still has what it takes. It frequently nabbed first place in gzip size, such as with `lodash` and `d3`, but at the cost of excruciatingly long processing times. Best for sizable assets where compression is critical and runtime isn't a priority.
-- **terser**: This consistent contender managed excellent compression time and again. With slightly lower compression ratios than uglify-js but faster speeds, terser strikes a decent balance for users sitting in the middle of the pack.
-- **esbuild**: The comeback king in timeout-riddled rounds like `echarts` and `typescript`, esbuild showed that speed matters. It's great for CI environments that need quick wins with above-average compression.
+**Standout results:** Smallest Gzips for libraries like Vue (42.73 kB) and performance consistency even with 1.88 MB TypeScript projects.
+
+### Honorable Mentions
+- **Oxc-minify:** The fastest minifier on record! If speed is the name of the game, you can't do better than Oxc-minify. From blazing through React in **just 2.68ms** to handling the massive TypeScript library in under a second, Oxc-minify dominated speed tests. It did compromise slightly on compression (e.g., 324.64 kB Gzip for ECharts vs. @swc/core’s 321.27 kB), so consider this the top pick when time is critical.
+- **UglifyJS:** For maximum compression enthusiasts, UglifyJS still leads the pack. It achieved unbeatable Gzip sizes for Moment (18.57 kB, 51.25% reduction) and even massive libraries like D3 (87.02 kB, 66.58% reduction). However, its Achilles' heel is speed; processing times (e.g., 6578ms with Victory.js) are by far the slowest among competitors.
+- **Terser:** A balanced contender for strong compression and middle-ground speed. While both @swc/core and UglifyJS edged it out in size in many cases, it managed an impressive 123.48 kB Gzip size on the Terser benchmark itself with reasonably faster results than UglifyJS. Reliable but overshadowed in this fierce competition.
+- **Esbuild:** While consistent, Esbuild sacrificed size for speed. It was the fastest in handling giant libraries like ECharts (193ms) and TypeScript (496ms). However, compression efficiency wasn’t as sharp (e.g., 915.55 kB for TypeScript wasn’t even close to @swc/core’s 858.29 kB). Esbuild is a speedrunner’s friend!
 
 ### Eliminated
-The competition was fierce, but some competitors just couldn't make the cut:
-- **babel-minify** fell victim to an internal coding error. "Unknown properties," it said. A fatal misstep. Proceed with caution if considering this tool.
-- **@tdewolff/minify** made it far but stumbled in post-validation due to an operator precedence issue. A bit too risky for production-ready results.
-- **tedivm/jshrink** could not handle `d3` due to a poorly handled regex. Regex fans beware!
-- **bun** failed with its unexpected newline inconsistency in `typescript`. Promising but unfit for this showdown.
+- **Babel-minify:** A dramatic early exit as it failed to minify D3 due to an internal error. A lack of updates since 2022 also casts doubt on its reliability in 2025.
+- **@tdewolff/minify:** Promising, but failed on D3 due to incorrect handling of operator precedence. It’s fast, but trade-offs here might not be worth it for production-grade projects.
+- **Tedivm/JShrink:** Another misstep on D3, failing during minification due to regex issues. Likely not robust enough for modern JavaScript.
+- **Bun:** Impressively fast but stumbled on TypeScript validation due to mismatched expectations. Needs more polish for broader use cases.
 
-### Conclusion
-All competitors brought their A-game, refining JavaScript to its minimal essence. **@swc/core** reigns supreme, blending compression and speed masterfully. If speed's your need, **oxc-minify** is right there for you. A hearty congratulations to all the competitors for showing what modern minifiers are capable of. The web is faster and leaner thanks to their efforts. Stay tuned for the next showdown!
+### The Final Call
+If you’re after compression quality and speedy minification all rolled into one, @swc/core is the reigning champ for the average user. For high-speed workflows, Oxc-minify is the quintessential rocket. Special use cases? UglifyJS has your extreme compression needs covered, while Esbuild dominates with fast, near-lossless builds.
+
+Congratulations to all the minifiers for a thrilling competition! It’s clear that the JavaScript minification ecosystem is alive and racing headstrong into the future.
 <!-- analysis:end -->
 
 ## Sponsors
