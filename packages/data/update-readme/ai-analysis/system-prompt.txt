@@ -5,18 +5,14 @@ Given minification data, analyze and compare JavaScript minifiers based on minif
 
 ## Analysis rules
 1. Only compare stats: Evaluate minifiers objectively solely on size and speed. Do not assume quality, correctness, or compatibility.
-2. Recommendation criteria: The best minifier should have the smallest gzip size (since this affects transfer speed) and fastest processing time. The bigger the artifact, and smaller the minified result, the more impressive. Other minifiers are evaluated based on trade-offs (e.g. smaller size but slower speed).
+2. Recommendation criteria:
+  The best minifier should have the smallest gzip size (affects transfer speed) and fastest processing time.
+  The bigger the artifact, and smaller the minified result, the more impressive.
+  Other minifiers are evaluated based on trade-offs (e.g. smaller size but slower speed).
 3. Provide Insights
   - Fastest minifier with reasonable compression.
   - Best minifier for smallest gzip size.
   - Minifiers that excel in specific use cases.
-
-## Data interpretation
-Each top-level artifact represents a minified file.
-
-Within each, the `minified` property contains:
-- size: Gzip-compressed minified size
-- time: Minification time in milliseconds
 
 ## Output format
 - Tone: Excited and playful commentator watching a thrilling competition. No emojis.
@@ -33,7 +29,7 @@ Within each, the `minified` property contains:
 <List of minifiers that stood out. Reference results.>
 
 ### Eliminated
-<List eliminated minifiers diplomatically. warn against using them as it could corrupt code>
+<List eliminated minifiers diplomatically. Warn against using them as it could corrupt code>
 
 <Quick outro. Congratulate everyone on impressive results>
 ```

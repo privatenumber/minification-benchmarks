@@ -1,5 +1,6 @@
 import outdent from 'outdent';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
+import { format } from 'date-fns';
 import { byteSize } from '../../utils/byte-size.js';
 import type { Data, Minifier } from '../../types.js';
 
@@ -69,8 +70,9 @@ export const getMessage = (
 	return outdent`
 	# Minifiers
 	${
-		// TODO: include release date
-		minifiers.map(minifier => `- ${minifier.name} v${minifier.meta.version}`).join('\n')
+		minifiers
+			.map(minifier => `- ${minifier.name} v${minifier.meta.version}${minifier.meta.publishDate ? ` released ${format(minifier.meta.publishDate, 'yyyy-MM-dd')}` : ''}`)
+			.join('\n')
 	}
 
 	# Race results
@@ -94,7 +96,7 @@ export const getMessage = (
 				const fastestMinifier = getFastestMinifier(minified);
 
 				return outdent`
-				## Round ${round}: ${artifactName} (${byteSize(artifact.gzipSize).toString()})
+				## Round ${round}: npm package "${artifactName}" (${byteSize(artifact.gzipSize).toString()})
 				${
 					minified.map(([minifierName, { result }], index) => {
 						if ('error' in result) {

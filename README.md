@@ -10,16 +10,16 @@
 This project benchmarks the following minifiers:
 
 <!-- minifiers:start -->
-- [babel-minify](https://github.com/babel/minify/tree/master/packages/babel-minify) <sub>v0.5.2</sub>
-- [bun](https://github.com/oven-sh/bun) <sub>v1.2.5</sub>
-- [esbuild](https://github.com/evanw/esbuild) <sub>v0.25.1</sub>
-- [google-closure-compiler](https://github.com/google/closure-compiler-npm/tree/master/packages/google-closure-compiler) <sub>v20240317.0.0</sub>
+- [babel-minify](https://github.com/babel/minify/tree/master/packages/babel-minify) <sub>v0.5.2 (released 2022-05-06)</sub>
+- [bun](https://github.com/oven-sh/bun) <sub>v1.2.5 (released 2025-03-11)</sub>
+- [esbuild](https://github.com/evanw/esbuild) <sub>v0.25.1 (released 2025-03-10)</sub>
+- [google-closure-compiler](https://github.com/google/closure-compiler-npm/tree/master/packages/google-closure-compiler) <sub>v20240317.0.0 (released 2024-03-19)</sub>
 - [tedivm/jshrink](https://github.com/tedious/JShrink) <sub>v1.7.0</sub>
-- [oxc-minify](https://github.com/oxc-project/oxc.git) <sub>v0.58.1</sub>
-- [@swc/core](https://github.com/swc-project/swc) <sub>v1.11.9</sub>
-- [@tdewolff/minify](https://github.com/tdewolff/minify#readme) <sub>v2.22.2</sub>
-- [terser](https://github.com/terser/terser) <sub>v5.39.0</sub>
-- [uglify-js](https://github.com/mishoo/UglifyJS) <sub>v3.19.3</sub>
+- [oxc-minify](https://github.com/oxc-project/oxc.git) <sub>v0.58.1 (released 2025-03-13)</sub>
+- [@swc/core](https://github.com/swc-project/swc) <sub>v1.11.9 (released 2025-03-12)</sub>
+- [@tdewolff/minify](https://github.com/tdewolff/minify#readme) <sub>v2.22.2 (released 2025-03-14)</sub>
+- [terser](https://github.com/terser/terser) <sub>v5.39.0 (released 2025-02-13)</sub>
+- [uglify-js](https://github.com/mishoo/UglifyJS) <sub>v3.19.3 (released 2024-08-29)</sub>
 <!-- minifiers:end -->
 
 _Benchmarks last updated on <!-- lastUpdated:start -->Mar 15, 2025<!-- lastUpdated:end -->._
@@ -69,7 +69,7 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 ## 📋 Results
 
 > [!TIP]
-> [⚔️ See the _Minifier showdown_ (analysis & recommendation)](#%EF%B8%8F-minifier-showdown)
+> What's the verdict? [⚔️ See the _Minifier showdown_](#%EF%B8%8F-minifier-showdown)
 
 <!-- benchmarks:start -->
 ```mermaid
@@ -557,27 +557,22 @@ xychart-beta
 > 🤖 This analysis is AI generated
 
 <!-- analysis:start -->
-Welcome to the highly competitive world of JavaScript minifiers, where size and speed dictate who gets crowned the ultimate champion. Today, we dive into an analysis of the fiercest contenders based on the battle-tested data.
+Folks, we’ve got a heavyweight showdown in JavaScript minification! From lightning-fast contenders to the most disciplined compressors, the results are in, and the competition was fierce across a dazzling lineup of scenarios. Let’s dive in!
 
 ### Best minifier
-The crown goes to **@swc/core** for its consistent ability to achieve excellent compression with competitive speed across all test files. It topped charts in terms of the smallest Gzip size for many massive assets like `typescript`, `antd`, and `echarts`, and delivered these results within a very reasonable processing time. Its balance of compression ratio and runtime efficiency makes it the all-around champion for those who demand the best size reductions without sacrificing too much speed.
+**@swc/core** takes the crown for overall excellence! This remarkable tool crushed every significant challenge with consistent top-tier compression percentages (like 36.55% for jQuery and 45.53% for TypeScript) and blistering speeds (e.g., 393.03ms for Victory or 752.15ms for ECharts). Sure, some minifiers managed to scrape a fractionally better size, but @swc/core's combination of world-class compression, fast processing, and reliability makes it the champion for the *average user*. It’s hard to beat a tool that balances power and speed so gracefully!
 
 ### Honorable mentions
-Several minifiers put up stellar fights and deserve applause:
-- **oxc-minify**: The speed demon! If you value blazing-fast performance and are okay with slightly larger sizes, oxc-minify is a fantastic choice. It consistently clocked the fastest times while staying within 1-2% of the smallest gzip size. It's the go-to for developers squeezing for time over space.
-- **uglify-js**: The old guard showed it still has what it takes. It frequently nabbed first place in gzip size, such as with `lodash` and `d3`, but at the cost of excruciatingly long processing times. Best for sizable assets where compression is critical and runtime isn't a priority.
-- **terser**: This consistent contender managed excellent compression time and again. With slightly lower compression ratios than uglify-js but faster speeds, terser strikes a decent balance for users sitting in the middle of the pack.
-- **esbuild**: The comeback king in timeout-riddled rounds like `echarts` and `typescript`, esbuild showed that speed matters. It's great for CI environments that need quick wins with above-average compression.
+- **oxc-minify**, the sprinter in our race! Boasting unmatched speeds, it consistently completed compression in milliseconds—even for large files like Victory (79.9ms) and TypeScript (729.57ms). A tiny trade-off in size (e.g., 26.87% for Lodash vs. Uglify's 25.53%) keeps it from gold, but it’s hands-down the fastest minifier for when you’re in a crunch.
+- **uglify-js** stands as the grandmaster of compression. This champion achieved the smallest sizes across several rounds (25.53% for Lodash, 50.79% for Victory, and 66.58% for d3). But its painstakingly slow speeds (e.g., 6578.69ms for Victory) mean you'll need patience to revel in its tighter results. Worth it if transfer times trump processing speeds for you!
+- **esbuild**, while slightly less aggressive in compression, turned in a strong performance and blazingly fast times (like 290.8ms for AntD and 495.94ms for TypeScript). It's recommended for developers prioritizing "good enough" compression delivered at warp speed.
 
 ### Eliminated
-The competition was fierce, but some competitors just couldn't make the cut:
-- **babel-minify** fell victim to an internal coding error. "Unknown properties," it said. A fatal misstep. Proceed with caution if considering this tool.
-- **@tdewolff/minify** made it far but stumbled in post-validation due to an operator precedence issue. A bit too risky for production-ready results.
-- **tedivm/jshrink** could not handle `d3` due to a poorly handled regex. Regex fans beware!
-- **bun** failed with its unexpected newline inconsistency in `typescript`. Promising but unfit for this showdown.
+- **babel-minify**, **@tdewolff/minify**, and **tedivm/jshrink** fumbled hard by tripping over improper handling of JavaScript edge cases. Runtime errors during standard minification (e.g., D3) make them a risky choice—you wouldn’t want your build to fail at the worst moment!
+- **bun**, while promising, failed validation for a critical file format difference (`\r\n` vs. `\n`). Standards compliance matters in production tools, so Bun has some brushing up to do.
+- **google-closure-compiler**, the tortoise in this race, delivers respectably tight compression but at an astronomical price: massive delays in every test. It even timed out entirely on larger packages (like Victory and ECharts). Best left for specialized cases requiring its advanced closure features, not in general battle.
 
-### Conclusion
-All competitors brought their A-game, refining JavaScript to its minimal essence. **@swc/core** reigns supreme, blending compression and speed masterfully. If speed's your need, **oxc-minify** is right there for you. A hearty congratulations to all the competitors for showing what modern minifiers are capable of. The web is faster and leaner thanks to their efforts. Stay tuned for the next showdown!
+Everyone, let’s give these tools a round of applause—they’ve all come a long way to compete today. Whether you’re after absolute size savings, blazing speeds, or a balanced compromise, it’s clear there’s a tool tailored for your needs in this thrilling bunch!
 <!-- analysis:end -->
 
 ## Sponsors

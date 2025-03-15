@@ -14,6 +14,7 @@ export type MetaData = {
 	name: string;
 	version: string;
 	url: string;
+	publishDate?: Date;
 };
 
 export class Minifier {
@@ -44,7 +45,15 @@ export class Minifier {
 
 		const packageJson = await loadPackageJson(this.name);
 		if (packageJson) {
-			this.meta = getPackageJsonMeta(packageJson);
+			const response = await fetch(`https://registry.npmjs.org/${packageJson.name}`);
+			const json = await response.json() as {
+				time: Record<string, string>;
+			};
+			const publishDate = new Date(json.time[packageJson.version!]);
+			this.meta = {
+				...getPackageJsonMeta(packageJson),
+				publishDate,
+			};
 			return;
 		}
 
