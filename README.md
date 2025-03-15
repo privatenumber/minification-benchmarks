@@ -68,7 +68,8 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 
 ## 📋 Results
 
-[↓ Jump to the result analysis & recommendation](#%EF%B8%8F-minifier-showdown)
+> [!TIP]
+> [↓ Skip to the result analysis & recommendation](#%EF%B8%8F-minifier-showdown)
 
 <!-- benchmarks:start -->
 ```mermaid
