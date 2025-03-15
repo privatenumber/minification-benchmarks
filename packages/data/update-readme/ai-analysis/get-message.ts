@@ -2,6 +2,7 @@ import outdent from 'outdent';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
 import { byteSize } from '../../utils/byte-size.js';
 import type { Data, Minifier } from '../../types.js';
+import { format } from 'date-fns';
 
 const roundNumber = (
 	number: number,
@@ -69,8 +70,9 @@ export const getMessage = (
 	return outdent`
 	# Minifiers
 	${
-		// TODO: include release date
-		minifiers.map(minifier => `- ${minifier.name} v${minifier.meta.version}`).join('\n')
+		minifiers
+			.map(minifier => `- ${minifier.name} v${minifier.meta.version}${minifier.meta.publishDate ? ` released ${format(minifier.meta.publishDate, 'yyyy-MM-dd')}` : ''}`)
+			.join('\n')
 	}
 
 	# Race results

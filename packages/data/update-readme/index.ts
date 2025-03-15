@@ -186,7 +186,15 @@ const newReadme = commentMark(readme, {
 	lastUpdated: format(new Date(), 'MMM d, y'),
 	benchmarks: generateBenchmarks(data),
 	minifiers: minifiers.map(
-		({ meta }) => `- ${mdu.link(meta.name, meta.url)} ${mdu.sub(`v${meta.version}`)}`,
+		({ meta }) => `- ${
+			mdu.link(meta.name, meta.url)
+		} ${
+			mdu.sub(`v${meta.version}${
+			meta.publishDate
+				? ` (released ${format(meta.publishDate, 'yyyy-MM-dd')})`
+				: ''
+		}`)
+		}`,
 	).join('\n'),
 	analysis,
 });
