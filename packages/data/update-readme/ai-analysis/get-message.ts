@@ -96,7 +96,7 @@ export const getMessage = (
 				const fastestMinifier = getFastestMinifier(minified);
 
 				return outdent`
-				## Round ${round}: ${artifactName} (${byteSize(artifact.gzipSize).toString()})
+				## Round ${round}: npm package "${artifactName}" (${byteSize(artifact.gzipSize).toString()})
 				${
 					minified.map(([minifierName, { result }], index) => {
 						if ('error' in result) {
