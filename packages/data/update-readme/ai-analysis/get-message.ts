@@ -3,14 +3,7 @@ import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
 import { format } from 'date-fns';
 import { byteSize } from '../../utils/byte-size.js';
 import type { Data, Minifier } from '../../types.js';
-
-const roundNumber = (
-	number: number,
-	precision: number,
-) => {
-	const factor = 10 ** precision;
-	return Math.round(number * factor) / factor;
-};
+import { formatMs } from '../formatting.js';
 
 type Eliminated = Record<string, {
 	reason: string;
@@ -49,7 +42,7 @@ const getFastestMinifier = (
 			continue;
 		}
 
-		const time = roundNumber(result.data.time, 2);
+		const { time } = result.data;
 		if (
 			!fastestMinifier
 			|| time < fastestMinifier[1]
@@ -106,9 +99,11 @@ export const getMessage = (
 						}
 
 						const { minzippedBytes, time } = result.data;
-						const percent = roundNumber((minzippedBytes / artifact.gzipSize) * 100, 2);
+						const percent = (minzippedBytes / artifact.gzipSize).toLocaleString(undefined, {
+							style: 'percent',
+						});
 						return outdent`
-						${index + 1}. ${minifierName}: ${byteSize(minzippedBytes).toString()} (${percent}%) in ${roundNumber(time, 2)}ms
+						${index + 1}. ${minifierName}: ${byteSize(minzippedBytes).toString()} (${percent}) in ${formatMs(time)}
 						`;
 					}).join('\n')
 				}
