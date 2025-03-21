@@ -54,5 +54,6 @@ export const getPackageJsonMeta = (
 		name: packageJson.name!,
 		version: packageJson.version!,
 		url,
+		registry: 'npm',
 	};
 };

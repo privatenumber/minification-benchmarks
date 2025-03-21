@@ -61,5 +61,6 @@ export const getMeta = (
 		name,
 		version,
 		url: repository,
+		registry: 'composer',
 	};
 };

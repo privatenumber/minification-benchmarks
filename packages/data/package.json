@@ -9,7 +9,7 @@
 		"@minification-benchmarks/utils": "*",
 		"byte-size": "^8.1.1",
 		"comment-mark": "^1.1.1",
-		"date-fns": "^3.6.0",
+		"date-fns": "^4.1.0",
 		"lodash-es": "^4.17.21",
 		"markdown-table": "^3.0.3",
 		"openai": "^4.87.3",

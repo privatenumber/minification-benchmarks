@@ -182,20 +182,32 @@ const analysis = await getAiAnalysis(
 const readmePath = './README.md';
 const readme = await fs.readFile(readmePath, 'utf8');
 
+const minifiersList = markdownTable([
+	['Minifier', 'Version', 'Release date ↓'],
+	...minifiers
+		// Sort by release date
+		.sort(
+			(a, b) => Number(b.meta.publishDate) - Number(a.meta.publishDate),
+		)
+		.map(
+			({ meta }) => [
+				mdu.link(meta.name, meta.url),
+				meta.registry === 'npm'
+					? mdu.link(meta.version, `https://www.npmjs.com/package/${meta.name}/v/${meta.version}`)
+					: meta.version,
+				meta.publishDate
+					? format(meta.publishDate, 'yyyy-MM-dd')
+					: '',
+			],
+		),
+]);
+
+const utcToday = new Date(new Date().toISOString().split('T')[0]);
+
 const newReadme = commentMark(readme, {
-	lastUpdated: format(new Date(), 'MMM d, y'),
+	lastUpdated: format(utcToday, 'MMM d, y'),
 	benchmarks: generateBenchmarks(data),
-	minifiers: minifiers.map(
-		({ meta }) => `- ${
-			mdu.link(meta.name, meta.url)
-		} ${
-			mdu.sub(`v${meta.version}${
-			meta.publishDate
-				? ` (released ${format(meta.publishDate, 'yyyy-MM-dd')})`
-				: ''
-		}`)
-		}`,
-	).join('\n'),
+	minifiers: minifiersList,
 	analysis,
 });
 
