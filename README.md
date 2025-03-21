@@ -13,14 +13,14 @@ This project benchmarks the following minifiers:
 | Minifier                                                                                                               | Version                                                                              | Release date ↓ |
 | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | -------------- |
 | [oxc-minify](https://github.com/oxc-project/oxc.git)                                                                   | [0.61.0](https://www.npmjs.com/package/oxc-minify/v/0.61.0)                          | 2025-03-20     |
-| [@swc/core](https://github.com/swc-project/swc)                                                                        | [1.11.11](https://www.npmjs.com/package/@swc/core/v/1.11.11)                         | 2025-03-18     |
+| [@swc/core](https://github.com/swc-project/swc)                                                                        | [1.11.11](https://www.npmjs.com/package/@swc/core/v/1.11.11)                         | 2025-03-17     |
 | [@tdewolff/minify](https://github.com/tdewolff/minify#readme)                                                          | [2.22.2](https://www.npmjs.com/package/@tdewolff/minify/v/2.22.2)                    | 2025-03-14     |
 | [bun](https://github.com/oven-sh/bun)                                                                                  | [1.2.5](https://www.npmjs.com/package/bun/v/1.2.5)                                   | 2025-03-11     |
 | [esbuild](https://github.com/evanw/esbuild)                                                                            | [0.25.1](https://www.npmjs.com/package/esbuild/v/0.25.1)                             | 2025-03-10     |
 | [terser](https://github.com/terser/terser)                                                                             | [5.39.0](https://www.npmjs.com/package/terser/v/5.39.0)                              | 2025-02-13     |
 | [uglify-js](https://github.com/mishoo/UglifyJS)                                                                        | [3.19.3](https://www.npmjs.com/package/uglify-js/v/3.19.3)                           | 2024-08-29     |
 | [google-closure-compiler](https://github.com/google/closure-compiler-npm/tree/master/packages/google-closure-compiler) | [20240317.0.0](https://www.npmjs.com/package/google-closure-compiler/v/20240317.0.0) | 2024-03-19     |
-| [babel-minify](https://github.com/babel/minify/tree/master/packages/babel-minify)                                      | [0.5.2](https://www.npmjs.com/package/babel-minify/v/0.5.2)                          | 2022-05-07     |
+| [babel-minify](https://github.com/babel/minify/tree/master/packages/babel-minify)                                      | [0.5.2](https://www.npmjs.com/package/babel-minify/v/0.5.2)                          | 2022-05-06     |
 | [tedivm/jshrink](https://github.com/tedious/JShrink)                                                                   | 1.7.0                                                                                |                |
 <!-- minifiers:end -->
 
@@ -558,7 +558,38 @@ xychart-beta
 > [!NOTE]
 > 🤖 This analysis is AI generated
 
-<!-- analysis:start --><!-- analysis:end -->
+<!-- analysis:start -->
+The JavaScript minification showdown has concluded, and it's been an electrifying contest! We've seen blazing speeds, unmatched compression, and some unfortunate disqualifications. Who will take the crown as the ultimate minifier? Let's break it down!
+
+### Best minifier
+**🥇 @swc/core takes the throne as our ultimate recommendation!** Across the board, @swc/core delivered exceptional results, consistently ranking at the top for achieving the smallest gzip sizes while maintaining impressive speed. Whether minifying smaller packages like "react" or giant behemoths like "antd" and "typescript," it demonstrated unparalleled efficiency.
+
+For instance:
+- "jquery" went down to **30.88kB (37%) in just 66ms**, the smallest by a hair.
+- With "echarts," it crushed the size to **321.26kB (47%) in 791ms**, notably faster and leaner than its rivals.
+- Even on the massive "typescript" package, it produced **858.28kB (46%) in just ~2 seconds**, setting the standard for being both compact and lightning-fast.
+
+The edge-of-your-seat performance makes @swc/core the perfect blend of speed and compression. Most users will find it unbeatable for general purposes.
+
+### Honorable mentions
+- **oxc-minify:** The speed demon of the race! While its compression wasn't the tightest (hovering 1-2% larger than @swc/core in most tests), it completed tasks in blistering milliseconds. For developers prioritizing **sheer speed**, such as rapid prototyping or tooling with minimal setup, this is your star. Shredding through "react" in **3ms** and "lodash" in **12ms**? That's jaw-dropping.
+- **uglify-js:** The precision compression king. When size was the sole focus, uglify-js edged out others more than once, especially with "moment" (**18.57kB, 51%** reduction), "lodash," and "d3." However, its speeds are glacial, sometimes exceeding 6 seconds. Best-suited for post-build optimizations where time is secondary.
+- **terser:** While it wasn't the fastest or the smallest, terser struck a balance between compression and speed. Especially for cases where compatibility is a concern, terser is battle-tested and reliable.
+- **google-closure-compiler:** Legendary for squeezing every last drop of bytes, it still secures some of the smallest gzip sizes. However, its excruciating slowness, frequent timeouts, and diminishing returns mean it's best reserved for use cases where compression absolutely dominates other needs.
+
+### Eliminated
+Let's respectfully bow our heads for those who faltered in this high-stakes race. These tools, while promising, couldn't meet the rigorous standards of both compression and post-validation.
+
+- **babel-minify:** This tool tripped out of the gate, crashing during the "d3" test. Its last release in 2022 shows it's likely been left in the dust by younger rivals. 
+- **@tdewolff/minify:** Fell due to operator precedence mishap. An innovative tool, but fragile when handling complex code during validation.
+- **tedivm/jshrink:** Stumbled on regex parsing with larger packages like "d3." Although it's a simpler and older tool, it can't handle modern JavaScript complexity.
+- **bun:** Surprisingly dropped out during "typescript," failing an essential post-validation. A promising runner but not yet polished for critical workflows.
+
+### Final Thoughts
+What a race! @swc/core emerged as the true master, balancing compression precision with stellar speeds, making it the go-to champion for most users. For trailblazers needing crazy speed, oxc-minify is the sprinter to watch. And for those willing to endure long waits for near-perfect results, uglify-js remains a trusted heavyweight.
+
+Kudos to all the competitors for their astounding performances in this thrilling minification marathon!
+<!-- analysis:end -->
 
 ## Sponsors
 
