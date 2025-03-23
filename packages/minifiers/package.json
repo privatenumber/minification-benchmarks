@@ -5,7 +5,7 @@
 	"main": "index.ts",
 	"dependencies": {
 		"@minification-benchmarks/utils": "*",
-		"@swc/core": "^1.11.11",
+		"@swc/core": "^1.11.12",
 		"@tdewolff/minify": "^2.22.3",
 		"babel-minify": "^0.5.2",
 		"bun": "^1.2.5",
@@ -13,7 +13,7 @@
 		"find-up": "^7.0.0",
 		"google-closure-compiler": "^20240317.0.0",
 		"mem": "^9.0.2",
-		"oxc-minify": "^0.61.1",
+		"oxc-minify": "^0.61.2",
 		"terser": "^5.39.0",
 		"uglify-js": "^3.19.3"
 	},
