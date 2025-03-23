@@ -198,8 +198,8 @@ importers:
         specifier: '*'
         version: link:../utils
       '@swc/core':
-        specifier: ^1.11.11
-        version: 1.11.11
+        specifier: ^1.11.12
+        version: 1.11.12
       '@tdewolff/minify':
         specifier: ^2.22.3
         version: 2.22.3
@@ -222,8 +222,8 @@ importers:
         specifier: ^9.0.2
         version: 9.0.2
       oxc-minify:
-        specifier: ^0.61.1
-        version: 0.61.1
+        specifier: ^0.61.2
+        version: 0.61.2
       terser:
         specifier: ^5.39.0
         version: 5.39.0
@@ -1202,8 +1202,8 @@ packages:
     dev: false
     optional: true
 
-  /@oxc-minify/binding-darwin-arm64@0.61.1:
-    resolution: {integrity: sha512-2q7CEn0Vs7vnns/gRQ8K0mW6dQZELDWISwqVhHjnwTAmuJcFUsxNCX3IcP5moKJRbmrbKGgOh5rY8hvq3YmHCQ==}
+  /@oxc-minify/binding-darwin-arm64@0.61.2:
+    resolution: {integrity: sha512-Ci0GOQ0XgsIMzFoP1KBO5+DyZDBeX4RZ9ursSB5wDB9LmIH5G9LP78CQ7NBDeb/JkMMhLb2qJ+/cxHBHAHaeSw==}
     engines: {node: '>=14.0.0'}
     cpu: [arm64]
     os: [darwin]
@@ -1211,8 +1211,8 @@ packages:
     dev: false
     optional: true
 
-  /@oxc-minify/binding-darwin-x64@0.61.1:
-    resolution: {integrity: sha512-DetEUlUuu5LbMcurbcE8VjDMwt9XT/YjrfCxBeR/OEUEuz97HMimGUj1gAJlzHk1TI8jRT3Zh03HNp6LDWSlkw==}
+  /@oxc-minify/binding-darwin-x64@0.61.2:
+    resolution: {integrity: sha512-wGYxwsQWMq75wg8bwtH/h2oXILKEOSZ2mLzehkKayxRiVBvQD7fxxm7QOkXywRyhyDH9cY/ShBYIEvwes0VaWw==}
     engines: {node: '>=14.0.0'}
     cpu: [x64]
     os: [darwin]
@@ -1220,8 +1220,8 @@ packages:
     dev: false
     optional: true
 
-  /@oxc-minify/binding-linux-arm-gnueabihf@0.61.1:
-    resolution: {integrity: sha512-4ozxsTW5gk5C1QhLrpPItc61/L0lF8zIqyhvxxL2JCJZQUJaeckjZpIiGbp2cFGAeNq+1QyiNyULZOzvCzpVcw==}
+  /@oxc-minify/binding-linux-arm-gnueabihf@0.61.2:
+    resolution: {integrity: sha512-MbMrhqeM5/NFnvNqFPyl8uMo4SfPcC8FQqz9tgPdaRubZQJebbFqlwR+Gx2ap/2UHRZQt482HTZ3NFhQ3j7GIg==}
     engines: {node: '>=14.0.0'}
     cpu: [arm]
     os: [linux]
@@ -1229,8 +1229,8 @@ packages:
     dev: false
     optional: true
 
-  /@oxc-minify/binding-linux-arm64-gnu@0.61.1:
-    resolution: {integrity: sha512-ILufymiviA6V5eKQg2OYhUqIWNo9a+F/O2v6toD3UaOlN85q3USGZOxtpKoSdHMquJ3xn07k+WTogNhyRy4YPA==}
+  /@oxc-minify/binding-linux-arm64-gnu@0.61.2:
+    resolution: {integrity: sha512-HinzRHYxXI1lMbY6lrAnQJQI11k99cII36j97gCn4COWdgSnGeS0AUF8PWUtscM7mnC6u6y7UG4IEk5CzP5yvw==}
     engines: {node: '>=14.0.0'}
     cpu: [arm64]
     os: [linux]
@@ -1238,8 +1238,8 @@ packages:
     dev: false
     optional: true
 
-  /@oxc-minify/binding-linux-arm64-musl@0.61.1:
-    resolution: {integrity: sha512-aTYW9fQH8n13kVk3d7vR4BsAmgqeZkKRl1yXq8IErg+ova/eU2BCX7MkJTqWeXS4h2tEyrYxxZUeFB3cEyCrzg==}
+  /@oxc-minify/binding-linux-arm64-musl@0.61.2:
+    resolution: {integrity: sha512-BHi+NdcKtok7W+lOfMoks4AQAMnr2sjv7SgHPixVRgvx6fkXIJ4yMtJY1evPIIgf7C139uUF8oDbSUpPltsj+A==}
     engines: {node: '>=14.0.0'}
     cpu: [arm64]
     os: [linux]
@@ -1247,8 +1247,8 @@ packages:
     dev: false
     optional: true
 
-  /@oxc-minify/binding-linux-x64-gnu@0.61.1:
-    resolution: {integrity: sha512-WL21vdnBP8y7k9apGy6rM6bDcWHFopBdhmvwrC65Agf1D/lt6kQLMyof7RYuBYMDIgQhkowF663nov9h7fSL9Q==}
+  /@oxc-minify/binding-linux-x64-gnu@0.61.2:
+    resolution: {integrity: sha512-A0Pr5E6pnx7MYlQ6h15T6FHVRntc83YtPG2X7bjb+izFh1cSwZcJRZZXSMrL1XLY1o24bMzhbANEMavohSWnqg==}
     engines: {node: '>=14.0.0'}
     cpu: [x64]
     os: [linux]
@@ -1256,8 +1256,8 @@ packages:
     dev: false
     optional: true
 
-  /@oxc-minify/binding-linux-x64-musl@0.61.1:
-    resolution: {integrity: sha512-J7l0e7u+12gKX1twfhZb3AL8ahoItg2iUv8MLi0EZZ8sMCuVlCN1cPOaNl6ehgotEx/rM73Mdurtb9gxakYVhA==}
+  /@oxc-minify/binding-linux-x64-musl@0.61.2:
+    resolution: {integrity: sha512-4uI9gwizOME5p8xxRODrTAULhuuzDIrMn3Yi17kpL5t/cXdyMKoef7ZwWq0LLWB5uupt/8gp+kUd0O/nNMRMkw==}
     engines: {node: '>=14.0.0'}
     cpu: [x64]
     os: [linux]
@@ -1265,8 +1265,8 @@ packages:
     dev: false
     optional: true
 
-  /@oxc-minify/binding-wasm32-wasi@0.61.1:
-    resolution: {integrity: sha512-Xxk4uI+ufCIWnf5glCEeiovSxPytusLP+6Sal1xmfcAO6UVz1fn8qMN9t7UXXSTWXZVVX8QYtD/qEk+6FQmTJQ==}
+  /@oxc-minify/binding-wasm32-wasi@0.61.2:
+    resolution: {integrity: sha512-XAPJfqhzuGpK3y3TZhOR0zVGpiolXXAaqAe4RceMONf7iZPwdKz83Jg9gh5Pg6Y9SS0h5RFvo6lFKExMMVtKLQ==}
     engines: {node: '>=14.0.0'}
     cpu: [wasm32]
     requiresBuild: true
@@ -1275,8 +1275,8 @@ packages:
     dev: false
     optional: true
 
-  /@oxc-minify/binding-win32-arm64-msvc@0.61.1:
-    resolution: {integrity: sha512-fp1pY2hy1JIKeZekUOvctpvo1uqzSFL602JOm+xuvOKBCS1XT/Hby3fY7Um5dhIDHs4uk6b7aBWpv8SeLloodA==}
+  /@oxc-minify/binding-win32-arm64-msvc@0.61.2:
+    resolution: {integrity: sha512-eMjddnEE8E39NeVu2JsauV0QQ3BK1Mkm2YzJMvEzHo7nkomEU2752nUJ2VzKHkpOsYFSz5trZnivz2e6SidHhg==}
     engines: {node: '>=14.0.0'}
     cpu: [arm64]
     os: [win32]
@@ -1284,8 +1284,8 @@ packages:
     dev: false
     optional: true
 
-  /@oxc-minify/binding-win32-x64-msvc@0.61.1:
-    resolution: {integrity: sha512-a6ILA1gP0IbJQLpC3qs1k1jdh/XsVXLyQdkdIK85RJl+AMAPZTMJSZTKwkxSwa4wGNZc7dTtrC9eV6gL3zWutA==}
+  /@oxc-minify/binding-win32-x64-msvc@0.61.2:
+    resolution: {integrity: sha512-n95h8n1mQUDRa9HKQBOOrLQYGvYeKa2dmHAyhhZWbqXyJ1Jb5ysFhEB4z+PSg39NdWiHW5BpdXjNGZWdswOdtQ==}
     engines: {node: '>=14.0.0'}
     cpu: [x64]
     os: [win32]
@@ -1372,8 +1372,8 @@ packages:
       - typescript
     dev: true
 
-  /@swc/core-darwin-arm64@1.11.11:
-    resolution: {integrity: sha512-vJcjGVDB8cZH7zyOkC0AfpFYI/7GHKG0NSsH3tpuKrmoAXJyCYspKPGid7FT53EAlWreN7+Pew+bukYf5j+Fmg==}
+  /@swc/core-darwin-arm64@1.11.12:
+    resolution: {integrity: sha512-x+iljeyIaVq7VCAy9pM0rqAb9GKA1cqDkqCxgFDxH3rcH+ykZa12vkDlTwysgkfLV8pr0KhCRHkwY+iAqPbO9g==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [darwin]
@@ -1381,8 +1381,8 @@ packages:
     dev: false
     optional: true
 
-  /@swc/core-darwin-x64@1.11.11:
-    resolution: {integrity: sha512-/N4dGdqEYvD48mCF3QBSycAbbQd3yoZ2YHSzYesQf8usNc2YpIhYqEH3sql02UsxTjEFOJSf1bxZABDdhbSl6A==}
+  /@swc/core-darwin-x64@1.11.12:
+    resolution: {integrity: sha512-DwTXPdhJ/+scUR1iWttu3p0q8b5omF71xWFCw6UC99QBJQ4femmRtZNacgdiBkxZ5IbUlxd8m5UzMBc/+H5rWw==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [darwin]
@@ -1390,8 +1390,8 @@ packages:
     dev: false
     optional: true
 
-  /@swc/core-linux-arm-gnueabihf@1.11.11:
-    resolution: {integrity: sha512-hsBhKK+wVXdN3x9MrL5GW0yT8o9GxteE5zHAI2HJjRQel3HtW7m5Nvwaq+q8rwMf4YQRd8ydbvwl4iUOZx7i2Q==}
+  /@swc/core-linux-arm-gnueabihf@1.11.12:
+    resolution: {integrity: sha512-ls9b3lX2x3tnJKGn6zSDFK1ohdmdUkE6nwqrVmdzqAwr/Q5i2ij/dmkOFCloItc2PHNVtRGGsC4+FYSm1EBLjg==}
     engines: {node: '>=10'}
     cpu: [arm]
     os: [linux]
@@ -1399,8 +1399,8 @@ packages:
     dev: false
     optional: true
 
-  /@swc/core-linux-arm64-gnu@1.11.11:
-    resolution: {integrity: sha512-YOCdxsqbnn/HMPCNM6nrXUpSndLXMUssGTtzT7ffXqr7WuzRg2e170FVDVQFIkb08E7Ku5uOnnUVAChAJQbMOQ==}
+  /@swc/core-linux-arm64-gnu@1.11.12:
+    resolution: {integrity: sha512-F0nMLl5kYbew5GjHq7B21poE5VOPgSsoQ0VEXd4Fji3rR0d0gLoK2r+JP92XmpRxAzdzpdak1DQczWMyf2BQAQ==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
@@ -1408,8 +1408,8 @@ packages:
     dev: false
     optional: true
 
-  /@swc/core-linux-arm64-musl@1.11.11:
-    resolution: {integrity: sha512-nR2tfdQRRzwqR2XYw9NnBk9Fdvff/b8IiJzDL28gRR2QiJWLaE8LsRovtWrzCOYq6o5Uu9cJ3WbabWthLo4jLw==}
+  /@swc/core-linux-arm64-musl@1.11.12:
+    resolution: {integrity: sha512-3dlHowBgYBgi23ZBSvFHe/tD3PowEhxfVAy08NckWBeaG/e4dyrYMhAiccfuy6jkDYXEF1L2DtpRtxGImxoaPg==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
@@ -1417,8 +1417,8 @@ packages:
     dev: false
     optional: true
 
-  /@swc/core-linux-x64-gnu@1.11.11:
-    resolution: {integrity: sha512-b4gBp5HA9xNWNC5gsYbdzGBJWx4vKSGybGMGOVWWuF+ynx10+0sA/o4XJGuNHm8TEDuNh9YLKf6QkIO8+GPJ1g==}
+  /@swc/core-linux-x64-gnu@1.11.12:
+    resolution: {integrity: sha512-ToEWzLA5lXlYCbGNzMow6+uy4zhpXKQyFb3RHM8AYVb0n4pNPWvwF+8ybWDimeGBBaHJLgRQsUMuJ4NV6urSrA==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
@@ -1426,8 +1426,8 @@ packages:
     dev: false
     optional: true
 
-  /@swc/core-linux-x64-musl@1.11.11:
-    resolution: {integrity: sha512-dEvqmQVswjNvMBwXNb8q5uSvhWrJLdttBSef3s6UC5oDSwOr00t3RQPzyS3n5qmGJ8UMTdPRmsopxmqaODISdg==}
+  /@swc/core-linux-x64-musl@1.11.12:
+    resolution: {integrity: sha512-N5xF+MDZr79e8gvVXX3YP1bMeaRL16Kst/R7bGUQvvCq1UGD86qMUtSr5KfCl0h5SNKP2YKtkN98HQLnGEikow==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
@@ -1435,8 +1435,8 @@ packages:
     dev: false
     optional: true
 
-  /@swc/core-win32-arm64-msvc@1.11.11:
-    resolution: {integrity: sha512-aZNZznem9WRnw2FbTqVpnclvl8Q2apOBW2B316gZK+qxbe+ktjOUnYaMhdCG3+BYggyIBDOnaJeQrXbKIMmNdw==}
+  /@swc/core-win32-arm64-msvc@1.11.12:
+    resolution: {integrity: sha512-/PYiyYWSQRtMoOamMfhAfq0y3RWk9LpUZ49yetJn2XI85TRkL5u2DTLLNkTPvoTiCfo0eZOJF9t5b7Z6ly0iHQ==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [win32]
@@ -1444,8 +1444,8 @@ packages:
     dev: false
     optional: true
 
-  /@swc/core-win32-ia32-msvc@1.11.11:
-    resolution: {integrity: sha512-DjeJn/IfjgOddmJ8IBbWuDK53Fqw7UvOz7kyI/728CSdDYC3LXigzj3ZYs4VvyeOt+ZcQZUB2HA27edOifomGw==}
+  /@swc/core-win32-ia32-msvc@1.11.12:
+    resolution: {integrity: sha512-Dxm6W4p0YVNIPnYh/Kf/9zPeaD6sVAGDQN+2c52l4m/4gR5aDgE+xg6k5lAt4ok7LDXInL3n1nwYEG7Tc4JcSQ==}
     engines: {node: '>=10'}
     cpu: [ia32]
     os: [win32]
@@ -1453,8 +1453,8 @@ packages:
     dev: false
     optional: true
 
-  /@swc/core-win32-x64-msvc@1.11.11:
-    resolution: {integrity: sha512-Gp/SLoeMtsU4n0uRoKDOlGrRC6wCfifq7bqLwSlAG8u8MyJYJCcwjg7ggm0rhLdC2vbiZ+lLVl3kkETp+JUvKg==}
+  /@swc/core-win32-x64-msvc@1.11.12:
+    resolution: {integrity: sha512-PP8RSJTcda5nUHJGkbKeQ20OC+L2LxcbjYpyha1OqIFyu/qWG9zMMYVaTLKJL7zsJ14pIM/mpS3u+CJARQ+Hzw==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [win32]
@@ -1462,8 +1462,8 @@ packages:
     dev: false
     optional: true
 
-  /@swc/core@1.11.11:
-    resolution: {integrity: sha512-pCVY2Wn6dV/labNvssk9b3Owi4WOYsapcbWm90XkIj4xH/56Z6gzja9fsU+4MdPuEfC2Smw835nZHcdCFGyX6A==}
+  /@swc/core@1.11.12:
+    resolution: {integrity: sha512-Jwx9JH1O6Vm7BS9AEPLlquJNSy6Lbt/kiJIlxSslDuBLeDJD13lXQfitvazqgRwGEHx1QmwEq8mc0OSristtRw==}
     engines: {node: '>=10'}
     requiresBuild: true
     peerDependencies:
@@ -1475,16 +1475,16 @@ packages:
       '@swc/counter': 0.1.3
       '@swc/types': 0.1.19
     optionalDependencies:
-      '@swc/core-darwin-arm64': 1.11.11
-      '@swc/core-darwin-x64': 1.11.11
-      '@swc/core-linux-arm-gnueabihf': 1.11.11
-      '@swc/core-linux-arm64-gnu': 1.11.11
-      '@swc/core-linux-arm64-musl': 1.11.11
-      '@swc/core-linux-x64-gnu': 1.11.11
-      '@swc/core-linux-x64-musl': 1.11.11
-      '@swc/core-win32-arm64-msvc': 1.11.11
-      '@swc/core-win32-ia32-msvc': 1.11.11
-      '@swc/core-win32-x64-msvc': 1.11.11
+      '@swc/core-darwin-arm64': 1.11.12
+      '@swc/core-darwin-x64': 1.11.12
+      '@swc/core-linux-arm-gnueabihf': 1.11.12
+      '@swc/core-linux-arm64-gnu': 1.11.12
+      '@swc/core-linux-arm64-musl': 1.11.12
+      '@swc/core-linux-x64-gnu': 1.11.12
+      '@swc/core-linux-x64-musl': 1.11.12
+      '@swc/core-win32-arm64-msvc': 1.11.12
+      '@swc/core-win32-ia32-msvc': 1.11.12
+      '@swc/core-win32-x64-msvc': 1.11.12
     dev: false
 
   /@swc/counter@0.1.3:
@@ -5747,20 +5747,20 @@ packages:
     resolution: {integrity: sha512-KiOAIsdpUTcAXuykya5fnVVT+/5uS0Q1mrkRHcF89tpieSmY33O/tmc54CqwA+bfhbtEfZUNLHaPUiB9X3jt1A==}
     dev: false
 
-  /oxc-minify@0.61.1:
-    resolution: {integrity: sha512-HwusQurpN1Dm18FMha7ku9lh60TRWkjOnE1moahyjdJQd8VOkTyxZ0ATzsasjy9yNSLoOuGxlypfUvdhReKfMA==}
+  /oxc-minify@0.61.2:
+    resolution: {integrity: sha512-Qz0j9eHLSwnxRWPD+KtFOdHk+sVAXdLaHiLx7aOWyZfokyoSrjmVXzrfK5nbNSrH220KlKNTNjFrhEIrve1b2w==}
     engines: {node: '>=14.0.0'}
     optionalDependencies:
-      '@oxc-minify/binding-darwin-arm64': 0.61.1
-      '@oxc-minify/binding-darwin-x64': 0.61.1
-      '@oxc-minify/binding-linux-arm-gnueabihf': 0.61.1
-      '@oxc-minify/binding-linux-arm64-gnu': 0.61.1
-      '@oxc-minify/binding-linux-arm64-musl': 0.61.1
-      '@oxc-minify/binding-linux-x64-gnu': 0.61.1
-      '@oxc-minify/binding-linux-x64-musl': 0.61.1
-      '@oxc-minify/binding-wasm32-wasi': 0.61.1
-      '@oxc-minify/binding-win32-arm64-msvc': 0.61.1
-      '@oxc-minify/binding-win32-x64-msvc': 0.61.1
+      '@oxc-minify/binding-darwin-arm64': 0.61.2
+      '@oxc-minify/binding-darwin-x64': 0.61.2
+      '@oxc-minify/binding-linux-arm-gnueabihf': 0.61.2
+      '@oxc-minify/binding-linux-arm64-gnu': 0.61.2
+      '@oxc-minify/binding-linux-arm64-musl': 0.61.2
+      '@oxc-minify/binding-linux-x64-gnu': 0.61.2
+      '@oxc-minify/binding-linux-x64-musl': 0.61.2
+      '@oxc-minify/binding-wasm32-wasi': 0.61.2
+      '@oxc-minify/binding-win32-arm64-msvc': 0.61.2
+      '@oxc-minify/binding-win32-x64-msvc': 0.61.2
     dev: false
 
   /p-defer@1.0.0:
