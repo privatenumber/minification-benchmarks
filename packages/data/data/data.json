@@ -20,13 +20,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.12",
+				"version": "1.11.13",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 22812,
 						"minzippedBytes": 8186,
-						"time": 16.6439438,
+						"time": 16.0633962,
 						"runs": 5
 					}
 				}
@@ -197,13 +197,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.12",
+				"version": "1.11.13",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedBytes": 58410,
-						"minzippedBytes": 18726,
-						"time": 42.696373799999996,
+						"minifiedBytes": 58408,
+						"minzippedBytes": 18733,
+						"time": 39.682597,
 						"runs": 5
 					}
 				}
@@ -335,13 +335,13 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.12",
+				"version": "1.11.13",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedBytes": 89206,
-						"minzippedBytes": 30883,
-						"time": 65.332214,
+						"minifiedBytes": 89203,
+						"minzippedBytes": 30874,
+						"time": 63.093734,
 						"runs": 5
 					}
 				}
@@ -499,13 +499,13 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.12",
+				"version": "1.11.13",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedBytes": 115680,
-						"minzippedBytes": 42725,
-						"time": 89.967934,
+						"minifiedBytes": 115692,
+						"minzippedBytes": 42730,
+						"time": 87.7425248,
 						"runs": 5
 					}
 				}
@@ -702,13 +702,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.12",
+				"version": "1.11.13",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 69815,
 						"minzippedBytes": 25239,
-						"time": 74.7047996,
+						"time": 72.8508382,
 						"runs": 5
 					}
 				}
@@ -840,13 +840,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.12",
+				"version": "1.11.13",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedBytes": 265238,
-						"minzippedBytes": 87214,
-						"time": 197.56718340000003,
+						"minifiedBytes": 265235,
+						"minzippedBytes": 87216,
+						"time": 199.021299,
 						"runs": 5
 					}
 				}
@@ -1002,13 +1002,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.12",
+				"version": "1.11.13",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedBytes": 455606,
-						"minzippedBytes": 123316,
-						"time": 179.5577566,
+						"minifiedBytes": 455573,
+						"minzippedBytes": 123299,
+						"time": 177.21381519999997,
 						"runs": 5
 					}
 				}
@@ -1152,13 +1152,13 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.12",
+				"version": "1.11.13",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedBytes": 643105,
-						"minzippedBytes": 158755,
-						"time": 282.4839468,
+						"minifiedBytes": 643002,
+						"minzippedBytes": 158752,
+						"time": 282.123516,
 						"runs": 5
 					}
 				}
@@ -1326,13 +1326,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.12",
+				"version": "1.11.13",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedBytes": 706225,
-						"minzippedBytes": 157854,
-						"time": 422.53191419999996,
+						"minifiedBytes": 706210,
+						"minzippedBytes": 157846,
+						"time": 425.99227460000003,
 						"runs": 5
 					}
 				}
@@ -1471,13 +1471,13 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.12",
+				"version": "1.11.13",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedBytes": 994632,
-						"minzippedBytes": 321272,
-						"time": 785.8962283999999,
+						"minifiedBytes": 994540,
+						"minzippedBytes": 321226,
+						"time": 793.2816214000001,
 						"runs": 5
 					}
 				}
@@ -1625,13 +1625,13 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.12",
+				"version": "1.11.13",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedBytes": 2147817,
-						"minzippedBytes": 452724,
-						"time": 1131.694877,
+						"minifiedBytes": 2147745,
+						"minzippedBytes": 452707,
+						"time": 1152.7729020000002,
 						"runs": 5
 					}
 				}
@@ -1777,13 +1777,13 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.12",
+				"version": "1.11.13",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
-						"minifiedBytes": 3315992,
-						"minzippedBytes": 860429,
-						"time": 2100.3064037999998,
+						"minifiedBytes": 3315772,
+						"minzippedBytes": 860435,
+						"time": 2063.0929314,
 						"runs": 5
 					}
 				}
