@@ -8,7 +8,7 @@
 		"@swc/core": "^1.11.13",
 		"@tdewolff/minify": "^2.22.4",
 		"babel-minify": "^0.5.2",
-		"bun": "^1.2.6",
+		"bun": "^1.2.7",
 		"esbuild": "^0.25.1",
 		"find-up": "^7.0.0",
 		"google-closure-compiler": "^20240317.0.0",
