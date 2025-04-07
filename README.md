@@ -12,9 +12,9 @@ This project benchmarks the following minifiers:
 <!-- minifiers:start -->
 | Minifier                                                                                                               | Version                                                                              | Release date ↓ |
 | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | -------------- |
+| [@swc/core](https://github.com/swc-project/swc)                                                                        | [1.11.18](https://www.npmjs.com/package/@swc/core/v/1.11.18)                         | 2025-04-07     |
 | [@tdewolff/minify](https://github.com/tdewolff/minify#readme)                                                          | [2.23.0](https://www.npmjs.com/package/@tdewolff/minify/v/2.23.0)                    | 2025-04-06     |
 | [oxc-minify](https://github.com/oxc-project/oxc.git)                                                                   | [0.62.0](https://www.npmjs.com/package/oxc-minify/v/0.62.0)                          | 2025-04-02     |
-| [@swc/core](https://github.com/swc-project/swc)                                                                        | [1.11.16](https://www.npmjs.com/package/@swc/core/v/1.11.16)                         | 2025-04-01     |
 | [bun](https://github.com/oven-sh/bun)                                                                                  | [1.2.8](https://www.npmjs.com/package/bun/v/1.2.8)                                   | 2025-03-31     |
 | [esbuild](https://github.com/evanw/esbuild)                                                                            | [0.25.2](https://www.npmjs.com/package/esbuild/v/0.25.2)                             | 2025-03-30     |
 | [terser](https://github.com/terser/terser)                                                                             | [5.39.0](https://www.npmjs.com/package/terser/v/5.39.0)                              | 2025-02-13     |
@@ -24,7 +24,7 @@ This project benchmarks the following minifiers:
 | [tedivm/jshrink](https://github.com/tedious/JShrink)                                                                   | 1.7.0                                                                                |                |
 <!-- minifiers:end -->
 
-_Benchmarks last updated on <!-- lastUpdated:start -->Apr 6, 2025<!-- lastUpdated:end -->._
+_Benchmarks last updated on <!-- lastUpdated:start -->Apr 7, 2025<!-- lastUpdated:end -->._
 
 <br>
 
@@ -129,7 +129,7 @@ xychart-beta
 	title "moment v2.29.1"
 	x-axis ["Original",1,2,3,4,5,6,7,8,9,10,11,12]
 	y-axis "Gzip size" 0 --> 36231
-	bar [36231,18568,18690,18748,18910,19119,19260,19334,19478,19569,19683,19857,24998]
+	bar [36231,18568,18690,18746,18910,19119,19260,19334,19478,19569,19683,19857,24998]
 ```
 
 <div align="center">
@@ -140,7 +140,7 @@ xychart-beta
 | **Minifier**                                                                                                          |                **Minified size** |               **Minzipped size** |                     **Time** |
 | 1. [uglify-js](packages/minifiers/minifiers/uglify-js.ts)                                                             | **<sup>🏆-67% </sup>`57.73 kB`** | **<sup>🏆-49% </sup>`18.57 kB`** | <sup>*158x* </sup>`1,149 ms` |
 | 2. [terser](packages/minifiers/minifiers/terser.ts)                                                                   |       <sup>-66% </sup>`59.14 kB` |       <sup>-48% </sup>`18.69 kB` |    <sup>*92x* </sup>`668 ms` |
-| 3. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                   |       <sup>-66% </sup>`58.43 kB` |       <sup>-48% </sup>`18.75 kB` |      <sup>*5x* </sup>`43 ms` |
+| 3. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                   |       <sup>-66% </sup>`58.43 kB` |       <sup>-48% </sup>`18.75 kB` |      <sup>*5x* </sup>`41 ms` |
 | 4. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                 |       <sup>-66% </sup>`58.27 kB` |       <sup>-48% </sup>`18.91 kB` | <sup>*517x* </sup>`3,753 ms` |
 | 5. [babel-minify](packages/minifiers/minifiers/babel-minify.ts)                                                       |       <sup>-66% </sup>`59.70 kB` |       <sup>-47% </sup>`19.12 kB` | <sup>*202x* </sup>`1,465 ms` |
 | 6. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                           |       <sup>-66% </sup>`59.52 kB` |       <sup>-47% </sup>`19.26 kB` |       <sup>*1x* </sup>`8 ms` |
@@ -178,7 +178,7 @@ xychart-beta
 | :---------------------------------------------------------------------------------------------------------------------- | -------------------------------: | -------------------------------: | ---------------------------: |
 | [jquery v3.5.1](https://www.npmjs.com/package/jquery/v/3.5.1) ([Source](https://unpkg.com/jquery@3.5.1/dist/jquery.js)) |                      `287.63 kB` |                       `84.50 kB` |                              |
 | **Minifier**                                                                                                            |                **Minified size** |               **Minzipped size** |                     **Time** |
-| 1. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                     |       <sup>-69% </sup>`89.17 kB` | **<sup>🏆-63% </sup>`30.87 kB`** |      <sup>*7x* </sup>`66 ms` |
+| 1. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                     |       <sup>-69% </sup>`89.17 kB` | **<sup>🏆-63% </sup>`30.87 kB`** |      <sup>*7x* </sup>`65 ms` |
 | 2. [uglify-js](packages/minifiers/minifiers/uglify-js.ts)                                                               | **<sup>🏆-69% </sup>`88.45 kB`** |       <sup>-63% </sup>`30.90 kB` | <sup>*193x* </sup>`1,593 ms` |
 | 3. [terser](packages/minifiers/minifiers/terser.ts)                                                                     |       <sup>-69% </sup>`89.54 kB` |       <sup>-63% </sup>`30.91 kB` |   <sup>*108x* </sup>`891 ms` |
 | 4. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                             |       <sup>-69% </sup>`89.33 kB` |       <sup>-63% </sup>`30.97 kB` |      <sup>*1x* </sup>`13 ms` |
@@ -218,7 +218,7 @@ xychart-beta
 | :------------------------------------------------------------------------------------------------------------- | --------------------------------: | -------------------------------: | ---------------------------: |
 | [vue v2.6.12](https://www.npmjs.com/package/vue/v/2.6.12) ([Source](https://unpkg.com/vue@2.6.12/dist/vue.js)) |                       `342.15 kB` |                       `89.67 kB` |                              |
 | **Minifier**                                                                                                   |                 **Minified size** |               **Minzipped size** |                     **Time** |
-| 1. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                            |       <sup>-66% </sup>`115.70 kB` | **<sup>🏆-52% </sup>`42.73 kB`** |      <sup>*6x* </sup>`92 ms` |
+| 1. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                            |       <sup>-66% </sup>`115.70 kB` | **<sup>🏆-52% </sup>`42.73 kB`** |      <sup>*6x* </sup>`88 ms` |
 | 2. [terser](packages/minifiers/minifiers/terser.ts)                                                            |       <sup>-66% </sup>`116.80 kB` |       <sup>-52% </sup>`42.92 kB` |  <sup>*82x* </sup>`1,102 ms` |
 | 3. [uglify-js](packages/minifiers/minifiers/uglify-js.ts)                                                      | **<sup>🏆-67% </sup>`113.80 kB`** |       <sup>-52% </sup>`43.04 kB` | <sup>*166x* </sup>`2,206 ms` |
 | 4. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                    |       <sup>-66% </sup>`117.25 kB` |       <sup>-52% </sup>`43.36 kB` |      <sup>*1x* </sup>`17 ms` |
@@ -261,7 +261,7 @@ xychart-beta
 | 1. [uglify-js](packages/minifiers/minifiers/uglify-js.ts)                                                                | **<sup>🏆-87% </sup>`68.17 kB`** | **<sup>🏆-74% </sup>`24.69 kB`** | <sup>*154x* </sup>`1,689 ms` |
 | 2. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                    |       <sup>-86% </sup>`73.47 kB` |       <sup>-74% </sup>`24.97 kB` | <sup>*401x* </sup>`4,402 ms` |
 | 3. [terser](packages/minifiers/minifiers/terser.ts)                                                                      |       <sup>-87% </sup>`70.67 kB` |       <sup>-74% </sup>`25.19 kB` |    <sup>*86x* </sup>`947 ms` |
-| 4. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                      |       <sup>-87% </sup>`69.82 kB` |       <sup>-74% </sup>`25.24 kB` |      <sup>*6x* </sup>`76 ms` |
+| 4. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                      |       <sup>-87% </sup>`69.82 kB` |       <sup>-74% </sup>`25.24 kB` |      <sup>*6x* </sup>`73 ms` |
 | 5. [babel-minify](packages/minifiers/minifiers/babel-minify.ts)                                                          |       <sup>-87% </sup>`72.37 kB` |       <sup>-74% </sup>`25.50 kB` | <sup>*190x* </sup>`2,083 ms` |
 | 6. [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts)                                                  |       <sup>-86% </sup>`74.61 kB` |       <sup>-73% </sup>`25.86 kB` |    <sup>*30x* </sup>`333 ms` |
 | 7. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                              |       <sup>-87% </sup>`71.38 kB` |       <sup>-73% </sup>`25.98 kB` |      <sup>*1x* </sup>`12 ms` |
@@ -289,7 +289,7 @@ xychart-beta
 	title "d3 v6.3.1"
 	x-axis ["Original",1,2,3,4,5,6,7,8,9,10]
 	y-axis "Gzip size" 0 --> 130686
-	bar [130686,87016,87208,88087,88162,88319,89156,89882,90800,92395,94121]
+	bar [130686,87016,87205,88087,88162,88319,89156,89882,90800,92395,94121]
 ```
 
 <div align="center">
@@ -299,7 +299,7 @@ xychart-beta
 | [d3 v6.3.1](https://www.npmjs.com/package/d3/v/6.3.1) ([Source](https://unpkg.com/d3@6.3.1/dist/d3.js))                    |                       `555.77 kB` |                      `130.69 kB` |                              |
 | **Minifier**                                                                                                               |                 **Minified size** |               **Minzipped size** |                     **Time** |
 | 1. [uglify-js](packages/minifiers/minifiers/uglify-js.ts)                                                                  | **<sup>🏆-53% </sup>`263.56 kB`** | **<sup>🏆-33% </sup>`87.02 kB`** | <sup>*119x* </sup>`3,927 ms` |
-| 2. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                        |       <sup>-52% </sup>`265.22 kB` |       <sup>-33% </sup>`87.21 kB` |     <sup>*6x* </sup>`219 ms` |
+| 2. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                        |       <sup>-52% </sup>`265.22 kB` |       <sup>-33% </sup>`87.21 kB` |     <sup>*5x* </sup>`194 ms` |
 | 3. [terser](packages/minifiers/minifiers/terser.ts)                                                                        |       <sup>-52% </sup>`267.77 kB` |       <sup>-33% </sup>`88.09 kB` |  <sup>*69x* </sup>`2,274 ms` |
 | 4. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                                |       <sup>-51% </sup>`270.84 kB` |       <sup>-33% </sup>`88.16 kB` |      <sup>*1x* </sup>`44 ms` |
 | 5. [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts)                                                    |       <sup>-50% </sup>`275.35 kB` |       <sup>-32% </sup>`88.32 kB` |    <sup>*21x* </sup>`711 ms` |
@@ -339,7 +339,7 @@ xychart-beta
 | [terser v5.30.3](https://www.npmjs.com/package/terser/v/5.30.3) ([Source](https://unpkg.com/terser@5.30.3/dist/bundle.min.js)) |                         `1.01 MB` |                       `193.76 kB` |                              |
 | **Minifier**                                                                                                                   |                 **Minified size** |                **Minzipped size** |                     **Time** |
 | 1. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                                    |       <sup>-56% </sup>`440.17 kB` | **<sup>🏆-37% </sup>`122.36 kB`** |      <sup>*1x* </sup>`45 ms` |
-| 2. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                            |       <sup>-55% </sup>`455.63 kB` |       <sup>-36% </sup>`123.29 kB` |     <sup>*5x* </sup>`190 ms` |
+| 2. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                            |       <sup>-55% </sup>`455.63 kB` |       <sup>-36% </sup>`123.29 kB` |     <sup>*5x* </sup>`174 ms` |
 | 3. [uglify-js](packages/minifiers/minifiers/uglify-js.ts)                                                                      |       <sup>-55% </sup>`451.19 kB` |       <sup>-36% </sup>`123.33 kB` | <sup>*110x* </sup>`3,787 ms` |
 | 4. [terser](packages/minifiers/minifiers/terser.ts)                                                                            |       <sup>-55% </sup>`458.29 kB` |       <sup>-36% </sup>`123.48 kB` |  <sup>*63x* </sup>`2,172 ms` |
 | 5. [terser (no compress)](packages/minifiers/minifiers/terser.ts)                                                              |       <sup>-53% </sup>`474.40 kB` |       <sup>-36% </sup>`124.43 kB` |    <sup>*28x* </sup>`967 ms` |
@@ -369,7 +369,7 @@ xychart-beta
 	title "three v0.124.0"
 	x-axis ["Original",1,2,3,4,5,6,7,8,9,10,11]
 	y-axis "Gzip size" 0 --> 248267
-	bar [248267,158768,159071,159198,160829,162998,163036,163198,163725,164610,166210,193471]
+	bar [248267,158764,159071,159198,160829,162998,163036,163198,163725,164610,166210,193471]
 ```
 
 <div align="center">
@@ -378,7 +378,7 @@ xychart-beta
 | :------------------------------------------------------------------------------------------------------------------------- | --------------------------------: | --------------------------------: | --------------------------------: |
 | [three v0.124.0](https://www.npmjs.com/package/three/v/0.124.0) ([Source](https://unpkg.com/three@0.124.0/build/three.js)) |                         `1.25 MB` |                       `248.27 kB` |                                   |
 | **Minifier**                                                                                                               |                 **Minified size** |                **Minzipped size** |                          **Time** |
-| 1. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                        |       <sup>-48% </sup>`643.07 kB` | **<sup>🏆-36% </sup>`158.77 kB`** |          <sup>*6x* </sup>`319 ms` |
+| 1. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                        |       <sup>-48% </sup>`643.05 kB` | **<sup>🏆-36% </sup>`158.76 kB`** |          <sup>*5x* </sup>`284 ms` |
 | 2. [uglify-js](packages/minifiers/minifiers/uglify-js.ts)                                                                  | **<sup>🏆-49% </sup>`641.59 kB`** |       <sup>-36% </sup>`159.07 kB` |      <sup>*100x* </sup>`5,046 ms` |
 | 3. [terser](packages/minifiers/minifiers/terser.ts)                                                                        |       <sup>-48% </sup>`653.25 kB` |       <sup>-36% </sup>`159.20 kB` |       <sup>*58x* </sup>`2,934 ms` |
 | 4. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                                |       <sup>-48% </sup>`647.00 kB` |       <sup>-35% </sup>`160.83 kB` |           <sup>*1x* </sup>`70 ms` |
@@ -409,7 +409,7 @@ xychart-beta
 	title "victory v35.8.4"
 	x-axis ["Original",1,2,3,4,5,6,7,8,9]
 	y-axis "Gzip size" 0 --> 309942
-	bar [309942,157435,157848,158706,162262,165014,166386,167579,181071,182671]
+	bar [309942,157435,157843,158706,162262,165014,166386,167579,181071,182671]
 ```
 
 <div align="center">
@@ -419,7 +419,7 @@ xychart-beta
 | [victory v35.8.4](https://www.npmjs.com/package/victory/v/35.8.4) ([Source](https://unpkg.com/victory@35.8.4/dist/victory.js))        |                         `2.13 MB` |                       `309.94 kB` |                                   |
 | **Minifier**                                                                                                                          |                 **Minified size** |                **Minzipped size** |                          **Time** |
 | 1. [uglify-js](packages/minifiers/minifiers/uglify-js.ts)                                                                             | **<sup>🏆-67% </sup>`694.78 kB`** | **<sup>🏆-49% </sup>`157.44 kB`** |      <sup>*121x* </sup>`6,579 ms` |
-| 2. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                                   |       <sup>-67% </sup>`706.21 kB` |       <sup>-49% </sup>`157.85 kB` |          <sup>*8x* </sup>`467 ms` |
+| 2. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                                   |       <sup>-67% </sup>`706.21 kB` |       <sup>-49% </sup>`157.84 kB` |          <sup>*7x* </sup>`407 ms` |
 | 3. [terser](packages/minifiers/minifiers/terser.ts)                                                                                   |       <sup>-66% </sup>`715.58 kB` |       <sup>-49% </sup>`158.71 kB` |       <sup>*73x* </sup>`3,977 ms` |
 | 4. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                                           |       <sup>-66% </sup>`716.14 kB` |       <sup>-48% </sup>`162.26 kB` |          <sup>*1x* </sup>`102 ms` |
 | 5. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts)                                                                |       <sup>-66% </sup>`717.07 kB` |       <sup>-47% </sup>`165.01 kB` |         **<sup>🏆 </sup>`54 ms`** |
@@ -449,7 +449,7 @@ xychart-beta
 	title "echarts v5.1.1"
 	x-axis ["Original",1,2,3,4,5,6,7,8]
 	y-axis "Gzip size" 0 --> 684611
-	bar [684611,321265,321987,324635,330736,331412,331563,331847,337934]
+	bar [684611,321255,321987,324635,330736,331412,331563,331847,337934]
 ```
 
 <div align="center">
@@ -458,7 +458,7 @@ xychart-beta
 | :------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------: | --------------------------------: | --------------------------------: |
 | [echarts v5.1.1](https://www.npmjs.com/package/echarts/v/5.1.1) ([Source](https://unpkg.com/echarts@5.1.1/dist/echarts.js))           |                         `3.20 MB` |                       `684.61 kB` |                                   |
 | **Minifier**                                                                                                                          |                 **Minified size** |                **Minzipped size** |                          **Time** |
-| 1. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                                   | **<sup>🏆-69% </sup>`994.56 kB`** | **<sup>🏆-53% </sup>`321.27 kB`** |          <sup>*7x* </sup>`824 ms` |
+| 1. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                                   | **<sup>🏆-69% </sup>`994.54 kB`** | **<sup>🏆-53% </sup>`321.26 kB`** |          <sup>*6x* </sup>`769 ms` |
 | 2. [terser](packages/minifiers/minifiers/terser.ts)                                                                                   |         <sup>-69% </sup>`1.00 MB` |       <sup>-53% </sup>`321.99 kB` |       <sup>*52x* </sup>`6,005 ms` |
 | 3. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                                           |         <sup>-69% </sup>`1.01 MB` |       <sup>-53% </sup>`324.64 kB` |          <sup>*1x* </sup>`180 ms` |
 | 4. [terser (no compress)](packages/minifiers/minifiers/terser.ts)                                                                     |         <sup>-66% </sup>`1.07 MB` |       <sup>-52% </sup>`330.74 kB` |       <sup>*23x* </sup>`2,649 ms` |
@@ -489,7 +489,7 @@ xychart-beta
 	title "antd v4.16.1"
 	x-axis ["Original",1,2,3,4,5,6,7,8]
 	y-axis "Gzip size" 0 --> 825175
-	bar [825175,452478,457786,463334,471730,475480,478572,488279,491833]
+	bar [825175,452477,457786,463334,471730,475480,478572,488279,491833]
 ```
 
 <div align="center">
@@ -498,7 +498,7 @@ xychart-beta
 | :------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------: | --------------------------------: | --------------------------------: |
 | [antd v4.16.1](https://www.npmjs.com/package/antd/v/4.16.1) ([Source](https://unpkg.com/antd@4.16.1/dist/antd.js))                    |                       `6.67 MB` |                       `825.18 kB` |                                   |
 | **Minifier**                                                                                                                          |               **Minified size** |                **Minzipped size** |                          **Time** |
-| 1. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                                   | **<sup>🏆-68% </sup>`2.15 MB`** | **<sup>🏆-45% </sup>`452.48 kB`** |        <sup>*8x* </sup>`1,216 ms` |
+| 1. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                                   | **<sup>🏆-68% </sup>`2.15 MB`** | **<sup>🏆-45% </sup>`452.48 kB`** |        <sup>*8x* </sup>`1,130 ms` |
 | 2. [terser](packages/minifiers/minifiers/terser.ts)                                                                                   |       <sup>-66% </sup>`2.25 MB` |       <sup>-45% </sup>`457.79 kB` |       <sup>*49x* </sup>`6,823 ms` |
 | 3. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                                           |       <sup>-66% </sup>`2.28 MB` |       <sup>-44% </sup>`463.33 kB` |          <sup>*1x* </sup>`237 ms` |
 | 4. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts)                                                                |       <sup>-66% </sup>`2.29 MB` |       <sup>-43% </sup>`471.73 kB` |        **<sup>🏆 </sup>`137 ms`** |
@@ -529,7 +529,7 @@ xychart-beta
 	title "typescript v4.9.5"
 	x-axis ["Original",1,2,3,4,5,6]
 	y-axis "Gzip size" 0 --> 1884998
-	bar [1884998,859210,860670,875806,876535,879301,915551]
+	bar [1884998,859199,860670,875806,876535,879301,915551]
 ```
 
 <div align="center">
@@ -538,7 +538,7 @@ xychart-beta
 | :------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------: | --------------------------------: | --------------------------------: |
 | [typescript v4.9.5](https://www.npmjs.com/package/typescript/v/4.9.5) ([Source](https://unpkg.com/typescript@4.9.5/lib/typescript.js)) |                      `10.95 MB` |                         `1.88 MB` |                                   |
 | **Minifier**                                                                                                                           |               **Minified size** |                **Minzipped size** |                          **Time** |
-| 1. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                                    | **<sup>🏆-70% </sup>`3.31 MB`** | **<sup>🏆-54% </sup>`859.21 kB`** |        <sup>*8x* </sup>`2,205 ms` |
+| 1. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                                    | **<sup>🏆-70% </sup>`3.31 MB`** | **<sup>🏆-54% </sup>`859.20 kB`** |        <sup>*8x* </sup>`2,088 ms` |
 | 2. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                                            |       <sup>-69% </sup>`3.35 MB` |       <sup>-54% </sup>`860.67 kB` |          <sup>*1x* </sup>`450 ms` |
 | 3. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts)                                                                 |       <sup>-69% </sup>`3.35 MB` |       <sup>-54% </sup>`875.81 kB` |        **<sup>🏆 </sup>`254 ms`** |
 | 4. [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts)                                                                |       <sup>-68% </sup>`3.54 MB` |       <sup>-53% </sup>`876.54 kB` |       <sup>*15x* </sup>`4,029 ms` |
@@ -559,32 +559,31 @@ xychart-beta
 > 🤖 This analysis is AI generated
 
 <!-- analysis:start -->
-Wow, what an intense and tight race in the world of JavaScript minifiers! These competitors duked it out across multiple rounds, slicing bytes and shaving milliseconds like coding ninjas. Let's dive into the results and see who deserves the crown and who deserves a kind pat on the back for showing up.
+Ladies and gentlemen, gather around! It's been an intense, neck-and-neck showdown between the titans of JavaScript minification. We've seen soaring speeds, compressed artifacts, and a couple of casualties along the way. Now, without further ado, let me break it all down for you.
 
 ### Best minifier
-🏆 **@swc/core** takes the top recommendation! It consistently delivered the smallest Gzip size across multiple rounds while maintaining lightning-fast speeds. For large files like "antd" or "typescript," @swc/core demonstrated its mastery with unmatched compression paired with speed. Even against juggernauts like uglify-js and terser, it didn't just hold ground—it dominated. Developers seeking a balance of minimal file size and remarkable speed will love this tool.
+**@swc/core** takes the gold medal in this competition! With lightning-fast speeds and consistently impressive gzip sizes, @swc/core is the go-to champion for anyone who wants the perfect combination of efficiency and compression. For example, it dominated in rounds like "vue" (48% reduction in just 88 ms), "echarts" (47% reduction in 769 ms), and "antd" (55% reduction in 1,130 ms). Whether you're minifying small libraries or colossal frameworks, @swc/core delivers exceptional results without breaking a sweat.
 
 ### Honorable mentions
-1. **oxc-minify** – A rising star in the minification arena, oxc-minify shocked everyone with its incredible speed. Even on beastly packages like "lodash" and "typescript," it processed files in milliseconds while staying competitive in compression. It’s ideal for those in a rush who can afford minor sacrifices in size.
+Here are some other competitors that left us equally awestruck:
 
-2. **@tdewolff/minify** – If speed were the only measure, this minifier would run away with gold medals! Its blistering performance made it the fastest minifier round after round. While its Gzip sizes weren’t the absolute smallest, it considerably compressed files—making it a solid choice for workflows prioritizing speed over every byte.
+1. **uglify-js**: The ultimate gladiator of compression! It consistently achieved the smallest file sizes, sometimes besting @swc/core by a hair. Take "lodash" (26% size) and "d3" (67% size), where it wore the compression crown. However, its processing speed is slow as molasses, making it suited only for those who can spare the time.
 
-3. **uglify-js** – The veteran in the lineup, uglify-js showed its experience by producing the smallest Gzip sizes for several packages like "lodash" and "d3." However, its compression came at the cost of painfully slow speeds. For users who are optimization purists and can tolerate the wait, uglify-js remains a powerhouse.
+2. **@tdewolff/minify**: The rocket of the minification world! This little speedster wasn’t always the smallest, but it finished almost every round with blistering speed. For instance, it processed "terser" (193.76 kB) in a mere 54 ms while still achieving a commendable 53% reduction. If you’re in a rush, this one’s your best buddy.
 
-4. **esbuild** – Esbuild brings a welcome mix of speed and simplicity. While it wasn’t a leader in size reduction, it showed reliable performance in medium-to-large files like "three" and "antd." Great for developers needing a fast and straightforward option with decent results.
-
-5. **terser** – Another battle-hardened competitor, terser scored high overall with commendable Gzip results. However, it was often outpaced by @swc/core and oxc-minify, making it better suited as a reliable fallback or for cases needing very specific configurations.
+3. **oxc-minify**: The challenger storming the stage! This fresh contender showed off a stellar balance between speed and size in rounds like "terser" (63% in 45 ms) and "typescript" (46% in 450 ms). With some polish, this one could quickly become a fan favorite.
 
 ### Eliminated
-Some competitors stumbled along the way, showing that cutting corners in compression can lead to costly errors.
+Unfortunately, not all competitors made it to the finish line. Let’s bow our heads.
 
-- **babel-minify** – Unfortunately, this contender hit a glaring issue with a runtime error during "d3." A promising tool but unreliable in its current state. Stay clear unless you enjoy debugging minifiers!
-  
-- **tedivm/jshrink** – Another casualty during "d3," this tool failed due to an unclosed regex. It has potential but can’t be trusted for serious use at this time.
+- **babel-minify**: A tragic exit during "d3" due to a fatal TypeError. Steer clear of this one unless you enjoy debugging unknown crashes.
+- **tedivm/jshrink**: Down for the count with an unclosed regex issue in "d3." It’s simply not reliable for modern minification needs.
+- **bun**: Promising, but stumbled on "typescript" processing due to an unexpected difference in line endings. Close, but no cigar.
 
-- **bun** – A curveball knockout! Bun’s incorrect handling of newlines in "typescript" resulted in a validation failure. While the speed is enticing, this post-processing blunder rules it out for now.
+### The Wrap-Up
+This has been a battle of size, speed, and strategy. With its consistent performance and blistering efficiency, @swc/core is the best minifier for the everyday user. However, if you're chasing the smallest files, **uglify-js** is your pick—but only if you’re patient. For speed demons who demand "done yesterday," **@tdewolff/minify** is your obvious choice.
 
-What a race! Each competitor showed off unique strengths, but the awe-inspiring consistency and balance of @swc/core made it the true champion. Honorable mentions like oxc-minify and @tdewolff/minify deserve applause for their remarkable speed, while veterans like uglify-js proved there's still room to shine. Congratulations to all participants for astonishing engineering, and thank you for making the world of JavaScript lighter and faster! Until the next lightning-fast showdown!
+Congratulations to all the competitors! Even with a few stumbles here and there, the capabilities on display were truly remarkable. Until the next race—keep your scripts short and your load times swift!
 <!-- analysis:end -->
 
 ## Sponsors
