@@ -98,13 +98,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.1",
+				"version": "2.23.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 23494,
 						"minzippedBytes": 8628,
-						"time": 2.7035978,
+						"time": 2.6345200000000006,
 						"runs": 5
 					}
 				}
@@ -262,13 +262,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.1",
+				"version": "2.23.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 59867,
 						"minzippedBytes": 19478,
-						"time": 7.1593418,
+						"time": 7.4229954,
 						"runs": 5
 					}
 				}
@@ -387,13 +387,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.1",
+				"version": "2.23.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 89681,
 						"minzippedBytes": 31446,
-						"time": 8.139533400000001,
+						"time": 8.253095400000001,
 						"runs": 5
 					}
 				}
@@ -577,13 +577,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.1",
+				"version": "2.23.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 117688,
 						"minzippedBytes": 44358,
-						"time": 13.297951799999998,
+						"time": 13.5904234,
 						"runs": 5
 					}
 				}
@@ -780,13 +780,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.1",
+				"version": "2.23.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 71895,
 						"minzippedBytes": 26498,
-						"time": 12.741042799999999,
+						"time": 11.740920599999999,
 						"runs": 5
 					}
 				}
@@ -905,13 +905,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.1",
+				"version": "2.23.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 269353,
 						"minzippedBytes": 89882,
-						"time": 34.5467522,
+						"time": 32.9899414,
 						"runs": 5
 					}
 				}
@@ -1067,13 +1067,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.1",
+				"version": "2.23.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 456592,
 						"minzippedBytes": 124885,
-						"time": 34.23813739999999,
+						"time": 34.976158600000005,
 						"runs": 5
 					}
 				}
@@ -1256,13 +1256,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.1",
+				"version": "2.23.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 642460,
 						"minzippedBytes": 164610,
-						"time": 51.227671199999996,
+						"time": 51.947434599999994,
 						"runs": 5
 					}
 				}
@@ -1365,13 +1365,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.1",
+				"version": "2.23.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 717072,
 						"minzippedBytes": 165014,
-						"time": 56.5514112,
+						"time": 57.4376736,
 						"runs": 5
 					}
 				}
@@ -1550,13 +1550,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.1",
+				"version": "2.23.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 1013425,
 						"minzippedBytes": 331847,
-						"time": 118.8575204,
+						"time": 118.55125720000001,
 						"runs": 5
 					}
 				}
@@ -1665,13 +1665,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.1",
+				"version": "2.23.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 2292495,
 						"minzippedBytes": 471791,
-						"time": 140.5477206,
+						"time": 142.9099682,
 						"runs": 5
 					}
 				}
@@ -1804,13 +1804,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.1",
+				"version": "2.23.2",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 3348160,
 						"minzippedBytes": 875817,
-						"time": 264.30858939999996,
+						"time": 276.28094999999996,
 						"runs": 5
 					}
 				}
