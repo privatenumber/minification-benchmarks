@@ -31,19 +31,6 @@
 					}
 				}
 			},
-			"google-closure-compiler": {
-				"minifierPath": "google-closure-compiler.ts",
-				"version": "20240317.0.0",
-				"configHash": "a90ea71116",
-				"result": {
-					"data": {
-						"minifiedBytes": 22825,
-						"minzippedBytes": 8193,
-						"time": 3069.56459,
-						"runs": 5
-					}
-				}
-			},
 			"terser": {
 				"minifierPath": "terser.ts",
 				"version": "5.39.2",
@@ -160,6 +147,18 @@
 						"runs": 5
 					}
 				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20250407.0.0",
+				"configHash": "a90ea71116",
+				"result": {
+					"error": {
+						"message": "Compiler is not a constructor",
+						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"stage": "minification"
+					}
+				}
 			}
 		}
 	},
@@ -204,19 +203,6 @@
 						"minifiedBytes": 58426,
 						"minzippedBytes": 18746,
 						"time": 40.0759086,
-						"runs": 5
-					}
-				}
-			},
-			"google-closure-compiler": {
-				"minifierPath": "google-closure-compiler.ts",
-				"version": "20240317.0.0",
-				"configHash": "a90ea71116",
-				"result": {
-					"data": {
-						"minifiedBytes": 58273,
-						"minzippedBytes": 18910,
-						"time": 3753.2190910000004,
 						"runs": 5
 					}
 				}
@@ -322,6 +308,18 @@
 						"minzippedBytes": 24998,
 						"time": 282.018791,
 						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20250407.0.0",
+				"configHash": "a90ea71116",
+				"result": {
+					"error": {
+						"message": "Compiler is not a constructor",
+						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"stage": "minification"
 					}
 				}
 			}
@@ -463,19 +461,6 @@
 					}
 				}
 			},
-			"google-closure-compiler": {
-				"minifierPath": "google-closure-compiler.ts",
-				"version": "20240317.0.0",
-				"configHash": "a90ea71116",
-				"result": {
-					"data": {
-						"minifiedBytes": 92704,
-						"minzippedBytes": 33086,
-						"time": 4056.3981264000004,
-						"runs": 5
-					}
-				}
-			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
@@ -486,6 +471,18 @@
 						"minzippedBytes": 40879,
 						"time": 362.8597456,
 						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20250407.0.0",
+				"configHash": "a90ea71116",
+				"result": {
+					"error": {
+						"message": "Compiler is not a constructor",
+						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"stage": "minification"
 					}
 				}
 			}
@@ -558,19 +555,6 @@
 						"minifiedBytes": 117896,
 						"minzippedBytes": 43925,
 						"time": 2695.911624,
-						"runs": 5
-					}
-				}
-			},
-			"google-closure-compiler": {
-				"minifierPath": "google-closure-compiler.ts",
-				"version": "20240317.0.0",
-				"configHash": "a90ea71116",
-				"result": {
-					"data": {
-						"minifiedBytes": 115612,
-						"minzippedBytes": 44230,
-						"time": 4686.440797,
 						"runs": 5
 					}
 				}
@@ -652,6 +636,18 @@
 						"runs": 5
 					}
 				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20250407.0.0",
+				"configHash": "a90ea71116",
+				"result": {
+					"error": {
+						"message": "Compiler is not a constructor",
+						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"stage": "minification"
+					}
+				}
 			}
 		}
 	},
@@ -670,19 +666,6 @@
 						"minifiedBytes": 68167,
 						"minzippedBytes": 24686,
 						"time": 1688.5425219999997,
-						"runs": 5
-					}
-				}
-			},
-			"google-closure-compiler": {
-				"minifierPath": "google-closure-compiler.ts",
-				"version": "20240317.0.0",
-				"configHash": "a90ea71116",
-				"result": {
-					"data": {
-						"minifiedBytes": 73466,
-						"minzippedBytes": 24972,
-						"time": 4401.7094618,
 						"runs": 5
 					}
 				}
@@ -816,6 +799,18 @@
 						"runs": 5
 					}
 				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20250407.0.0",
+				"configHash": "a90ea71116",
+				"result": {
+					"error": {
+						"message": "Compiler is not a constructor",
+						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"stage": "minification"
+					}
+				}
 			}
 		}
 	},
@@ -942,19 +937,6 @@
 					}
 				}
 			},
-			"google-closure-compiler": {
-				"minifierPath": "google-closure-compiler.ts",
-				"version": "20240317.0.0",
-				"configHash": "a90ea71116",
-				"result": {
-					"data": {
-						"minifiedBytes": 270298,
-						"minzippedBytes": 94121,
-						"time": 7048.4731662,
-						"runs": 5
-					}
-				}
-			},
 			"babel-minify": {
 				"minifierPath": "babel-minify.ts",
 				"version": "0.5.2",
@@ -975,6 +957,18 @@
 					"error": {
 						"message": "RuntimeException: Unclosed regex pattern at position: 289075 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643",
 						"stack": "Stack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString()\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify()\n#4 {main}",
+						"stage": "minification"
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20250407.0.0",
+				"configHash": "a90ea71116",
+				"result": {
+					"error": {
+						"message": "Compiler is not a constructor",
+						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
 						"stage": "minification"
 					}
 				}
@@ -1078,19 +1072,6 @@
 					}
 				}
 			},
-			"google-closure-compiler": {
-				"minifierPath": "google-closure-compiler.ts",
-				"version": "20240317.0.0",
-				"configHash": "a90ea71116",
-				"result": {
-					"data": {
-						"minifiedBytes": 439949,
-						"minzippedBytes": 126562,
-						"time": 6579.302069799999,
-						"runs": 5
-					}
-				}
-			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
 				"version": "0.25.4",
@@ -1138,6 +1119,18 @@
 					"error": {
 						"message": "unknown: Cannot read properties of undefined (reading 'add')",
 						"stack": "TypeError: unknown: Cannot read properties of undefined (reading 'add')\n    at ScopeTracker.addReference (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/scope-tracker.js:47:34)\n    at ReferencedIdentifier (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:202:26)\n    at newFn (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:216:17)\n    at bfsTraverse (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/bfs-traverse.js:38:43)\n    at Mangler.collect (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:235:7)\n    at Mangler.run (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:60:12)\n    at PluginPass.exit (/node_modules/.pnpm/babel-plugin-minify-mangle-names@0.5.1/node_modules/babel-plugin-minify-mangle-names/lib/index.js:546:19)\n    at newFn (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/visitors.js:175:21)\n    at NodePath._call (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:55:20)\n    at NodePath.call (/node_modules/.pnpm/@babel+traverse@7.12.12/node_modules/@babel/traverse/lib/path/context.js:42:17)",
+						"stage": "minification"
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20250407.0.0",
+				"configHash": "a90ea71116",
+				"result": {
+					"error": {
+						"message": "Compiler is not a constructor",
+						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
 						"stage": "minification"
 					}
 				}
@@ -1198,19 +1191,6 @@
 						"minifiedBytes": 647001,
 						"minzippedBytes": 160827,
 						"time": 54.53031180000001,
-						"runs": 5
-					}
-				}
-			},
-			"google-closure-compiler": {
-				"minifierPath": "google-closure-compiler.ts",
-				"version": "20240317.0.0",
-				"configHash": "a90ea71116",
-				"result": {
-					"data": {
-						"minifiedBytes": 644450,
-						"minzippedBytes": 162998,
-						"time": 8569.1615614,
 						"runs": 5
 					}
 				}
@@ -1300,6 +1280,18 @@
 				"result": {
 					"error": {
 						"message": "timeout"
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20250407.0.0",
+				"configHash": "a90ea71116",
+				"result": {
+					"error": {
+						"message": "Compiler is not a constructor",
+						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"stage": "minification"
 					}
 				}
 			}
@@ -1428,16 +1420,6 @@
 					}
 				}
 			},
-			"google-closure-compiler": {
-				"minifierPath": "google-closure-compiler.ts",
-				"version": "20240317.0.0",
-				"configHash": "a90ea71116",
-				"result": {
-					"error": {
-						"message": "timeout"
-					}
-				}
-			},
 			"babel-minify": {
 				"minifierPath": "babel-minify.ts",
 				"version": "0.5.2",
@@ -1459,6 +1441,18 @@
 						"message": "Unexpected token '~'",
 						"stack": "fs-require://2/index.js:594\nreturn function(key,value){if(stack.length>0){var thisPos=stack.indexOf(this)~thisPos?stack.splice(thisPos+1):stack.push(this)~thisPos?keys.splice(thisPos,Infinity,key):keys.push(key)\n                                                                             ^\n\nSyntaxError: Unexpected token '~'\n    at new Script (node:vm:116:7)\n    at createScript (node:vm:268:10)\n    at Object.runInThisContext (node:vm:316:10)\n    at p. (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1165)\n    at s (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1657)\n    at requireString (/packages/artifacts/utils/require-string.ts:9:9)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:100:23)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:98:2)",
 						"stage": "post-validation"
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20250407.0.0",
+				"configHash": "a90ea71116",
+				"result": {
+					"error": {
+						"message": "Compiler is not a constructor",
+						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"stage": "minification"
 					}
 				}
 			}
@@ -1584,16 +1578,6 @@
 					}
 				}
 			},
-			"google-closure-compiler": {
-				"minifierPath": "google-closure-compiler.ts",
-				"version": "20240317.0.0",
-				"configHash": "a90ea71116",
-				"result": {
-					"error": {
-						"message": "timeout"
-					}
-				}
-			},
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
@@ -1612,6 +1596,18 @@
 					"error": {
 						"message": "RuntimeException: Unclosed regex pattern at position: 37315 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:643",
 						"stack": "Stack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString()\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify()\n#4 {main}",
+						"stage": "minification"
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20250407.0.0",
+				"configHash": "a90ea71116",
+				"result": {
+					"error": {
+						"message": "Compiler is not a constructor",
+						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
 						"stage": "minification"
 					}
 				}
@@ -1738,16 +1734,6 @@
 					}
 				}
 			},
-			"google-closure-compiler": {
-				"minifierPath": "google-closure-compiler.ts",
-				"version": "20240317.0.0",
-				"configHash": "a90ea71116",
-				"result": {
-					"error": {
-						"message": "timeout"
-					}
-				}
-			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
@@ -1765,6 +1751,18 @@
 				"result": {
 					"error": {
 						"message": "timeout"
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20250407.0.0",
+				"configHash": "a90ea71116",
+				"result": {
+					"error": {
+						"message": "Compiler is not a constructor",
+						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"stage": "minification"
 					}
 				}
 			}
@@ -1874,16 +1872,6 @@
 					}
 				}
 			},
-			"google-closure-compiler": {
-				"minifierPath": "google-closure-compiler.ts",
-				"version": "20240317.0.0",
-				"configHash": "a90ea71116",
-				"result": {
-					"error": {
-						"message": "timeout"
-					}
-				}
-			},
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
@@ -1913,6 +1901,18 @@
 						"message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'",
 						"stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'\n    at Object.run (/packages/artifacts/artifacts/typescript/test.ts:13:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:101:15)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:98:2)",
 						"stage": "post-validation"
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20250407.0.0",
+				"configHash": "a90ea71116",
+				"result": {
+					"error": {
+						"message": "Compiler is not a constructor",
+						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"stage": "minification"
 					}
 				}
 			}
