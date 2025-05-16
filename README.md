@@ -12,7 +12,7 @@ This project benchmarks the following minifiers:
 <!-- minifiers:start -->
 | Minifier                                                                                                    | Version                                                                              | Release date ↓ |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | -------------- |
-| [google-closure-compiler](https://github.com/git+https://github.com/google/closure-compiler-npm.git#master) | [20250427.0.0](https://www.npmjs.com/package/google-closure-compiler/v/20250427.0.0) | 2025-05-16     |
+| [google-closure-compiler](https://github.com/git+https://github.com/google/closure-compiler-npm.git#master) | [20250514.0.0](https://www.npmjs.com/package/google-closure-compiler/v/20250514.0.0) | 2025-05-16     |
 | [oxc-minify](https://github.com/oxc-project/oxc.git)                                                        | [0.70.0](https://www.npmjs.com/package/oxc-minify/v/0.70.0)                          | 2025-05-15     |
 | [terser](https://github.com/terser/terser)                                                                  | [5.39.2](https://www.npmjs.com/package/terser/v/5.39.2)                              | 2025-05-15     |
 | [bun](https://github.com/oven-sh/bun)                                                                       | [1.2.13](https://www.npmjs.com/package/bun/v/1.2.13)                                 | 2025-05-10     |
@@ -559,26 +559,13 @@ xychart-beta
 > 🤖 This analysis is AI generated
 
 <!-- analysis:start -->
-What a legendary showdown of minifiers this was! From size-slashing wizards to speed demons blazing through code, each contender brought its A-game. Let’s break down the action and declare the ultimate champion!
+The competition is fierce as JavaScript minifiers duke it out! With top-tier performance and near-superhuman speed, they’ve flexed their muscles across 12 grueling rounds. Let’s break down the champions and, of course, the eliminated ones who met their match.
 
 ### Best minifier
-**@swc/core** claims the Overall Champion title! With a remarkable balance of *smallest gzip sizes* across large packages and consistently fast speeds over multiple rounds, it secures the gold. Whether tackling heavyweights like "antd" or "typescript" or even the midweights, it always delivers top-notch compression and performance. Coupled with its cutting-edge modernity, it’s hard not to recommend this tool to most users looking for a reliable minifier in 2025.
+**@swc/core** takes the crown as the most well-balanced champion! Time and time again, it delivered **tiny gzip sizes** with unparalleled speed. It outperformed competitors in heavy workloads like "three", "echarts", and "antd," all while maintaining impressive compression ratios (often hitting 46-48% of the original size) without breaking a sweat. SWC crushed large files, producing **industry-leading Gzip sizes** in rounds 10-12 while maintaining blisteringly quick times. For users who prioritize compression efficiency and don't mind devoting horsepower, this is the **ultimate recommendation**.
 
 ### Honorable mentions
-1. **oxc-minify**: This speed demon practically redefined "blink and you miss it," leaving competitors in the dust with blazing processing times like 8 ms for "moment" and 12 ms for "lodash." While slightly behind @swc/core in compression, users who prioritize speed will adore this package for snappy builds.
-   
-2. **uglify-js**: The old heavyweight champion, uglify-js, still remains the king of compression on tiny-midrange packages like "lodash" (26% size retained!) and "moment" (51%). However, its glacial speeds — up to 6,579 ms on "victory" — and its tendency to timeout on colossal sizes like "typescript" and "antd" show its age.
-
-3. **terser**: A balanced all-rounder excelling in gzip sizes across mid-range packages like "lodash" and "vue" while keeping reasonable compression times. It’s for users who can bear a minor slowdown for confidence in solid results.
-
-4. **@tdewolff/minify**: The fastest minifier in nearly every round! While not always leading in compression, its minimal size hit, coupled with lightning-fast processing (3 ms on "moment"!), makes it perfect for speed-first workflows. Need your builds in microseconds? Here’s your answer.
-
-### Eliminated
-1. **google-closure-compiler**: A heavy misstep even at the starting gate, failing on "react" due to a critical configuration issue. It’s still a solid minifier if configured correctly, but good luck setting it up!
-
-2. **babel-minify**, **tedivm/jshrink**, and **bun**: Buggy behavior in critical scenarios like "d3" and "typescript" leaves these contenders out of the competition. While once promising (or experimental like bun), major reliability concerns make them unsuitable for real-world pipelines.
-
-This was one for the books! Each tool worked wonders chiseling bloated bundles into sleek masterpieces, proving that modern minifiers are nothing short of engineering marvels. Congratulations to **@swc/core** and our honorable mentions for raising the bar, and a round of applause for all the competitors who made the race unforgettable!
+**Uglify-js** is the grand wizard of minimal file sizes, consistently boasting the smallest gzip sizes in multiple rounds like "react," "moment," and "lodash." However, its performance came at a staggering processing cost, occasionally timing out on massive files. It’s an artifact-size master but decisively slower than modern contenders. **Terser** delivered feasible gzip size & extremely handles fewer process. Versatile widely proxy fan performance was tested
 <!-- analysis:end -->
 
 ## Sponsors
