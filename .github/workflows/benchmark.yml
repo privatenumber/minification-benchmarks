@@ -35,10 +35,8 @@ jobs:
         with:
           working_dir: packages/minifiers
 
-
       - name: Confirm Java version
         run: java -version
-
 
       # For Google Closure Compiler
       - name: Setup Java
@@ -46,15 +44,9 @@ jobs:
         with:
           distribution: temurin
           java-version: "21"
-      - name: Run Closure Compiler with Java 21
-        run: |
-          JAVA_HOME_21=$(echo "$JAVA_HOME")
-          "$JAVA_HOME_21/bin/java" -jar node_modules/.pnpm/google-closure-compiler-java@20250514.0.0/node_modules/google-closure-compiler-java/compiler.jar --js=packages/artifacts/node_modules/react/cjs/react.development.js
-
 
       - name: Confirm Java version
         run: java -version
-
 
 
       - name: Benchmark
