@@ -35,21 +35,12 @@ jobs:
         with:
           working_dir: packages/minifiers
 
-      - name: Confirm Java version
-        run: java -version
-
       # For Google Closure Compiler
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: "21"
-
-      - name: Confirm Java version
-        run: java -version
-
-      - name: Prepend Java 21 to PATH
-        run: echo "${JAVA_HOME}/bin" >> $GITHUB_PATH
 
       - name: Benchmark
         run: pnpm bench-all
