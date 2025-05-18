@@ -24,7 +24,7 @@ This project benchmarks the following minifiers:
 | [uglify-js](https://github.com/mishoo/UglifyJS)                                                             | [3.19.3](https://www.npmjs.com/package/uglify-js/v/3.19.3)                           | 2024-08-29     |
 <!-- minifiers:end -->
 
-_Benchmarks last updated on <!-- lastUpdated:start -->May 16, 2025<!-- lastUpdated:end -->._
+_Benchmarks last updated on <!-- lastUpdated:start -->May 18, 2025<!-- lastUpdated:end -->._
 
 <br>
 
@@ -559,13 +559,24 @@ xychart-beta
 > 🤖 This analysis is AI generated
 
 <!-- analysis:start -->
-The competition is fierce as JavaScript minifiers duke it out! With top-tier performance and near-superhuman speed, they’ve flexed their muscles across 12 grueling rounds. Let’s break down the champions and, of course, the eliminated ones who met their match.
+The race for the best JavaScript minifier was filled with tiny files, blazing speeds, and a few unfortunate disqualifications. Each competitor brought a unique blend of compression efficiency and runtime to the showdown, but only one takes the crown. Let’s unveil the winners and explore their triumphs and hiccups!
 
 ### Best minifier
-**@swc/core** takes the crown as the most well-balanced champion! Time and time again, it delivered **tiny gzip sizes** with unparalleled speed. It outperformed competitors in heavy workloads like "three", "echarts", and "antd," all while maintaining impressive compression ratios (often hitting 46-48% of the original size) without breaking a sweat. SWC crushed large files, producing **industry-leading Gzip sizes** in rounds 10-12 while maintaining blisteringly quick times. For users who prioritize compression efficiency and don't mind devoting horsepower, this is the **ultimate recommendation**.
+The award goes to **@swc/core**! Combining excellent gzip sizes and rapid minification speeds, this minifier consistently delivered among the smallest compressed files across all test cases while maintaining impressive runtime performance. It dominated heavyweight files like "echarts" (47% reduction in 798ms!) and "antd." If you're looking for a high-performance solution with exceptional compression, @swc/core is king of the hill.
 
 ### Honorable mentions
-**Uglify-js** is the grand wizard of minimal file sizes, consistently boasting the smallest gzip sizes in multiple rounds like "react," "moment," and "lodash." However, its performance came at a staggering processing cost, occasionally timing out on massive files. It’s an artifact-size master but decisively slower than modern contenders. **Terser** delivered feasible gzip size & extremely handles fewer process. Versatile widely proxy fan performance was tested
+- **uglify-js**: A compression monster! It achieved the smallest gzip sizes in many rounds, including "lodash" (26%) and "d3" (67%). However, its runtime was painfully slow, especially on larger files like "victory" (6.5 seconds!) and "antd." Still, if smallest size matters the most and you're patient, uglify-js delivers.
+  
+- **@tdewolff/minify**: The undisputed speed champion! With millisecond runtimes for several datasets, it dominated when you need minification done in a blink. While its compression fell slightly short against others (e.g., "victory" at 53%), @tdewolff/minify is a perfect choice for blazing-fast workflows.
+
+- **oxc-minify**: Performing always consistently well, oxc-minify proves itself as a reliable choice for balanced speed and compression. It achieved stellar results such as "terser" (39ms for 63% compression). A perfect middle-ground pick!
+
+### Eliminated
+It's always sad to see competitors stumble, but we must keep standards high for correctness:
+- **google-closure-compiler**: Failed to even begin due to a compatibility issue with the Java runtime. Oof! 
+- **babel-minify**, **tedivm/jshrink**, **bun**: All suffered catastrophic failures during testing, ranging from runtime exceptions to post-validation mismatches. Use them at your own risk, but better to steer clear!
+
+This competition was a thrill! Congratulations to all the minifiers for pushing the boundaries of size and speed. While @swc/core takes home the title for the best all-rounder, other contenders like @tdewolff/minify and oxc-minify proved there's talent and innovation across the board. Let’s look forward to the next update in the world of JavaScript minification!
 <!-- analysis:end -->
 
 ## Sponsors

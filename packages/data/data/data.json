@@ -151,11 +151,10 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250514.0.0",
-				"configHash": "a90ea71116",
+				"configHash": "004f9ddc59",
 				"result": {
 					"error": {
-						"message": "Compiler is not a constructor",
-						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"message": "\"java -jar /home/runner/work/minification-benchmarks/minification-benchmarks/node_modules/.pnpm/google-closure-compiler-java@20250514.0.0/node_modules/google-closure-compiler-java/compiler.jar --js=/home/runner/work/minification-benchmarks/minification-benchmarks/packages/artifacts/node_modules/react/cjs/react.development.js\\n\\nError: LinkageError occurred while loading main class com.google.javascript.jscomp.CommandLineRunner\\n\\tjava.lang.UnsupportedClassVersionError: com/google/javascript/jscomp/CommandLineRunner has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0\\n\\n\\n\"",
 						"stage": "minification"
 					}
 				}
@@ -314,11 +313,10 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250514.0.0",
-				"configHash": "a90ea71116",
+				"configHash": "004f9ddc59",
 				"result": {
 					"error": {
-						"message": "Compiler is not a constructor",
-						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"message": "\"java -jar /home/runner/work/minification-benchmarks/minification-benchmarks/node_modules/.pnpm/google-closure-compiler-java@20250514.0.0/node_modules/google-closure-compiler-java/compiler.jar --js=/home/runner/work/minification-benchmarks/minification-benchmarks/packages/artifacts/node_modules/moment/moment.js\\n\\nError: LinkageError occurred while loading main class com.google.javascript.jscomp.CommandLineRunner\\n\\tjava.lang.UnsupportedClassVersionError: com/google/javascript/jscomp/CommandLineRunner has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0\\n\\n\\n\"",
 						"stage": "minification"
 					}
 				}
@@ -477,11 +475,10 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250514.0.0",
-				"configHash": "a90ea71116",
+				"configHash": "004f9ddc59",
 				"result": {
 					"error": {
-						"message": "Compiler is not a constructor",
-						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"message": "\"java -jar /home/runner/work/minification-benchmarks/minification-benchmarks/node_modules/.pnpm/google-closure-compiler-java@20250514.0.0/node_modules/google-closure-compiler-java/compiler.jar --js=/home/runner/work/minification-benchmarks/minification-benchmarks/packages/artifacts/node_modules/jquery/dist/jquery.js\\n\\nError: LinkageError occurred while loading main class com.google.javascript.jscomp.CommandLineRunner\\n\\tjava.lang.UnsupportedClassVersionError: com/google/javascript/jscomp/CommandLineRunner has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0\\n\\n\\n\"",
 						"stage": "minification"
 					}
 				}
@@ -640,11 +637,10 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250514.0.0",
-				"configHash": "a90ea71116",
+				"configHash": "004f9ddc59",
 				"result": {
 					"error": {
-						"message": "Compiler is not a constructor",
-						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"message": "\"java -jar /home/runner/work/minification-benchmarks/minification-benchmarks/node_modules/.pnpm/google-closure-compiler-java@20250514.0.0/node_modules/google-closure-compiler-java/compiler.jar --js=/home/runner/work/minification-benchmarks/minification-benchmarks/packages/artifacts/node_modules/vue/dist/vue.js\\n\\nError: LinkageError occurred while loading main class com.google.javascript.jscomp.CommandLineRunner\\n\\tjava.lang.UnsupportedClassVersionError: com/google/javascript/jscomp/CommandLineRunner has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0\\n\\n\\n\"",
 						"stage": "minification"
 					}
 				}
@@ -803,11 +799,10 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250514.0.0",
-				"configHash": "a90ea71116",
+				"configHash": "004f9ddc59",
 				"result": {
 					"error": {
-						"message": "Compiler is not a constructor",
-						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"message": "\"java -jar /home/runner/work/minification-benchmarks/minification-benchmarks/node_modules/.pnpm/google-closure-compiler-java@20250514.0.0/node_modules/google-closure-compiler-java/compiler.jar --js=/home/runner/work/minification-benchmarks/minification-benchmarks/packages/artifacts/node_modules/lodash/lodash.js\\n\\nError: LinkageError occurred while loading main class com.google.javascript.jscomp.CommandLineRunner\\n\\tjava.lang.UnsupportedClassVersionError: com/google/javascript/jscomp/CommandLineRunner has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0\\n\\n\\n\"",
 						"stage": "minification"
 					}
 				}
@@ -964,11 +959,10 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250514.0.0",
-				"configHash": "a90ea71116",
+				"configHash": "004f9ddc59",
 				"result": {
 					"error": {
-						"message": "Compiler is not a constructor",
-						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"message": "\"java -jar /home/runner/work/minification-benchmarks/minification-benchmarks/node_modules/.pnpm/google-closure-compiler-java@20250514.0.0/node_modules/google-closure-compiler-java/compiler.jar --js=/home/runner/work/minification-benchmarks/minification-benchmarks/packages/artifacts/node_modules/d3/dist/d3.js\\n\\nError: LinkageError occurred while loading main class com.google.javascript.jscomp.CommandLineRunner\\n\\tjava.lang.UnsupportedClassVersionError: com/google/javascript/jscomp/CommandLineRunner has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0\\n\\n\\n\"",
 						"stage": "minification"
 					}
 				}
@@ -1126,11 +1120,10 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250514.0.0",
-				"configHash": "a90ea71116",
+				"configHash": "004f9ddc59",
 				"result": {
 					"error": {
-						"message": "Compiler is not a constructor",
-						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"message": "\"java -jar /home/runner/work/minification-benchmarks/minification-benchmarks/node_modules/.pnpm/google-closure-compiler-java@20250514.0.0/node_modules/google-closure-compiler-java/compiler.jar --js=/home/runner/work/minification-benchmarks/minification-benchmarks/packages/artifacts/node_modules/terser/dist/bundle.min.js\\n\\nError: LinkageError occurred while loading main class com.google.javascript.jscomp.CommandLineRunner\\n\\tjava.lang.UnsupportedClassVersionError: com/google/javascript/jscomp/CommandLineRunner has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0\\n\\n\\n\"",
 						"stage": "minification"
 					}
 				}
@@ -1286,11 +1279,10 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250514.0.0",
-				"configHash": "a90ea71116",
+				"configHash": "004f9ddc59",
 				"result": {
 					"error": {
-						"message": "Compiler is not a constructor",
-						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"message": "\"java -jar /home/runner/work/minification-benchmarks/minification-benchmarks/node_modules/.pnpm/google-closure-compiler-java@20250514.0.0/node_modules/google-closure-compiler-java/compiler.jar --js=/home/runner/work/minification-benchmarks/minification-benchmarks/packages/artifacts/node_modules/three/build/three.js\\n\\nError: LinkageError occurred while loading main class com.google.javascript.jscomp.CommandLineRunner\\n\\tjava.lang.UnsupportedClassVersionError: com/google/javascript/jscomp/CommandLineRunner has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0\\n\\n\\n\"",
 						"stage": "minification"
 					}
 				}
@@ -1447,11 +1439,10 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250514.0.0",
-				"configHash": "a90ea71116",
+				"configHash": "004f9ddc59",
 				"result": {
 					"error": {
-						"message": "Compiler is not a constructor",
-						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"message": "\"java -jar /home/runner/work/minification-benchmarks/minification-benchmarks/node_modules/.pnpm/google-closure-compiler-java@20250514.0.0/node_modules/google-closure-compiler-java/compiler.jar --js=/home/runner/work/minification-benchmarks/minification-benchmarks/packages/artifacts/node_modules/victory/dist/victory.js\\n\\nError: LinkageError occurred while loading main class com.google.javascript.jscomp.CommandLineRunner\\n\\tjava.lang.UnsupportedClassVersionError: com/google/javascript/jscomp/CommandLineRunner has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0\\n\\n\\n\"",
 						"stage": "minification"
 					}
 				}
@@ -1603,11 +1594,10 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250514.0.0",
-				"configHash": "a90ea71116",
+				"configHash": "004f9ddc59",
 				"result": {
 					"error": {
-						"message": "Compiler is not a constructor",
-						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"message": "\"java -jar /home/runner/work/minification-benchmarks/minification-benchmarks/node_modules/.pnpm/google-closure-compiler-java@20250514.0.0/node_modules/google-closure-compiler-java/compiler.jar --js=/home/runner/work/minification-benchmarks/minification-benchmarks/packages/artifacts/node_modules/echarts/dist/echarts.js\\n\\nError: LinkageError occurred while loading main class com.google.javascript.jscomp.CommandLineRunner\\n\\tjava.lang.UnsupportedClassVersionError: com/google/javascript/jscomp/CommandLineRunner has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0\\n\\n\\n\"",
 						"stage": "minification"
 					}
 				}
@@ -1757,11 +1747,10 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250514.0.0",
-				"configHash": "a90ea71116",
+				"configHash": "004f9ddc59",
 				"result": {
 					"error": {
-						"message": "Compiler is not a constructor",
-						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"message": "\"java -jar /home/runner/work/minification-benchmarks/minification-benchmarks/node_modules/.pnpm/google-closure-compiler-java@20250514.0.0/node_modules/google-closure-compiler-java/compiler.jar --js=/home/runner/work/minification-benchmarks/minification-benchmarks/packages/artifacts/node_modules/antd/dist/antd.js\\n\\nError: LinkageError occurred while loading main class com.google.javascript.jscomp.CommandLineRunner\\n\\tjava.lang.UnsupportedClassVersionError: com/google/javascript/jscomp/CommandLineRunner has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0\\n\\n\\n\"",
 						"stage": "minification"
 					}
 				}
@@ -1907,11 +1896,10 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250514.0.0",
-				"configHash": "a90ea71116",
+				"configHash": "004f9ddc59",
 				"result": {
 					"error": {
-						"message": "Compiler is not a constructor",
-						"stack": "TypeError: Compiler is not a constructor\n    at default (/packages/minifiers/minifiers/google-closure-compiler.ts:13:21)\n    at runMinifier (/packages/bench/benchmark/cli.ts:21:24)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:95:24)",
+						"message": "\"java -jar /home/runner/work/minification-benchmarks/minification-benchmarks/node_modules/.pnpm/google-closure-compiler-java@20250514.0.0/node_modules/google-closure-compiler-java/compiler.jar --js=/home/runner/work/minification-benchmarks/minification-benchmarks/packages/artifacts/node_modules/typescript/lib/typescript.js\\n\\nError: LinkageError occurred while loading main class com.google.javascript.jscomp.CommandLineRunner\\n\\tjava.lang.UnsupportedClassVersionError: com/google/javascript/jscomp/CommandLineRunner has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0\\n\\n\\n\"",
 						"stage": "minification"
 					}
 				}
