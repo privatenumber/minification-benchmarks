@@ -231,9 +231,6 @@ importers:
         specifier: ^3.19.3
         version: 3.19.3
     devDependencies:
-      '@types/google-closure-compiler':
-        specifier: ^0.0.19
-        version: 0.0.19
       '@types/uglify-js':
         specifier: ^3.17.0
         version: 3.17.0
@@ -1756,12 +1753,6 @@ packages:
 
   /@types/geojson@7946.0.14:
     resolution: {integrity: sha512-WCfD5Ht3ZesJUsONdhvm84dmzWOiOzOAqOncN0++w0lBw1o8OuDNJF2McvvCef/yBqb/HYRahp1BYtODFQ8bRg==}
-    dev: true
-
-  /@types/google-closure-compiler@0.0.19:
-    resolution: {integrity: sha512-5fs1oWR2H84+54UU0fWKlGxjekBH03+nyWav8+0xlUDl0lEQ9abI2cUc7SJJsnf7lC/cJofxeTQ2R4x3vWENmw==}
-    dependencies:
-      '@types/node': 20.14.2
     dev: true
 
   /@types/jquery@3.5.29:

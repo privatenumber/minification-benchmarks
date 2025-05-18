@@ -1,10 +1,5 @@
-// google-closure-compiler is no longer maintained
-// https://github.com/google/closure-compiler-npm/blob/master/packages/google-closure-compiler-js/readme.md
-
-import googleClosureCompiler from 'google-closure-compiler';
+import Compiler from 'google-closure-compiler';
 import { createMinifier } from '../utils/create-minifier.js';
-
-const { compiler: Compiler } = googleClosureCompiler;
 
 export default createMinifier(
 	'google-closure-compiler',
