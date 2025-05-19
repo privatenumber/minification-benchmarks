@@ -29,10 +29,18 @@ jobs:
         with:
           run_install: true
 
+      # For jshrink
       - name: Setup Composer
         uses: php-actions/composer@v6
         with:
           working_dir: packages/minifiers
+
+      # For Google Closure Compiler
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
 
       - name: Benchmark
         run: pnpm bench-all
