@@ -14,14 +14,14 @@ This project benchmarks the following minifiers:
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | -------------- |
 | [@tdewolff/minify](https://github.com/tdewolff/minify#readme)                                               | [2.23.6](https://www.npmjs.com/package/@tdewolff/minify/v/2.23.6)                    | 2025-05-20     |
 | [oxc-minify](https://github.com/oxc-project/oxc.git)                                                        | [0.71.0](https://www.npmjs.com/package/oxc-minify/v/0.71.0)                          | 2025-05-20     |
-| [google-closure-compiler](https://github.com/git+https://github.com/google/closure-compiler-npm.git#master) | [20250518.0.0](https://www.npmjs.com/package/google-closure-compiler/v/20250518.0.0) | 2025-05-19     |
+| [google-closure-compiler](https://github.com/git+https://github.com/google/closure-compiler-npm.git#master) | [20250518.0.0](https://www.npmjs.com/package/google-closure-compiler/v/20250518.0.0) | 2025-05-20     |
 | [terser](https://github.com/terser/terser)                                                                  | [5.39.2](https://www.npmjs.com/package/terser/v/5.39.2)                              | 2025-05-15     |
 | [bun](https://github.com/oven-sh/bun)                                                                       | [1.2.13](https://www.npmjs.com/package/bun/v/1.2.13)                                 | 2025-05-10     |
 | [esbuild](https://github.com/evanw/esbuild)                                                                 | [0.25.4](https://www.npmjs.com/package/esbuild/v/0.25.4)                             | 2025-05-06     |
-| [babel-minify](https://github.com/babel/minify/tree/master/packages/babel-minify)                           | [0.5.2](https://www.npmjs.com/package/babel-minify/v/0.5.2)                          | 2022-05-06     |
-| [tedivm/jshrink](https://github.com/tedious/JShrink)                                                        | 1.7.0                                                                                |                |
-| [@swc/core](https://github.com/swc-project/swc)                                                             | [1.11.22](https://www.npmjs.com/package/@swc/core/v/1.11.22)                         | 2025-04-23     |
+| [@swc/core](https://github.com/swc-project/swc)                                                             | [1.11.22](https://www.npmjs.com/package/@swc/core/v/1.11.22)                         | 2025-04-24     |
 | [uglify-js](https://github.com/mishoo/UglifyJS)                                                             | [3.19.3](https://www.npmjs.com/package/uglify-js/v/3.19.3)                           | 2024-08-29     |
+| [babel-minify](https://github.com/babel/minify/tree/master/packages/babel-minify)                           | [0.5.2](https://www.npmjs.com/package/babel-minify/v/0.5.2)                          | 2022-05-07     |
+| [tedivm/jshrink](https://github.com/tedious/JShrink)                                                        | 1.7.0                                                                                |                |
 <!-- minifiers:end -->
 
 _Benchmarks last updated on <!-- lastUpdated:start -->May 20, 2025<!-- lastUpdated:end -->._

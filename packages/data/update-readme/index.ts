@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-import commentMark from 'comment-mark';
+import { commentMark } from 'comment-mark';
 import outdent from 'outdent';
 import { format } from 'date-fns';
 import { markdownTable } from 'markdown-table';
@@ -187,7 +187,11 @@ const minifiersList = markdownTable([
 	...minifiers
 		// Sort by release date
 		.sort(
-			(a, b) => Number(b.meta.publishDate) - Number(a.meta.publishDate),
+			(a, b) => {
+				const dateA = a.meta.publishDate ? a.meta.publishDate.getTime() : 0;
+				const dateB = b.meta.publishDate ? b.meta.publishDate.getTime() : 0;
+				return dateB - dateA;
+			},
 		)
 		.map(
 			({ meta }) => [

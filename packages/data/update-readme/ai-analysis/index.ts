@@ -16,7 +16,7 @@ export const getAiAnalysis = async (
 	const message = await getMessage(minifiers, data);
 
 	if (!apiKey) {
-		return '';
+		return;
 	}
 
 	const client = new OpenAI({

@@ -167,8 +167,8 @@ importers:
         specifier: ^8.1.1
         version: 8.1.1
       comment-mark:
-        specifier: ^1.1.1
-        version: 1.1.1
+        specifier: ^2.0.0
+        version: 2.0.0
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
@@ -2837,8 +2837,9 @@ packages:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
     dev: false
 
-  /comment-mark@1.1.1:
-    resolution: {integrity: sha512-KxFiXpu1/srgsSrftM/whqTpHZUX+BO3bgsToDNNJSqqsGP48sngnAIC+Cms+cCsDl9TQb7rlAVyfKDBdPQcaA==}
+  /comment-mark@2.0.0:
+    resolution: {integrity: sha512-mqXXnGeX2hvZjxeHK36/BfYcwm1q3+Z9PTF3gwpE4qHOnGRfZOpWNQmAXVzNdBugNVpQXmHbCyAc3eE0B1cFCw==}
+    engines: {node: '>=20'}
     dev: false
 
   /comment-parser@1.4.1:
