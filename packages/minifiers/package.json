@@ -6,14 +6,14 @@
 	"dependencies": {
 		"@minification-benchmarks/utils": "*",
 		"@swc/core": "^1.11.22",
-		"@tdewolff/minify": "^2.23.5",
+		"@tdewolff/minify": "^2.23.6",
 		"babel-minify": "^0.5.2",
 		"bun": "^1.2.13",
 		"esbuild": "^0.25.4",
 		"find-up": "^7.0.0",
 		"google-closure-compiler": "^20250518.0.0",
 		"mem": "^9.0.2",
-		"oxc-minify": "^0.70.0",
+		"oxc-minify": "^0.71.0",
 		"terser": "^5.39.2",
 		"uglify-js": "^3.19.3"
 	},
