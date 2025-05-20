@@ -26,7 +26,7 @@ export const loadComposerInstalled = async (
 	);
 
 	if (!composerInstalledPath) {
-		return;
+		throw new Error('Run `composer install` in packages/minifiers');
 	}
 
 	const installed = await readJsonFile(composerInstalledPath) as ComposerInstalled;
