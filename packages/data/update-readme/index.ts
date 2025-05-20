@@ -76,7 +76,11 @@ const generateBenchmarkTable = (
 					const message = result.error.stage || result.error.message;
 					columns[0] += ` ${
 						mdu.sub(
-							`❌ ${message === 'timeout' ? 'Timed out' : capitalize(message)}`,
+							`❌ ${
+								message === 'timeout'
+									? 'Timed out'
+									: capitalize(message.split('\n')[0].slice(0, 15))
+							}`,
 							{
 								title: `Failed: ${message}`,
 							},

@@ -8,7 +8,7 @@
 		"@minification-benchmarks/minifiers": "*",
 		"@minification-benchmarks/utils": "*",
 		"byte-size": "^8.1.1",
-		"comment-mark": "^2.0.0",
+		"comment-mark": "^2.0.1",
 		"date-fns": "^4.1.0",
 		"lodash-es": "^4.17.21",
 		"markdown-table": "^3.0.3",
