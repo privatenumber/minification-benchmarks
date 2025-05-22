@@ -5,10 +5,10 @@
 	"main": "index.ts",
 	"dependencies": {
 		"@minification-benchmarks/utils": "*",
-		"@swc/core": "^1.11.22",
-		"@tdewolff/minify": "^2.23.6",
+		"@swc/core": "^1.11.29",
+		"@tdewolff/minify": "^2.23.8",
 		"babel-minify": "^0.5.2",
-		"bun": "^1.2.13",
+		"bun": "^1.2.14",
 		"esbuild": "^0.25.4",
 		"find-up": "^7.0.0",
 		"google-closure-compiler": "^20250519.0.0",

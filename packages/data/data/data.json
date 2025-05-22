@@ -20,13 +20,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.22",
+				"version": "1.11.29",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 22812,
 						"minzippedBytes": 8186,
-						"time": 15.871429000000001,
+						"time": 13.588806599999998,
 						"runs": 5
 					}
 				}
@@ -98,26 +98,26 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.6",
+				"version": "2.23.8",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 23494,
 						"minzippedBytes": 8628,
-						"time": 2.3997072000000004,
+						"time": 2.6260361999999997,
 						"runs": 5
 					}
 				}
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.13",
+				"version": "1.2.14",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 23993,
 						"minzippedBytes": 8661,
-						"time": 14.616182600000002,
+						"time": 14.208896600000003,
 						"runs": 5
 					}
 				}
@@ -197,13 +197,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.22",
+				"version": "1.11.29",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 58426,
 						"minzippedBytes": 18746,
-						"time": 40.0759086,
+						"time": 34.7545018,
 						"runs": 5
 					}
 				}
@@ -262,13 +262,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.6",
+				"version": "2.23.8",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 59867,
 						"minzippedBytes": 19478,
-						"time": 7.470803599999999,
+						"time": 5.5713881999999995,
 						"runs": 5
 					}
 				}
@@ -301,13 +301,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.13",
+				"version": "1.2.14",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 61836,
 						"minzippedBytes": 19857,
-						"time": 18.633511199999997,
+						"time": 18.9628572,
 						"runs": 5
 					}
 				}
@@ -335,13 +335,13 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.22",
+				"version": "1.11.29",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 89173,
 						"minzippedBytes": 30866,
-						"time": 62.857072800000005,
+						"time": 53.2968982,
 						"runs": 5
 					}
 				}
@@ -387,13 +387,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.6",
+				"version": "2.23.8",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 89681,
 						"minzippedBytes": 31446,
-						"time": 8.3637822,
+						"time": 7.8729646,
 						"runs": 5
 					}
 				}
@@ -452,13 +452,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.13",
+				"version": "1.2.14",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 92548,
 						"minzippedBytes": 32653,
-						"time": 27.278550799999998,
+						"time": 28.494594999999997,
 						"runs": 5
 					}
 				}
@@ -499,13 +499,13 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.22",
+				"version": "1.11.29",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 115695,
 						"minzippedBytes": 42727,
-						"time": 89.5019058,
+						"time": 72.4769368,
 						"runs": 5
 					}
 				}
@@ -577,13 +577,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.6",
+				"version": "2.23.8",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 117688,
 						"minzippedBytes": 44358,
-						"time": 14.2020132,
+						"time": 13.0698386,
 						"runs": 5
 					}
 				}
@@ -629,13 +629,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.13",
+				"version": "1.2.14",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 121496,
 						"minzippedBytes": 45400,
-						"time": 31.7971678,
+						"time": 31.0495182,
 						"runs": 5
 					}
 				}
@@ -702,13 +702,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.22",
+				"version": "1.11.29",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 69815,
 						"minzippedBytes": 25240,
-						"time": 73.616937,
+						"time": 62.405769199999995,
 						"runs": 5
 					}
 				}
@@ -780,26 +780,26 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.6",
+				"version": "2.23.8",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 71895,
 						"minzippedBytes": 26498,
-						"time": 11.5452232,
+						"time": 11.815171799999998,
 						"runs": 5
 					}
 				}
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.13",
+				"version": "1.2.14",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 73448,
 						"minzippedBytes": 26655,
-						"time": 25.4582886,
+						"time": 25.162221799999998,
 						"runs": 5
 					}
 				}
@@ -840,13 +840,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.22",
+				"version": "1.11.29",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 265215,
 						"minzippedBytes": 87205,
-						"time": 203.145345,
+						"time": 156.0339438,
 						"runs": 5
 					}
 				}
@@ -903,6 +903,19 @@
 					}
 				}
 			},
+			"@tdewolff/minify": {
+				"minifierPath": "tdewolff-minify.ts",
+				"version": "2.23.8",
+				"configHash": "38ae91bbd1",
+				"result": {
+					"data": {
+						"minifiedBytes": 269353,
+						"minzippedBytes": 89882,
+						"time": 32.38810540000001,
+						"runs": 5
+					}
+				}
+			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
 				"version": "0.25.4",
@@ -918,13 +931,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.13",
+				"version": "1.2.14",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 273406,
 						"minzippedBytes": 92395,
-						"time": 49.3747482,
+						"time": 47.560316799999995,
 						"runs": 5
 					}
 				}
@@ -965,16 +978,6 @@
 						"stage": "minification"
 					}
 				}
-			},
-			"@tdewolff/minify": {
-				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.6",
-				"configHash": "38ae91bbd1",
-				"result": {
-					"error": {
-						"message": "Failed to parse JSON:\n{0x1abf910c, 0x5, 0x5}, 0x0?)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/common.go:502 +0x1178\ngithub.com/tdewolff/minify/v2/js.decimalNumber({0x1abf910c?, 0xc0002c9c80?, 0xc0002cdb00?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/util.go:1379 +0x13a\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001cfc50, {0x7f1ef5536918?, 0xc0002cb160?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:894 +0x1328\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyBindingElement(0xc0001cfc50, {{0x7f1ef5536888?, 0xc0002d83f0?}, {0x7f1ef5536918?, 0xc0002cb160?}})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:811 +0x98\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyVarDecl(0xc0001cfc50, 0x7f1ef53b6675?, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:540 +0x219\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001cfc50, {0x7f1ef55367c8?, 0xc0002d83c0?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1374 +0x1676\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001cfc50, {0x7f1ef55367f8?, 0xc000680e28?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1412 +0x2588\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyStmt(0xc0001cfc50, {0x7f1ef5536e88?, 0xc00002f480})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:134 +0xd3f\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyBlockStmt(0xc0001cfc50, 0xc0001883a8)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:420 +0x52\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyFuncDecl(0xc0001cfc50, 0xc000188370, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:626 +0x2eb\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001cfc50, {0x7f1ef5536a98?, 0xc000188370?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1384 +0x12a5\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001cfc50, {0x7f1ef5536978?, 0xc00002ee60?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1103 +0x1d1a\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyArguments(0xc0001cfc50, {{0xc0001a2120?, 0xc000188160?, 0x11?}})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:524 +0x5d\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001cfc50, {0x7f1ef55369a8?, 0xc000746ed0?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1330 +0x1053\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001cfc50, {0x7f1ef5536978?, 0xc00002eea0?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1103 +0x1d1a\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyStmt(0xc0001cfc50, {0x7f1ef5536e88?, 0xc00002eef0})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:134 +0xd3f\ngithub.com/tdewolff/minify/v2/js.(*Minifier).Minify(0xc0000222b8, 0x0?, {0x7f1ef55359e8, 0xc00010b2c0}, {0x7f1ef5535a08?, 0xc00003a660?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:59 +0x1bb\ngithub.com/tdewolff/minify/v2.(*M).MinifyMimetype(0xc000078380, {0xc0000222e8, 0x16, 0x18}, {0x7f1ef55359e8, 0xc00010b2c0}, {0x7f1ef5535a08, 0xc00003a660}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/minify.go:213 +0x255\ngithub.com/tdewolff/minify/v2.(*M).Minify(0xc000078380, {0xc0000222d0?, 0x0?}, {0x7f1ef55359e8, 0xc00010b2c0}, {0x7f1ef5535a08, 0xc00003a660}"
-					}
-				}
 			}
 		}
 	},
@@ -999,13 +1002,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.22",
+				"version": "1.11.29",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 455629,
 						"minzippedBytes": 123291,
-						"time": 176.85568800000001,
+						"time": 144.59725459999999,
 						"runs": 5
 					}
 				}
@@ -1064,13 +1067,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.6",
+				"version": "2.23.8",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 456592,
 						"minzippedBytes": 124885,
-						"time": 32.8977902,
+						"time": 34.761344599999994,
 						"runs": 5
 					}
 				}
@@ -1103,13 +1106,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.13",
+				"version": "1.2.14",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 466803,
 						"minzippedBytes": 127653,
-						"time": 43.4196456,
+						"time": 41.51047179999999,
 						"runs": 5
 					}
 				}
@@ -1149,13 +1152,13 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.22",
+				"version": "1.11.29",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 643053,
 						"minzippedBytes": 158764,
-						"time": 299.6744188,
+						"time": 226.2132482,
 						"runs": 5
 					}
 				}
@@ -1251,15 +1254,28 @@
 					}
 				}
 			},
+			"@tdewolff/minify": {
+				"minifierPath": "tdewolff-minify.ts",
+				"version": "2.23.8",
+				"configHash": "38ae91bbd1",
+				"result": {
+					"data": {
+						"minifiedBytes": 642460,
+						"minzippedBytes": 164610,
+						"time": 49.794874400000005,
+						"runs": 5
+					}
+				}
+			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.13",
+				"version": "1.2.14",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 655932,
 						"minzippedBytes": 166210,
-						"time": 56.832252600000004,
+						"time": 55.5978834,
 						"runs": 5
 					}
 				}
@@ -1286,16 +1302,6 @@
 						"message": "timeout"
 					}
 				}
-			},
-			"@tdewolff/minify": {
-				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.6",
-				"configHash": "38ae91bbd1",
-				"result": {
-					"error": {
-						"message": "Failed to parse JSON:\n{0x442a94e8, 0x4, 0x4}, 0x0?)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/common.go:512 +0x1165\ngithub.com/tdewolff/minify/v2/js.decimalNumber({0x442a94e8?, 0x442a94dd?, 0x9?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/util.go:1379 +0x13a\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001adc50, {0x7f2010936918?, 0xc0005e0940?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:894 +0x1328\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyArguments(0xc0001adc50, {{0xc0005ea1e0?, 0xc0005e9a00?, 0x11?}})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:524 +0x5d\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001adc50, {0x7f20109369a8?, 0xc0005ec360?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1330 +0x1053\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001adc50, {0x7f2010936828?, 0xc0005ec390?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1006 +0x1c28\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001adc50, {0x7f20109367f8?, 0xc000b705e8?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1412 +0x2588\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyStmt(0xc0001adc50, {0x7f2010936e88?, 0xc000b6fb50})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:134 +0xd3f\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyBlockStmt(0xc0001adc50, 0xc000259378)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:420 +0x52\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyFuncDecl(0xc0001adc50, 0xc000259340, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:626 +0x2eb\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyStmt(0xc0001adc50, {0x7f2010936fd8?, 0xc000259340})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:321 +0x265\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyBlockStmt(0xc0001adc50, 0xc000240718)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:420 +0x52\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyFuncDecl(0xc0001adc50, 0xc0002406e0, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:626 +0x2eb\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyStmt(0xc0001adc50, {0x7f2010936fd8?, 0xc0002406e0})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:321 +0x265\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyBlockStmt(0xc0001adc50, 0xc0001982f8)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:420 +0x52\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyFuncDecl(0xc0001adc50, 0xc0001982c0, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:626 +0x2eb\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001adc50, {0x7f2010936a98?, 0xc0001982c0?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1384 +0x12a5\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001adc50, {0x7f2010936978?, 0xc0009ebec0?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1103 +0x1d1a\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyArguments(0xc0001adc50, {{0xc0001a2120?, 0xc0001980b0?, 0x11?}})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:524 +0x5d\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001adc50, {0x7f20109369a8?, 0xc000a01650?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1330 +0x1053\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001adc50, {0x7f2010936978?, 0xc0009ebee0?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1103 +0x1d1a\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyStmt(0xc0001adc50, {0x7f2010936e88?, 0xc0009ebef0})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:134 +0xd3f\ngithub.com/tdewolff/minify/v2/js.(*Minifier).Minify(0xc0000222b8, 0x0?, {0x7f20109359e8, 0xc00010b2c0}, {0x7f2010935a08?, 0xc00003a660?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:59 +0x1bb\ngithub.com/tdewolff/minify/v2.(*M).MinifyMimetype(0xc000078380, {0xc0000222e8, 0x16, 0x18}, {0x7f20109359e8, 0xc00010b2c0}, {0x7f2010935a08, 0xc00003a660}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/minify.go:213 +0x255\ngithub.com/tdewolff/minify/v2.(*M).Minify(0xc000078380, {0xc0000222d0?, 0x0?}, {0x7f20109359e8, 0xc00010b2c0}, {0x7f2010935a08, 0xc00003a660}"
-					}
-				}
 			}
 		}
 	},
@@ -1320,13 +1326,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.22",
+				"version": "1.11.29",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 706207,
 						"minzippedBytes": 157843,
-						"time": 449.51068960000003,
+						"time": 329.84131759999997,
 						"runs": 5
 					}
 				}
@@ -1353,6 +1359,19 @@
 						"minifiedBytes": 716132,
 						"minzippedBytes": 162248,
 						"time": 74.3699722,
+						"runs": 5
+					}
+				}
+			},
+			"@tdewolff/minify": {
+				"minifierPath": "tdewolff-minify.ts",
+				"version": "2.23.8",
+				"configHash": "38ae91bbd1",
+				"result": {
+					"data": {
+						"minifiedBytes": 717072,
+						"minzippedBytes": 165014,
+						"time": 54.8108566,
 						"runs": 5
 					}
 				}
@@ -1398,13 +1417,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.13",
+				"version": "1.2.14",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 727899,
 						"minzippedBytes": 182671,
-						"time": 80.9516626,
+						"time": 79.09945619999999,
 						"runs": 5
 					}
 				}
@@ -1442,16 +1461,6 @@
 						"stage": "post-validation"
 					}
 				}
-			},
-			"@tdewolff/minify": {
-				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.6",
-				"configHash": "38ae91bbd1",
-				"result": {
-					"error": {
-						"message": "Failed to parse JSON:\n{0x366b6fc4, 0x5, 0x5}, 0x0?)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/common.go:502 +0x1178\ngithub.com/tdewolff/minify/v2/js.decimalNumber({0x366b6fc4?, 0x366b6fb2?, 0x1?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/util.go:1379 +0x13a\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0000cfc50, {0x7f9a44736918?, 0xc00025dce0?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:894 +0x1328\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyBindingElement(0xc0000cfc50, {{0x7f9a44736888?, 0xc00026adb0?}, {0x7f9a44736918?, 0xc00025dce0?}})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:811 +0x98\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyVarDecl(0xc0000cfc50, 0xc00026acc0, 0x90?)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:571 +0xfc\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyStmt(0xc0000cfc50, {0x7f9a44736ee8?, 0xc00026acc0})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:141 +0x1725\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyBlockStmt(0xc0000cfc50, 0xc000264a88)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:420 +0x52\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyFuncDecl(0xc0000cfc50, 0xc000264a50, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:626 +0x2eb\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0000cfc50, {0x7f9a44736a98?, 0xc000264a50?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1384 +0x12a5\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0000cfc50, {0x7f9a44736978?, 0xc00024f5e0?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1103 +0x1d1a\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyProperty(0xc0000cfc50, {0xc00025ed28, 0x0, {0x7f9a44736978, 0xc00024f5e0}, {0x0, 0x0}})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:796 +0xd9\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0000cfc50, {0x7f9a44736c18?, 0xc0000bc1e0?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1143 +0x241a\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyArguments(0xc0000cfc50, {{0xc0000be900?, 0xc0000a6490?, 0x11?}})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:524 +0x5d\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0000cfc50, {0x7f9a447369a8?, 0xc000d3a900?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1330 +0x1053\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyStmt(0xc0000cfc50, {0x7f9a44736dc8?, 0xc000acebe0})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:179 +0x1508\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyBlockStmt(0xc0000cfc50, 0xc0000aa248)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:420 +0x52\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyFuncDecl(0xc0000cfc50, 0xc0000aa210, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:626 +0x2eb\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0000cfc50, {0x7f9a44736a98?, 0xc0000aa210?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1384 +0x12a5\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyArguments(0xc0000cfc50, {{0xc0000be240?, 0xc0000a60a0?, 0x11?}})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:524 +0x5d\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0000cfc50, {0x7f9a447369a8?, 0xc000d3a930?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1330 +0x1053\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyStmt(0xc0000cfc50, {0x7f9a44736e88?, 0xc000acec00})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:134 +0xd3f\ngithub.com/tdewolff/minify/v2/js.(*Minifier).Minify(0xc0000222b8, 0x0?, {0x7f9a447359e8, 0xc0000a2000}, {0x7f9a44735a08?, 0xc0000a4000?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:59 +0x1bb\ngithub.com/tdewolff/minify/v2.(*M).MinifyMimetype(0xc000078380, {0xc0000a0018, 0x16, 0x18}, {0x7f9a447359e8, 0xc0000a2000}, {0x7f9a44735a08, 0xc0000a4000}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/minify.go:213 +0x255\ngithub.com/tdewolff/minify/v2.(*M).Minify(0xc000078380, {0xc0000a0000?, 0x0?}, {0x7f9a447359e8, 0xc0000a2000}, {0x7f9a44735a08, 0xc0000a4000}"
-					}
-				}
 			}
 		}
 	},
@@ -1463,13 +1472,13 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.22",
+				"version": "1.11.29",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 994543,
 						"minzippedBytes": 321255,
-						"time": 797.8990238,
+						"time": 629.915444,
 						"runs": 5
 					}
 				}
@@ -1539,15 +1548,28 @@
 					}
 				}
 			},
+			"@tdewolff/minify": {
+				"minifierPath": "tdewolff-minify.ts",
+				"version": "2.23.8",
+				"configHash": "38ae91bbd1",
+				"result": {
+					"data": {
+						"minifiedBytes": 1013425,
+						"minzippedBytes": 331847,
+						"time": 120.9605434,
+						"runs": 5
+					}
+				}
+			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.13",
+				"version": "1.2.14",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 1024688,
 						"minzippedBytes": 337934,
-						"time": 130.0450414,
+						"time": 126.36716440000001,
 						"runs": 5
 					}
 				}
@@ -1593,16 +1615,6 @@
 						"stage": "minification"
 					}
 				}
-			},
-			"@tdewolff/minify": {
-				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.6",
-				"configHash": "38ae91bbd1",
-				"result": {
-					"error": {
-						"message": "Failed to parse JSON:\n{0x2b9c2165, 0x5, 0x5}, 0x0?)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/common.go:502 +0x1178\ngithub.com/tdewolff/minify/v2/js.decimalNumber({0x2b9c2165?, 0xc00023c180?, 0xc0002394d0?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/util.go:1379 +0x13a\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001bdc50, {0x7f3cfa536918?, 0xc0002339c0?}, 0xa)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:894 +0x1328\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001bdc50, {0x7f3cfa536828?, 0xc000239590?}, 0x4)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1006 +0x1c28\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001bdc50, {0x7f3cfa536828?, 0xc0002395c0?}, 0x4)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1006 +0x1c28\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001bdc50, {0x7f3cfa536828?, 0xc0002396b0?}, 0x2)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:972 +0x1a38\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001bdc50, {0x7f3cfa536a68?, 0xc0002398c0?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1368 +0x1ea6\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyStmt(0xc0001bdc50, {0x7f3cfa536dc8?, 0xc00023a250})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:179 +0x1508\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyBlockStmt(0xc0001bdc50, 0xc000234df8)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:420 +0x52\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyFuncDecl(0xc0001bdc50, 0xc000234dc0, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:626 +0x2eb\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001bdc50, {0x7f3cfa536a98?, 0xc000234dc0?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1384 +0x12a5\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001bdc50, {0x7f3cfa536828?, 0xc0002398f0?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1006 +0x1c28\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001bdc50, {0x7f3cfa5367f8?, 0xc0014c4168?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1412 +0x2588\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyStmt(0xc0001bdc50, {0x7f3cfa536dc8?, 0xc00023a490})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:179 +0x1508\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyBlockStmt(0xc0001bdc50, 0xc0002340e8)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:420 +0x52\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyFuncDecl(0xc0001bdc50, 0xc0002340b0, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:626 +0x2eb\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001bdc50, {0x7f3cfa536a98?, 0xc0002340b0?}, 0x11)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1384 +0x12a5\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001bdc50, {0x7f3cfa5369a8?, 0xc000240600?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1324 +0xff6\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001bdc50, {0x7f3cfa536978?, 0xc00023a4b0?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1103 +0x1d1a\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyBindingElement(0xc0001bdc50, {{0x7f3cfa536888?, 0xc0002315c0?}, {0x7f3cfa536978?, 0xc00023a4b0?}})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:811 +0x98\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyVarDecl(0xc0001bdc50, 0x7f3cfa3b6675?, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:540 +0x219\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001bdc50, {0x7f3cfa5367c8?, 0xc000231590?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1374 +0x1676\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001bdc50, {0x7f3cfa5367f8?, 0xc001010090?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1412 +0x2588\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyStmt(0xc0001bdc50, {0x7f3cfa536e88?, 0xc000cafd60})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:134 +0xd3f\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyBlockStmt(0xc0001bdc50, 0xc0001883a8)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:420 +0x52\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyFuncDecl(0xc0001bdc50, 0xc000188370, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:626 +0x2eb\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001bdc50, {0x7f3cfa536a98?, 0xc000188370?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1384 +0x12a5\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001bdc50, {0x7f3cfa536978?, 0xc000caef20?}, 0x1)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1103 +0x1d1a\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyArguments(0xc0001bdc50, {{0xc0001a2120?, 0xc000188160?, 0x11?}})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:524 +0x5d\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001bdc50, {0x7f3cfa5369a8?, 0xc0013589f0?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1330 +0x1053\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyExpr(0xc0001bdc50, {0x7f3cfa536978?, 0xc000caef40?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:1103 +0x1d1a\ngithub.com/tdewolff/minify/v2/js.(*jsMinifier).minifyStmt(0xc0001bdc50, {0x7f3cfa536e88?, 0xc000caefe0})\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:134 +0xd3f\ngithub.com/tdewolff/minify/v2/js.(*Minifier).Minify(0xc0000222b8, 0x0?, {0x7f3cfa5359e8, 0xc00010b2c0}, {0x7f3cfa535a08?, 0xc00003a660?}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/js/js.go:59 +0x1bb\ngithub.com/tdewolff/minify/v2.(*M).MinifyMimetype(0xc000078380, {0xc0000222e8, 0x16, 0x18}, {0x7f3cfa5359e8, 0xc00010b2c0}, {0x7f3cfa535a08, 0xc00003a660}, 0x0)\n\t/home/runner/go/pkg/mod/github.com/tdewolff/minify/v2@v2.23.5/minify.go:213 +0x255\ngithub.com/tdewolff/minify/v2.(*M).Minify(0xc000078380, {0xc0000222d0?, 0x0?}, {0x7f3cfa5359e8, 0xc00010b2c0}, {0x7f3cfa535a08, 0xc00003a660}"
-					}
-				}
 			}
 		}
 	},
@@ -1614,13 +1626,13 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.22",
+				"version": "1.11.29",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 2146270,
 						"minzippedBytes": 452477,
-						"time": 1185.1787638,
+						"time": 857.9490331999999,
 						"runs": 5
 					}
 				}
@@ -1653,13 +1665,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.6",
+				"version": "2.23.8",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
-						"minifiedBytes": 2292496,
-						"minzippedBytes": 471792,
-						"time": 137.9133506,
+						"minifiedBytes": 2292495,
+						"minzippedBytes": 471791,
+						"time": 141.16856819999998,
 						"runs": 5
 					}
 				}
@@ -1705,13 +1717,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.13",
+				"version": "1.2.14",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 2296786,
 						"minzippedBytes": 491833,
-						"time": 177.37739,
+						"time": 173.378803,
 						"runs": 5
 					}
 				}
@@ -1766,13 +1778,13 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.11.22",
+				"version": "1.11.29",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 3308152,
 						"minzippedBytes": 859199,
-						"time": 2120.2301688,
+						"time": 1744.7565964,
 						"runs": 5
 					}
 				}
@@ -1792,13 +1804,13 @@
 			},
 			"@tdewolff/minify": {
 				"minifierPath": "tdewolff-minify.ts",
-				"version": "2.23.6",
+				"version": "2.23.8",
 				"configHash": "38ae91bbd1",
 				"result": {
 					"data": {
 						"minifiedBytes": 3348160,
 						"minzippedBytes": 875817,
-						"time": 261.3831022,
+						"time": 258.5364427999999,
 						"runs": 5
 					}
 				}
@@ -1894,7 +1906,7 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.13",
+				"version": "1.2.14",
 				"configHash": "cd9d902c70",
 				"result": {
 					"error": {
