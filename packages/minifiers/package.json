@@ -14,7 +14,7 @@
 		"google-closure-compiler": "^20250603.0.0",
 		"mem": "^9.0.2",
 		"oxc-minify": "^0.72.3",
-		"terser": "^5.41.0",
+		"terser": "^5.42.0",
 		"uglify-js": "^3.19.3"
 	},
 	"devDependencies": {
