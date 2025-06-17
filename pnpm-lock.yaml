@@ -216,8 +216,8 @@ importers:
         specifier: ^7.0.0
         version: 7.0.0
       google-closure-compiler:
-        specifier: ^20250609.0.0
-        version: 20250609.0.0
+        specifier: ^20250615.0.0
+        version: 20250615.0.0
       mem:
         specifier: ^9.0.2
         version: 9.0.2
@@ -4456,57 +4456,57 @@ packages:
       slash: 3.0.0
     dev: true
 
-  /google-closure-compiler-java@20250609.0.0:
-    resolution: {integrity: sha512-6lEBjIt9ywTo3IPH1QClpWNGpl0KarosXB5HL675XD9T/3CmCUS+fFfvsB2Tot3T+b5dh40dLrj4eRYk0IBrJw==}
+  /google-closure-compiler-java@20250615.0.0:
+    resolution: {integrity: sha512-gkhCusRw29Q96waXg/grUCg0hg/XQyL6bOtOAAdeiHjjubOpDqR+oHxMQpIUQgAEfK5SIcV0AghajEbAMhU2cw==}
     dev: false
 
-  /google-closure-compiler-linux-arm64@20250609.0.0:
-    resolution: {integrity: sha512-bL+RaqzgyocEpKw4nJnRMZKxfF+KXZAr01noFd86nHS0gQ6TKXWr4HWxt3lKYF8/KRY2ADs4HzoCIJ2G3uUMdA==}
+  /google-closure-compiler-linux-arm64@20250615.0.0:
+    resolution: {integrity: sha512-7GCB2aFzf0HITf+3MoKZvvNysaJmJL7u9/3D9RAUW3lZWJMx1rwNcrGw7UxsfW6XbmKhEHRtraxiizWfQBLAQQ==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /google-closure-compiler-linux@20250609.0.0:
-    resolution: {integrity: sha512-CHxEe0DjbXV2OdLBNdL5jtzxWzX6EFXug17LT2wtp7F8vw0/Kx+d0xwEacfsbYz3gFXAIjtHFG6FSnc2voRqXg==}
+  /google-closure-compiler-linux@20250615.0.0:
+    resolution: {integrity: sha512-WyfNTFto0GM010doY1hNptC+OBtNlFhzdLWTSm1CQ+C8HO/KyoWlfuwfQCthPFqe7pnpnNd1sCe8fznAqy5syQ==}
     cpu: [x32, x64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /google-closure-compiler-macos@20250609.0.0:
-    resolution: {integrity: sha512-w3ClX73FDcIjGRDyDoqBMvP2iphhrffB/3JFgr30ZJs6bM+0HtapcBTlY3MtUOglv8Rff3riqW0YrQp0WupKxg==}
+  /google-closure-compiler-macos@20250615.0.0:
+    resolution: {integrity: sha512-eLm67XKEMWbSP9rUBI2lEeGrUFqEAbD4+n2bDhNiY8ljCWYiBBlm1WaylGQxMlxdmLNuQIfS5F7utLBSFnlVvA==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /google-closure-compiler-windows@20250609.0.0:
-    resolution: {integrity: sha512-0Fi+5GsU5YbIpfRsK3li4rd52qqu6RCYblUpp71rck9eh43lKZMJ/vZehR3VKWvuarFFNZcCfjYaGLN2KuzQ8A==}
+  /google-closure-compiler-windows@20250615.0.0:
+    resolution: {integrity: sha512-jeeWwwRv+dvlPgFxGnW6zeO2kmWgN6/ajZjgw/3gfrf+KXV0oxjoGnWpY0/2C7H285f8b9Y3r5bDxgxyBL/GPw==}
     cpu: [x32, x64]
     os: [win32]
     requiresBuild: true
     dev: false
     optional: true
 
-  /google-closure-compiler@20250609.0.0:
-    resolution: {integrity: sha512-K2+JpkgsGYHXPThfhneZeM1hnpM3ilhQu0ct5SzCg3taIwpJ8L8Qb2EchrRgybQIOge2FdoS37rSIb3UMEqARw==}
+  /google-closure-compiler@20250615.0.0:
+    resolution: {integrity: sha512-/n5+KKP2rOrlqFsivJDaOFEIkED9/yIinCd37f3BZm5KqoS2ijxLWHC0KOCx/Wodm82X8rPkoZIzTpInCwlN6w==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
       chalk: 5.4.1
-      google-closure-compiler-java: 20250609.0.0
+      google-closure-compiler-java: 20250615.0.0
       minimist: 1.2.8
       vinyl: 3.0.0
       vinyl-sourcemaps-apply: 0.2.1
     optionalDependencies:
-      google-closure-compiler-linux: 20250609.0.0
-      google-closure-compiler-linux-arm64: 20250609.0.0
-      google-closure-compiler-macos: 20250609.0.0
-      google-closure-compiler-windows: 20250609.0.0
+      google-closure-compiler-linux: 20250615.0.0
+      google-closure-compiler-linux-arm64: 20250615.0.0
+      google-closure-compiler-macos: 20250615.0.0
+      google-closure-compiler-windows: 20250615.0.0
     dev: false
 
   /gopd@1.0.1:
