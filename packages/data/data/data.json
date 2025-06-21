@@ -111,13 +111,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.16",
+				"version": "1.2.17",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 23993,
 						"minzippedBytes": 8661,
-						"time": 14.0629324,
+						"time": 13.844725400000002,
 						"runs": 5
 					}
 				}
@@ -301,13 +301,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.16",
+				"version": "1.2.17",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 61836,
 						"minzippedBytes": 19857,
-						"time": 18.2371868,
+						"time": 18.0150374,
 						"runs": 5
 					}
 				}
@@ -452,13 +452,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.16",
+				"version": "1.2.17",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 92548,
 						"minzippedBytes": 32653,
-						"time": 27.09989,
+						"time": 28.5479918,
 						"runs": 5
 					}
 				}
@@ -629,13 +629,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.16",
+				"version": "1.2.17",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 121496,
 						"minzippedBytes": 45400,
-						"time": 29.926768999999997,
+						"time": 32.117276600000004,
 						"runs": 5
 					}
 				}
@@ -793,13 +793,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.16",
+				"version": "1.2.17",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 73448,
 						"minzippedBytes": 26655,
-						"time": 24.2321272,
+						"time": 24.3971038,
 						"runs": 5
 					}
 				}
@@ -931,13 +931,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.16",
+				"version": "1.2.17",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 273406,
 						"minzippedBytes": 92395,
-						"time": 47.059310200000006,
+						"time": 49.092651599999996,
 						"runs": 5
 					}
 				}
@@ -1106,13 +1106,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.16",
+				"version": "1.2.17",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 466803,
 						"minzippedBytes": 127653,
-						"time": 41.7672906,
+						"time": 41.8860748,
 						"runs": 5
 					}
 				}
@@ -1269,13 +1269,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.16",
+				"version": "1.2.17",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 655932,
 						"minzippedBytes": 166210,
-						"time": 53.79916419999999,
+						"time": 54.442821200000004,
 						"runs": 5
 					}
 				}
@@ -1417,13 +1417,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.16",
+				"version": "1.2.17",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 727899,
 						"minzippedBytes": 182671,
-						"time": 75.6042638,
+						"time": 78.1501644,
 						"runs": 5
 					}
 				}
@@ -1563,13 +1563,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.16",
+				"version": "1.2.17",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 1024688,
 						"minzippedBytes": 337934,
-						"time": 121.3818014,
+						"time": 124.16746819999999,
 						"runs": 5
 					}
 				}
@@ -1717,13 +1717,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.16",
+				"version": "1.2.17",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 2296786,
 						"minzippedBytes": 491833,
-						"time": 167.0373608,
+						"time": 171.3871174,
 						"runs": 5
 					}
 				}
@@ -1906,7 +1906,7 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.16",
+				"version": "1.2.17",
 				"configHash": "cd9d902c70",
 				"result": {
 					"error": {
