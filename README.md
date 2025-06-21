@@ -12,11 +12,11 @@ This project benchmarks the following minifiers:
 <!-- minifiers:start -->
 | Minifier                                                                                                    | Version                                                                              | Release date ↓ |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | -------------- |
+| [bun](https://github.com/oven-sh/bun)                                                                       | [1.2.17](https://www.npmjs.com/package/bun/v/1.2.17)                                 | 2025-06-21     |
 | [@swc/core](https://github.com/swc-project/swc)                                                             | [1.12.5](https://www.npmjs.com/package/@swc/core/v/1.12.5)                           | 2025-06-21     |
 | [terser](https://github.com/terser/terser)                                                                  | [5.43.1](https://www.npmjs.com/package/terser/v/5.43.1)                              | 2025-06-19     |
 | [oxc-minify](https://github.com/oxc-project/oxc.git)                                                        | [0.73.2](https://www.npmjs.com/package/oxc-minify/v/0.73.2)                          | 2025-06-18     |
 | [google-closure-compiler](https://github.com/git+https://github.com/google/closure-compiler-npm.git#master) | [20250615.0.0](https://www.npmjs.com/package/google-closure-compiler/v/20250615.0.0) | 2025-06-17     |
-| [bun](https://github.com/oven-sh/bun)                                                                       | [1.2.16](https://www.npmjs.com/package/bun/v/1.2.16)                                 | 2025-06-12     |
 | [esbuild](https://github.com/evanw/esbuild)                                                                 | [0.25.5](https://www.npmjs.com/package/esbuild/v/0.25.5)                             | 2025-05-27     |
 | [@tdewolff/minify](https://github.com/tdewolff/minify#readme)                                               | [2.23.8](https://www.npmjs.com/package/@tdewolff/minify/v/2.23.8)                    | 2025-05-21     |
 | [uglify-js](https://github.com/mishoo/UglifyJS)                                                             | [3.19.3](https://www.npmjs.com/package/uglify-js/v/3.19.3)                           | 2024-08-29     |
@@ -187,7 +187,7 @@ xychart-beta
 | 7. [terser (no compress)](packages/minifiers/minifiers/terser.ts)                                                       |       <sup>-67% </sup>`94.26 kB` |       <sup>-63% </sup>`31.56 kB` |    <sup>*47x* </sup>`373 ms` |
 | 8. [babel-minify](packages/minifiers/minifiers/babel-minify.ts)                                                         |       <sup>-68% </sup>`92.10 kB` |       <sup>-62% </sup>`31.80 kB` | <sup>*304x* </sup>`2,398 ms` |
 | 9. [esbuild](packages/minifiers/minifiers/esbuild.ts)                                                                   |       <sup>-69% </sup>`90.07 kB` |       <sup>-62% </sup>`31.95 kB` |      <sup>*4x* </sup>`36 ms` |
-| 10. [bun](packages/minifiers/minifiers/bun.ts)                                                                          |       <sup>-68% </sup>`92.55 kB` |       <sup>-61% </sup>`32.65 kB` |      <sup>*3x* </sup>`27 ms` |
+| 10. [bun](packages/minifiers/minifiers/bun.ts)                                                                          |       <sup>-68% </sup>`92.55 kB` |       <sup>-61% </sup>`32.65 kB` |      <sup>*3x* </sup>`29 ms` |
 | 11. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                  |       <sup>-68% </sup>`92.73 kB` |       <sup>-61% </sup>`33.09 kB` | <sup>*503x* </sup>`3,965 ms` |
 | 12. [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts)                                                     |      <sup>-50% </sup>`144.14 kB` |       <sup>-52% </sup>`40.88 kB` |    <sup>*46x* </sup>`363 ms` |
 </div>
@@ -228,7 +228,7 @@ xychart-beta
 | 8. [esbuild](packages/minifiers/minifiers/esbuild.ts)                                                          |       <sup>-65% </sup>`118.14 kB` |       <sup>-51% </sup>`44.37 kB` |      <sup>*3x* </sup>`43 ms` |
 | 9. [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts)                                        |       <sup>-63% </sup>`126.14 kB` |       <sup>-50% </sup>`44.45 kB` |    <sup>*27x* </sup>`364 ms` |
 | 10. [terser (no compress)](packages/minifiers/minifiers/terser.ts)                                             |       <sup>-63% </sup>`126.39 kB` |       <sup>-50% </sup>`44.64 kB` |    <sup>*33x* </sup>`442 ms` |
-| 11. [bun](packages/minifiers/minifiers/bun.ts)                                                                 |       <sup>-64% </sup>`121.50 kB` |       <sup>-49% </sup>`45.40 kB` |      <sup>*2x* </sup>`30 ms` |
+| 11. [bun](packages/minifiers/minifiers/bun.ts)                                                                 |       <sup>-64% </sup>`121.50 kB` |       <sup>-49% </sup>`45.40 kB` |      <sup>*2x* </sup>`32 ms` |
 | 12. [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts)                                            |       <sup>-42% </sup>`197.36 kB` |       <sup>-36% </sup>`57.17 kB` |    <sup>*36x* </sup>`479 ms` |
 </div>
 
@@ -306,7 +306,7 @@ xychart-beta
 | 6. [terser (no compress)](packages/minifiers/minifiers/terser.ts)                                                          |       <sup>-50% </sup>`276.13 kB` |       <sup>-32% </sup>`89.07 kB` |  <sup>*31x* </sup>`1,020 ms` |
 | 7. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts)                                                     |       <sup>-52% </sup>`269.35 kB` |       <sup>-31% </sup>`89.88 kB` |    **<sup>🏆 </sup>`32 ms`** |
 | 8. [esbuild](packages/minifiers/minifiers/esbuild.ts)                                                                      |       <sup>-51% </sup>`270.13 kB` |       <sup>-31% </sup>`90.80 kB` |      <sup>*2x* </sup>`69 ms` |
-| 9. [bun](packages/minifiers/minifiers/bun.ts)                                                                              |       <sup>-51% </sup>`273.41 kB` |       <sup>-29% </sup>`92.40 kB` |      <sup>*1x* </sup>`47 ms` |
+| 9. [bun](packages/minifiers/minifiers/bun.ts)                                                                              |       <sup>-51% </sup>`273.41 kB` |       <sup>-29% </sup>`92.40 kB` |      <sup>*1x* </sup>`49 ms` |
 | 10. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                     |       <sup>-51% </sup>`270.32 kB` |       <sup>-28% </sup>`94.17 kB` | <sup>*207x* </sup>`6,733 ms` |
 | 11. [babel-minify](packages/minifiers/minifiers/babel-minify.ts) <sub title="Failed: minification">❌ Minification</sub>    |                                 ❌ |                               ❌  |                            - |
 | 12. [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts) <sub title="Failed: minification">❌ Minification</sub> |                                 ❌ |                               ❌  |                            - |
@@ -426,7 +426,7 @@ xychart-beta
 | 6. [terser (no compress)](packages/minifiers/minifiers/terser.ts)                                                                     |       <sup>-65% </sup>`756.62 kB` |       <sup>-46% </sup>`166.18 kB` |       <sup>*28x* </sup>`1,573 ms` |
 | 7. [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts)                                                               |       <sup>-65% </sup>`756.53 kB` |       <sup>-46% </sup>`167.58 kB` |       <sup>*23x* </sup>`1,314 ms` |
 | 8. [esbuild](packages/minifiers/minifiers/esbuild.ts)                                                                                 |       <sup>-66% </sup>`724.14 kB` |       <sup>-42% </sup>`181.07 kB` |          <sup>*2x* </sup>`123 ms` |
-| 9. [bun](packages/minifiers/minifiers/bun.ts)                                                                                         |       <sup>-66% </sup>`727.90 kB` |       <sup>-41% </sup>`182.67 kB` |           <sup>*1x* </sup>`76 ms` |
+| 9. [bun](packages/minifiers/minifiers/bun.ts)                                                                                         |       <sup>-66% </sup>`727.90 kB` |       <sup>-41% </sup>`182.67 kB` |           <sup>*1x* </sup>`78 ms` |
 | 10. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts) <sub title="Failed: timeout">❌ Timed out</sub> |                                 - |                                 - | <sup>:warning:</sup> `+10,000 ms` |
 | 11. [babel-minify](packages/minifiers/minifiers/babel-minify.ts) <sub title="Failed: minification">❌ Minification</sub>               |                                 ❌ |                                ❌  |                                 - |
 | 12. [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts) <sub title="Failed: post-validation">❌ Post-validation</sub>      |                                 ❌ |                                ❌  |                                 - |
@@ -465,7 +465,7 @@ xychart-beta
 | 5. [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts)                                                               |         <sup>-67% </sup>`1.07 MB` |       <sup>-52% </sup>`331.41 kB` |       <sup>*14x* </sup>`1,756 ms` |
 | 6. [esbuild](packages/minifiers/minifiers/esbuild.ts)                                                                                 |         <sup>-68% </sup>`1.01 MB` |       <sup>-52% </sup>`331.56 kB` |          <sup>*1x* </sup>`194 ms` |
 | 7. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts)                                                                |         <sup>-68% </sup>`1.01 MB` |       <sup>-52% </sup>`331.85 kB` |        **<sup>🏆 </sup>`121 ms`** |
-| 8. [bun](packages/minifiers/minifiers/bun.ts)                                                                                         |         <sup>-68% </sup>`1.02 MB` |       <sup>-51% </sup>`337.93 kB` |          <sup>*1x* </sup>`121 ms` |
+| 8. [bun](packages/minifiers/minifiers/bun.ts)                                                                                         |         <sup>-68% </sup>`1.02 MB` |       <sup>-51% </sup>`337.93 kB` |          <sup>*1x* </sup>`124 ms` |
 | 9. [babel-minify](packages/minifiers/minifiers/babel-minify.ts) <sub title="Failed: timeout">❌ Timed out</sub>                        |                                 - |                                 - | <sup>:warning:</sup> `+10,000 ms` |
 | 10. [uglify-js](packages/minifiers/minifiers/uglify-js.ts) <sub title="Failed: timeout">❌ Timed out</sub>                             |                                 - |                                 - | <sup>:warning:</sup> `+10,000 ms` |
 | 11. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts) <sub title="Failed: timeout">❌ Timed out</sub> |                                 - |                                 - | <sup>:warning:</sup> `+10,000 ms` |
@@ -505,7 +505,7 @@ xychart-beta
 | 5. [terser (no compress)](packages/minifiers/minifiers/terser.ts)                                                                     |       <sup>-64% </sup>`2.42 MB` |       <sup>-42% </sup>`474.97 kB` |       <sup>*22x* </sup>`3,144 ms` |
 | 6. [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts)                                                               |       <sup>-64% </sup>`2.42 MB` |       <sup>-42% </sup>`478.57 kB` |       <sup>*17x* </sup>`2,525 ms` |
 | 7. [esbuild](packages/minifiers/minifiers/esbuild.ts)                                                                                 |       <sup>-65% </sup>`2.31 MB` |       <sup>-41% </sup>`488.28 kB` |          <sup>*2x* </sup>`306 ms` |
-| 8. [bun](packages/minifiers/minifiers/bun.ts)                                                                                         |       <sup>-66% </sup>`2.30 MB` |       <sup>-40% </sup>`491.83 kB` |          <sup>*1x* </sup>`167 ms` |
+| 8. [bun](packages/minifiers/minifiers/bun.ts)                                                                                         |       <sup>-66% </sup>`2.30 MB` |       <sup>-40% </sup>`491.83 kB` |          <sup>*1x* </sup>`171 ms` |
 | 9. [babel-minify](packages/minifiers/minifiers/babel-minify.ts) <sub title="Failed: timeout">❌ Timed out</sub>                        |                               - |                                 - | <sup>:warning:</sup> `+10,000 ms` |
 | 10. [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts) <sub title="Failed: timeout">❌ Timed out</sub>                    |                               - |                                 - | <sup>:warning:</sup> `+10,000 ms` |
 | 11. [uglify-js](packages/minifiers/minifiers/uglify-js.ts) <sub title="Failed: timeout">❌ Timed out</sub>                             |                               - |                                 - | <sup>:warning:</sup> `+10,000 ms` |
@@ -559,36 +559,35 @@ xychart-beta
 > 🤖 This analysis is AI generated
 
 <!-- analysis:start -->
-Wow, what a showdown! These JavaScript minifiers went head-to-head in an epic battle of compression and speed. Some emerged victorious, showing off lightning-fast times with impressively small gzip sizes. Others fizzled out, unable to cross the finish line. Let's dive into the results and crown the champion!
+The results are in, and what an electrifying race it’s been! The battlefield of JavaScript minifiers was fought with kilobytes, milliseconds, and plenty of head-to-head showdowns. Let’s break down the champions, the honorable competitors, and those who had to leave the arena.
 
 ### Best minifier
-🏆 **Top recommendation: @swc/core**  
-@swc/core crushed the competition with its perfectly balanced performance. It consistently achieved outstanding gzip sizes, staying close to (if not leading) the smallest results in every round. What makes this feat even more impressive is its blazing fast speed, often clocking in at mere milliseconds, even with gigantic files. For example, on the massive 825 kB "antd" package, @swc/core sliced it down to 452.42 kB in just 803 ms. That's practically a high-speed victory lap! With reliability, extreme efficiency, and top-tier output, it's the gold-standard pick for the average user.  
+**@swc/core** emerges as the clear leader! It dazzles with the perfect balance between compression and speed in the majority of scenarios. Consistently squeezing files down to some of the smallest sizes while completing tasks at warp speed, this contender is robust, reliable, and outrageously fast. Whether it’s the relatively small “react” package or a gigantic behemoth like “antd” or “typescript,” it trumps the field on size while staying nimble.
 
 ### Honorable mentions
-1. **uglify-js**  
-   A veteran in the minification game, uglify-js consistently ranked among the top for smallest output sizes—but there's a catch: it's slooooow, especially on larger files. For "d3," it achieved an incredible 87.02 kB (67%), one of the smallest results, but at the cost of 3,927 ms of processing. Still, if size is your absolute priority and speed is less of a concern, uglify-js can deliver.  
+Some standout minifiers didn’t win the top overall prize but deserve big props for their specialties:
 
-2. **oxc-minify**  
-   This newcomer raced to high rankings in every round with lightning-fast speed and excellent size reduction. On the monstrous "typescript," it pulled off 860.66 kB (46%) in only 406 ms. While it slightly lags behind @swc/core in size savings, it's one of the fastest overall and remains a great alternative for large-scale projects.
+1. **Uglify-js:** The master of deep compression! On packages like "lodash" and "d3," this minifier delivered incredibly small outputs, frequently ranking first in size. However, its achingly slow processing times (often running several seconds on bigger files) kept it from securing the top recommendation.
 
-3. **@tdewolff/minify**  
-   Talk about being turbocharged! @tdewolff/minify won the "Fastest minifier" title in nearly every round, zooming through files like "react" and "antd" in record time (e.g., 141 ms for 471.79 kB on "antd"). While its compression results slightly lag its peers, speed freaks will love it for reducing bottlenecks during heavy build pipelines.
+2. **oxc-minify:** A rising star! This minifier achieves excellent compression at lightning speeds, consistently coming in just fractions of a kilobyte behind the leaders. On massive packages like “typescript” and “antd,” its near-instant performance makes it one to watch for performance-oriented users.
 
-4. **terser**  
-   Terser, with its consistent small outputs and respectable speeds, is a reliable all-rounder. It shrunk "lodash" to 25.15 kB (26%) in 1,028 ms, showing an excellent balance between precision and runtime. It might not be the overall champ, but it’s a solid choice if size savings are just as valuable as decent speed.
+3. **Terser:** Another stellar performer, frequently landing near the top in compression ratios and striking a great balance. It couldn’t quite outpace @swc/core or oxc-minify overall but remains a solid choice, especially for developers already familiar with its ecosystem.
+
+4. **@tdewolff/minify:** The Usain Bolt of the competition! This speed demon completed every race in record time and delivered respectable compression to boot. While it didn’t take top honors for size, its blazing speed makes it the best choice for those who just need “good enough” compression instantly.
 
 ### Eliminated
-1. **babel-minify**  
-   The first casualty of the race, babel-minify stumbled early and crashed at "d3" with an error ("unknown: Cannot read properties of undefined"). It's better left off the track, as unpredictable behavior can corrupt builds. Avoid it for now.
+Some competitors, sadly, didn’t make the cut. These minifiers struggled under the pressure or faltered during the race. Use them with caution (if at all):
 
-2. **tedivm/jshrink**  
-   Poor JShrink couldn't hold up under pressure. It choked on "d3" with an unclosed regex pattern error—ouch! While it may work for smaller or simpler scripts, it's not suitable for serious or production-grade minification workloads.
+1. **babel-minify**: Ran into a fatal error processing “d3,” making it unreliable for production code. It’s a shame, as its speed held promise.
+   
+2. **tedivm/jshrink**: Choked on a regex pattern during “d3” minification. It couldn’t stay technique-perfect in the heat of the race.
 
-3. **bun**  
-   While lighting up the race elsewhere in computing, Bun failed consistency tests during the "typescript" battle. Incorrect post-validation output means it can't be trusted for critical use cases. It's out until its minification features come up to par.
+3. **bun**: Collapsed during post-validation of “typescript,” producing invalid output. For now, this one needs a pit crew’s attention before it’s back in contention.
 
-What a thrilling contest! @swc/core claims the crown as the ultimate minifier, balancing size and speed with finesse. Yet, it’s impossible not to applaud the honorable mentions like oxc-minify and uglify-js for their niche excellence. Well done to all the runners! The world of JavaScript minification is in great hands.
+### Final thoughts
+What a thrilling showcase of compression and speed! @swc/core takes the championship crown as the best all-around choice for its consistent excellence. Uglify-js wins for users needing the absolute smallest gzip sizes but who can afford to wait. Meanwhile, oxc-minify and @tdewolff/minify shine as the speed-forward champions.
+
+Congrats to all the contenders on their impressive performances. Time to pick your minifier and keep your bundles lean and mean!
 <!-- analysis:end -->
 
 ## Sponsors
