@@ -32,9 +32,11 @@ export class Minifier {
 	constructor(
 		name: string,
 		instances: Instances,
+		meta: MetaData
 	) {
 		this.name = name;
 		this.instances = instances;
+		this.meta = meta;
 	}
 
 	async loadMeta(
@@ -75,4 +77,5 @@ export interface MinifierLoaded extends Minifier {
 export const createMinifier = (
 	minifierName: string,
 	instances: Instances,
-) => new Minifier(minifierName, instances);
+	meta: MetaData
+) => new Minifier(minifierName, instances, meta);
