@@ -3,6 +3,9 @@
 	"private": true,
 	"type": "module",
 	"main": "index.ts",
+	"scripts": {
+		"postinstall": "./install.sh"
+	},
 	"dependencies": {
 		"@minification-benchmarks/utils": "*",
 		"@swc/core": "^1.13.0",

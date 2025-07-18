@@ -148,6 +148,19 @@
 					}
 				}
 			},
+			"@lerchensporn/minify": {
+				"minifierPath": "lerchensporn-minify.ts",
+				"version": "2",
+				"configHash": "cbd8663828",
+				"result": {
+					"data": {
+						"minifiedBytes": 40036,
+						"minzippedBytes": 10858,
+						"time": 7.360670000000001,
+						"runs": 5
+					}
+				}
+			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
@@ -308,6 +321,19 @@
 						"minifiedBytes": 61836,
 						"minzippedBytes": 19857,
 						"time": 18.097275000000003,
+						"runs": 5
+					}
+				}
+			},
+			"@lerchensporn/minify": {
+				"minifierPath": "lerchensporn-minify.ts",
+				"version": "2",
+				"configHash": "cbd8663828",
+				"result": {
+					"data": {
+						"minifiedBytes": 95933,
+						"minzippedBytes": 24744,
+						"time": 6.3359803999999995,
 						"runs": 5
 					}
 				}
@@ -476,6 +502,19 @@
 					}
 				}
 			},
+			"@lerchensporn/minify": {
+				"minifierPath": "lerchensporn-minify.ts",
+				"version": "2",
+				"configHash": "cbd8663828",
+				"result": {
+					"data": {
+						"minifiedBytes": 141454,
+						"minzippedBytes": 40365,
+						"time": 18.6394184,
+						"runs": 5
+					}
+				}
+			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
@@ -636,6 +675,19 @@
 						"minifiedBytes": 121496,
 						"minzippedBytes": 45400,
 						"time": 31.3456332,
+						"runs": 5
+					}
+				}
+			},
+			"@lerchensporn/minify": {
+				"minifierPath": "lerchensporn-minify.ts",
+				"version": "2",
+				"configHash": "cbd8663828",
+				"result": {
+					"data": {
+						"minifiedBytes": 193907,
+						"minzippedBytes": 56356,
+						"time": 16.3251906,
 						"runs": 5
 					}
 				}
@@ -804,6 +856,19 @@
 					}
 				}
 			},
+			"@lerchensporn/minify": {
+				"minifierPath": "lerchensporn-minify.ts",
+				"version": "2",
+				"configHash": "cbd8663828",
+				"result": {
+					"data": {
+						"minifiedBytes": 146273,
+						"minzippedBytes": 35944,
+						"time": 8.8312828,
+						"runs": 5
+					}
+				}
+			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
@@ -951,6 +1016,19 @@
 						"minifiedBytes": 270317,
 						"minzippedBytes": 94166,
 						"time": 6620.547907800001,
+						"runs": 5
+					}
+				}
+			},
+			"@lerchensporn/minify": {
+				"minifierPath": "lerchensporn-minify.ts",
+				"version": "2",
+				"configHash": "cbd8663828",
+				"result": {
+					"data": {
+						"minifiedBytes": 393697,
+						"minzippedBytes": 103813,
+						"time": 25.1017218,
 						"runs": 5
 					}
 				}
@@ -1113,6 +1191,19 @@
 						"minifiedBytes": 466803,
 						"minzippedBytes": 127653,
 						"time": 41.5690716,
+						"runs": 5
+					}
+				}
+			},
+			"@lerchensporn/minify": {
+				"minifierPath": "lerchensporn-minify.ts",
+				"version": "2",
+				"configHash": "cbd8663828",
+				"result": {
+					"data": {
+						"minifiedBytes": 625930,
+						"minzippedBytes": 144303,
+						"time": 19.127122200000002,
 						"runs": 5
 					}
 				}
@@ -1280,6 +1371,19 @@
 					}
 				}
 			},
+			"@lerchensporn/minify": {
+				"minifierPath": "lerchensporn-minify.ts",
+				"version": "2",
+				"configHash": "cbd8663828",
+				"result": {
+					"data": {
+						"minifiedBytes": 941063,
+						"minzippedBytes": 191965,
+						"time": 20.9898498,
+						"runs": 5
+					}
+				}
+			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.7.0",
@@ -1428,6 +1532,19 @@
 					}
 				}
 			},
+			"@lerchensporn/minify": {
+				"minifierPath": "lerchensporn-minify.ts",
+				"version": "2",
+				"configHash": "cbd8663828",
+				"result": {
+					"data": {
+						"minifiedBytes": 1433404,
+						"minzippedBytes": 221118,
+						"time": 33.8711732,
+						"runs": 5
+					}
+				}
+			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250714.0.0",
@@ -1570,6 +1687,19 @@
 						"minifiedBytes": 1024688,
 						"minzippedBytes": 337934,
 						"time": 127.22784339999998,
+						"runs": 5
+					}
+				}
+			},
+			"@lerchensporn/minify": {
+				"minifierPath": "lerchensporn-minify.ts",
+				"version": "2",
+				"configHash": "cbd8663828",
+				"result": {
+					"data": {
+						"minifiedBytes": 1770178,
+						"minzippedBytes": 434451,
+						"time": 44.625062,
 						"runs": 5
 					}
 				}
@@ -1728,6 +1858,19 @@
 					}
 				}
 			},
+			"@lerchensporn/minify": {
+				"minifierPath": "lerchensporn-minify.ts",
+				"version": "2",
+				"configHash": "cbd8663828",
+				"result": {
+					"data": {
+						"minifiedBytes": 4428662,
+						"minzippedBytes": 623370,
+						"time": 73.9352264,
+						"runs": 5
+					}
+				}
+			},
 			"babel-minify": {
 				"minifierPath": "babel-minify.ts",
 				"version": "0.5.2",
@@ -1850,6 +1993,19 @@
 						"minifiedBytes": 3489707,
 						"minzippedBytes": 915551,
 						"time": 484.01820779999997,
+						"runs": 5
+					}
+				}
+			},
+			"@lerchensporn/minify": {
+				"minifierPath": "lerchensporn-minify.ts",
+				"version": "2",
+				"configHash": "cbd8663828",
+				"result": {
+					"data": {
+						"minifiedBytes": 5853398,
+						"minzippedBytes": 1128072,
+						"time": 107.2752976,
 						"runs": 5
 					}
 				}
