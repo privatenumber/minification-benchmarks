@@ -32,7 +32,7 @@ export class Minifier {
 	constructor(
 		name: string,
 		instances: Instances,
-		meta: MetaData
+		meta: MetaData,
 	) {
 		this.name = name;
 		this.instances = instances;
@@ -77,5 +77,5 @@ export interface MinifierLoaded extends Minifier {
 export const createMinifier = (
 	minifierName: string,
 	instances: Instances,
-	meta: MetaData
+	meta: MetaData,
 ) => new Minifier(minifierName, instances, meta);

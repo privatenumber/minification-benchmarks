@@ -25,5 +25,5 @@ export default createMinifier(
 			return minified;
 		},
 	},
-	{version: '2'}
+	{ version: '2' },
 );

@@ -3,6 +3,9 @@
 	"private": true,
 	"type": "module",
 	"main": "index.ts",
+	"scripts": {
+		"postinstall": "./install.sh"
+	},
 	"dependencies": {
 		"@minification-benchmarks/utils": "*",
 		"@swc/core": "^1.13.0",
@@ -20,8 +23,5 @@
 	"devDependencies": {
 		"@types/uglify-js": "^3.17.0",
 		"type-fest": "^4.15.0"
-	},
-	"scripts": {
-		"postinstall": "./install.sh"
 	}
 }
