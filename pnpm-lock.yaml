@@ -201,8 +201,8 @@ importers:
         specifier: ^1.13.1
         version: 1.13.1
       '@tdewolff/minify':
-        specifier: ^2.23.8
-        version: 2.23.8
+        specifier: ^2.23.10
+        version: 2.23.10
       babel-minify:
         specifier: ^0.5.2
         version: 0.5.2
@@ -1548,11 +1548,11 @@ packages:
       '@swc/counter': 0.1.3
     dev: false
 
-  /@tdewolff/minify@2.23.8:
-    resolution: {integrity: sha512-Sv6kJnLc6W535ebU5aurxceWrNkUo0El/WEDtXoTY/F8drihhWdkrmcrhD/DxNfpb+3C8HsNo2nBhmr40TDIyw==}
+  /@tdewolff/minify@2.23.10:
+    resolution: {integrity: sha512-bQx7q9n2j9eFgl3GY6QfwlZA9+2Y9x6MK6rCKv5AQr/g2oLwFiMqcxGAdqGV5s9GKZ1HuHjSprWfHTGsD5uGTA==}
     requiresBuild: true
     dependencies:
-      node-gyp: 11.1.0
+      node-gyp: 11.2.0
       node-gyp-build: 4.8.4
     transitivePeerDependencies:
       - supports-color
@@ -4179,6 +4179,17 @@ packages:
       reusify: 1.0.4
     dev: true
 
+  /fdir@6.4.6(picomatch@4.0.2):
+    resolution: {integrity: sha512-hiFoqpyZcfNm1yc4u8oWCf9A2c4D3QjCrks3zmoVKVxpQRzmPNar1hUJcBG2RQHvEVGDN+Jm81ZheVLAQMK6+w==}
+    peerDependencies:
+      picomatch: ^3 || ^4
+    peerDependenciesMeta:
+      picomatch:
+        optional: true
+    dependencies:
+      picomatch: 4.0.2
+    dev: false
+
   /file-entry-cache@6.0.1:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
     engines: {node: ^10.12.0 || >=12.0.0}
@@ -5573,20 +5584,20 @@ packages:
     hasBin: true
     dev: false
 
-  /node-gyp@11.1.0:
-    resolution: {integrity: sha512-/+7TuHKnBpnMvUQnsYEb0JOozDZqarQbfNuSGLXIjhStMT0fbw7IdSqWgopOP5xhRZE+lsbIvAHcekddruPZgQ==}
+  /node-gyp@11.2.0:
+    resolution: {integrity: sha512-T0S1zqskVUSxcsSTkAsLc7xCycrRYmtDHadDinzocrThjyQCn5kMlEBSj6H4qDbgsIOSLmmlRIeb0lZXj+UArA==}
     engines: {node: ^18.17.0 || >=20.5.0}
     hasBin: true
     dependencies:
       env-paths: 2.2.1
       exponential-backoff: 3.1.1
-      glob: 10.3.10
       graceful-fs: 4.2.11
       make-fetch-happen: 14.0.3
       nopt: 8.1.0
       proc-log: 5.0.0
       semver: 7.6.0
       tar: 7.4.3
+      tinyglobby: 0.2.14
       which: 5.0.0
     transitivePeerDependencies:
       - supports-color
@@ -5968,7 +5979,6 @@ packages:
   /picomatch@4.0.2:
     resolution: {integrity: sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg==}
     engines: {node: '>=12'}
-    dev: true
 
   /pluralize@8.0.0:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
@@ -7176,6 +7186,14 @@ packages:
 
   /three@0.124.0:
     resolution: {integrity: sha512-ROXp1Ly7YyF+jC910DQyAWj++Qlw2lQv0qwYLNQwdDbjk4bsOXAfGO92wYTMPNei1GMJUmCxSxc3MjGBTS09Rg==}
+    dev: false
+
+  /tinyglobby@0.2.14:
+    resolution: {integrity: sha512-tX5e7OM1HnYr2+a2C/4V0htOcSQcoSTH9KgJnVvNm5zm/cyEWKJ7j7YutsH9CxMdtOkkLFy2AHrMci9IM8IPZQ==}
+    engines: {node: '>=12.0.0'}
+    dependencies:
+      fdir: 6.4.6(picomatch@4.0.2)
+      picomatch: 4.0.2
     dev: false
 
   /to-fast-properties@2.0.0:
