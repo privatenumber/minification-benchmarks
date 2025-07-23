@@ -11,7 +11,7 @@
 		"bun": "^1.2.19",
 		"esbuild": "^0.25.8",
 		"find-up": "^7.0.0",
-		"google-closure-compiler": "^20250720.0.0",
+		"google-closure-compiler": "^20250721.0.0",
 		"mem": "^9.0.2",
 		"oxc-minify": "^0.77.3",
 		"terser": "^5.43.1",
