@@ -33,13 +33,13 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20250716.0.0",
+				"version": "20250720.0.0",
 				"configHash": "004f9ddc59",
 				"result": {
 					"data": {
 						"minifiedBytes": 22843,
 						"minzippedBytes": 8216,
-						"time": 3285.7399515999996,
+						"time": 3681.3398260000004,
 						"runs": 5
 					}
 				}
@@ -210,13 +210,13 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20250716.0.0",
+				"version": "20250720.0.0",
 				"configHash": "004f9ddc59",
 				"result": {
 					"data": {
 						"minifiedBytes": 58293,
 						"minzippedBytes": 18923,
-						"time": 3669.7778968,
+						"time": 3703.0473328000007,
 						"runs": 5
 					}
 				}
@@ -465,13 +465,13 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20250716.0.0",
+				"version": "20250720.0.0",
 				"configHash": "004f9ddc59",
 				"result": {
 					"data": {
 						"minifiedBytes": 92729,
 						"minzippedBytes": 33092,
-						"time": 3991.9128666000006,
+						"time": 4097.881294000001,
 						"runs": 5
 					}
 				}
@@ -564,13 +564,13 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20250716.0.0",
+				"version": "20250720.0.0",
 				"configHash": "004f9ddc59",
 				"result": {
 					"data": {
 						"minifiedBytes": 115605,
 						"minzippedBytes": 44184,
-						"time": 4501.7615485999995,
+						"time": 4421.5874428,
 						"runs": 5
 					}
 				}
@@ -676,13 +676,13 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20250716.0.0",
+				"version": "20250720.0.0",
 				"configHash": "004f9ddc59",
 				"result": {
 					"data": {
 						"minifiedBytes": 73502,
 						"minzippedBytes": 25022,
-						"time": 4118.8785412,
+						"time": 4243.9299312,
 						"runs": 5
 					}
 				}
@@ -944,13 +944,13 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20250716.0.0",
+				"version": "20250720.0.0",
 				"configHash": "004f9ddc59",
 				"result": {
 					"data": {
 						"minifiedBytes": 270317,
 						"minzippedBytes": 94166,
-						"time": 6392.1845828000005,
+						"time": 6766.267308199999,
 						"runs": 5
 					}
 				}
@@ -1080,13 +1080,13 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20250716.0.0",
+				"version": "20250720.0.0",
 				"configHash": "004f9ddc59",
 				"result": {
 					"data": {
 						"minifiedBytes": 439974,
 						"minzippedBytes": 126454,
-						"time": 6107.8601186,
+						"time": 6085.71646,
 						"runs": 5
 					}
 				}
@@ -1204,13 +1204,13 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20250716.0.0",
+				"version": "20250720.0.0",
 				"configHash": "004f9ddc59",
 				"result": {
 					"data": {
 						"minifiedBytes": 644520,
 						"minzippedBytes": 162771,
-						"time": 7385.022814800001,
+						"time": 7986.550858799999,
 						"runs": 5
 					}
 				}
@@ -1430,7 +1430,7 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20250716.0.0",
+				"version": "20250720.0.0",
 				"configHash": "004f9ddc59",
 				"result": {
 					"error": {
@@ -1596,7 +1596,7 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20250716.0.0",
+				"version": "20250720.0.0",
 				"configHash": "004f9ddc59",
 				"result": {
 					"error": {
@@ -1760,7 +1760,7 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20250716.0.0",
+				"version": "20250720.0.0",
 				"configHash": "004f9ddc59",
 				"result": {
 					"error": {
@@ -1896,7 +1896,7 @@
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
-				"version": "20250716.0.0",
+				"version": "20250720.0.0",
 				"configHash": "004f9ddc59",
 				"result": {
 					"error": {
