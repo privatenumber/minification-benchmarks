@@ -194,6 +194,9 @@ importers:
 
   packages/minifiers:
     dependencies:
+      '@cminify/cminify-linux-x64':
+        specifier: ^3.0.1
+        version: 3.0.1
       '@minification-benchmarks/utils':
         specifier: '*'
         version: link:../utils
@@ -472,6 +475,13 @@ packages:
       '@babel/helper-validator-identifier': 7.19.1
       lodash: 4.17.21
       to-fast-properties: 2.0.0
+    dev: false
+
+  /@cminify/cminify-linux-x64@3.0.1:
+    resolution: {integrity: sha512-eP6NfECj2gkDt/lsLEJ/kS6Lpjk/5vEwwQTcIvbI+Y6HMI0Lc/u4b+y5rEhW06rlqRKPWPpM9+9GboiklTU6rQ==}
+    cpu: [x64]
+    os: linux
+    hasBin: true
     dev: false
 
   /@ctrl/tinycolor@3.4.0:

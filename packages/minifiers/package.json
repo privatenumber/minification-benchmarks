@@ -4,6 +4,7 @@
 	"type": "module",
 	"main": "index.ts",
 	"dependencies": {
+		"@cminify/cminify-linux-x64": "^3.0.1",
 		"@minification-benchmarks/utils": "*",
 		"@swc/core": "^1.13.3",
 		"@tdewolff/minify": "^2.23.10",
