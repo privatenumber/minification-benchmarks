@@ -201,7 +201,7 @@ importers:
         specifier: '*'
         version: link:../utils
       '@swc/core':
-        specifier: ^1.13.2
+        specifier: ^1.13.3
         version: 1.13.3
       '@tdewolff/minify':
         specifier: ^2.23.10
