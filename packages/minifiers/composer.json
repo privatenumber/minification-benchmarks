@@ -1,5 +1,5 @@
 {
 	"require-dev": {
-		"tedivm/jshrink": "^1.7.0"
+		"tedivm/jshrink": "^1.8.0"
 	}
 }
