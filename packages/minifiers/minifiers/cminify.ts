@@ -3,7 +3,7 @@ import { collectStream } from '@minification-benchmarks/utils/collect-stream';
 import { createMinifier } from '../utils/create-minifier.js';
 
 export default createMinifier(
-	'@cminify/cminify-linux-x64',
+	'cminify',
 	{
 		default: async ({ code }) => {
 			const executable = new URL('../node_modules/.bin/cminify', import.meta.url).pathname;
