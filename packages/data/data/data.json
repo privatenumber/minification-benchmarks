@@ -148,6 +148,19 @@
 					}
 				}
 			},
+			"@cminify/cminify-linux-x64": {
+				"minifierPath": "cminify.ts",
+				"version": "3.0.1",
+				"configHash": "d14f2a4dad",
+				"result": {
+					"data": {
+						"minifiedBytes": 40036,
+						"minzippedBytes": 10858,
+						"time": 12.010004400000001,
+						"runs": 5
+					}
+				}
+			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.0",
@@ -308,6 +321,19 @@
 						"minifiedBytes": 61836,
 						"minzippedBytes": 19857,
 						"time": 17.197663,
+						"runs": 5
+					}
+				}
+			},
+			"@cminify/cminify-linux-x64": {
+				"minifierPath": "cminify.ts",
+				"version": "3.0.1",
+				"configHash": "d14f2a4dad",
+				"result": {
+					"data": {
+						"minifiedBytes": 95933,
+						"minzippedBytes": 24744,
+						"time": 10.408164399999999,
 						"runs": 5
 					}
 				}
@@ -476,6 +502,19 @@
 					}
 				}
 			},
+			"@cminify/cminify-linux-x64": {
+				"minifierPath": "cminify.ts",
+				"version": "3.0.1",
+				"configHash": "d14f2a4dad",
+				"result": {
+					"data": {
+						"minifiedBytes": 141454,
+						"minzippedBytes": 40365,
+						"time": 21.9325996,
+						"runs": 5
+					}
+				}
+			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.0",
@@ -636,6 +675,19 @@
 						"minifiedBytes": 121496,
 						"minzippedBytes": 45400,
 						"time": 29.3290528,
+						"runs": 5
+					}
+				}
+			},
+			"@cminify/cminify-linux-x64": {
+				"minifierPath": "cminify.ts",
+				"version": "3.0.1",
+				"configHash": "d14f2a4dad",
+				"result": {
+					"data": {
+						"minifiedBytes": 193907,
+						"minzippedBytes": 56356,
+						"time": 23.0388784,
 						"runs": 5
 					}
 				}
@@ -804,6 +856,19 @@
 					}
 				}
 			},
+			"@cminify/cminify-linux-x64": {
+				"minifierPath": "cminify.ts",
+				"version": "3.0.1",
+				"configHash": "d14f2a4dad",
+				"result": {
+					"data": {
+						"minifiedBytes": 146273,
+						"minzippedBytes": 35944,
+						"time": 12.930271199999998,
+						"runs": 5
+					}
+				}
+			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.0",
@@ -951,6 +1016,19 @@
 						"minifiedBytes": 270317,
 						"minzippedBytes": 94166,
 						"time": 6547.531393200001,
+						"runs": 5
+					}
+				}
+			},
+			"@cminify/cminify-linux-x64": {
+				"minifierPath": "cminify.ts",
+				"version": "3.0.1",
+				"configHash": "d14f2a4dad",
+				"result": {
+					"data": {
+						"minifiedBytes": 393697,
+						"minzippedBytes": 103813,
+						"time": 28.0347076,
 						"runs": 5
 					}
 				}
@@ -1113,6 +1191,19 @@
 						"minifiedBytes": 466803,
 						"minzippedBytes": 127653,
 						"time": 41.913501000000004,
+						"runs": 5
+					}
+				}
+			},
+			"@cminify/cminify-linux-x64": {
+				"minifierPath": "cminify.ts",
+				"version": "3.0.1",
+				"configHash": "d14f2a4dad",
+				"result": {
+					"data": {
+						"minifiedBytes": 625930,
+						"minzippedBytes": 144303,
+						"time": 23.2993394,
 						"runs": 5
 					}
 				}
@@ -1280,6 +1371,19 @@
 					}
 				}
 			},
+			"@cminify/cminify-linux-x64": {
+				"minifierPath": "cminify.ts",
+				"version": "3.0.1",
+				"configHash": "d14f2a4dad",
+				"result": {
+					"data": {
+						"minifiedBytes": 941063,
+						"minzippedBytes": 191965,
+						"time": 24.0326054,
+						"runs": 5
+					}
+				}
+			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.0",
@@ -1428,6 +1532,19 @@
 					}
 				}
 			},
+			"@cminify/cminify-linux-x64": {
+				"minifierPath": "cminify.ts",
+				"version": "3.0.1",
+				"configHash": "d14f2a4dad",
+				"result": {
+					"data": {
+						"minifiedBytes": 1433404,
+						"minzippedBytes": 221118,
+						"time": 34.2264782,
+						"runs": 5
+					}
+				}
+			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250723.0.0",
@@ -1570,6 +1687,19 @@
 						"minifiedBytes": 1024688,
 						"minzippedBytes": 337934,
 						"time": 125.63675779999998,
+						"runs": 5
+					}
+				}
+			},
+			"@cminify/cminify-linux-x64": {
+				"minifierPath": "cminify.ts",
+				"version": "3.0.1",
+				"configHash": "d14f2a4dad",
+				"result": {
+					"data": {
+						"minifiedBytes": 1770178,
+						"minzippedBytes": 434451,
+						"time": 45.795898,
 						"runs": 5
 					}
 				}
@@ -1728,6 +1858,19 @@
 					}
 				}
 			},
+			"@cminify/cminify-linux-x64": {
+				"minifierPath": "cminify.ts",
+				"version": "3.0.1",
+				"configHash": "d14f2a4dad",
+				"result": {
+					"data": {
+						"minifiedBytes": 4428662,
+						"minzippedBytes": 623370,
+						"time": 73.88052719999999,
+						"runs": 5
+					}
+				}
+			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.0",
@@ -1853,6 +1996,19 @@
 						"minifiedBytes": 3489707,
 						"minzippedBytes": 915551,
 						"time": 518.9800708,
+						"runs": 5
+					}
+				}
+			},
+			"@cminify/cminify-linux-x64": {
+				"minifierPath": "cminify.ts",
+				"version": "3.0.1",
+				"configHash": "d14f2a4dad",
+				"result": {
+					"data": {
+						"minifiedBytes": 5853398,
+						"minzippedBytes": 1128072,
+						"time": 111.0135956,
 						"runs": 5
 					}
 				}
