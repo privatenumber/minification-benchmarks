@@ -4,6 +4,7 @@
 	"type": "module",
 	"main": "index.ts",
 	"dependencies": {
+		"@cminify/cminify-linux-x64": "^3.0.1",
 		"@minification-benchmarks/utils": "*",
 		"@swc/core": "^1.13.3",
 		"@tdewolff/minify": "^2.23.10",
@@ -15,8 +16,7 @@
 		"mem": "^9.0.2",
 		"oxc-minify": "^0.78.0",
 		"terser": "^5.43.1",
-		"uglify-js": "^3.19.3",
-		"@cminify/cminify-linux-x64": "^3.0.1"
+		"uglify-js": "^3.19.3"
 	},
 	"devDependencies": {
 		"@types/uglify-js": "^3.17.0",
