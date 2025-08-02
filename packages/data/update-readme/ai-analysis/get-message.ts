@@ -2,8 +2,8 @@ import outdent from 'outdent';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
 import { format } from 'date-fns';
 import { byteSize } from '../../utils/byte-size.js';
-import type { Data, Minifier } from '../../types.js';
 import { formatMs } from '../formatting.js';
+import { type AnalyzedData } from '../analyzed-data.js';
 
 type Eliminated = Record<string, {
 	reason: string;
@@ -11,11 +11,11 @@ type Eliminated = Record<string, {
 }>;
 
 const getEliminated = (
-	data: Data,
+	data: AnalyzedData,
 ) => {
 	const eliminated: Eliminated = {};
 
-	for (const [artifactName, artifact] of Object.entries(data)) {
+	for (const [artifactName, artifact] of data) {
 		for (const [minifierName, minified] of Object.entries(artifact.minified)) {
 			if (
 				'error' in minified.result
@@ -33,30 +33,9 @@ const getEliminated = (
 	return eliminated;
 };
 
-const getFastestMinifier = (
-	minifiers: [string, Minifier][],
-) => {
-	let fastestMinifier: [string, number] | undefined;
-	for (const [minifierName, { result }] of minifiers) {
-		if ('error' in result) {
-			continue;
-		}
-
-		const { time } = result.data;
-		if (
-			!fastestMinifier
-			|| time < fastestMinifier[1]
-		) {
-			fastestMinifier = [minifierName, time];
-		}
-	}
-
-	return fastestMinifier![0];
-};
-
 export const getMessage = (
 	minifiers: MinifierLoaded[],
-	data: Data,
+	data: AnalyzedData,
 ) => {
 	const eliminated = getEliminated(data);
 
@@ -70,45 +49,65 @@ export const getMessage = (
 
 	# Race results
 	${
-		Object.entries(data)
+		data
 			.sort(([, artifactA], [, artifactB]) => artifactA.gzipSize - artifactB.gzipSize)
 			.map(([artifactName, artifact], artifactIndex) => {
 				const round = artifactIndex + 1;
-				const minified = Object.entries(artifact.minified)
-					.filter(([minifierName]) => !eliminated[minifierName])
-					.sort(([, minA], [, minB]) => {
-						if ('error' in minA.result) {
-							return 1;
-						}
-						if ('error' in minB.result) {
-							return -1;
-						}
-						return minA.result.data.minzippedBytes - minB.result.data.minzippedBytes;
-					});
 
-				const fastestMinifier = getFastestMinifier(minified);
+				const mostBalanced = artifact.minifiedWithScores[0];
+				if ('error' in mostBalanced.minifier.result) {
+					throw new Error('wont happen');
+				}
+
+				const rankings: Record<string, {
+					minifier: string;
+					minzippedBytes: number;
+					time: number;
+				}> = {};
+
+				rankings['Best gzip compression'] = {
+					minifier: artifact.bestMinzipped![0],
+					minzippedBytes: artifact.bestMinzipped![1].result.data.minzippedBytes,
+					time: artifact.bestMinzipped![1].result.data.time,
+				};
+				rankings.Fastest = {
+					minifier: artifact.bestSpeed![0],
+					minzippedBytes: artifact.bestSpeed![1].result.data.minzippedBytes,
+					time: artifact.bestSpeed![1].result.data.time,
+				};
+				rankings['Most balanced'] = {
+					minifier: mostBalanced.minifierName,
+					minzippedBytes: mostBalanced.minifier.result.data.minzippedBytes,
+					time: mostBalanced.minifier.result.data.time,
+				};
+
+				const mentionedMinifiers = new Set(Object.values(rankings).map(r => r.minifier));
+				const filteredMinified = artifact.minifiedWithScores.find(
+					({ minifierName }) => !mentionedMinifiers.has(minifierName),
+				);
+
+				const honorableMention = filteredMinified!;
+				if ('error' in honorableMention.minifier.result) {
+					throw new Error('wont happen');
+				}
+				rankings['Honorable mention'] = {
+					minifier: honorableMention.minifierName,
+					minzippedBytes: honorableMention.minifier.result.data.minzippedBytes,
+					time: honorableMention.minifier.result.data.time,
+				};
 
 				return outdent`
-				## Round ${round}: npm package "${artifactName}" (${byteSize(artifact.gzipSize).toString()})
+				## Round ${round}: npm package "${artifactName}" (${byteSize(artifact.gzipSize).toString()} gzipped)
 				${
-					minified.map(([minifierName, { result }], index) => {
-						if ('error' in result) {
-							return outdent`
-							❌ ${minifierName}: ${result.error.message}
-							`;
-						}
-
-						const { minzippedBytes, time } = result.data;
-						const percent = (minzippedBytes / artifact.gzipSize).toLocaleString(undefined, {
-							style: 'percent',
-						});
+					Object.entries(rankings).map(([label, { minifier, minzippedBytes, time }]) => {
+						const percentShaved = (
+							(artifact.gzipSize - minzippedBytes) / artifact.gzipSize
+						).toLocaleString(undefined, { style: 'percent' });
 						return outdent`
-						${index + 1}. ${minifierName}: ${byteSize(minzippedBytes).toString()} (${percent}) in ${formatMs(time)}
+						- ${label}: ${minifier}: ${byteSize(minzippedBytes).toString()} (${percentShaved} shaved) in ${formatMs(time)}
 						`;
 					}).join('\n')
 				}
-
-				- Fastest minifier: ${fastestMinifier}
 				`;
 			})
 			.join('\n\n')
