@@ -1,10 +1,10 @@
 import type { BenchmarkResultWithRuns } from '@minification-benchmarks/bench/types.js';
 
-export type Minifier = {
+export type Minifier<Result = BenchmarkResultWithRuns> = {
 	minifierPath: string;
 	version: string;
 	configHash: string;
-	result: BenchmarkResultWithRuns;
+	result: Result;
 };
 
 export type Artifact = {
