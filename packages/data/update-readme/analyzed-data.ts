@@ -26,8 +26,8 @@ export type AnalyzedDataEntry = [ArtifactName: string, AnalyzedArtifact];
 export type AnalyzedData = AnalyzedDataEntry[];
 
 // Dynamically adjust weights based on the time penalty
-const baseSizeWeight = 0.85;
-const baseTimeWeight = 0.15;
+const baseSizeWeight = 0.75;
+const baseTimeWeight = 0.25;
 const weightSwing = 0.35;
 const steepness = 1;
 
