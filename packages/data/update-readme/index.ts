@@ -171,7 +171,7 @@ const generateBenchmarks = (
 const minifiers = await getMinifiers();
 
 const analyzedData = getAnalyzedData();
-const analysis = await getAiAnalysis(
+const ai = await getAiAnalysis(
 	minifiers,
 	analyzedData,
 );
@@ -209,7 +209,8 @@ const newReadme = commentMark(readme, {
 	lastUpdated: format(utcToday, 'MMM d, y'),
 	benchmarks: generateBenchmarks(analyzedData),
 	minifiers: minifiersList,
-	analysis,
+	aiSystemPrompt: ai?.systemPrompt,
+	aiAnalysis: ai?.analysis,
 });
 
 await fs.writeFile(readmePath, newReadme);

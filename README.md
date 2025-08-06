@@ -577,9 +577,9 @@ xychart-beta
 ## ⚔️ Minifier showdown
 
 > [!NOTE]
-> 🤖 This analysis is AI generated
+> 🤖 This analysis is AI generated. See below for the system prompt.
 
-<!-- analysis:start -->
+<!-- aiAnalysis:start -->
 The competitive world of JavaScript minifiers has never been fiercer. It’s not just about shaving kilobytes anymore; it’s about how fast you do it, how gracefully you dance between raw speed and compression perfection, and, sometimes, simply not crashing under pressure. Let’s dive into the results, where some contenders raced ahead, some stumbled, and one walked away wearing the crown.
 
 ### Best minifier
@@ -613,7 +613,14 @@ Not everyone made it through the gauntlet. Let’s take a moment for those who f
 What a race. Minifiers showed us speed, showed us size, and showed us what happens under real-world pressure. But while benchmarks tell us who’s the fastest and most efficient, they don’t tell the whole story. Developer experience, compatibility, and ecosystem maturity still matter.
 
 So, if you’re choosing a minifier for your next project, don’t just pick the raw champion—pick the tool that fits your workflow. But if you’re looking for the one minifier to rule them all, @swc/core proved it’s ready. Explore, experiment, and remember: in the race for smaller code, every byte counts.
-<!-- analysis:end -->
+<!-- aiAnalysis:end -->
+
+<details>
+<summary>System prompt</summary>
+<br>
+
+<pre><code><!-- aiSystemPrompt:start --><!-- aiSystemPrompt:end --></code></pre>
+</details>
 
 ## Sponsors
 
