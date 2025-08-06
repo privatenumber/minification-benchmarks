@@ -19,6 +19,8 @@ export const getAiAnalysis = async (
 		return;
 	}
 
+	const systemPromptWithDate = `${todaysDate}\n\n${systemPrompt}`;
+
 	const client = new OpenAI({
 		baseURL: 'https://models.inference.ai.azure.com',
 		apiKey,
@@ -28,7 +30,7 @@ export const getAiAnalysis = async (
 		messages: [
 			{
 				role: 'system',
-				content: todaysDate + systemPrompt,
+				content: systemPromptWithDate,
 			},
 			{
 				role: 'user',
@@ -40,7 +42,7 @@ export const getAiAnalysis = async (
 	let analysis = response.choices[0].message.content!;
 	analysis = analysis.replaceAll('\n---\n', '');
 	return {
-		systemPrompt: `${todaysDate}${systemPrompt}${message}`,
+		systemPrompt: `${systemPromptWithDate}\n\n${message}`,
 		analysis,
 	};
 };
