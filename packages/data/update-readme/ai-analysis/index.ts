@@ -1,14 +1,14 @@
 import fs from 'node:fs/promises';
 import OpenAI from 'openai';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
-import type { Data } from '../../types.js';
+import { type AnalyzedData } from '../analyzed-data.js';
 import { getMessage } from './get-message.js';
 
 const apiKey = process.env.GH_TOKEN;
 
 export const getAiAnalysis = async (
 	minifiers: MinifierLoaded[],
-	data: Data,
+	data: AnalyzedData,
 ) => {
 	const todaysDate = `Today's date is ${new Date().toISOString().split('T')[0]}`;
 	const systemPromptPath = new URL('system-prompt.txt', import.meta.url);
@@ -19,6 +19,8 @@ export const getAiAnalysis = async (
 		return;
 	}
 
+	const systemPromptWithDate = `${todaysDate}\n\n${systemPrompt}`;
+
 	const client = new OpenAI({
 		baseURL: 'https://models.inference.ai.azure.com',
 		apiKey,
@@ -28,7 +30,7 @@ export const getAiAnalysis = async (
 		messages: [
 			{
 				role: 'system',
-				content: todaysDate + systemPrompt,
+				content: systemPromptWithDate,
 			},
 			{
 				role: 'user',
@@ -39,5 +41,8 @@ export const getAiAnalysis = async (
 
 	let analysis = response.choices[0].message.content!;
 	analysis = analysis.replaceAll('\n---\n', '');
-	return analysis;
+	return {
+		systemPrompt: `${systemPromptWithDate}\n\n${message}`,
+		analysis,
+	};
 };
