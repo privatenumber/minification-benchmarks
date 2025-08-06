@@ -204,12 +204,18 @@ const minifiersList = markdownTable([
 ]);
 
 const utcToday = new Date(new Date().toISOString().split('T')[0]);
+const escapeHtml = (string_ = '') => string_
+	.replaceAll('&', '&amp;')
+	.replaceAll('<', '&lt;')
+	.replaceAll('>', '&gt;')
+	.replaceAll('"', '&quot;')
+	.replaceAll('\'', '&#39;');
 
 const newReadme = commentMark(readme, {
 	lastUpdated: format(utcToday, 'MMM d, y'),
 	benchmarks: generateBenchmarks(analyzedData),
 	minifiers: minifiersList,
-	aiSystemPrompt: ai?.systemPrompt,
+	aiSystemPrompt: escapeHtml(ai?.systemPrompt),
 	aiAnalysis: ai?.analysis,
 });
 

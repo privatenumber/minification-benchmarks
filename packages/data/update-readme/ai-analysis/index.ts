@@ -40,7 +40,7 @@ export const getAiAnalysis = async (
 	let analysis = response.choices[0].message.content!;
 	analysis = analysis.replaceAll('\n---\n', '');
 	return {
-		systemPrompt,
+		systemPrompt: `${todaysDate}${systemPrompt}${message}`,
 		analysis,
 	};
 };

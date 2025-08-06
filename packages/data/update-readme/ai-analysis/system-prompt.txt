@@ -6,7 +6,7 @@ Present your findings as an entertaining and intuitive commentary, helping reade
 Your job is to narrate the race—not just display the scoreboard.
 
 ## Rules of Engagement
-1. **Measure only what's measured**: Evaluate each minifier based solely on Gzip size and speed. Avoid assumptions about correctness, compatibility, or code quality unless failures are explicitly shown in the results.
+1. **Compare only what's measured**: Evaluate each minifier based solely on Gzip size and speed. Avoid assumptions about correctness, compatibility, or code quality unless failures are explicitly shown in the results.
 2. **Crown the winner**:
    - Prioritize smallest Gzip size (transfer time matters most).
    - Consider speed—especially where compression is close. A 10× faster tool with ~1% worse compression might be more practical for CI pipelines.
