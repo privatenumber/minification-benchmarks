@@ -12,8 +12,8 @@ This project benchmarks the following minifiers:
 <!-- minifiers:start -->
 | Minifier                                                                                                    | Version                                                                              | Release date ↓ |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | -------------- |
+| [google-closure-compiler](https://github.com/git+https://github.com/google/closure-compiler-npm.git#master) | [20250803.0.0](https://www.npmjs.com/package/google-closure-compiler/v/20250803.0.0) | 2025-08-05     |
 | [oxc-minify](https://github.com/oxc-project/oxc.git)                                                        | [0.80.0](https://www.npmjs.com/package/oxc-minify/v/0.80.0)                          | 2025-08-03     |
-| [google-closure-compiler](https://github.com/git+https://github.com/google/closure-compiler-npm.git#master) | [20250727.0.0](https://www.npmjs.com/package/google-closure-compiler/v/20250727.0.0) | 2025-07-29     |
 | [@swc/core](https://github.com/swc-project/swc)                                                             | [1.13.3](https://www.npmjs.com/package/@swc/core/v/1.13.3)                           | 2025-07-29     |
 | [@cminify/cminify-linux-x64](https://codeberg.org/Jumping-Beaver/cminify)                                   | [3.0.1](https://www.npmjs.com/package/@cminify/cminify-linux-x64/v/3.0.1)            | 2025-07-27     |
 | [@tdewolff/minify](https://github.com/tdewolff/minify#readme)                                               | [2.23.10](https://www.npmjs.com/package/@tdewolff/minify/v/2.23.10)                  | 2025-07-22     |
@@ -98,7 +98,7 @@ xychart-beta
 	title "react v17.0.2"
 	x-axis ["Original",1,2,3,4,5,6,7,8,9,10,11,12,13]
 	y-axis "Gzip size" 0 --> 19385
-	bar [19385,8186,8255,8177,8487,8543,8739,8668,8628,8661,8448,8216,11040,10858]
+	bar [19385,8186,8255,8177,8487,8543,8739,8668,8628,8448,8661,8216,11040,10858]
 ```
 
 <div align="center">
@@ -115,9 +115,9 @@ xychart-beta
 | 6. [terser (no compress)](packages/minifiers/minifiers/terser.ts)                                                                 |       <sup>-65% </sup>`25.06 kB` |       <sup>-55% </sup>`8.74 kB` |     <sup>*45x* </sup>`118 ms` |
 | 7. [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts)                                                           |       <sup>-65% </sup>`25.03 kB` |       <sup>-55% </sup>`8.67 kB` |      <sup>*35x* </sup>`91 ms` |
 | 8. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts)                                                            |       <sup>-67% </sup>`23.49 kB` |       <sup>-55% </sup>`8.63 kB` |      **<sup>🏆 </sup>`3 ms`** |
-| 9. [bun](packages/minifiers/minifiers/bun.ts)                                                                                     |       <sup>-67% </sup>`23.99 kB` |       <sup>-55% </sup>`8.66 kB` |       <sup>*5x* </sup>`13 ms` |
-| 10. [babel-minify](packages/minifiers/minifiers/babel-minify.ts)                                                                  |       <sup>-67% </sup>`23.60 kB` |       <sup>-56% </sup>`8.45 kB` |    <sup>*249x* </sup>`647 ms` |
-| 11. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                            |       <sup>-68% </sup>`22.84 kB` |       <sup>-58% </sup>`8.22 kB` | <sup>*1248x* </sup>`3,239 ms` |
+| 9. [babel-minify](packages/minifiers/minifiers/babel-minify.ts)                                                                   |       <sup>-67% </sup>`23.60 kB` |       <sup>-56% </sup>`8.45 kB` |    <sup>*249x* </sup>`647 ms` |
+| 10. [bun](packages/minifiers/minifiers/bun.ts)                                                                                    |       <sup>-67% </sup>`23.99 kB` |       <sup>-55% </sup>`8.66 kB` |       <sup>*5x* </sup>`13 ms` |
+| 11. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                            |       <sup>-68% </sup>`22.84 kB` |       <sup>-58% </sup>`8.22 kB` | <sup>*1365x* </sup>`3,544 ms` |
 | 12. [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts)                                                               |       <sup>-43% </sup>`40.82 kB` |      <sup>-43% </sup>`11.04 kB` |     <sup>*48x* </sup>`126 ms` |
 | 13. [@cminify/cminify-linux-x64](packages/minifiers/minifiers/cminify.ts)                                                         |       <sup>-44% </sup>`40.04 kB` |      <sup>-44% </sup>`10.86 kB` |       <sup>*4x* </sup>`12 ms` |
 </div>
@@ -158,7 +158,7 @@ xychart-beta
 | 8. [uglify-js](packages/minifiers/minifiers/uglify-js.ts)                                                             | **<sup>🏆-67% </sup>`57.73 kB`** | **<sup>🏆-49% </sup>`18.57 kB`** | <sup>*188x* </sup>`1,149 ms` |
 | 9. [bun](packages/minifiers/minifiers/bun.ts)                                                                         |       <sup>-64% </sup>`61.84 kB` |       <sup>-45% </sup>`19.86 kB` |      <sup>*2x* </sup>`17 ms` |
 | 10. [babel-minify](packages/minifiers/minifiers/babel-minify.ts)                                                      |       <sup>-66% </sup>`59.70 kB` |       <sup>-47% </sup>`19.12 kB` | <sup>*240x* </sup>`1,465 ms` |
-| 11. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                |       <sup>-66% </sup>`58.29 kB` |       <sup>-48% </sup>`18.92 kB` | <sup>*602x* </sup>`3,670 ms` |
+| 11. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                |       <sup>-66% </sup>`58.29 kB` |       <sup>-48% </sup>`18.92 kB` | <sup>*610x* </sup>`3,718 ms` |
 | 12. [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts)                                                   |       <sup>-44% </sup>`97.63 kB` |       <sup>-31% </sup>`25.00 kB` |    <sup>*46x* </sup>`284 ms` |
 | 13. [@cminify/cminify-linux-x64](packages/minifiers/minifiers/cminify.ts)                                             |       <sup>-45% </sup>`95.93 kB` |       <sup>-32% </sup>`24.74 kB` |      <sup>*1x* </sup>`10 ms` |
 </div>
@@ -200,7 +200,7 @@ xychart-beta
 | 9. [uglify-js](packages/minifiers/minifiers/uglify-js.ts)                                                               | **<sup>🏆-69% </sup>`88.45 kB`** |       <sup>-63% </sup>`30.90 kB` | <sup>*200x* </sup>`1,593 ms` |
 | 10. [babel-minify](packages/minifiers/minifiers/babel-minify.ts)                                                        |       <sup>-68% </sup>`92.10 kB` |       <sup>-62% </sup>`31.80 kB` | <sup>*302x* </sup>`2,398 ms` |
 | 11. [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts)                                                     |      <sup>-50% </sup>`144.14 kB` |       <sup>-52% </sup>`40.88 kB` |    <sup>*45x* </sup>`361 ms` |
-| 12. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                  |       <sup>-68% </sup>`92.73 kB` |       <sup>-61% </sup>`33.09 kB` | <sup>*510x* </sup>`4,044 ms` |
+| 12. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                  |       <sup>-68% </sup>`92.73 kB` |       <sup>-61% </sup>`33.09 kB` | <sup>*516x* </sup>`4,097 ms` |
 | 13. [@cminify/cminify-linux-x64](packages/minifiers/minifiers/cminify.ts)                                               |      <sup>-51% </sup>`141.45 kB` |       <sup>-52% </sup>`40.37 kB` |      <sup>*2x* </sup>`22 ms` |
 </div>
 
@@ -240,7 +240,7 @@ xychart-beta
 | 8. [bun](packages/minifiers/minifiers/bun.ts)                                                                  |       <sup>-64% </sup>`121.50 kB` |       <sup>-49% </sup>`45.40 kB` |      <sup>*2x* </sup>`29 ms` |
 | 9. [uglify-js](packages/minifiers/minifiers/uglify-js.ts)                                                      | **<sup>🏆-67% </sup>`113.80 kB`** |       <sup>-52% </sup>`43.04 kB` | <sup>*178x* </sup>`2,206 ms` |
 | 10. [babel-minify](packages/minifiers/minifiers/babel-minify.ts)                                               |       <sup>-66% </sup>`117.90 kB` |       <sup>-51% </sup>`43.93 kB` | <sup>*218x* </sup>`2,696 ms` |
-| 11. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                         |       <sup>-66% </sup>`115.61 kB` |       <sup>-51% </sup>`44.18 kB` | <sup>*360x* </sup>`4,450 ms` |
+| 11. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                         |       <sup>-66% </sup>`115.61 kB` |       <sup>-51% </sup>`44.18 kB` | <sup>*373x* </sup>`4,615 ms` |
 | 12. [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts)                                            |       <sup>-42% </sup>`197.36 kB` |       <sup>-36% </sup>`57.17 kB` |    <sup>*38x* </sup>`478 ms` |
 | 13. [@cminify/cminify-linux-x64](packages/minifiers/minifiers/cminify.ts)                                      |       <sup>-43% </sup>`193.91 kB` |       <sup>-37% </sup>`56.36 kB` |      <sup>*1x* </sup>`23 ms` |
 </div>
@@ -262,7 +262,7 @@ xychart-beta
 	title "lodash v4.17.21"
 	x-axis ["Original",1,2,3,4,5,6,7,8,9,10,11,12,13]
 	y-axis "Gzip size" 0 --> 96690
-	bar [96690,25240,25862,25979,26200,26187,26498,26655,25152,24686,25503,25022,36327,35944]
+	bar [96690,25240,25862,25979,26187,26200,26498,25152,26655,24686,25503,25022,36327,35944]
 ```
 
 <div align="center">
@@ -274,14 +274,14 @@ xychart-beta
 | 1. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                      |       <sup>-87% </sup>`69.81 kB` |       <sup>-74% </sup>`25.24 kB` |      <sup>*4x* </sup>`53 ms` |
 | 2. [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts)                                                  |       <sup>-86% </sup>`74.61 kB` |       <sup>-73% </sup>`25.86 kB` |    <sup>*26x* </sup>`333 ms` |
 | 3. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                              |       <sup>-87% </sup>`71.38 kB` |       <sup>-73% </sup>`25.98 kB` |      <sup>*1x* </sup>`16 ms` |
-| 4. [esbuild](packages/minifiers/minifiers/esbuild.ts)                                                                    |       <sup>-87% </sup>`72.48 kB` |       <sup>-73% </sup>`26.20 kB` |      <sup>*2x* </sup>`35 ms` |
-| 5. [terser (no compress)](packages/minifiers/minifiers/terser.ts)                                                        |       <sup>-86% </sup>`75.04 kB` |       <sup>-73% </sup>`26.19 kB` |    <sup>*31x* </sup>`393 ms` |
+| 4. [terser (no compress)](packages/minifiers/minifiers/terser.ts)                                                        |       <sup>-86% </sup>`75.04 kB` |       <sup>-73% </sup>`26.19 kB` |    <sup>*31x* </sup>`393 ms` |
+| 5. [esbuild](packages/minifiers/minifiers/esbuild.ts)                                                                    |       <sup>-87% </sup>`72.48 kB` |       <sup>-73% </sup>`26.20 kB` |      <sup>*2x* </sup>`35 ms` |
 | 6. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts)                                                   |       <sup>-87% </sup>`71.90 kB` |       <sup>-73% </sup>`26.50 kB` |    **<sup>🏆 </sup>`13 ms`** |
-| 7. [bun](packages/minifiers/minifiers/bun.ts)                                                                            |       <sup>-87% </sup>`73.45 kB` |       <sup>-72% </sup>`26.66 kB` |      <sup>*1x* </sup>`23 ms` |
-| 8. [terser](packages/minifiers/minifiers/terser.ts)                                                                      |       <sup>-87% </sup>`70.41 kB` |       <sup>-74% </sup>`25.15 kB` |  <sup>*81x* </sup>`1,028 ms` |
+| 7. [terser](packages/minifiers/minifiers/terser.ts)                                                                      |       <sup>-87% </sup>`70.41 kB` |       <sup>-74% </sup>`25.15 kB` |  <sup>*81x* </sup>`1,028 ms` |
+| 8. [bun](packages/minifiers/minifiers/bun.ts)                                                                            |       <sup>-87% </sup>`73.45 kB` |       <sup>-72% </sup>`26.66 kB` |      <sup>*1x* </sup>`23 ms` |
 | 9. [uglify-js](packages/minifiers/minifiers/uglify-js.ts)                                                                | **<sup>🏆-87% </sup>`68.17 kB`** | **<sup>🏆-74% </sup>`24.69 kB`** | <sup>*134x* </sup>`1,689 ms` |
 | 10. [babel-minify](packages/minifiers/minifiers/babel-minify.ts)                                                         |       <sup>-87% </sup>`72.37 kB` |       <sup>-74% </sup>`25.50 kB` | <sup>*165x* </sup>`2,083 ms` |
-| 11. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                   |       <sup>-86% </sup>`73.50 kB` |       <sup>-74% </sup>`25.02 kB` | <sup>*322x* </sup>`4,050 ms` |
+| 11. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                   |       <sup>-86% </sup>`73.50 kB` |       <sup>-74% </sup>`25.02 kB` | <sup>*348x* </sup>`4,375 ms` |
 | 12. [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts)                                                      |      <sup>-73% </sup>`148.78 kB` |       <sup>-62% </sup>`36.33 kB` |    <sup>*29x* </sup>`371 ms` |
 | 13. [@cminify/cminify-linux-x64](packages/minifiers/minifiers/cminify.ts)                                                |      <sup>-73% </sup>`146.27 kB` |       <sup>-63% </sup>`35.94 kB` |      <sup>*1x* </sup>`13 ms` |
 </div>
@@ -321,7 +321,7 @@ xychart-beta
 | 7. [terser](packages/minifiers/minifiers/terser.ts)                                                                        |       <sup>-52% </sup>`267.42 kB` |       <sup>-33% </sup>`88.00 kB` |  <sup>*83x* </sup>`2,338 ms` |
 | 8. [bun](packages/minifiers/minifiers/bun.ts)                                                                              |       <sup>-51% </sup>`273.41 kB` |       <sup>-29% </sup>`92.40 kB` |      <sup>*1x* </sup>`47 ms` |
 | 9. [uglify-js](packages/minifiers/minifiers/uglify-js.ts)                                                                  | **<sup>🏆-53% </sup>`263.56 kB`** | **<sup>🏆-33% </sup>`87.02 kB`** | <sup>*140x* </sup>`3,927 ms` |
-| 10. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                     |       <sup>-51% </sup>`270.32 kB` |       <sup>-28% </sup>`94.17 kB` | <sup>*238x* </sup>`6,681 ms` |
+| 10. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                     |       <sup>-51% </sup>`270.32 kB` |       <sup>-28% </sup>`94.17 kB` | <sup>*229x* </sup>`6,439 ms` |
 | 11. [@cminify/cminify-linux-x64](packages/minifiers/minifiers/cminify.ts)                                                  |       <sup>-29% </sup>`393.70 kB` |      <sup>-21% </sup>`103.81 kB` |    **<sup>🏆 </sup>`28 ms`** |
 | 12. [babel-minify](packages/minifiers/minifiers/babel-minify.ts) <sub title="Failed: minification">❌ Minification</sub>    |                                 ❌ |                               ❌  |                            - |
 | 13. [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts) <sub title="Failed: minification">❌ Minification</sub> |                                 ❌ |                               ❌  |                            - |
@@ -362,7 +362,7 @@ xychart-beta
 | 7. [bun](packages/minifiers/minifiers/bun.ts)                                                                                  |       <sup>-54% </sup>`466.80 kB` |       <sup>-34% </sup>`127.65 kB` |      <sup>*1x* </sup>`42 ms` |
 | 8. [terser](packages/minifiers/minifiers/terser.ts)                                                                            |       <sup>-55% </sup>`456.59 kB` |       <sup>-36% </sup>`123.35 kB` |  <sup>*95x* </sup>`2,227 ms` |
 | 9. [uglify-js](packages/minifiers/minifiers/uglify-js.ts)                                                                      |       <sup>-55% </sup>`451.19 kB` |       <sup>-36% </sup>`123.33 kB` | <sup>*162x* </sup>`3,787 ms` |
-| 10. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                         | **<sup>🏆-56% </sup>`439.97 kB`** |       <sup>-35% </sup>`126.45 kB` | <sup>*262x* </sup>`6,113 ms` |
+| 10. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                         | **<sup>🏆-56% </sup>`439.97 kB`** |       <sup>-35% </sup>`126.45 kB` | <sup>*267x* </sup>`6,234 ms` |
 | 11. [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts)                                                            |       <sup>-37% </sup>`633.71 kB` |       <sup>-25% </sup>`145.18 kB` |  <sup>*57x* </sup>`1,337 ms` |
 | 12. [@cminify/cminify-linux-x64](packages/minifiers/minifiers/cminify.ts)                                                      |       <sup>-38% </sup>`625.93 kB` |       <sup>-26% </sup>`144.30 kB` |    **<sup>🏆 </sup>`23 ms`** |
 | 13. [babel-minify](packages/minifiers/minifiers/babel-minify.ts) <sub title="Failed: minification">❌ Minification</sub>        |                                 ❌ |                                ❌  |                            - |
@@ -403,7 +403,7 @@ xychart-beta
 | 7. [bun](packages/minifiers/minifiers/bun.ts)                                                                              |       <sup>-47% </sup>`655.93 kB` |       <sup>-33% </sup>`166.21 kB` |           <sup>*2x* </sup>`55 ms` |
 | 8. [terser](packages/minifiers/minifiers/terser.ts)                                                                        |       <sup>-48% </sup>`653.18 kB` |       <sup>-36% </sup>`159.17 kB` |      <sup>*124x* </sup>`2,985 ms` |
 | 9. [uglify-js](packages/minifiers/minifiers/uglify-js.ts)                                                                  | **<sup>🏆-49% </sup>`641.59 kB`** |       <sup>-36% </sup>`159.07 kB` |      <sup>*209x* </sup>`5,046 ms` |
-| 10. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                     |       <sup>-48% </sup>`644.52 kB` |       <sup>-34% </sup>`162.77 kB` |      <sup>*333x* </sup>`8,018 ms` |
+| 10. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts)                                     |       <sup>-48% </sup>`644.52 kB` |       <sup>-34% </sup>`162.77 kB` |      <sup>*335x* </sup>`8,056 ms` |
 | 11. [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts)                                                        |       <sup>-24% </sup>`952.01 kB` |       <sup>-22% </sup>`193.47 kB` |       <sup>*71x* </sup>`1,714 ms` |
 | 12. [@cminify/cminify-linux-x64](packages/minifiers/minifiers/cminify.ts)                                                  |       <sup>-25% </sup>`941.06 kB` |       <sup>-23% </sup>`191.97 kB` |         **<sup>🏆 </sup>`24 ms`** |
 | 13. [babel-minify](packages/minifiers/minifiers/babel-minify.ts) <sub title="Failed: timeout">❌ Timed out</sub>            |                                 - |                                 - | <sup>:warning:</sup> `+10,000 ms` |
@@ -580,30 +580,29 @@ xychart-beta
 > 🤖 This analysis is AI generated. See below for the system prompt.
 
 <!-- aiAnalysis:start -->
-The minification gauntlet is complete, and the battle was nothing short of legendary. Twelve formidable contenders entered, but only one can claim the crown. Teams fought tooth and nail, slicing bytes and racing milliseconds in a fierce duel between compression quality and speed. Let's break it all down.
+The JavaScript minifiers lined up, a mixed crowd of veterans, wildcards, and newcomers ready to test their mettle. With twelve grueling rounds covering everything from the lightweight "react" to the behemoth "typescript," the field pushed the boundaries of speed and compression like an adrenaline-fueled pit crew at a Formula 1 race. Some dashed ahead with lightning speed but left baggage behind, while others meticulously trimmed the code at the cost of precious milliseconds. Here's the blow-by-blow.
 
 ### Best minifier
-**@swc/core** takes the title as the undisputed champion. This tool was an unstoppable force in every category that mattered, delivering razor-sharp gzip compression alongside blisteringly fast performance for large-scale artifacts. It showed up with finesse, slicing monstrous libraries like "typescript" and "antd" by over 50% in size while cementing itself as the most consistent performer. It wasn't the absolute fastest, but it maintained a phenomenal balance that simply rendered its rivals moot. When efficiency in compression and speed both matter, **@swc/core** steps in like a heavyweight champion, earning the gold without breaking a sweat.
+Ladies and gentlemen, the crown belongs to **@swc/core**! A machine of precision, it repeatedly danced the fine line between aggressive compression and respectable speed. Whether taming the sizeable "echarts" with a stunning 53% compression or dominating giants like "typescript" at a staggering 54% shave, @swc/core was a masterclass in balance. It didn't just nibble at the edge of victory—it grabbed it firmly with one performance after another, effortlessly merging practicality with peak compression. While uglify-js occasionally delivered smaller outputs, its glacial speeds made @swc/core the more versatile contender.
 
 ### Honorable mentions
-Several warriors deserve their moment in the spotlight:
+**@tdewolff/minify** was the Usain Bolt of this race—an untouchable force when it came to speed. It zipped through "moment" in 6 milliseconds and handled "echarts" with impressive speed-to-compression ratios. While its trade-offs leaned less on deep compression and more on performance, it proved itself indispensable for workflows where "fast enough" is actually "fastest." 
 
-- **@tdewolff/minify**: The Usain Bolt of this race. If speed alone were the prize, this minifier would leave the rest in its dust. Minifying "xlsx" in under 3 milliseconds was sheer sorcery. While sacrifices were made in compression, this tool’s blazing turnaround makes it a compelling choice for CI pipelines or developer environments where delays are deadly.
-  
-- **uglify-js**: The old master of micro optimizations. On "lodash," it showcased its compression chops with a jaw-dropping 74% reduction—more bytes saved than any other on that round. But it moves at a glacial pace, taking several seconds for tasks that rivals blitz through in milliseconds. For projects where time isn't money, the sheer size savings are tantalizing.
+**oxc-minify** entered the scene as a contender that whispers, "You don't have to choose." With a near-perfect balance in the harder rounds like "terser" and "antd," it kept things trim while staying agile. And let's not forget its quick and efficient handling of "typescript," finishing better than most of its peers in both time and size.
 
-- **oxc-minify**: The rookie powerhouse bringing balance to the field. Whether slicing through "echarts" or "antd," oxc-minify leveraged its modern edge to stay in the pack, often delivering amazing compression without veering too far off the speedometer. It makes for a worthy second to @swc/core in cases of gigantic codebases.
-
-- **@cminify/cminify-linux-x64**: A niche speed demon that shines when haste is king—sometimes halving the runtime of even the nimble @tdewolff/minify. It’s less adept at cutting size on heavyweight libraries, but when you just can’t wait, this tool delivers passable results at impossible speeds.
+Lastly, a respectful nod to **uglify-js**, the veteran compression champ. When size numbers were all that mattered, uglify showed its teeth, consistently snooping out the smallest outputs. But its tortoise-like work on large files leaves it a niche option for those focused purely on minimal gzipped footprints, sans speed.
 
 ### Eliminated
-Not everyone crossed the finish line cleanly. Here's the casualty list:
-- **babel-minify**: Crashed during "d3" with a cryptic error about undefined properties. A shame for the seasoned veteran.
-- **tedivm/jshrink**: Fell to "d3" as well, stumbling on an unclosed regex that left it struggling to recover. A tough break.
-- **bun**: Bungled "typescript" by failing post-validation, replacing newline characters with an unexpected format. Promising, but currently unreliable in this arena.
+Three competitors failed to make it past the gauntlet:
+
+1. **babel-minify**: Crashed and burned on "d3" with a JavaScript quirks meltdown—Minifier Error: "Cannot read properties of undefined." A tragic stumble for an otherwise competent runner.
+2. **tedivm/jshrink**: Took one look at "d3" and declared regex-related defeat. "Unclosed pattern" eliminated its chances, leaving us questioning its ability to handle modern JavaScript complexity.
+3. **bun**: Blazed through the smaller files, only to trip over its shoelaces on "typescript." A newline mismatch in post-validation sealed its fate.
 
 ### Closing remarks
-What a race! Between blazing speeds, surgical compression, and the occasional crash-and-burn, this showdown proved there’s no one-size-fits-all champion for JavaScript minification. **@swc/core** emerges victorious, but the choice depends on your needs: speed, size, or balance. Whatever you decide, these results showcase just how far the tools of 2025 have come. Test-drive the contenders and find your perfect match. The bytes—and the clock—are waiting!
+And that's the wrap! This race showcased the diversity of modern minifiers, from speed demons to compression-obsessed surgeons. The real-world choice, of course, will depend on your workflow: @swc/core shines when balance is key, @tdewolff/minify is unbeatable in pipelines focused on raw speed, and oxc-minify offers a reliable middle road. While uglify-js held onto the compression crown for a few rounds, its speed struggles make it situational at best.
+
+Remember, these numbers reflect raw performance; real-world adoption also depends on usability and compatibility. Still, the thrill of watching these tools push code to its efficient extremes never gets old. Whether you're in it for size, speed, or sheer precision, there’s a minifier here ready to rise to the occasion!
 <!-- aiAnalysis:end -->
 
 <details>
@@ -659,7 +658,7 @@ Your job is to narrate the race—not just display the scoreboard.
 - bun v1.2.19 released 2025-07-19
 - @cminify/cminify-linux-x64 v3.0.1 released 2025-07-27
 - esbuild v0.25.8 released 2025-07-19
-- google-closure-compiler v20250727.0.0 released 2025-07-29
+- google-closure-compiler v20250803.0.0 released 2025-08-05
 - tedivm/jshrink v1.8.0
 - oxc-minify v0.80.0 released 2025-08-03
 - @swc/core v1.13.3 released 2025-07-29
