@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { commentMark } from 'comment-mark';
 import outdent from 'outdent';
+import { commentMark } from 'comment-mark';
 import { format } from 'date-fns';
 import { markdownTable } from 'markdown-table';
 import { capitalize } from 'lodash-es';
@@ -9,13 +9,13 @@ import type { BenchmarkResultSuccessWithRuns } from '@minification-benchmarks/be
 import { minifiersDirectory } from '@minification-benchmarks/minifiers/utils/minifiers-directory.js';
 import { getMinifiers } from '@minification-benchmarks/minifiers';
 import { byteSize } from '../utils/byte-size.js';
-import type { Artifact } from '../types.js';
 import { percent, formatMs } from './formatting.js';
 import * as mdu from './mdu.js';
 import { getAiAnalysis } from './ai-analysis/index.js';
 import {
-	getAnalyzedData, type AnalyzedData, type AnalyzedArtifact, type MinifierWithScore,
+	getAnalyzedData, type AnalyzedData, type AnalyzedArtifact,
 } from './analyzed-data.js';
+import { getBarChartUrl } from './bar-chart.js';
 
 const displayColumn = (
 	text: string,
@@ -116,50 +116,17 @@ const generateBenchmarkTable = (
 	},
 );
 
-const generateMermaidGraph = (
-	name: string,
-	artifact: Artifact,
-	minifiedWithScores: MinifierWithScore[],
-) => {
-	const minifiers = minifiedWithScores
-		.map(({ minifier }) => {
-			const { result } = minifier;
-			if ('error' in result) {
-				return;
-			}
-			return result.data.minzippedBytes;
-		})
-		.filter(Boolean);
-
-	return mdu.mermaid(outdent`
-	---
-	config:
-	    xyChart:
-	        width: 720
-	        height: 360
-	        xAxis:
-	            labelPadding: 20
-	        yAxis:
-	            labelPadding: 10
-	---
-	xychart-beta
-		title ${JSON.stringify(`${name} v${artifact.version}`)}
-		x-axis ${
-			JSON.stringify(['Original', ...minifiers.map((_, index) => index + 1)])
-		}
-		y-axis "Gzip size" 0 --> ${artifact.gzipSize}
-		bar ${
-			JSON.stringify([artifact.gzipSize, ...minifiers])
-		}
-	`);
-};
-
 const generateBenchmarks = (
 	analyzedData: AnalyzedData,
 ) => analyzedData
 	.map(
 		([name, artifact]) => [
-			generateMermaidGraph(name, artifact, artifact.minifiedWithScores),
+			outdent`
+			<picture>
+				<source media="(prefers-color-scheme: dark)" srcset="${getBarChartUrl(name, artifact, artifact.minifiedWithScores, true)}">
+				<img src="${getBarChartUrl(name, artifact, artifact.minifiedWithScores)}">
+			</picture>
+			`,
 			mdu.div(
 				generateBenchmarkTable(name, artifact),
 				{ align: 'center' },

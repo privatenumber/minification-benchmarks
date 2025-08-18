@@ -20,5 +20,4 @@ export const sub = (content: string, attributes?: Attributes) => `<sub${stringif
 export const strong = (content: string) => `**${content}**`;
 export const emphasize = (content: string) => `*${content}*`;
 export const link = (label: string, href: string) => `[${label}](${href})`;
-export const mermaid = (code: string) => `\`\`\`mermaid\n${code}\n\`\`\``;
 export const div = (content: string, attributes?: Attributes) => `<div${stringifyAttributes(attributes)}>\n\n${content}\n</div>`;
