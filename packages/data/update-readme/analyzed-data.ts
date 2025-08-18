@@ -1,5 +1,5 @@
 import { minBy } from 'lodash-es';
-import type { BenchmarkResultSuccessWithRuns } from '@minification-benchmarks/bench/types.js';
+import type { BenchmarkResultSuccessWithRuns, BenchmarkResultWithRuns } from '@minification-benchmarks/bench/types.js';
 import { data } from '../data/index.js';
 import type { Artifact, Minifier } from '../types.js';
 
@@ -8,11 +8,13 @@ export type BestMinifier = [
 	Minifier<BenchmarkResultSuccessWithRuns>
 ];
 
-export type MinifierWithScore = {
+export type MinifierWithScore<T = BenchmarkResultWithRuns> = {
 	minifierName: string;
-	minifier: Minifier;
+	minifier: Minifier<T>;
 	score: number;
 };
+
+export const isSuccessful = (m: MinifierWithScore): m is MinifierWithScore<BenchmarkResultSuccessWithRuns> => 'data' in m.minifier.result;
 
 export type ScoredMinifiers = {
 	minifiedWithScores: MinifierWithScore[];

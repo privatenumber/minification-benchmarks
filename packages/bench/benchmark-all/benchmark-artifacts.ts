@@ -1,8 +1,14 @@
 import _task, { type Task } from 'tasuku';
 import type { ArtifactLoaded } from '@minification-benchmarks/artifacts';
-import byteSize from 'byte-size';
 import { benchmarkMinifiers } from './benchmark-minifiers.js';
 import type { MinifierInstance } from './types.js';
+
+const byteFormatter = new Intl.NumberFormat('en', {
+	notation: 'compact',
+	compactDisplay: 'short',
+	minimumFractionDigits: 2,
+	maximumFractionDigits: 2,
+});
 
 export const benchmarkArtifacts = async (
 	artifacts: ArtifactLoaded[],
@@ -15,7 +21,7 @@ export const benchmarkArtifacts = async (
 		artifact => task(
 			artifact.name,
 			async ({ task, setOutput }) => {
-				setOutput(byteSize(artifact.size).toString());
+				setOutput(byteFormatter.format(artifact.size).toString());
 
 				const benchmarkResults = await benchmarkMinifiers(
 					artifact,
