@@ -6,15 +6,15 @@
 	"dependencies": {
 		"@cminify/cminify-linux-x64": "^3.0.1",
 		"@minification-benchmarks/utils": "*",
-		"@swc/core": "^1.13.3",
-		"@tdewolff/minify": "^2.23.11",
+		"@swc/core": "^1.13.4",
+		"@tdewolff/minify": "^2.24.0",
 		"babel-minify": "^0.5.2",
 		"bun": "^1.2.20",
 		"esbuild": "^0.25.9",
 		"find-up": "^7.0.0",
 		"google-closure-compiler": "^20250817.0.0",
 		"mem": "^9.0.2",
-		"oxc-minify": "^0.82.2",
+		"oxc-minify": "^0.82.3",
 		"terser": "^5.43.1",
 		"uglify-js": "^3.19.3"
 	},
