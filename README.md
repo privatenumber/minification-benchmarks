@@ -441,7 +441,7 @@ Three... two... one... compress! Welcome to the Minification Grand Prix, where b
 - tedivm/jshrink — Crashed on "d3": unclosed regex pattern in the minifier. Eliminated.
 - bun — Failed post-validation on "typescript": line-ending mismatch in output. Validation failed, so we must disqualify it.
 
-Closing remarks
+### Closing remarks
 This race judged only two things: gzipped size and minification speed. Real-world choice also cares about developer experience, correctness, integrations, and community — none of which we scored here. If you ship large bundles and care about user load time, lean toward @swc/core or oxc-minify. If your pipeline values instant feedback, @tdewolff/minify or @cminify/cminify are seductive choices. And if you absolutely must wring the last bytes from a mid‑size lib and can tolerate the wait, say hello to uglify‑js. Race results in hand — pick the tool that matches the stage you need to win.
 <!-- aiAnalysis:end -->
 

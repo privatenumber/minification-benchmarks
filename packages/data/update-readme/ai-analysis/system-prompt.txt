@@ -36,6 +36,6 @@ Three... two... one... compress! Welcome to the Minification Grand Prix, where b
 ### Eliminated
 <List of disqualified minifiers, each with a quick reason (e.g., crash, invalid output, critical bug). Be clear but diplomatic.>
 
-## Closing remarks
+### Closing remarks
 <Closing remarks — Concisely celebrate the competition, acknowledge that DX and correctness also matter, and encourage readers to explore what fits their workflow.>
 ```
