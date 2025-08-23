@@ -14,14 +14,14 @@ This project benchmarks the following minifiers:
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | -------------- |
 | [google-closure-compiler](https://github.com/git+https://github.com/google/closure-compiler-npm.git#master) | [20250820.0.0](https://www.npmjs.com/package/google-closure-compiler/v/20250820.0.0) | 2025-08-22     |
 | [@swc/core](https://github.com/swc-project/swc)                                                             | [1.13.4](https://www.npmjs.com/package/@swc/core/v/1.13.4)                           | 2025-08-21     |
-| [@tdewolff/minify](https://github.com/tdewolff/minify#readme)                                               | [2.24.0](https://www.npmjs.com/package/@tdewolff/minify/v/2.24.0)                    | 2025-08-21     |
-| [oxc-minify](https://github.com/oxc-project/oxc)                                                            | [0.82.3](https://www.npmjs.com/package/oxc-minify/v/0.82.3)                          | 2025-08-21     |
-| [esbuild](https://github.com/evanw/esbuild)                                                                 | [0.25.9](https://www.npmjs.com/package/esbuild/v/0.25.9)                             | 2025-08-13     |
+| [@tdewolff/minify](https://github.com/tdewolff/minify#readme)                                               | [2.24.0](https://www.npmjs.com/package/@tdewolff/minify/v/2.24.0)                    | 2025-08-20     |
+| [oxc-minify](https://github.com/oxc-project/oxc)                                                            | [0.82.3](https://www.npmjs.com/package/oxc-minify/v/0.82.3)                          | 2025-08-20     |
+| [esbuild](https://github.com/evanw/esbuild)                                                                 | [0.25.9](https://www.npmjs.com/package/esbuild/v/0.25.9)                             | 2025-08-12     |
 | [bun](https://github.com/oven-sh/bun)                                                                       | [1.2.20](https://www.npmjs.com/package/bun/v/1.2.20)                                 | 2025-08-10     |
 | [@cminify/cminify-linux-x64](https://codeberg.org/Jumping-Beaver/cminify)                                   | [3.0.1](https://www.npmjs.com/package/@cminify/cminify-linux-x64/v/3.0.1)            | 2025-07-27     |
 | [terser](https://github.com/terser/terser)                                                                  | [5.43.1](https://www.npmjs.com/package/terser/v/5.43.1)                              | 2025-06-19     |
 | [uglify-js](https://github.com/mishoo/UglifyJS)                                                             | [3.19.3](https://www.npmjs.com/package/uglify-js/v/3.19.3)                           | 2024-08-29     |
-| [babel-minify](https://github.com/babel/minify/tree/master/packages/babel-minify)                           | [0.5.2](https://www.npmjs.com/package/babel-minify/v/0.5.2)                          | 2022-05-07     |
+| [babel-minify](https://github.com/babel/minify/tree/master/packages/babel-minify)                           | [0.5.2](https://www.npmjs.com/package/babel-minify/v/0.5.2)                          | 2022-05-06     |
 | [tedivm/jshrink](https://github.com/tedious/JShrink)                                                        | 1.8.0                                                                                |                |
 <!-- minifiers:end -->
 
@@ -424,25 +424,25 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 > 🤖 This analysis is AI generated. See below for the system prompt.
 
 <!-- aiAnalysis:start -->
-Three... two... one... compress! Welcome to the Minification Grand Prix, where every byte lost is a cheer won and every millisecond saved is a tactical victory. The field mixed old-school bruisers with sleek speedsters, and the real drama played out on the large bundles. Let’s call the race.
+Three... two... one... compress! Welcome to the Minification Grand Prix, where bytes sprint for survival and every millisecond matters. The field mixed old-school grinders with clever sprinters. The scoreboard was full of surprises, close calls, and clear blowouts — especially once the heavyweights (the megabyte-class bundles) hit the track.
 
 ### Best minifier
-@swc/core. It’s the most convincing overall finisher because it won the big battles that matter most to real-world transfer time. It takes top gzip honors on swell targets like three, echarts, antd and the beastly typescript build (1.88 MB → 859.04 KB), and it does so without dragging its feet—hundreds of milliseconds where others take seconds. Uglify‑JS kept stealing wins in the small-to-medium brackets, but swc owned the heavyweights, and per the rules we reward performance on large artifacts. That tilt toward the big files makes @swc/core the practical champion: smallest transfers for the hardest challenges, with speed that's more than reasonable.
+@swc/core takes the crown. It matched or beat the best gzip sizes on the biggest, hairiest inputs — think Three, ECharts, antd and the 1.88 MB TypeScript bundle — while staying far snappier than the old-time slow-but-compact champs. In plain terms: when transfer time matters most (big bundles, users on the wire), swc usually gives you the smallest luggage at an impressive pickup speed. Uglify‑JS fought hard, winning several rounds on mid-sized libs with slightly smaller outputs, but it paid for those wins in time. Choosing swc felt like rewarding the tool that won the marathon stages, not just the sprints.
 
 ### Honorable mentions
-uglify-js — The compression artisan. Repeatedly the smallest gzips on react, moment, lodash, d3 and victory. When absolute bytes matter and you can tolerate slower runs (think production CI step rather than instant iteration), uglify-js still earns respect.  
-oxc-minify — The sensible all‑rounder. Frequently within a hair of the best sizes and consistently quick. It even scored the best gzip on the terser package. Great balance for teams that want small output without extreme time cost.  
-@tdewolff/minify — The stopwatch maestro. Blindingly fast (single-digit ms on small libs) while delivering compression that’s practically in the same league as the winners. If your pipeline demands near-instant minification, this is your sprinter.  
-@cminify/cminify-linux-x64 — The speed demon for large bundles. It trades gzip efficiency for speed and often produces instant results on huge inputs. Perfect when build latency is the top priority and a few extra KB are acceptable.  
-terser — A steady performer with standout win on jquery. Not the overall champ, but a proven tool for cases that match its sweet spot.
+- uglify-js — The size grinder. Won a bunch of rounds by squeezing the last bytes out of mid-size packages. Great if absolute gzip size on moderate artifacts is your top priority, but it’s often much slower.
+- oxc-minify — The reliable all-rounder. Close-to-best sizes on large bundles with consistently strong speeds. Best pick if you want kind-of-best compression without long waits.
+- @tdewolff/minify — The bolt. Blistering speed across the board with only a tiny compression penalty. Ideal for CI, fast iteration, or preflight steps where time outweighs shaving the last percent.
+- @cminify/cminify-linux-x64 — Pure speed demon. Often the fastest on large files but gives up noticeable compression. Great for quick local feedback or build steps where throughput beats transfer-time.
+- terser — Shined where expected: top compression on jquery and solid mid-field performance elsewhere. A dependable specialist.
 
 ### Eliminated
-- babel-minify — Crashed on d3 during minification: "Cannot read properties of undefined (reading 'add')".  
-- tedivm/jshrink — Crashed on d3 with an unclosed regex error.  
-- bun — Failed post-validation on typescript due to line ending mismatch in output.
+- babel-minify — Crashed on "d3": "Cannot read properties of undefined (reading 'add')". Out of the race.
+- tedivm/jshrink — Crashed on "d3": unclosed regex pattern in the minifier. Eliminated.
+- bun — Failed post-validation on "typescript": line-ending mismatch in output. Validation failed, so we must disqualify it.
 
-## Closing remarks
-That was a tight, entertaining field. If you ship for smallest transfer size across big apps, @swc/core is the practical pick. If you chase absolute minimal gzip on smaller libraries and don’t mind slower runs, uglify-js is a heavyweight contender. If your priority is raw speed in CI or local iteration, look to @tdewolff/minify or @cminify. Remember: these results measure only gzip size and minify speed. Developer experience, compatibility and correctness matter too and may shift your choice. Try the short list against your actual codebase and pick the trade-off that fits your workflow.
+Closing remarks
+This race judged only two things: gzipped size and minification speed. Real-world choice also cares about developer experience, correctness, integrations, and community — none of which we scored here. If you ship large bundles and care about user load time, lean toward @swc/core or oxc-minify. If your pipeline values instant feedback, @tdewolff/minify or @cminify/cminify are seductive choices. And if you absolutely must wring the last bytes from a mid‑size lib and can tolerate the wait, say hello to uglify‑js. Race results in hand — pick the tool that matches the stage you need to win.
 <!-- aiAnalysis:end -->
 
 <details>
@@ -490,20 +490,21 @@ Three... two... one... compress! Welcome to the Minification Grand Prix, where b
 ### Eliminated
 &lt;List of disqualified minifiers, each with a quick reason (e.g., crash, invalid output, critical bug). Be clear but diplomatic.&gt;
 
+## Closing remarks
 &lt;Closing remarks — Concisely celebrate the competition, acknowledge that DX and correctness also matter, and encourage readers to explore what fits their workflow.&gt;
 ```
 
 
 # Minifiers
-- babel-minify v0.5.2 released 2022-05-07
+- babel-minify v0.5.2 released 2022-05-06
 - bun v1.2.20 released 2025-08-10
 - @cminify/cminify-linux-x64 v3.0.1 released 2025-07-27
-- esbuild v0.25.9 released 2025-08-13
+- esbuild v0.25.9 released 2025-08-12
 - google-closure-compiler v20250820.0.0 released 2025-08-22
 - tedivm/jshrink v1.8.0
-- oxc-minify v0.82.3 released 2025-08-21
+- oxc-minify v0.82.3 released 2025-08-20
 - @swc/core v1.13.4 released 2025-08-21
-- @tdewolff/minify v2.24.0 released 2025-08-21
+- @tdewolff/minify v2.24.0 released 2025-08-20
 - terser v5.43.1 released 2025-06-19
 - uglify-js v3.19.3 released 2024-08-29
 
