@@ -424,25 +424,33 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 > 🤖 This analysis is AI generated. See below for the system prompt.
 
 <!-- aiAnalysis:start -->
-Three... two... one... compress! Welcome to the Minification Grand Prix, where bytes sprint for survival and every millisecond matters. The field mixed old-school grinders with clever sprinters. The scoreboard was full of surprises, close calls, and clear blowouts — especially once the heavyweights (the megabyte-class bundles) hit the track.
+Three... two... one... compress! Welcome to the Minification Grand Prix, where every byte screams and every millisecond matters. The field mixed old stalwarts with sharp new engines. The verdicts were rarely polite. Sometimes tiny wins decided big outcomes. Sometimes a sprint beat a careful surgeon. Let’s call the race.
 
 ### Best minifier
-@swc/core takes the crown. It matched or beat the best gzip sizes on the biggest, hairiest inputs — think Three, ECharts, antd and the 1.88 MB TypeScript bundle — while staying far snappier than the old-time slow-but-compact champs. In plain terms: when transfer time matters most (big bundles, users on the wire), swc usually gives you the smallest luggage at an impressive pickup speed. Uglify‑JS fought hard, winning several rounds on mid-sized libs with slightly smaller outputs, but it paid for those wins in time. Choosing swc felt like rewarding the tool that won the marathon stages, not just the sprints.
+@swc/core takes the crown. It wasn’t always the outright fastest, but it repeatedly carved the smallest gzipped artifacts on the biggest, toughest inputs—three, echarts, antd, and the enormous typescript bundle. Winning the heavyweight rounds matters more for real-world transfer time, and swc delivered the best compression where it counts. It also stayed reasonably quick for its level of compression, so it gave a practical balance: you get near-best bytes without paying a prohibitive time tax.
+
+This was not an easy decision. uglify-js matched swc on number of “best gzip” wins and often squeezed the tiniest extra savings on small-to-medium libraries. But uglify’s price was time; on the big bundles it slowed down dramatically. The crown goes to the tool that wins the bandwidth war on large artifacts while staying fast enough to be useful: that’s swc.
 
 ### Honorable mentions
-- uglify-js — The size grinder. Won a bunch of rounds by squeezing the last bytes out of mid-size packages. Great if absolute gzip size on moderate artifacts is your top priority, but it’s often much slower.
-- oxc-minify — The reliable all-rounder. Close-to-best sizes on large bundles with consistently strong speeds. Best pick if you want kind-of-best compression without long waits.
-- @tdewolff/minify — The bolt. Blistering speed across the board with only a tiny compression penalty. Ideal for CI, fast iteration, or preflight steps where time outweighs shaving the last percent.
-- @cminify/cminify-linux-x64 — Pure speed demon. Often the fastest on large files but gives up noticeable compression. Great for quick local feedback or build steps where throughput beats transfer-time.
-- terser — Shined where expected: top compression on jquery and solid mid-field performance elsewhere. A dependable specialist.
+uglify-js — The old-school bruiser. Frequently the smallest or neck-and-neck on many rounds, especially medium-sized bundles. Incredible at squeezing bytes, but often the slowest. Pick it when absolute size on small-to-medium code is your north star and build time is secondary.
+
+oxc-minify — The underrated all-rounder. Fast and consistently close to swc’s sizes on large inputs. It often gave the best practical mix of speed and compression, especially when you need a faster turnaround than swc but still want tight payloads.
+
+@cminify/cminify-linux-x64 — The speed demon. It repeatedly finished in the blink of an eye with much faster minification times. Compression lagged behind the top compressors on big bundles, but if CI wall-clock or on-the-fly builds are the pain point, this one is compelling.
+
+@tdewolff/minify — The sprinter for tiny files. Mind-bogglingly fast (single-digit milliseconds on many smaller libraries) with only small compromises in gzip size. A 3 ms vs 497 ms trade-off for a few-percent size difference on the React test is exactly the sort of choice where this tool shines.
+
+terser — Shows up with top compression on specific cases (jquery) and generally solid balanced output. Worth considering when you want modern minifier heuristics tuned for JS quirks.
 
 ### Eliminated
-- babel-minify — Crashed on "d3": "Cannot read properties of undefined (reading 'add')". Out of the race.
-- tedivm/jshrink — Crashed on "d3": unclosed regex pattern in the minifier. Eliminated.
-- bun — Failed post-validation on "typescript": line-ending mismatch in output. Validation failed, so we must disqualify it.
+- babel-minify — Failed on d3 during minification: "Cannot read properties of undefined (reading 'add')".
+- tedivm/jshrink — Failed on d3: "Unclosed regex pattern" runtime exception.
+- bun — Failed post-validation on typescript due to line-ending mismatch (CRLF vs LF).
 
 ### Closing remarks
-This race judged only two things: gzipped size and minification speed. Real-world choice also cares about developer experience, correctness, integrations, and community — none of which we scored here. If you ship large bundles and care about user load time, lean toward @swc/core or oxc-minify. If your pipeline values instant feedback, @tdewolff/minify or @cminify/cminify are seductive choices. And if you absolutely must wring the last bytes from a mid‑size lib and can tolerate the wait, say hello to uglify‑js. Race results in hand — pick the tool that matches the stage you need to win.
+swc earned the trophy by dominating the big battles where transfer time is most painful. uglify-js remains a formidable contender when every last kilobyte on smaller bundles matters, but it asks you to wait. cminify and @tdewolff/minify win races when latency and CI time are the enemy. oxc-minify is the pragmatic compromise that many teams will prefer.
+
+Remember: this race measured only gzipped size and minification speed. Real-world choices also weigh developer experience, compatibility, API ergonomics, install surface, and correctness guarantees. Use these results to guide trade-offs: prioritize the tool that saves you the most time or bytes for the parts of your workflow that actually hurt. And above all—measure with your own code. The podium here tells a clear story, but your project writes the next chapter.
 <!-- aiAnalysis:end -->
 
 <details>
@@ -490,7 +498,7 @@ Three... two... one... compress! Welcome to the Minification Grand Prix, where b
 ### Eliminated
 &lt;List of disqualified minifiers, each with a quick reason (e.g., crash, invalid output, critical bug). Be clear but diplomatic.&gt;
 
-## Closing remarks
+### Closing remarks
 &lt;Closing remarks — Concisely celebrate the competition, acknowledge that DX and correctness also matter, and encourage readers to explore what fits their workflow.&gt;
 ```
 
