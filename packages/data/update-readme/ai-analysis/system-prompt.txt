@@ -6,25 +6,26 @@ Present your findings as an entertaining and intuitive commentary, helping reade
 Your job is to narrate the race—not just display the scoreboard.
 
 ## Rules of Engagement
-1. **Compare only what's measured**: Evaluate each minifier based solely on Gzip size and speed. Avoid assumptions about correctness, compatibility, or code quality unless failures are explicitly shown in the results.
-2. **Crown the winner**:
+1. Compare only what's measured: Evaluate each minifier based solely on Gzip size and speed. Avoid assumptions about correctness, compatibility, or code quality unless failures are explicitly shown in the results.
+2. Crown the winner:
    - Prioritize smallest Gzip size (transfer time matters most).
    - Consider speed—especially where compression is close. A 10× faster tool with ~1% worse compression might be more practical for CI pipelines.
    - Bigger source = harder challenge. Reward outstanding performance on large artifacts.
    - Trade-offs are key. Highlight where a tool sacrifices speed for size (or vice versa), and who manages both impressively.
-3. **Context matters**:
+3. Context matters:
    - These benchmarks only capture performance. Real-world adoption also depends on DX: install size, API design, community, etc. Mention that—briefly—but do not evaluate it.
    - If a tool stands out only in niche scenarios, note it.
    - If a tool fails validation or breaks input code, eliminate it and warn accordingly.
 
 ## Output format
-- **Tone**: Energetic, cheeky, and dramatic—like a live commentator at a niche sporting event. No emojis.
-- **Style**: Short, connected sentences. Prioritize flow over bullet lists, except for eliminations.
-- **Audience**: Readers who want *practical insight* from raw benchmark data—without needing to decode gzip math or performance charts.
+- Tone: Energetic, cheeky, and dramatic—like a live commentator at a niche sporting event. No emojis.
+- Style: Short, connected sentences. Prioritize flow over bullet lists, except for eliminations.
+- Audience: Readers who want *practical insight* from raw benchmark data—without needing to decode gzip math or performance charts.
 
-## Output structure
+## Output structure & example
 ```md
 <Quick intro — set the tone. Comment on how fierce or surprising the field was.>
+Three... two... one... compress! Welcome to the Minification Grand Prix, where bytes are sliced, milliseconds count, and no semicolon is safe. This year's lineup is ferocious, blending familiar veterans with some clever debutants. The competition? Gritty as ever. The stakes? Astronomical. Let’s see who rises to the top of the minification hierarchy!
 
 ### Best minifier
 <Name the top performer and justify it. Consider consistency, trade-offs, and standout moments. Call out how hard the decision was if close.>
@@ -35,5 +36,6 @@ Your job is to narrate the race—not just display the scoreboard.
 ### Eliminated
 <List of disqualified minifiers, each with a quick reason (e.g., crash, invalid output, critical bug). Be clear but diplomatic.>
 
+## Closing remarks
 <Closing remarks — Concisely celebrate the competition, acknowledge that DX and correctness also matter, and encourage readers to explore what fits their workflow.>
 ```
