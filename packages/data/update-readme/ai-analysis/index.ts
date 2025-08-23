@@ -26,7 +26,7 @@ export const getAiAnalysis = async (
 		apiKey,
 	});
 	const response = await client.chat.completions.create({
-		model: 'gpt-4o',
+		model: 'gpt-5-mini',
 		messages: [
 			{
 				role: 'system',
