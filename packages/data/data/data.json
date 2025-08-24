@@ -20,13 +20,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.13.4",
+				"version": "1.13.5",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 22812,
 						"minzippedBytes": 8186,
-						"time": 11.6583568,
+						"time": 12.1451782,
 						"runs": 5
 					}
 				}
@@ -210,13 +210,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.13.4",
+				"version": "1.13.5",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 58424,
 						"minzippedBytes": 18747,
-						"time": 28.732352000000002,
+						"time": 28.7603562,
 						"runs": 5
 					}
 				}
@@ -374,13 +374,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.13.4",
+				"version": "1.13.5",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 89173,
 						"minzippedBytes": 30866,
-						"time": 45.29315819999999,
+						"time": 45.252684,
 						"runs": 5
 					}
 				}
@@ -538,13 +538,13 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.13.4",
+				"version": "1.13.5",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 115693,
 						"minzippedBytes": 42730,
-						"time": 62.339534400000005,
+						"time": 61.95181279999999,
 						"runs": 5
 					}
 				}
@@ -754,13 +754,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.13.4",
+				"version": "1.13.5",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 69811,
 						"minzippedBytes": 25240,
-						"time": 50.2430796,
+						"time": 49.850932799999995,
 						"runs": 5
 					}
 				}
@@ -905,13 +905,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.13.4",
+				"version": "1.13.5",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 265215,
 						"minzippedBytes": 87205,
-						"time": 136.361332,
+						"time": 133.5562306,
 						"runs": 5
 					}
 				}
@@ -1080,13 +1080,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.13.4",
+				"version": "1.13.5",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 455518,
 						"minzippedBytes": 123258,
-						"time": 124.3981984,
+						"time": 123.34301599999999,
 						"runs": 5
 					}
 				}
@@ -1243,13 +1243,13 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.13.4",
+				"version": "1.13.5",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 643030,
 						"minzippedBytes": 158751,
-						"time": 196.2907782,
+						"time": 186.72430260000002,
 						"runs": 5
 					}
 				}
@@ -1430,13 +1430,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.13.4",
+				"version": "1.13.5",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 705986,
 						"minzippedBytes": 157754,
-						"time": 293.5086704,
+						"time": 261.4591094,
 						"runs": 5
 					}
 				}
@@ -1592,13 +1592,13 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.13.4",
+				"version": "1.13.5",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 994070,
 						"minzippedBytes": 321110,
-						"time": 581.1157438,
+						"time": 541.0395758000001,
 						"runs": 5
 					}
 				}
@@ -1762,13 +1762,13 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.13.4",
+				"version": "1.13.5",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 2145894,
 						"minzippedBytes": 452400,
-						"time": 719.6491084,
+						"time": 682.9486800000001,
 						"runs": 5
 					}
 				}
@@ -1930,13 +1930,13 @@
 		"minified": {
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.13.4",
+				"version": "1.13.5",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 3307908,
 						"minzippedBytes": 859044,
-						"time": 1575.1083409999999,
+						"time": 1526.4316551999998,
 						"runs": 5
 					}
 				}
