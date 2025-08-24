@@ -6,7 +6,7 @@
 	"dependencies": {
 		"@cminify/cminify-linux-x64": "^3.0.1",
 		"@minification-benchmarks/utils": "*",
-		"@swc/core": "^1.13.4",
+		"@swc/core": "^1.13.5",
 		"@tdewolff/minify": "^2.24.0",
 		"babel-minify": "^0.5.2",
 		"bun": "^1.2.20",
