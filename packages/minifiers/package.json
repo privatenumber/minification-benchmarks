@@ -9,7 +9,7 @@
 		"@swc/core": "^1.13.5",
 		"@tdewolff/minify": "^2.24.0",
 		"babel-minify": "^0.5.2",
-		"bun": "^1.2.20",
+		"bun": "^1.2.21",
 		"esbuild": "^0.25.9",
 		"find-up": "^7.0.0",
 		"google-closure-compiler": "^20250820.0.0",
