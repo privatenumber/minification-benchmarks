@@ -108,20 +108,20 @@ const getScoredMinifiers = (
 				);
 
 				/**
-				 * Dynamically adjust size and time weights based on how slow the minifier is.
+				 * Dynamically increases the time weight based on how slow the minifier is,
+				 * effectively adding a penalty for slowness. The size weight remains constant.
 				 *
 				 * If a minifier is fast (timePenaltyFactor ≈ 0):
-				 * - Size is weighted more heavily (up to 0.85)
-				 * - Time is weighted lightly (as low as 0.15)
+				 * - Time is weighted lightly at its base value (0.15).
+				 * - The final score is dominated by the normalized size.
 				 *
 				 * If a minifier is slow (timePenaltyFactor ≈ 1):
-				 * - Size is weighted less (down to 0.50)
-				 * - Time is weighted more (up to 0.50)
+				 * - Time is weighted more heavily (up to 0.50).
+				 * - The final score is significantly impacted by both size and time.
 				 */
-				const dynamicSizeWeight = baseSizeWeight - (weightSwing * timePenaltyFactor);
 				const dynamicTimeWeight = baseTimeWeight + (weightSwing * timePenaltyFactor);
 
-				score = (dynamicSizeWeight * normalizedSize) + (dynamicTimeWeight * normalizedTime);
+				score = (baseSizeWeight * normalizedSize) + (dynamicTimeWeight * normalizedTime);
 			}
 
 			return {
