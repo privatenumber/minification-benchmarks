@@ -7,7 +7,7 @@
 		"@cminify/cminify-linux-x64": "^3.0.1",
 		"@minification-benchmarks/utils": "*",
 		"@swc/core": "^1.13.5",
-		"@tdewolff/minify": "^2.24.2",
+		"@tdewolff/minify": "^2.24.3",
 		"babel-minify": "^0.5.2",
 		"bun": "^1.2.21",
 		"esbuild": "^0.25.9",
@@ -15,7 +15,7 @@
 		"google-closure-compiler": "^20250820.0.0",
 		"mem": "^9.0.2",
 		"oxc-minify": "^0.86.0",
-		"terser": "^5.43.1",
+		"terser": "^5.44.0",
 		"uglify-js": "^3.19.3"
 	},
 	"devDependencies": {
