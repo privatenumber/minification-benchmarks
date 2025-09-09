@@ -111,13 +111,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.21",
+				"version": "1.2.20",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 23993,
 						"minzippedBytes": 8661,
-						"time": 12.6656054,
+						"time": 169.12263360000003,
 						"runs": 5
 					}
 				}
@@ -314,13 +314,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.21",
+				"version": "1.2.20",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 61836,
 						"minzippedBytes": 19857,
-						"time": 17.228784400000002,
+						"time": 21.67795,
 						"runs": 5
 					}
 				}
@@ -478,13 +478,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.21",
+				"version": "1.2.20",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 92548,
 						"minzippedBytes": 32653,
-						"time": 26.853957199999996,
+						"time": 22.369208399999998,
 						"runs": 5
 					}
 				}
@@ -668,13 +668,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.21",
+				"version": "1.2.20",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 121496,
 						"minzippedBytes": 45400,
-						"time": 28.852307000000003,
+						"time": 22.6683414,
 						"runs": 5
 					}
 				}
@@ -845,13 +845,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.21",
+				"version": "1.2.20",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 73448,
 						"minzippedBytes": 26655,
-						"time": 22.399882400000003,
+						"time": 30.2094418,
 						"runs": 5
 					}
 				}
@@ -996,13 +996,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.21",
+				"version": "1.2.20",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 273406,
 						"minzippedBytes": 92395,
-						"time": 47.3571204,
+						"time": 28.2263168,
 						"runs": 5
 					}
 				}
@@ -1184,13 +1184,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.21",
+				"version": "1.2.20",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 466803,
 						"minzippedBytes": 127653,
-						"time": 41.417042800000004,
+						"time": 26.509166799999996,
 						"runs": 5
 					}
 				}
@@ -1360,13 +1360,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.21",
+				"version": "1.2.20",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 655932,
 						"minzippedBytes": 166210,
-						"time": 53.3063676,
+						"time": 32.978633200000004,
 						"runs": 5
 					}
 				}
@@ -1534,13 +1534,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.21",
+				"version": "1.2.20",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 727899,
 						"minzippedBytes": 182671,
-						"time": 75.2266094,
+						"time": 41.754766599999996,
 						"runs": 5
 					}
 				}
@@ -1696,13 +1696,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.21",
+				"version": "1.2.20",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 1024688,
 						"minzippedBytes": 337934,
-						"time": 122.47312159999998,
+						"time": 58.0335416,
 						"runs": 5
 					}
 				}
@@ -1853,13 +1853,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.2.21",
+				"version": "1.2.20",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 2296786,
 						"minzippedBytes": 491833,
-						"time": 168.6869766,
+						"time": 82.7575166,
 						"runs": 5
 					}
 				}
@@ -2006,6 +2006,19 @@
 					}
 				}
 			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.2.20",
+				"configHash": "cd9d902c70",
+				"result": {
+					"data": {
+						"minifiedBytes": 3538027,
+						"minzippedBytes": 923336,
+						"time": 136.20200799999998,
+						"runs": 5
+					}
+				}
+			},
 			"@cminify/cminify-linux-x64": {
 				"minifierPath": "cminify.ts",
 				"version": "3.0.1",
@@ -2066,18 +2079,6 @@
 				"result": {
 					"error": {
 						"message": "timeout"
-					}
-				}
-			},
-			"bun": {
-				"minifierPath": "bun.ts",
-				"version": "1.2.21",
-				"configHash": "cd9d902c70",
-				"result": {
-					"error": {
-						"message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'",
-						"stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'\n    at Object.run (/packages/artifacts/artifacts/typescript/test.ts:13:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:101:15)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:98:2)",
-						"stage": "post-validation"
 					}
 				}
 			}
