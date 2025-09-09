@@ -7,6 +7,12 @@ export default defineTest<typeof import('typescript')>({
 		const result = ts.transpileModule(source, {
 			compilerOptions: {
 				target: ts.ScriptTarget.ES3,
+
+				// In browsers, TypeScript defaults to \r\n. We are running
+				// TypeScript in Node.js, but we built TypeScript for the
+				// browser so let's explicitly choose the desired newline
+				// character.
+				newLine: ts.NewLineKind.LineFeed,
 			},
 		});
 

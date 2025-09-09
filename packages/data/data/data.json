@@ -117,7 +117,7 @@
 					"data": {
 						"minifiedBytes": 23993,
 						"minzippedBytes": 8661,
-						"time": 12.6656054,
+						"time": 12.7107402,
 						"runs": 5
 					}
 				}
@@ -320,7 +320,7 @@
 					"data": {
 						"minifiedBytes": 61836,
 						"minzippedBytes": 19857,
-						"time": 17.228784400000002,
+						"time": 17.0959718,
 						"runs": 5
 					}
 				}
@@ -484,7 +484,7 @@
 					"data": {
 						"minifiedBytes": 92548,
 						"minzippedBytes": 32653,
-						"time": 26.853957199999996,
+						"time": 26.7490184,
 						"runs": 5
 					}
 				}
@@ -674,7 +674,7 @@
 					"data": {
 						"minifiedBytes": 121496,
 						"minzippedBytes": 45400,
-						"time": 28.852307000000003,
+						"time": 29.2556962,
 						"runs": 5
 					}
 				}
@@ -851,7 +851,7 @@
 					"data": {
 						"minifiedBytes": 73448,
 						"minzippedBytes": 26655,
-						"time": 22.399882400000003,
+						"time": 21.7590116,
 						"runs": 5
 					}
 				}
@@ -1002,7 +1002,7 @@
 					"data": {
 						"minifiedBytes": 273406,
 						"minzippedBytes": 92395,
-						"time": 47.3571204,
+						"time": 44.3972586,
 						"runs": 5
 					}
 				}
@@ -1190,7 +1190,7 @@
 					"data": {
 						"minifiedBytes": 466803,
 						"minzippedBytes": 127653,
-						"time": 41.417042800000004,
+						"time": 39.96519539999999,
 						"runs": 5
 					}
 				}
@@ -1366,7 +1366,7 @@
 					"data": {
 						"minifiedBytes": 655932,
 						"minzippedBytes": 166210,
-						"time": 53.3063676,
+						"time": 53.359766,
 						"runs": 5
 					}
 				}
@@ -1540,7 +1540,7 @@
 					"data": {
 						"minifiedBytes": 727899,
 						"minzippedBytes": 182671,
-						"time": 75.2266094,
+						"time": 73.934505,
 						"runs": 5
 					}
 				}
@@ -1702,7 +1702,7 @@
 					"data": {
 						"minifiedBytes": 1024688,
 						"minzippedBytes": 337934,
-						"time": 122.47312159999998,
+						"time": 119.2301428,
 						"runs": 5
 					}
 				}
@@ -1859,7 +1859,7 @@
 					"data": {
 						"minifiedBytes": 2296786,
 						"minzippedBytes": 491833,
-						"time": 168.6869766,
+						"time": 165.1770672,
 						"runs": 5
 					}
 				}
@@ -2006,6 +2006,19 @@
 					}
 				}
 			},
+			"bun": {
+				"minifierPath": "bun.ts",
+				"version": "1.2.21",
+				"configHash": "cd9d902c70",
+				"result": {
+					"data": {
+						"minifiedBytes": 3538021,
+						"minzippedBytes": 923321,
+						"time": 294.6148716,
+						"runs": 5
+					}
+				}
+			},
 			"@cminify/cminify-linux-x64": {
 				"minifierPath": "cminify.ts",
 				"version": "3.0.1",
@@ -2066,18 +2079,6 @@
 				"result": {
 					"error": {
 						"message": "timeout"
-					}
-				}
-			},
-			"bun": {
-				"minifierPath": "bun.ts",
-				"version": "1.2.21",
-				"configHash": "cd9d902c70",
-				"result": {
-					"error": {
-						"message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'",
-						"stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'var x = function () { return \"string\"; };\\r\\n'\n- 'var x = function () { return \"string\"; };\\n'\n    at Object.run (/packages/artifacts/artifacts/typescript/test.ts:13:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:101:15)\n    at <anonymous> (/packages/bench/benchmark/cli.ts:98:2)",
-						"stage": "post-validation"
 					}
 				}
 			}
