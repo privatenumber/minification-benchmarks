@@ -15,7 +15,7 @@ type ArtifactMeta = {
 
 const readPublicPackageUp = async (cwd: string) => {
 	let packageFound = await readPackageUp({ cwd });
-	while (packageFound!.packageJson.private) {
+	while (packageFound!.packageJson.private || !packageFound!.packageJson.name) {
 		packageFound = await readPackageUp({
 			cwd: path.join(path.dirname(packageFound!.path), '..'),
 		});
@@ -70,7 +70,7 @@ export class Artifact {
 
 	async loadMeta() {
 		const packageJson = await readPublicPackageUp(this.fullFilePath);
-		assert(this.meta.package === packageJson.name, 'Mismatching package name');
+		assert(this.meta.package === packageJson.name, `Mismatching package name: ${this.meta.package} !== ${packageJson.name}`);
 		this.packageJson = packageJson;
 	}
 
