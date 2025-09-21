@@ -1,7 +1,8 @@
 import assert from 'assert';
+import type typescript from 'typescript';
 import { defineTest } from '../../utils/define-test.js';
 
-export default defineTest<typeof import('typescript')>({
+export default defineTest<typeof typescript>({
 	run: (ts) => {
 		const source = 'let x: () => string = () => "string"';
 		const result = ts.transpileModule(source, {

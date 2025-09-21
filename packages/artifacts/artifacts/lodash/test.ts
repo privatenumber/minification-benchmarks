@@ -1,8 +1,9 @@
 import assert from 'assert';
+import type lodash from 'lodash';
 import { defineTest } from '../../utils/define-test.js';
 
-export default defineTest<typeof import('lodash')>({
+export default defineTest<typeof lodash>({
 	run: (_) => {
-		assert(_.flow([_.add, (x: number) => x * x])(2, 3) === 25);
+		assert.ok(_.flow([_.add, (x: number) => x * x])(2, 3) === 25);
 	},
 });

@@ -45,7 +45,7 @@ const loadArtifacts = async (
 	if (filter) {
 		artifactNames = artifactNames.filter(artifact => artifact.match(filter));
 	}
-	assert(artifactNames.length, 'No artifacts matched');
+	assert.ok(artifactNames.length, 'No artifacts matched');
 
 	const artifacts = await Promise.all(artifactNames.map(loadArtifact));
 
@@ -76,7 +76,7 @@ const loadMinifiers = async (
 		));
 	}
 
-	assert(minifierInstances.length, 'No minifiers matched');
+	assert.ok(minifierInstances.length, 'No minifiers matched');
 
 	return minifierInstances;
 };

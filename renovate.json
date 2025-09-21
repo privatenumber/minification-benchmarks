@@ -8,15 +8,21 @@
 
 	"prHourlyLimit": 24,
 	"prConcurrentLimit": 5,
-	"gitIgnoredAuthors": ["github-actions@github.com"],
+	"gitIgnoredAuthors": [
+		"github-actions@github.com"
+	],
 
 	"packageRules": [
 		{
-			"packagePatterns": ["*"],
+			"packagePatterns": [
+				"*"
+			],
 			"enabled": false
 		},
 		{
-			"matchFileNames": ["packages/minifiers/**"],
+			"matchFileNames": [
+				"packages/minifiers/**"
+			],
 			"groupName": "minifiers",
 			"matchPackageNames": [
 				"@minify-js/node",

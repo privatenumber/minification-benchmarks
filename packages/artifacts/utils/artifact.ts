@@ -70,7 +70,7 @@ export class Artifact {
 
 	async loadMeta() {
 		const packageJson = await readPublicPackageUp(this.fullFilePath);
-		assert(this.meta.package === packageJson.name, `Mismatching package name: ${this.meta.package} !== ${packageJson.name}`);
+		assert.ok(this.meta.package === packageJson.name, `Mismatching package name: ${this.meta.package} !== ${packageJson.name}`);
 		this.packageJson = packageJson;
 	}
 

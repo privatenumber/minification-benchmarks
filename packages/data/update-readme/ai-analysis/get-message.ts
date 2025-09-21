@@ -3,7 +3,7 @@ import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
 import { format } from 'date-fns';
 import { byteSize } from '../../utils/byte-size.js';
 import { formatMs } from '../formatting.js';
-import { type AnalyzedData } from '../analyzed-data.js';
+import type { AnalyzedData } from '../analyzed-data.js';
 
 type Eliminated = Record<string, {
 	reason: string;

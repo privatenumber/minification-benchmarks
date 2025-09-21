@@ -1,13 +1,14 @@
 import assert from 'assert';
 import jsdom from 'jsdom-global';
 import { render } from 'react-dom';
+import type react from 'react';
 import { defineTest } from '../../utils/define-test.js';
 
 jsdom(undefined, {
 	pretendToBeVisual: true,
 });
 
-export default defineTest<typeof import('react')>({
+export default defineTest<typeof react>({
 	preprocess: code => code.replaceAll('console.warn(', '('),
 
 	run: (React) => {
@@ -18,6 +19,6 @@ export default defineTest<typeof import('react')>({
 		document.body.innerHTML = '<div id="app"></div>';
 		render(React.createElement(App), app);
 
-		assert(app.innerHTML === '<div>rendered</div>');
+		assert.ok(app.innerHTML === '<div>rendered</div>');
 	},
 });

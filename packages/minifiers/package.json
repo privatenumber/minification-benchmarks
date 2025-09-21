@@ -5,7 +5,7 @@
 	"main": "index.ts",
 	"dependencies": {
 		"@cminify/cminify-linux-x64": "^3.0.1",
-		"@minification-benchmarks/utils": "*",
+		"@minification-benchmarks/utils": "workspace:*",
 		"@swc/core": "^1.13.5",
 		"@tdewolff/minify": "^2.24.3",
 		"babel-minify": "^0.5.2",

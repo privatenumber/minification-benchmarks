@@ -69,10 +69,10 @@ const {
 	save,
 } = argv.flags;
 
-assert(artifactName, 'Artifact must be passed in');
+assert.ok(artifactName, 'Artifact must be passed in');
 const artifact = await loadArtifact(artifactName);
 
-assert(minifierName, 'Minifier must be passed in');
+assert.ok(minifierName, 'Minifier must be passed in');
 const minifier = await getMinifier(minifierName);
 
 const minifierInstanceName = argv.flags.instance;
@@ -82,7 +82,7 @@ let minifierInstance: MinifierFunction;
 if (minifierInstances.length === 1) {
 	minifierInstance = minifier.instances[minifierInstances[0]];
 } else {
-	assert(minifierInstanceName, 'Minifier has multiple instances. Specify via --instance');
+	assert.ok(minifierInstanceName, 'Minifier has multiple instances. Specify via --instance');
 	minifierInstance = minifier.instances[minifierInstanceName];
 }
 

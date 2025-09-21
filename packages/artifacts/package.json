@@ -4,7 +4,7 @@
 	"type": "module",
 	"main": "./index.ts",
 	"dependencies": {
-		"@minification-benchmarks/utils": "*",
+		"@minification-benchmarks/utils": "workspace:*",
 		"antd": "^4.16.1",
 		"d3": "^6.3.1",
 		"echarts": "^5.1.1",

@@ -10,7 +10,7 @@ export default createMinifier(
 				sourceMap: false,
 			});
 
-			assert(!minified.error, minified.error);
+			assert.ok(!minified.error, minified.error);
 
 			return minified.code;
 		},
@@ -20,7 +20,7 @@ export default createMinifier(
 				compress: false,
 			});
 
-			assert(!minified.error, minified.error);
+			assert.ok(!minified.error, minified.error);
 
 			return minified.code;
 		},

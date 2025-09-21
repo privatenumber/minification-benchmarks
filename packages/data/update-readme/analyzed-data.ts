@@ -5,7 +5,7 @@ import type { Artifact, Minifier } from '../types.js';
 
 export type BestMinifier = [
 	name: string,
-	Minifier<BenchmarkResultSuccessWithRuns>
+	Minifier<BenchmarkResultSuccessWithRuns>,
 ];
 
 export type MinifierWithScore<T = BenchmarkResultWithRuns> = {

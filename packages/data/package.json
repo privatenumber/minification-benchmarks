@@ -4,9 +4,9 @@
 	"type": "module",
 	"main": "./index.ts",
 	"dependencies": {
-		"@minification-benchmarks/bench": "*",
-		"@minification-benchmarks/minifiers": "*",
-		"@minification-benchmarks/utils": "*",
+		"@minification-benchmarks/bench": "workspace:*",
+		"@minification-benchmarks/minifiers": "workspace:*",
+		"@minification-benchmarks/utils": "workspace:*",
 		"chartjs-plugin-datalabels": "^2.2.0",
 		"comment-mark": "^2.0.1",
 		"date-fns": "^4.1.0",

@@ -16,6 +16,6 @@ export default defineTest({
 			render: h => h('div', ['rendered']),
 		});
 
-		assert(document.body.innerHTML === '<div>rendered</div>');
+		assert.ok(document.body.innerHTML === '<div>rendered</div>');
 	},
 });

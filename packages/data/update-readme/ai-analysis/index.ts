@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import OpenAI from 'openai';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
-import { type AnalyzedData } from '../analyzed-data.js';
+import type { AnalyzedData } from '../analyzed-data.js';
 import { getMessage } from './get-message.js';
 
 const apiKey = process.env.GH_TOKEN;
