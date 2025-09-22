@@ -10,11 +10,11 @@
 		"@tdewolff/minify": "^2.24.3",
 		"babel-minify": "^0.5.2",
 		"bun": "^1.2.22",
-		"esbuild": "^0.25.9",
+		"esbuild": "^0.25.10",
 		"find-up": "^7.0.0",
 		"google-closure-compiler": "^20250820.0.0",
 		"mem": "^9.0.2",
-		"oxc-minify": "^0.88.0",
+		"oxc-minify": "^0.91.0",
 		"terser": "^5.44.0",
 		"uglify-js": "^3.19.3"
 	},
