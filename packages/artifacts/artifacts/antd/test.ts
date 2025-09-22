@@ -21,7 +21,7 @@ export default defineTest<typeof antd>({
 		render(createElement(App), app);
 
 		assert.ok(
-			app.innerHTML === '<button type="button" class="ant-btn ant-btn-default"><span>rendered</span></button>',
+			app.innerHTML === '<button type="button" class="ant-btn"><span>rendered</span></button>',
 		);
 	},
 });
