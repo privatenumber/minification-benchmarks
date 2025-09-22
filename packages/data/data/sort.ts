@@ -6,6 +6,6 @@ export const sortArtifacts = (
 ) => a.size - b.size;
 
 export const sortMinifiers = (
-	[nameA]: [string],
-	[nameB]: [string],
+	[nameA]: [string, unknown],
+	[nameB]: [string, unknown],
 ) => nameA.localeCompare(nameB);
