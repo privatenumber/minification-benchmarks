@@ -16,7 +16,7 @@ export const getAiAnalysis = async (
 	const message = await getMessage(minifiers, data);
 
 	if (!apiKey) {
-		console.warn('Skipping AI analysis due to missing GH_TOKEN')
+		console.warn('Skipping AI analysis due to missing GH_TOKEN');
 		return;
 	}
 

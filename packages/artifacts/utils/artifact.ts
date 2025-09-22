@@ -61,8 +61,22 @@ export class Artifact {
 	}
 
 	async loadCode() {
-		let code = await fs.readFile(this.fullFilePath, 'utf8');
-		code = await unpreserveComments(code, this.fullFilePath);
+		// For minifiers like Google Closure that read from path
+		const strippedFilePath = `${this.fullFilePath}.no-comments`;
+
+		let code;
+		try {
+			code = await fs.readFile(strippedFilePath, 'utf8');
+			this.fullFilePath = strippedFilePath;
+		} catch {
+			const originalCode = await fs.readFile(this.fullFilePath, 'utf8');
+			code = unpreserveComments(originalCode);
+			if (originalCode !== code) {
+				await fs.writeFile(strippedFilePath, code);
+				this.fullFilePath = strippedFilePath;
+			}
+		}
+
 		this.code = code;
 		this.size = getSize(code);
 		this.gzipSize = getGzipSize(code);
