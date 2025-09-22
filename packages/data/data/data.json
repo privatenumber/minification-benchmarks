@@ -8,12 +8,12 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 22641,
 						"minzippedBytes": 8177,
-						"time": 496.9757794,
+						"time": 517.7153472,
 						"runs": 5
 					}
 				}
@@ -34,12 +34,12 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250820.0.0",
-				"configHash": "004f9ddc59",
+				"configHash": "9fa2967e27",
 				"result": {
 					"data": {
-						"minifiedBytes": 22843,
+						"minifiedBytes": 22810,
 						"minzippedBytes": 8216,
-						"time": 1047.0273668,
+						"time": 4302.18836,
 						"runs": 5
 					}
 				}
@@ -59,13 +59,13 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.88.0",
+				"version": "0.91.0",
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
-						"minifiedBytes": 23245,
-						"minzippedBytes": 8396,
-						"time": 3.2310057999999997,
+						"minifiedBytes": 23232,
+						"minzippedBytes": 8389,
+						"time": 3.340075,
 						"runs": 5
 					}
 				}
@@ -85,13 +85,13 @@
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.25.9",
+				"version": "0.25.10",
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedBytes": 23699,
 						"minzippedBytes": 8542,
-						"time": 14.644507200000001,
+						"time": 20.030504999999998,
 						"runs": 5
 					}
 				}
@@ -125,12 +125,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 25030,
 						"minzippedBytes": 8668,
-						"time": 91.1176644,
+						"time": 90.6574142,
 						"runs": 5
 					}
 				}
@@ -185,12 +185,12 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 57728,
 						"minzippedBytes": 18568,
-						"time": 1148.7919532,
+						"time": 1162.948078,
 						"runs": 5
 					}
 				}
@@ -224,12 +224,12 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250820.0.0",
-				"configHash": "004f9ddc59",
+				"configHash": "9fa2967e27",
 				"result": {
 					"data": {
-						"minifiedBytes": 58293,
-						"minzippedBytes": 18923,
-						"time": 1228.7687749999998,
+						"minifiedBytes": 58275,
+						"minzippedBytes": 18899,
+						"time": 3784.0910845999997,
 						"runs": 5
 					}
 				}
@@ -249,26 +249,26 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.88.0",
+				"version": "0.91.0",
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
 						"minifiedBytes": 59441,
 						"minzippedBytes": 19244,
-						"time": 8.9778882,
+						"time": 9.101111800000002,
 						"runs": 5
 					}
 				}
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.25.9",
+				"version": "0.25.10",
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedBytes": 59818,
 						"minzippedBytes": 19333,
-						"time": 20.489266999999998,
+						"time": 21.942879800000004,
 						"runs": 5
 					}
 				}
@@ -289,12 +289,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 62495,
 						"minzippedBytes": 19569,
-						"time": 214.5709446,
+						"time": 212.46774800000003,
 						"runs": 5
 					}
 				}
@@ -388,25 +388,25 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 88448,
 						"minzippedBytes": 30903,
-						"time": 1592.905865,
+						"time": 1720.548847,
 						"runs": 5
 					}
 				}
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.88.0",
+				"version": "0.91.0",
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
-						"minifiedBytes": 89284,
-						"minzippedBytes": 30962,
-						"time": 14.623904200000002,
+						"minifiedBytes": 89258,
+						"minzippedBytes": 30948,
+						"time": 15.6340664,
 						"runs": 5
 					}
 				}
@@ -427,12 +427,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 94082,
 						"minzippedBytes": 31470,
-						"time": 313.6579852,
+						"time": 281.6792124,
 						"runs": 5
 					}
 				}
@@ -465,13 +465,13 @@
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.25.9",
+				"version": "0.25.10",
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedBytes": 90073,
 						"minzippedBytes": 31955,
-						"time": 36.434889,
+						"time": 28.2369054,
 						"runs": 5
 					}
 				}
@@ -492,12 +492,12 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250820.0.0",
-				"configHash": "004f9ddc59",
+				"configHash": "9fa2967e27",
 				"result": {
 					"data": {
-						"minifiedBytes": 92729,
-						"minzippedBytes": 33092,
-						"time": 1357.3189418,
+						"minifiedBytes": 92707,
+						"minzippedBytes": 33053,
+						"time": 4149.5994926,
 						"runs": 5
 					}
 				}
@@ -565,25 +565,25 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 113796,
 						"minzippedBytes": 43036,
-						"time": 2205.7858818,
+						"time": 2348.1106013999997,
 						"runs": 5
 					}
 				}
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.88.0",
+				"version": "0.91.0",
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
-						"minifiedBytes": 117000,
-						"minzippedBytes": 43243,
-						"time": 18.3827372,
+						"minifiedBytes": 116987,
+						"minzippedBytes": 43233,
+						"time": 20.1274072,
 						"runs": 5
 					}
 				}
@@ -604,12 +604,12 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250820.0.0",
-				"configHash": "004f9ddc59",
+				"configHash": "9fa2967e27",
 				"result": {
 					"data": {
-						"minifiedBytes": 115605,
-						"minzippedBytes": 44184,
-						"time": 1471.6905998000002,
+						"minifiedBytes": 115550,
+						"minzippedBytes": 44240,
+						"time": 4665.3810578,
 						"runs": 5
 					}
 				}
@@ -629,13 +629,13 @@
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.25.9",
+				"version": "0.25.10",
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedBytes": 118144,
 						"minzippedBytes": 44373,
-						"time": 40.82703780000001,
+						"time": 32.5140318,
 						"runs": 5
 					}
 				}
@@ -643,12 +643,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 126137,
 						"minzippedBytes": 44450,
-						"time": 364.40576219999997,
+						"time": 371.7231742,
 						"runs": 5
 					}
 				}
@@ -716,12 +716,12 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 68167,
 						"minzippedBytes": 24686,
-						"time": 1688.5425219999997,
+						"time": 1762.4435608,
 						"runs": 5
 					}
 				}
@@ -729,12 +729,12 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250820.0.0",
-				"configHash": "004f9ddc59",
+				"configHash": "9fa2967e27",
 				"result": {
 					"data": {
-						"minifiedBytes": 73502,
-						"minzippedBytes": 25022,
-						"time": 1531.4422749999999,
+						"minifiedBytes": 73491,
+						"minzippedBytes": 25028,
+						"time": 4657.707683,
 						"runs": 5
 					}
 				}
@@ -781,25 +781,25 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 74607,
 						"minzippedBytes": 25862,
-						"time": 332.6733872,
+						"time": 309.8299134,
 						"runs": 5
 					}
 				}
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.88.0",
+				"version": "0.91.0",
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
 						"minifiedBytes": 71177,
 						"minzippedBytes": 25976,
-						"time": 13.939313000000002,
+						"time": 14.642012600000001,
 						"runs": 5
 					}
 				}
@@ -819,13 +819,13 @@
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.25.9",
+				"version": "0.25.10",
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedBytes": 72497,
 						"minzippedBytes": 26204,
-						"time": 33.5148896,
+						"time": 35.625322999999995,
 						"runs": 5
 					}
 				}
@@ -893,12 +893,12 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 263558,
 						"minzippedBytes": 87016,
-						"time": 3926.9689769999995,
+						"time": 4050.1211901999995,
 						"runs": 5
 					}
 				}
@@ -931,13 +931,13 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.88.0",
+				"version": "0.91.0",
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
 						"minifiedBytes": 270779,
 						"minzippedBytes": 88098,
-						"time": 41.8207784,
+						"time": 45.959995,
 						"runs": 5
 					}
 				}
@@ -945,12 +945,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 275347,
 						"minzippedBytes": 88319,
-						"time": 710.7314338,
+						"time": 691.9820306,
 						"runs": 5
 					}
 				}
@@ -983,13 +983,13 @@
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.25.9",
+				"version": "0.25.10",
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedBytes": 270207,
 						"minzippedBytes": 90809,
-						"time": 68.2451408,
+						"time": 63.8961374,
 						"runs": 5
 					}
 				}
@@ -1010,12 +1010,12 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250820.0.0",
-				"configHash": "004f9ddc59",
+				"configHash": "9fa2967e27",
 				"result": {
 					"data": {
-						"minifiedBytes": 270317,
-						"minzippedBytes": 94166,
-						"time": 2239.5654332,
+						"minifiedBytes": 270315,
+						"minzippedBytes": 94152,
+						"time": 6428.413455199999,
 						"runs": 5
 					}
 				}
@@ -1067,13 +1067,13 @@
 		"minified": {
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.88.0",
+				"version": "0.91.0",
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
 						"minifiedBytes": 439559,
 						"minzippedBytes": 122097,
-						"time": 41.4487466,
+						"time": 42.045041999999995,
 						"runs": 5
 					}
 				}
@@ -1094,12 +1094,12 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 451192,
 						"minzippedBytes": 123334,
-						"time": 3786.5722984,
+						"time": 3750.5350836,
 						"runs": 5
 					}
 				}
@@ -1133,12 +1133,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 472162,
 						"minzippedBytes": 124609,
-						"time": 778.440208,
+						"time": 784.0340295999999,
 						"runs": 5
 					}
 				}
@@ -1159,25 +1159,25 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250820.0.0",
-				"configHash": "004f9ddc59",
+				"configHash": "9fa2967e27",
 				"result": {
 					"data": {
-						"minifiedBytes": 439974,
-						"minzippedBytes": 126454,
-						"time": 2140.9360084,
+						"minifiedBytes": 439919,
+						"minzippedBytes": 126440,
+						"time": 6111.731279800001,
 						"runs": 5
 					}
 				}
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.25.9",
+				"version": "0.25.10",
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedBytes": 458925,
 						"minzippedBytes": 126711,
-						"time": 61.586201599999995,
+						"time": 66.07645959999999,
 						"runs": 5
 					}
 				}
@@ -1257,12 +1257,12 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 641593,
 						"minzippedBytes": 159071,
-						"time": 5046.1294526,
+						"time": 5218.5571908,
 						"runs": 5
 					}
 				}
@@ -1282,13 +1282,13 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.88.0",
+				"version": "0.91.0",
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
 						"minifiedBytes": 645628,
 						"minzippedBytes": 160061,
-						"time": 61.889936,
+						"time": 62.53696480000001,
 						"runs": 5
 					}
 				}
@@ -1296,12 +1296,12 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250820.0.0",
-				"configHash": "004f9ddc59",
+				"configHash": "9fa2967e27",
 				"result": {
 					"data": {
-						"minifiedBytes": 644520,
-						"minzippedBytes": 162771,
-						"time": 3252.6717416,
+						"minifiedBytes": 644510,
+						"minzippedBytes": 162807,
+						"time": 7833.5433162,
 						"runs": 5
 					}
 				}
@@ -1309,12 +1309,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 674490,
 						"minzippedBytes": 163036,
-						"time": 993.953499,
+						"time": 994.211333,
 						"runs": 5
 					}
 				}
@@ -1334,13 +1334,13 @@
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.25.9",
+				"version": "0.25.10",
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedBytes": 646934,
 						"minzippedBytes": 163747,
-						"time": 88.20525,
+						"time": 90.4274364,
 						"runs": 5
 					}
 				}
@@ -1418,12 +1418,12 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 694781,
 						"minzippedBytes": 157435,
-						"time": 6578.685240199999,
+						"time": 6710.5829964,
 						"runs": 5
 					}
 				}
@@ -1456,13 +1456,13 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.88.0",
+				"version": "0.91.0",
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
-						"minifiedBytes": 713534,
-						"minzippedBytes": 161458,
-						"time": 88.9322678,
+						"minifiedBytes": 708373,
+						"minzippedBytes": 161214,
+						"time": 88.337885,
 						"runs": 5
 					}
 				}
@@ -1496,38 +1496,25 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 756530,
 						"minzippedBytes": 167579,
-						"time": 1314.1042733999998,
-						"runs": 5
-					}
-				}
-			},
-			"google-closure-compiler": {
-				"minifierPath": "google-closure-compiler.ts",
-				"version": "20250820.0.0",
-				"configHash": "004f9ddc59",
-				"result": {
-					"data": {
-						"minifiedBytes": 705934,
-						"minzippedBytes": 175469,
-						"time": 3799.0975919999996,
+						"time": 1259.4916977999999,
 						"runs": 5
 					}
 				}
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.25.9",
+				"version": "0.25.10",
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedBytes": 725650,
 						"minzippedBytes": 181233,
-						"time": 122.381871,
+						"time": 130.545744,
 						"runs": 5
 					}
 				}
@@ -1555,6 +1542,16 @@
 						"minzippedBytes": 221118,
 						"time": 34.2264782,
 						"runs": 5
+					}
+				}
+			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20250820.0.0",
+				"configHash": "9fa2967e27",
+				"result": {
+					"error": {
+						"message": "timeout"
 					}
 				}
 			},
@@ -1618,26 +1615,13 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.88.0",
+				"version": "0.91.0",
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
-						"minifiedBytes": 1003780,
-						"minzippedBytes": 323618,
-						"time": 202.1748434,
-						"runs": 5
-					}
-				}
-			},
-			"google-closure-compiler": {
-				"minifierPath": "google-closure-compiler.ts",
-				"version": "20250820.0.0",
-				"configHash": "004f9ddc59",
-				"result": {
-					"data": {
-						"minifiedBytes": 991092,
-						"minzippedBytes": 328037,
-						"time": 5145.6046416,
+						"minifiedBytes": 1003767,
+						"minzippedBytes": 323611,
+						"time": 225.54486659999998,
 						"runs": 5
 					}
 				}
@@ -1658,25 +1642,25 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 1068386,
 						"minzippedBytes": 331412,
-						"time": 1756.3432927999997,
+						"time": 1723.3018808000002,
 						"runs": 5
 					}
 				}
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.25.9",
+				"version": "0.25.10",
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedBytes": 1011956,
 						"minzippedBytes": 331621,
-						"time": 188.35948,
+						"time": 198.767524,
 						"runs": 5
 					}
 				}
@@ -1720,6 +1704,16 @@
 					}
 				}
 			},
+			"google-closure-compiler": {
+				"minifierPath": "google-closure-compiler.ts",
+				"version": "20250820.0.0",
+				"configHash": "9fa2967e27",
+				"result": {
+					"error": {
+						"message": "timeout"
+					}
+				}
+			},
 			"babel-minify": {
 				"minifierPath": "babel-minify.ts",
 				"version": "0.5.2",
@@ -1733,7 +1727,7 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -1773,19 +1767,6 @@
 					}
 				}
 			},
-			"oxc-minify": {
-				"minifierPath": "oxc-minify.ts",
-				"version": "0.88.0",
-				"configHash": "adfabf738f",
-				"result": {
-					"data": {
-						"minifiedBytes": 2220454,
-						"minzippedBytes": 456926,
-						"time": 274.1216618,
-						"runs": 5
-					}
-				}
-			},
 			"terser": {
 				"minifierPath": "terser.ts",
 				"version": "5.44.0",
@@ -1821,32 +1802,6 @@
 						"minifiedBytes": 2420814,
 						"minzippedBytes": 474973,
 						"time": 3066.1328332,
-						"runs": 5
-					}
-				}
-			},
-			"uglify-js (no compress)": {
-				"minifierPath": "uglify-js.ts",
-				"version": "3.19.3",
-				"configHash": "4beb4311b5",
-				"result": {
-					"data": {
-						"minifiedBytes": 2420587,
-						"minzippedBytes": 478572,
-						"time": 2524.760631,
-						"runs": 5
-					}
-				}
-			},
-			"esbuild": {
-				"minifierPath": "esbuild.ts",
-				"version": "0.25.9",
-				"configHash": "f235d34b26",
-				"result": {
-					"data": {
-						"minifiedBytes": 2311632,
-						"minzippedBytes": 488421,
-						"time": 300.129338,
 						"runs": 5
 					}
 				}
@@ -1900,23 +1855,63 @@
 					}
 				}
 			},
+			"uglify-js (no compress)": {
+				"minifierPath": "uglify-js.ts",
+				"version": "3.19.3",
+				"configHash": "5e9c7ce683",
+				"result": {
+					"error": {
+						"message": "false == true",
+						"stack": "AssertionError [ERR_ASSERTION]: false == true\n    at Object.run (/packages/artifacts/artifacts/antd/test.ts:23:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:115:15)\n    at async <anonymous> (/packages/bench/benchmark/cli.ts:90:2)",
+						"stage": "pre-validation"
+					}
+				}
+			},
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"error": {
-						"message": "timeout"
+						"message": "false == true",
+						"stack": "AssertionError [ERR_ASSERTION]: false == true\n    at Object.run (/packages/artifacts/artifacts/antd/test.ts:23:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:115:15)\n    at async <anonymous> (/packages/bench/benchmark/cli.ts:90:2)",
+						"stage": "pre-validation"
+					}
+				}
+			},
+			"oxc-minify": {
+				"minifierPath": "oxc-minify.ts",
+				"version": "0.91.0",
+				"configHash": "adfabf738f",
+				"result": {
+					"error": {
+						"message": "false == true",
+						"stack": "AssertionError [ERR_ASSERTION]: false == true\n    at Object.run (/packages/artifacts/artifacts/antd/test.ts:23:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:115:15)\n    at async <anonymous> (/packages/bench/benchmark/cli.ts:90:2)",
+						"stage": "pre-validation"
 					}
 				}
 			},
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250820.0.0",
-				"configHash": "004f9ddc59",
+				"configHash": "9fa2967e27",
 				"result": {
 					"error": {
-						"message": "timeout"
+						"message": "false == true",
+						"stack": "AssertionError [ERR_ASSERTION]: false == true\n    at Object.run (/packages/artifacts/artifacts/antd/test.ts:23:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:115:15)\n    at async <anonymous> (/packages/bench/benchmark/cli.ts:90:2)",
+						"stage": "pre-validation"
+					}
+				}
+			},
+			"esbuild": {
+				"minifierPath": "esbuild.ts",
+				"version": "0.25.10",
+				"configHash": "f235d34b26",
+				"result": {
+					"error": {
+						"message": "false == true",
+						"stack": "AssertionError [ERR_ASSERTION]: false == true\n    at Object.run (/packages/artifacts/artifacts/antd/test.ts:23:10)\n    at Artifact.validate (/packages/artifacts/utils/artifact.ts:115:15)\n    at async <anonymous> (/packages/bench/benchmark/cli.ts:90:2)",
+						"stage": "pre-validation"
 					}
 				}
 			}
@@ -1930,13 +1925,13 @@
 		"minified": {
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.88.0",
+				"version": "0.91.0",
 				"configHash": "adfabf738f",
 				"result": {
 					"data": {
-						"minifiedBytes": 3336593,
-						"minzippedBytes": 855075,
-						"time": 596.7733368,
+						"minifiedBytes": 3336580,
+						"minzippedBytes": 855065,
+						"time": 923.3228002,
 						"runs": 5
 					}
 				}
@@ -1970,12 +1965,12 @@
 			"uglify-js (no compress)": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"data": {
 						"minifiedBytes": 3538024,
 						"minzippedBytes": 876535,
-						"time": 4029.2976471999996,
+						"time": 4243.4601166,
 						"runs": 5
 					}
 				}
@@ -1995,13 +1990,13 @@
 			},
 			"esbuild": {
 				"minifierPath": "esbuild.ts",
-				"version": "0.25.9",
+				"version": "0.25.10",
 				"configHash": "f235d34b26",
 				"result": {
 					"data": {
 						"minifiedBytes": 3489829,
 						"minzippedBytes": 915590,
-						"time": 490.5950317999999,
+						"time": 489.47322440000005,
 						"runs": 5
 					}
 				}
@@ -2055,7 +2050,7 @@
 			"uglify-js": {
 				"minifierPath": "uglify-js.ts",
 				"version": "3.19.3",
-				"configHash": "4beb4311b5",
+				"configHash": "5e9c7ce683",
 				"result": {
 					"error": {
 						"message": "timeout"
@@ -2075,7 +2070,7 @@
 			"google-closure-compiler": {
 				"minifierPath": "google-closure-compiler.ts",
 				"version": "20250820.0.0",
-				"configHash": "004f9ddc59",
+				"configHash": "9fa2967e27",
 				"result": {
 					"error": {
 						"message": "timeout"
