@@ -62,7 +62,9 @@ export class Artifact {
 
 	async loadCode() {
 		// For minifiers like Google Closure that read from path
-		const strippedFilePath = `${this.fullFilePath}.no-comments`;
+		const extension = path.extname(this.fullFilePath); // e.g. ".js"
+		const base = this.fullFilePath.slice(0, -extension.length);
+		const strippedFilePath = `${base}.no-comments${extension}`;
 
 		let code;
 		try {
