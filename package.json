@@ -29,6 +29,9 @@
 			"ignoreMissing": [
 				"dayjs"
 			]
-		}
+		},
+		"onlyBuiltDependencies": [
+			"bun"
+		]
 	}
 }
