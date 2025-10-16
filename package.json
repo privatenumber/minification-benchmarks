@@ -11,7 +11,7 @@
 		"bench": "tsx packages/bench/benchmark/cli.ts",
 		"bench-all": "tsx packages/bench/benchmark-all/cli.ts",
 		"update-readme": "tsx packages/data/update-readme/index.ts",
-		"lint": "lintroll --cache . --ignore-pattern data/data/data.json",
+		"lint": "lintroll --cache . --ignore-pattern ./packages/data/data/data.json",
 		"type-check": "tsc --noEmit"
 	},
 	"devDependencies": {

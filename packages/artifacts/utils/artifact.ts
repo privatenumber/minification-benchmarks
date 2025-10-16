@@ -121,7 +121,7 @@ export class Artifact {
 	}
 }
 
-export interface ArtifactLoaded extends Artifact {
+export type ArtifactLoaded = {
 	name: string;
 
 	code: string;
@@ -131,7 +131,7 @@ export interface ArtifactLoaded extends Artifact {
 	gzipSize: number;
 
 	packageJson: NormalizedPackageJson;
-}
+} & Artifact;
 
 export const defineArtifact = (
 	artifactMeta: ArtifactMeta,

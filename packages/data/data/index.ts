@@ -22,7 +22,7 @@ export const saveData = async (
 		}
 	}
 
-	await fs.writeFile(dataPath, JSON.stringify(sortedData, null, '\t'));
+	await fs.writeFile(dataPath, `${JSON.stringify(sortedData, null, '\t')}\n`);
 };
 
 const getArtifact = (

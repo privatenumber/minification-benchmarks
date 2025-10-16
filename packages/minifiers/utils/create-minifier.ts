@@ -68,9 +68,9 @@ export class Minifier {
 	}
 }
 
-export interface MinifierLoaded extends Minifier {
+export type MinifierLoaded = {
 	meta: MetaData;
-}
+} & Minifier;
 
 export const createMinifier = (
 	minifierName: string,

@@ -1,5 +1,5 @@
 declare module 'google-closure-compiler' {
-	export interface CompilerOptions {
+	export type CompilerOptions = {
 		js?: string | string[];
 		externs?: string | string[];
 
@@ -48,7 +48,7 @@ declare module 'google-closure-compiler' {
 		js_output_file?: string; // if you want CC to write a file
 		create_source_map?: string; // path or %outname%.map
 		source_map_location_mapping?: string[]; // ['src|.', ...]
-	}
+	};
 
 	class Compiler {
 		constructor(options?: CompilerOptions);
