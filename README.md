@@ -12,9 +12,9 @@ This project benchmarks the following minifiers:
 <!-- minifiers:start -->
 | Minifier                                                                                                    | Version                                                                              | Release date ↓ |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | -------------- |
+| [oxc-minify](https://github.com/oxc-project/oxc)                                                            | [0.95.0](https://www.npmjs.com/package/oxc-minify/v/0.95.0)                          | 2025-10-15     |
 | [esbuild](https://github.com/evanw/esbuild)                                                                 | [0.25.11](https://www.npmjs.com/package/esbuild/v/0.25.11)                           | 2025-10-15     |
 | [bun](https://github.com/oven-sh/bun)                                                                       | [1.3.0](https://www.npmjs.com/package/bun/v/1.3.0)                                   | 2025-10-10     |
-| [oxc-minify](https://github.com/oxc-project/oxc)                                                            | [0.94.0](https://www.npmjs.com/package/oxc-minify/v/0.94.0)                          | 2025-10-06     |
 | [@swc/core](https://github.com/swc-project/swc)                                                             | [1.13.20](https://www.npmjs.com/package/@swc/core/v/1.13.20)                         | 2025-09-27     |
 | [@tdewolff/minify](https://github.com/tdewolff/minify#readme)                                               | [2.24.3](https://www.npmjs.com/package/@tdewolff/minify/v/2.24.3)                    | 2025-09-06     |
 | [terser](https://github.com/terser/terser)                                                                  | [5.44.0](https://www.npmjs.com/package/terser/v/5.44.0)                              | 2025-09-02     |
@@ -25,7 +25,7 @@ This project benchmarks the following minifiers:
 | [tedivm/jshrink](https://github.com/tedious/JShrink)                                                        | 1.8.0                                                                                |                |
 <!-- minifiers:end -->
 
-_Benchmarks last updated on <!-- lastUpdated:start -->Oct 15, 2025<!-- lastUpdated:end -->._
+_Benchmarks last updated on <!-- lastUpdated:start -->Oct 16, 2025<!-- lastUpdated:end -->._
 
 <br>
 
@@ -151,7 +151,7 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | [jquery v3.5.1](https://www.npmjs.com/package/jquery/v/3.5.1) ([Source](https://unpkg.com/jquery@3.5.1/dist/jquery.js)) |                      `287.63 KB` |                       `84.50 KB` |                              |
 | **Minifier**                                                                                                            |                **Minified size** |               **Minzipped size** |                     **Time** |
 | 1. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                     |       <sup>-69% </sup>`89.17 KB` |       <sup>-63% </sup>`30.86 KB` |      <sup>*5x* </sup>`50 ms` |
-| 2. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                             |       <sup>-69% </sup>`89.26 KB` |       <sup>-63% </sup>`30.93 KB` |      <sup>*1x* </sup>`16 ms` |
+| 2. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                             |       <sup>-69% </sup>`89.26 KB` |       <sup>-63% </sup>`30.93 KB` |      <sup>*1x* </sup>`15 ms` |
 | 3. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts)                                                  |       <sup>-69% </sup>`89.68 KB` |       <sup>-63% </sup>`31.45 KB` |     **<sup>🏆 </sup>`9 ms`** |
 | 4. [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts)                                                 |       <sup>-67% </sup>`94.08 KB` |       <sup>-63% </sup>`31.47 KB` |    <sup>*31x* </sup>`273 ms` |
 | 5. [esbuild](packages/minifiers/minifiers/esbuild.ts)                                                                   |       <sup>-69% </sup>`90.07 KB` |       <sup>-62% </sup>`31.96 KB` |      <sup>*3x* </sup>`30 ms` |
@@ -235,7 +235,7 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | [d3 v6.3.1](https://www.npmjs.com/package/d3/v/6.3.1) ([Source](https://unpkg.com/d3@6.3.1/dist/d3.js))                    |                       `555.77 KB` |                      `130.69 KB` |                              |
 | **Minifier**                                                                                                               |                 **Minified size** |               **Minzipped size** |                     **Time** |
 | 1. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                        |       <sup>-52% </sup>`265.22 KB` |       <sup>-33% </sup>`87.22 KB` |     <sup>*6x* </sup>`133 ms` |
-| 2. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                                |       <sup>-52% </sup>`267.39 KB` |       <sup>-33% </sup>`87.96 KB` |      <sup>*2x* </sup>`52 ms` |
+| 2. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                                |       <sup>-52% </sup>`267.39 KB` |       <sup>-33% </sup>`87.96 KB` |      <sup>*2x* </sup>`51 ms` |
 | 3. [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts)                                                    |       <sup>-50% </sup>`275.35 KB` |       <sup>-32% </sup>`88.32 KB` |    <sup>*32x* </sup>`686 ms` |
 | 4. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts)                                                     |       <sup>-52% </sup>`269.41 KB` |       <sup>-31% </sup>`89.88 KB` |      <sup>*1x* </sup>`32 ms` |
 | 5. [terser (no compress)](packages/minifiers/minifiers/terser.ts)                                                          |       <sup>-50% </sup>`276.13 KB` |       <sup>-32% </sup>`89.07 KB` |    <sup>*44x* </sup>`945 ms` |
@@ -262,7 +262,7 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | :----------------------------------------------------------------------------------------------------------------------------- | --------------------------------: | --------------------------------: | ---------------------------: |
 | [terser v5.30.3](https://www.npmjs.com/package/terser/v/5.30.3) ([Source](https://unpkg.com/terser@5.30.3/dist/bundle.min.js)) |                         `1.01 MB` |                       `193.76 KB` |                              |
 | **Minifier**                                                                                                                   |                 **Minified size** |                **Minzipped size** |                     **Time** |
-| 1. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                                    | **<sup>🏆-56% </sup>`439.40 KB`** | **<sup>🏆-37% </sup>`122.02 KB`** |      <sup>*1x* </sup>`45 ms` |
+| 1. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                                    | **<sup>🏆-56% </sup>`439.40 KB`** | **<sup>🏆-37% </sup>`122.02 KB`** |      <sup>*2x* </sup>`48 ms` |
 | 2. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                            |       <sup>-55% </sup>`455.48 KB` |       <sup>-36% </sup>`123.29 KB` |     <sup>*5x* </sup>`120 ms` |
 | 3. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts)                                                         |       <sup>-55% </sup>`456.60 KB` |       <sup>-36% </sup>`124.88 KB` |      <sup>*1x* </sup>`30 ms` |
 | 4. [terser (no compress)](packages/minifiers/minifiers/terser.ts)                                                              |       <sup>-53% </sup>`472.58 KB` |       <sup>-36% </sup>`124.25 KB` |    <sup>*38x* </sup>`887 ms` |
@@ -319,7 +319,7 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | [victory v35.8.4](https://www.npmjs.com/package/victory/v/35.8.4) ([Source](https://unpkg.com/victory@35.8.4/dist/victory.js))        |                         `2.13 MB` |                       `309.94 KB` |                                   |
 | **Minifier**                                                                                                                          |                 **Minified size** |                **Minzipped size** |                          **Time** |
 | 1. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                                   |       <sup>-67% </sup>`705.98 KB` |       <sup>-49% </sup>`157.75 KB` |          <sup>*5x* </sup>`260 ms` |
-| 2. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                                           |       <sup>-67% </sup>`711.15 KB` |       <sup>-48% </sup>`160.89 KB` |          <sup>*2x* </sup>`111 ms` |
+| 2. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                                           |       <sup>-67% </sup>`711.15 KB` |       <sup>-48% </sup>`160.89 KB` |          <sup>*2x* </sup>`113 ms` |
 | 3. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts)                                                                |       <sup>-66% </sup>`717.11 KB` |       <sup>-47% </sup>`165.02 KB` |           <sup>*1x* </sup>`56 ms` |
 | 4. [terser (no compress)](packages/minifiers/minifiers/terser.ts)                                                                     |       <sup>-65% </sup>`756.62 KB` |       <sup>-46% </sup>`166.18 KB` |       <sup>*31x* </sup>`1,487 ms` |
 | 5. [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts)                                                               |       <sup>-65% </sup>`756.53 KB` |       <sup>-46% </sup>`167.58 KB` |       <sup>*25x* </sup>`1,245 ms` |
@@ -374,7 +374,7 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | :------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------: | --------------------------------: | --------------------------------: |
 | [antd v4.16.1](https://www.npmjs.com/package/antd/v/4.16.1) ([Source](https://unpkg.com/antd@4.16.1/dist/antd.js))                    |                       `6.67 MB` |                       `825.18 KB` |                                   |
 | **Minifier**                                                                                                                          |               **Minified size** |                **Minzipped size** |                          **Time** |
-| 1. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                                           |       <sup>-67% </sup>`2.22 MB` |       <sup>-45% </sup>`456.09 KB` |          <sup>*4x* </sup>`312 ms` |
+| 1. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                                           |       <sup>-67% </sup>`2.22 MB` |       <sup>-45% </sup>`456.09 KB` |          <sup>*4x* </sup>`310 ms` |
 | 2. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                                   | **<sup>🏆-68% </sup>`2.15 MB`** | **<sup>🏆-45% </sup>`452.40 KB`** |          <sup>*9x* </sup>`665 ms` |
 | 3. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts)                                                                |       <sup>-66% </sup>`2.29 MB` |       <sup>-43% </sup>`471.80 KB` |          <sup>*1x* </sup>`137 ms` |
 | 4. [esbuild](packages/minifiers/minifiers/esbuild.ts)                                                                                 |       <sup>-65% </sup>`2.31 MB` |       <sup>-41% </sup>`488.42 KB` |          <sup>*4x* </sup>`301 ms` |
@@ -402,7 +402,7 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | :------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------: | --------------------------------: | --------------------------------: |
 | [typescript v4.9.5](https://www.npmjs.com/package/typescript/v/4.9.5) ([Source](https://unpkg.com/typescript@4.9.5/lib/typescript.js)) |                      `10.95 MB` |                         `1.88 MB` |                                   |
 | **Minifier**                                                                                                                           |               **Minified size** |                **Minzipped size** |                          **Time** |
-| 1. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                                            |       <sup>-70% </sup>`3.33 MB` | **<sup>🏆-55% </sup>`853.15 KB`** |          <sup>*5x* </sup>`643 ms` |
+| 1. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts)                                                                            |       <sup>-70% </sup>`3.33 MB` | **<sup>🏆-55% </sup>`853.15 KB`** |          <sup>*5x* </sup>`639 ms` |
 | 2. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts)                                                                 |       <sup>-69% </sup>`3.35 MB` |       <sup>-54% </sup>`875.82 KB` |          <sup>*2x* </sup>`255 ms` |
 | 3. [@swc/core](packages/minifiers/minifiers/swc.ts)                                                                                    | **<sup>🏆-70% </sup>`3.31 MB`** |       <sup>-54% </sup>`859.05 KB` |       <sup>*13x* </sup>`1,487 ms` |
 | 4. [esbuild](packages/minifiers/minifiers/esbuild.ts)                                                                                  |       <sup>-68% </sup>`3.49 MB` |       <sup>-51% </sup>`915.59 KB` |          <sup>*4x* </sup>`495 ms` |
@@ -424,25 +424,26 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 > 🤖 This analysis is AI generated. See below for the system prompt.
 
 <!-- aiAnalysis:start -->
-Three... two... one... compress! Welcome to the Minification Grand Prix, where bytes tumble, clocks tick, and every millisecond smells like victory or regret. This field was equal parts sprint and endurance: tiny libraries got chewed up in a blink, and megabyte beasts separated the pragmatic from the obsessive. Buckle up — here’s how the podium shook out.
+Three... two... one... compress! Welcome to the Minification Grand Prix, where every byte is a target and every millisecond is a brag. The field served up predictable powerhouses, a few surprise sprinters, and one long-distance specialist who refused to be rushed. The scoreboard was spicy, and the trade-offs were glorious.
 
 ### Best minifier
-@swc/core takes the crown. It was the most reliably ruthless at shaving bytes across the heavyweights, and it did so without crawling. SWC claimed best gzip for several of the largest test artifacts (three, echarts, antd) and posted consistently competitive times — the classic sweet spot: near-best sizes with reasonable speed. When the race was about moving megabytes across the wire, SWC was the one you’d bet on: it minimizes transfer cost while keeping pipeline latency modest. That consistency on the big targets is what tips the scales in its favor.
+@swc/core takes the crown. It didn’t always have the single smallest gzip on every test, but it was annoyingly consistent: near-best compression across small and huge bundles, and orders of magnitude faster than the old size kings when the gap was a sliver. When uglify-js shaved the last few bytes but took seconds instead of hundreds of milliseconds, swc matched those sizes within a hair while staying fast enough to live comfortably in CI and local dev workflows. On the big artifacts (three, echarts, antd) swc repeatedly balanced size and speed better than anyone else. That balance wins in the real world, so swc walks away with the trophy.
 
 ### Honorable mentions
-- uglify-js: The veteran slugger. It won the most rounds and achieved some of the smallest gzips on small-to-mid packages (react, moment, lodash, d3, victory). The trade-off is speed — it often took noticeably longer on large bundles. If absolute smallest bytes on libraries that fit your build window matter, uglify-js is a specialist worth moonlighting for.
-- oxc-minify: The tenacious all-rounder. Fast and very competitive on large artifacts, and it produced the single best result for the monster-sized TypeScript bundle. Oxc is a great pick when you want low transfer size and you care about faster turnaround than the slowest compressors.
-- @cminify/cminify-linux-x64 and @tdewolff/minify: The speed demons. Both repeatedly posted the fastest times, often by orders of magnitude, but at the cost of larger gzipped outputs. Perfect for ultra-fast CI checks or dev-time workflows where latency matters more than shaving the last percent of bytes.
-- terser: A standout in a focused clash. It delivered the best gzip on jquery and otherwise showed solid, predictable behavior. A practical choice if you already use it and like its trade-offs.
+- uglify-js — The size champion for many rounds. If your single absolute goal is the smallest possible transfer and you don’t mind waiting, uglify often finds the last tidy bytes. It’s slow, though, sometimes painfully so on big bundles.  
+- oxc-minify — The big-file bruiser. Took the crown on the massive TypeScript dump and showed excellent balance on large artifacts. Fast enough and very size-effective when megabytes are on the line.  
+- @cminify/cminify-linux-x64 — Blindingly fast and consistent. It trades some compression for speed, which makes it an excellent fit when build-time is sacred and a modest size penalty is acceptable.  
+- @tdewolff/minify — A rocket off the blocks. Extremely fast with surprisingly competitive sizes on smaller bundles. Great for instant feedback loops.  
+- terser — A solid performer that scored the best gzip on jquery. Reliable for traditional minification scenarios.
+
+A few familiar names didn’t headline these results. Some heavyweight tools didn’t top any rounds in this particular gzip-size vs speed sweep. That doesn’t mean they’re bad—just that they didn’t win this race on the measured metrics.
 
 ### Eliminated
-- babel-minify — Crashed on "d3": "Cannot read properties of undefined (reading 'add')". Removed for failing the minification stage.
-- tedivm/jshrink — Crashed on "d3": "Unclosed regex pattern..." in Minifier.php. Removed for failing the minification stage.
+- babel-minify — Crashed on d3: "Cannot read properties of undefined (reading 'add')".  
+- tedivm/jshrink — Crashed on d3: "Unclosed regex pattern ..." runtime exception.
 
 ### Closing remarks
-This was a race decided by bytes and clocks only. Real-world choices also hinge on developer experience, ecosystem, compatibility, and correctness — factors not measured here. If your priority is raw transfer savings on sizable bundles, @swc/core is the pragmatic champion. If you want the absolute smallest artifacts for smaller libs and can tolerate slower runs, uglify-js still earns respect. If you need blistering speed in CI or editor tooling, reach for cminify or tdewolff. And if you want a tidy middle ground that scales to megabytes, oxc-minify is dangerously compelling.
-
-Pick the tool that matches whether you worship bandwidth, latency, or developer time. The crowd goes wild either way.
+This race measured only two things: gzipped size and minification speed. Real-world choices also include correctness, compatibility, developer experience, and ecosystem. If you want the smallest bytes and can budget the time, uglify-js still finds the razor edge. If you want the best practical trade-off—tiny outputs, huge speedups, and something that plays nicely in CI—@swc/core is the smart pick. For blistering build-time performance with an acceptable size trade-off, @cminify and @tdewolff/minify are thrilling options. Try the tools on your own bundles and pick the one whose trade-offs match your workflow. The bytes have been counted; the next move is yours.
 <!-- aiAnalysis:end -->
 
 <details>
@@ -450,7 +451,7 @@ Pick the tool that matches whether you worship bandwidth, latency, or developer 
 <br>
 
 <pre><code><!-- aiSystemPrompt:start -->
-Today&#39;s date is 2025-10-15
+Today&#39;s date is 2025-10-16
 
 You are a JavaScript minification benchmark analyst with a flair for storytelling.
 
@@ -502,7 +503,7 @@ Three... two... one... compress! Welcome to the Minification Grand Prix, where b
 - esbuild v0.25.11 released 2025-10-15
 - google-closure-compiler v20250820.0.0 released 2025-08-22
 - tedivm/jshrink v1.8.0
-- oxc-minify v0.94.0 released 2025-10-06
+- oxc-minify v0.95.0 released 2025-10-15
 - @swc/core v1.13.20 released 2025-09-27
 - @tdewolff/minify v2.24.3 released 2025-09-06
 - terser v5.44.0 released 2025-09-02
@@ -525,7 +526,7 @@ Three... two... one... compress! Welcome to the Minification Grand Prix, where b
 - Best gzip compression: terser: 30.86 KB (63% shaved) in 819 ms
 - Fastest: @tdewolff/minify: 31.45 KB (63% shaved) in 9 ms
 - Most balanced: @swc/core: 30.86 KB (63% shaved) in 50 ms
-- Honorable mention: oxc-minify: 30.93 KB (63% shaved) in 16 ms
+- Honorable mention: oxc-minify: 30.93 KB (63% shaved) in 15 ms
 
 ## Round 4: npm package &quot;vue&quot; (89.67 KB gzipped)
 - Best gzip compression: @swc/core: 42.73 KB (52% shaved) in 64 ms
@@ -543,12 +544,12 @@ Three... two... one... compress! Welcome to the Minification Grand Prix, where b
 - Best gzip compression: uglify-js: 87.02 KB (33% shaved) in 3,964 ms
 - Fastest: @cminify/cminify-linux-x64: 103.81 KB (21% shaved) in 21 ms
 - Most balanced: @swc/core: 87.22 KB (33% shaved) in 133 ms
-- Honorable mention: oxc-minify: 87.96 KB (33% shaved) in 52 ms
+- Honorable mention: oxc-minify: 87.96 KB (33% shaved) in 51 ms
 
 ## Round 7: npm package &quot;terser&quot; (193.76 KB gzipped)
-- Best gzip compression: oxc-minify: 122.02 KB (37% shaved) in 45 ms
+- Best gzip compression: oxc-minify: 122.02 KB (37% shaved) in 48 ms
 - Fastest: @cminify/cminify-linux-x64: 144.30 KB (26% shaved) in 23 ms
-- Most balanced: oxc-minify: 122.02 KB (37% shaved) in 45 ms
+- Most balanced: oxc-minify: 122.02 KB (37% shaved) in 48 ms
 - Honorable mention: @swc/core: 123.29 KB (36% shaved) in 120 ms
 
 ## Round 8: npm package &quot;three&quot; (248.27 KB gzipped)
@@ -561,7 +562,7 @@ Three... two... one... compress! Welcome to the Minification Grand Prix, where b
 - Best gzip compression: uglify-js: 157.44 KB (49% shaved) in 6,600 ms
 - Fastest: @cminify/cminify-linux-x64: 221.12 KB (29% shaved) in 48 ms
 - Most balanced: @swc/core: 157.75 KB (49% shaved) in 260 ms
-- Honorable mention: oxc-minify: 160.89 KB (48% shaved) in 111 ms
+- Honorable mention: oxc-minify: 160.89 KB (48% shaved) in 113 ms
 
 ## Round 10: npm package &quot;echarts&quot; (684.61 KB gzipped)
 - Best gzip compression: @swc/core: 321.14 KB (53% shaved) in 532 ms
@@ -572,13 +573,13 @@ Three... two... one... compress! Welcome to the Minification Grand Prix, where b
 ## Round 11: npm package &quot;antd&quot; (825.18 KB gzipped)
 - Best gzip compression: @swc/core: 452.40 KB (45% shaved) in 665 ms
 - Fastest: @cminify/cminify-linux-x64: 623.37 KB (24% shaved) in 73 ms
-- Most balanced: oxc-minify: 456.09 KB (45% shaved) in 312 ms
+- Most balanced: oxc-minify: 456.09 KB (45% shaved) in 310 ms
 - Honorable mention: @tdewolff/minify: 471.80 KB (43% shaved) in 137 ms
 
 ## Round 12: npm package &quot;typescript&quot; (1.88 MB gzipped)
-- Best gzip compression: oxc-minify: 853.15 KB (55% shaved) in 643 ms
+- Best gzip compression: oxc-minify: 853.15 KB (55% shaved) in 639 ms
 - Fastest: @cminify/cminify-linux-x64: 1.13 MB (40% shaved) in 109 ms
-- Most balanced: oxc-minify: 853.15 KB (55% shaved) in 643 ms
+- Most balanced: oxc-minify: 853.15 KB (55% shaved) in 639 ms
 - Honorable mention: @tdewolff/minify: 875.82 KB (54% shaved) in 255 ms
 
 # Eliminated
