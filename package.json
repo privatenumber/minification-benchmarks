@@ -20,7 +20,7 @@
 		"@minification-benchmarks/utils": "workspace:*",
 		"@total-typescript/ts-reset": "^0.5.1",
 		"@types/node": "^20.14.2",
-		"lintroll": "^1.6.1",
+		"lintroll": "^1.23.1",
 		"tsx": "^4.12.1",
 		"typescript": "^5.4.5"
 	},
