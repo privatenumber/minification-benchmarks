@@ -82,10 +82,6 @@ const loadMinifiers = async (
 };
 
 (async () => {
-	process.stdin.on('data', () => {
-		process.exit();
-	});
-
 	const {
 		artifact: filterArtifacts,
 		minifier: filterMinifier,

@@ -1,4 +1,4 @@
-import { execaNode } from 'execa';
+import spawn, { type SubprocessError } from 'nano-spawn';
 import { parseJsonResult } from '@minification-benchmarks/utils/parse-json-result.js';
 import type {
 	BenchmarkResult,
@@ -14,15 +14,15 @@ const benchmark = async (
 	minifierInstance: string | undefined,
 	timeout = 1000 * 10,
 ): Promise<BenchmarkResult> => {
-	const minificationProcess = await execaNode(
-		benchmarkCliPath,
+	const minificationProcess = await spawn(
+		process.execPath,
 		[
+			...process.execArgv,
+			benchmarkCliPath,
 			'--artifact',
 			artifact,
-
 			'--minifier',
 			minifier,
-
 			// e.g. "no-compress"
 			...(
 				minifierInstance
@@ -35,23 +35,21 @@ const benchmark = async (
 		],
 		{
 			timeout,
-			reject: false,
 			env: {
 				NO_COLOR: '1',
 			},
 		},
-	);
+	).catch(error => error as SubprocessError);
 
-	// This actually includes time to pre and post validate the code
-	if (minificationProcess.timedOut) {
-		return {
-			error: {
-				message: 'timeout',
-			},
-		};
-	}
+	if ('signalName' in minificationProcess) {
+		if (minificationProcess.signalName === 'SIGTERM') {
+			return {
+				error: {
+					message: 'timeout',
+				},
+			};
+		}
 
-	if (minificationProcess.failed) {
 		return parseJsonResult(minificationProcess.stderr) as BenchmarkResult;
 	}
 
