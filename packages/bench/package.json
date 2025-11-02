@@ -12,7 +12,7 @@
 		"memfs": "^3.4.13",
 		"nano-spawn": "^2.0.0",
 		"outdent": "^0.8.0",
-		"tasuku": "^2.0.1"
+		"tasuku": "^2.0.2"
 	},
 	"devDependencies": {
 		"@types/byte-size": "^8.1.0"
