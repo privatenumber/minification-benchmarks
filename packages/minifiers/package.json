@@ -14,7 +14,7 @@
 		"find-up": "^7.0.0",
 		"google-closure-compiler": "^20250820.0.0",
 		"mem": "^9.0.2",
-		"oxc-minify": "^0.97.0",
+		"oxc-minify": "^0.98.0",
 		"terser": "^5.44.1",
 		"uglify-js": "^3.19.3"
 	},
