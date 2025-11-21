@@ -103,6 +103,4 @@ const loadMinifiers = async (
 	if (sort) {
 		await saveData(true);
 	}
-
-	process.exit();
 })();
