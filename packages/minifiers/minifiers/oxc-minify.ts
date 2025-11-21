@@ -5,7 +5,7 @@ export default createMinifier(
 	'oxc-minify',
 	{
 		default: async ({ filePath, code }) => {
-			// Using the sync version because the async version spawns a real thread, which is slow for js benchmarks.
+			// async version spawns a thread, which can be slower
 			const minified = minifySync(filePath, code);
 			return minified.code;
 		},
