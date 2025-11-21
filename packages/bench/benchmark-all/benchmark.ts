@@ -41,15 +41,15 @@ const benchmark = async (
 		},
 	).catch(error => error as SubprocessError);
 
-	if ('signalName' in minificationProcess) {
-		if (minificationProcess.signalName === 'SIGTERM') {
-			return {
-				error: {
-					message: 'timeout',
-				},
-			};
-		}
+	if ('signalName' in minificationProcess && minificationProcess.signalName === 'SIGTERM') {
+		return {
+			error: {
+				message: 'timeout',
+			},
+		};
+	}
 
+	if (minificationProcess.stderr) {
 		return parseJsonResult(minificationProcess.stderr) as BenchmarkResult;
 	}
 
