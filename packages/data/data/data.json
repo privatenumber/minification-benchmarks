@@ -20,13 +20,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.15.2",
+				"version": "1.15.3",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 22812,
 						"minzippedBytes": 8186,
-						"time": 12.089779400000001,
+						"time": 12.2471354,
 						"runs": 5
 					}
 				}
@@ -111,13 +111,13 @@
 			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
-				"version": "1.8.0",
+				"version": "1.8.1",
 				"configHash": "97050c77cb",
 				"result": {
 					"data": {
 						"minifiedBytes": 40821,
 						"minzippedBytes": 11040,
-						"time": 126.4314388,
+						"time": 123.98443460000001,
 						"runs": 5
 					}
 				}
@@ -197,13 +197,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.15.2",
+				"version": "1.15.3",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 58424,
 						"minzippedBytes": 18753,
-						"time": 29.5632614,
+						"time": 29.5392942,
 						"runs": 5
 					}
 				}
@@ -288,13 +288,13 @@
 			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
-				"version": "1.8.0",
+				"version": "1.8.1",
 				"configHash": "97050c77cb",
 				"result": {
 					"data": {
 						"minifiedBytes": 97632,
 						"minzippedBytes": 24998,
-						"time": 285.9429986,
+						"time": 283.3214992,
 						"runs": 5
 					}
 				}
@@ -374,13 +374,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.15.2",
+				"version": "1.15.3",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 89172,
 						"minzippedBytes": 30864,
-						"time": 51.487610399999994,
+						"time": 52.462622999999994,
 						"runs": 5
 					}
 				}
@@ -465,13 +465,13 @@
 			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
-				"version": "1.8.0",
+				"version": "1.8.1",
 				"configHash": "97050c77cb",
 				"result": {
 					"data": {
 						"minifiedBytes": 144144,
 						"minzippedBytes": 40879,
-						"time": 359.0721028,
+						"time": 356.38078659999996,
 						"runs": 5
 					}
 				}
@@ -551,13 +551,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.15.2",
+				"version": "1.15.3",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 115677,
 						"minzippedBytes": 42727,
-						"time": 68.22800480000001,
+						"time": 68.8094414,
 						"runs": 5
 					}
 				}
@@ -642,13 +642,13 @@
 			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
-				"version": "1.8.0",
+				"version": "1.8.1",
 				"configHash": "97050c77cb",
 				"result": {
 					"data": {
 						"minifiedBytes": 197357,
 						"minzippedBytes": 57169,
-						"time": 477.41573900000003,
+						"time": 469.7402848,
 						"runs": 5
 					}
 				}
@@ -728,13 +728,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.15.2",
+				"version": "1.15.3",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 69823,
 						"minzippedBytes": 25241,
-						"time": 52.743333799999995,
+						"time": 51.6303798,
 						"runs": 5
 					}
 				}
@@ -819,13 +819,13 @@
 			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
-				"version": "1.8.0",
+				"version": "1.8.1",
 				"configHash": "97050c77cb",
 				"result": {
 					"data": {
 						"minifiedBytes": 148780,
 						"minzippedBytes": 36327,
-						"time": 381.7223988,
+						"time": 364.833216,
 						"runs": 5
 					}
 				}
@@ -905,13 +905,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.15.2",
+				"version": "1.15.3",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 265221,
 						"minzippedBytes": 87218,
-						"time": 147.7856714,
+						"time": 142.9965068,
 						"runs": 5
 					}
 				}
@@ -995,7 +995,7 @@
 			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
-				"version": "1.8.0",
+				"version": "1.8.1",
 				"configHash": "97050c77cb",
 				"result": {
 					"error": {
@@ -1080,13 +1080,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.15.2",
+				"version": "1.15.3",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 455477,
 						"minzippedBytes": 123289,
-						"time": 126.8148164,
+						"time": 131.0078794,
 						"runs": 5
 					}
 				}
@@ -1170,13 +1170,13 @@
 			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
-				"version": "1.8.0",
+				"version": "1.8.1",
 				"configHash": "97050c77cb",
 				"result": {
 					"data": {
 						"minifiedBytes": 633710,
 						"minzippedBytes": 145178,
-						"time": 1353.0582296,
+						"time": 1331.4910898,
 						"runs": 5
 					}
 				}
@@ -1256,13 +1256,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.15.2",
+				"version": "1.15.3",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 642939,
 						"minzippedBytes": 158747,
-						"time": 193.90162600000002,
+						"time": 193.02888520000002,
 						"runs": 5
 					}
 				}
@@ -1344,13 +1344,13 @@
 			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
-				"version": "1.8.0",
+				"version": "1.8.1",
 				"configHash": "97050c77cb",
 				"result": {
 					"data": {
 						"minifiedBytes": 952007,
 						"minzippedBytes": 193471,
-						"time": 1736.2698544,
+						"time": 1699.5473326,
 						"runs": 5
 					}
 				}
@@ -1430,13 +1430,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.15.2",
+				"version": "1.15.3",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 705984,
 						"minzippedBytes": 157748,
-						"time": 295.4728002,
+						"time": 298.8380612,
 						"runs": 5
 					}
 				}
@@ -1517,7 +1517,7 @@
 			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
-				"version": "1.8.0",
+				"version": "1.8.1",
 				"configHash": "97050c77cb",
 				"result": {
 					"error": {
@@ -1602,13 +1602,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.15.2",
+				"version": "1.15.3",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 993899,
 						"minzippedBytes": 321142,
-						"time": 573.9135232000001,
+						"time": 584.8697666,
 						"runs": 5
 					}
 				}
@@ -1687,7 +1687,7 @@
 			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
-				"version": "1.8.0",
+				"version": "1.8.1",
 				"configHash": "97050c77cb",
 				"result": {
 					"error": {
@@ -1769,13 +1769,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.15.2",
+				"version": "1.15.3",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 2145813,
 						"minzippedBytes": 452402,
-						"time": 755.8016247999999,
+						"time": 665.3783076000001,
 						"runs": 5
 					}
 				}
@@ -1854,11 +1854,14 @@
 			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
-				"version": "1.8.0",
+				"version": "1.8.1",
 				"configHash": "97050c77cb",
 				"result": {
-					"error": {
-						"message": "timeout"
+					"data": {
+						"minifiedBytes": 4449283,
+						"minzippedBytes": 626675,
+						"time": 7206.493493600001,
+						"runs": 5
 					}
 				}
 			},
@@ -1934,13 +1937,13 @@
 			},
 			"@swc/core": {
 				"minifierPath": "swc.ts",
-				"version": "1.15.2",
+				"version": "1.15.3",
 				"configHash": "349d426e0a",
 				"result": {
 					"data": {
 						"minifiedBytes": 3307844,
 						"minzippedBytes": 859054,
-						"time": 1648.4200184000001,
+						"time": 1608.8681583999999,
 						"runs": 5
 					}
 				}
@@ -2019,7 +2022,7 @@
 			},
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
-				"version": "1.8.0",
+				"version": "1.8.1",
 				"configHash": "97050c77cb",
 				"result": {
 					"error": {
