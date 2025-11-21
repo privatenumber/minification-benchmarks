@@ -13,7 +13,7 @@ type ComposerPackage = {
 
 type ComposerInstalled = {
 	packages: ComposerPackage[];
-};
+} | ComposerPackage[];
 
 export const loadComposerInstalled = async (
 	packageName: string,
@@ -29,8 +29,12 @@ export const loadComposerInstalled = async (
 		throw new Error('Run `composer install` in packages/minifiers');
 	}
 
-	const installed = await readJsonFile(composerInstalledPath) as ComposerInstalled;
-	return installed.packages.find(({ name }) => name === packageName);
+	let composerInstalled = await readJsonFile(composerInstalledPath) as ComposerInstalled;
+	if ('packages' in composerInstalled) {
+		composerInstalled = composerInstalled.packages;
+	}
+
+	return composerInstalled.find(({ name }) => name === packageName);
 };
 
 export const getMeta = (
