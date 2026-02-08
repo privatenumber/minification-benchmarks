@@ -59,13 +59,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.3.8",
+				"version": "1.3.9",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 23984,
 						"minzippedBytes": 8657,
-						"time": 16.632947,
+						"time": 16.8479302,
 						"runs": 5
 					}
 				}
@@ -236,13 +236,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.3.8",
+				"version": "1.3.9",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 61758,
 						"minzippedBytes": 19850,
-						"time": 16.6441032,
+						"time": 17.1437314,
 						"runs": 5
 					}
 				}
@@ -413,13 +413,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.3.8",
+				"version": "1.3.9",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 92388,
 						"minzippedBytes": 32641,
-						"time": 27.7308504,
+						"time": 27.3888624,
 						"runs": 5
 					}
 				}
@@ -590,13 +590,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.3.8",
+				"version": "1.3.9",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 121278,
 						"minzippedBytes": 45386,
-						"time": 31.148265200000004,
+						"time": 29.543525999999996,
 						"runs": 5
 					}
 				}
@@ -767,13 +767,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.3.8",
+				"version": "1.3.9",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 73448,
 						"minzippedBytes": 26655,
-						"time": 21.4083218,
+						"time": 21.755466600000002,
 						"runs": 5
 					}
 				}
@@ -943,13 +943,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.3.8",
+				"version": "1.3.9",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 272732,
 						"minzippedBytes": 92342,
-						"time": 46.823921999999996,
+						"time": 46.055579800000004,
 						"runs": 5
 					}
 				}
@@ -1118,13 +1118,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.3.8",
+				"version": "1.3.9",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 466687,
 						"minzippedBytes": 127642,
-						"time": 40.6900114,
+						"time": 41.4759026,
 						"runs": 5
 					}
 				}
@@ -1292,13 +1292,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.3.8",
+				"version": "1.3.9",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 655587,
 						"minzippedBytes": 166171,
-						"time": 53.996585200000005,
+						"time": 54.69187240000001,
 						"runs": 5
 					}
 				}
@@ -1468,13 +1468,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.3.8",
+				"version": "1.3.9",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 726797,
 						"minzippedBytes": 182607,
-						"time": 85.5077816,
+						"time": 83.6632462,
 						"runs": 5
 					}
 				}
@@ -1638,13 +1638,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.3.8",
+				"version": "1.3.9",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 1024248,
 						"minzippedBytes": 337874,
-						"time": 128.1442842,
+						"time": 123.33149920000001,
 						"runs": 5
 					}
 				}
@@ -1805,13 +1805,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.3.8",
+				"version": "1.3.9",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 2295708,
 						"minzippedBytes": 491712,
-						"time": 166.7902254,
+						"time": 163.41057759999998,
 						"runs": 5
 					}
 				}
@@ -1973,13 +1973,13 @@
 			},
 			"bun": {
 				"minifierPath": "bun.ts",
-				"version": "1.3.8",
+				"version": "1.3.9",
 				"configHash": "cd9d902c70",
 				"result": {
 					"data": {
 						"minifiedBytes": 3537735,
 						"minzippedBytes": 923265,
-						"time": 294.780649,
+						"time": 292.6058464,
 						"runs": 5
 					}
 				}
