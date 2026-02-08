@@ -219,8 +219,8 @@ importers:
         specifier: ^7.0.0
         version: 7.0.0
       google-closure-compiler:
-        specifier: ^20250820.0.0
-        version: 20250820.0.0
+        specifier: ^20251216.0.0
+        version: 20251216.0.0
       mem:
         specifier: ^9.0.2
         version: 9.0.2
@@ -2458,6 +2458,7 @@ packages:
 
   glob@10.4.5:
     resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   globals@14.0.0:
@@ -2479,31 +2480,31 @@ packages:
   globrex@0.1.2:
     resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
 
-  google-closure-compiler-java@20250820.0.0:
-    resolution: {integrity: sha512-xgguCNe7HtyLrUPDWH+TvT8zFke+3Yfgj5lZqjmeN0w8upKo0vabw2IDr/SPOduSDYZS2Po7CAHfLhiWyEgN5Q==}
+  google-closure-compiler-java@20251216.0.0:
+    resolution: {integrity: sha512-7OGTl1ETIvfUxtUEIFVcy6sNUZDWp/aCD/x4AgKD6LubE3igDWHTXr9OIK0mcFxvZcWk9d+M8aEQBH873OeusA==}
 
-  google-closure-compiler-linux-arm64@20250820.0.0:
-    resolution: {integrity: sha512-J+FQCBfA8ueoWL3N7iUGUg772cHHnPtg0fLGQiXtqUdFqRUWamRnV7NQ0PvGCBZnkG12OtiDrRNjyEArl15kqg==}
+  google-closure-compiler-linux-arm64@20251216.0.0:
+    resolution: {integrity: sha512-AJa4ZsmP7X99AdIQo4ddSol434qFxOrMSwpHpEc/e+b+pjCJfVUFWAJvO5mqGyy7asudMWEmQOxvrEYme5BmsA==}
     cpu: [arm64]
     os: [linux]
 
-  google-closure-compiler-linux@20250820.0.0:
-    resolution: {integrity: sha512-KYchWN/iAqu4VfcGXOwjiWKvH+jkMXuXnZ9qtyJWfMpBgWObznpgngfo739Xnuw7ObH13Up9YEcSzUMr1ADk5g==}
+  google-closure-compiler-linux@20251216.0.0:
+    resolution: {integrity: sha512-rH3bwNKh/Xc4+LiLPpmhoo45TjQuHfb+UvasSuZBMVSHh8oVoKAHpV32/sKLpkDC1f15c2/DApg4bxhCO+YQng==}
     cpu: [x32, x64]
     os: [linux]
 
-  google-closure-compiler-macos@20250820.0.0:
-    resolution: {integrity: sha512-pF/+Y+6Slc8vmy9OC6+jSd4iz80GUbOk/gAxnxOsLsrw/yuyhZcM7sZ+WqOcXMnu1fuAoL+pEHS/ND1bgst+hA==}
+  google-closure-compiler-macos@20251216.0.0:
+    resolution: {integrity: sha512-MGq+n9MbvHXIknqqRuUShfbUOWRFWsPNA5XlHBfnoC4i7jmJpEtaBpJ5Sm6HZnTODgT6ova2DaCumjtg7Alw+w==}
     cpu: [arm64]
     os: [darwin]
 
-  google-closure-compiler-windows@20250820.0.0:
-    resolution: {integrity: sha512-6RdP1E3lDbjguBJdg9Y7gXAFbIgfC/BEETX5WBiAbOcaIeDaY8M/nFudcbZWgwBgGx6gCAQZ07h9QiX6PRDESg==}
+  google-closure-compiler-windows@20251216.0.0:
+    resolution: {integrity: sha512-6GaL8K45kfQBA1gTuVxAapjHQyNOFRGElmJJhXFVo0t95Q9pd5LGXjZUgkp3D70+DQ9JMrk3Gv1hNy7oSTbWrQ==}
     cpu: [x32, x64]
     os: [win32]
 
-  google-closure-compiler@20250820.0.0:
-    resolution: {integrity: sha512-AolUD612pYs5KeJbNOf1/SlobrsR/8NVL2fM+64Rac5b5yB879TBsGUOtZoz5ZFq+KAfWqn93zFpKfR06gKZ9A==}
+  google-closure-compiler@20251216.0.0:
+    resolution: {integrity: sha512-9jW9QAWHmWW+ZI/5XRgVpuD1duKBS+gOx9jjAzvoXLUzJFF048Z04Nmd4r6ygJsxYgcYO7gQjAnqDYiGHkhD/w==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -3868,6 +3869,7 @@ packages:
   tar@7.4.3:
     resolution: {integrity: sha512-5S7Va8hKfV7W5U6g3aYxXmlPoZVAwUMy9AOKyF2fVuZa2UD3qZjg578OrLRt8PcNN1PleVaL/5/yYATNL0ICUw==}
     engines: {node: '>=18'}
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   tasuku@2.0.3:
     resolution: {integrity: sha512-XfGrBuhNT1DXs+KiMaZ+/bhjfMCJ05ZFJ1jRTdSkdSpkPCC8ZSHO0f6IXqiKi7I51C1OwQ6OIyVY7KydzYUmEA==}
@@ -4229,6 +4231,7 @@ packages:
   whatwg-encoding@2.0.0:
     resolution: {integrity: sha512-p41ogyeMUrw3jWclHWTQg1k05DSVXPLcVxRTYsXUk+ZooOCZLcoYgPZ/HL/D/N+uQPOtcp1me1WhBEaX02mhWg==}
     engines: {node: '>=12'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@3.0.0:
     resolution: {integrity: sha512-nt+N2dzIutVRxARx1nghPKGv1xHikU7HKdfafKkLNLindmPU/ch3U31NOCGGA/dmPcmb1VlofO0vnKAcsm0o/Q==}
@@ -6807,32 +6810,32 @@ snapshots:
 
   globrex@0.1.2: {}
 
-  google-closure-compiler-java@20250820.0.0: {}
+  google-closure-compiler-java@20251216.0.0: {}
 
-  google-closure-compiler-linux-arm64@20250820.0.0:
+  google-closure-compiler-linux-arm64@20251216.0.0:
     optional: true
 
-  google-closure-compiler-linux@20250820.0.0:
+  google-closure-compiler-linux@20251216.0.0:
     optional: true
 
-  google-closure-compiler-macos@20250820.0.0:
+  google-closure-compiler-macos@20251216.0.0:
     optional: true
 
-  google-closure-compiler-windows@20250820.0.0:
+  google-closure-compiler-windows@20251216.0.0:
     optional: true
 
-  google-closure-compiler@20250820.0.0:
+  google-closure-compiler@20251216.0.0:
     dependencies:
       chalk: 5.6.2
-      google-closure-compiler-java: 20250820.0.0
+      google-closure-compiler-java: 20251216.0.0
       minimist: 1.2.8
       vinyl: 3.0.1
       vinyl-sourcemaps-apply: 0.2.1
     optionalDependencies:
-      google-closure-compiler-linux: 20250820.0.0
-      google-closure-compiler-linux-arm64: 20250820.0.0
-      google-closure-compiler-macos: 20250820.0.0
-      google-closure-compiler-windows: 20250820.0.0
+      google-closure-compiler-linux: 20251216.0.0
+      google-closure-compiler-linux-arm64: 20251216.0.0
+      google-closure-compiler-macos: 20251216.0.0
+      google-closure-compiler-windows: 20251216.0.0
     transitivePeerDependencies:
       - react-native-b4a
 
