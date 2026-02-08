@@ -142,8 +142,8 @@ importers:
         specifier: ^0.8.0
         version: 0.8.0
       tasuku:
-        specifier: ^2.0.3
-        version: 2.0.3
+        specifier: ^2.2.1
+        version: 2.2.1
     devDependencies:
       '@types/byte-size':
         specifier: ^8.1.0
@@ -3679,8 +3679,8 @@ packages:
     resolution: {integrity: sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==}
     engines: {node: '>=6'}
 
-  tasuku@2.0.3:
-    resolution: {integrity: sha512-XfGrBuhNT1DXs+KiMaZ+/bhjfMCJ05ZFJ1jRTdSkdSpkPCC8ZSHO0f6IXqiKi7I51C1OwQ6OIyVY7KydzYUmEA==}
+  tasuku@2.2.1:
+    resolution: {integrity: sha512-pWshwy92JH64YWgClKjmtc0x5P60KvKdHwRYbE9eoslpBwE1JxZmS7XkgAz/VhrKWBrsloXB7glBK3VlTe6u5g==}
 
   teex@1.0.1:
     resolution: {integrity: sha512-eYE6iEI62Ni1H8oIa7KlDU6uQBtqr4Eajni3wX7rpfXD8ysFx8z0+dri+KWEPWpBsxXfxu58x/0jvTVT1ekOSg==}
@@ -8179,7 +8179,7 @@ snapshots:
 
   tapable@2.3.0: {}
 
-  tasuku@2.0.3: {}
+  tasuku@2.2.1: {}
 
   teex@1.0.1:
     dependencies:
