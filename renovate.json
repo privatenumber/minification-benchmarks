@@ -5,19 +5,17 @@
 		":ignoreModulesAndTests",
 		"workarounds:all"
 	],
-
 	"prHourlyLimit": 24,
 	"prConcurrentLimit": 5,
 	"gitIgnoredAuthors": [
 		"github-actions@github.com"
 	],
-
 	"packageRules": [
 		{
-			"packagePatterns": [
+			"enabled": false,
+			"matchPackageNames": [
 				"*"
-			],
-			"enabled": false
+			]
 		},
 		{
 			"matchFileNames": [
