@@ -1,6 +1,6 @@
 declare module '@tdewolff/minify' {
-	export function string(
+	export function minify(
 		mediatype: string,
 		code: string,
-	): string;
+	): Promise<string>;
 }
