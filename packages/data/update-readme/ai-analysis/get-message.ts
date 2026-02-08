@@ -63,22 +63,22 @@ export const getMessage = (
 					minifier: string;
 					minzippedBytes: number;
 					time: number;
-				}> = {};
-
-				rankings['Best gzip compression'] = {
-					minifier: artifact.bestMinzipped![0],
-					minzippedBytes: artifact.bestMinzipped![1].result.data.minzippedBytes,
-					time: artifact.bestMinzipped![1].result.data.time,
-				};
-				rankings.Fastest = {
-					minifier: artifact.bestSpeed![0],
-					minzippedBytes: artifact.bestSpeed![1].result.data.minzippedBytes,
-					time: artifact.bestSpeed![1].result.data.time,
-				};
-				rankings['Most balanced'] = {
-					minifier: mostBalanced.minifierName,
-					minzippedBytes: mostBalanced.minifier.result.data.minzippedBytes,
-					time: mostBalanced.minifier.result.data.time,
+				}> = {
+					'Best gzip compression': {
+						minifier: artifact.bestMinzipped![0],
+						minzippedBytes: artifact.bestMinzipped![1].result.data.minzippedBytes,
+						time: artifact.bestMinzipped![1].result.data.time,
+					},
+					Fastest: {
+						minifier: artifact.bestSpeed![0],
+						minzippedBytes: artifact.bestSpeed![1].result.data.minzippedBytes,
+						time: artifact.bestSpeed![1].result.data.time,
+					},
+					'Most balanced': {
+						minifier: mostBalanced.minifierName,
+						minzippedBytes: mostBalanced.minifier.result.data.minzippedBytes,
+						time: mostBalanced.minifier.result.data.time,
+					},
 				};
 
 				const mentionedMinifiers = new Set(Object.values(rankings).map(r => r.minifier));
