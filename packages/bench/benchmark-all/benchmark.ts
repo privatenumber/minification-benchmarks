@@ -65,6 +65,20 @@ const getAverage = (
 	) / numbers.length
 );
 
+const byteFormatter = new Intl.NumberFormat('en', {
+	notation: 'compact',
+	compactDisplay: 'short',
+	minimumFractionDigits: 2,
+	maximumFractionDigits: 2,
+});
+
+const formatTime = (ms: number) => {
+	if (ms < 1000) {
+		return `${Math.round(ms)}ms`;
+	}
+	return `${(ms / 1000).toFixed(1)}s`;
+};
+
 export const benchmarkAverage = async (
 	artifact: string,
 	minifier: string,
@@ -82,6 +96,7 @@ export const benchmarkAverage = async (
 		);
 
 		if (!result) {
+			setStatus(`${i + 1}/${sampleSize} — No result`);
 			return {
 				error: {
 					message: 'No result',
@@ -90,10 +105,14 @@ export const benchmarkAverage = async (
 		}
 
 		if ('error' in result) {
+			setStatus(`${i + 1}/${sampleSize} — ${result.error.message}`);
 			return result;
 		}
 
 		results.push(result);
+
+		const avgTime = getAverage(results.map(r => r.data.time));
+		setStatus(`${byteFormatter.format(result.data.minifiedBytes)} → ${byteFormatter.format(result.data.minzippedBytes)} gzip, ${formatTime(avgTime)}`);
 	}
 
 	return {
