@@ -9,6 +9,7 @@
 	"type": "module",
 	"packageManager": "pnpm@10.17.0",
 	"scripts": {
+		"prepare": "skills-npm --yes --agents '*'",
 		"bench": "node packages/bench/benchmark/cli.ts",
 		"bench-all": "node packages/bench/benchmark-all/cli.ts",
 		"update-readme": "node packages/data/update-readme/index.ts",
@@ -22,6 +23,7 @@
 		"@total-typescript/ts-reset": "^0.5.1",
 		"@types/node": "^20.19.25",
 		"lintroll": "^1.25.0",
+		"skills-npm": "^1.1.1",
 		"typescript": "^5.9.3"
 	},
 	"pnpm": {
