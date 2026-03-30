@@ -1,6 +1,6 @@
 import { spawn } from 'child_process';
-import { collectStream } from '@minification-benchmarks/utils/collect-stream';
-import { createMinifier } from '../../utils/create-minifier.js';
+import { collectStream } from '@minification-benchmarks/utils/collect-stream.ts';
+import { createMinifier } from '../../utils/create-minifier.ts';
 
 const jshrinkPath = new URL('jshrink.php', import.meta.url).pathname;
 

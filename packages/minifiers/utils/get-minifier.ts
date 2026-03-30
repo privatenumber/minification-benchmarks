@@ -1,8 +1,8 @@
 import path from 'node:path';
 import fs from 'node:fs/promises';
 import crypto from 'node:crypto';
-import { minifiersDirectory } from './minifiers-directory.js';
-import type { MinifierLoaded } from './create-minifier.js';
+import { minifiersDirectory } from './minifiers-directory.ts';
+import type { MinifierLoaded } from './create-minifier.ts';
 
 const loadMinifierByPath = async (
 	minifierPath: string,

@@ -1,4 +1,4 @@
-import { defineArtifact } from '../../utils/artifact.js';
+import { defineArtifact } from '../../utils/artifact.ts';
 
 export default defineArtifact({
 	package: 'd3',

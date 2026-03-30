@@ -1,7 +1,7 @@
 import _task, { type Task } from 'tasuku';
 import type { ArtifactLoaded } from '@minification-benchmarks/artifacts';
-import { benchmarkMinifiers } from './benchmark-minifiers.js';
-import type { MinifierInstance } from './types.js';
+import { benchmarkMinifiers } from './benchmark-minifiers.ts';
+import type { MinifierInstance } from './types.ts';
 
 const byteFormatter = new Intl.NumberFormat('en', {
 	notation: 'compact',

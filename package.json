@@ -6,11 +6,12 @@
 	"author": "Hiroki Osame <hiroki.osame@gmail.com>",
 	"private": true,
 	"files": [],
+	"type": "module",
 	"packageManager": "pnpm@10.17.0",
 	"scripts": {
-		"bench": "tsx packages/bench/benchmark/cli.ts",
-		"bench-all": "tsx packages/bench/benchmark-all/cli.ts",
-		"update-readme": "tsx packages/data/update-readme/index.ts",
+		"bench": "node packages/bench/benchmark/cli.ts",
+		"bench-all": "node packages/bench/benchmark-all/cli.ts",
+		"update-readme": "node packages/data/update-readme/index.ts",
 		"lint": "lintroll --cache . --ignore-pattern ./packages/data/data/data.json",
 		"type-check": "tsc"
 	},
@@ -21,7 +22,6 @@
 		"@total-typescript/ts-reset": "^0.5.1",
 		"@types/node": "^20.19.25",
 		"lintroll": "^1.25.0",
-		"tsx": "^4.20.6",
 		"typescript": "^5.9.3"
 	},
 	"pnpm": {

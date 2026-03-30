@@ -1,6 +1,6 @@
 import { findUp } from 'find-up';
-import { readJsonFile } from '@minification-benchmarks/utils/read-json-file.js';
-import type { MetaData } from './create-minifier.js';
+import { readJsonFile } from '@minification-benchmarks/utils/read-json-file.ts';
+import type { MetaData } from './create-minifier.ts';
 
 type ComposerPackage = {
 	name: string;

@@ -1,8 +1,8 @@
 import path from 'path';
 import { findUp } from 'find-up';
 import type { PackageJson } from 'type-fest';
-import { readJsonFile } from '@minification-benchmarks/utils/read-json-file.js';
-import type { MetaData } from './create-minifier.js';
+import { readJsonFile } from '@minification-benchmarks/utils/read-json-file.ts';
+import type { MetaData } from './create-minifier.ts';
 
 export const loadPackageJson = async (
 	packageName: string,

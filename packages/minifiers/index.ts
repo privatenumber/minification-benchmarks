@@ -1,2 +1,2 @@
-export { getMinifier, getMinifiers } from './utils/get-minifier.js';
-export type { MinifierLoaded, MinifierFunction } from './utils/create-minifier.js';
+export { getMinifier, getMinifiers } from './utils/get-minifier.ts';
+export type { MinifierLoaded, MinifierFunction } from './utils/create-minifier.ts';

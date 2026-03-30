@@ -1,21 +1,21 @@
 import fs from 'fs/promises';
 import path from 'path';
-import outdent from 'outdent';
+import { outdent } from 'outdent';
 import { commentMark } from 'comment-mark';
 import { format } from 'date-fns';
 import { markdownTable } from 'markdown-table';
 import { capitalize } from 'lodash-es';
-import type { BenchmarkResultSuccessWithRuns } from '@minification-benchmarks/bench/types.js';
-import { minifiersDirectory } from '@minification-benchmarks/minifiers/utils/minifiers-directory.js';
+import type { BenchmarkResultSuccessWithRuns } from '@minification-benchmarks/bench/types.ts';
+import { minifiersDirectory } from '@minification-benchmarks/minifiers/utils/minifiers-directory.ts';
 import { getMinifiers } from '@minification-benchmarks/minifiers';
-import { byteSize } from '../utils/byte-size.js';
-import { percent, formatMs } from './formatting.js';
-import * as mdu from './mdu.js';
-import { getAiAnalysis } from './ai-analysis/index.js';
+import { byteSize } from '../utils/byte-size.ts';
+import { percent, formatMs } from './formatting.ts';
+import * as mdu from './mdu.ts';
+import { getAiAnalysis } from './ai-analysis/index.ts';
 import {
 	getAnalyzedData, type AnalyzedData, type AnalyzedArtifact,
-} from './analyzed-data.js';
-import { getBarChartUrl } from './bar-chart.js';
+} from './analyzed-data.ts';
+import { getBarChartUrl } from './bar-chart.ts';
 
 const displayColumn = (
 	text: string,

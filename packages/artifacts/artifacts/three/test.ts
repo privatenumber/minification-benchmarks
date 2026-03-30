@@ -1,6 +1,6 @@
 import assert from 'assert';
 import type three from 'three';
-import { defineTest } from '../../utils/define-test.js';
+import { defineTest } from '../../utils/define-test.ts';
 
 export default defineTest<typeof three>({
 	run: ({ Vector2 }) => {

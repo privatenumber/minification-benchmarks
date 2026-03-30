@@ -1,8 +1,8 @@
 import _task, { type Task } from 'tasuku';
 import type { ArtifactLoaded } from '@minification-benchmarks/artifacts';
 import { hasResults, saveResults } from '@minification-benchmarks/data';
-import type { MinifierInstance } from './types.js';
-import { benchmarkAverage } from './benchmark.js';
+import type { MinifierInstance } from './types.ts';
+import { benchmarkAverage } from './benchmark.ts';
 
 export const benchmarkMinifiers = async (
 	artifact: ArtifactLoaded,

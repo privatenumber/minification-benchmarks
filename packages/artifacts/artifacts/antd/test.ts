@@ -3,7 +3,7 @@ import jsdom from 'jsdom-global';
 import { createElement } from 'react';
 import { render } from 'react-dom';
 import type antd from 'antd';
-import { defineTest } from '../../utils/define-test.js';
+import { defineTest } from '../../utils/define-test.ts';
 
 jsdom(undefined, {
 	pretendToBeVisual: true,

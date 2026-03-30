@@ -2,11 +2,11 @@ import fs from 'fs/promises';
 import path from 'path';
 import assert from 'assert';
 import { readPackageUp, type NormalizedPackageJson } from 'read-pkg-up';
-import { getSize, getGzipSize } from '@minification-benchmarks/utils/get-size';
-import { unpreserveComments } from './unpreserve-comments.js';
-import type { Test } from './define-test.js';
-import { requireString } from './require-string.js';
-import { blockConsole } from './block-console.js';
+import { getSize, getGzipSize } from '@minification-benchmarks/utils/get-size.ts';
+import { unpreserveComments } from './unpreserve-comments.ts';
+import type { Test } from './define-test.ts';
+import { requireString } from './require-string.ts';
+import { blockConsole } from './block-console.ts';
 
 type ArtifactMeta = {
 	package: string;

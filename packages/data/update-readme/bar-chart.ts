@@ -1,7 +1,7 @@
 import QuickChart from 'quickchart-js';
 import type { Context } from 'chartjs-plugin-datalabels';
-import type { Artifact } from '../types.js';
-import { type MinifierWithScore, isSuccessful } from './analyzed-data.js';
+import type { Artifact } from '../types.ts';
+import { type MinifierWithScore, isSuccessful } from './analyzed-data.ts';
 
 /* eslint-disable no-bitwise */
 const hash32 = (string_: string) => {
@@ -66,6 +66,7 @@ export const getBarChartUrl = (
 	const labels = successfulMinifiers.map(m => m.minifierName);
 	const minzippedData = successfulMinifiers.map(m => m.minifier.result.data.minzippedBytes);
 
+	// @ts-expect-error quickchart-js types don't support nodenext (CJS .d.ts with export default)
 	const myChart = new QuickChart();
 	myChart.setFormat('svg');
 	myChart.setWidth(720);

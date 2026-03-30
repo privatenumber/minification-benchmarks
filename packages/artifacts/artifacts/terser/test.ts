@@ -1,6 +1,6 @@
 import assert from 'assert';
 import type * as terser from 'terser';
-import { defineTest } from '../../utils/define-test.js';
+import { defineTest } from '../../utils/define-test.ts';
 
 export default defineTest<typeof terser>({
 	run: async ({ minify }) => {

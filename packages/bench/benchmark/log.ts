@@ -1,9 +1,9 @@
-import { getSize, getGzipSize } from '@minification-benchmarks/utils/get-size.js';
+import { getSize, getGzipSize } from '@minification-benchmarks/utils/get-size.ts';
 import type {
 	BenchmarkResultSuccess,
 	BenchmarkError,
-} from '../types.js';
-import type { Minified } from './types.js';
+} from '../types.ts';
+import type { Minified } from './types.ts';
 
 export const logResult = (
 	minified: Minified,

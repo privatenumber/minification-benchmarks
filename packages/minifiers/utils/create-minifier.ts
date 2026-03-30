@@ -1,5 +1,5 @@
-import { loadPackageJson, getPackageJsonMeta } from './package-json.js';
-import { loadComposerInstalled, getMeta } from './composer.js';
+import { loadPackageJson, getPackageJsonMeta } from './package-json.ts';
+import { loadComposerInstalled, getMeta } from './composer.ts';
 
 export type MinifierFunction = (
 	minifySubject: {

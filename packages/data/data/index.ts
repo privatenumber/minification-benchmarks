@@ -1,11 +1,11 @@
 import fs from 'fs/promises';
-import { readJsonFile } from '@minification-benchmarks/utils/read-json-file.js';
-import { sortObjectKeys } from '@minification-benchmarks/utils/sort-object-keys.js';
+import { readJsonFile } from '@minification-benchmarks/utils/read-json-file.ts';
+import { sortObjectKeys } from '@minification-benchmarks/utils/sort-object-keys.ts';
 import type { ArtifactLoaded } from '@minification-benchmarks/artifacts';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
-import type { BenchmarkResultWithRuns } from '@minification-benchmarks/bench/types.js';
-import type { Data, Artifact } from '../types.js';
-import { sortArtifacts, sortMinifiers } from './sort.js';
+import type { BenchmarkResultWithRuns } from '@minification-benchmarks/bench/types.ts';
+import type { Data, Artifact } from '../types.ts';
+import { sortArtifacts, sortMinifiers } from './sort.ts';
 
 const dataPath = new URL('data.json', import.meta.url).pathname;
 

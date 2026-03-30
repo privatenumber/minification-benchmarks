@@ -1,5 +1,5 @@
 import { minify } from 'terser';
-import { createMinifier } from '../utils/create-minifier.js';
+import { createMinifier } from '../utils/create-minifier.ts';
 
 export default createMinifier(
 	'terser',

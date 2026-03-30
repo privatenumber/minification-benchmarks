@@ -4,8 +4,8 @@ import assert from 'assert';
 import { cli } from 'cleye';
 import { getMinifier, type MinifierFunction } from '@minification-benchmarks/minifiers';
 import { loadArtifact } from '@minification-benchmarks/artifacts';
-import { logResult, logError } from './log.js';
-import type { Minified } from './types.js';
+import { logResult, logError } from './log.ts';
+import type { Minified } from './types.ts';
 
 // In case 'node:assert' is used by the artifact tests
 process.env.NO_COLOR = '1';

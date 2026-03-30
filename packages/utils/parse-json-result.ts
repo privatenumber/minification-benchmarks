@@ -1,4 +1,4 @@
-import type { BenchmarkError } from '../bench/types.js';
+import type { BenchmarkError } from '../bench/types.ts';
 
 export const parseJsonResult = (
 	jsonString: string,

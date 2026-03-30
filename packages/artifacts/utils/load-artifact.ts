@@ -1,8 +1,8 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { artifactsDirectory } from './artifacts-directory.js';
-import type { ArtifactLoaded } from './artifact.js';
-import type { Test } from './define-test.js';
+import { artifactsDirectory } from './artifacts-directory.ts';
+import type { ArtifactLoaded } from './artifact.ts';
+import type { Test } from './define-test.ts';
 
 export const loadArtifact = async (
 	name: string,

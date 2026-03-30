@@ -1,10 +1,10 @@
 import spawn, { type SubprocessError } from 'nano-spawn';
-import { parseJsonResult } from '@minification-benchmarks/utils/parse-json-result.js';
+import { parseJsonResult } from '@minification-benchmarks/utils/parse-json-result.ts';
 import type {
 	BenchmarkResult,
 	BenchmarkResultSuccess,
 	BenchmarkResultWithRuns,
-} from '../types.js';
+} from '../types.ts';
 
 const benchmarkCliPath = new URL('../benchmark/cli.ts', import.meta.url).pathname;
 

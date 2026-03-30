@@ -3,8 +3,8 @@ import { cli } from 'cleye';
 import { getArtifacts, loadArtifact } from '@minification-benchmarks/artifacts';
 import { getMinifiers } from '@minification-benchmarks/minifiers';
 import { saveData } from '@minification-benchmarks/data';
-import { benchmarkArtifacts } from './benchmark-artifacts';
-import type { MinifierInstance } from './types.js';
+import { benchmarkArtifacts } from './benchmark-artifacts.ts';
+import type { MinifierInstance } from './types.ts';
 
 const argv = cli({
 	name: 'benchmark-all',

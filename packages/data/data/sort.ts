@@ -1,4 +1,4 @@
-import type { Artifact } from '../types.js';
+import type { Artifact } from '../types.ts';
 
 export const sortArtifacts = (
 	[, a]: [unknown, Artifact],

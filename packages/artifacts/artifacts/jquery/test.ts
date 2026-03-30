@@ -1,7 +1,7 @@
 import 'jsdom-global/register.js';
 import assert from 'assert';
 import type jquery from 'jquery';
-import { defineTest } from '../../utils/define-test.js';
+import { defineTest } from '../../utils/define-test.ts';
 
 export default defineTest<typeof jquery>({
 	run: ($) => {

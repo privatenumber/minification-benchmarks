@@ -1,9 +1,9 @@
-import outdent from 'outdent';
+import { outdent } from 'outdent';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
 import { format } from 'date-fns';
-import { byteSize } from '../../utils/byte-size.js';
-import { formatMs } from '../formatting.js';
-import type { AnalyzedData } from '../analyzed-data.js';
+import { byteSize } from '../../utils/byte-size.ts';
+import { formatMs } from '../formatting.ts';
+import type { AnalyzedData } from '../analyzed-data.ts';
 
 type Eliminated = Record<string, {
 	reason: string;

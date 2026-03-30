@@ -1,4 +1,4 @@
-import type { BenchmarkResultWithRuns } from '@minification-benchmarks/bench/types.js';
+import type { BenchmarkResultWithRuns } from '@minification-benchmarks/bench/types.ts';
 
 export type Minifier<Result = BenchmarkResultWithRuns> = {
 	minifierPath: string;

@@ -1,7 +1,7 @@
 import 'jsdom-global/register.js';
 import assert from 'assert';
 import type d3 from 'd3';
-import { defineTest } from '../../utils/define-test.js';
+import { defineTest } from '../../utils/define-test.ts';
 
 export default defineTest<typeof d3>({
 	run: (d3) => {

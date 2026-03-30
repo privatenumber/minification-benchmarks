@@ -2,7 +2,7 @@ import assert from 'assert';
 import jsdom from 'jsdom-global';
 import { render } from 'react-dom';
 import type react from 'react';
-import { defineTest } from '../../utils/define-test.js';
+import { defineTest } from '../../utils/define-test.ts';
 
 jsdom(undefined, {
 	pretendToBeVisual: true,

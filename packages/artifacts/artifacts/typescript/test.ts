@@ -1,6 +1,6 @@
 import assert from 'assert';
 import type typescript from 'typescript';
-import { defineTest } from '../../utils/define-test.js';
+import { defineTest } from '../../utils/define-test.ts';
 
 export default defineTest<typeof typescript>({
 	run: (ts) => {

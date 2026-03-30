@@ -1,6 +1,6 @@
 import assert from 'assert';
 import type moment from 'moment';
-import { defineTest } from '../../utils/define-test.js';
+import { defineTest } from '../../utils/define-test.ts';
 
 export default defineTest<typeof moment>({
 	run: (moment) => {

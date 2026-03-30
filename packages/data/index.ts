@@ -3,4 +3,4 @@ export {
 	saveResults,
 	hasResults,
 	saveData,
-} from './data/index.js';
+} from './data/index.ts';

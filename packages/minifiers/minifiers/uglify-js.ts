@@ -1,6 +1,6 @@
 import assert from 'assert';
 import UglifyJs from 'uglify-js';
-import { createMinifier } from '../utils/create-minifier.js';
+import { createMinifier } from '../utils/create-minifier.ts';
 
 export default createMinifier(
 	'uglify-js',
