@@ -8,9 +8,9 @@ import { capitalize } from 'lodash-es';
 import type { BenchmarkResultSuccessWithRuns } from '@minification-benchmarks/bench/types.ts';
 import { minifiersDirectory } from '@minification-benchmarks/minifiers/utils/minifiers-directory.ts';
 import { getMinifiers } from '@minification-benchmarks/minifiers';
+import md from 'md-pen';
 import { byteSize } from '../utils/byte-size.ts';
 import { percent, formatMs } from './formatting.ts';
-import * as mdu from './mdu.ts';
 import { getAiAnalysis } from './ai-analysis/index.ts';
 import {
 	getAnalyzedData, type AnalyzedData, type AnalyzedArtifact,
@@ -23,11 +23,11 @@ const displayColumn = (
 	isWinner: boolean,
 ) => {
 	const columnText = (
-		mdu.sup(`${isWinner ? '🏆' : ''}${annotation || ''} `)
-		+ mdu.c(text)
+		md.sup(`${isWinner ? '🏆' : ''}${annotation || ''} `)
+		+ md.code(text)
 	);
 
-	return isWinner ? mdu.strong(columnText) : columnText;
+	return isWinner ? md.bold(columnText) : columnText;
 };
 
 const compareSpeed = (
@@ -36,7 +36,7 @@ const compareSpeed = (
 ) => (
 	(fastest === current)
 		? ''
-		: mdu.emphasize(
+		: md.italic(
 			`${Math.floor(current.data.time / fastest!.data.time)}x`,
 		)
 );
@@ -48,30 +48,30 @@ const generateBenchmarkTable = (
 	[
 		['Artifact', 'Original size', 'Gzip size'],
 		[
-			`${mdu.link(
-				`${artifactName} v${artifact.version}`,
+			`${md.link(
 				`https://www.npmjs.com/package/${artifactName}/v/${artifact.version}`,
-			)} (${mdu.link('Source', `https://unpkg.com/${artifactName}@${artifact.version}${artifact.filePath}`)})`,
-			mdu.c(byteSize(artifact.size).toString()),
-			mdu.c(byteSize(artifact.gzipSize).toString()),
+				`${artifactName} v${artifact.version}`,
+			)} (${md.link(`https://unpkg.com/${artifactName}@${artifact.version}${artifact.filePath}`, 'Source')})`,
+			md.code(byteSize(artifact.size).toString()),
+			md.code(byteSize(artifact.gzipSize).toString()),
 			'',
 		],
 
-		['Minifier', 'Minified size', 'Minzipped size', 'Time'].map(mdu.strong),
+		['Minifier', 'Minified size', 'Minzipped size', 'Time'].map(md.bold),
 		...artifact.minifiedWithScores.map(({ minifierName, minifier }, index) => {
 			const { result } = minifier;
 
 			const columns = [
-				`${(index + 1).toString()}. ${mdu.link(
-					minifierName,
+				`${(index + 1).toString()}. ${md.link(
 					path.relative(process.cwd(), path.join(minifiersDirectory, minifier.minifierPath)),
+					minifierName,
 				)}`,
 			];
 
 			if ('error' in result) {
 				const message = result.error.stage || result.error.message;
 				columns[0] += ` ${
-					mdu.sub(
+					md.sub(
 						`❌ ${
 							message === 'timeout'
 								? 'Timed out'
@@ -84,7 +84,7 @@ const generateBenchmarkTable = (
 				}`;
 
 				if (message === 'timeout') {
-					columns.push('-', '-', `${mdu.sup(':warning:')} ${mdu.c('+10,000 ms')}`);
+					columns.push('-', '-', `${md.sup(':warning:')} ${md.code('+10,000 ms')}`);
 				} else {
 					columns.push('❌', '❌ ', '-');
 				}
@@ -127,10 +127,7 @@ const generateBenchmarks = (
 				<img src="${getBarChartUrl(name, artifact, artifact.minifiedWithScores)}">
 			</picture>
 			`,
-			mdu.div(
-				generateBenchmarkTable(name, artifact),
-				{ align: 'center' },
-			),
+			md.el('div', { align: 'center' }, `\n\n${generateBenchmarkTable(name, artifact)}\n`),
 		].join('\n\n'),
 	)
 	.join('\n\n----\n\n');
@@ -159,9 +156,9 @@ const minifiersList = markdownTable([
 		)
 		.map(
 			({ meta }) => [
-				mdu.link(meta.name, meta.url),
+				md.link(meta.url, meta.name),
 				meta.registry === 'npm'
-					? mdu.link(meta.version, `https://www.npmjs.com/package/${meta.name}/v/${meta.version}`)
+					? md.link(`https://www.npmjs.com/package/${meta.name}/v/${meta.version}`, meta.version)
 					: meta.version,
 				meta.publishDate
 					? format(meta.publishDate, 'yyyy-MM-dd')
