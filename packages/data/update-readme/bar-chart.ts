@@ -66,7 +66,6 @@ export const getBarChartUrl = (
 	const labels = successfulMinifiers.map(m => m.minifierName);
 	const minzippedData = successfulMinifiers.map(m => m.minifier.result.data.minzippedBytes);
 
-	// @ts-expect-error quickchart-js types don't support nodenext (CJS .d.ts with export default)
 	const myChart = new QuickChart();
 	myChart.setFormat('svg');
 	myChart.setWidth(720);
