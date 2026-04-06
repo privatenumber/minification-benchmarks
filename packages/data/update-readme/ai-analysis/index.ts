@@ -23,11 +23,11 @@ export const getAiAnalysis = async (
 	const systemPromptWithDate = `${todaysDate}\n\n${systemPrompt}`;
 
 	const client = new OpenAI({
-		baseURL: 'https://models.inference.ai.azure.com',
+		baseURL: 'https://models.github.ai/inference',
 		apiKey,
 	});
 	const response = await client.chat.completions.create({
-		model: 'gpt-5-mini',
+		model: 'openai/gpt-4.1-mini',
 		messages: [
 			{
 				role: 'system',
