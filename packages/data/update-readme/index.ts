@@ -3,7 +3,6 @@ import path from 'path';
 import { outdent } from 'outdent';
 import { commentMark } from 'comment-mark';
 import { format } from 'date-fns';
-import { markdownTable } from 'markdown-table';
 import { capitalize } from 'lodash-es';
 import type { BenchmarkResultSuccessWithRuns } from '@minification-benchmarks/bench/types.ts';
 import { minifiersDirectory } from '@minification-benchmarks/minifiers/utils/minifiers-directory.ts';
@@ -44,7 +43,7 @@ const compareSpeed = (
 const generateBenchmarkTable = (
 	artifactName: string,
 	artifact: AnalyzedArtifact,
-) => markdownTable(
+) => md.table(
 	[
 		['Artifact', 'Original size', 'Gzip size'],
 		[
@@ -112,7 +111,7 @@ const generateBenchmarkTable = (
 		}),
 	],
 	{
-		align: ['l', 'r', 'r', 'r'],
+		align: ['left', 'right', 'right', 'right'],
 	},
 );
 
@@ -143,7 +142,7 @@ const ai = await getAiAnalysis(
 const readmePath = './README.md';
 const readme = await fs.readFile(readmePath, 'utf8');
 
-const minifiersList = markdownTable([
+const minifiersList = md.table([
 	['Minifier', 'Version', 'Release date ↓'],
 	...minifiers
 		// Sort by release date
