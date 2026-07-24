@@ -21,11 +21,11 @@ This project benchmarks the following minifiers:
 | [@tdewolff/minify](https://github.com/tdewolff/minify) | [2.24.8](https://www.npmjs.com/package/@tdewolff/minify/v/2.24.8) | 2025-12-08 |
 | [@cminify/cminify-linux-x64](https://codeberg.org/Jumping-Beaver/cminify) | [3.0.1](https://www.npmjs.com/package/@cminify/cminify-linux-x64/v/3.0.1) | 2025-07-27 |
 | [uglify-js](https://github.com/mishoo/UglifyJS) | [3.19.3](https://www.npmjs.com/package/uglify-js/v/3.19.3) | 2024-08-29 |
-| [babel-minify](https://github.com/babel/minify/tree/master/packages/babel-minify) | [0.5.2](https://www.npmjs.com/package/babel-minify/v/0.5.2) | 2022-05-07 |
+| [babel-minify](https://github.com/babel/minify/tree/master/packages/babel-minify) | [0.5.2](https://www.npmjs.com/package/babel-minify/v/0.5.2) | 2022-05-06 |
 | [tedivm/jshrink](https://github.com/tedious/JShrink) | 1.8.1 |  |
 <!-- minifiers:end -->
 
-_Benchmarks last updated on <!-- lastUpdated:start -->Apr 30, 2026<!-- lastUpdated:end -->._
+_Benchmarks last updated on <!-- lastUpdated:start -->Jul 24, 2026<!-- lastUpdated:end -->._
 
 <br>
 
