@@ -1,4 +1,4 @@
-import spawn, { type SubprocessError } from 'nano-spawn';
+import spawn, { SubprocessError, type Result } from 'nano-spawn';
 import { parseJsonResult } from '@minification-benchmarks/utils/parse-json-result.ts';
 import type {
 	BenchmarkResult,
@@ -7,6 +7,14 @@ import type {
 } from '../types.ts';
 
 const benchmarkCliPath = new URL('../benchmark/cli.ts', import.meta.url).pathname;
+
+export const parseBenchmarkProcessResult = (
+	minificationProcess: Result | SubprocessError,
+): BenchmarkResult => parseJsonResult(
+	minificationProcess instanceof SubprocessError
+		? minificationProcess.stderr
+		: minificationProcess.stdout,
+) as BenchmarkResult;
 
 const benchmark = async (
 	artifact: string,
@@ -49,11 +57,7 @@ const benchmark = async (
 		};
 	}
 
-	if (minificationProcess.stderr) {
-		return parseJsonResult(minificationProcess.stderr) as BenchmarkResult;
-	}
-
-	return parseJsonResult(minificationProcess.stdout) as BenchmarkResult;
+	return parseBenchmarkProcessResult(minificationProcess);
 };
 
 const getAverage = (

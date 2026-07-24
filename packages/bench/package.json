@@ -15,6 +15,7 @@
 		"tasuku": "^2.2.3"
 	},
 	"devDependencies": {
-		"@types/byte-size": "^8.1.0"
+		"@types/byte-size": "^8.1.0",
+		"manten": "^2.0.2"
 	}
 }
