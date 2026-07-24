@@ -1,10 +1,8 @@
 import fs from 'node:fs/promises';
-import OpenAI from 'openai';
+import { generateText } from 'ai';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
 import type { AnalyzedData } from '../analyzed-data.ts';
 import { getMessage } from './get-message.ts';
-
-const apiKey = process.env.GH_TOKEN;
 
 export const getAiAnalysis = async (
 	minifiers: MinifierLoaded[],
@@ -15,35 +13,21 @@ export const getAiAnalysis = async (
 	const systemPrompt = await fs.readFile(systemPromptPath.pathname, 'utf8');
 	const message = await getMessage(minifiers, data);
 
-	if (!apiKey) {
-		console.warn('Skipping AI analysis due to missing GH_TOKEN');
+	if (!process.env.AI_GATEWAY_API_KEY) {
+		console.warn('Skipping AI analysis due to missing AI_GATEWAY_API_KEY');
 		return;
 	}
 
 	const systemPromptWithDate = `${todaysDate}\n\n${systemPrompt}`;
 
-	const client = new OpenAI({
-		baseURL: 'https://models.inference.ai.azure.com',
-		apiKey,
-	});
-	const response = await client.chat.completions.create({
-		model: 'gpt-5-mini',
-		messages: [
-			{
-				role: 'system',
-				content: systemPromptWithDate,
-			},
-			{
-				role: 'user',
-				content: message,
-			},
-		],
+	const { text } = await generateText({
+		model: 'openai/gpt-5-mini',
+		instructions: systemPromptWithDate,
+		prompt: message,
 	});
 
-	let analysis = response.choices[0].message.content!;
-	analysis = analysis.replaceAll('\n---\n', '');
 	return {
 		systemPrompt: `${systemPromptWithDate}\n\n${message}`,
-		analysis,
+		analysis: text.replaceAll('\n---\n', ''),
 	};
 };
