@@ -1,10 +1,11 @@
 import fs from 'node:fs/promises';
-import OpenAI from 'openai';
+import { createGateway, generateText } from 'ai';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
 import type { AnalyzedData } from '../analyzed-data.ts';
 import { getMessage } from './get-message.ts';
 
-const apiKey = process.env.GH_TOKEN;
+const apiKey = process.env.VERCEL_AI_GATEWAY_API_KEY;
+const gateway = createGateway({ apiKey });
 
 export const getAiAnalysis = async (
 	minifiers: MinifierLoaded[],
@@ -16,34 +17,20 @@ export const getAiAnalysis = async (
 	const message = await getMessage(minifiers, data);
 
 	if (!apiKey) {
-		console.warn('Skipping AI analysis due to missing GH_TOKEN');
+		console.warn('Skipping AI analysis due to missing VERCEL_AI_GATEWAY_API_KEY');
 		return;
 	}
 
 	const systemPromptWithDate = `${todaysDate}\n\n${systemPrompt}`;
 
-	const client = new OpenAI({
-		baseURL: 'https://models.inference.ai.azure.com',
-		apiKey,
-	});
-	const response = await client.chat.completions.create({
-		model: 'gpt-5-mini',
-		messages: [
-			{
-				role: 'system',
-				content: systemPromptWithDate,
-			},
-			{
-				role: 'user',
-				content: message,
-			},
-		],
+	const { text } = await generateText({
+		model: gateway('anthropic/claude-sonnet-5'),
+		instructions: systemPromptWithDate,
+		prompt: message,
 	});
 
-	let analysis = response.choices[0].message.content!;
-	analysis = analysis.replaceAll('\n---\n', '');
 	return {
 		systemPrompt: `${systemPromptWithDate}\n\n${message}`,
-		analysis,
+		analysis: text.replaceAll('\n---\n', ''),
 	};
 };

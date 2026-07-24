@@ -21,11 +21,11 @@ This project benchmarks the following minifiers:
 | [@tdewolff/minify](https://github.com/tdewolff/minify) | [2.24.8](https://www.npmjs.com/package/@tdewolff/minify/v/2.24.8) | 2025-12-08 |
 | [@cminify/cminify-linux-x64](https://codeberg.org/Jumping-Beaver/cminify) | [3.0.1](https://www.npmjs.com/package/@cminify/cminify-linux-x64/v/3.0.1) | 2025-07-27 |
 | [uglify-js](https://github.com/mishoo/UglifyJS) | [3.19.3](https://www.npmjs.com/package/uglify-js/v/3.19.3) | 2024-08-29 |
-| [babel-minify](https://github.com/babel/minify/tree/master/packages/babel-minify) | [0.5.2](https://www.npmjs.com/package/babel-minify/v/0.5.2) | 2022-05-07 |
+| [babel-minify](https://github.com/babel/minify/tree/master/packages/babel-minify) | [0.5.2](https://www.npmjs.com/package/babel-minify/v/0.5.2) | 2022-05-06 |
 | [tedivm/jshrink](https://github.com/tedious/JShrink) | 1.8.1 |  |
 <!-- minifiers:end -->
 
-_Benchmarks last updated on <!-- lastUpdated:start -->Apr 30, 2026<!-- lastUpdated:end -->._
+_Benchmarks last updated on <!-- lastUpdated:start -->Jul 24, 2026<!-- lastUpdated:end -->._
 
 <br>
 
@@ -424,33 +424,175 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 > 🤖 This analysis is AI generated. See below for the system prompt.
 
 <!-- aiAnalysis:start -->
-Three... two... one... compress! Welcome to the Minification Grand Prix, where every byte fights for survival and every millisecond screams for mercy. The field was full of specialists: the old-school size hunters, the new-school speed demons, and a few hybrid contenders that managed to do both without tripping over semicolons. Let’s unpack the race.
+Ladies and gentlemen, start your compressors. Twelve npm packages, ranging from a lean React bundle to a typescript-sized kaiju weighing in at 1.88 megabytes, were thrown into the ring against eleven minifiers. Two never made it past the starting gate. The rest fought through every weight class, and the results tell a brutal story about who scales and who stalls. Let's get into it.
 
 ### Best minifier
-@swc/core takes the trophy. It didn’t always have the single smallest number on every tiny package, but it won the big, meaningful rounds and kept a gorgeous balance between squeeze and speed. On large bundles it frequently produced the smallest (or nearly the smallest) gzipped output—echarts, antd, three—and did it hundreds to thousands of times faster than the pure size champion. Where uglify-js eked out the very last kilobyte, @swc/core typically matched that compression within a hair while finishing in a fraction of the time. For teams shipping big bundles or running minification in CI, that trade-off is decisive: tiny transfer wins, without the lava-slow wait.
+**@swc/core** takes the crown, and it wasn't close once you factor in the whole race, not just one lap. It grabbed "most balanced" in nearly every single round, then flexed hardest exactly when it mattered most: outright smallest gzip size on vue, three, echarts, and antd — the meaty, mid-to-large bundles where most real-world apps actually live. Antd is 825 KB of gzipped weight and swc chewed it down to 452 KB in 690 milliseconds. Echarts, a 684 KB beast, got shaved to 321 KB in barely half a second. That is elite-level squeeze without asking you to go make coffee while it runs. Consistency across twelve wildly different codebases is rare, and swc delivered it every single time.
 
 ### Honorable mentions
-- uglify-js — The pure size monarch. Five rounds with the absolute smallest gzip size. If absolute minimal bytes are your religion and you can tolerate multi-second runs on huge artifacts, keep uglify on the altar. Example: “victory” was squeezed to 157.44 KB, but it cost several seconds where swc did almost the same in a few hundred milliseconds.
-- oxc-minify — The surprise giant-slayer. Won the largest TypeScript bundle and showed up fast and tight on several large inputs. Excellent when you want near-top compression on very large codebases and still care about build speed.
-- @cminify/cminify-linux-x64 — The speed demon for big files. Consistently among the fastest, often completing massive bundles in a few dozen milliseconds, but with noticeably worse gzip sizes compared to the top compressors.
-- @tdewolff/minify — Blink-and-you-miss-it speed on smaller packages with solid compression. Great for quick local runs or tiny CI steps.
-- terser — A reliable all-rounder that still commands wins on some classic libs (notably jquery). Good balance for many conventional use cases.
+**oxc-minify** deserves a standing ovation for taking down the single largest challenger in the field. Typescript's 1.88 MB gzip payload got knocked down 55 percent to 853 KB in just 688 milliseconds — that is heavyweight compression at featherweight speed, and it also topped the terser-vs-terser round. If swc is the balanced champion, oxc is the one you call when the file sizes get genuinely scary.
+
+**uglify-js** is the old warhorse who still throws the hardest punch on small-to-mid bundles — react, moment, lodash, d3, and victory all fell hardest under uglify's blade, including a jaw-dropping 74 percent reduction on lodash. But watch the clock: 420 ms, then 906, then 1,394, then 3,272, then 5,712 milliseconds as files grew. That is not a typo, that is a minifier visibly running out of breath. Once the packages got genuinely large (three, echarts, antd, typescript), uglify simply stopped showing up on the podium at all. Raw power, zero stamina.
+
+**@cminify/cminify-linux-x64** is the sprinter of the group — fastest in literally every round, often finishing in the low double-digit milliseconds even on multi-hundred-KB files. The catch: it consistently left the most bytes on the table, trailing the leaders by 15 to 30 percentage points of savings. Perfect for a CI job that needs a quick pass, not the tool you want for your production bundle's final shrink.
+
+**@tdewolff/minify** quietly banked honorable mentions across half the rounds, blending solid compression with consistently snappy times. It is the dependable middle-of-the-pack finisher that never embarrasses itself.
+
+**terser** grabbed a single, glorious win on jquery, proving it can still go toe-to-toe with the best when the moment calls for it, even if it can't keep that pace across the whole card.
 
 ### Eliminated
-- babel-minify — Failed during the "react" run with: "Failed to find JSON start: [baseline-browser-mapping] The data in this module is over two months old. To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`". Disqualified from the leaderboard.
-- tedivm/jshrink — Crashed during "d3" minification: "RuntimeException: Unclosed regex pattern at position: 289075". Crashed and eliminated.
+- **babel-minify** — crashed immediately on the very first bundle (react) due to a stale dependency data error before minification even got underway. Did not survive round one.
+- **tedivm/jshrink** — choked on d3 with an unclosed regex pattern exception, a hard parser failure rather than a compression shortfall. Pulled from the race.
 
 ### Closing remarks
-This was a contest of trade-offs, not moral superiority. Uglify-js is the go-to if you worship minimal bytes and can wait. @swc/core is the pragmatic champion: near-best compression, far better speed, and strong results on the largest, hardest artifacts. oxc-minify and cminify earned their stripes as specialist tools—one squeezing large TypeScript bundles, the other blitzing them at the cost of extra bytes.
-
-Remember: these results only measure gzipped size and minification time. Developer experience, compatibility, and correctness matter in the real world too. Pick the tool that matches your pipeline: if you ship huge bundles and hate long CI times, start with @swc/core. If every kilobyte must be wrung out, give uglify-js a spin. And if you want instant local feedback, try the speed demons and see how they fit. Until next race—keep your bytes tight and your builds fast.
+What a card. Some tools brought brute force, some brought blistering speed, and a couple brought neither and got sent home early. @swc/core and oxc-minify proved you don't have to sacrifice speed for size once codebases get serious, while uglify-js is a reminder that raw compression ratio means little if your build pipeline times out waiting for it. Remember, these numbers are pure performance — they say nothing about API ergonomics, install footprint, or community support, so weigh those factors too before you swap your build tool. Pick your fighter based on what your pipeline actually needs: blistering CI speed, rock-bottom bytes, or the balanced all-rounder that just quietly wins.
 <!-- aiAnalysis:end -->
 
 <details>
 <summary>System prompt</summary>
 <br>
 
-<pre><code><!-- aiSystemPrompt:start --><!-- aiSystemPrompt:end --></code></pre>
+<pre><code><!-- aiSystemPrompt:start -->
+Today&#39;s date is 2026-07-24
+
+You are a JavaScript minification benchmark analyst with a flair for storytelling.
+
+## Objective
+Analyze JavaScript minifiers based strictly on benchmark data: *minified Gzip size* and *minification speed*.
+Present your findings as an entertaining and intuitive commentary, helping readers understand performance trade-offs even if they aren&#39;t familiar with kilobytes, milliseconds, or compression ratios.
+Your job is to narrate the race—not just display the scoreboard.
+
+## Rules of Engagement
+1. Compare only what&#39;s measured: Evaluate each minifier based solely on Gzip size and speed. Avoid assumptions about correctness, compatibility, or code quality unless failures are explicitly shown in the results.
+2. Crown the winner:
+   - Prioritize smallest Gzip size (transfer time matters most).
+   - Consider speed—especially where compression is close. A 10× faster tool with ~1% worse compression might be more practical for CI pipelines.
+   - Bigger source = harder challenge. Reward outstanding performance on large artifacts.
+   - Trade-offs are key. Highlight where a tool sacrifices speed for size (or vice versa), and who manages both impressively.
+3. Context matters:
+   - These benchmarks only capture performance. Real-world adoption also depends on DX: install size, API design, community, etc. Mention that—briefly—but do not evaluate it.
+   - If a tool stands out only in niche scenarios, note it.
+   - If a tool fails validation or breaks input code, eliminate it and warn accordingly.
+
+## Output format
+- Tone: Energetic, cheeky, and dramatic—like a live commentator at a niche sporting event. No emojis.
+- Style: Short, connected sentences. Prioritize flow over bullet lists, except for eliminations.
+- Audience: Readers who want *practical insight* from raw benchmark data—without needing to decode gzip math or performance charts.
+
+## Output structure &amp; example
+```md
+&lt;Quick intro — set the tone. Comment on how fierce or surprising the field was.&gt;
+Three... two... one... compress! Welcome to the Minification Grand Prix, where bytes are sliced, milliseconds count, and no semicolon is safe. This year&#39;s lineup is ferocious, blending familiar veterans with some clever debutants. The competition? Gritty as ever. The stakes? Astronomical. Let’s see who rises to the top of the minification hierarchy!
+
+### Best minifier
+&lt;Name the top performer and justify it. Consider consistency, trade-offs, and standout moments. Call out how hard the decision was if close.&gt;
+
+### Honorable mentions
+&lt;Concisely highlight specific tools that impressed in size, speed, or balance. Mention exciting newcomers or quietly consistent performers.&gt;
+
+### Eliminated
+&lt;List of disqualified minifiers, each with a quick reason (e.g., crash, invalid output, critical bug). Be clear but diplomatic.&gt;
+
+### Closing remarks
+&lt;Closing remarks — Concisely celebrate the competition, acknowledge that DX and correctness also matter, and encourage readers to explore what fits their workflow.&gt;
+```
+
+
+# Minifiers
+- babel-minify v0.5.2 released 2022-05-06
+- bun v1.3.11 released 2026-03-18
+- @cminify/cminify-linux-x64 v3.0.1 released 2025-07-27
+- esbuild v0.27.4 released 2026-03-12
+- google-closure-compiler v20251216.0.0 released 2025-12-18
+- tedivm/jshrink v1.8.1
+- oxc-minify v0.123.0 released 2026-03-31
+- @swc/core v1.15.21 released 2026-03-22
+- @tdewolff/minify v2.24.8 released 2025-12-08
+- terser v5.46.1 released 2026-03-16
+- uglify-js v3.19.3 released 2024-08-29
+
+# Race results
+## Round 1: npm package &quot;react&quot; (19.39 KB gzipped)
+- Best gzip compression: uglify-js: 8.18 KB (58% shaved) in 420 ms
+- Fastest: oxc-minify: 8.40 KB (57% shaved) in 3 ms
+- Most balanced: @swc/core: 8.19 KB (58% shaved) in 18 ms
+- Honorable mention: terser: 8.26 KB (57% shaved) in 215 ms
+
+## Round 2: npm package &quot;moment&quot; (36.23 KB gzipped)
+- Best gzip compression: uglify-js: 18.57 KB (49% shaved) in 906 ms
+- Fastest: @tdewolff/minify: 19.48 KB (46% shaved) in 7 ms
+- Most balanced: @swc/core: 18.75 KB (48% shaved) in 28 ms
+- Honorable mention: terser: 18.69 KB (48% shaved) in 505 ms
+
+## Round 3: npm package &quot;jquery&quot; (84.50 KB gzipped)
+- Best gzip compression: terser: 30.86 KB (63% shaved) in 712 ms
+- Fastest: @tdewolff/minify: 31.45 KB (63% shaved) in 12 ms
+- Most balanced: @swc/core: 30.86 KB (63% shaved) in 50 ms
+- Honorable mention: oxc-minify: 30.92 KB (63% shaved) in 14 ms
+
+## Round 4: npm package &quot;vue&quot; (89.67 KB gzipped)
+- Best gzip compression: @swc/core: 42.72 KB (52% shaved) in 72 ms
+- Fastest: @tdewolff/minify: 44.37 KB (51% shaved) in 15 ms
+- Most balanced: @swc/core: 42.72 KB (52% shaved) in 72 ms
+- Honorable mention: oxc-minify: 43.23 KB (52% shaved) in 17 ms
+
+## Round 5: npm package &quot;lodash&quot; (96.69 KB gzipped)
+- Best gzip compression: uglify-js: 24.69 KB (74% shaved) in 1,394 ms
+- Fastest: @cminify/cminify-linux-x64: 35.94 KB (63% shaved) in 13 ms
+- Most balanced: @swc/core: 25.24 KB (74% shaved) in 52 ms
+- Honorable mention: oxc-minify: 25.90 KB (73% shaved) in 13 ms
+
+## Round 6: npm package &quot;d3&quot; (130.69 KB gzipped)
+- Best gzip compression: uglify-js: 87.02 KB (33% shaved) in 3,272 ms
+- Fastest: @cminify/cminify-linux-x64: 103.81 KB (21% shaved) in 23 ms
+- Most balanced: @swc/core: 87.22 KB (33% shaved) in 149 ms
+- Honorable mention: oxc-minify: 87.96 KB (33% shaved) in 41 ms
+
+## Round 7: npm package &quot;terser&quot; (193.76 KB gzipped)
+- Best gzip compression: oxc-minify: 122.00 KB (37% shaved) in 37 ms
+- Fastest: @cminify/cminify-linux-x64: 144.30 KB (26% shaved) in 21 ms
+- Most balanced: oxc-minify: 122.00 KB (37% shaved) in 37 ms
+- Honorable mention: @swc/core: 123.29 KB (36% shaved) in 132 ms
+
+## Round 8: npm package &quot;three&quot; (248.27 KB gzipped)
+- Best gzip compression: @swc/core: 158.73 KB (36% shaved) in 199 ms
+- Fastest: @cminify/cminify-linux-x64: 191.97 KB (23% shaved) in 23 ms
+- Most balanced: @swc/core: 158.73 KB (36% shaved) in 199 ms
+- Honorable mention: oxc-minify: 159.91 KB (36% shaved) in 56 ms
+
+## Round 9: npm package &quot;victory&quot; (309.94 KB gzipped)
+- Best gzip compression: uglify-js: 157.44 KB (49% shaved) in 5,712 ms
+- Fastest: @cminify/cminify-linux-x64: 221.12 KB (29% shaved) in 44 ms
+- Most balanced: @swc/core: 157.74 KB (49% shaved) in 301 ms
+- Honorable mention: oxc-minify: 160.88 KB (48% shaved) in 95 ms
+
+## Round 10: npm package &quot;echarts&quot; (684.61 KB gzipped)
+- Best gzip compression: @swc/core: 321.08 KB (53% shaved) in 551 ms
+- Fastest: @cminify/cminify-linux-x64: 434.45 KB (37% shaved) in 50 ms
+- Most balanced: oxc-minify: 323.08 KB (53% shaved) in 224 ms
+- Honorable mention: @tdewolff/minify: 331.76 KB (52% shaved) in 120 ms
+
+## Round 11: npm package &quot;antd&quot; (825.18 KB gzipped)
+- Best gzip compression: @swc/core: 452.46 KB (45% shaved) in 690 ms
+- Fastest: @cminify/cminify-linux-x64: 623.37 KB (24% shaved) in 72 ms
+- Most balanced: oxc-minify: 456.09 KB (45% shaved) in 282 ms
+- Honorable mention: @tdewolff/minify: 471.64 KB (43% shaved) in 140 ms
+
+## Round 12: npm package &quot;typescript&quot; (1.88 MB gzipped)
+- Best gzip compression: oxc-minify: 853.09 KB (55% shaved) in 688 ms
+- Fastest: @cminify/cminify-linux-x64: 1.13 MB (40% shaved) in 108 ms
+- Most balanced: oxc-minify: 853.09 KB (55% shaved) in 688 ms
+- Honorable mention: @tdewolff/minify: 875.77 KB (54% shaved) in 266 ms
+
+# Eliminated
+## babel-minify
+Failed &quot;react&quot; in undefined stage:
+&quot;Failed to find JSON start:\n[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`&quot;
+
+## tedivm/jshrink
+Failed &quot;d3&quot; in minification stage:
+&quot;RuntimeException: Unclosed regex pattern at position: 289075 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:660&quot;
+<!-- aiSystemPrompt:end --></code></pre>
 </details>
 
 ## Sponsors

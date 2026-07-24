@@ -48,7 +48,7 @@ jobs:
       - name: Update README
         run: pnpm update-readme
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          VERCEL_AI_GATEWAY_API_KEY: ${{ secrets.VERCEL_AI_GATEWAY_API_KEY }}
 
       - name: Commit README.md
         run: |
