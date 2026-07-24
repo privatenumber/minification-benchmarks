@@ -24,7 +24,7 @@ export const getAiAnalysis = async (
 	const systemPromptWithDate = `${todaysDate}\n\n${systemPrompt}`;
 
 	const { text } = await generateText({
-		model: gateway('openai/gpt-5-mini'),
+		model: gateway('anthropic/claude-sonnet-5'),
 		instructions: systemPromptWithDate,
 		prompt: message,
 	});
