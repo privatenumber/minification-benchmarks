@@ -48,7 +48,7 @@ jobs:
       - name: Update README
         run: pnpm update-readme
         env:
-          AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
+          VERCEL_AI_GATEWAY_API_KEY: ${{ secrets.VERCEL_AI_GATEWAY_API_KEY }}
 
       - name: Commit README.md
         run: |

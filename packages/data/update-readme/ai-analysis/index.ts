@@ -1,8 +1,11 @@
 import fs from 'node:fs/promises';
-import { generateText } from 'ai';
+import { createGateway, generateText } from 'ai';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
 import type { AnalyzedData } from '../analyzed-data.ts';
 import { getMessage } from './get-message.ts';
+
+const apiKey = process.env.VERCEL_AI_GATEWAY_API_KEY;
+const gateway = createGateway({ apiKey });
 
 export const getAiAnalysis = async (
 	minifiers: MinifierLoaded[],
@@ -13,15 +16,15 @@ export const getAiAnalysis = async (
 	const systemPrompt = await fs.readFile(systemPromptPath.pathname, 'utf8');
 	const message = await getMessage(minifiers, data);
 
-	if (!process.env.AI_GATEWAY_API_KEY) {
-		console.warn('Skipping AI analysis due to missing AI_GATEWAY_API_KEY');
+	if (!apiKey) {
+		console.warn('Skipping AI analysis due to missing VERCEL_AI_GATEWAY_API_KEY');
 		return;
 	}
 
 	const systemPromptWithDate = `${todaysDate}\n\n${systemPrompt}`;
 
 	const { text } = await generateText({
-		model: 'openai/gpt-5-mini',
+		model: gateway('openai/gpt-5-mini'),
 		instructions: systemPromptWithDate,
 		prompt: message,
 	});
