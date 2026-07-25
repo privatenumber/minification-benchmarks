@@ -4,6 +4,19 @@ on:
   pull_request:
     branches: [master]
   workflow_dispatch:
+    inputs:
+      minifier:
+        description: Minifier name or regular expression (empty refreshes all)
+        required: false
+        type: string
+      artifact:
+        description: Artifact name or regular expression (empty refreshes all)
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   build:
@@ -14,36 +27,56 @@ jobs:
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
-          ref: ${{ github.head_ref }}
+          persist-credentials: false
+          ref: ${{ github.event_name == 'workflow_dispatch' && 'master' || github.head_ref }}
           repository: ${{ github.repository }}
 
       - name: Use Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
           node-version-file: .nvmrc
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v3
+        uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271 # v6
         with:
           run_install: true
 
       # For jshrink
       - name: Setup Composer
-        uses: php-actions/composer@v6
+        uses: php-actions/composer@8a65f0d3c6a1d17ca4800491a40b5756a4c164f3 # v6
         with:
           working_dir: packages/minifiers
 
       # For Google Closure Compiler
       - name: Setup Java
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@c1e323688fd81a25caa38c78aa6df2d33d3e20d9 # v4
         with:
           distribution: temurin
           java-version: "21"
 
       - name: Benchmark
+        if: github.event_name == 'pull_request'
         run: pnpm bench-all
+
+      - name: Force benchmark refresh
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          ARTIFACT_FILTER: ${{ inputs.artifact }}
+          MINIFIER_FILTER: ${{ inputs.minifier }}
+        run: |
+          set -euo pipefail
+
+          arguments=(--force)
+          if [[ -n "$ARTIFACT_FILTER" ]]; then
+            arguments+=(--artifact "$ARTIFACT_FILTER")
+          fi
+          if [[ -n "$MINIFIER_FILTER" ]]; then
+            arguments+=(--minifier "$MINIFIER_FILTER")
+          fi
+
+          pnpm bench-all "${arguments[@]}"
 
       - name: Update README
         run: pnpm update-readme
@@ -51,10 +84,56 @@ jobs:
           VERCEL_AI_GATEWAY_API_KEY: ${{ secrets.VERCEL_AI_GATEWAY_API_KEY }}
 
       - name: Commit README.md
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           # Ignored by Renovate
+          gh auth setup-git
           git config user.name GitHub Actions
           git config user.email github-actions@github.com
           git add README.md packages/data/data/data.json
           git diff-index --quiet HEAD || git commit -nm "chore: updated benchmarks"
           git push
+
+      - name: Open pull request
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          ARTIFACT_FILTER: ${{ inputs.artifact }}
+          GH_TOKEN: ${{ github.token }}
+          MINIFIER_FILTER: ${{ inputs.minifier }}
+        run: |
+          set -euo pipefail
+
+          git add README.md packages/data/data/data.json
+          if git diff --cached --quiet; then
+            echo "No benchmark changes to submit"
+            exit 0
+          fi
+
+          git config user.name GitHub Actions
+          git config user.email github-actions@github.com
+          gh auth setup-git
+
+          branch="refresh-benchmarks-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git switch -c "$branch"
+          git commit -nm "chore: refresh benchmark results"
+          git push --set-upstream origin "$branch"
+
+          body="Force-refreshes benchmark results from the manual Benchmark workflow."
+          if [[ -n "$MINIFIER_FILTER" ]]; then
+            body+=$'\n\nMinifier filter: `'
+            body+="$MINIFIER_FILTER"
+            body+='`'
+          fi
+          if [[ -n "$ARTIFACT_FILTER" ]]; then
+            body+=$'\n\nArtifact filter: `'
+            body+="$ARTIFACT_FILTER"
+            body+='`'
+          fi
+
+          gh pr create \
+            --base master \
+            --head "$branch" \
+            --title "chore: refresh benchmark results" \
+            --body "$body"
