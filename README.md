@@ -25,7 +25,7 @@ This project benchmarks the following minifiers:
 | [tedivm/jshrink](https://github.com/tedious/JShrink) | 1.8.1 |  |
 <!-- minifiers:end -->
 
-_Benchmarks last updated on <!-- lastUpdated:start -->Jul 24, 2026<!-- lastUpdated:end -->._
+_Benchmarks last updated on <!-- lastUpdated:start -->Jul 25, 2026<!-- lastUpdated:end -->._
 
 <br>
 
@@ -424,37 +424,32 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 > 🤖 This analysis is AI generated. See below for the system prompt.
 
 <!-- aiAnalysis:start -->
-# The Minification Grand Prix: 12 Rounds of Byte-Shaving Mayhem
-
-Twelve npm packages. Eleven contenders. One goal: crush code down to its smallest, fastest-loading form without breaking a sweat—or the syntax. From the featherweight "react" to the typescript behemoth clocking in at nearly 2 megabytes, this race had everything. Early sprinters flamed out, a couple of veterans refused to compromise on size no matter the time cost, and one newcomer quietly lapped the field as the packages got heavier. Let's break down who deserves the podium.
+```md
+Ladies and gentlemen, start your compressors! Twelve rounds, eleven contenders, and file sizes ranging from a dainty 19 KB React bundle to a genuinely unhinged 1.88 MB TypeScript compiler dump. This wasn't just a benchmark — it was a gauntlet. Some tools sprinted, some tools crawled with a trophy in hand, and two contenders spectacularly imploded before they even reached the finish line. Let's get into it.
 
 ### Best minifier
-
-**@swc/core** takes the crown, and it wasn't close once you factor in the whole picture. Look at the pattern: round after round, it either wins outright on compression or sits within a rounding error of the winner—while doing it in milliseconds, not seconds. On "jquery," "vue," "three," and "echarts," @swc/core delivered the single smallest gzip output *and* did it fast enough to be labeled "most balanced" nearly every time. That's not a fluke, that's a system.
-
-Compare that to uglify-js, which absolutely wins on raw compression in several rounds—"moment," "lodash," "d3," "victory"—but at a brutal cost. On "victory" alone, uglify-js took 5.7 *seconds* to shave a bit more fat than the field. On "d3," 3.2 seconds for a 33% cut that oxc-minify essentially matched in 37 milliseconds. That's an 88x time penalty for marginal gains. In a CI pipeline running thousands of builds a day, that's not dedication—that's a bottleneck.
-
-@swc/core proved you don't have to choose. It's consistently top-tier on size and finishes its work before slower tools have finished loading their config files.
+The crown goes to **oxc-minify**, and here's why the decision — while close — ultimately wasn't a coin flip. Early on, oxc looked like the "fast but not the smallest" kid in class, consistently clocking single-digit-to-low-double-digit millisecond times while conceding a sliver of compression to the heavyweights. But watch what happens as the files get monstrous. On the 825 KB antd bundle, oxc wins outright on size AND does it in 255 ms — nearly three times faster than its closest size rival. On the colossal 1.88 MB TypeScript bundle, oxc doesn't just win, it wins by shaving 55% off the payload in 531 milliseconds, a time that would barely register a blip in most CI pipelines. That's the real story here: oxc doesn't just compete at scale, it dominates at scale, and scale is where minifiers earn their keep. Consistent top-three finishes across all twelve rounds, plus podium-topping speed almost everywhere, make it the most complete athlete on the track.
 
 ### Honorable mentions
+**@swc/core** deserves a standing ovation. It topped the "best gzip" leaderboard outright on jquery, vue, three, and echarts, and was tagged "most balanced" in nearly every single round. It's the decathlete of this competition — never flashy in just one event, but relentlessly excellent across all of them. If oxc is the scale champion, swc is the Swiss Army knife.
 
-**oxc-minify** is the breakout star of the back half of this race. As packages ballooned into the hundreds of kilobytes and beyond, oxc-minify started winning outright—"terser," "antd," "typescript"—all while running at speeds that make uglify-js look like it's minifying by hand. On "typescript," it shaved 55% off nearly 2MB in just 531ms. That's the kind of scaling that matters when your bundle isn't a toy example.
+**uglify-js** is the old-school power-lifter. It posted the best raw compression on react, moment, lodash, d3, and victory — genuinely impressive numbers, shaving 74% off lodash at one point. But the cost is brutal: 5,712 milliseconds to squeeze victory down, compared to swc's near-identical result in 244 ms. That's more than twenty times slower for a rounding-error difference in size. Uglify-js is the guy who wins the bench-press competition but takes an hour between reps — brilliant output, questionable for anyone on a deadline.
 
-**@tdewolff/minify** is the speed demon's speed demon. It topped the "fastest" category in almost every single round, often finishing in single-digit milliseconds even on large payloads, and its compression, while rarely table-topping, was never embarrassing—usually within 1-3% of the leaders. If your CI cares about wall-clock time above all, this is your dark horse.
+**@cminify/cminify-linux-x64** wins the "fastest raw speed" trophy in almost every single round, often finishing in the 12-70 ms range regardless of file size. The catch: it consistently leaves the most bytes on the table, sometimes 10-15 percentage points behind the compression leaders. Great for a quick-and-dirty pass, not the tool you call when every kilobyte matters.
 
-**@cminify/cminify-linux-x64** deserves a nod purely for consistency of speed on huge files—routinely the fastest or near-fastest on anything over 100KB—even though its compression ratios lagged well behind the leaders (that "d3" result, 21% shaved versus uglify's 33%, shows the gap widens on gnarlier code).
+**@tdewolff/minify** quietly picked up fastest-tool honors on several mid-size rounds and stayed competitive on compression throughout — a dependable, understated performer.
 
-**terser** held its own in the early lightweight rounds as a dependable, slightly-slower-but-still-respectable middle-of-the-pack performer—no disasters, no fireworks, just steady work.
+**terser** flashed some early brilliance (honorable mentions on react and moment) but faded from the spotlight as file sizes ballooned — strong at the sprint, less visible at the marathon.
+
+Special mention to the no-shows: **google-closure-compiler** and **bun** never once cracked a podium category across all twelve rounds. Not disqualified, not broken — just invisible in a field this competitive. Sometimes silence speaks volumes.
 
 ### Eliminated
-
-**babel-minify** — Crashed out at the very first hurdle on "react," tripped up by a stale internal browser-data dependency throwing a JSON parsing error. Never got off the starting line.
-
-**tedivm/jshrink** — Made it through five rounds respectably, then choked on "d3" with an unclosed regex pattern exception. A hard crash on real-world code is a hard no for production use, regardless of how it performed before that.
+- **babel-minify**: Face-planted immediately on the very first round (react), tripped up by a stale dependency data error before minification even got going. Didn't even get a chance to compete.
+- **tedivm/jshrink**: Choked on the d3 package with an unclosed regex pattern exception, crashing mid-minification. A hard stop that disqualifies it from anything involving gnarlier real-world code.
 
 ### Closing remarks
-
-What a card. The story of this race is really the story of a shifting frontier: uglify-js reminding us that raw compression obsession still has fans willing to pay in seconds, while @swc/core and oxc-minify prove that modern tooling can deliver both speed and squeeze without forcing you to pick a side. @tdewolff/minify and @cminify show there's real appetite for tools that prioritize throughput above all else. Numbers don't lie, but they also don't tell you everything—installation footprint, plugin ecosystems, and how a tool handles your particular edge-case syntax still matter enormously. Take these results as a strong compass, not gospel, and pick the minifier that matches the shape of your actual pipeline, not just the podium finish.
+What a field. Some tools chase the smallest possible byte count and are willing to burn seconds doing it. Others treat speed as sacred and give up a little compression for it. oxc-minify and swc proved you can have both — consistency, size, and speed — without major compromises, especially once file sizes get serious. But raw numbers are only half the story: install footprint, API ergonomics, and community support all matter once these tools leave the benchmark and enter your actual build pipeline. Take these results as your starting line, not your finish line — and pick the minifier that fits the race you're actually running.
+```
 <!-- aiAnalysis:end -->
 
 <details>
@@ -462,7 +457,7 @@ What a card. The story of this race is really the story of a shifting frontier: 
 <br>
 
 <pre><code><!-- aiSystemPrompt:start -->
-Today&#39;s date is 2026-07-24
+Today&#39;s date is 2026-07-25
 
 You are a JavaScript minification benchmark analyst with a flair for storytelling.
 
