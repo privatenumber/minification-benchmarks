@@ -53,8 +53,8 @@ jobs:
       - name: Commit README.md
         run: |
           # Ignored by Renovate
-          git config user.name GitHub Actions
-          git config user.email github-actions@github.com
+          git config user.name "minification-benchmarks automation"
+          git config user.email actions@users.noreply.github.com
           git add README.md packages/data/data/data.json
-          git diff-index --quiet HEAD || git commit -nm "chore: updated benchmarks"
+          git diff-index --quiet HEAD || git commit -nm "chore: update benchmark results"
           git push
