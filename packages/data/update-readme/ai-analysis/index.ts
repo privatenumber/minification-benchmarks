@@ -24,7 +24,7 @@ export const getAiAnalysis = async (
 	const systemPromptWithDate = `${todaysDate}\n\n${systemPrompt}`;
 
 	const { text } = await generateText({
-		model: gateway('anthropic/claude-sonnet-5'),
+		model: gateway('zai/glm-5.3-flash'),
 		instructions: systemPromptWithDate,
 		prompt: message,
 	});
