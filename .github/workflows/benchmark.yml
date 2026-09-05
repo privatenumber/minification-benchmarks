@@ -42,19 +42,32 @@ jobs:
           distribution: temurin
           java-version: "21"
 
+      - name: Configure Git
+        run: |
+          git config user.name "minification-benchmarks automation"
+          git config user.email actions@users.noreply.github.com
+
       - name: Benchmark
         run: pnpm bench-all
+
+      - name: Commit benchmark results
+        run: |
+          # Ignored by Renovate
+          git add packages/data/data/data.json
+          if ! git diff --cached --quiet; then
+            git commit -nm "chore: update benchmark results"
+            git push
+          fi
 
       - name: Update README
         run: pnpm update-readme
         env:
           VERCEL_AI_GATEWAY_API_KEY: ${{ secrets.VERCEL_AI_GATEWAY_API_KEY }}
 
-      - name: Commit README.md
+      - name: Commit benchmark report
         run: |
-          # Ignored by Renovate
-          git config user.name GitHub Actions
-          git config user.email github-actions@github.com
-          git add README.md packages/data/data/data.json
-          git diff-index --quiet HEAD || git commit -nm "chore: updated benchmarks"
-          git push
+          git add README.md
+          if ! git diff --cached --quiet; then
+            git commit -nm "docs: update benchmark report"
+            git push
+          fi
