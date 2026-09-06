@@ -1,5 +1,4 @@
 import fs from 'node:fs/promises';
-import crypto from 'node:crypto';
 import { createGateway, generateText } from 'ai';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
 import type { AnalyzedData } from '../analyzed-data.ts';
@@ -8,18 +7,9 @@ import { getMessage } from './get-message.ts';
 const apiKey = process.env.VERCEL_AI_GATEWAY_API_KEY;
 const gateway = createGateway({ apiKey });
 
-const dataPath = new URL('../../data/data.json', import.meta.url);
-
-// Identifies the benchmark data an AI analysis was generated from
-export const getDataHash = async () => {
-	const contents = await fs.readFile(dataPath, 'utf8');
-	return crypto.createHash('sha256').update(contents).digest('hex').slice(0, 10);
-};
-
 export const getAiAnalysis = async (
 	minifiers: MinifierLoaded[],
 	data: AnalyzedData,
-	dataHash: string,
 ) => {
 	if (!apiKey) {
 		console.warn('Skipping AI analysis due to missing VERCEL_AI_GATEWAY_API_KEY');
@@ -42,6 +32,5 @@ export const getAiAnalysis = async (
 	return {
 		systemPrompt: `${systemPromptWithDate}\n\n${message}`,
 		analysis: text.replaceAll('\n---\n', ''),
-		dataHash,
 	};
 };

@@ -1,5 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
+import crypto from 'node:crypto';
 import { outdent } from 'outdent';
 import { commentMark, getCommentMarks } from 'comment-mark';
 import { format } from 'date-fns';
@@ -10,7 +11,7 @@ import { getMinifiers } from '@minification-benchmarks/minifiers';
 import md from 'md-pen';
 import { byteSize } from '../utils/byte-size.ts';
 import { percent, formatMs } from './formatting.ts';
-import { getAiAnalysis, getDataHash } from './ai-analysis/index.ts';
+import { getAiAnalysis } from './ai-analysis/index.ts';
 import {
 	getAnalyzedData, type AnalyzedData, type AnalyzedArtifact,
 } from './analyzed-data.ts';
@@ -136,14 +137,22 @@ const minifiers = await getMinifiers();
 const analyzedData = getAnalyzedData();
 
 const readmePath = './README.md';
-const readme = await fs.readFile(readmePath, 'utf8');
+const [readme, dataContents] = await Promise.all([
+	fs.readFile(readmePath, 'utf8'),
+	fs.readFile(new URL('../data/data.json', import.meta.url), 'utf8'),
+]);
 
-const dataHash = await getDataHash();
-// The AI analysis section records the data hash it was generated from, so
-// unchanged benchmark data reuses the existing analysis instead of
-// re-requesting it
-const existingAnalysisHash = getCommentMarks(readme).aiAnalysis?.match(
-	/^<!--\s*data-hash:\s*(\S+)\s*-->/,
+// Identifies the benchmark data the AI analysis was generated from
+const dataHash = crypto
+	.createHash('sha256')
+	.update(dataContents)
+	.digest('hex')
+	.slice(0, 10);
+
+const existingSections = getCommentMarks(readme);
+const existingAnalysisHash = existingSections.aiAnalysis?.match(
+	// commentMark wraps multiline replacements in newlines, so allow leading whitespace
+	/^\s*<!--\s*data-hash:\s*(\S+)\s*-->/,
 )?.[1];
 const isAnalysisCurrent = existingAnalysisHash === dataHash;
 const ai = isAnalysisCurrent
@@ -151,7 +160,6 @@ const ai = isAnalysisCurrent
 	: await getAiAnalysis(
 		minifiers,
 		analyzedData,
-		dataHash,
 	);
 
 const minifiersList = md.table([
@@ -186,14 +194,20 @@ const escapeHtml = (string_ = '') => string_
 	.replaceAll('"', '&quot;')
 	.replaceAll('\'', '&#39;');
 
+const benchmarks = generateBenchmarks(analyzedData);
+
 const newReadme = commentMark(readme, {
-	// Leave the date untouched when the benchmark data is unchanged so runs
-	// don't produce a date-only commit
-	lastUpdated: isAnalysisCurrent ? undefined : format(utcToday, 'MMM d, y'),
-	benchmarks: generateBenchmarks(analyzedData),
+	// Update the date only when the rendered benchmark section actually changed,
+	// so unchanged data doesn't produce a date-only commit
+	lastUpdated: existingSections.benchmarks?.trim() === benchmarks.trim()
+		? undefined
+		: format(utcToday, 'MMM d, y'),
+	benchmarks,
 	minifiers: minifiersList,
 	aiSystemPrompt: ai && escapeHtml(ai.systemPrompt),
-	aiAnalysis: ai && `<!-- data-hash: ${ai.dataHash} -->\n${ai.analysis}`,
+	// Record the hash only on a successful generation, so a skipped or failed
+	// run never marks the old analysis as current
+	aiAnalysis: ai && `<!-- data-hash: ${dataHash} -->\n${ai.analysis}`,
 });
 
 await fs.writeFile(readmePath, newReadme);
