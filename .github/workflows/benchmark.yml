@@ -55,7 +55,8 @@ jobs:
           # Ignored by Renovate
           git add packages/data/data/data.json
           if ! git diff --cached --quiet; then
-            git commit -nm "chore: update benchmark results"
+            # [skip ci] so the generated commits don't trigger approval-required runs
+            git commit -nm "chore: update benchmark results [skip ci]"
             git push
           fi
 
@@ -68,6 +69,6 @@ jobs:
         run: |
           git add README.md
           if ! git diff --cached --quiet; then
-            git commit -nm "docs: update benchmark report"
+            git commit -nm "docs: update benchmark report [skip ci]"
             git push
           fi
