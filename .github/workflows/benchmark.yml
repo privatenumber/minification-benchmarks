@@ -14,18 +14,18 @@ jobs:
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.head_ref }}
           repository: ${{ github.repository }}
 
       - name: Use Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v3
+        uses: pnpm/action-setup@v6
         with:
           run_install: true
 
@@ -37,7 +37,7 @@ jobs:
 
       # For Google Closure Compiler
       - name: Setup Java
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v6
         with:
           distribution: temurin
           java-version: "21"
@@ -50,8 +50,27 @@ jobs:
           # as automation
           git config user.email github-actions@github.com
 
+      # Renovate recreates its branches from the base branch, discarding the
+      # generated results commit. Cache data.json so the benchmark only re-runs
+      # measurements whose inputs changed.
+      - name: Restore benchmark results
+        id: benchmark-cache
+        uses: actions/cache/restore@v6
+        with:
+          path: packages/data/data/data.json
+          key: benchmark-${{ hashFiles('pnpm-lock.yaml', 'packages/minifiers/composer.lock', 'packages/data/data/data.json') }}
+
       - name: Benchmark
         run: pnpm bench-all
+
+      # Save before committing so the results survive failures in the
+      # commit or report steps
+      - name: Save benchmark results
+        if: steps.benchmark-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v6
+        with:
+          path: packages/data/data/data.json
+          key: ${{ steps.benchmark-cache.outputs.cache-primary-key }}
 
       - name: Commit benchmark results
         run: |
