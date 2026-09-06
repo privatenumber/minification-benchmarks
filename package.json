@@ -12,7 +12,7 @@
 		"prepare": "skills-npm --yes --agents '*'",
 		"bench": "node packages/bench/benchmark/cli.ts",
 		"bench-all": "node packages/bench/benchmark-all/cli.ts",
-		"test": "node packages/bench/tests/index.ts",
+		"test": "node packages/bench/tests/index.ts && node packages/data/tests/index.ts",
 		"update-readme": "node --env-file-if-exists=.env packages/data/update-readme/index.ts",
 		"lint": "lintroll --cache . --ignore-pattern ./packages/data/data/data.json",
 		"type-check": "tsc"
