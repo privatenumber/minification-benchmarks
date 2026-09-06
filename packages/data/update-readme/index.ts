@@ -151,6 +151,7 @@ const ai = isAnalysisCurrent
 	: await getAiAnalysis(
 		minifiers,
 		analyzedData,
+		dataHash,
 	);
 
 const minifiersList = md.table([
