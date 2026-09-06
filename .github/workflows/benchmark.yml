@@ -5,12 +5,6 @@ on:
     branches: [master]
   workflow_dispatch:
 
-env:
-  # Part of the benchmark checkpoint cache key below. Bump when benchmark
-  # results are affected by something the checkpoint inputs don't capture,
-  # such as a runner image change or benchmark settings configured here.
-  BENCHMARK_CHECKPOINT_VERSION: v1
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -58,62 +52,25 @@ jobs:
 
       # Renovate recreates its branches from the base branch, discarding the
       # generated results commit. Cache data.json so the benchmark only re-runs
-      # measurements whose inputs changed. The key fingerprints the benchmark
-      # inputs and the checked-out results, so a restored checkpoint can never
-      # overwrite newer committed results. Report generation is excluded:
-      # README-only changes reuse the cached results.
-      - name: Compute benchmark checkpoint key
-        id: checkpoint-key
-        run: |
-          files_hash=$(
-            git ls-files -z -- \
-              pnpm-lock.yaml \
-              pnpm-workspace.yaml \
-              package.json \
-              .nvmrc \
-              packages/bench \
-              packages/minifiers \
-              packages/artifacts \
-              packages/utils \
-              packages/data \
-              ':(exclude)packages/data/update-readme' \
-              | xargs -0 sha256sum \
-              | sha256sum \
-              | cut -d' ' -f1
-          )
-          # Only capture major/minor runtime versions so runner image updates
-          # don't invalidate otherwise-identical checkpoints
-          runtime_hash=$(
-            printf '%s\n' \
-              "$RUNNER_OS" \
-              "$RUNNER_ARCH" \
-              "$(. /etc/os-release && echo "$VERSION_ID")" \
-              "$(node -p 'process.versions.node.split(".").slice(0, 2).join(".")')" \
-              "$(php -r 'echo PHP_MAJOR_VERSION, ".", PHP_MINOR_VERSION;')" \
-              "$(java -version 2>&1 | head -n1 | sed -E 's/.*"([0-9]+).*/\1/')" \
-              | sha256sum \
-              | cut -d' ' -f1
-          )
-          echo "key=benchmark-checkpoint-${BENCHMARK_CHECKPOINT_VERSION}-${files_hash}-${runtime_hash}" >> "$GITHUB_OUTPUT"
-
-      - name: Restore benchmark checkpoint
-        id: checkpoint
+      # measurements whose inputs changed.
+      - name: Restore benchmark results
+        id: benchmark-cache
         uses: actions/cache/restore@v6
         with:
           path: packages/data/data/data.json
-          key: ${{ steps.checkpoint-key.outputs.key }}
+          key: benchmark-${{ hashFiles('pnpm-lock.yaml', 'packages/minifiers/composer.lock', 'packages/data/data/data.json') }}
 
       - name: Benchmark
         run: pnpm bench-all
 
-      # Save before committing so the checkpoint survives failures in the
+      # Save before committing so the results survive failures in the
       # commit or report steps
-      - name: Save benchmark checkpoint
-        if: steps.checkpoint.outputs.cache-hit != 'true'
+      - name: Save benchmark results
+        if: steps.benchmark-cache.outputs.cache-hit != 'true'
         uses: actions/cache/save@v6
         with:
           path: packages/data/data/data.json
-          key: ${{ steps.checkpoint-key.outputs.key }}
+          key: ${{ steps.benchmark-cache.outputs.cache-primary-key }}
 
       - name: Commit benchmark results
         run: |
