@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { outdent } from 'outdent';
-import { commentMark } from 'comment-mark';
+import { commentMark, getCommentMarks } from 'comment-mark';
 import { format } from 'date-fns';
 import { capitalize } from 'lodash-es';
 import type { BenchmarkResultSuccessWithRuns } from '@minification-benchmarks/bench/types.ts';
@@ -10,7 +10,7 @@ import { getMinifiers } from '@minification-benchmarks/minifiers';
 import md from 'md-pen';
 import { byteSize } from '../utils/byte-size.ts';
 import { percent, formatMs } from './formatting.ts';
-import { getAiAnalysis } from './ai-analysis/index.ts';
+import { getAiAnalysis, getDataHash } from './ai-analysis/index.ts';
 import {
 	getAnalyzedData, type AnalyzedData, type AnalyzedArtifact,
 } from './analyzed-data.ts';
@@ -134,13 +134,24 @@ const generateBenchmarks = (
 const minifiers = await getMinifiers();
 
 const analyzedData = getAnalyzedData();
-const ai = await getAiAnalysis(
-	minifiers,
-	analyzedData,
-);
 
 const readmePath = './README.md';
 const readme = await fs.readFile(readmePath, 'utf8');
+
+const dataHash = await getDataHash();
+// The AI analysis section records the data hash it was generated from, so
+// unchanged benchmark data reuses the existing analysis instead of
+// re-requesting it
+const existingAnalysisHash = getCommentMarks(readme).aiAnalysis?.match(
+	/^<!--\s*data-hash:\s*(\S+)\s*-->/,
+)?.[1];
+const isAnalysisCurrent = existingAnalysisHash === dataHash;
+const ai = isAnalysisCurrent
+	? undefined
+	: await getAiAnalysis(
+		minifiers,
+		analyzedData,
+	);
 
 const minifiersList = md.table([
 	['Minifier', 'Version', 'Release date ↓'],
@@ -175,11 +186,13 @@ const escapeHtml = (string_ = '') => string_
 	.replaceAll('\'', '&#39;');
 
 const newReadme = commentMark(readme, {
-	lastUpdated: format(utcToday, 'MMM d, y'),
+	// Leave the date untouched when the benchmark data is unchanged so runs
+	// don't produce a date-only commit
+	lastUpdated: isAnalysisCurrent ? undefined : format(utcToday, 'MMM d, y'),
 	benchmarks: generateBenchmarks(analyzedData),
 	minifiers: minifiersList,
-	aiSystemPrompt: escapeHtml(ai?.systemPrompt),
-	aiAnalysis: ai?.analysis,
+	aiSystemPrompt: ai && escapeHtml(ai.systemPrompt),
+	aiAnalysis: ai && `<!-- data-hash: ${ai.dataHash} -->\n${ai.analysis}`,
 });
 
 await fs.writeFile(readmePath, newReadme);
