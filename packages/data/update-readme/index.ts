@@ -1,7 +1,8 @@
 import fs from 'fs/promises';
 import path from 'path';
+import crypto from 'node:crypto';
 import { outdent } from 'outdent';
-import { commentMark } from 'comment-mark';
+import { commentMark, getCommentMarks } from 'comment-mark';
 import { format } from 'date-fns';
 import { capitalize } from 'lodash-es';
 import type { BenchmarkResultSuccessWithRuns } from '@minification-benchmarks/bench/types.ts';
@@ -134,13 +135,32 @@ const generateBenchmarks = (
 const minifiers = await getMinifiers();
 
 const analyzedData = getAnalyzedData();
-const ai = await getAiAnalysis(
-	minifiers,
-	analyzedData,
-);
 
 const readmePath = './README.md';
-const readme = await fs.readFile(readmePath, 'utf8');
+const [readme, dataContents] = await Promise.all([
+	fs.readFile(readmePath, 'utf8'),
+	fs.readFile(new URL('../data/data.json', import.meta.url), 'utf8'),
+]);
+
+// Identifies the benchmark data the AI analysis was generated from
+const dataHash = crypto
+	.createHash('sha256')
+	.update(dataContents)
+	.digest('hex')
+	.slice(0, 10);
+
+const existingSections = getCommentMarks(readme);
+const existingAnalysisHash = existingSections.aiAnalysis?.match(
+	// commentMark wraps multiline replacements in newlines, so allow leading whitespace
+	/^\s*<!--\s*data-hash:\s*(\S+)\s*-->/,
+)?.[1];
+const isAnalysisCurrent = existingAnalysisHash === dataHash;
+const ai = isAnalysisCurrent
+	? undefined
+	: await getAiAnalysis(
+		minifiers,
+		analyzedData,
+	);
 
 const minifiersList = md.table([
 	['Minifier', 'Version', 'Release date ↓'],
@@ -174,12 +194,20 @@ const escapeHtml = (string_ = '') => string_
 	.replaceAll('"', '&quot;')
 	.replaceAll('\'', '&#39;');
 
+const benchmarks = generateBenchmarks(analyzedData);
+
 const newReadme = commentMark(readme, {
-	lastUpdated: format(utcToday, 'MMM d, y'),
-	benchmarks: generateBenchmarks(analyzedData),
+	// Update the date only when the rendered benchmark section actually changed,
+	// so unchanged data doesn't produce a date-only commit
+	lastUpdated: existingSections.benchmarks?.trim() === benchmarks.trim()
+		? undefined
+		: format(utcToday, 'MMM d, y'),
+	benchmarks,
 	minifiers: minifiersList,
-	aiSystemPrompt: escapeHtml(ai?.systemPrompt),
-	aiAnalysis: ai?.analysis,
+	aiSystemPrompt: ai && escapeHtml(ai.systemPrompt),
+	// Record the hash only on a successful generation, so a skipped or failed
+	// run never marks the old analysis as current
+	aiAnalysis: ai && `<!-- data-hash: ${dataHash} -->\n${ai.analysis}`,
 });
 
 await fs.writeFile(readmePath, newReadme);

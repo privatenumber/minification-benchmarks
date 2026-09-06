@@ -9,7 +9,7 @@
 		"@minification-benchmarks/utils": "workspace:*",
 		"ai": "^7.0.34",
 		"chartjs-plugin-datalabels": "^2.2.0",
-		"comment-mark": "^2.0.1",
+		"comment-mark": "^2.1.0",
 		"date-fns": "^4.1.0",
 		"lodash-es": "^4.17.21",
 		"md-pen": "^1.2.0",
