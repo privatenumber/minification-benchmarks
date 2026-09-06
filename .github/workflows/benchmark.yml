@@ -45,7 +45,10 @@ jobs:
       - name: Configure Git
         run: |
           git config user.name "minification-benchmarks automation"
-          git config user.email actions@users.noreply.github.com
+          # Keep in sync with "gitIgnoredAuthors" in renovate.json: Renovate matches
+          # commits by author email and force-pushes away any it doesn't recognize
+          # as automation
+          git config user.email github-actions@github.com
 
       - name: Benchmark
         run: pnpm bench-all

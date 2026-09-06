@@ -8,8 +8,7 @@
 	"prHourlyLimit": 24,
 	"prConcurrentLimit": 5,
 	"gitIgnoredAuthors": [
-		"github-actions@github.com",
-		"actions@users.noreply.github.com"
+		"github-actions@github.com"
 	],
 	"packageRules": [
 		{
