@@ -40,19 +40,37 @@ const extractPromptText = (prompt: LanguageModelV3Prompt) => prompt
 		: message.content.map(part => (part.type === 'text' ? part.text : '')).join('')))
 	.join('\n');
 
-type ModelHandler = (prompt: string, callIndex: number) => Promise<string> | string;
+type MockContext = {
+	prompt: string;
+	callIndex: number;
+	abortSignal: AbortSignal | undefined;
+};
 
-const createMockModel = (respond: ModelHandler) => {
-	const prompts: string[] = [];
+const createMockModel = (respond: (context: MockContext) => Promise<string> | string) => {
+	const calls: Array<{ prompt: string }> = [];
+	const events: string[] = [];
 	const model: LanguageModelV3 = {
 		specificationVersion: 'v3',
 		provider: 'mock',
 		modelId: 'mock-model',
 		supportedUrls: {},
 		doGenerate: async (options: LanguageModelV3CallOptions) => {
+			// Simulate a provider rejecting requests that were already aborted
+			if (options.abortSignal?.aborted) {
+				throw new Error('The operation was aborted');
+			}
+
 			const prompt = extractPromptText(options.prompt);
-			prompts.push(prompt);
-			return textResult(await respond(prompt, prompts.length - 1));
+			const callIndex = calls.length;
+			calls.push({ prompt });
+			events.push(`start:${callIndex}`);
+			const text = await respond({
+				prompt,
+				callIndex,
+				abortSignal: options.abortSignal,
+			});
+			events.push(`end:${callIndex}`);
+			return textResult(text);
 		},
 		doStream: () => {
 			throw new Error('doStream is not used by this workflow');
@@ -60,24 +78,55 @@ const createMockModel = (respond: ModelHandler) => {
 	};
 	return {
 		model,
-		prompts,
+		calls,
+		events,
 	};
 };
 
-const respondToPrompt = (prompt: string) => {
-	if (prompt.includes('# Scoreboard summary')) {
-		return JSON.stringify({
-			intro: 'overview intro',
-			conclusion: 'overview conclusion',
-		});
+const createDeferred = () => Promise.withResolvers<void>();
+
+const waitFor = async (condition: () => boolean) => {
+	for (let attempt = 0; attempt < 100; attempt += 1) {
+		if (condition()) {
+			return;
+		}
+		await sleep(10);
 	}
-	return JSON.stringify({
-		commentary: prompt.includes('# Results — react') ? 'react commentary' : 'd3 commentary',
-	});
+	throw new Error('Condition was not met');
 };
 
-test('each model request contains only its own artifact', async () => {
-	const { model, prompts } = createMockModel(respondToPrompt);
+/** Rejects once the shared abort signal fires; settles via the gate otherwise. */
+const abortableGate = (
+	abortSignal: AbortSignal | undefined,
+	onAbort: () => void,
+	gate: Promise<string>,
+) => Promise.race([
+	new Promise<never>((_resolve, reject) => {
+		abortSignal?.addEventListener('abort', () => {
+			onAbort();
+			reject(new Error('The operation was aborted'));
+		}, { once: true });
+	}),
+	gate,
+]);
+
+const getCall = (
+	calls: Array<{ prompt: string }>,
+	marker: string,
+) => calls.find(({ prompt }) => prompt.includes(marker));
+
+test('rounds run in order with measured history and narrative context', async () => {
+	const { model, calls, events } = createMockModel(({ prompt }) => {
+		if (prompt.includes('# Scoreboard summary')) {
+			return JSON.stringify({
+				intro: 'overview intro',
+				conclusion: 'overview conclusion',
+			});
+		}
+		return JSON.stringify({
+			commentary: prompt.includes('# Results — react') ? 'react commentary' : 'd3 commentary',
+		});
+	});
 
 	const analysis = await getAiAnalysis(analyzedData, {
 		apiKey: 'test',
@@ -92,61 +141,173 @@ test('each model request contains only its own artifact', async () => {
 		},
 		conclusion: 'overview conclusion',
 	});
+	expect(calls).toHaveLength(3);
 
-	// One commentary request per artifact, plus the overview
-	expect(prompts).toHaveLength(3);
+	// One commentary request per artifact, plus the overview; the second
+	// round starts only after the first completes
+	const d3CallIndex = calls.findIndex(({ prompt }) => prompt.includes('# Results — d3'));
+	expect(events.indexOf('end:0')).toBeLessThan(events.indexOf(`start:${d3CallIndex}`));
 
-	// Artifact requests never see the other artifact's results
-	const reactPrompt = prompts.find(prompt => prompt.includes('# Results — react'));
-	expect(reactPrompt).toContain('minifiedBytes=20');
-	expect(reactPrompt).not.toContain('d3');
+	// First round: own results only, no history, next-artifact metadata only
+	const reactPrompt = getCall(calls, '# Results — react')!.prompt;
+	expect(reactPrompt).toContain('# Results — react');
+	expect(reactPrompt).toContain('minifiedBytes=20, minzippedBytes=10, gzipReduction=75%, averageTimeMs=30, runtimeRelativeToFastest=1.0x');
+	expect(reactPrompt).not.toContain('Previous rounds');
+	expect(reactPrompt).toContain('# Next artifact');
+	expect(reactPrompt).toContain('d3 at 200 original bytes');
+	expect(reactPrompt).not.toContain('minifiedBytes=40');
+	expect(reactPrompt).not.toContain('minifiedBytes=38');
+
+	// Second round: measured history, narrative context, cumulative totals,
+	// and no next artifact because it is the last round
+	const d3Prompt = getCall(calls, '# Results — d3')!.prompt;
+	expect(d3Prompt).toContain('# Previous rounds');
+	expect(d3Prompt).toContain('1. react: best overall balance=@swc/core (10 minzipped bytes, 30 ms)');
+	expect(d3Prompt).toContain(
+		'Previous commentary for react (narrative context, not evidence): "react commentary"',
+	);
+	expect(d3Prompt).toContain('# Cumulative totals through 1 previous round');
+	expect(d3Prompt).toContain('terser: completed=0, failed=1');
+	expect(d3Prompt).not.toContain('# Next artifact');
+
+	// The overview is grounded in computed facts, not generated prose
+	const overviewPrompt = getCall(calls, '# Scoreboard summary')!.prompt;
+	expect(overviewPrompt).toContain('In total, 3 minifier configurations competed');
+	expect(overviewPrompt).not.toContain('react commentary');
+	expect(overviewPrompt).not.toContain('d3 commentary');
 });
 
-test('commentary is associated with its artifact regardless of completion order', async () => {
-	const { model, prompts } = createMockModel(async (prompt, callIndex) => {
-		// Reverse the completion order on the second call
-		await sleep(callIndex === 0 ? 30 : 1);
-		return respondToPrompt(prompt);
+test('overview completing after the rounds does not disturb association', async () => {
+	const overviewGate = createDeferred();
+	const { model } = createMockModel(async ({ prompt }) => {
+		if (prompt.includes('# Scoreboard summary')) {
+			await overviewGate.promise;
+			return JSON.stringify({
+				intro: 'overview intro',
+				conclusion: 'overview conclusion',
+			});
+		}
+		return JSON.stringify({
+			commentary: prompt.includes('# Results — react')
+				? 'react commentary'
+				: 'd3 commentary',
+		});
 	});
 
-	const analysis = await getAiAnalysis(analyzedData, {
+	const analysisPromise = getAiAnalysis(analyzedData, {
 		apiKey: 'test',
 		model,
 	});
+	overviewGate.resolve();
 
-	expect(analysis?.rounds).toStrictEqual({
-		react: 'react commentary',
-		d3: 'd3 commentary',
+	expect(await analysisPromise).toStrictEqual({
+		intro: 'overview intro',
+		rounds: {
+			react: 'react commentary',
+			d3: 'd3 commentary',
+		},
+		conclusion: 'overview conclusion',
 	});
-	expect(prompts).toHaveLength(3);
 });
 
-test('rejects the whole analysis when the overview fails', async () => {
-	const { model, prompts } = createMockModel((prompt) => {
-		if (prompt.includes('Scoreboard summary')) {
-			throw new Error('overview exploded');
+test('overview failure aborts the in-flight round and stops later rounds', async () => {
+	const overviewGate = createDeferred();
+	const artifactGate = createDeferred();
+	let reactAborted = false;
+
+	const { model, calls } = createMockModel(({ prompt, abortSignal }) => {
+		if (prompt.includes('# Scoreboard summary')) {
+			return overviewGate.promise.then(() => {
+				throw new Error('overview exploded');
+			});
 		}
-		return JSON.stringify({ commentary: 'c' });
+		return abortableGate(abortSignal, () => {
+			reactAborted = true;
+		}, artifactGate.promise.then(() => JSON.stringify({ commentary: 'late commentary' })));
+	});
+
+	const analysisPromise = getAiAnalysis(analyzedData, {
+		apiKey: 'test',
+		model,
+	});
+	await waitFor(() => calls.length === 2);
+	overviewGate.reject(new Error('overview exploded'));
+
+	await expect(analysisPromise).rejects.toThrow('AI analysis failed for the overview');
+
+	// The in-flight round observed the abort and no further round started
+	expect(reactAborted).toBe(true);
+	expect(getCall(calls, '# Results — d3')).toBeUndefined();
+});
+
+test('artifact failure aborts the overview and stops later rounds', async () => {
+	const reactGate = createDeferred();
+	const overviewGate = createDeferred();
+	let overviewAborted = false;
+
+	const { model, calls } = createMockModel(({ prompt, abortSignal }) => {
+		if (prompt.includes('# Scoreboard summary')) {
+			return abortableGate(abortSignal, () => {
+				overviewAborted = true;
+			}, overviewGate.promise.then(() => JSON.stringify({
+				intro: 'i',
+				conclusion: 'c',
+			})));
+		}
+		return reactGate.promise.then(() => {
+			throw new Error('react exploded');
+		});
+	});
+
+	const analysisPromise = getAiAnalysis(analyzedData, {
+		apiKey: 'test',
+		model,
+	});
+	await waitFor(() => calls.length === 2);
+	reactGate.reject(new Error('react exploded'));
+
+	await expect(analysisPromise).rejects.toThrow('AI analysis failed for artifact "react"');
+
+	// The overview observed the abort and no further round started
+	expect(overviewAborted).toBe(true);
+	expect(getCall(calls, '# Results — d3')).toBeUndefined();
+});
+
+test('a schema-invalid response rejects the whole analysis', async () => {
+	const { model, calls } = createMockModel(({ prompt }) => {
+		if (prompt.includes('# Results — react')) {
+			// Invalid JSON fails structured parsing; blank commentary is
+			// rejected by the schema unit tests
+			return 'not json';
+		}
+		if (prompt.includes('# Scoreboard summary')) {
+			return JSON.stringify({
+				intro: 'i',
+				conclusion: 'c',
+			});
+		}
+		return JSON.stringify({ commentary: 'valid' });
 	});
 
 	await expect(getAiAnalysis(analyzedData, {
 		apiKey: 'test',
 		model,
-	}))
-		.rejects.toThrow('AI analysis failed for the overview');
+	})).rejects.toThrow('AI analysis failed for artifact "react"');
 
-	// The failed overview aborts the shared signal; artifact calls stop
-	expect(prompts.length).toBeLessThan(3);
+	// The failed round prevented later rounds from starting
+	expect(getCall(calls, '# Results — d3')).toBeUndefined();
 });
 
 test('makes no model requests without credentials', async () => {
-	const { model, prompts } = createMockModel(respondToPrompt);
+	const { model, calls } = createMockModel(() => JSON.stringify({ commentary: 'c' }));
 
+	// An empty string is an explicit absent key that does not fall back to
+	// the ambient environment
 	const analysis = await getAiAnalysis(analyzedData, {
-		apiKey: undefined,
+		apiKey: '',
 		model,
 	});
 
 	expect(analysis).toBeUndefined();
-	expect(prompts).toHaveLength(0);
+	expect(calls).toHaveLength(0);
 });

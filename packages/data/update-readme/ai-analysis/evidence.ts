@@ -2,20 +2,21 @@ import { outdent } from 'outdent';
 import type {
 	AnalyzedArtifact,
 	AnalyzedData,
+	AnalyzedDataEntry,
 	MinifierWithScore,
 } from '../analyzed-data.ts';
 import { getToolContext } from './tool-context.ts';
 
-const getConfigSummary = (data: AnalyzedData) => {
-	type ConfigSummary = {
-		completed: number;
-		failed: number;
-		'best overall balance': number;
-		'smallest minified output': number;
-		'smallest minzipped output': number;
-		fastest: number;
-	};
+type ConfigSummary = {
+	completed: number;
+	failed: number;
+	'best overall balance': number;
+	'smallest minified output': number;
+	'smallest minzipped output': number;
+	fastest: number;
+};
 
+const getConfigSummary = (entries: ReadonlyArray<AnalyzedDataEntry>) => {
 	// Aggregate counts are supplied so the model never recounts rounds
 	const summary = new Map<string, ConfigSummary>();
 	const getSummary = (minifierName: string): ConfigSummary => {
@@ -36,7 +37,7 @@ const getConfigSummary = (data: AnalyzedData) => {
 		return created;
 	};
 
-	for (const [, artifact] of data) {
+	for (const [, artifact] of entries) {
 		artifact.minifiedWithScores.forEach((entry, index) => {
 			const stats = getSummary(entry.minifierName);
 
@@ -63,6 +64,13 @@ const getConfigSummary = (data: AnalyzedData) => {
 
 	return summary;
 };
+
+const getSummaryLines = (summary: Map<string, ConfigSummary>) => [...summary.entries()]
+	// Sort for a stable summary independent of first appearance
+	.sort(([a], [b]) => (a < b ? -1 : (a > b ? 1 : 0)))
+	.map(([minifierName, stats]) => `- ${minifierName}: ${
+		Object.entries(stats).map(([label, count]) => `${label}=${count}`).join(', ')
+	}`);
 
 const getToolContextLines = (minifierNames: Iterable<string>) => [...minifierNames]
 	// Sort for a stable listing independent of artifact order
@@ -105,15 +113,17 @@ const formatConfigurationRow = (
 		(artifact.gzipSize - minzippedBytes) / artifact.gzipSize
 	).toLocaleString(undefined, { style: 'percent' });
 
-	// Name the ratio's baseline so "Nx" can never be attached to the wrong tool
-	const fastestName = artifact.bestSpeed?.[0];
-	const speedVsFastest = fastestName === undefined
+	// Runtime relative to this artifact's fastest configuration, with the
+	// baseline named so "Nx" can never be attached to the wrong tool.
+	// 2.0x means the configuration took twice as long as the fastest one.
+	const fastest = artifact.bestSpeed;
+	const runtimeRelativeToFastest = fastest === undefined
 		? ''
-		: (fastestName === entry.minifierName
-			? ', speedVsFastest=1.0x'
-			: `, speedVsFastest=${(time / artifact.bestSpeed![1].result.data.time).toFixed(1)}x (vs ${fastestName} at ${artifact.bestSpeed![1].result.data.time} ms)`);
+		: (fastest[0] === entry.minifierName
+			? ', runtimeRelativeToFastest=1.0x'
+			: `, runtimeRelativeToFastest=${(time / fastest[1].result.data.time).toFixed(1)}x (vs ${fastest[0]} at ${fastest[1].result.data.time} ms)`);
 
-	return `- ${entry.minifierName}: minifiedBytes=${minifiedBytes}, minzippedBytes=${minzippedBytes}, gzipReduction=${gzipReduction}, averageTimeMs=${time}${speedVsFastest}${labels.length > 0 ? ` [${labels.join(', ')}]` : ''}`;
+	return `- ${entry.minifierName}: minifiedBytes=${minifiedBytes}, minzippedBytes=${minzippedBytes}, gzipReduction=${gzipReduction}, averageTimeMs=${time}${runtimeRelativeToFastest}${labels.length > 0 ? ` [${labels.join(', ')}]` : ''}`;
 };
 
 const getFailureList = (artifact: AnalyzedArtifact) => artifact.minifiedWithScores
@@ -122,23 +132,108 @@ const getFailureList = (artifact: AnalyzedArtifact) => artifact.minifiedWithScor
 		if (!('error' in minifier.result)) {
 			return minifierName;
 		}
-		return `${minifierName} (${minifier.result.error.stage ?? 'unrecorded stage'})`;
+		const { stage, message } = minifier.result.error;
+		// A missing stage must not erase a recorded timeout message
+		return `${minifierName} (stage: ${JSON.stringify(stage ?? '(unknown)')}, error: ${JSON.stringify(message)})`;
 	});
 
+const getArtifactFacts = (artifact: AnalyzedArtifact) => {
+	const facts: string[] = [];
+
+	const balance = artifact.minifiedWithScores[0];
+	if (!('error' in balance.minifier.result)) {
+		facts.push(`best overall balance=${balance.minifierName} (${balance.minifier.result.data.minzippedBytes} minzipped bytes, ${balance.minifier.result.data.time} ms)`);
+	}
+	if (artifact.bestMinified) {
+		facts.push(`smallest minified output=${artifact.bestMinified[0]} (${artifact.bestMinified[1].result.data.minifiedBytes} bytes)`);
+	}
+	if (artifact.bestMinzipped) {
+		facts.push(`smallest minzipped output=${artifact.bestMinzipped[0]} (${artifact.bestMinzipped[1].result.data.minzippedBytes} bytes)`);
+	}
+	if (artifact.bestSpeed) {
+		facts.push(`fastest=${artifact.bestSpeed[0]} (${artifact.bestSpeed[1].result.data.time} ms)`);
+	}
+
+	const failures = getFailureList(artifact);
+	if (failures.length > 0) {
+		facts.push(`failures: ${failures.join(', ')}`);
+	}
+
+	return facts;
+};
+
 /**
- * Evidence for one artifact's commentary call. Contains only this artifact's
- * results, so the model cannot make cross-artifact claims.
+ * An artifact whose commentary completed earlier in this invocation.
  */
-export const getArtifactMessage = (
-	artifactName: string,
-	artifact: AnalyzedArtifact,
-) => {
+export type CompletedRound = {
+	artifactName: string;
+	artifact: AnalyzedArtifact;
+	commentary: string;
+};
+
+export type NextArtifact = {
+	artifactName: string;
+	originalBytes: number;
+};
+
+/**
+ * Evidence for one artifact's commentary call: this artifact's full results,
+ * measured summaries of and commentary from already-completed rounds, and
+ * next-artifact metadata for a closing transition.
+ */
+export const getArtifactMessage = ({
+	artifactName,
+	artifact,
+	completedRounds,
+	nextArtifact,
+}: {
+	artifactName: string;
+	artifact: AnalyzedArtifact;
+	completedRounds: CompletedRound[];
+	nextArtifact: NextArtifact | undefined;
+}) => {
 	const rows = artifact.minifiedWithScores
 		.map((entry, index) => formatConfigurationRow(entry, index, artifact))
 		.join('\n');
 	const finishedCount = artifact.minifiedWithScores
 		.filter(({ minifier }) => !('error' in minifier.result))
 		.length;
+
+	let historySection = '';
+	if (completedRounds.length > 0) {
+		const historyEntries: AnalyzedDataEntry[] = completedRounds.map(
+			round => [round.artifactName, round.artifact],
+		);
+		const summary = getConfigSummary(historyEntries);
+		const roundLines = completedRounds.map((round, index) => outdent`
+			${index + 1}. ${round.artifactName}: ${getArtifactFacts(round.artifact).join('; ')}
+			Previous commentary for ${round.artifactName} (narrative context, not evidence): "${round.commentary}"
+		`).join('\n');
+
+		historySection = outdent`
+
+			# Previous rounds
+
+			Artifacts already covered, in README order, with their measured summaries. These measurements are the only evidence for statements about earlier artifacts.
+
+			${roundLines}
+
+			# Cumulative totals through ${completedRounds.length} previous round${completedRounds.length === 1 ? '' : 's'}
+
+			Per-configuration counts across previous rounds only. Use them for cumulative statements, and never combine them with this round's results.
+
+			${getSummaryLines(summary).join('\n')}
+		`;
+	}
+
+	const nextSection = nextArtifact === undefined
+		? ''
+		: outdent`
+
+		# Next artifact
+
+		The next round covers ${nextArtifact.artifactName} at ${nextArtifact.originalBytes} original bytes. A closing transition may reference only this name and size, and must not predict its results.
+	`;
 
 	return outdent`
 	# Tool context
@@ -151,49 +246,19 @@ export const getArtifactMessage = (
 
 	## ${artifactName} — ${artifact.size} original bytes, ${artifact.gzipSize} gzipped bytes (${finishedCount} of ${artifact.minifiedWithScores.length} configurations finished)
 
-	${rows}
+	${rows}${historySection}${nextSection}
 	`;
 };
 
 /**
  * Evidence for the overview call (introduction and conclusion). Contains
- * computed per-artifact facts and totals instead of raw rows, so the verdict
- * is grounded in measured facts without requiring per-artifact prose.
+ * computed per-artifact facts and totals instead of raw rows or generated
+ * prose, so the verdict is grounded in measured facts only.
  */
 export const getOverviewMessage = (data: AnalyzedData) => {
 	const summary = getConfigSummary(data);
 
-	const summaryLines = [...summary.entries()]
-		// Sort for a stable summary independent of first appearance
-		.sort(([a], [b]) => (a < b ? -1 : (a > b ? 1 : 0)))
-		.map(([minifierName, stats]) => `- ${minifierName}: ${
-			Object.entries(stats).map(([label, count]) => `${label}=${count}`).join(', ')
-		}`);
-
-	const artifactFacts = data.map(([artifactName, artifact]) => {
-		const facts: string[] = [];
-
-		const balance = artifact.minifiedWithScores[0];
-		if (!('error' in balance.minifier.result)) {
-			facts.push(`best overall balance=${balance.minifierName} (${balance.minifier.result.data.minzippedBytes} minzipped bytes, ${balance.minifier.result.data.time} ms)`);
-		}
-		if (artifact.bestMinified) {
-			facts.push(`smallest minified output=${artifact.bestMinified[0]} (${artifact.bestMinified[1].result.data.minifiedBytes} bytes)`);
-		}
-		if (artifact.bestMinzipped) {
-			facts.push(`smallest minzipped output=${artifact.bestMinzipped[0]} (${artifact.bestMinzipped[1].result.data.minzippedBytes} bytes)`);
-		}
-		if (artifact.bestSpeed) {
-			facts.push(`fastest=${artifact.bestSpeed[0]} (${artifact.bestSpeed[1].result.data.time} ms)`);
-		}
-
-		const failures = getFailureList(artifact);
-		if (failures.length > 0) {
-			facts.push(`failures: ${failures.join(', ')}`);
-		}
-
-		return `- ${artifactName}: ${facts.join('; ')}`;
-	});
+	const artifactFacts = data.map(([artifactName, artifact]) => `- ${artifactName}: ${getArtifactFacts(artifact).join('; ')}`);
 
 	return outdent`
 	# Tool context
@@ -208,7 +273,7 @@ export const getOverviewMessage = (data: AnalyzedData) => {
 
 	# Per-artifact facts
 
-	Award winners with their measurements, and failures with their recorded stage. Award names match the scoreboard summary below.
+	Award winners with their measurements, and failures with their recorded stage and message. Award names match the scoreboard summary below.
 
 	${artifactFacts.join('\n')}
 
@@ -216,6 +281,6 @@ export const getOverviewMessage = (data: AnalyzedData) => {
 
 	Per-configuration counts across all ${data.length} artifacts. Use these counts for any statement about totals.
 
-	${summaryLines.join('\n')}
+	${getSummaryLines(summary).join('\n')}
 	`;
 };

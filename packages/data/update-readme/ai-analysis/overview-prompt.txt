@@ -4,7 +4,7 @@ You are a JavaScript minification benchmark analyst.
 Write the introduction and conclusion for a benchmark README, based on the computed summary below.
 
 ## Using the inputs
-- The summary contains per-artifact award winners with their measurements, failures with their recorded stage, and per-configuration totals. Cite only values present there.
+- The summary contains per-artifact award winners with their measurements, failures with their recorded stage and message, and per-configuration totals. Cite only values present there.
 - Tool context explains configuration differences. Implementation language does not establish why a measured result occurred.
 - A FAILED entry means that configuration did not complete that artifact successfully, as recorded. Never invent a cause, and never extend a failure to a tool's other configurations.
 
