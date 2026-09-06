@@ -1,72 +1,27 @@
 import { expect, test } from 'manten';
-import { getAnalysisSchema } from '../../update-readme/ai-analysis/schema.ts';
+import { commentarySchema, overviewSchema } from '../../update-readme/ai-analysis/schema.ts';
 
-const artifactNames = ['react', 'moment', 'd3'];
-const schema = getAnalysisSchema(artifactNames);
-
-const analysis = {
-	intro: 'intro',
-	rounds: {
-		react: 'react commentary',
-		moment: 'moment commentary',
-		d3: 'd3 commentary',
-	},
-	conclusion: 'conclusion',
-};
-
-test('accepts a complete analysis', () => {
-	expect(schema.parse(analysis)).toStrictEqual(analysis);
+test('commentary schema rejects blank text and unknown fields', () => {
+	expect(commentarySchema.parse({ commentary: 'ok' })).toStrictEqual({ commentary: 'ok' });
+	expect(commentarySchema.safeParse({ commentary: '   ' }).success).toBe(false);
+	expect(commentarySchema.safeParse({
+		commentary: 'ok',
+		extra: 1,
+	}).success).toBe(false);
 });
 
-test('requires commentary for every artifact', () => {
-	const { rounds, ...rest } = analysis;
-	expect(
-		schema.safeParse({
-			...rest,
-			rounds: {
-				react: 'r',
-				moment: 'm',
-			},
-		}).success,
-	).toBe(false);
-});
-
-test('rejects unknown artifacts', () => {
-	expect(
-		schema.safeParse({
-			...analysis,
-			rounds: {
-				...analysis.rounds,
-				React: 'typo',
-			},
-		}).success,
-	).toBe(false);
-});
-
-test('rejects unknown top-level fields', () => {
-	expect(
-		schema.safeParse({
-			...analysis,
-			extra: 'not allowed',
-		}).success,
-	).toBe(false);
-});
-
-test('rejects blank commentary', () => {
-	for (const field of ['intro', 'conclusion'] as const) {
-		expect(schema.safeParse({
-			...analysis,
-			[field]: '   ',
-		}).success).toBe(false);
-	}
-
-	expect(
-		schema.safeParse({
-			...analysis,
-			rounds: {
-				...analysis.rounds,
-				react: '  ',
-			},
-		}).success,
-	).toBe(false);
+test('overview schema rejects blank text and unknown fields', () => {
+	const overview = {
+		intro: 'i',
+		conclusion: 'c',
+	};
+	expect(overviewSchema.parse(overview)).toStrictEqual(overview);
+	expect(overviewSchema.safeParse({
+		...overview,
+		intro: ' ',
+	}).success).toBe(false);
+	expect(overviewSchema.safeParse({
+		...overview,
+		rounds: {},
+	}).success).toBe(false);
 });

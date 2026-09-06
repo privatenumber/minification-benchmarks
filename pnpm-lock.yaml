@@ -191,6 +191,9 @@ importers:
         specifier: ^4.5.4
         version: 4.5.4
     devDependencies:
+      '@ai-sdk/provider':
+        specifier: ^4.0.3
+        version: 4.0.3
       '@types/byte-size':
         specifier: ^8.1.0
         version: 8.1.2

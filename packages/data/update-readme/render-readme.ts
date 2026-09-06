@@ -6,7 +6,8 @@ import type { AiAnalysis } from './ai-analysis/schema.ts';
 import type { AnalyzedData } from './analyzed-data.ts';
 import { generateBenchmarks } from './render-benchmarks.ts';
 
-const SYSTEM_PROMPT_PATH = 'packages/data/update-readme/ai-analysis/system-prompt.txt';
+const PROMPTS_PATH = 'packages/data/update-readme/ai-analysis';
+const PROMPTS_LINK = `[artifact prompt](${PROMPTS_PATH}/artifact-prompt.txt) and [overview prompt](${PROMPTS_PATH}/overview-prompt.txt)`;
 
 type RenderReadmeOptions = {
 	readme: string;
@@ -49,14 +50,14 @@ export const renderReadme = ({
 
 	// Analysis-adjacent page furniture is rendered only when commentary exists,
 	// so runs without an API key don't advertise analysis that isn't there.
-	const aiIntro = analysis && `🤖 _AI commentary is woven throughout this README — generated from the benchmark data via the [AI system prompt](${SYSTEM_PROMPT_PATH})._
+	const aiIntro = analysis && `🤖 _AI commentary is woven throughout this README — generated from the benchmark data via the ${PROMPTS_LINK}._
 
 ${analysis.intro}`;
 	const aiResultsTip = analysis && '> [!TIP]\n> What\'s the verdict? [🏁 Skip to the conclusion](#-verdict)';
 	const aiVerdict = analysis && `## 🏁 Verdict
 
 > [!NOTE]
-> 🤖 This verdict is AI generated — [see the system prompt](${SYSTEM_PROMPT_PATH}).
+> 🤖 This verdict is AI generated — see the ${PROMPTS_LINK}.
 
 ${analysis.conclusion}`;
 

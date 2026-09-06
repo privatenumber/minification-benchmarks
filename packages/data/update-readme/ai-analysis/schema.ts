@@ -6,19 +6,13 @@ export type AiAnalysis = {
 	conclusion: string;
 };
 
-/**
- * The commentary contract: one generation must produce an intro, non-empty
- * commentary for every artifact, and a conclusion — so an incomplete
- * generation fails validation instead of rendering an incomplete README.
- */
-export const getAnalysisSchema = (artifactNames: readonly string[]) => {
-	const commentary = z.string().trim().min(1);
+const commentary = z.string().trim().min(1);
 
-	return z.object({
-		intro: commentary,
-		rounds: z.object(
-			Object.fromEntries(artifactNames.map(artifactName => [artifactName, commentary])),
-		).strict(),
-		conclusion: commentary,
-	}).strict();
-};
+export const commentarySchema = z.object({
+	commentary,
+}).strict();
+
+export const overviewSchema = z.object({
+	intro: commentary,
+	conclusion: commentary,
+}).strict();

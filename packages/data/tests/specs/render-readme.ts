@@ -67,6 +67,10 @@ test('associates commentary with its artifact and clears stale content', () => {
 	expect(output).toContain('[🏁 Skip to the conclusion](#-verdict)');
 	expect(output).toContain('## 🏁 Verdict');
 
+	// Each attribution link targets a single prompt file destination
+	expect(output).toContain('](packages/data/update-readme/ai-analysis/artifact-prompt.txt)');
+	expect(output).toContain('](packages/data/update-readme/ai-analysis/overview-prompt.txt)');
+
 	// Each table renders before its own commentary, never the other's
 	const [reactSection, d3Section] = output.split('\n\n----\n\n');
 
