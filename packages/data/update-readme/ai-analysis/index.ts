@@ -1,11 +1,16 @@
 import fs from 'node:fs/promises';
-import { createGateway, generateText } from 'ai';
+import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
+import { generateText } from 'ai';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
 import type { AnalyzedData } from '../analyzed-data.ts';
 import { getMessage } from './get-message.ts';
 
-const apiKey = process.env.VERCEL_AI_GATEWAY_API_KEY;
-const gateway = createGateway({ apiKey });
+const apiKey = process.env.OPENCODE_GO_API_KEY;
+const provider = createOpenAICompatible({
+	name: 'opencode-go',
+	baseURL: 'https://opencode.ai/zen/go/v1',
+	apiKey,
+});
 
 export const getAiAnalysis = async (
 	minifiers: MinifierLoaded[],
@@ -17,14 +22,14 @@ export const getAiAnalysis = async (
 	const message = await getMessage(minifiers, data);
 
 	if (!apiKey) {
-		console.warn('Skipping AI analysis due to missing VERCEL_AI_GATEWAY_API_KEY');
+		console.warn('Skipping AI analysis due to missing OPENCODE_GO_API_KEY');
 		return;
 	}
 
 	const systemPromptWithDate = `${todaysDate}\n\n${systemPrompt}`;
 
 	const { text } = await generateText({
-		model: gateway('zai/glm-5.3-flash'),
+		model: provider.chatModel('glm-5.3-flash'),
 		instructions: systemPromptWithDate,
 		prompt: message,
 	});
