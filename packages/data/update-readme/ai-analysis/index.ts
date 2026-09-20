@@ -6,8 +6,6 @@ import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
 import type { AnalyzedData } from '../analyzed-data.ts';
 import { getMessage } from './get-message.ts';
 
-const modelId = 'glm-5.3';
-
 const apiKey = process.env.OPENCODE_GO_API_KEY;
 const provider = createOpenAICompatible({
 	name: 'opencode-go',
@@ -21,6 +19,8 @@ const provider = createOpenAICompatible({
 		'x-opencode-session': 'minification-benchmarks-ai-analysis',
 	},
 });
+
+const model = provider.chatModel('glm-5.3');
 
 // commentMark wraps multiline sections in newlines, so allow leading whitespace
 const analysisHashPattern = /^\s*<!--\s*analysis-hash:\s*(\S+)\s*-->/;
@@ -39,9 +39,13 @@ export const getAiAnalysis = async (
 	// current date, which is excluded to keep the analysis valid across days.
 	const analysisHash = crypto
 		.createHash('sha256')
-		.update(`${modelId}\n${systemPrompt}\n${message}`)
-		.digest('hex')
-		.slice(0, 10);
+		.update(JSON.stringify([
+			model.provider,
+			model.modelId,
+			systemPrompt,
+			message,
+		]))
+		.digest('hex');
 
 	if (existingAnalysis?.match(analysisHashPattern)?.[1] === analysisHash) {
 		return;
@@ -56,7 +60,7 @@ export const getAiAnalysis = async (
 	const systemPromptWithDate = `${todaysDate}\n\n${systemPrompt}`;
 
 	const { text } = await generateText({
-		model: provider.chatModel(modelId),
+		model,
 		instructions: systemPromptWithDate,
 		prompt: message,
 	});
