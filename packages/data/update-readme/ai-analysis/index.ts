@@ -10,6 +10,13 @@ const provider = createOpenAICompatible({
 	name: 'opencode-go',
 	baseURL: 'https://opencode.ai/zen/go/v1',
 	apiKey,
+	// Go requires non-OpenCode clients to identify themselves and send a
+	// stable session ID per conversation.
+	// https://opencode.ai/docs/go/#where-can-i-use-it
+	headers: {
+		'User-Agent': 'minification-benchmarks/1.0',
+		'x-opencode-session': 'minification-benchmarks-ai-analysis',
+	},
 });
 
 export const getAiAnalysis = async (
