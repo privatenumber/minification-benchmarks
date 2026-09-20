@@ -205,9 +205,7 @@ const newReadme = commentMark(readme, {
 	benchmarks,
 	minifiers: minifiersList,
 	aiSystemPrompt: ai && escapeHtml(ai.systemPrompt),
-	// Record the hash only on a successful generation, so a skipped or failed
-	// run never marks the old analysis as current
-	aiAnalysis: ai && `<!-- data-hash: ${dataHash} -->\n${ai.analysis}`,
+	aiAnalysis: ai?.analysis,
 });
 
 await fs.writeFile(readmePath, newReadme);
