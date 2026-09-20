@@ -25,7 +25,7 @@ This project benchmarks the following minifiers:
 | [tedivm/jshrink](https://github.com/tedious/JShrink) | 1.8.1 |  |
 <!-- minifiers:end -->
 
-_Benchmarks last updated on <!-- lastUpdated:start -->Sep 6, 2026<!-- lastUpdated:end -->._
+_Benchmarks last updated on <!-- lastUpdated:start -->Sep 20, 2026<!-- lastUpdated:end -->._
 
 <br>
 
@@ -424,28 +424,34 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 > 🤖 This analysis is AI generated. See below for the system prompt.
 
 <!-- aiAnalysis:start -->
-Three... two... one... compress! Welcome to the Minification Grand Prix, where every byte counts, every millisecond stings, and eleven brave tools lined up to shave a mountain of JavaScript down to a pebble. From dainty little React to the absolute colossus that is TypeScript at nearly two megabytes gzipped, this year's circuit was brutal—and the leaderboard shook more than once.
+Three... two... one... compress! Welcome back to the Minification Grand Prix, where semicolons fear for their lives and every byte carries a bounty. Twelve rounds this season — from a lightning sprint around 19 KB of react to a full marathon through 1.88 MB of typescript. Two contenders never made it out of the paddock. The rest fought over every kilobyte, and the title fight was so tight the judges needed a replay. Let's get to it.
 
 ### Best minifier
-The crown goes to **oxc-minify**, and honestly, it didn't just win—it rewrote what "young contender" means. On the small classics it stayed glued to the leaders, but where the race was truly decided—on the big, scary artifacts—it pulled away. On terser itself it took the size win outright. On antd and TypeScript, it delivered the smallest output of anyone, *and* did it in a fraction of the time its rivals needed. Chewing through 1.88 MB of gzipped TypeScript in half a second while producing the tightest result in the field? That's not a trade-off, that's a flex. @swc/core pushed it hard all season and stole several rounds, but when the heaviest weights came out, oxc had both the smallest suitcase and the fastest hands. Verdict: undefeated where it matters most.
+
+The champion, by the narrowest of margins: **oxc-minify**. Here's the case. When the track got long, oxc got stronger. It claimed best gzip on the three biggest stages it contested — the 194 KB terser package, the 825 KB antd monster, and the towering typescript — and on the last two it added "most balanced" honors, meaning nobody touched its size-speed cocktail. On antd it out-compressed @swc/core and finished nearly three times faster, 255 ms to 692 ms. On typescript it shaved 55% off the 1.88 MB giant in 531 ms flat. And wherever the leaders squeezed out a few extra bytes, oxc answered with three, four, five times the speed — just ask react, where it was done in 3 milliseconds. Consistency up front, dominance at the back. That is a champion's resume.
+
+And yes, it was a photo finish. The challenger forced every single lap.
 
 ### Honorable mentions
-**@swc/core** was the metronome of this Grand Prix—rarely the flashiest, almost always on the podium. It took jquery, vue, three, and echarts on raw compression, and stayed within breathing distance of oxc everywhere else. If you want near-best size without babysitting slow builds, this is your workhorse.
 
-**uglify-js** deserves a standing ovation and a nap. It claimed the size crown on react, moment, lodash, and the monstrous victory—proving the old guard can still squeeze with the best of them. The catch? Victory took it nearly six seconds. Beautiful compression, glacial pace. A purist's champion.
+**@swc/core** deserves a standing ovation as runner-up. Four best-gzip wins — jquery, vue, three, echarts — plus eight "most balanced" titles, the most consistent performer of the entire day. It led or shadowed the front-runner in virtually every round. The crown slipped only on the heavyweight stages, where oxc passed it on both size and speed. Millimeters.
 
-**@tdewolff/minify** was the pocket rocket of the early laps—blistering 7-millisecond runs on moment and respectable size throughout, even on echarts. Never quite the smallest, never off the pace.
+**uglify-js**, the old artisan. Five best-gzip crowns — the most in the field — including a staggering 74% shave on lodash. But the price is brutal, with runtimes climbing every round like a bar tab: 420, 906, 1,394, 3,272, and finally 5,712 milliseconds on victory. A sculptor with a chisel in a race full of lasers, and on the mega-files even the chisel stopped finding marble. If you ship on size alone and can wait, he's your craftsman.
 
-And a tip of the hat to **@cminify**, the speed specialist: fastest in nearly every heavyweight round, but consistently giving up 10–15% more bytes. That's a lot of extra payload to pay for speed—and when oxc and swc are this fast anyway, it's a hard bill to justify.
+**@tdewolff/minify**, the pocket rocket. Fastest on moment, jquery and vue, and still scrapping with the giants at the end — 875 KB off typescript in just 266 ms. Small package, enormous lungs.
 
-**terser** and **esbuild** showed flashes—terser's early-round numbers were solid, esbuild stayed respectable on lodash—but neither could sustain a challenge across the full season.
+**@cminify**, the pure sprinter. Seven straight speed titles from d3 onward. The catch? It leaves whole backpacks of bytes behind: 1.13 MB on typescript where oxc managed 852 KB, and a lone 21% shave on d3. A niche weapon for "make it smaller, make it now."
+
+The rest of the paddock: **terser** flashed the old magic with honorable mentions on react and moment, while **esbuild**, **bun** and **google-closure-compiler** ran quiet campaigns without a single podium visit — esbuild's lone cheer came on lodash, 26.2 KB in 30 ms.
 
 ### Eliminated
-- **babel-minify**: Collapsed before the starting gun on react, tripping over its own baseline-browser-mapping dependency warning. A DNS-style failure at the gate—no times recorded.
-- **tedivm/jshrink**: Ran valiantly through the early rounds, then hit an unclosed regex on d3 and bowed out with a PHP RuntimeException. When a minifier breaks the input it's handed, the bench is the only safe place.
+
+- **babel-minify** — tripped in round one on react, undone by a JSON parsing failure before the real work even began. Never left the starting blocks.
+- **tedivm/jshrink** — swallowed whole by d3 in the minification stage: "Unclosed regex pattern at position 289075." The PHP interloper met JavaScript's regex jungle, and the jungle won.
 
 ### Closing remarks
-What a race. The new generation—oxc and swc—has officially closed the gap with the veterans, and then some: today they out-compress *and* out-run them. Meanwhile, uglify-js reminds us that pure size obsession still has a home, if you can stomach the wait. A friendly reminder before you sprint to the terminal: benchmarks measure speed and bytes, not developer joy—install size, API ergonomics, and ecosystem support all live outside this scoreboard. And as always, minifiers can break things, so keep those tests green. Pick the tool that fits your pipeline, your patience, and your users' download budgets—and may your bundles forever shrink. See you at the next Grand Prix!
+
+What a season. A young speedster takes the belt, a metronome with a sword loses it by a whisker, and a chisel-wielding veteran reminds us that patience still buys bytes. One caveat before you sign any contracts: this race measured exactly two things — gzip size and milliseconds. Real life also counts install size, API ergonomics, plugin ecosystems, and how a tool behaves inside your own bundler and CI pipeline. So take the trophy list, run your own bundle through the field, and see who crosses your finish line first. May your transfer sizes stay tiny and your build times tinier.
 <!-- aiAnalysis:end -->
 
 <details>
@@ -453,7 +459,7 @@ What a race. The new generation—oxc and swc—has officially closed the gap wi
 <br>
 
 <pre><code><!-- aiSystemPrompt:start -->
-Today&#39;s date is 2026-09-06
+Today&#39;s date is 2026-09-20
 
 You are a JavaScript minification benchmark analyst with a flair for storytelling.
 

@@ -178,7 +178,7 @@ const newReadme = commentMark(readme, {
 	lastUpdated: format(utcToday, 'MMM d, y'),
 	benchmarks: generateBenchmarks(analyzedData),
 	minifiers: minifiersList,
-	aiSystemPrompt: escapeHtml(ai?.systemPrompt),
+	aiSystemPrompt: ai && escapeHtml(ai.systemPrompt),
 	aiAnalysis: ai?.analysis,
 });
 

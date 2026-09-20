@@ -4,10 +4,11 @@
 	"type": "module",
 	"main": "./index.ts",
 	"dependencies": {
+		"@ai-sdk/openai-compatible": "^3.0.53",
 		"@minification-benchmarks/bench": "workspace:*",
 		"@minification-benchmarks/minifiers": "workspace:*",
 		"@minification-benchmarks/utils": "workspace:*",
-		"ai": "^7.0.34",
+		"ai": "^7.0.107",
 		"chartjs-plugin-datalabels": "^2.2.0",
 		"comment-mark": "^2.0.1",
 		"date-fns": "^4.1.0",
