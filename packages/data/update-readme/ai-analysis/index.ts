@@ -36,7 +36,7 @@ export const getAiAnalysis = async (
 	const systemPromptWithDate = `${todaysDate}\n\n${systemPrompt}`;
 
 	const { text } = await generateText({
-		model: provider.chatModel('glm-5.3-flash'),
+		model: provider.chatModel('glm-5.3'),
 		instructions: systemPromptWithDate,
 		prompt: message,
 	});
