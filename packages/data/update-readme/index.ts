@@ -1,6 +1,5 @@
 import fs from 'fs/promises';
 import path from 'path';
-import crypto from 'node:crypto';
 import { outdent } from 'outdent';
 import { commentMark, getCommentMarks } from 'comment-mark';
 import { format } from 'date-fns';
@@ -133,34 +132,17 @@ const generateBenchmarks = (
 	.join('\n\n----\n\n');
 
 const minifiers = await getMinifiers();
-
 const analyzedData = getAnalyzedData();
 
 const readmePath = './README.md';
-const [readme, dataContents] = await Promise.all([
-	fs.readFile(readmePath, 'utf8'),
-	fs.readFile(new URL('../data/data.json', import.meta.url), 'utf8'),
-]);
-
-// Identifies the benchmark data the AI analysis was generated from
-const dataHash = crypto
-	.createHash('sha256')
-	.update(dataContents)
-	.digest('hex')
-	.slice(0, 10);
-
+const readme = await fs.readFile(readmePath, 'utf8');
 const existingSections = getCommentMarks(readme);
-const existingAnalysisHash = existingSections.aiAnalysis?.match(
-	// commentMark wraps multiline replacements in newlines, so allow leading whitespace
-	/^\s*<!--\s*data-hash:\s*(\S+)\s*-->/,
-)?.[1];
-const isAnalysisCurrent = existingAnalysisHash === dataHash;
-const ai = isAnalysisCurrent
-	? undefined
-	: await getAiAnalysis(
-		minifiers,
-		analyzedData,
-	);
+
+const ai = await getAiAnalysis(
+	minifiers,
+	analyzedData,
+	existingSections.aiAnalysis,
+);
 
 const minifiersList = md.table([
 	['Minifier', 'Version', 'Release date ↓'],
