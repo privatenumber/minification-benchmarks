@@ -424,42 +424,41 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 > 🤖 This analysis is AI generated. See below for the system prompt.
 
 <!-- aiAnalysis:start -->
-Ladies and gentlemen, twelve rounds, eleven contenders, and a heavyweight division stacked like never before. We had a five-time size champion willing to burn five seconds for a hundred bytes. We had a rookie sprinting through the megabyte class like it was a warm-up lap. And we had two eliminations before the crowd even settled into their seats. Buckle up, because this one went the distance.
+<!-- analysis-hash: dd00bedc3b -->
+Three... two... one... compress! Welcome to the Minification Grand Prix — twelve rounds strong, from react's featherweight nineteen kilobytes all the way to typescript's monstrous 1.88-megabyte heavyweight finale. Two contenders crashed out before the checkered flag. A rookie released six days ago is already stealing silverware from legends. And the old guard proved it can still bite. Bytes were sliced, milliseconds were torched, and the podium was anything but predictable. Let's get to it.
 
 ### Best minifier
 
-The crown goes to **oxc-minify**. Released mere days before this Grand Prix, it walked into the arena and turned the heavyweight division into a track meet. Look at Round 12: typescript, a 1.88 MB monster, and oxc carved it to 851.56 KB in 364 milliseconds. Best size, best speed, no contest. It pulled the same triple crown on antd and on terser itself. Yes, you read that right. In Round 7, the field had to minify the minifier, and oxc out-minified everyone on terser's own home turf. That is not a win. That is a statement.
+**oxc-minify** takes the crown, and it takes it loudly. Fresh off a release a mere six days before this race, the rookie walked straight into the heavyweight divisions and cleaned house. Round seven — minifying terser itself, all 193 KB of it — was a full triple crown: best size, best speed, best balance, 121.95 KB in 20 milliseconds flat. Then came antd, 825 KB of raw payload, where it delivered the smallest bundle on the grid at 451.48 KB in 167 ms. Then the finale: typescript, 1.88 MB of the biggest, meanest source in the field, and oxc shaved 55% off for 851.56 KB in 364 ms while the gaspers gasped.
 
-Across all twelve rounds, oxc was almost always within a whisker of the smallest output, and it got there three to four times faster than anyone else in the size race. When compression is this close, speed becomes the tiebreaker, and oxc never lost that tiebreaker. It was fastest in seven rounds outright. For a CI pipeline that runs on every commit, giving up a fraction of a percent of bytes to move three times faster isn't a compromise. It's a bargain.
+And here's the kicker — it didn't just show up for the big bouts. In every lighter round it stayed within a hair of the best size, never worse than about two percent and often a fraction of one, while running three to five times faster than @swc/core and lapping uglify-js a hundred times over. It was the fastest tool in seven of twelve rounds outright. The rules say transfer bytes matter most, and where compression is this close, speed becomes the tiebreaker. Nobody threaded that needle like oxc.
 
-Make no mistake, this was a photo finish. More on that in a moment.
+Full disclosure: this was a split decision. @swc/core has a genuine claim, and uglify-js hoarded the most size wins of anyone. But uglify's trophies came at coffee-break prices — 5.7 seconds on victory for a 0.17% edge — and it vanished from the leaderboard entirely once the sources got truly huge. When the challenge got hardest, oxc won outright: smallest AND fastest, no trade-off required. That's championship material.
 
 ### Honorable mentions
 
-**@swc/core** takes the silver, and it stings. Nine of twelve "most balanced" trophies, four outright size wins, and never more than a sliver off the pace anywhere. On jquery it beat oxc by 0.05 KB. On three it delivered 158.70 KB, the best in the field. The gap to the champion averaged under half a percent across the season, but oxc simply ran the same race three times quicker. If your world is size-obsessed and your builds can spare a few hundred milliseconds, swc is arguably the smarter pick. That is how close this was.
+**@swc/core** is your runner-up and the most balanced machine in the field — the scoreboard literally stamped "most balanced" on it seven times. Outright size wins on jquery, vue, three, and echarts. On react it missed uglify-js's best by exactly ten bytes while taking a fortieth of the time. If you want one tool with no bad rounds, this is your metronome.
 
-**uglify-js** deserves a standing ovation and a seat on the bench. Five best-compression wins, including moments of pure genius, but the pace was medieval. In Round 1, it beat swc by 0.01 KB and paid 420 milliseconds for the privilege. That's 40 milliseconds per byte of bragging rights. On victory, it needed 5,712 milliseconds to edge out swc by 0.26 KB. The grandmaster plays every move to perfection, and the audience falls asleep. Since its 2024 release, the field has lapped it in velocity.
+**uglify-js** owns the sharpest scissors in the small classes — five outright size wins across react, moment, lodash, d3, and victory. But it won react by ten bytes and paid 420 milliseconds for the privilege. Somewhere past three kilobytes, this stops being a race and becomes a coffee break. The last kilobyte is yours, old friend. The clock is not.
 
-**terser** remains the reliable veteran, earning four honorable mentions with genuinely tidy sizes. But watching it take 548 milliseconds on vue while oxc waved goodbye at 10 milliseconds tells the story of an era ending. Respect the legacy. Watch the mirror.
+**@cminify/cminify-linux-x64** is the drag racer with no trunk. Fastest on all four of the biggest sources — 23 ms on three, 108 ms on typescript — but it ships 20 to nearly 40 percent more bytes than the champions, shaving a quarter to forty percent where others carve out half. Blistering pit stops. Terrible fuel economy.
 
-**@tdewolff/minify** is the quiet dark horse. Two honorable mentions, including the second-best size on the entire typescript mountain at 875.77 KB in just 266 milliseconds. Fast, tidy, and criminally underhyped.
+**bun** grabbed the fastest lap on victory at 43 ms, then handed the crowd a bundle 15% heavier than the best. Speed demons, both — just check the luggage before you book.
 
-**@cminify/cminify-linux-x64** is the pure sprinter. Fastest tool on the four biggest courses, blazing through typescript in 108 milliseconds. The problem? It leaves entire neighborhoods of bytes behind, 38 percent bigger than the leaders on antd, a third bigger on echarts and typescript. If milliseconds matter more than bandwidth, it is your tool. Otherwise, it is first out of the blocks and last to the podium.
+**terser**, the venerable veteran, collected four honorable mentions with steady mid-pack size at mid-pack speed. There's poetry tonight: the package named terser got best-minified by oxc. The student overtakes the master.
 
-**bun** showed one flash of raw pace, fastest on victory at 43 milliseconds, but shaved 42 percent where the leaders took 49. Speed specialist, same story.
+**@tdewolff/minify** was the quiet overachiever — honorable on jquery at a brisk 12 ms, then runner-up on the typescript behemoth at 875.77 KB in 266 ms. On that final round it actually crossed the line faster than the champion, just hauling a few extra kilobytes. Sneaky. Respectable.
 
-**esbuild** turned one solid podium finish on echarts and stayed competitive throughout. A dependable mid-table runner in a brutal field.
-
-And a note for **google-closure-compiler**: the veteran finished every single race. It just never once appeared on the leaderboard in twelve rounds. Sometimes completing the season is its own quiet achievement.
+**esbuild**, the household name, managed a single honorable mention on echarts — quick, but neither quickest nor smallest, mid-pack by its own famous standards. And **google-closure-compiler**, the storied veteran of a thousand production builds? Twelve rounds, zero podium appearances. The legend arrived. The legend did not place.
 
 ### Eliminated
 
-- **babel-minify** — Gone before Round 1 could even begin, felled on react by a tooling failure before any minifying happened. A strange exit for a strange error.
-- **tedivm/jshrink** — Crashed hard on d3, choking on an unclosed regex pattern mid-minification. Broken output means a red card, no appeal.
+- **babel-minify** — out before the first corner. It failed on react itself, choking on a JSON parse error involving stale baseline-browser-mapping data. Whether the fault lies with the tool or its entourage, the rules are the rules: no output, no trophy.
+- **tedivm/jshrink** — survived five rounds, then face-planted on d3 with an "Unclosed regex pattern" crash mid-minification. A PHP minifier undone by JavaScript's own regexes. Brutal sport, this.
 
 ### Closing remarks
 
-What a season. A rookie champion crowned in the heavyweight class, a silver medalist separated by fractions of a percent, and an old size king who reminded us that perfection still costs time. One footnote before you pick a winner for your own stack: this race measured bytes and milliseconds only. Real-world adoption also runs on developer experience, install size, API ergonomics, and community. Those aren't on this scoreboard, but they're on yours. Measure your own bundles, run your own race, and may your payloads forever arrive small and fast.
+What a race. A six-day-old rookie wears the crown, a Rust-powered metronome nips at its heels, and a grizzled veteran proves those last ten bytes still exist — if you'll wait five seconds for them. One caveat before you sprint to npm: this Grand Prix scores size and speed, nothing more. Correctness on your actual codebase, install weight, API design, and community all live in a different tournament — worth scouting before you sign a driver. So benchmark on your own bundles, pick the trade-off that fits your pipeline, and may your transfer sizes ever shrink.
 <!-- aiAnalysis:end -->
 
 <details>
