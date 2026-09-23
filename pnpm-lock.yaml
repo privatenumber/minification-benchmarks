@@ -174,7 +174,7 @@ importers:
         version: 2.2.0(chart.js@4.5.0)
       comment-mark:
         specifier: github:privatenumber/comment-mark#npm/develop
-        version: https://codeload.github.com/privatenumber/comment-mark/tar.gz/f7716ed8508e00cec3ae411cb6133be8c403d863
+        version: https://codeload.github.com/privatenumber/comment-mark/tar.gz/9e11a56e1568bc152972ac388e5ca8e195371c6c
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
@@ -1846,8 +1846,8 @@ packages:
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
 
-  comment-mark@https://codeload.github.com/privatenumber/comment-mark/tar.gz/f7716ed8508e00cec3ae411cb6133be8c403d863:
-    resolution: {tarball: https://codeload.github.com/privatenumber/comment-mark/tar.gz/f7716ed8508e00cec3ae411cb6133be8c403d863}
+  comment-mark@https://codeload.github.com/privatenumber/comment-mark/tar.gz/9e11a56e1568bc152972ac388e5ca8e195371c6c:
+    resolution: {tarball: https://codeload.github.com/privatenumber/comment-mark/tar.gz/9e11a56e1568bc152972ac388e5ca8e195371c6c}
     version: 0.0.0-semantic-release
     engines: {node: '>=22.22.2'}
     hasBin: true
@@ -5911,7 +5911,7 @@ snapshots:
 
   commander@2.20.3: {}
 
-  comment-mark@https://codeload.github.com/privatenumber/comment-mark/tar.gz/f7716ed8508e00cec3ae411cb6133be8c403d863:
+  comment-mark@https://codeload.github.com/privatenumber/comment-mark/tar.gz/9e11a56e1568bc152972ac388e5ca8e195371c6c:
     dependencies:
       cleye: 3.0.0-beta.2
 

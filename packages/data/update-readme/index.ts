@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { outdent } from 'outdent';
-import { commentMark, getCommentMark } from 'comment-mark';
+import { commentMark, getCommentMarkAll } from 'comment-mark';
 import { format } from 'date-fns';
 import { capitalize } from 'lodash-es';
 import type { BenchmarkResultSuccessWithRuns } from '@minification-benchmarks/bench/types.ts';
@@ -136,8 +136,13 @@ const analyzedData = getAnalyzedData();
 
 const readmePath = './README.md';
 const readme = await fs.readFile(readmePath, 'utf8');
-const existingAnalysis = getCommentMark(readme, 'aiAnalysis');
-const existingBenchmarks = getCommentMark(readme, 'benchmarks');
+const existingMarkers = getCommentMarkAll(readme);
+const existingAnalysis = existingMarkers.find(
+	({ tagName }) => tagName === 'aiAnalysis',
+);
+const existingBenchmarks = existingMarkers.find(
+	({ tagName }) => tagName === 'benchmarks',
+);
 
 const ai = await getAiAnalysis(
 	minifiers,
@@ -179,7 +184,7 @@ const escapeHtml = (string_ = '') => string_
 
 const benchmarks = generateBenchmarks(analyzedData);
 
-const newReadme = commentMark(readme, {
+const newReadme = await commentMark(readme, {
 	// Update the date only when the rendered benchmark section actually changed,
 	// so unchanged data doesn't produce a date-only commit
 	lastUpdated: existingBenchmarks?.content.trim() === benchmarks.trim()
@@ -189,15 +194,15 @@ const newReadme = commentMark(readme, {
 	minifiers: minifiersList,
 	aiSystemPrompt: ai && escapeHtml(ai.systemPrompt),
 	aiAnalysis: ai
-		? attributes => ({
+		? {
 			// Records the inputs the analysis was generated from, so an
 			// unchanged analysis is reused on the next run
 			attributes: {
-				...attributes,
+				...existingAnalysis?.attributes,
 				hash: ai.hash,
 			},
 			content: `\n${ai.analysis}\n`,
-		})
+		}
 		: undefined,
 });
 
