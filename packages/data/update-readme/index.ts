@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { outdent } from 'outdent';
-import { commentMark } from 'comment-mark';
+import { commentMark, getCommentMarkAll } from 'comment-mark';
 import { format } from 'date-fns';
 import { capitalize } from 'lodash-es';
 import type { BenchmarkResultSuccessWithRuns } from '@minification-benchmarks/bench/types.ts';
@@ -132,15 +132,23 @@ const generateBenchmarks = (
 	.join('\n\n----\n\n');
 
 const minifiers = await getMinifiers();
-
 const analyzedData = getAnalyzedData();
-const ai = await getAiAnalysis(
-	minifiers,
-	analyzedData,
-);
 
 const readmePath = './README.md';
 const readme = await fs.readFile(readmePath, 'utf8');
+const existingMarkers = getCommentMarkAll(readme);
+const existingAnalysis = existingMarkers.find(
+	({ tagName }) => tagName === 'aiAnalysis',
+);
+const existingBenchmarks = existingMarkers.find(
+	({ tagName }) => tagName === 'benchmarks',
+);
+
+const ai = await getAiAnalysis(
+	minifiers,
+	analyzedData,
+	existingAnalysis?.attributes.hash,
+);
 
 const minifiersList = md.table([
 	['Minifier', 'Version', 'Release date ↓'],
@@ -174,12 +182,28 @@ const escapeHtml = (string_ = '') => string_
 	.replaceAll('"', '&quot;')
 	.replaceAll('\'', '&#39;');
 
-const newReadme = commentMark(readme, {
-	lastUpdated: format(utcToday, 'MMM d, y'),
-	benchmarks: generateBenchmarks(analyzedData),
+const benchmarks = generateBenchmarks(analyzedData);
+
+const newReadme = await commentMark(readme, {
+	// Update the date only when the rendered benchmark section actually changed,
+	// so unchanged data doesn't produce a date-only commit
+	lastUpdated: existingBenchmarks?.content.trim() === benchmarks.trim()
+		? undefined
+		: format(utcToday, 'MMM d, y'),
+	benchmarks,
 	minifiers: minifiersList,
 	aiSystemPrompt: ai && escapeHtml(ai.systemPrompt),
-	aiAnalysis: ai?.analysis,
+	aiAnalysis: ai
+		? {
+			// Records the inputs the analysis was generated from, so an
+			// unchanged analysis is reused on the next run
+			attributes: {
+				...existingAnalysis?.attributes,
+				hash: ai.hash,
+			},
+			content: `\n${ai.analysis}\n`,
+		}
+		: undefined,
 });
 
 await fs.writeFile(readmePath, newReadme);

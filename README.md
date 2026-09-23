@@ -9,7 +9,7 @@
 
 This project benchmarks the following minifiers:
 
-<!-- minifiers:start -->
+<!-- minifiers -->
 | Minifier | Version | Release date ↓ |
 | - | - | - |
 | [oxc-minify](https://github.com/oxc-project/oxc) | [0.150.0](https://www.npmjs.com/package/oxc-minify/v/0.150.0) | 2026-09-14 |
@@ -23,9 +23,9 @@ This project benchmarks the following minifiers:
 | [uglify-js](https://github.com/mishoo/UglifyJS) | [3.19.3](https://www.npmjs.com/package/uglify-js/v/3.19.3) | 2024-08-29 |
 | [babel-minify](https://github.com/babel/minify/tree/master/packages/babel-minify) | [0.5.2](https://www.npmjs.com/package/babel-minify/v/0.5.2) | 2022-05-06 |
 | [tedivm/jshrink](https://github.com/tedious/JShrink) | 1.8.1 |  |
-<!-- minifiers:end -->
+<!-- /minifiers -->
 
-_Benchmarks last updated on <!-- lastUpdated:start -->Sep 20, 2026<!-- lastUpdated:end -->._
+_Benchmarks last updated on <!-- lastUpdated -->Sep 20, 2026<!-- /lastUpdated -->._
 
 <br>
 
@@ -82,7 +82,7 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 > [!TIP]
 > What's the verdict? [⚔️ See the _Minifier showdown_](#%EF%B8%8F-minifier-showdown)
 
-<!-- benchmarks:start -->
+<!-- benchmarks -->
 <picture>
 	<source media="(prefers-color-scheme: dark)" srcset="https://quickchart.io/chart?c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27Original%27%2C%27%40swc%2Fcore%27%2C%27terser%27%2C%27oxc-minify%27%2C%27uglify-js%27%2C%27bun%27%2C%27esbuild%27%2C%27%40tdewolff%2Fminify%27%2C%27uglify-js+%28no+compress%29%27%2C%27terser+%28no+compress%29%27%2C%27google-closure-compiler%27%2C%27%40cminify%2Fcminify-linux-x64%27%2C%27tedivm%2Fjshrink%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Gzipped+Size%27%2Cdata%3A%5B19385%2C8186%2C8255%2C8354%2C8177%2C8516%2C8542%2C8628%2C8668%2C8739%2C8216%2C10858%2C11040%5D%2CbackgroundColor%3A%5B%27rgba%28150%2C+150%2C+150%2C+0.7%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+0.7%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+0.7%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+0.7%29%27%2C%27hsla%28130%2C+75%25%2C+52%25%2C+0.7%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+0.7%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+0.7%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+0.7%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+0.7%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+0.7%29%27%2C%27hsla%28177%2C+78%25%2C+45%25%2C+0.7%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+0.7%29%27%2C%27hsla%28264%2C+78%25%2C+49%25%2C+0.7%29%27%5D%2CborderColor%3A%5B%27rgb%28150%2C+150%2C+150%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+1%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+1%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+1%29%27%2C%27hsla%28130%2C+75%25%2C+52%25%2C+1%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+1%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+1%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+1%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+1%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+1%29%27%2C%27hsla%28177%2C+78%25%2C+45%25%2C+1%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+1%29%27%2C%27hsla%28264%2C+78%25%2C+49%25%2C+1%29%27%5D%2CborderWidth%3A1%7D%5D%7D%2Coptions%3A%7Bscales%3A%7Bx%3A%7Bticks%3A%7Bcolor%3A%27%23f0f6fc%27%2CmaxRotation%3A45%2CminRotation%3A45%7D%2Cgrid%3A%7Bdisplay%3Afalse%7D%7D%2Cy%3A%7Bmin%3A0%2Cticks%3A%7Bcolor%3A%27%23f0f6fc%27%2Ccallback%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Cfont%3A%7Bsize%3A10%7D%7D%2Ctitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Gzipped+Size%27%2Ccolor%3A%27%23f0f6fc%27%2Cfont%3A%7Bsize%3A14%7D%7D%2Cgrid%3A%7Bcolor%3A%27%23f0f6fc1a%27%7D%7D%7D%2Cplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27react+v17.0.2%27%2Cfont%3A%7Bsize%3A20%7D%2Ccolor%3A%27%23f0f6fc%27%7D%2Clegend%3A%7Bdisplay%3Afalse%7D%2Cdatalabels%3A%7Blabels%3A%7Bbytes%3A%7Banchor%3A%27end%27%2Calign%3A%27top%27%2Cformatter%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Ccolor%3A%27%23f0f6fc%27%2Cfont%3A%7Bsize%3A11%7D%7D%2Cpercent%3A%7Banchor%3A%27center%27%2Calign%3A%27center%27%2Cformatter%3A%28%0A%09value++++++++%2C%0A%09context+++++++++%2C%0A%29+%3D%3E+%7B%0A%09const+base+%3D+Number%28context.dataset.data%5B0%5D+%3F%3F+0%29%3B%0A%09if+%28%21base+%7C%7C+value+%3D%3D%3D+base%29+%7B+return+%27%27%3B+%7D%0A%09return+%60%24%7BMath.round%28%28value+%2F+base%29+*+100%29%7D%25%60%3B%0A%7D%2Ccolor%3A%27%23fff%27%2Cfont%3A%7Bsize%3A11%2Cweight%3A%27bold%27%7D%2Cclamp%3Atrue%7D%7D%7D%7D%7D%7D&w=720&h=400&ref=qc-js&bkg=transparent&f=svg&v=4">
 	<img src="https://quickchart.io/chart?c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27Original%27%2C%27%40swc%2Fcore%27%2C%27terser%27%2C%27oxc-minify%27%2C%27uglify-js%27%2C%27bun%27%2C%27esbuild%27%2C%27%40tdewolff%2Fminify%27%2C%27uglify-js+%28no+compress%29%27%2C%27terser+%28no+compress%29%27%2C%27google-closure-compiler%27%2C%27%40cminify%2Fcminify-linux-x64%27%2C%27tedivm%2Fjshrink%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Gzipped+Size%27%2Cdata%3A%5B19385%2C8186%2C8255%2C8354%2C8177%2C8516%2C8542%2C8628%2C8668%2C8739%2C8216%2C10858%2C11040%5D%2CbackgroundColor%3A%5B%27rgba%28150%2C+150%2C+150%2C+0.7%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+0.7%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+0.7%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+0.7%29%27%2C%27hsla%28130%2C+75%25%2C+52%25%2C+0.7%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+0.7%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+0.7%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+0.7%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+0.7%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+0.7%29%27%2C%27hsla%28177%2C+78%25%2C+45%25%2C+0.7%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+0.7%29%27%2C%27hsla%28264%2C+78%25%2C+49%25%2C+0.7%29%27%5D%2CborderColor%3A%5B%27rgb%28150%2C+150%2C+150%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+1%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+1%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+1%29%27%2C%27hsla%28130%2C+75%25%2C+52%25%2C+1%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+1%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+1%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+1%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+1%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+1%29%27%2C%27hsla%28177%2C+78%25%2C+45%25%2C+1%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+1%29%27%2C%27hsla%28264%2C+78%25%2C+49%25%2C+1%29%27%5D%2CborderWidth%3A1%7D%5D%7D%2Coptions%3A%7Bscales%3A%7Bx%3A%7Bticks%3A%7Bcolor%3A%27%23333%27%2CmaxRotation%3A45%2CminRotation%3A45%7D%2Cgrid%3A%7Bdisplay%3Afalse%7D%7D%2Cy%3A%7Bmin%3A0%2Cticks%3A%7Bcolor%3A%27%23333%27%2Ccallback%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Cfont%3A%7Bsize%3A10%7D%7D%2Ctitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Gzipped+Size%27%2Ccolor%3A%27%23333%27%2Cfont%3A%7Bsize%3A14%7D%7D%2Cgrid%3A%7Bcolor%3A%27%2333333340%27%7D%7D%7D%2Cplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27react+v17.0.2%27%2Cfont%3A%7Bsize%3A20%7D%2Ccolor%3A%27%23333%27%7D%2Clegend%3A%7Bdisplay%3Afalse%7D%2Cdatalabels%3A%7Blabels%3A%7Bbytes%3A%7Banchor%3A%27end%27%2Calign%3A%27top%27%2Cformatter%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Ccolor%3A%27%23333%27%2Cfont%3A%7Bsize%3A11%7D%7D%2Cpercent%3A%7Banchor%3A%27center%27%2Calign%3A%27center%27%2Cformatter%3A%28%0A%09value++++++++%2C%0A%09context+++++++++%2C%0A%29+%3D%3E+%7B%0A%09const+base+%3D+Number%28context.dataset.data%5B0%5D+%3F%3F+0%29%3B%0A%09if+%28%21base+%7C%7C+value+%3D%3D%3D+base%29+%7B+return+%27%27%3B+%7D%0A%09return+%60%24%7BMath.round%28%28value+%2F+base%29+*+100%29%7D%25%60%3B%0A%7D%2Ccolor%3A%27%23fff%27%2Cfont%3A%7Bsize%3A11%2Cweight%3A%27bold%27%7D%2Cclamp%3Atrue%7D%7D%7D%7D%7D%7D&w=720&h=400&ref=qc-js&bkg=transparent&f=svg&v=4">
@@ -416,57 +416,45 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | 12. [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts) <sub title="Failed: timeout">❌ Timed out</sub> | - | - | <sup>:warning:</sup> `+10,000 ms` |
 | 13. [uglify-js](packages/minifiers/minifiers/uglify-js.ts) <sub title="Failed: timeout">❌ Timed out</sub> | - | - | <sup>:warning:</sup> `+10,000 ms` |
 </div>
-<!-- benchmarks:end -->
+<!-- /benchmarks -->
 
 ## ⚔️ Minifier showdown
 
 > [!NOTE]
 > 🤖 This analysis is AI generated. See below for the system prompt.
 
-<!-- aiAnalysis:start -->
-Ladies and gentlemen, twelve rounds, eleven contenders, and a heavyweight division stacked like never before. We had a five-time size champion willing to burn five seconds for a hundred bytes. We had a rookie sprinting through the megabyte class like it was a warm-up lap. And we had two eliminations before the crowd even settled into their seats. Buckle up, because this one went the distance.
+<!-- aiAnalysis hash="95f3c739b7a5bdb5135e4567ed69a617929f37e0ffe297efce40dc7d2563ed8d" -->
+Three... two... one... compress! Welcome back to the Minification Grand Prix, twelve rounds of raw byte-slicing mayhem — from a 19 KB sprint through react to a full 1.88 MB marathon across the typescript source. The paddock was stacked: a rocket-fast rookie released mere days ago, a veteran artisan famous for squeezing every last byte, and a field of scrappy contenders. We had photo finishes. We had heartbreak. We had two competitors carted off on stretchers before the halfway flag. Let's get to it.
 
 ### Best minifier
 
-The crown goes to **oxc-minify**. Released mere days before this Grand Prix, it walked into the arena and turned the heavyweight division into a track meet. Look at Round 12: typescript, a 1.88 MB monster, and oxc carved it to 851.56 KB in 364 milliseconds. Best size, best speed, no contest. It pulled the same triple crown on antd and on terser itself. Yes, you read that right. In Round 7, the field had to minify the minifier, and oxc out-minified everyone on terser's own home turf. That is not a win. That is a statement.
-
-Across all twelve rounds, oxc was almost always within a whisker of the smallest output, and it got there three to four times faster than anyone else in the size race. When compression is this close, speed becomes the tiebreaker, and oxc never lost that tiebreaker. It was fastest in seven rounds outright. For a CI pipeline that runs on every commit, giving up a fraction of a percent of bytes to move three times faster isn't a compromise. It's a bargain.
-
-Make no mistake, this was a photo finish. More on that in a moment.
+The crown goes to **@swc/core** — and yes, the judges deliberated long into the night, because one very loud rookie made a serious case. But look at the tape. SWC posted the smallest gzip in four rounds — jquery, vue, three, and echarts — and in the other eight it was never more than a whisker off the top. That is the rarest thing in this sport: a tool that shows up on the podium every single round. Round 9 said it all: uglify-js needed 5,712 milliseconds to shave victory down to 157.44 KB. SWC landed at 157.70 KB — a gap of 0.2% — in 166 milliseconds. Thirty-four times faster for a rounding error's worth of bytes. It ran the full gauntlet from react in 11 ms to echarts in 362 ms without ever breaking a sweat or a budget. When the primary metric is bytes over the wire and the secondary is getting them there before lunch, SWC is the complete package.
 
 ### Honorable mentions
 
-**@swc/core** takes the silver, and it stings. Nine of twelve "most balanced" trophies, four outright size wins, and never more than a sliver off the pace anywhere. On jquery it beat oxc by 0.05 KB. On three it delivered 158.70 KB, the best in the field. The gap to the champion averaged under half a percent across the season, but oxc simply ran the same race three times quicker. If your world is size-obsessed and your builds can spare a few hundred milliseconds, swc is arguably the smarter pick. That is how close this was.
+**oxc-minify** is the People's Champion and very nearly the champion, full stop. It was the fastest gun in nearly every round — react in a blistering 2 milliseconds — and then it did the unthinkable in the heavyweight division. Round 7 asked everyone to minify terser's own source code, and oxc walked onto terser's home turf and beat the entire field with both the smallest output and the fastest time. It then swept antd and typescript, the two largest artifacts in the entire contest, winning size and speed outright — 851.56 KB out of a 1.88 MB monster in 364 ms. Its only tax: older, hand-crafted libraries like moment and lodash, where it leaves a few kilobytes on the table. If your CI pipeline counts seconds — and whose doesn't — this is your engine.
 
-**uglify-js** deserves a standing ovation and a seat on the bench. Five best-compression wins, including moments of pure genius, but the pace was medieval. In Round 1, it beat swc by 0.01 KB and paid 420 milliseconds for the privilege. That's 40 milliseconds per byte of bragging rights. On victory, it needed 5,712 milliseconds to edge out swc by 0.26 KB. The grandmaster plays every move to perfection, and the audience falls asleep. Since its 2024 release, the field has lapped it in velocity.
+**uglify-js** takes the artisan's award. Five best-gzip badges, more than anyone in the field, including a stunning 74% shave on lodash. But it pays in time: 906 ms for moment, 5.7 seconds for victory. The tortoise strategy works if you can afford the wait, and the byte purists will swear by it.
 
-**terser** remains the reliable veteran, earning four honorable mentions with genuinely tidy sizes. But watching it take 548 milliseconds on vue while oxc waved goodbye at 10 milliseconds tells the story of an era ending. Respect the legacy. Watch the mirror.
+**terser** deserves a salute — the veteran rolled off honorable mentions in the early rounds with gorgeous compression, but as the inputs grew, the clock quietly ate it alive. **@tdewolff/minify** was the quiet speedster, grabbing podiums at both ends of the schedule — jquery in 12 ms and a genuinely impressive typescript run. **esbuild** showed up, worked fast, and finished respectably at echarts; steady hands, just outgunned at the very top.
 
-**@tdewolff/minify** is the quiet dark horse. Two honorable mentions, including the second-best size on the entire typescript mountain at 875.77 KB in just 266 milliseconds. Fast, tidy, and criminally underhyped.
-
-**@cminify/cminify-linux-x64** is the pure sprinter. Fastest tool on the four biggest courses, blazing through typescript in 108 milliseconds. The problem? It leaves entire neighborhoods of bytes behind, 38 percent bigger than the leaders on antd, a third bigger on echarts and typescript. If milliseconds matter more than bandwidth, it is your tool. Otherwise, it is first out of the blocks and last to the podium.
-
-**bun** showed one flash of raw pace, fastest on victory at 43 milliseconds, but shaved 42 percent where the leaders took 49. Speed specialist, same story.
-
-**esbuild** turned one solid podium finish on echarts and stayed competitive throughout. A dependable mid-table runner in a brutal field.
-
-And a note for **google-closure-compiler**: the veteran finished every single race. It just never once appeared on the leaderboard in twelve rounds. Sometimes completing the season is its own quiet achievement.
+Two niche performances worth noting. **@cminify** had the fastest hands in the heavyweight division — nobody touches its 23 ms on three — but it fights a weight class down on compression, shaving just 23-24% where the leaders carved 36-45%. Pure speed, heavy byte bill. **bun** flashed across the line first on victory but shipped 23 KB more than the winners; a bundler's heart in a minifier's race. And the storied **google-closure-compiler**? It never troubled a single leaderboard today — no failure recorded, but no trophies either. The scoreboard simply never called its name.
 
 ### Eliminated
 
-- **babel-minify** — Gone before Round 1 could even begin, felled on react by a tooling failure before any minifying happened. A strange exit for a strange error.
-- **tedivm/jshrink** — Crashed hard on d3, choking on an unclosed regex pattern mid-minification. Broken output means a red card, no appeal.
+- **babel-minify** — out in Round 1, crashing on react before the minification even began. A tooling error, not a compression error, but a DNF is a DNF.
+- **tedivm/jshrink** — eliminated in Round 6 when d3's gnarly regexes broke its parser outright. When your job is taming JavaScript and a regex pattern fells you, it's time to pack the pit crew's tools.
 
 ### Closing remarks
 
-What a season. A rookie champion crowned in the heavyweight class, a silver medalist separated by fractions of a percent, and an old size king who reminded us that perfection still costs time. One footnote before you pick a winner for your own stack: this race measured bytes and milliseconds only. Real-world adoption also runs on developer experience, install size, API ergonomics, and community. Those aren't on this scoreboard, but they're on yours. Measure your own bundles, run your own race, and may your payloads forever arrive small and fast.
-<!-- aiAnalysis:end -->
+What a race. SWC takes the crown on relentless consistency, oxc-minify redefines what speed with substance looks like, and uglify-js proves patience still buys bytes. Two reminders before you sign any contracts: this scoreboard measures performance only — real adoption also weighs install size, API ergonomics, and ecosystem — and today's eliminations show exactly why you should always validate minified output against your own test suite. Run these tools on your bundles, watch your own numbers, and pick the trade-off that fits your pipeline. See you at the next compression.
+<!-- /aiAnalysis -->
 
 <details>
 <summary>System prompt</summary>
 <br>
 
-<pre><code><!-- aiSystemPrompt:start -->
+<pre><code><!-- aiSystemPrompt -->
 Today&#39;s date is 2026-09-20
 
 You are a JavaScript minification benchmark analyst with a flair for storytelling.
@@ -606,7 +594,7 @@ Failed &quot;react&quot; in undefined stage:
 ## tedivm/jshrink
 Failed &quot;d3&quot; in minification stage:
 &quot;RuntimeException: Unclosed regex pattern at position: 289075 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:660&quot;
-<!-- aiSystemPrompt:end --></code></pre>
+<!-- /aiSystemPrompt --></code></pre>
 </details>
 
 ## Sponsors

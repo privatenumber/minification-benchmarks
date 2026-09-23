@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import crypto from 'node:crypto';
 import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
 import { generateText } from 'ai';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
@@ -19,30 +20,53 @@ const provider = createOpenAICompatible({
 	},
 });
 
+const model = provider.chatModel('glm-5.3');
+
 export const getAiAnalysis = async (
 	minifiers: MinifierLoaded[],
 	data: AnalyzedData,
+	existingHash?: string,
 ) => {
-	const todaysDate = `Today's date is ${new Date().toISOString().split('T')[0]}`;
 	const systemPromptPath = new URL('system-prompt.txt', import.meta.url);
 	const systemPrompt = await fs.readFile(systemPromptPath.pathname, 'utf8');
 	const message = await getMessage(minifiers, data);
+
+	// Identifies the inputs an analysis was generated from, so an unchanged
+	// analysis is reused instead of requested again. The prompt embeds the
+	// current date, which is excluded to keep the analysis valid across days.
+	const hash = crypto
+		.createHash('sha256')
+		.update(JSON.stringify([
+			model.provider,
+			model.modelId,
+			systemPrompt,
+			message,
+		]))
+		.digest('hex');
+
+	if (existingHash === hash) {
+		return;
+	}
 
 	if (!apiKey) {
 		console.warn('Skipping AI analysis due to missing OPENCODE_GO_API_KEY');
 		return;
 	}
 
+	const todaysDate = `Today's date is ${new Date().toISOString().split('T')[0]}`;
 	const systemPromptWithDate = `${todaysDate}\n\n${systemPrompt}`;
 
 	const { text } = await generateText({
-		model: provider.chatModel('glm-5.3'),
+		model,
 		instructions: systemPromptWithDate,
 		prompt: message,
 	});
 
 	return {
 		systemPrompt: `${systemPromptWithDate}\n\n${message}`,
+		// Only a successful generation returns the hash, so a skipped or failed
+		// run never marks the previous analysis as current
+		hash,
 		analysis: text.replaceAll('\n---\n', ''),
 	};
 };
