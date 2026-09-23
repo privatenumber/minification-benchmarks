@@ -10,7 +10,7 @@
 		"@minification-benchmarks/utils": "workspace:*",
 		"ai": "^7.0.107",
 		"chartjs-plugin-datalabels": "^2.2.0",
-		"comment-mark": "^2.1.0",
+		"comment-mark": "github:privatenumber/comment-mark#npm/develop",
 		"date-fns": "^4.1.0",
 		"lodash-es": "^4.17.21",
 		"md-pen": "^1.2.0",

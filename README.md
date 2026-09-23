@@ -9,7 +9,7 @@
 
 This project benchmarks the following minifiers:
 
-<!-- minifiers:start -->
+<!-- minifiers -->
 | Minifier | Version | Release date ↓ |
 | - | - | - |
 | [oxc-minify](https://github.com/oxc-project/oxc) | [0.150.0](https://www.npmjs.com/package/oxc-minify/v/0.150.0) | 2026-09-14 |
@@ -23,9 +23,9 @@ This project benchmarks the following minifiers:
 | [uglify-js](https://github.com/mishoo/UglifyJS) | [3.19.3](https://www.npmjs.com/package/uglify-js/v/3.19.3) | 2024-08-29 |
 | [babel-minify](https://github.com/babel/minify/tree/master/packages/babel-minify) | [0.5.2](https://www.npmjs.com/package/babel-minify/v/0.5.2) | 2022-05-06 |
 | [tedivm/jshrink](https://github.com/tedious/JShrink) | 1.8.1 |  |
-<!-- minifiers:end -->
+<!-- /minifiers -->
 
-_Benchmarks last updated on <!-- lastUpdated:start -->Sep 20, 2026<!-- lastUpdated:end -->._
+_Benchmarks last updated on <!-- lastUpdated -->Sep 20, 2026<!-- /lastUpdated -->._
 
 <br>
 
@@ -82,7 +82,7 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 > [!TIP]
 > What's the verdict? [⚔️ See the _Minifier showdown_](#%EF%B8%8F-minifier-showdown)
 
-<!-- benchmarks:start -->
+<!-- benchmarks -->
 <picture>
 	<source media="(prefers-color-scheme: dark)" srcset="https://quickchart.io/chart?c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27Original%27%2C%27%40swc%2Fcore%27%2C%27terser%27%2C%27oxc-minify%27%2C%27uglify-js%27%2C%27bun%27%2C%27esbuild%27%2C%27%40tdewolff%2Fminify%27%2C%27uglify-js+%28no+compress%29%27%2C%27terser+%28no+compress%29%27%2C%27google-closure-compiler%27%2C%27%40cminify%2Fcminify-linux-x64%27%2C%27tedivm%2Fjshrink%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Gzipped+Size%27%2Cdata%3A%5B19385%2C8186%2C8255%2C8354%2C8177%2C8516%2C8542%2C8628%2C8668%2C8739%2C8216%2C10858%2C11040%5D%2CbackgroundColor%3A%5B%27rgba%28150%2C+150%2C+150%2C+0.7%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+0.7%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+0.7%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+0.7%29%27%2C%27hsla%28130%2C+75%25%2C+52%25%2C+0.7%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+0.7%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+0.7%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+0.7%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+0.7%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+0.7%29%27%2C%27hsla%28177%2C+78%25%2C+45%25%2C+0.7%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+0.7%29%27%2C%27hsla%28264%2C+78%25%2C+49%25%2C+0.7%29%27%5D%2CborderColor%3A%5B%27rgb%28150%2C+150%2C+150%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+1%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+1%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+1%29%27%2C%27hsla%28130%2C+75%25%2C+52%25%2C+1%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+1%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+1%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+1%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+1%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+1%29%27%2C%27hsla%28177%2C+78%25%2C+45%25%2C+1%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+1%29%27%2C%27hsla%28264%2C+78%25%2C+49%25%2C+1%29%27%5D%2CborderWidth%3A1%7D%5D%7D%2Coptions%3A%7Bscales%3A%7Bx%3A%7Bticks%3A%7Bcolor%3A%27%23f0f6fc%27%2CmaxRotation%3A45%2CminRotation%3A45%7D%2Cgrid%3A%7Bdisplay%3Afalse%7D%7D%2Cy%3A%7Bmin%3A0%2Cticks%3A%7Bcolor%3A%27%23f0f6fc%27%2Ccallback%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Cfont%3A%7Bsize%3A10%7D%7D%2Ctitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Gzipped+Size%27%2Ccolor%3A%27%23f0f6fc%27%2Cfont%3A%7Bsize%3A14%7D%7D%2Cgrid%3A%7Bcolor%3A%27%23f0f6fc1a%27%7D%7D%7D%2Cplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27react+v17.0.2%27%2Cfont%3A%7Bsize%3A20%7D%2Ccolor%3A%27%23f0f6fc%27%7D%2Clegend%3A%7Bdisplay%3Afalse%7D%2Cdatalabels%3A%7Blabels%3A%7Bbytes%3A%7Banchor%3A%27end%27%2Calign%3A%27top%27%2Cformatter%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Ccolor%3A%27%23f0f6fc%27%2Cfont%3A%7Bsize%3A11%7D%7D%2Cpercent%3A%7Banchor%3A%27center%27%2Calign%3A%27center%27%2Cformatter%3A%28%0A%09value++++++++%2C%0A%09context+++++++++%2C%0A%29+%3D%3E+%7B%0A%09const+base+%3D+Number%28context.dataset.data%5B0%5D+%3F%3F+0%29%3B%0A%09if+%28%21base+%7C%7C+value+%3D%3D%3D+base%29+%7B+return+%27%27%3B+%7D%0A%09return+%60%24%7BMath.round%28%28value+%2F+base%29+*+100%29%7D%25%60%3B%0A%7D%2Ccolor%3A%27%23fff%27%2Cfont%3A%7Bsize%3A11%2Cweight%3A%27bold%27%7D%2Cclamp%3Atrue%7D%7D%7D%7D%7D%7D&w=720&h=400&ref=qc-js&bkg=transparent&f=svg&v=4">
 	<img src="https://quickchart.io/chart?c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27Original%27%2C%27%40swc%2Fcore%27%2C%27terser%27%2C%27oxc-minify%27%2C%27uglify-js%27%2C%27bun%27%2C%27esbuild%27%2C%27%40tdewolff%2Fminify%27%2C%27uglify-js+%28no+compress%29%27%2C%27terser+%28no+compress%29%27%2C%27google-closure-compiler%27%2C%27%40cminify%2Fcminify-linux-x64%27%2C%27tedivm%2Fjshrink%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Gzipped+Size%27%2Cdata%3A%5B19385%2C8186%2C8255%2C8354%2C8177%2C8516%2C8542%2C8628%2C8668%2C8739%2C8216%2C10858%2C11040%5D%2CbackgroundColor%3A%5B%27rgba%28150%2C+150%2C+150%2C+0.7%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+0.7%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+0.7%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+0.7%29%27%2C%27hsla%28130%2C+75%25%2C+52%25%2C+0.7%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+0.7%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+0.7%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+0.7%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+0.7%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+0.7%29%27%2C%27hsla%28177%2C+78%25%2C+45%25%2C+0.7%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+0.7%29%27%2C%27hsla%28264%2C+78%25%2C+49%25%2C+0.7%29%27%5D%2CborderColor%3A%5B%27rgb%28150%2C+150%2C+150%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+1%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+1%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+1%29%27%2C%27hsla%28130%2C+75%25%2C+52%25%2C+1%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+1%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+1%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+1%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+1%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+1%29%27%2C%27hsla%28177%2C+78%25%2C+45%25%2C+1%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+1%29%27%2C%27hsla%28264%2C+78%25%2C+49%25%2C+1%29%27%5D%2CborderWidth%3A1%7D%5D%7D%2Coptions%3A%7Bscales%3A%7Bx%3A%7Bticks%3A%7Bcolor%3A%27%23333%27%2CmaxRotation%3A45%2CminRotation%3A45%7D%2Cgrid%3A%7Bdisplay%3Afalse%7D%7D%2Cy%3A%7Bmin%3A0%2Cticks%3A%7Bcolor%3A%27%23333%27%2Ccallback%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Cfont%3A%7Bsize%3A10%7D%7D%2Ctitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Gzipped+Size%27%2Ccolor%3A%27%23333%27%2Cfont%3A%7Bsize%3A14%7D%7D%2Cgrid%3A%7Bcolor%3A%27%2333333340%27%7D%7D%7D%2Cplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27react+v17.0.2%27%2Cfont%3A%7Bsize%3A20%7D%2Ccolor%3A%27%23333%27%7D%2Clegend%3A%7Bdisplay%3Afalse%7D%2Cdatalabels%3A%7Blabels%3A%7Bbytes%3A%7Banchor%3A%27end%27%2Calign%3A%27top%27%2Cformatter%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Ccolor%3A%27%23333%27%2Cfont%3A%7Bsize%3A11%7D%7D%2Cpercent%3A%7Banchor%3A%27center%27%2Calign%3A%27center%27%2Cformatter%3A%28%0A%09value++++++++%2C%0A%09context+++++++++%2C%0A%29+%3D%3E+%7B%0A%09const+base+%3D+Number%28context.dataset.data%5B0%5D+%3F%3F+0%29%3B%0A%09if+%28%21base+%7C%7C+value+%3D%3D%3D+base%29+%7B+return+%27%27%3B+%7D%0A%09return+%60%24%7BMath.round%28%28value+%2F+base%29+*+100%29%7D%25%60%3B%0A%7D%2Ccolor%3A%27%23fff%27%2Cfont%3A%7Bsize%3A11%2Cweight%3A%27bold%27%7D%2Cclamp%3Atrue%7D%7D%7D%7D%7D%7D&w=720&h=400&ref=qc-js&bkg=transparent&f=svg&v=4">
@@ -416,15 +416,14 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | 12. [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts) <sub title="Failed: timeout">❌ Timed out</sub> | - | - | <sup>:warning:</sup> `+10,000 ms` |
 | 13. [uglify-js](packages/minifiers/minifiers/uglify-js.ts) <sub title="Failed: timeout">❌ Timed out</sub> | - | - | <sup>:warning:</sup> `+10,000 ms` |
 </div>
-<!-- benchmarks:end -->
+<!-- /benchmarks -->
 
 ## ⚔️ Minifier showdown
 
 > [!NOTE]
 > 🤖 This analysis is AI generated. See below for the system prompt.
 
-<!-- aiAnalysis:start -->
-<!-- analysis-hash: 95f3c739b7a5bdb5135e4567ed69a617929f37e0ffe297efce40dc7d2563ed8d -->
+<!-- aiAnalysis hash="95f3c739b7a5bdb5135e4567ed69a617929f37e0ffe297efce40dc7d2563ed8d" -->
 Three... two... one... compress! Welcome back to the Minification Grand Prix, twelve rounds of raw byte-slicing mayhem — from a 19 KB sprint through react to a full 1.88 MB marathon across the typescript source. The paddock was stacked: a rocket-fast rookie released mere days ago, a veteran artisan famous for squeezing every last byte, and a field of scrappy contenders. We had photo finishes. We had heartbreak. We had two competitors carted off on stretchers before the halfway flag. Let's get to it.
 
 ### Best minifier
@@ -449,13 +448,13 @@ Two niche performances worth noting. **@cminify** had the fastest hands in the h
 ### Closing remarks
 
 What a race. SWC takes the crown on relentless consistency, oxc-minify redefines what speed with substance looks like, and uglify-js proves patience still buys bytes. Two reminders before you sign any contracts: this scoreboard measures performance only — real adoption also weighs install size, API ergonomics, and ecosystem — and today's eliminations show exactly why you should always validate minified output against your own test suite. Run these tools on your bundles, watch your own numbers, and pick the trade-off that fits your pipeline. See you at the next compression.
-<!-- aiAnalysis:end -->
+<!-- /aiAnalysis -->
 
 <details>
 <summary>System prompt</summary>
 <br>
 
-<pre><code><!-- aiSystemPrompt:start -->
+<pre><code><!-- aiSystemPrompt -->
 Today&#39;s date is 2026-09-20
 
 You are a JavaScript minification benchmark analyst with a flair for storytelling.
@@ -595,7 +594,7 @@ Failed &quot;react&quot; in undefined stage:
 ## tedivm/jshrink
 Failed &quot;d3&quot; in minification stage:
 &quot;RuntimeException: Unclosed regex pattern at position: 289075 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:660&quot;
-<!-- aiSystemPrompt:end --></code></pre>
+<!-- /aiSystemPrompt --></code></pre>
 </details>
 
 ## Sponsors

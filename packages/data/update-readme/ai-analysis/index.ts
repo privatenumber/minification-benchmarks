@@ -22,13 +22,10 @@ const provider = createOpenAICompatible({
 
 const model = provider.chatModel('glm-5.3');
 
-// commentMark wraps multiline sections in newlines, so allow leading whitespace
-const analysisHashPattern = /^\s*<!--\s*analysis-hash:\s*(\S+)\s*-->/;
-
 export const getAiAnalysis = async (
 	minifiers: MinifierLoaded[],
 	data: AnalyzedData,
-	existingAnalysis?: string,
+	existingHash?: string,
 ) => {
 	const systemPromptPath = new URL('system-prompt.txt', import.meta.url);
 	const systemPrompt = await fs.readFile(systemPromptPath.pathname, 'utf8');
@@ -37,7 +34,7 @@ export const getAiAnalysis = async (
 	// Identifies the inputs an analysis was generated from, so an unchanged
 	// analysis is reused instead of requested again. The prompt embeds the
 	// current date, which is excluded to keep the analysis valid across days.
-	const analysisHash = crypto
+	const hash = crypto
 		.createHash('sha256')
 		.update(JSON.stringify([
 			model.provider,
@@ -47,7 +44,7 @@ export const getAiAnalysis = async (
 		]))
 		.digest('hex');
 
-	if (existingAnalysis?.match(analysisHashPattern)?.[1] === analysisHash) {
+	if (existingHash === hash) {
 		return;
 	}
 
@@ -67,8 +64,9 @@ export const getAiAnalysis = async (
 
 	return {
 		systemPrompt: `${systemPromptWithDate}\n\n${message}`,
-		// Only a successful generation records the hash, so a skipped or failed
+		// Only a successful generation returns the hash, so a skipped or failed
 		// run never marks the previous analysis as current
-		analysis: `<!-- analysis-hash: ${analysisHash} -->\n${text.replaceAll('\n---\n', '')}`,
+		hash,
+		analysis: text.replaceAll('\n---\n', ''),
 	};
 };
