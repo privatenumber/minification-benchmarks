@@ -95,13 +95,13 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.150.0",
+				"version": "0.151.0",
 				"configHash": "6d06706e9d",
 				"result": {
 					"data": {
 						"minifiedBytes": 23147,
 						"minzippedBytes": 8354,
-						"time": 1.8834647999999998,
+						"time": 3.072061,
 						"runs": 5
 					}
 				}
@@ -269,13 +269,13 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.150.0",
+				"version": "0.151.0",
 				"configHash": "6d06706e9d",
 				"result": {
 					"data": {
 						"minifiedBytes": 59307,
 						"minzippedBytes": 19229,
-						"time": 5.0359924,
+						"time": 8.6159768,
 						"runs": 5
 					}
 				}
@@ -443,13 +443,13 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.150.0",
+				"version": "0.151.0",
 				"configHash": "6d06706e9d",
 				"result": {
 					"data": {
 						"minifiedBytes": 89184,
 						"minzippedBytes": 30908,
-						"time": 7.9147166,
+						"time": 13.727751800000002,
 						"runs": 5
 					}
 				}
@@ -617,13 +617,13 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.150.0",
+				"version": "0.151.0",
 				"configHash": "6d06706e9d",
 				"result": {
 					"data": {
 						"minifiedBytes": 116892,
 						"minzippedBytes": 43216,
-						"time": 10.088012599999999,
+						"time": 18.2156336,
 						"runs": 5
 					}
 				}
@@ -791,13 +791,13 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.150.0",
+				"version": "0.151.0",
 				"configHash": "6d06706e9d",
 				"result": {
 					"data": {
 						"minifiedBytes": 70883,
 						"minzippedBytes": 25836,
-						"time": 8.305695400000001,
+						"time": 12.798739,
 						"runs": 5
 					}
 				}
@@ -967,13 +967,13 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.150.0",
+				"version": "0.151.0",
 				"configHash": "6d06706e9d",
 				"result": {
 					"data": {
 						"minifiedBytes": 267181,
 						"minzippedBytes": 87953,
-						"time": 21.6966276,
+						"time": 38.959907799999996,
 						"runs": 5
 					}
 				}
@@ -1142,13 +1142,13 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.150.0",
+				"version": "0.151.0",
 				"configHash": "6d06706e9d",
 				"result": {
 					"data": {
 						"minifiedBytes": 439112,
 						"minzippedBytes": 121949,
-						"time": 20.4714356,
+						"time": 35.171024599999996,
 						"runs": 5
 					}
 				}
@@ -1316,13 +1316,13 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.150.0",
+				"version": "0.151.0",
 				"configHash": "6d06706e9d",
 				"result": {
 					"data": {
 						"minifiedBytes": 642413,
 						"minzippedBytes": 159845,
-						"time": 29.7036314,
+						"time": 51.9577678,
 						"runs": 5
 					}
 				}
@@ -1489,13 +1489,13 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.150.0",
+				"version": "0.151.0",
 				"configHash": "6d06706e9d",
 				"result": {
 					"data": {
 						"minifiedBytes": 710670,
 						"minzippedBytes": 160755,
-						"time": 53.3206054,
+						"time": 78.64919560000001,
 						"runs": 5
 					}
 				}
@@ -1659,13 +1659,13 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.150.0",
+				"version": "0.151.0",
 				"configHash": "6d06706e9d",
 				"result": {
 					"data": {
 						"minifiedBytes": 1001448,
 						"minzippedBytes": 322840,
-						"time": 107.82600000000002,
+						"time": 155.81643739999998,
 						"runs": 5
 					}
 				}
@@ -1826,13 +1826,13 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.150.0",
+				"version": "0.151.0",
 				"configHash": "6d06706e9d",
 				"result": {
 					"data": {
 						"minifiedBytes": 2121332,
 						"minzippedBytes": 451484,
-						"time": 166.796681,
+						"time": 209.10467939999998,
 						"runs": 5
 					}
 				}
@@ -1991,13 +1991,13 @@
 			},
 			"oxc-minify": {
 				"minifierPath": "oxc-minify.ts",
-				"version": "0.150.0",
+				"version": "0.151.0",
 				"configHash": "6d06706e9d",
 				"result": {
 					"data": {
 						"minifiedBytes": 3328337,
 						"minzippedBytes": 851556,
-						"time": 364.4553801999999,
+						"time": 489.41883420000005,
 						"runs": 5
 					}
 				}
