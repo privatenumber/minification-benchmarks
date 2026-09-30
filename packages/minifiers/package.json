@@ -6,7 +6,7 @@
 	"dependencies": {
 		"@cminify/cminify-linux-x64": "^3.0.1",
 		"@minification-benchmarks/utils": "workspace:*",
-		"@swc/core": "1.16.2",
+		"@swc/core": "1.16.13",
 		"@tdewolff/minify": "^2.24.8",
 		"babel-minify": "^0.5.2",
 		"bun": "^1.4.2",
@@ -14,7 +14,7 @@
 		"find-up": "^7.0.0",
 		"google-closure-compiler": "^20251216.0.0",
 		"mem": "^9.0.2",
-		"oxc-minify": "^0.150.0",
+		"oxc-minify": "^0.152.0",
 		"terser": "^5.51.2",
 		"uglify-js": "^3.19.3"
 	},
