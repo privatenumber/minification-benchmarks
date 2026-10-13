@@ -12,9 +12,9 @@ This project benchmarks the following minifiers:
 <!-- minifiers:start -->
 | Minifier | Version | Release date ↓ |
 | - | - | - |
+| [oxc-minify](https://github.com/oxc-project/oxc) | [0.154.0](https://www.npmjs.com/package/oxc-minify/v/0.154.0) | 2026-10-13 |
+| [@swc/core](https://github.com/swc-project/swc) | [1.16.18](https://www.npmjs.com/package/@swc/core/v/1.16.18) | 2026-10-11 |
 | [bun](https://github.com/oven-sh/bun) | [1.4.3](https://www.npmjs.com/package/bun/v/1.4.3) | 2026-10-10 |
-| [oxc-minify](https://github.com/oxc-project/oxc) | [0.153.0](https://www.npmjs.com/package/oxc-minify/v/0.153.0) | 2026-10-05 |
-| [@swc/core](https://github.com/swc-project/swc) | [1.16.13](https://www.npmjs.com/package/@swc/core/v/1.16.13) | 2026-09-30 |
 | [terser](https://github.com/terser/terser) | [5.51.2](https://www.npmjs.com/package/terser/v/5.51.2) | 2026-08-27 |
 | [esbuild](https://github.com/evanw/esbuild) | [0.28.2](https://www.npmjs.com/package/esbuild/v/0.28.2) | 2026-08-08 |
 | [google-closure-compiler](https://github.com/ChadKillingsworth/closure-compiler-npm) | [20251216.0.0](https://www.npmjs.com/package/google-closure-compiler/v/20251216.0.0) | 2025-12-18 |
@@ -25,7 +25,7 @@ This project benchmarks the following minifiers:
 | [tedivm/jshrink](https://github.com/tedious/JShrink) | 1.8.1 |  |
 <!-- minifiers:end -->
 
-_Benchmarks last updated on <!-- lastUpdated:start -->Oct 10, 2026<!-- lastUpdated:end -->._
+_Benchmarks last updated on <!-- lastUpdated:start -->Oct 13, 2026<!-- lastUpdated:end -->._
 
 <br>
 
@@ -94,18 +94,18 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | :- | -: | -: | -: |
 | [react v17.0.2](https://www.npmjs.com/package/react/v/17.0.2) ([Source](https://unpkg.com/react@17.0.2/cjs/react.development.js)) | `72.13 KB` | `19.39 KB` |  |
 | __Minifier__ | __Minified size__ | __Minzipped size__ | __Time__ |
-| 1. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-68% </sup>`22.82 KB` | <sup>-58% </sup>`8.19 KB` | <sup>*6x* </sup>`18 ms` |
-| 2. [terser](packages/minifiers/minifiers/terser.ts) | <sup>-68% </sup>`23.05 KB` | <sup>-57% </sup>`8.26 KB` | <sup>*43x* </sup>`118 ms` |
+| 1. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-68% </sup>`22.82 KB` | <sup>-58% </sup>`8.19 KB` | <sup>*6x* </sup>`19 ms` |
+| 2. [terser](packages/minifiers/minifiers/terser.ts) | <sup>-68% </sup>`23.05 KB` | <sup>-57% </sup>`8.26 KB` | <sup>*40x* </sup>`118 ms` |
 | 3. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | <sup>-68% </sup>`23.15 KB` | <sup>-57% </sup>`8.35 KB` | __<sup>🏆 </sup>`3 ms`__ |
-| 4. [uglify-js](packages/minifiers/minifiers/uglify-js.ts) | __<sup>🏆-69% </sup>`22.64 KB`__ | __<sup>🏆-58% </sup>`8.18 KB`__ | <sup>*154x* </sup>`420 ms` |
+| 4. [uglify-js](packages/minifiers/minifiers/uglify-js.ts) | __<sup>🏆-69% </sup>`22.64 KB`__ | __<sup>🏆-58% </sup>`8.18 KB`__ | <sup>*146x* </sup>`420 ms` |
 | 5. [bun](packages/minifiers/minifiers/bun.ts) | <sup>-67% </sup>`23.98 KB` | <sup>-56% </sup>`8.52 KB` | <sup>*6x* </sup>`19 ms` |
 | 6. [esbuild](packages/minifiers/minifiers/esbuild.ts) | <sup>-67% </sup>`23.70 KB` | <sup>-56% </sup>`8.54 KB` | <sup>*4x* </sup>`12 ms` |
 | 7. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts) | <sup>-67% </sup>`23.49 KB` | <sup>-55% </sup>`8.63 KB` | <sup>*1x* </sup>`4 ms` |
-| 8. [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts) | <sup>-65% </sup>`25.03 KB` | <sup>-55% </sup>`8.67 KB` | <sup>*27x* </sup>`75 ms` |
-| 9. [terser (no compress)](packages/minifiers/minifiers/terser.ts) | <sup>-65% </sup>`25.06 KB` | <sup>-55% </sup>`8.74 KB` | <sup>*17x* </sup>`48 ms` |
-| 10. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts) | <sup>-68% </sup>`22.81 KB` | <sup>-58% </sup>`8.22 KB` | <sup>*1163x* </sup>`3,169 ms` |
+| 8. [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts) | <sup>-65% </sup>`25.03 KB` | <sup>-55% </sup>`8.67 KB` | <sup>*26x* </sup>`75 ms` |
+| 9. [terser (no compress)](packages/minifiers/minifiers/terser.ts) | <sup>-65% </sup>`25.06 KB` | <sup>-55% </sup>`8.74 KB` | <sup>*16x* </sup>`48 ms` |
+| 10. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts) | <sup>-68% </sup>`22.81 KB` | <sup>-58% </sup>`8.22 KB` | <sup>*1102x* </sup>`3,169 ms` |
 | 11. [@cminify/cminify-linux-x64](packages/minifiers/minifiers/cminify.ts) | <sup>-44% </sup>`40.04 KB` | <sup>-44% </sup>`10.86 KB` | <sup>*4x* </sup>`12 ms` |
-| 12. [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts) | <sup>-43% </sup>`40.82 KB` | <sup>-43% </sup>`11.04 KB` | <sup>*46x* </sup>`126 ms` |
+| 12. [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts) | <sup>-43% </sup>`40.82 KB` | <sup>-43% </sup>`11.04 KB` | <sup>*43x* </sup>`126 ms` |
 | 13. [babel-minify](packages/minifiers/minifiers/babel-minify.ts) <sub title="Failed: Failed to find JSON start:<br>[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`">❌ Failed to find </sub> | ❌ | ❌&nbsp; | - |
 </div>
 
@@ -122,9 +122,9 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | :- | -: | -: | -: |
 | [moment v2.29.1](https://www.npmjs.com/package/moment/v/2.29.1) ([Source](https://unpkg.com/moment@2.29.1/moment.js)) | `173.90 KB` | `36.23 KB` |  |
 | __Minifier__ | __Minified size__ | __Minzipped size__ | __Time__ |
-| 1. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-66% </sup>`58.36 KB` | <sup>-48% </sup>`18.74 KB` | <sup>*3x* </sup>`26 ms` |
+| 1. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-66% </sup>`58.36 KB` | <sup>-48% </sup>`18.74 KB` | <sup>*3x* </sup>`27 ms` |
 | 2. [terser](packages/minifiers/minifiers/terser.ts) | <sup>-66% </sup>`59.01 KB` | <sup>-48% </sup>`18.69 KB` | <sup>*39x* </sup>`290 ms` |
-| 3. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | <sup>-66% </sup>`59.30 KB` | <sup>-47% </sup>`19.23 KB` | <sup>*1x* </sup>`7 ms` |
+| 3. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | <sup>-66% </sup>`59.30 KB` | <sup>-47% </sup>`19.23 KB` | <sup>*1x* </sup>`8 ms` |
 | 4. [esbuild](packages/minifiers/minifiers/esbuild.ts) | <sup>-66% </sup>`59.80 KB` | <sup>-47% </sup>`19.33 KB` | <sup>*1x* </sup>`13 ms` |
 | 5. [uglify-js](packages/minifiers/minifiers/uglify-js.ts) | __<sup>🏆-67% </sup>`57.73 KB`__ | __<sup>🏆-49% </sup>`18.57 KB`__ | <sup>*123x* </sup>`906 ms` |
 | 6. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts) | <sup>-66% </sup>`59.89 KB` | <sup>-46% </sup>`19.48 KB` | __<sup>🏆 </sup>`7 ms`__ |
@@ -150,8 +150,8 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | :- | -: | -: | -: |
 | [jquery v3.5.1](https://www.npmjs.com/package/jquery/v/3.5.1) ([Source](https://unpkg.com/jquery@3.5.1/dist/jquery.js)) | `287.63 KB` | `84.50 KB` |  |
 | __Minifier__ | __Minified size__ | __Minzipped size__ | __Time__ |
-| 1. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-69% </sup>`89.16 KB` | __<sup>🏆-63% </sup>`30.86 KB`__ | <sup>*4x* </sup>`48 ms` |
-| 2. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | <sup>-69% </sup>`89.16 KB` | <sup>-63% </sup>`30.90 KB` | <sup>*1x* </sup>`12 ms` |
+| 1. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-69% </sup>`89.16 KB` | __<sup>🏆-63% </sup>`30.86 KB`__ | <sup>*4x* </sup>`56 ms` |
+| 2. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | <sup>-69% </sup>`89.16 KB` | <sup>-63% </sup>`30.90 KB` | <sup>*1x* </sup>`13 ms` |
 | 3. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts) | <sup>-69% </sup>`89.68 KB` | <sup>-63% </sup>`31.45 KB` | __<sup>🏆 </sup>`12 ms`__ |
 | 4. [terser](packages/minifiers/minifiers/terser.ts) | <sup>-69% </sup>`89.24 KB` | <sup>-63% </sup>`30.86 KB` | <sup>*35x* </sup>`418 ms` |
 | 5. [terser (no compress)](packages/minifiers/minifiers/terser.ts) | <sup>-67% </sup>`94.26 KB` | <sup>-63% </sup>`31.56 KB` | <sup>*15x* </sup>`178 ms` |
@@ -178,8 +178,8 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | :- | -: | -: | -: |
 | [vue v2.6.12](https://www.npmjs.com/package/vue/v/2.6.12) ([Source](https://unpkg.com/vue@2.6.12/dist/vue.js)) | `342.15 KB` | `89.67 KB` |  |
 | __Minifier__ | __Minified size__ | __Minzipped size__ | __Time__ |
-| 1. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-66% </sup>`115.53 KB` | __<sup>🏆-52% </sup>`42.71 KB`__ | <sup>*3x* </sup>`58 ms` |
-| 2. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | <sup>-66% </sup>`116.85 KB` | <sup>-52% </sup>`43.20 KB` | <sup>*1x* </sup>`15 ms` |
+| 1. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-66% </sup>`115.53 KB` | __<sup>🏆-52% </sup>`42.71 KB`__ | <sup>*4x* </sup>`70 ms` |
+| 2. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | <sup>-66% </sup>`116.85 KB` | <sup>-52% </sup>`43.20 KB` | <sup>*1x* </sup>`19 ms` |
 | 3. [terser](packages/minifiers/minifiers/terser.ts) | <sup>-66% </sup>`116.60 KB` | <sup>-52% </sup>`42.87 KB` | <sup>*37x* </sup>`548 ms` |
 | 4. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts) | <sup>-66% </sup>`117.70 KB` | <sup>-51% </sup>`44.37 KB` | __<sup>🏆 </sup>`15 ms`__ |
 | 5. [esbuild](packages/minifiers/minifiers/esbuild.ts) | <sup>-65% </sup>`118.14 KB` | <sup>-51% </sup>`44.37 KB` | <sup>*2x* </sup>`30 ms` |
@@ -206,18 +206,18 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | :- | -: | -: | -: |
 | [lodash v4.17.21](https://www.npmjs.com/package/lodash/v/4.17.21) ([Source](https://unpkg.com/lodash@4.17.21/lodash.js)) | `544.09 KB` | `96.69 KB` |  |
 | __Minifier__ | __Minified size__ | __Minzipped size__ | __Time__ |
-| 1. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-87% </sup>`69.83 KB` | <sup>-74% </sup>`25.26 KB` | <sup>*3x* </sup>`46 ms` |
-| 2. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | <sup>-87% </sup>`70.88 KB` | <sup>-73% </sup>`25.83 KB` | __<sup>🏆 </sup>`12 ms`__ |
-| 3. [terser](packages/minifiers/minifiers/terser.ts) | <sup>-87% </sup>`70.41 KB` | <sup>-74% </sup>`25.15 KB` | <sup>*40x* </sup>`470 ms` |
+| 1. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-87% </sup>`69.83 KB` | <sup>-74% </sup>`25.26 KB` | <sup>*3x* </sup>`50 ms` |
+| 2. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | <sup>-87% </sup>`70.88 KB` | <sup>-73% </sup>`25.83 KB` | __<sup>🏆 </sup>`13 ms`__ |
+| 3. [terser](packages/minifiers/minifiers/terser.ts) | <sup>-87% </sup>`70.41 KB` | <sup>-74% </sup>`25.15 KB` | <sup>*36x* </sup>`470 ms` |
 | 4. [esbuild](packages/minifiers/minifiers/esbuild.ts) | <sup>-87% </sup>`72.50 KB` | <sup>-73% </sup>`26.20 KB` | <sup>*1x* </sup>`18 ms` |
 | 5. [bun](packages/minifiers/minifiers/bun.ts) | <sup>-86% </sup>`73.48 KB` | <sup>-73% </sup>`26.25 KB` | <sup>*1x* </sup>`20 ms` |
-| 6. [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts) | <sup>-86% </sup>`74.61 KB` | <sup>-73% </sup>`25.86 KB` | <sup>*23x* </sup>`271 ms` |
-| 7. [terser (no compress)](packages/minifiers/minifiers/terser.ts) | <sup>-86% </sup>`75.04 KB` | <sup>-73% </sup>`26.19 KB` | <sup>*16x* </sup>`195 ms` |
+| 6. [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts) | <sup>-86% </sup>`74.61 KB` | <sup>-73% </sup>`25.86 KB` | <sup>*21x* </sup>`271 ms` |
+| 7. [terser (no compress)](packages/minifiers/minifiers/terser.ts) | <sup>-86% </sup>`75.04 KB` | <sup>-73% </sup>`26.19 KB` | <sup>*15x* </sup>`195 ms` |
 | 8. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts) | <sup>-87% </sup>`71.90 KB` | <sup>-73% </sup>`26.50 KB` | <sup>*1x* </sup>`17 ms` |
-| 9. [uglify-js](packages/minifiers/minifiers/uglify-js.ts) | __<sup>🏆-87% </sup>`68.17 KB`__ | __<sup>🏆-74% </sup>`24.69 KB`__ | <sup>*119x* </sup>`1,394 ms` |
-| 10. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts) | <sup>-86% </sup>`73.49 KB` | <sup>-74% </sup>`25.03 KB` | <sup>*368x* </sup>`4,283 ms` |
+| 9. [uglify-js](packages/minifiers/minifiers/uglify-js.ts) | __<sup>🏆-87% </sup>`68.17 KB`__ | __<sup>🏆-74% </sup>`24.69 KB`__ | <sup>*109x* </sup>`1,394 ms` |
+| 10. [google-closure-compiler](packages/minifiers/minifiers/google-closure-compiler.ts) | <sup>-86% </sup>`73.49 KB` | <sup>-74% </sup>`25.03 KB` | <sup>*336x* </sup>`4,283 ms` |
 | 11. [@cminify/cminify-linux-x64](packages/minifiers/minifiers/cminify.ts) | <sup>-73% </sup>`146.27 KB` | <sup>-63% </sup>`35.94 KB` | <sup>*1x* </sup>`13 ms` |
-| 12. [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts) | <sup>-73% </sup>`148.78 KB` | <sup>-62% </sup>`36.33 KB` | <sup>*32x* </sup>`374 ms` |
+| 12. [tedivm/jshrink](packages/minifiers/minifiers/jshrink/index.ts) | <sup>-73% </sup>`148.78 KB` | <sup>-62% </sup>`36.33 KB` | <sup>*29x* </sup>`374 ms` |
 | 13. [babel-minify](packages/minifiers/minifiers/babel-minify.ts) <sub title="Failed: Failed to find JSON start:<br>[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`">❌ Failed to find </sub> | ❌ | ❌&nbsp; | - |
 </div>
 
@@ -234,8 +234,8 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | :- | -: | -: | -: |
 | [d3 v6.3.1](https://www.npmjs.com/package/d3/v/6.3.1) ([Source](https://unpkg.com/d3@6.3.1/dist/d3.js)) | `555.77 KB` | `130.69 KB` |  |
 | __Minifier__ | __Minified size__ | __Minzipped size__ | __Time__ |
-| 1. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-52% </sup>`265.02 KB` | <sup>-33% </sup>`87.39 KB` | <sup>*5x* </sup>`127 ms` |
-| 2. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | <sup>-52% </sup>`267.16 KB` | <sup>-33% </sup>`87.95 KB` | <sup>*1x* </sup>`36 ms` |
+| 1. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-52% </sup>`265.02 KB` | <sup>-33% </sup>`87.39 KB` | <sup>*7x* </sup>`168 ms` |
+| 2. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | <sup>-52% </sup>`267.16 KB` | <sup>-33% </sup>`87.95 KB` | <sup>*1x* </sup>`46 ms` |
 | 3. [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts) | <sup>-50% </sup>`275.35 KB` | <sup>-32% </sup>`88.32 KB` | <sup>*26x* </sup>`617 ms` |
 | 4. [terser](packages/minifiers/minifiers/terser.ts) | <sup>-52% </sup>`267.42 KB` | <sup>-33% </sup>`88.00 KB` | <sup>*51x* </sup>`1,196 ms` |
 | 5. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts) | <sup>-52% </sup>`269.07 KB` | <sup>-31% </sup>`89.87 KB` | <sup>*1x* </sup>`36 ms` |
@@ -262,8 +262,8 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | :- | -: | -: | -: |
 | [terser v5.30.3](https://www.npmjs.com/package/terser/v/5.30.3) ([Source](https://unpkg.com/terser@5.30.3/dist/bundle.min.js)) | `1.01 MB` | `193.76 KB` |  |
 | __Minifier__ | __Minified size__ | __Minzipped size__ | __Time__ |
-| 1. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | __<sup>🏆-57% </sup>`439.03 KB`__ | __<sup>🏆-37% </sup>`121.94 KB`__ | <sup>*1x* </sup>`34 ms` |
-| 2. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-55% </sup>`455.45 KB` | <sup>-36% </sup>`123.29 KB` | <sup>*5x* </sup>`117 ms` |
+| 1. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | __<sup>🏆-57% </sup>`439.03 KB`__ | __<sup>🏆-37% </sup>`121.94 KB`__ | <sup>*2x* </sup>`42 ms` |
+| 2. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-55% </sup>`455.45 KB` | <sup>-36% </sup>`123.29 KB` | <sup>*7x* </sup>`153 ms` |
 | 3. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts) | <sup>-55% </sup>`456.59 KB` | <sup>-36% </sup>`124.88 KB` | <sup>*1x* </sup>`34 ms` |
 | 4. [terser (no compress)](packages/minifiers/minifiers/terser.ts) | <sup>-53% </sup>`472.58 KB` | <sup>-36% </sup>`124.25 KB` | <sup>*26x* </sup>`538 ms` |
 | 5. [terser](packages/minifiers/minifiers/terser.ts) | <sup>-55% </sup>`456.59 KB` | <sup>-36% </sup>`123.35 KB` | <sup>*54x* </sup>`1,133 ms` |
@@ -290,8 +290,8 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | :- | -: | -: | -: |
 | [three v0.124.0](https://www.npmjs.com/package/three/v/0.124.0) ([Source](https://unpkg.com/three@0.124.0/build/three.js)) | `1.25 MB` | `248.27 KB` |  |
 | __Minifier__ | __Minified size__ | __Minzipped size__ | __Time__ |
-| 1. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-48% </sup>`642.67 KB` | __<sup>🏆-36% </sup>`158.70 KB`__ | <sup>*7x* </sup>`173 ms` |
-| 2. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | <sup>-49% </sup>`642.25 KB` | <sup>-36% </sup>`159.84 KB` | <sup>*2x* </sup>`49 ms` |
+| 1. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-48% </sup>`642.67 KB` | __<sup>🏆-36% </sup>`158.70 KB`__ | <sup>*10x* </sup>`251 ms` |
+| 2. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | <sup>-49% </sup>`642.25 KB` | <sup>-36% </sup>`159.84 KB` | <sup>*2x* </sup>`67 ms` |
 | 3. [terser](packages/minifiers/minifiers/terser.ts) | <sup>-48% </sup>`653.18 KB` | <sup>-36% </sup>`159.17 KB` | <sup>*67x* </sup>`1,560 ms` |
 | 4. [esbuild](packages/minifiers/minifiers/esbuild.ts) | <sup>-48% </sup>`646.93 KB` | <sup>-34% </sup>`163.75 KB` | <sup>*2x* </sup>`53 ms` |
 | 5. [bun](packages/minifiers/minifiers/bun.ts) | <sup>-47% </sup>`655.62 KB` | <sup>-34% </sup>`164.10 KB` | <sup>*1x* </sup>`46 ms` |
@@ -318,8 +318,8 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | :- | -: | -: | -: |
 | [victory v35.8.4](https://www.npmjs.com/package/victory/v/35.8.4) ([Source](https://unpkg.com/victory@35.8.4/dist/victory.js)) | `2.13 MB` | `309.94 KB` |  |
 | __Minifier__ | __Minified size__ | __Minzipped size__ | __Time__ |
-| 1. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-67% </sup>`705.89 KB` | <sup>-49% </sup>`157.70 KB` | <sup>*5x* </sup>`258 ms` |
-| 2. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | <sup>-67% </sup>`710.65 KB` | <sup>-48% </sup>`160.76 KB` | <sup>*1x* </sup>`73 ms` |
+| 1. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-67% </sup>`705.89 KB` | <sup>-49% </sup>`157.70 KB` | <sup>*8x* </sup>`382 ms` |
+| 2. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | <sup>-67% </sup>`710.65 KB` | <sup>-48% </sup>`160.76 KB` | <sup>*2x* </sup>`99 ms` |
 | 3. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts) | <sup>-66% </sup>`716.62 KB` | <sup>-47% </sup>`164.95 KB` | <sup>*1x* </sup>`69 ms` |
 | 4. [terser (no compress)](packages/minifiers/minifiers/terser.ts) | <sup>-65% </sup>`756.62 KB` | <sup>-46% </sup>`166.18 KB` | <sup>*20x* </sup>`886 ms` |
 | 5. [terser](packages/minifiers/minifiers/terser.ts) | <sup>-67% </sup>`712.87 KB` | <sup>-49% </sup>`158.46 KB` | <sup>*49x* </sup>`2,151 ms` |
@@ -336,8 +336,8 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 ----
 
 <picture>
-	<source media="(prefers-color-scheme: dark)" srcset="https://quickchart.io/chart?c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27Original%27%2C%27oxc-minify%27%2C%27%40swc%2Fcore%27%2C%27esbuild%27%2C%27%40tdewolff%2Fminify%27%2C%27bun%27%2C%27terser+%28no+compress%29%27%2C%27uglify-js+%28no+compress%29%27%2C%27terser%27%2C%27%40cminify%2Fcminify-linux-x64%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Gzipped+Size%27%2Cdata%3A%5B684611%2C322788%2C321028%2C331621%2C331760%2C332574%2C330348%2C331412%2C321556%2C434451%5D%2CbackgroundColor%3A%5B%27rgba%28150%2C+150%2C+150%2C+0.7%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+0.7%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+0.7%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+0.7%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+0.7%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+0.7%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+0.7%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+0.7%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+0.7%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+0.7%29%27%5D%2CborderColor%3A%5B%27rgb%28150%2C+150%2C+150%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+1%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+1%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+1%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+1%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+1%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+1%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+1%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+1%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+1%29%27%5D%2CborderWidth%3A1%7D%5D%7D%2Coptions%3A%7Bscales%3A%7Bx%3A%7Bticks%3A%7Bcolor%3A%27%23f0f6fc%27%2CmaxRotation%3A45%2CminRotation%3A45%7D%2Cgrid%3A%7Bdisplay%3Afalse%7D%7D%2Cy%3A%7Bmin%3A0%2Cticks%3A%7Bcolor%3A%27%23f0f6fc%27%2Ccallback%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Cfont%3A%7Bsize%3A10%7D%7D%2Ctitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Gzipped+Size%27%2Ccolor%3A%27%23f0f6fc%27%2Cfont%3A%7Bsize%3A14%7D%7D%2Cgrid%3A%7Bcolor%3A%27%23f0f6fc1a%27%7D%7D%7D%2Cplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27echarts+v5.1.1%27%2Cfont%3A%7Bsize%3A20%7D%2Ccolor%3A%27%23f0f6fc%27%7D%2Clegend%3A%7Bdisplay%3Afalse%7D%2Cdatalabels%3A%7Blabels%3A%7Bbytes%3A%7Banchor%3A%27end%27%2Calign%3A%27top%27%2Cformatter%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Ccolor%3A%27%23f0f6fc%27%2Cfont%3A%7Bsize%3A11%7D%7D%2Cpercent%3A%7Banchor%3A%27center%27%2Calign%3A%27center%27%2Cformatter%3A%28%0A%09value++++++++%2C%0A%09context+++++++++%2C%0A%29+%3D%3E+%7B%0A%09const+base+%3D+Number%28context.dataset.data%5B0%5D+%3F%3F+0%29%3B%0A%09if+%28%21base+%7C%7C+value+%3D%3D%3D+base%29+%7B+return+%27%27%3B+%7D%0A%09return+%60%24%7BMath.round%28%28value+%2F+base%29+*+100%29%7D%25%60%3B%0A%7D%2Ccolor%3A%27%23fff%27%2Cfont%3A%7Bsize%3A11%2Cweight%3A%27bold%27%7D%2Cclamp%3Atrue%7D%7D%7D%7D%7D%7D&w=720&h=400&ref=qc-js&bkg=transparent&f=svg&v=4">
-	<img src="https://quickchart.io/chart?c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27Original%27%2C%27oxc-minify%27%2C%27%40swc%2Fcore%27%2C%27esbuild%27%2C%27%40tdewolff%2Fminify%27%2C%27bun%27%2C%27terser+%28no+compress%29%27%2C%27uglify-js+%28no+compress%29%27%2C%27terser%27%2C%27%40cminify%2Fcminify-linux-x64%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Gzipped+Size%27%2Cdata%3A%5B684611%2C322788%2C321028%2C331621%2C331760%2C332574%2C330348%2C331412%2C321556%2C434451%5D%2CbackgroundColor%3A%5B%27rgba%28150%2C+150%2C+150%2C+0.7%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+0.7%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+0.7%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+0.7%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+0.7%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+0.7%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+0.7%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+0.7%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+0.7%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+0.7%29%27%5D%2CborderColor%3A%5B%27rgb%28150%2C+150%2C+150%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+1%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+1%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+1%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+1%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+1%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+1%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+1%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+1%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+1%29%27%5D%2CborderWidth%3A1%7D%5D%7D%2Coptions%3A%7Bscales%3A%7Bx%3A%7Bticks%3A%7Bcolor%3A%27%23333%27%2CmaxRotation%3A45%2CminRotation%3A45%7D%2Cgrid%3A%7Bdisplay%3Afalse%7D%7D%2Cy%3A%7Bmin%3A0%2Cticks%3A%7Bcolor%3A%27%23333%27%2Ccallback%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Cfont%3A%7Bsize%3A10%7D%7D%2Ctitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Gzipped+Size%27%2Ccolor%3A%27%23333%27%2Cfont%3A%7Bsize%3A14%7D%7D%2Cgrid%3A%7Bcolor%3A%27%2333333340%27%7D%7D%7D%2Cplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27echarts+v5.1.1%27%2Cfont%3A%7Bsize%3A20%7D%2Ccolor%3A%27%23333%27%7D%2Clegend%3A%7Bdisplay%3Afalse%7D%2Cdatalabels%3A%7Blabels%3A%7Bbytes%3A%7Banchor%3A%27end%27%2Calign%3A%27top%27%2Cformatter%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Ccolor%3A%27%23333%27%2Cfont%3A%7Bsize%3A11%7D%7D%2Cpercent%3A%7Banchor%3A%27center%27%2Calign%3A%27center%27%2Cformatter%3A%28%0A%09value++++++++%2C%0A%09context+++++++++%2C%0A%29+%3D%3E+%7B%0A%09const+base+%3D+Number%28context.dataset.data%5B0%5D+%3F%3F+0%29%3B%0A%09if+%28%21base+%7C%7C+value+%3D%3D%3D+base%29+%7B+return+%27%27%3B+%7D%0A%09return+%60%24%7BMath.round%28%28value+%2F+base%29+*+100%29%7D%25%60%3B%0A%7D%2Ccolor%3A%27%23fff%27%2Cfont%3A%7Bsize%3A11%2Cweight%3A%27bold%27%7D%2Cclamp%3Atrue%7D%7D%7D%7D%7D%7D&w=720&h=400&ref=qc-js&bkg=transparent&f=svg&v=4">
+	<source media="(prefers-color-scheme: dark)" srcset="https://quickchart.io/chart?c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27Original%27%2C%27oxc-minify%27%2C%27esbuild%27%2C%27%40tdewolff%2Fminify%27%2C%27%40swc%2Fcore%27%2C%27bun%27%2C%27terser+%28no+compress%29%27%2C%27uglify-js+%28no+compress%29%27%2C%27terser%27%2C%27%40cminify%2Fcminify-linux-x64%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Gzipped+Size%27%2Cdata%3A%5B684611%2C322788%2C331621%2C331760%2C321028%2C332574%2C330348%2C331412%2C321556%2C434451%5D%2CbackgroundColor%3A%5B%27rgba%28150%2C+150%2C+150%2C+0.7%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+0.7%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+0.7%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+0.7%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+0.7%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+0.7%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+0.7%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+0.7%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+0.7%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+0.7%29%27%5D%2CborderColor%3A%5B%27rgb%28150%2C+150%2C+150%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+1%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+1%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+1%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+1%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+1%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+1%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+1%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+1%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+1%29%27%5D%2CborderWidth%3A1%7D%5D%7D%2Coptions%3A%7Bscales%3A%7Bx%3A%7Bticks%3A%7Bcolor%3A%27%23f0f6fc%27%2CmaxRotation%3A45%2CminRotation%3A45%7D%2Cgrid%3A%7Bdisplay%3Afalse%7D%7D%2Cy%3A%7Bmin%3A0%2Cticks%3A%7Bcolor%3A%27%23f0f6fc%27%2Ccallback%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Cfont%3A%7Bsize%3A10%7D%7D%2Ctitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Gzipped+Size%27%2Ccolor%3A%27%23f0f6fc%27%2Cfont%3A%7Bsize%3A14%7D%7D%2Cgrid%3A%7Bcolor%3A%27%23f0f6fc1a%27%7D%7D%7D%2Cplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27echarts+v5.1.1%27%2Cfont%3A%7Bsize%3A20%7D%2Ccolor%3A%27%23f0f6fc%27%7D%2Clegend%3A%7Bdisplay%3Afalse%7D%2Cdatalabels%3A%7Blabels%3A%7Bbytes%3A%7Banchor%3A%27end%27%2Calign%3A%27top%27%2Cformatter%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Ccolor%3A%27%23f0f6fc%27%2Cfont%3A%7Bsize%3A11%7D%7D%2Cpercent%3A%7Banchor%3A%27center%27%2Calign%3A%27center%27%2Cformatter%3A%28%0A%09value++++++++%2C%0A%09context+++++++++%2C%0A%29+%3D%3E+%7B%0A%09const+base+%3D+Number%28context.dataset.data%5B0%5D+%3F%3F+0%29%3B%0A%09if+%28%21base+%7C%7C+value+%3D%3D%3D+base%29+%7B+return+%27%27%3B+%7D%0A%09return+%60%24%7BMath.round%28%28value+%2F+base%29+*+100%29%7D%25%60%3B%0A%7D%2Ccolor%3A%27%23fff%27%2Cfont%3A%7Bsize%3A11%2Cweight%3A%27bold%27%7D%2Cclamp%3Atrue%7D%7D%7D%7D%7D%7D&w=720&h=400&ref=qc-js&bkg=transparent&f=svg&v=4">
+	<img src="https://quickchart.io/chart?c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27Original%27%2C%27oxc-minify%27%2C%27esbuild%27%2C%27%40tdewolff%2Fminify%27%2C%27%40swc%2Fcore%27%2C%27bun%27%2C%27terser+%28no+compress%29%27%2C%27uglify-js+%28no+compress%29%27%2C%27terser%27%2C%27%40cminify%2Fcminify-linux-x64%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Gzipped+Size%27%2Cdata%3A%5B684611%2C322788%2C331621%2C331760%2C321028%2C332574%2C330348%2C331412%2C321556%2C434451%5D%2CbackgroundColor%3A%5B%27rgba%28150%2C+150%2C+150%2C+0.7%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+0.7%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+0.7%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+0.7%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+0.7%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+0.7%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+0.7%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+0.7%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+0.7%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+0.7%29%27%5D%2CborderColor%3A%5B%27rgb%28150%2C+150%2C+150%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+1%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+1%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+1%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+1%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+1%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+1%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+1%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+1%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+1%29%27%5D%2CborderWidth%3A1%7D%5D%7D%2Coptions%3A%7Bscales%3A%7Bx%3A%7Bticks%3A%7Bcolor%3A%27%23333%27%2CmaxRotation%3A45%2CminRotation%3A45%7D%2Cgrid%3A%7Bdisplay%3Afalse%7D%7D%2Cy%3A%7Bmin%3A0%2Cticks%3A%7Bcolor%3A%27%23333%27%2Ccallback%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Cfont%3A%7Bsize%3A10%7D%7D%2Ctitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Gzipped+Size%27%2Ccolor%3A%27%23333%27%2Cfont%3A%7Bsize%3A14%7D%7D%2Cgrid%3A%7Bcolor%3A%27%2333333340%27%7D%7D%7D%2Cplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27echarts+v5.1.1%27%2Cfont%3A%7Bsize%3A20%7D%2Ccolor%3A%27%23333%27%7D%2Clegend%3A%7Bdisplay%3Afalse%7D%2Cdatalabels%3A%7Blabels%3A%7Bbytes%3A%7Banchor%3A%27end%27%2Calign%3A%27top%27%2Cformatter%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Ccolor%3A%27%23333%27%2Cfont%3A%7Bsize%3A11%7D%7D%2Cpercent%3A%7Banchor%3A%27center%27%2Calign%3A%27center%27%2Cformatter%3A%28%0A%09value++++++++%2C%0A%09context+++++++++%2C%0A%29+%3D%3E+%7B%0A%09const+base+%3D+Number%28context.dataset.data%5B0%5D+%3F%3F+0%29%3B%0A%09if+%28%21base+%7C%7C+value+%3D%3D%3D+base%29+%7B+return+%27%27%3B+%7D%0A%09return+%60%24%7BMath.round%28%28value+%2F+base%29+*+100%29%7D%25%60%3B%0A%7D%2Ccolor%3A%27%23fff%27%2Cfont%3A%7Bsize%3A11%2Cweight%3A%27bold%27%7D%2Cclamp%3Atrue%7D%7D%7D%7D%7D%7D&w=720&h=400&ref=qc-js&bkg=transparent&f=svg&v=4">
 </picture>
 
 <div align="center">
@@ -346,10 +346,10 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | :- | -: | -: | -: |
 | [echarts v5.1.1](https://www.npmjs.com/package/echarts/v/5.1.1) ([Source](https://unpkg.com/echarts@5.1.1/dist/echarts.js)) | `3.20 MB` | `684.61 KB` |  |
 | __Minifier__ | __Minified size__ | __Minzipped size__ | __Time__ |
-| 1. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | <sup>-69% </sup>`1.00 MB` | <sup>-53% </sup>`322.79 KB` | <sup>*2x* </sup>`143 ms` |
-| 2. [@swc/core](packages/minifiers/minifiers/swc.ts) | __<sup>🏆-69% </sup>`993.61 KB`__ | __<sup>🏆-53% </sup>`321.03 KB`__ | <sup>*10x* </sup>`505 ms` |
-| 3. [esbuild](packages/minifiers/minifiers/esbuild.ts) | <sup>-68% </sup>`1.01 MB` | <sup>-52% </sup>`331.62 KB` | <sup>*2x* </sup>`116 ms` |
-| 4. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts) | <sup>-68% </sup>`1.01 MB` | <sup>-52% </sup>`331.76 KB` | <sup>*2x* </sup>`120 ms` |
+| 1. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | <sup>-69% </sup>`1.00 MB` | <sup>-53% </sup>`322.79 KB` | <sup>*3x* </sup>`174 ms` |
+| 2. [esbuild](packages/minifiers/minifiers/esbuild.ts) | <sup>-68% </sup>`1.01 MB` | <sup>-52% </sup>`331.62 KB` | <sup>*2x* </sup>`116 ms` |
+| 3. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts) | <sup>-68% </sup>`1.01 MB` | <sup>-52% </sup>`331.76 KB` | <sup>*2x* </sup>`120 ms` |
+| 4. [@swc/core](packages/minifiers/minifiers/swc.ts) | __<sup>🏆-69% </sup>`993.61 KB`__ | __<sup>🏆-53% </sup>`321.03 KB`__ | <sup>*13x* </sup>`667 ms` |
 | 5. [bun](packages/minifiers/minifiers/bun.ts) | <sup>-68% </sup>`1.02 MB` | <sup>-51% </sup>`332.57 KB` | <sup>*1x* </sup>`97 ms` |
 | 6. [terser (no compress)](packages/minifiers/minifiers/terser.ts) | <sup>-67% </sup>`1.07 MB` | <sup>-52% </sup>`330.35 KB` | <sup>*31x* </sup>`1,571 ms` |
 | 7. [uglify-js (no compress)](packages/minifiers/minifiers/uglify-js.ts) | <sup>-67% </sup>`1.07 MB` | <sup>-52% </sup>`331.41 KB` | <sup>*31x* </sup>`1,582 ms` |
@@ -364,8 +364,8 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 ----
 
 <picture>
-	<source media="(prefers-color-scheme: dark)" srcset="https://quickchart.io/chart?c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27Original%27%2C%27oxc-minify%27%2C%27%40swc%2Fcore%27%2C%27%40tdewolff%2Fminify%27%2C%27bun%27%2C%27esbuild%27%2C%27terser+%28no+compress%29%27%2C%27uglify-js+%28no+compress%29%27%2C%27terser%27%2C%27%40cminify%2Fcminify-linux-x64%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Gzipped+Size%27%2Cdata%3A%5B825175%2C451462%2C452463%2C471635%2C486195%2C488405%2C474973%2C478572%2C457351%2C623370%5D%2CbackgroundColor%3A%5B%27rgba%28150%2C+150%2C+150%2C+0.7%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+0.7%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+0.7%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+0.7%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+0.7%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+0.7%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+0.7%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+0.7%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+0.7%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+0.7%29%27%5D%2CborderColor%3A%5B%27rgb%28150%2C+150%2C+150%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+1%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+1%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+1%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+1%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+1%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+1%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+1%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+1%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+1%29%27%5D%2CborderWidth%3A1%7D%5D%7D%2Coptions%3A%7Bscales%3A%7Bx%3A%7Bticks%3A%7Bcolor%3A%27%23f0f6fc%27%2CmaxRotation%3A45%2CminRotation%3A45%7D%2Cgrid%3A%7Bdisplay%3Afalse%7D%7D%2Cy%3A%7Bmin%3A0%2Cticks%3A%7Bcolor%3A%27%23f0f6fc%27%2Ccallback%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Cfont%3A%7Bsize%3A10%7D%7D%2Ctitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Gzipped+Size%27%2Ccolor%3A%27%23f0f6fc%27%2Cfont%3A%7Bsize%3A14%7D%7D%2Cgrid%3A%7Bcolor%3A%27%23f0f6fc1a%27%7D%7D%7D%2Cplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27antd+v4.16.1%27%2Cfont%3A%7Bsize%3A20%7D%2Ccolor%3A%27%23f0f6fc%27%7D%2Clegend%3A%7Bdisplay%3Afalse%7D%2Cdatalabels%3A%7Blabels%3A%7Bbytes%3A%7Banchor%3A%27end%27%2Calign%3A%27top%27%2Cformatter%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Ccolor%3A%27%23f0f6fc%27%2Cfont%3A%7Bsize%3A11%7D%7D%2Cpercent%3A%7Banchor%3A%27center%27%2Calign%3A%27center%27%2Cformatter%3A%28%0A%09value++++++++%2C%0A%09context+++++++++%2C%0A%29+%3D%3E+%7B%0A%09const+base+%3D+Number%28context.dataset.data%5B0%5D+%3F%3F+0%29%3B%0A%09if+%28%21base+%7C%7C+value+%3D%3D%3D+base%29+%7B+return+%27%27%3B+%7D%0A%09return+%60%24%7BMath.round%28%28value+%2F+base%29+*+100%29%7D%25%60%3B%0A%7D%2Ccolor%3A%27%23fff%27%2Cfont%3A%7Bsize%3A11%2Cweight%3A%27bold%27%7D%2Cclamp%3Atrue%7D%7D%7D%7D%7D%7D&w=720&h=400&ref=qc-js&bkg=transparent&f=svg&v=4">
-	<img src="https://quickchart.io/chart?c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27Original%27%2C%27oxc-minify%27%2C%27%40swc%2Fcore%27%2C%27%40tdewolff%2Fminify%27%2C%27bun%27%2C%27esbuild%27%2C%27terser+%28no+compress%29%27%2C%27uglify-js+%28no+compress%29%27%2C%27terser%27%2C%27%40cminify%2Fcminify-linux-x64%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Gzipped+Size%27%2Cdata%3A%5B825175%2C451462%2C452463%2C471635%2C486195%2C488405%2C474973%2C478572%2C457351%2C623370%5D%2CbackgroundColor%3A%5B%27rgba%28150%2C+150%2C+150%2C+0.7%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+0.7%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+0.7%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+0.7%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+0.7%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+0.7%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+0.7%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+0.7%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+0.7%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+0.7%29%27%5D%2CborderColor%3A%5B%27rgb%28150%2C+150%2C+150%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+1%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+1%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+1%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+1%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+1%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+1%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+1%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+1%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+1%29%27%5D%2CborderWidth%3A1%7D%5D%7D%2Coptions%3A%7Bscales%3A%7Bx%3A%7Bticks%3A%7Bcolor%3A%27%23333%27%2CmaxRotation%3A45%2CminRotation%3A45%7D%2Cgrid%3A%7Bdisplay%3Afalse%7D%7D%2Cy%3A%7Bmin%3A0%2Cticks%3A%7Bcolor%3A%27%23333%27%2Ccallback%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Cfont%3A%7Bsize%3A10%7D%7D%2Ctitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Gzipped+Size%27%2Ccolor%3A%27%23333%27%2Cfont%3A%7Bsize%3A14%7D%7D%2Cgrid%3A%7Bcolor%3A%27%2333333340%27%7D%7D%7D%2Cplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27antd+v4.16.1%27%2Cfont%3A%7Bsize%3A20%7D%2Ccolor%3A%27%23333%27%7D%2Clegend%3A%7Bdisplay%3Afalse%7D%2Cdatalabels%3A%7Blabels%3A%7Bbytes%3A%7Banchor%3A%27end%27%2Calign%3A%27top%27%2Cformatter%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Ccolor%3A%27%23333%27%2Cfont%3A%7Bsize%3A11%7D%7D%2Cpercent%3A%7Banchor%3A%27center%27%2Calign%3A%27center%27%2Cformatter%3A%28%0A%09value++++++++%2C%0A%09context+++++++++%2C%0A%29+%3D%3E+%7B%0A%09const+base+%3D+Number%28context.dataset.data%5B0%5D+%3F%3F+0%29%3B%0A%09if+%28%21base+%7C%7C+value+%3D%3D%3D+base%29+%7B+return+%27%27%3B+%7D%0A%09return+%60%24%7BMath.round%28%28value+%2F+base%29+*+100%29%7D%25%60%3B%0A%7D%2Ccolor%3A%27%23fff%27%2Cfont%3A%7Bsize%3A11%2Cweight%3A%27bold%27%7D%2Cclamp%3Atrue%7D%7D%7D%7D%7D%7D&w=720&h=400&ref=qc-js&bkg=transparent&f=svg&v=4">
+	<source media="(prefers-color-scheme: dark)" srcset="https://quickchart.io/chart?c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27Original%27%2C%27oxc-minify%27%2C%27%40tdewolff%2Fminify%27%2C%27%40swc%2Fcore%27%2C%27bun%27%2C%27esbuild%27%2C%27terser+%28no+compress%29%27%2C%27uglify-js+%28no+compress%29%27%2C%27terser%27%2C%27%40cminify%2Fcminify-linux-x64%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Gzipped+Size%27%2Cdata%3A%5B825175%2C451462%2C471635%2C452463%2C486195%2C488405%2C474973%2C478572%2C457351%2C623370%5D%2CbackgroundColor%3A%5B%27rgba%28150%2C+150%2C+150%2C+0.7%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+0.7%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+0.7%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+0.7%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+0.7%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+0.7%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+0.7%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+0.7%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+0.7%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+0.7%29%27%5D%2CborderColor%3A%5B%27rgb%28150%2C+150%2C+150%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+1%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+1%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+1%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+1%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+1%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+1%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+1%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+1%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+1%29%27%5D%2CborderWidth%3A1%7D%5D%7D%2Coptions%3A%7Bscales%3A%7Bx%3A%7Bticks%3A%7Bcolor%3A%27%23f0f6fc%27%2CmaxRotation%3A45%2CminRotation%3A45%7D%2Cgrid%3A%7Bdisplay%3Afalse%7D%7D%2Cy%3A%7Bmin%3A0%2Cticks%3A%7Bcolor%3A%27%23f0f6fc%27%2Ccallback%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Cfont%3A%7Bsize%3A10%7D%7D%2Ctitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Gzipped+Size%27%2Ccolor%3A%27%23f0f6fc%27%2Cfont%3A%7Bsize%3A14%7D%7D%2Cgrid%3A%7Bcolor%3A%27%23f0f6fc1a%27%7D%7D%7D%2Cplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27antd+v4.16.1%27%2Cfont%3A%7Bsize%3A20%7D%2Ccolor%3A%27%23f0f6fc%27%7D%2Clegend%3A%7Bdisplay%3Afalse%7D%2Cdatalabels%3A%7Blabels%3A%7Bbytes%3A%7Banchor%3A%27end%27%2Calign%3A%27top%27%2Cformatter%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Ccolor%3A%27%23f0f6fc%27%2Cfont%3A%7Bsize%3A11%7D%7D%2Cpercent%3A%7Banchor%3A%27center%27%2Calign%3A%27center%27%2Cformatter%3A%28%0A%09value++++++++%2C%0A%09context+++++++++%2C%0A%29+%3D%3E+%7B%0A%09const+base+%3D+Number%28context.dataset.data%5B0%5D+%3F%3F+0%29%3B%0A%09if+%28%21base+%7C%7C+value+%3D%3D%3D+base%29+%7B+return+%27%27%3B+%7D%0A%09return+%60%24%7BMath.round%28%28value+%2F+base%29+*+100%29%7D%25%60%3B%0A%7D%2Ccolor%3A%27%23fff%27%2Cfont%3A%7Bsize%3A11%2Cweight%3A%27bold%27%7D%2Cclamp%3Atrue%7D%7D%7D%7D%7D%7D&w=720&h=400&ref=qc-js&bkg=transparent&f=svg&v=4">
+	<img src="https://quickchart.io/chart?c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27Original%27%2C%27oxc-minify%27%2C%27%40tdewolff%2Fminify%27%2C%27%40swc%2Fcore%27%2C%27bun%27%2C%27esbuild%27%2C%27terser+%28no+compress%29%27%2C%27uglify-js+%28no+compress%29%27%2C%27terser%27%2C%27%40cminify%2Fcminify-linux-x64%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Gzipped+Size%27%2Cdata%3A%5B825175%2C451462%2C471635%2C452463%2C486195%2C488405%2C474973%2C478572%2C457351%2C623370%5D%2CbackgroundColor%3A%5B%27rgba%28150%2C+150%2C+150%2C+0.7%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+0.7%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+0.7%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+0.7%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+0.7%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+0.7%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+0.7%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+0.7%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+0.7%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+0.7%29%27%5D%2CborderColor%3A%5B%27rgb%28150%2C+150%2C+150%29%27%2C%27hsla%2815%2C+76%25%2C+53%25%2C+1%29%27%2C%27hsla%28183%2C+70%25%2C+57%25%2C+1%29%27%2C%27hsla%28325%2C+77%25%2C+47%25%2C+1%29%27%2C%27hsla%28353%2C+76%25%2C+55%25%2C+1%29%27%2C%27hsla%28228%2C+72%25%2C+44%25%2C+1%29%27%2C%27hsla%2814%2C+82%25%2C+54%25%2C+1%29%27%2C%27hsla%28116%2C+82%25%2C+45%25%2C+1%29%27%2C%27hsla%28315%2C+73%25%2C+43%25%2C+1%29%27%2C%27hsla%2825%2C+71%25%2C+55%25%2C+1%29%27%5D%2CborderWidth%3A1%7D%5D%7D%2Coptions%3A%7Bscales%3A%7Bx%3A%7Bticks%3A%7Bcolor%3A%27%23333%27%2CmaxRotation%3A45%2CminRotation%3A45%7D%2Cgrid%3A%7Bdisplay%3Afalse%7D%7D%2Cy%3A%7Bmin%3A0%2Cticks%3A%7Bcolor%3A%27%23333%27%2Ccallback%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Cfont%3A%7Bsize%3A10%7D%7D%2Ctitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Gzipped+Size%27%2Ccolor%3A%27%23333%27%2Cfont%3A%7Bsize%3A14%7D%7D%2Cgrid%3A%7Bcolor%3A%27%2333333340%27%7D%7D%7D%2Cplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27antd+v4.16.1%27%2Cfont%3A%7Bsize%3A20%7D%2Ccolor%3A%27%23333%27%7D%2Clegend%3A%7Bdisplay%3Afalse%7D%2Cdatalabels%3A%7Blabels%3A%7Bbytes%3A%7Banchor%3A%27end%27%2Calign%3A%27top%27%2Cformatter%3A%28n+++++++++++++++++%29+%3D%3E+%60%24%7BIntl.NumberFormat%28%27en%27%2C+%7B%0A%09notation%3A+%27compact%27%2C%0A%09compactDisplay%3A+%27short%27%2C%0A%7D%29.format%28Number%28n%29%29%7DB%60%2Ccolor%3A%27%23333%27%2Cfont%3A%7Bsize%3A11%7D%7D%2Cpercent%3A%7Banchor%3A%27center%27%2Calign%3A%27center%27%2Cformatter%3A%28%0A%09value++++++++%2C%0A%09context+++++++++%2C%0A%29+%3D%3E+%7B%0A%09const+base+%3D+Number%28context.dataset.data%5B0%5D+%3F%3F+0%29%3B%0A%09if+%28%21base+%7C%7C+value+%3D%3D%3D+base%29+%7B+return+%27%27%3B+%7D%0A%09return+%60%24%7BMath.round%28%28value+%2F+base%29+*+100%29%7D%25%60%3B%0A%7D%2Ccolor%3A%27%23fff%27%2Cfont%3A%7Bsize%3A11%2Cweight%3A%27bold%27%7D%2Cclamp%3Atrue%7D%7D%7D%7D%7D%7D&w=720&h=400&ref=qc-js&bkg=transparent&f=svg&v=4">
 </picture>
 
 <div align="center">
@@ -374,9 +374,9 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | :- | -: | -: | -: |
 | [antd v4.16.1](https://www.npmjs.com/package/antd/v/4.16.1) ([Source](https://unpkg.com/antd@4.16.1/dist/antd.js)) | `6.67 MB` | `825.18 KB` |  |
 | __Minifier__ | __Minified size__ | __Minzipped size__ | __Time__ |
-| 1. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | __<sup>🏆-68% </sup>`2.12 MB`__ | __<sup>🏆-45% </sup>`451.46 KB`__ | <sup>*3x* </sup>`220 ms` |
-| 2. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-68% </sup>`2.15 MB` | <sup>-45% </sup>`452.46 KB` | <sup>*9x* </sup>`653 ms` |
-| 3. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts) | <sup>-66% </sup>`2.29 MB` | <sup>-43% </sup>`471.64 KB` | <sup>*1x* </sup>`140 ms` |
+| 1. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | __<sup>🏆-68% </sup>`2.12 MB`__ | __<sup>🏆-45% </sup>`451.46 KB`__ | <sup>*3x* </sup>`261 ms` |
+| 2. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts) | <sup>-66% </sup>`2.29 MB` | <sup>-43% </sup>`471.64 KB` | <sup>*1x* </sup>`140 ms` |
+| 3. [@swc/core](packages/minifiers/minifiers/swc.ts) | <sup>-68% </sup>`2.15 MB` | <sup>-45% </sup>`452.46 KB` | <sup>*11x* </sup>`863 ms` |
 | 4. [bun](packages/minifiers/minifiers/bun.ts) | <sup>-66% </sup>`2.29 MB` | <sup>-41% </sup>`486.20 KB` | <sup>*1x* </sup>`133 ms` |
 | 5. [esbuild](packages/minifiers/minifiers/esbuild.ts) | <sup>-65% </sup>`2.31 MB` | <sup>-41% </sup>`488.41 KB` | <sup>*2x* </sup>`171 ms` |
 | 6. [terser (no compress)](packages/minifiers/minifiers/terser.ts) | <sup>-64% </sup>`2.42 MB` | <sup>-42% </sup>`474.97 KB` | <sup>*26x* </sup>`1,880 ms` |
@@ -402,9 +402,9 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 | :- | -: | -: | -: |
 | [typescript v4.9.5](https://www.npmjs.com/package/typescript/v/4.9.5) ([Source](https://unpkg.com/typescript@4.9.5/lib/typescript.js)) | `10.95 MB` | `1.88 MB` |  |
 | __Minifier__ | __Minified size__ | __Minzipped size__ | __Time__ |
-| 1. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | <sup>-70% </sup>`3.33 MB` | __<sup>🏆-55% </sup>`851.44 KB`__ | <sup>*4x* </sup>`497 ms` |
+| 1. [oxc-minify](packages/minifiers/minifiers/oxc-minify.ts) | <sup>-70% </sup>`3.33 MB` | __<sup>🏆-55% </sup>`851.44 KB`__ | <sup>*5x* </sup>`560 ms` |
 | 2. [@tdewolff/minify](packages/minifiers/minifiers/tdewolff-minify.ts) | <sup>-69% </sup>`3.35 MB` | <sup>-54% </sup>`875.77 KB` | <sup>*2x* </sup>`266 ms` |
-| 3. [@swc/core](packages/minifiers/minifiers/swc.ts) | __<sup>🏆-70% </sup>`3.31 MB`__ | <sup>-54% </sup>`859.03 KB` | <sup>*12x* </sup>`1,406 ms` |
+| 3. [@swc/core](packages/minifiers/minifiers/swc.ts) | __<sup>🏆-70% </sup>`3.31 MB`__ | <sup>-54% </sup>`859.03 KB` | <sup>*15x* </sup>`1,718 ms` |
 | 4. [esbuild](packages/minifiers/minifiers/esbuild.ts) | <sup>-68% </sup>`3.49 MB` | <sup>-51% </sup>`915.54 KB` | <sup>*2x* </sup>`287 ms` |
 | 5. [bun](packages/minifiers/minifiers/bun.ts) | <sup>-68% </sup>`3.54 MB` | <sup>-51% </sup>`917.43 KB` | <sup>*2x* </sup>`226 ms` |
 | 6. [terser (no compress)](packages/minifiers/minifiers/terser.ts) | <sup>-68% </sup>`3.53 MB` | <sup>-53% </sup>`878.64 KB` | <sup>*29x* </sup>`3,192 ms` |
@@ -424,40 +424,40 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 > 🤖 This analysis is AI generated. See below for the system prompt.
 
 <!-- aiAnalysis:start -->
-Twelve rounds. Twelve wildly different beasts — from the 19-kilobyte featherweight react all the way up to the 1.88-megabyte typescript titan. The grid mixed grizzled veterans with tools so fresh their paint was still wet — oxc-minify shipped just five days before the green flag. The pits were already chaos before racing began, with two entrants crashing out early. What followed was a season of improbable speed, obsessive byte-shaving, and a title fight so tight the stewards reached for the photo-finish camera. Welcome to the Minification Grand Prix.
+Three... two... one... compress! Welcome to the Minification Grand Prix, where the stopwatch and the scale fight for the same trophy and no semicolon is safe. Twelve rounds today, from the 19 KB sprint of react to the 1.88 MB marathon of typescript. Two engines blew before the finish line. And a rookie that shipped literally this morning is making a decade of veterans sweat. The grid has never been this spicy.
 
 ### Best minifier
 
-**@swc/core** takes the crown — and it earned every carat.
+**oxc-minify** takes the crown, and it takes it the hard way. The debutant didn't just keep pace. It won best gzip on the three biggest, meanest artifacts on the calendar: the terser package at 121.94 KB, antd at 451.46 KB, and typescript, where it carved 55% off a 1.88 MB giant and left the scale at 851.44 KB. Half a second to swallow a mountain.
 
-Best gzip in four rounds: jquery, vue, three, and the 684-kilobyte echarts monster, where it took both the size win and the balance award — 321 KB in roughly half a second. "Most balanced" in nine of twelve rounds overall. And when it didn't win on size, it lost by a whisker: about ten bytes on react, a quarter of a kilobyte on victory, a single kilobyte on antd. All while the clock never turned ugly — 18 milliseconds on react, 653 at its heaviest timed lift.
+On the smaller circuits, it traded blow-for-blow with the old guard. On react it finished in three milliseconds—three!—conceding just 0.17 KB to uglify-js, which needed 420. Roughly 140 times faster for one byte in five hundred. On lodash it was done in 13 milliseconds while uglify was still lacing its boots for a 1,394-millisecond shift. On echarts it landed within two kilobytes of the best size at a quarter of the time. The pattern everywhere: give up a sliver of size, get the clock back four-fold. For CI pipelines, that trade reads like a gift.
 
-The old artisan uglify-js actually collected more raw-size trophies — five — but look at the invoice. On lodash it shaved the same 74% as swc yet needed 1.4 seconds to swc's 46 milliseconds, thirty times slower for a half-kilobyte lead. On victory it spent 5.7 glacial seconds to win by a quarter of a kilobyte. And when the artifacts grew truly enormous — echarts, antd, typescript — the artisan quietly slipped off the podium entirely. swc, by contrast, surfaced in the highlights of eleven of twelve rounds.
-
-Full honesty: this crown was razor-close. oxc-minify won the two biggest rounds of the season at roughly triple swc's pace, and on the typescript titan swc didn't crack the highlights at all. But across a full season, nobody paired near-perfect size with sane speed so relentlessly. Consistency over twelve rounds beat brilliance in three. The stewards' decision stands.
+Make no mistake, this was a photo finish. @swc/core edged oxc on pure size through most of the mid-range. But the tiebreakers are speed and the heavyweights, and oxc swept both: faster in every single round, and outright dominant exactly where the challenge was hardest. The rookie takes the throne.
 
 ### Honorable mentions
 
-**oxc-minify** is the story of the year. Three milliseconds to demolish react — blink and the race is over. Best gzip on terser's own source code (downright cheeky), on the 825-kilobyte antd giant, and on the typescript titan itself: 851 KB, 55% shaved, in under half a second. Where it trailed on size, it usually trailed by a percent or less while running three to four times faster than swc. The lone blemish: lodash, where it surrendered real bytes. If your CI bills by the minute, this is your horse.
+**@swc/core** is the runner-up with zero reason to hang its head. Seven "most balanced" plaques, four best-gzip wins on jquery, vue, three, and echarts, and a showstopper on victory: within 0.26 KB of uglify-js at fifteen times the speed. If your bundles live under 300 KB and you want the last byte, this is your champion.
 
-**uglify-js**, the artisan. Five best-gzip trophies, more than anyone — each won by a hair, each paid for in seconds rather than milliseconds. Magnificent if you have all night. Awkward if you have a deploy window.
+**uglify-js** is the old-world artisan. Five best-gzip trophies—react, moment, lodash, d3, victory—each sculpted at a glacial price. Nearly six seconds on victory alone. When bytes are sacred and deadlines are fiction, this is your craftsman.
 
-**@tdewolff/minify**, the sprinter with a surprise marathon kick. Fastest through moment, jquery, and vue, silent through the middle rounds, then a stunning podium on the typescript titan: 875 KB, 54% shaved, in 266 milliseconds.
+**@cminify/cminify** owns the stopwatch, full stop. Fastest in seven straight rounds, including 21 milliseconds flat on a 193 KB package. But it pays in payload: 26% shaved where the leaders hit 37%, 24% where they hit 45%. A pure sprint tool—glorious in the niche where only the clock matters.
 
-**terser**, the quiet veteran. Close on size everywhere, close on the clock nowhere. Graceful aging, modest silverware.
+**@tdewolff/minify** is the sprint specialist, fastest on moment, jquery, and vue, and still respectable on the antd and typescript giants. Punchy everywhere, podium-level early.
 
-**@cminify/cminify-linux-x64**, the pure sprinter. Fastest in all seven rounds from d3 onward — 108 milliseconds for nearly two megabytes! But the squeeze collapses: 21–40% shaved where the leaders take 33–55%. A niche weapon for raw throughput, not for transfer size.
+**terser** is the steady veteran. Never the headline, always in the points—react, moment, lodash. Honest work, simply outpaced by a new generation.
 
-**esbuild** made one cameo — 52% off echarts in 116 milliseconds — but stayed off the podium elsewhere. **google-closure-compiler** and **bun** ran quiet races and never cracked a single highlight; no data shown, no verdict rendered.
+**esbuild** snuck one podium: 331.62 KB on echarts in 116 milliseconds. Quiet, mid-pack, occasionally dangerous.
+
+**bun** and **google-closure-compiler** finished every race but never once cracked the highlight reel. No drama, no podiums—worth a look in your own garage.
 
 ### Eliminated
 
-- **babel-minify** — out before round one turned a wheel. Failed on react, tripping over its own tooling with a stale-data error about baseline-browser-mapping. It never left the pits.
-- **tedivm/jshrink** — survived five rounds, then choked on d3 with "RuntimeException: Unclosed regex pattern." A parser heart attack at position 289075, mid-race.
+- **babel-minify** — out before the first turn. It choked on react itself, failing with a JSON-parsing error about a stale `baseline-browser-mapping` module before producing any output. Do not hand it your bundle.
+- **tedivm/jshrink** — engine failure on round six. It crashed mid-minification on d3 with an "Unclosed regex pattern" exception. A beautiful error message, but a disqualification nonetheless.
 
 ### Closing remarks
 
-What a season. The all-rounder held off the fastest rising star in the sport, while the old artisan proved the last byte still exists — for anyone patient enough to wait for it. One caveat before anyone signs a contract: this was purely a size-and-speed contest. No points were awarded for API ergonomics, install weight, documentation, or how gracefully a tool fits your bundler — and the only outright failures were the two crashes above. So run your own bundles through the podium, watch the bytes and the stopwatch yourself, and pick the racer that suits your pipeline. The grid reforms next season — and if oxc keeps this trajectory, the crown may not stay put for long.
+What a season. A same-day rookie stole the crown, a battle-tested runner-up pushed it to the final meter, and an artisan kept proving that patience still squeezes out the last byte. One caveat before anyone signs contracts: this was purely a performance race. Real adoption also lives on developer experience—install size, API design, plugins, community—and on correctness against your actual codebase. Run the contenders on your own bundle before picking your champion. The podium is waiting.
 <!-- aiAnalysis:end -->
 
 <details>
@@ -465,7 +465,7 @@ What a season. The all-rounder held off the fastest rising star in the sport, wh
 <br>
 
 <pre><code><!-- aiSystemPrompt:start -->
-Today&#39;s date is 2026-10-10
+Today&#39;s date is 2026-10-13
 
 You are a JavaScript minification benchmark analyst with a flair for storytelling.
 
@@ -517,8 +517,8 @@ Three... two... one... compress! Welcome to the Minification Grand Prix, where b
 - esbuild v0.28.2 released 2026-08-08
 - google-closure-compiler v20251216.0.0 released 2025-12-18
 - tedivm/jshrink v1.8.1
-- oxc-minify v0.153.0 released 2026-10-05
-- @swc/core v1.16.13 released 2026-09-30
+- oxc-minify v0.154.0 released 2026-10-13
+- @swc/core v1.16.18 released 2026-10-11
 - @tdewolff/minify v2.24.8 released 2025-12-08
 - terser v5.51.2 released 2026-08-27
 - uglify-js v3.19.3 released 2024-08-29
@@ -527,73 +527,73 @@ Three... two... one... compress! Welcome to the Minification Grand Prix, where b
 ## Round 1: npm package &quot;react&quot; (19.39 KB gzipped)
 - Best gzip compression: uglify-js: 8.18 KB (58% shaved) in 420 ms
 - Fastest: oxc-minify: 8.35 KB (57% shaved) in 3 ms
-- Most balanced: @swc/core: 8.19 KB (58% shaved) in 18 ms
+- Most balanced: @swc/core: 8.19 KB (58% shaved) in 19 ms
 - Honorable mention: terser: 8.26 KB (57% shaved) in 118 ms
 
 ## Round 2: npm package &quot;moment&quot; (36.23 KB gzipped)
 - Best gzip compression: uglify-js: 18.57 KB (49% shaved) in 906 ms
 - Fastest: @tdewolff/minify: 19.48 KB (46% shaved) in 7 ms
-- Most balanced: @swc/core: 18.74 KB (48% shaved) in 26 ms
+- Most balanced: @swc/core: 18.74 KB (48% shaved) in 27 ms
 - Honorable mention: terser: 18.69 KB (48% shaved) in 290 ms
 
 ## Round 3: npm package &quot;jquery&quot; (84.50 KB gzipped)
-- Best gzip compression: @swc/core: 30.86 KB (63% shaved) in 48 ms
+- Best gzip compression: @swc/core: 30.86 KB (63% shaved) in 56 ms
 - Fastest: @tdewolff/minify: 31.45 KB (63% shaved) in 12 ms
-- Most balanced: @swc/core: 30.86 KB (63% shaved) in 48 ms
-- Honorable mention: oxc-minify: 30.90 KB (63% shaved) in 12 ms
+- Most balanced: @swc/core: 30.86 KB (63% shaved) in 56 ms
+- Honorable mention: oxc-minify: 30.90 KB (63% shaved) in 13 ms
 
 ## Round 4: npm package &quot;vue&quot; (89.67 KB gzipped)
-- Best gzip compression: @swc/core: 42.71 KB (52% shaved) in 58 ms
+- Best gzip compression: @swc/core: 42.71 KB (52% shaved) in 70 ms
 - Fastest: @tdewolff/minify: 44.37 KB (51% shaved) in 15 ms
-- Most balanced: @swc/core: 42.71 KB (52% shaved) in 58 ms
-- Honorable mention: oxc-minify: 43.20 KB (52% shaved) in 15 ms
+- Most balanced: @swc/core: 42.71 KB (52% shaved) in 70 ms
+- Honorable mention: oxc-minify: 43.20 KB (52% shaved) in 19 ms
 
 ## Round 5: npm package &quot;lodash&quot; (96.69 KB gzipped)
 - Best gzip compression: uglify-js: 24.69 KB (74% shaved) in 1,394 ms
-- Fastest: oxc-minify: 25.83 KB (73% shaved) in 12 ms
-- Most balanced: @swc/core: 25.26 KB (74% shaved) in 46 ms
+- Fastest: oxc-minify: 25.83 KB (73% shaved) in 13 ms
+- Most balanced: @swc/core: 25.26 KB (74% shaved) in 50 ms
 - Honorable mention: terser: 25.15 KB (74% shaved) in 470 ms
 
 ## Round 6: npm package &quot;d3&quot; (130.69 KB gzipped)
 - Best gzip compression: uglify-js: 87.02 KB (33% shaved) in 3,272 ms
 - Fastest: @cminify/cminify-linux-x64: 103.81 KB (21% shaved) in 23 ms
-- Most balanced: @swc/core: 87.39 KB (33% shaved) in 127 ms
-- Honorable mention: oxc-minify: 87.95 KB (33% shaved) in 36 ms
+- Most balanced: @swc/core: 87.39 KB (33% shaved) in 168 ms
+- Honorable mention: oxc-minify: 87.95 KB (33% shaved) in 46 ms
 
 ## Round 7: npm package &quot;terser&quot; (193.76 KB gzipped)
-- Best gzip compression: oxc-minify: 121.94 KB (37% shaved) in 34 ms
+- Best gzip compression: oxc-minify: 121.94 KB (37% shaved) in 42 ms
 - Fastest: @cminify/cminify-linux-x64: 144.30 KB (26% shaved) in 21 ms
-- Most balanced: oxc-minify: 121.94 KB (37% shaved) in 34 ms
-- Honorable mention: @swc/core: 123.29 KB (36% shaved) in 117 ms
+- Most balanced: oxc-minify: 121.94 KB (37% shaved) in 42 ms
+- Honorable mention: @swc/core: 123.29 KB (36% shaved) in 153 ms
 
 ## Round 8: npm package &quot;three&quot; (248.27 KB gzipped)
-- Best gzip compression: @swc/core: 158.70 KB (36% shaved) in 173 ms
+- Best gzip compression: @swc/core: 158.70 KB (36% shaved) in 251 ms
 - Fastest: @cminify/cminify-linux-x64: 191.97 KB (23% shaved) in 23 ms
-- Most balanced: @swc/core: 158.70 KB (36% shaved) in 173 ms
-- Honorable mention: oxc-minify: 159.84 KB (36% shaved) in 49 ms
+- Most balanced: @swc/core: 158.70 KB (36% shaved) in 251 ms
+- Honorable mention: oxc-minify: 159.84 KB (36% shaved) in 67 ms
 
 ## Round 9: npm package &quot;victory&quot; (309.94 KB gzipped)
 - Best gzip compression: uglify-js: 157.44 KB (49% shaved) in 5,712 ms
 - Fastest: @cminify/cminify-linux-x64: 221.12 KB (29% shaved) in 44 ms
-- Most balanced: @swc/core: 157.70 KB (49% shaved) in 258 ms
-- Honorable mention: oxc-minify: 160.76 KB (48% shaved) in 73 ms
+- Most balanced: @swc/core: 157.70 KB (49% shaved) in 382 ms
+- Honorable mention: oxc-minify: 160.76 KB (48% shaved) in 99 ms
 
 ## Round 10: npm package &quot;echarts&quot; (684.61 KB gzipped)
-- Best gzip compression: @swc/core: 321.03 KB (53% shaved) in 505 ms
+- Best gzip compression: @swc/core: 321.03 KB (53% shaved) in 667 ms
 - Fastest: @cminify/cminify-linux-x64: 434.45 KB (37% shaved) in 50 ms
-- Most balanced: oxc-minify: 322.79 KB (53% shaved) in 143 ms
+- Most balanced: oxc-minify: 322.79 KB (53% shaved) in 174 ms
 - Honorable mention: esbuild: 331.62 KB (52% shaved) in 116 ms
 
 ## Round 11: npm package &quot;antd&quot; (825.18 KB gzipped)
-- Best gzip compression: oxc-minify: 451.46 KB (45% shaved) in 220 ms
+- Best gzip compression: oxc-minify: 451.46 KB (45% shaved) in 261 ms
 - Fastest: @cminify/cminify-linux-x64: 623.37 KB (24% shaved) in 72 ms
-- Most balanced: oxc-minify: 451.46 KB (45% shaved) in 220 ms
-- Honorable mention: @swc/core: 452.46 KB (45% shaved) in 653 ms
+- Most balanced: oxc-minify: 451.46 KB (45% shaved) in 261 ms
+- Honorable mention: @tdewolff/minify: 471.64 KB (43% shaved) in 140 ms
 
 ## Round 12: npm package &quot;typescript&quot; (1.88 MB gzipped)
-- Best gzip compression: oxc-minify: 851.44 KB (55% shaved) in 497 ms
+- Best gzip compression: oxc-minify: 851.44 KB (55% shaved) in 560 ms
 - Fastest: @cminify/cminify-linux-x64: 1.13 MB (40% shaved) in 108 ms
-- Most balanced: oxc-minify: 851.44 KB (55% shaved) in 497 ms
+- Most balanced: oxc-minify: 851.44 KB (55% shaved) in 560 ms
 - Honorable mention: @tdewolff/minify: 875.77 KB (54% shaved) in 266 ms
 
 # Eliminated
