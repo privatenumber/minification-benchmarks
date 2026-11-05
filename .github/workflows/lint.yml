@@ -26,7 +26,8 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v3
         with:
-          run_install: true
+          run_install: |
+            args: [--frozen-lockfile]
 
       - name: Lint
         run: pnpm lint
