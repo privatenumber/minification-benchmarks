@@ -37,7 +37,7 @@ pnpm bench-all
 
 Both commands also accept `--help`.
 
-Results are stored in `packages/data/data/data.json`. Matching results are skipped unless `--force` is set.
+`pnpm bench` only prints its result. `pnpm bench-all` stores results in `packages/data/data/data.json` and skips pairs that already have a matching result unless `--force` is set.
 
 ## Update the README
 
@@ -49,7 +49,7 @@ This regenerates `README.md` from the saved results and minifier metadata; it do
 
 ## Add a minifier
 
-Add a file or directory under `packages/minifiers/minifiers/` that default-exports `createMinifier(packageName, instances)`. The name must match the package name because it is used to look up metadata. Add npm dependencies to `packages/minifiers/package.json`. For Composer dependencies, update `packages/minifiers/composer.json` and `composer.lock`; see `tedivm/jshrink` for an example. Add the package name to the minifiers list in `renovate.json`.
+Add a file or directory under `packages/minifiers/minifiers/` that default-exports `createMinifier(packageName, instances)`. The `packageName` argument must be the package name, because it is used to look up metadata. The file or directory name can differ, such as `swc.ts` for `@swc/core`. Add npm dependencies to `packages/minifiers/package.json`. For Composer dependencies, update `packages/minifiers/composer.json` and `composer.lock`; see `tedivm/jshrink` for an example. Add the package name to the minifiers list in `renovate.json`.
 
 ## Add an artifact
 
