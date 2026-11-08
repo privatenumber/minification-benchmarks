@@ -60,11 +60,14 @@ export const getMessage = (
 					minzippedBytes: number;
 					time: number;
 				}[] = [];
-				const mostBalanced = artifact.minifiedWithScores.find(({ minifier }) => 'data' in minifier.result);
+				const bestScore = artifact.minifiedWithScores[0]?.score;
+				const mostBalanced = artifact.minifiedWithScores
+					.filter(({ minifier, score }) => 'data' in minifier.result && score === bestScore)
+					.map(({ minifierName, minifier }) => [minifierName, minifier] as const);
 				const candidates = [
 					['Best gzip compression', artifact.bestMinzipped],
 					['Fastest', artifact.bestSpeed],
-					['Most balanced', mostBalanced ? [[mostBalanced.minifierName, mostBalanced.minifier] as const] : []],
+					['Most balanced', mostBalanced],
 				] as const;
 				for (const [label, winners] of candidates) {
 					for (const [minifierName, minifier] of winners) {
