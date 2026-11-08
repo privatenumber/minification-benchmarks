@@ -42,7 +42,7 @@ _Benchmarks last updated on <!-- lastUpdated:start -->Oct 10, 2026<!-- lastUpdat
 
 ## 👟 Methodology
 
-- Each minifier is executed in its own process with a 10s timeout
+- Each minifier is executed in its own process with a 10s timeout for the whole run, including validation
 - Artifact integrity is verified by a test before and after minification
 - Each minifier is minimally configured (sourcemaps & comments disabled), comparing out-of-the-box experience
 - Minifier upgrade PRs are automated via [WhiteSource Renovate](https://www.whitesourcesoftware.com/free-developer-tools/renovate/)
@@ -56,7 +56,7 @@ _Benchmarks last updated on <!-- lastUpdated:start -->Oct 10, 2026<!-- lastUpdat
 
 For each benchmark, minifiers are ranked by a score that reflects the best balance of trade-offs.
 
-The score combines minzipped size and minification time, with size weighted more heavily by default (85% size, 15% time) since it's usually the top priority. If a minifier is unusually slow, the weights shift toward time using a [logistic sigmoid function](https://en.wikipedia.org/wiki/Sigmoid_function), up to a 50/50 split. This avoids harsh cutoffs while still penalizing extreme slowness.
+The score combines minzipped size and minification time. Size has a fixed weight of 0.85, while time starts at 0.15 and rises smoothly up to 0.50 based on the ratio to the median time, using a [logistic sigmoid function](https://en.wikipedia.org/wiki/Sigmoid_function). This avoids harsh cutoffs while still penalizing extreme slowness.
 
 Both size and time are scaled using [min-max normalization](https://en.wikipedia.org/wiki/Feature_scaling#Rescaling_%28min–max_normalization%29) so they can be compared fairly. The result is a context-aware score that helps surface the best overall choice—but make sure to check each column directly if size or speed matters more to you.
 

@@ -23,16 +23,15 @@ export const getAiAnalysis = async (
 	minifiers: MinifierLoaded[],
 	data: AnalyzedData,
 ) => {
-	const todaysDate = `Today's date is ${new Date().toISOString().split('T')[0]}`;
-	const systemPromptPath = new URL('system-prompt.txt', import.meta.url);
-	const systemPrompt = await fs.readFile(systemPromptPath.pathname, 'utf8');
-	const message = await getMessage(minifiers, data);
-
 	if (!apiKey) {
 		console.warn('Skipping AI analysis due to missing OPENCODE_GO_API_KEY');
 		return;
 	}
 
+	const todaysDate = `Today's date is ${new Date().toISOString().split('T')[0]}`;
+	const systemPromptPath = new URL('system-prompt.txt', import.meta.url);
+	const systemPrompt = await fs.readFile(systemPromptPath.pathname, 'utf8');
+	const message = getMessage(minifiers, data);
 	const systemPromptWithDate = `${todaysDate}\n\n${systemPrompt}`;
 
 	const { text } = await generateText({

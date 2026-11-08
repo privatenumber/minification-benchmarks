@@ -49,57 +49,59 @@ export const getMessage = (
 
 	# Race results
 	${
-		data
+		data.slice()
 			.sort(([, artifactA], [, artifactB]) => artifactA.gzipSize - artifactB.gzipSize)
 			.map(([artifactName, artifact], artifactIndex) => {
 				const round = artifactIndex + 1;
 
-				const mostBalanced = artifact.minifiedWithScores[0];
-				if ('error' in mostBalanced.minifier.result) {
-					throw new Error('wont happen');
-				}
-
-				const rankings: Record<string, {
+				const rankings: {
+					label: string;
 					minifier: string;
 					minzippedBytes: number;
 					time: number;
-				}> = {
-					'Best gzip compression': {
-						minifier: artifact.bestMinzipped![0],
-						minzippedBytes: artifact.bestMinzipped![1].result.data.minzippedBytes,
-						time: artifact.bestMinzipped![1].result.data.time,
-					},
-					Fastest: {
-						minifier: artifact.bestSpeed![0],
-						minzippedBytes: artifact.bestSpeed![1].result.data.minzippedBytes,
-						time: artifact.bestSpeed![1].result.data.time,
-					},
-					'Most balanced': {
-						minifier: mostBalanced.minifierName,
-						minzippedBytes: mostBalanced.minifier.result.data.minzippedBytes,
-						time: mostBalanced.minifier.result.data.time,
-					},
-				};
+				}[] = [];
+				const bestScore = artifact.minifiedWithScores[0]?.score;
+				const mostBalanced = artifact.minifiedWithScores
+					.filter(({ minifier, score }) => 'data' in minifier.result && score === bestScore)
+					.map(({ minifierName, minifier }) => [minifierName, minifier] as const);
+				const candidates = [
+					['Best gzip compression', artifact.bestMinzipped],
+					['Fastest', artifact.bestSpeed],
+					['Most balanced', mostBalanced],
+				] as const;
+				for (const [label, winners] of candidates) {
+					for (const [minifierName, minifier] of winners) {
+						if ('data' in minifier.result) {
+							rankings.push({
+								label,
+								minifier: minifierName,
+								minzippedBytes: minifier.result.data.minzippedBytes,
+								time: minifier.result.data.time,
+							});
+						}
+					}
+				}
 
-				const mentionedMinifiers = new Set(Object.values(rankings).map(r => r.minifier));
+				const mentionedMinifiers = new Set(rankings.map(r => r.minifier));
 				const filteredMinified = artifact.minifiedWithScores.find(
-					({ minifierName }) => !mentionedMinifiers.has(minifierName),
+					({ minifierName, minifier }) => !mentionedMinifiers.has(minifierName) && 'data' in minifier.result,
 				);
 
-				const honorableMention = filteredMinified!;
-				if ('error' in honorableMention.minifier.result) {
-					throw new Error('wont happen');
+				if (filteredMinified && 'data' in filteredMinified.minifier.result) {
+					rankings.push({
+						label: 'Honorable mention',
+						minifier: filteredMinified.minifierName,
+						minzippedBytes: filteredMinified.minifier.result.data.minzippedBytes,
+						time: filteredMinified.minifier.result.data.time,
+					});
 				}
-				rankings['Honorable mention'] = {
-					minifier: honorableMention.minifierName,
-					minzippedBytes: honorableMention.minifier.result.data.minzippedBytes,
-					time: honorableMention.minifier.result.data.time,
-				};
 
 				return outdent`
 				## Round ${round}: npm package "${artifactName}" (${byteSize(artifact.gzipSize).toString()} gzipped)
 				${
-					Object.entries(rankings).map(([label, { minifier, minzippedBytes, time }]) => {
+					rankings.map(({
+						label, minifier, minzippedBytes, time,
+					}) => {
 						const percentShaved = (
 							(artifact.gzipSize - minzippedBytes) / artifact.gzipSize
 						).toLocaleString(undefined, { style: 'percent' });

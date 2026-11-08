@@ -32,13 +32,13 @@ const displayColumn = (
 const compareSpeed = (
 	current: BenchmarkResultSuccessWithRuns,
 	fastest?: BenchmarkResultSuccessWithRuns,
-) => (
-	(fastest === current)
-		? ''
-		: md.italic(
-			`${Math.floor(current.data.time / fastest!.data.time)}x`,
-		)
-);
+) => {
+	if (!fastest || current.data.time === fastest.data.time) {
+		return '';
+	}
+	const ratio = current.data.time / fastest.data.time;
+	return md.italic(`${ratio < 10 ? ratio.toFixed(1) : Math.round(ratio)}x`);
+};
 
 const generateBenchmarkTable = (
 	artifactName: string,
@@ -77,13 +77,15 @@ const generateBenchmarkTable = (
 								: capitalize(message.split('\n')[0].slice(0, 15))
 						}`,
 						{
-							title: `Failed: ${message}`,
+							title: message === 'timeout'
+								? 'The whole benchmark process, including validation, exceeded 10 s'
+								: `Failed: ${message}`,
 						},
 					)
 				}`;
 
 				if (message === 'timeout') {
-					columns.push('-', '-', `${md.sup(':warning:')} ${md.code('+10,000 ms')}`);
+					columns.push('-', '-', '-');
 				} else {
 					columns.push('❌', '❌ ', '-');
 				}
@@ -92,17 +94,17 @@ const generateBenchmarkTable = (
 					displayColumn(
 						byteSize(result.data.minifiedBytes).toString(),
 						percent(artifact.size, result.data.minifiedBytes),
-						minifierName === artifact.bestMinified?.[0],
+						artifact.bestMinified.some(([name]) => name === minifierName),
 					),
 					displayColumn(
 						byteSize(result.data.minzippedBytes).toString(),
 						percent(artifact.gzipSize, result.data.minzippedBytes),
-						minifierName === artifact.bestMinzipped?.[0],
+						artifact.bestMinzipped.some(([name]) => name === minifierName),
 					),
 					displayColumn(
 						formatMs(result.data.time),
-						compareSpeed(result, artifact.bestSpeed?.[1].result as BenchmarkResultSuccessWithRuns),
-						minifierName === artifact.bestSpeed?.[0],
+						compareSpeed(result, artifact.bestSpeed[0]?.[1].result),
+						artifact.bestSpeed.some(([name]) => name === minifierName),
 					),
 				);
 			}
@@ -166,7 +168,6 @@ const minifiersList = md.table([
 		),
 ]);
 
-const utcToday = new Date(new Date().toISOString().split('T')[0]);
 const escapeHtml = (string_ = '') => string_
 	.replaceAll('&', '&amp;')
 	.replaceAll('<', '&lt;')
@@ -175,7 +176,12 @@ const escapeHtml = (string_ = '') => string_
 	.replaceAll('\'', '&#39;');
 
 const newReadme = commentMark(readme, {
-	lastUpdated: format(utcToday, 'MMM d, y'),
+	lastUpdated: new Intl.DateTimeFormat('en-US', {
+		timeZone: 'UTC',
+		month: 'short',
+		day: 'numeric',
+		year: 'numeric',
+	}).format(new Date()),
 	benchmarks: generateBenchmarks(analyzedData),
 	minifiers: minifiersList,
 	aiSystemPrompt: ai && escapeHtml(ai.systemPrompt),
