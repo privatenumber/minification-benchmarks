@@ -92,7 +92,7 @@ test('validates an empty string rather than substituting original code', async (
 
 test('parses stdout when a successful benchmark writes to stderr', async ({ signal }) => {
 	const processResult = await runNode(
-		`console.log('warning {}'); console.log(JSON.stringify(${JSON.stringify(successResult)})); console.log('null'); console.warn('benign warning')`,
+		`console.log('warning {}'); console.log(JSON.stringify(${JSON.stringify(successResult)})); console.log(JSON.stringify({data:{status:'ready'}})); console.log('null'); console.warn('benign warning')`,
 		signal,
 	);
 
@@ -124,6 +124,44 @@ test('reports a protocol error when a failing process prints null', async ({ sig
 	if ('error' in result) {
 		expect(result.error.message).toContain('Failed to parse JSON result (exit code: 1');
 		expect(result.error.message).toContain('null');
+	}
+}, 5000);
+
+test('rejects malformed benchmark results', async ({ signal }) => {
+	const processResult = await runNode(
+		'console.error(\'{"error":{}}\'); process.exit(1)',
+		signal,
+	).catch(error => error as SubprocessError);
+	const result = parseBenchmarkProcessResult(processResult);
+	assert.ok('error' in result);
+	expect(result.error.message).toContain('Failed to parse JSON result (exit code: 1');
+}, 5000);
+
+test('timeout does not wait for escaped descendants holding output pipes', async () => {
+	const directory = await fs.mkdtemp(path.join(os.tmpdir(), 'benchmark-escaped-'));
+	const started = path.join(directory, 'started');
+	let pid: number | undefined;
+	try {
+		const grandchild = 'setInterval(() => {}, 1000)';
+		const parent = `const child = require('child_process').spawn(process.execPath, ['-e', ${JSON.stringify(grandchild)}], { detached: true, stdio: ['ignore', 1, 2] }); require('fs').writeFileSync(${JSON.stringify(started)}, String(child.pid)); setInterval(() => {}, 1000)`;
+		const start = Date.now();
+		const result = await runBenchmarkProcess(process.execPath, ['-e', parent], 700);
+		pid = Number(await fs.readFile(started, 'utf8'));
+		expect(result).toStrictEqual({ error: { message: 'timeout' } });
+		expect(Date.now() - start).toBeLessThan(2000);
+	} finally {
+		pid ??= Number(await fs.readFile(started, 'utf8').catch(() => '0'));
+		if (pid) {
+			try {
+				process.kill(-pid, 'SIGKILL');
+			} catch (error) {
+				assert.equal((error as NodeJS.ErrnoException).code, 'ESRCH');
+			}
+		}
+		await fs.rm(directory, {
+			recursive: true,
+			force: true,
+		});
 	}
 }, 5000);
 
