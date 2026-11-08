@@ -8,12 +8,12 @@
 			"@cminify/cminify-linux-x64": {
 				"minifierPath": "cminify.ts",
 				"version": "3.0.1",
-				"configHash": "76612a7257",
+				"configHash": "e78233f110",
 				"result": {
 					"data": {
 						"minifiedBytes": 40036,
 						"minzippedBytes": 10858,
-						"time": 11.6251952,
+						"time": 12.3932058,
 						"runs": 5
 					}
 				}
@@ -57,12 +57,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.4.3",
-				"configHash": "df04df4c6c",
+				"configHash": "514bf46031",
 				"result": {
 					"data": {
 						"minifiedBytes": 23982,
 						"minzippedBytes": 8516,
-						"time": 18.851308999999997,
+						"time": 13.794955399999997,
 						"runs": 5
 					}
 				}
@@ -109,12 +109,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "a8df118dd8",
+				"configHash": "0f3c18cc9a",
 				"result": {
 					"data": {
 						"minifiedBytes": 40821,
 						"minzippedBytes": 11040,
-						"time": 125.62999959999999,
+						"time": 129.7246824,
 						"runs": 5
 					}
 				}
@@ -182,12 +182,12 @@
 			"@cminify/cminify-linux-x64": {
 				"minifierPath": "cminify.ts",
 				"version": "3.0.1",
-				"configHash": "76612a7257",
+				"configHash": "e78233f110",
 				"result": {
 					"data": {
 						"minifiedBytes": 95933,
 						"minzippedBytes": 24744,
-						"time": 11.7385506,
+						"time": 12.543525599999999,
 						"runs": 5
 					}
 				}
@@ -231,12 +231,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.4.3",
-				"configHash": "df04df4c6c",
+				"configHash": "514bf46031",
 				"result": {
 					"data": {
 						"minifiedBytes": 61767,
 						"minzippedBytes": 19600,
-						"time": 15.433874800000002,
+						"time": 16.849981200000002,
 						"runs": 5
 					}
 				}
@@ -283,12 +283,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "a8df118dd8",
+				"configHash": "0f3c18cc9a",
 				"result": {
 					"data": {
 						"minifiedBytes": 97632,
 						"minzippedBytes": 24998,
-						"time": 285.3914682,
+						"time": 279.9726314,
 						"runs": 5
 					}
 				}
@@ -356,12 +356,12 @@
 			"@cminify/cminify-linux-x64": {
 				"minifierPath": "cminify.ts",
 				"version": "3.0.1",
-				"configHash": "76612a7257",
+				"configHash": "e78233f110",
 				"result": {
 					"data": {
 						"minifiedBytes": 141454,
 						"minzippedBytes": 40365,
-						"time": 13.617541399999999,
+						"time": 14.853508999999999,
 						"runs": 5
 					}
 				}
@@ -405,12 +405,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.4.3",
-				"configHash": "df04df4c6c",
+				"configHash": "514bf46031",
 				"result": {
 					"data": {
 						"minifiedBytes": 92401,
 						"minzippedBytes": 32202,
-						"time": 23.302288,
+						"time": 20.7992178,
 						"runs": 5
 					}
 				}
@@ -457,12 +457,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "a8df118dd8",
+				"configHash": "0f3c18cc9a",
 				"result": {
 					"data": {
 						"minifiedBytes": 144144,
 						"minzippedBytes": 40879,
-						"time": 360.88970800000004,
+						"time": 356.1310826,
 						"runs": 5
 					}
 				}
@@ -530,12 +530,12 @@
 			"@cminify/cminify-linux-x64": {
 				"minifierPath": "cminify.ts",
 				"version": "3.0.1",
-				"configHash": "76612a7257",
+				"configHash": "e78233f110",
 				"result": {
 					"data": {
 						"minifiedBytes": 193907,
 						"minzippedBytes": 56356,
-						"time": 14.852899399999998,
+						"time": 16.3438874,
 						"runs": 5
 					}
 				}
@@ -579,12 +579,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.4.3",
-				"configHash": "df04df4c6c",
+				"configHash": "514bf46031",
 				"result": {
 					"data": {
 						"minifiedBytes": 121292,
 						"minzippedBytes": 44496,
-						"time": 27.1153514,
+						"time": 22.623240799999998,
 						"runs": 5
 					}
 				}
@@ -631,12 +631,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "a8df118dd8",
+				"configHash": "0f3c18cc9a",
 				"result": {
 					"data": {
 						"minifiedBytes": 197357,
 						"minzippedBytes": 57169,
-						"time": 480.68870719999995,
+						"time": 473.0525922,
 						"runs": 5
 					}
 				}
@@ -704,12 +704,12 @@
 			"@cminify/cminify-linux-x64": {
 				"minifierPath": "cminify.ts",
 				"version": "3.0.1",
-				"configHash": "76612a7257",
+				"configHash": "e78233f110",
 				"result": {
 					"data": {
 						"minifiedBytes": 146273,
 						"minzippedBytes": 35944,
-						"time": 12.9705976,
+						"time": 14.316132399999997,
 						"runs": 5
 					}
 				}
@@ -753,12 +753,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.4.3",
-				"configHash": "df04df4c6c",
+				"configHash": "514bf46031",
 				"result": {
 					"data": {
 						"minifiedBytes": 73478,
 						"minzippedBytes": 26245,
-						"time": 19.711508,
+						"time": 21.297861,
 						"runs": 5
 					}
 				}
@@ -805,12 +805,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "a8df118dd8",
+				"configHash": "0f3c18cc9a",
 				"result": {
 					"data": {
 						"minifiedBytes": 148780,
 						"minzippedBytes": 36327,
-						"time": 374.3924582,
+						"time": 369.899304,
 						"runs": 5
 					}
 				}
@@ -878,12 +878,12 @@
 			"@cminify/cminify-linux-x64": {
 				"minifierPath": "cminify.ts",
 				"version": "3.0.1",
-				"configHash": "76612a7257",
+				"configHash": "e78233f110",
 				"result": {
 					"data": {
 						"minifiedBytes": 393697,
 						"minzippedBytes": 103813,
-						"time": 23.42829,
+						"time": 20.951225400000002,
 						"runs": 5
 					}
 				}
@@ -929,12 +929,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.4.3",
-				"configHash": "df04df4c6c",
+				"configHash": "514bf46031",
 				"result": {
 					"data": {
 						"minifiedBytes": 272684,
 						"minzippedBytes": 91069,
-						"time": 42.48461519999999,
+						"time": 36.06374000000001,
 						"runs": 5
 					}
 				}
@@ -981,11 +981,11 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "a8df118dd8",
+				"configHash": "0f3c18cc9a",
 				"result": {
 					"error": {
 						"message": "RuntimeException: Unclosed regex pattern at position: 289075 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:660",
-						"stack": "Stack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString()\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify()\n#4 {main}",
+						"stack": "Error: RuntimeException: Unclosed regex pattern at position: 289075 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:660\nStack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString()\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify()\n#4 {main}",
 						"stage": "minification"
 					}
 				}
@@ -1053,12 +1053,12 @@
 			"@cminify/cminify-linux-x64": {
 				"minifierPath": "cminify.ts",
 				"version": "3.0.1",
-				"configHash": "76612a7257",
+				"configHash": "e78233f110",
 				"result": {
 					"data": {
 						"minifiedBytes": 625930,
 						"minzippedBytes": 144303,
-						"time": 20.6464978,
+						"time": 21.716989199999997,
 						"runs": 5
 					}
 				}
@@ -1104,12 +1104,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.4.3",
-				"configHash": "df04df4c6c",
+				"configHash": "514bf46031",
 				"result": {
 					"data": {
 						"minifiedBytes": 466760,
 						"minzippedBytes": 126603,
-						"time": 34.6541716,
+						"time": 36.9957042,
 						"runs": 5
 					}
 				}
@@ -1156,12 +1156,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "a8df118dd8",
+				"configHash": "0f3c18cc9a",
 				"result": {
 					"data": {
 						"minifiedBytes": 633710,
 						"minzippedBytes": 145178,
-						"time": 1327.5849582,
+						"time": 1315.4150536,
 						"runs": 5
 					}
 				}
@@ -1229,12 +1229,12 @@
 			"@cminify/cminify-linux-x64": {
 				"minifierPath": "cminify.ts",
 				"version": "3.0.1",
-				"configHash": "76612a7257",
+				"configHash": "e78233f110",
 				"result": {
 					"data": {
 						"minifiedBytes": 941063,
 						"minzippedBytes": 191965,
-						"time": 22.9393556,
+						"time": 25.4421854,
 						"runs": 5
 					}
 				}
@@ -1278,12 +1278,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.4.3",
-				"configHash": "df04df4c6c",
+				"configHash": "514bf46031",
 				"result": {
 					"data": {
 						"minifiedBytes": 655619,
 						"minzippedBytes": 164102,
-						"time": 45.5883008,
+						"time": 47.5718094,
 						"runs": 5
 					}
 				}
@@ -1330,12 +1330,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "a8df118dd8",
+				"configHash": "0f3c18cc9a",
 				"result": {
 					"data": {
 						"minifiedBytes": 952007,
 						"minzippedBytes": 193471,
-						"time": 1711.5084774,
+						"time": 1722.025604,
 						"runs": 5
 					}
 				}
@@ -1403,12 +1403,12 @@
 			"@cminify/cminify-linux-x64": {
 				"minifierPath": "cminify.ts",
 				"version": "3.0.1",
-				"configHash": "76612a7257",
+				"configHash": "e78233f110",
 				"result": {
 					"data": {
 						"minifiedBytes": 1433404,
 						"minzippedBytes": 221118,
-						"time": 43.5197136,
+						"time": 38.588509599999995,
 						"runs": 5
 					}
 				}
@@ -1454,12 +1454,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.4.3",
-				"configHash": "df04df4c6c",
+				"configHash": "514bf46031",
 				"result": {
 					"data": {
 						"minifiedBytes": 726360,
 						"minzippedBytes": 180768,
-						"time": 71.4648856,
+						"time": 70.14920399999998,
 						"runs": 5
 					}
 				}
@@ -1503,11 +1503,11 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "a8df118dd8",
+				"configHash": "0f3c18cc9a",
 				"result": {
 					"error": {
 						"message": "Unexpected token '~'",
-						"stack": "fs-require://2/index.js:594\nreturn function(key,value){if(stack.length>0){var thisPos=stack.indexOf(this)~thisPos?stack.splice(thisPos+1):stack.push(this)~thisPos?keys.splice(thisPos,Infinity,key):keys.push(key)\n                                                                             ^\n\nSyntaxError: Unexpected token '~'\n    at new Script (node:vm:117:7)\n    at createScript (node:vm:269:10)\n    at Object.runInThisContext (node:vm:317:10)\n    at p. (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1165)\n    at s (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1657)\n    at requireString (file:///packages/artifacts/utils/require-string.ts:9:9)\n    at Artifact.validate (file:///packages/artifacts/utils/artifact.ts:116:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///packages/bench/benchmark/cli.ts:98:2",
+						"stack": "fs-require://2/index.js:594\nreturn function(key,value){if(stack.length>0){var thisPos=stack.indexOf(this)~thisPos?stack.splice(thisPos+1):stack.push(this)~thisPos?keys.splice(thisPos,Infinity,key):keys.push(key)\n                                                                             ^\n\nSyntaxError: Unexpected token '~'\n    at new Script (node:vm:118:7)\n    at createScript (node:vm:270:10)\n    at Object.runInThisContext (node:vm:318:10)\n    at p. (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1165)\n    at s (file:///node_modules/.pnpm/fs-require@1.6.0/node_modules/fs-require/dist/index.mjs:1:1657)\n    at requireString (file:///packages/artifacts/utils/require-string.ts:9:9)\n    at Artifact.validate (file:///packages/artifacts/utils/artifact.ts:116:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///packages/bench/benchmark/cli.ts:98:2",
 						"stage": "post-validation"
 					}
 				}
@@ -1575,12 +1575,12 @@
 			"@cminify/cminify-linux-x64": {
 				"minifierPath": "cminify.ts",
 				"version": "3.0.1",
-				"configHash": "76612a7257",
+				"configHash": "e78233f110",
 				"result": {
 					"data": {
 						"minifiedBytes": 1770178,
 						"minzippedBytes": 434451,
-						"time": 49.826262400000005,
+						"time": 59.9469292,
 						"runs": 5
 					}
 				}
@@ -1624,12 +1624,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.4.3",
-				"configHash": "df04df4c6c",
+				"configHash": "514bf46031",
 				"result": {
 					"data": {
 						"minifiedBytes": 1024106,
 						"minzippedBytes": 332574,
-						"time": 97.4967168,
+						"time": 105.3387582,
 						"runs": 5
 					}
 				}
@@ -1673,11 +1673,11 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "a8df118dd8",
+				"configHash": "0f3c18cc9a",
 				"result": {
 					"error": {
 						"message": "RuntimeException: Unclosed regex pattern at position: 37315 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:660",
-						"stack": "Stack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString()\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify()\n#4 {main}",
+						"stack": "Error: RuntimeException: Unclosed regex pattern at position: 37315 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:660\nStack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString()\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify()\n#4 {main}",
 						"stage": "minification"
 					}
 				}
@@ -1742,12 +1742,12 @@
 			"@cminify/cminify-linux-x64": {
 				"minifierPath": "cminify.ts",
 				"version": "3.0.1",
-				"configHash": "76612a7257",
+				"configHash": "e78233f110",
 				"result": {
 					"data": {
 						"minifiedBytes": 4428662,
 						"minzippedBytes": 623370,
-						"time": 72.1765382,
+						"time": 76.3195752,
 						"runs": 5
 					}
 				}
@@ -1791,12 +1791,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.4.3",
-				"configHash": "df04df4c6c",
+				"configHash": "514bf46031",
 				"result": {
 					"data": {
 						"minifiedBytes": 2292860,
 						"minzippedBytes": 486195,
-						"time": 132.665453,
+						"time": 135.6794502,
 						"runs": 5
 					}
 				}
@@ -1840,10 +1840,13 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "a8df118dd8",
+				"configHash": "0f3c18cc9a",
 				"result": {
-					"error": {
-						"message": "timeout"
+					"data": {
+						"minifiedBytes": 4449283,
+						"minzippedBytes": 626675,
+						"time": 7343.055830400001,
+						"runs": 5
 					}
 				}
 			},
@@ -1907,12 +1910,12 @@
 			"@cminify/cminify-linux-x64": {
 				"minifierPath": "cminify.ts",
 				"version": "3.0.1",
-				"configHash": "76612a7257",
+				"configHash": "e78233f110",
 				"result": {
 					"data": {
 						"minifiedBytes": 5853398,
 						"minzippedBytes": 1128072,
-						"time": 108.2782372,
+						"time": 116.10483080000002,
 						"runs": 5
 					}
 				}
@@ -1956,12 +1959,12 @@
 			"bun": {
 				"minifierPath": "bun.ts",
 				"version": "1.4.3",
-				"configHash": "df04df4c6c",
+				"configHash": "514bf46031",
 				"result": {
 					"data": {
 						"minifiedBytes": 3538600,
 						"minzippedBytes": 917426,
-						"time": 225.87811819999996,
+						"time": 229.69194499999998,
 						"runs": 5
 					}
 				}
@@ -2005,7 +2008,7 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "a8df118dd8",
+				"configHash": "0f3c18cc9a",
 				"result": {
 					"error": {
 						"message": "timeout"
