@@ -9,10 +9,14 @@ test('accepts stderr on success', async () => {
 
 test('reports nonzero exits with stderr', async () => {
 	const error = await runMinifier(process.execPath, ['-e', 'process.stdin.pipe(process.stderr); process.stdin.on("end", () => process.exit(1))'], {
-		input: 'failure\ndetail',
+		input: '1 | <?php\nerror: Unexpected token\n',
 	}).catch(error_ => error_ as Error);
 	expect(error).toBeInstanceOf(Error);
-	expect((error as Error).message).toBe('failure');
+	expect((error as Error).message).toMatch(/^1 \| <\?php\nerror: Unexpected token\nCommand failed with exit code 1:/);
+});
+
+test('rejects nonzero exits without stderr', async () => {
+	await expect(runMinifier(process.execPath, ['-e', 'process.exit(7)'])).rejects.toThrow('exit code 7');
 });
 
 test('reports spawn errors', async () => {

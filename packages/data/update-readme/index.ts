@@ -139,7 +139,7 @@ const generateBenchmarks = (
 	)
 	.join('\n\n----\n\n');
 
-const minifiers = await getMinifiers();
+const minifiers = await getMinifiers({ includePublishDate: true });
 
 const analyzedData = getAnalyzedData();
 const ai = await getAiAnalysis(

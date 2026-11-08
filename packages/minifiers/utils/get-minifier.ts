@@ -64,7 +64,9 @@ export const getMinifier = async (
 	return await loadMinifierByPath(minifierName, { directory });
 };
 
-export const getMinifiers = async () => {
+export const getMinifiers = async (
+	options: { includePublishDate?: boolean } = {},
+) => {
 	const files = await fs.readdir(minifiersDirectory);
 	const minifierFiles = files.filter(filePath => !filePath.startsWith('_'));
 
@@ -72,9 +74,9 @@ export const getMinifiers = async () => {
 		const stat = await fs.stat(path.join(minifiersDirectory, minifier));
 		return stat.isDirectory()
 			? await loadMinifierByPath(path.join(minifier, 'index.ts'), {
-				includePublishDate: true,
+				includePublishDate: options.includePublishDate,
 				directory: minifier,
 			})
-			: await loadMinifierByPath(minifier, { includePublishDate: true });
+			: await loadMinifierByPath(minifier, { includePublishDate: options.includePublishDate });
 	}));
 };
