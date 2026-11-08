@@ -7,15 +7,36 @@ import type {
 } from '../types.ts';
 
 const benchmarkCliPath = new URL('../benchmark/cli.ts', import.meta.url).pathname;
+const activeProcesses = new Set<number>();
+
+process.on('exit', () => {
+	for (const pid of activeProcesses) {
+		try {
+			process.kill(-pid, 'SIGKILL');
+		} catch (error) {
+			if ((error as NodeJS.ErrnoException).code !== 'ESRCH') {
+				throw error;
+			}
+		}
+	}
+});
+process.on('SIGINT', () => process.exit(130));
+process.on('SIGTERM', () => process.exit(143));
 
 const isBenchmarkResult = (value: unknown): value is BenchmarkResult => {
 	if (!value || typeof value !== 'object') {
 		return false;
 	}
-	return (
-		('data' in value && value.data !== null && typeof value.data === 'object')
-		|| ('error' in value && value.error !== null && typeof value.error === 'object')
-	);
+	if ('error' in value) {
+		return value.error !== null && typeof value.error === 'object'
+			&& 'message' in value.error && typeof value.error.message === 'string';
+	}
+	if (!('data' in value) || value.data === null || typeof value.data !== 'object') {
+		return false;
+	}
+	const data = value.data as Record<string, unknown>;
+	return [data.minifiedBytes, data.minzippedBytes, data.time]
+		.every(number => typeof number === 'number' && Number.isFinite(number));
 };
 
 export const parseBenchmarkProcessResult = (
@@ -58,26 +79,26 @@ export const runBenchmarkProcess = async (
 	if (!child) {
 		return parseBenchmarkProcessResult(await resultPromise);
 	}
-	let timedOut = false;
+	const pid = child.pid!;
+	activeProcesses.add(pid);
+	resultPromise.then(() => activeProcesses.delete(pid), () => activeProcesses.delete(pid));
+	resultPromise.catch(() => {});
 	let timer: NodeJS.Timeout;
-	const timeoutFailure = new Promise<never>((_resolve, reject) => {
+	const timeoutResult = new Promise<BenchmarkResult>((resolve, reject) => {
 		timer = setTimeout(() => {
-			timedOut = true;
 			try {
-				process.kill(-child.pid!, 'SIGKILL');
+				process.kill(-pid, 'SIGKILL');
 			} catch (error) {
 				if ((error as NodeJS.ErrnoException).code !== 'ESRCH') {
 					reject(error);
+					return;
 				}
 			}
+			resolve({ error: { message: 'timeout' } });
 		}, timeout);
 	});
 	try {
-		const result = await Promise.race([resultPromise, timeoutFailure]);
-		if (timedOut) {
-			return { error: { message: 'timeout' } };
-		}
-		return parseBenchmarkProcessResult(result);
+		return await Promise.race([resultPromise.then(parseBenchmarkProcessResult), timeoutResult]);
 	} finally {
 		clearTimeout(timer!);
 	}
