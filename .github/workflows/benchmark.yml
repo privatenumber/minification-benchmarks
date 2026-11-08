@@ -7,6 +7,7 @@ on:
 
 jobs:
   build:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
 
     # Declaring permissions resets every unlisted configurable permission to
@@ -16,6 +17,10 @@ jobs:
       contents: write
       # Exchanges a GitHub OIDC token for a short-lived OpenCode API token
       id-token: write
+
+    concurrency:
+      group: benchmark-${{ github.head_ref || github.ref_name }}
+      cancel-in-progress: false
 
     timeout-minutes: 60
 
@@ -67,7 +72,7 @@ jobs:
         uses: actions/cache/restore@v6
         with:
           path: packages/data/data/data.json
-          key: benchmark-${{ hashFiles('pnpm-lock.yaml', 'packages/minifiers/composer.lock', 'packages/data/data/data.json') }}
+          key: benchmark-${{ hashFiles('.nvmrc', 'pnpm-lock.yaml', 'packages/minifiers/composer.lock', 'packages/data/data/data.json') }}
 
       - name: Benchmark
         run: pnpm bench-all
