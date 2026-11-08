@@ -1073,7 +1073,7 @@
 				"node": "v26.13.0",
 				"result": {
 					"error": {
-						"message": "RuntimeException: Unclosed regex pattern at position: 289071 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:660",
+						"message": "RuntimeException: Unclosed regex pattern at position: 289075 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:660",
 						"stack": "Stack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString()\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify()\n#4 {main}",
 						"stage": "minification"
 					}
