@@ -18,7 +18,7 @@ Benchmark one minifier and artifact:
 pnpm bench --minifier esbuild --artifact vue
 ```
 
-- `--minifier`, `-m`: minifier name (required).
+- `--minifier`, `-m`: file or directory name in `packages/minifiers/minifiers/`, without `.ts` (required). For example, `swc` or `jshrink`, not the package name `@swc/core`.
 - `--artifact`, `-a`: artifact name (required).
 - `--instance`, `-i`: minifier instance name, required when the minifier has multiple instances.
 - `--save`, `-s`: save the minified code under `results/<artifact>/<minifier>/`.
@@ -34,6 +34,8 @@ pnpm bench-all
 - `--runs`, `-r`: number of runs per benchmark (default: 5).
 - `--force`, `-f`: rerun benchmarks even when results exist.
 - `--sort`, `-s`: sort the saved data.
+
+Both commands also accept `--help`.
 
 Results are stored in `packages/data/data/data.json`. Matching results are skipped unless `--force` is set.
 

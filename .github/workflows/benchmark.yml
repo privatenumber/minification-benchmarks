@@ -29,7 +29,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
         with:
-          ref: ${{ github.head_ref }}
+          # Branch name, not the triggering SHA, so a queued run starts from the
+          # results the previous run pushed
+          ref: ${{ github.head_ref || github.ref_name }}
           repository: ${{ github.repository }}
 
       - name: Use Node.js
