@@ -40,31 +40,31 @@ export class Minifier {
 	async loadMeta(
 		minifierPath: string,
 		configHash: string,
+		includePublishDate = false,
 	) {
 		this.minifierPath = minifierPath;
 		this.configHash = configHash;
 
 		const packageJson = await loadPackageJson(this.name);
 		if (packageJson) {
-			const response = await fetch(`https://registry.npmjs.org/${packageJson.name}`).catch((error) => {
-				console.error(error);
-				throw error;
-			});
-			const json = await response.json() as {
-				time: Record<string, string>;
-			};
-			const publishDate = new Date(json.time[packageJson.version!]);
-			this.meta = {
-				...getPackageJsonMeta(packageJson),
-				publishDate,
-			};
+			this.meta = getPackageJsonMeta(packageJson);
+			if (includePublishDate) {
+				const response = await fetch(`https://registry.npmjs.org/${packageJson.name}`);
+				if (!response.ok) {
+					throw new Error(`Failed to fetch npm metadata for ${packageJson.name}: HTTP ${response.status} ${response.statusText}`);
+				}
+				const json = await response.json() as { time: Record<string, string> };
+				this.meta.publishDate = new Date(json.time[packageJson.version!]);
+			}
 			return;
 		}
 
 		const composerInstalled = await loadComposerInstalled(this.name);
 		if (composerInstalled) {
 			this.meta = getMeta(composerInstalled);
+			return;
 		}
+		throw new Error(`No package metadata found for minifier "${this.name}"`);
 	}
 }
 

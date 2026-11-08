@@ -1,0 +1,34 @@
+import { expect, test } from 'manten';
+import { getMinifier } from '../../index.ts';
+import { runMinifier } from '../../utils/run-minifier.ts';
+
+test('accepts stderr on success', async () => {
+	const output = await runMinifier(process.execPath, ['-e', 'process.stderr.write("warning"); process.stdout.write("ok")']);
+	expect(output).toBe('ok');
+});
+
+test('reports nonzero exits with stderr', async () => {
+	const error = await runMinifier(process.execPath, ['-e', 'process.stdin.pipe(process.stderr); process.stdin.on("end", () => process.exit(1))'], {
+		input: 'failure\ndetail',
+	}).catch(error_ => error_ as Error);
+	expect(error).toBeInstanceOf(Error);
+	expect((error as Error).message).toBe('failure');
+});
+
+test('reports spawn errors', async () => {
+	await expect(runMinifier('/nonexistent/minifier', [])).rejects.toThrow('Command failed');
+});
+
+// Composer-backed minifiers are not covered here: CI runs tests without `composer install`
+test('loads local metadata without fetch', async () => {
+	const originalFetch = globalThis.fetch;
+	globalThis.fetch = () => {
+		throw new Error('unexpected fetch');
+	};
+	try {
+		const esbuild = await getMinifier('esbuild');
+		expect(esbuild.meta.name).toBe('esbuild');
+	} finally {
+		globalThis.fetch = originalFetch;
+	}
+});
