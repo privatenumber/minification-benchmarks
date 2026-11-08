@@ -4,6 +4,7 @@ export type Minifier<Result = BenchmarkResultWithRuns> = {
 	minifierPath: string;
 	version: string;
 	configHash: string;
+	node: string;
 	result: Result;
 };
 
