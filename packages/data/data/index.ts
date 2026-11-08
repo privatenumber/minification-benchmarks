@@ -66,7 +66,7 @@ const getMinifier = (
 		&& foundMinifier.version === minifier.meta.version
 		&& foundMinifier.configHash === minifier.configHash
 		&& foundMinifier.node === process.version
-		&& (!('error' in foundMinifier.result) || foundMinifier.result.error.stage !== undefined || foundMinifier.result.error.message === 'timeout')
+		&& !('error' in foundMinifier.result)
 	);
 };
 
