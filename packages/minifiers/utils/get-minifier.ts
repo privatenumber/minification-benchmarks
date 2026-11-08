@@ -8,11 +8,18 @@ const loadMinifierByPath = async (
 	minifierPath: string,
 	options: {
 		includePublishDate?: boolean;
-		directory?: string;
 	} = {},
 ) => {
 	try {
-		const { directory, includePublishDate } = options;
+		const stat = await fs.stat(path.join(minifiersDirectory, minifierPath)).catch(() => null);
+		if (stat?.isDirectory()) {
+			minifierPath = path.join(minifierPath, 'index.ts');
+		} else if (!stat && !minifierPath.endsWith('.ts')) {
+			minifierPath += '.ts';
+		}
+		const directory = path.basename(minifierPath) === 'index.ts' && path.dirname(minifierPath) !== '.'
+			? path.dirname(minifierPath)
+			: undefined;
 		const fullMinifierPath = path.join(minifiersDirectory, minifierPath);
 		const hash = crypto.createHash('sha256');
 		if (directory) {
@@ -30,12 +37,13 @@ const loadMinifierByPath = async (
 		} else {
 			hash.update(await fs.readFile(fullMinifierPath));
 		}
+		hash.update('\0utils/run-minifier.ts\0').update(await fs.readFile(new URL('run-minifier.ts', import.meta.url)));
 		const configHash = hash.digest('hex').slice(0, 10);
 
 		const minifierModule = await import(fullMinifierPath);
 		const minifier: MinifierLoaded = minifierModule.default;
 
-		await minifier.loadMeta(minifierPath, configHash, includePublishDate);
+		await minifier.loadMeta(minifierPath, configHash, options.includePublishDate);
 
 		return minifier;
 	} catch (error) {
@@ -49,20 +57,7 @@ const loadMinifierByPath = async (
 
 export const getMinifier = async (
 	minifierName: string,
-) => {
-	const stat = await fs.stat(path.join(minifiersDirectory, minifierName)).catch(() => null);
-	let directory: string | undefined;
-	if (!stat) {
-		minifierName += '.ts';
-	} else if (stat.isDirectory()) {
-		directory = minifierName;
-		minifierName = path.join(minifierName, 'index.ts');
-	} else if (path.basename(minifierName) === 'index.ts' && path.dirname(minifierName) !== '.') {
-		directory = path.dirname(minifierName);
-	}
-
-	return await loadMinifierByPath(minifierName, { directory });
-};
+) => loadMinifierByPath(minifierName);
 
 export const getMinifiers = async (
 	options: { includePublishDate?: boolean } = {},
@@ -70,13 +65,5 @@ export const getMinifiers = async (
 	const files = await fs.readdir(minifiersDirectory);
 	const minifierFiles = files.filter(filePath => !filePath.startsWith('_'));
 
-	return await Promise.all(minifierFiles.map(async (minifier) => {
-		const stat = await fs.stat(path.join(minifiersDirectory, minifier));
-		return stat.isDirectory()
-			? await loadMinifierByPath(path.join(minifier, 'index.ts'), {
-				includePublishDate: options.includePublishDate,
-				directory: minifier,
-			})
-			: await loadMinifierByPath(minifier, { includePublishDate: options.includePublishDate });
-	}));
+	return await Promise.all(minifierFiles.map(minifier => loadMinifierByPath(minifier, options)));
 };
