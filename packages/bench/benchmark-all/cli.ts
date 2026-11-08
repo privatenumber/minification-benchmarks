@@ -2,7 +2,7 @@ import assert from 'assert';
 import { cli } from 'cleye';
 import { getArtifacts, loadArtifact } from '@minification-benchmarks/artifacts';
 import { getMinifiers } from '@minification-benchmarks/minifiers';
-import { saveData } from '@minification-benchmarks/data';
+import { data, saveData } from '@minification-benchmarks/data';
 import { benchmarkArtifacts } from './benchmark-artifacts.ts';
 import type { MinifierInstance } from './types.ts';
 
@@ -89,6 +89,7 @@ const loadMinifiers = async (
 		force,
 		sort,
 	} = argv.flags;
+	assert.ok(Number.isInteger(runs) && runs > 0, '--runs must be a positive integer');
 
 	const artifacts = await loadArtifacts(filterArtifacts);
 	const minifiers = await loadMinifiers(filterMinifier);
@@ -99,6 +100,24 @@ const loadMinifiers = async (
 		runs,
 		force,
 	);
+
+	if (filterArtifacts === undefined && filterMinifier === undefined) {
+		const artifactNames = new Set(artifacts.map(artifact => artifact.name));
+		const minifierNames = new Set(minifiers.map(({ minifier, instance }) => minifier.name + (instance === 'default' ? '' : ` (${instance})`)));
+		for (const [name, artifact] of Object.entries(data)) {
+			if (!artifactNames.has(name)) {
+				delete data[name];
+				continue;
+			}
+			for (const minifierName of Object.keys(artifact.minified)) {
+				if (!minifierNames.has(minifierName)) {
+					delete artifact.minified[minifierName];
+				}
+			}
+		}
+		await saveData(sort);
+		return;
+	}
 
 	if (sort) {
 		await saveData(true);

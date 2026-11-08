@@ -93,19 +93,15 @@ export class Artifact {
 	async validate(
 		code?: string,
 	) {
-		if (!this.loadTest) {
-			console.error(`No test for ${this.meta.package}`);
-			return;
-		}
-
-		if (!code) {
+		if (code === undefined) {
 			code = this.code;
 		}
 
-		if (!code) {
+		if (code === undefined) {
 			throw new Error('No code');
 		}
 
+		assert.ok(this.loadTest, `No test for ${this.meta.package}`);
 		const test = await this.loadTest();
 		if (test.preprocess) {
 			code = test.preprocess(code);

@@ -22,6 +22,9 @@ const runMinifier = async (
 			code,
 			filePath,
 		});
+		if (minifiedCode === '') {
+			throw new Error('Empty output');
+		}
 	} catch (error) {
 		return logError(error, 'minification');
 	}
@@ -78,6 +81,12 @@ const minifier = await getMinifier(minifierName);
 const minifierInstanceName = argv.flags.instance;
 
 const minifierInstances = Object.keys(minifier.instances);
+if (
+	minifierInstanceName !== undefined
+	&& !Object.hasOwn(minifier.instances, minifierInstanceName)
+) {
+	throw new Error(`Unknown minifier instance "${minifierInstanceName}". Available instances: ${minifierInstances.join(', ')}`);
+}
 let minifierInstance: MinifierFunction;
 if (minifierInstances.length === 1) {
 	minifierInstance = minifier.instances[minifierInstances[0]];
