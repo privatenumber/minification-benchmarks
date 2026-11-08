@@ -137,6 +137,72 @@ test('rejects malformed benchmark results', async ({ signal }) => {
 	expect(result.error.message).toContain('Failed to parse JSON result (exit code: 1');
 }, 5000);
 
+test('failed processes cannot report success', async ({ signal }) => {
+	const processResult = await runNode(
+		`console.error(JSON.stringify(${JSON.stringify(successResult)})); process.exit(1)`,
+		signal,
+	).catch(error => error as SubprocessError);
+	const result = parseBenchmarkProcessResult(processResult);
+	assert.ok('error' in result);
+	expect(result.error.message).toContain('exit code: 1');
+}, 5000);
+
+test('rejects mixed results and errors with non-string stages', async ({ signal }) => {
+	const processResult = await runNode(
+		'console.error(JSON.stringify({error:{message:\'valid\'}})); console.error(JSON.stringify({error:{message:\'bad\',stage:1}})); console.error(JSON.stringify({error:{message:\'bad\'},data:{}})); process.exit(1)',
+		signal,
+	).catch(error => error as SubprocessError);
+	expect(parseBenchmarkProcessResult(processResult)).toStrictEqual({ error: { message: 'valid' } });
+}, 5000);
+
+test('reports the cause when a child cannot be spawned', async () => {
+	const result = await runBenchmarkProcess('/nonexistent/benchmark-command', [], 1000);
+	assert.ok('error' in result);
+	expect(result.error.message).toContain('ENOENT');
+}, 5000);
+
+test('result lines follow output without a trailing newline', async ({ signal }) => {
+	const logPath = new URL('../../benchmark/log.ts', import.meta.url).href;
+	const success = await runNode(
+		`import { logResult } from ${JSON.stringify(logPath)}; process.stdout.write('warning'); logResult({code:'x',time:1})`,
+		signal,
+	);
+	expect(success.stdout.startsWith('warning\n{')).toBe(true);
+	const failure = await runNode(
+		`import { logError } from ${JSON.stringify(logPath)}; process.stderr.write('warning'); logError(new Error('failed'))`,
+		signal,
+	).catch(error => error as SubprocessError);
+	expect(failure.stderr.startsWith('warning\n{')).toBe(true);
+	expect(parseBenchmarkProcessResult(failure)).toMatchObject({ error: { message: 'failed' } });
+}, 5000);
+
+test('cleans up descendants after the group leader exits', async () => {
+	const directory = await fs.mkdtemp(path.join(os.tmpdir(), 'benchmark-exit-'));
+	const started = path.join(directory, 'started');
+	let pid: number | undefined;
+	try {
+		const parent = `const child = require('child_process').spawn(process.execPath, ['-e', 'setInterval(() => {}, 1000)'], {stdio:'ignore'}); require('fs').writeFileSync(${JSON.stringify(started)}, String(child.pid)); console.error(JSON.stringify({error:{message:'failed'}})); process.exit(1)`;
+		const result = await runBenchmarkProcess(process.execPath, ['-e', parent], 2000);
+		pid = Number(await fs.readFile(started, 'utf8'));
+		expect(result).toStrictEqual({ error: { message: 'failed' } });
+		await delay(100);
+		assert.throws(() => process.kill(pid!, 0), { code: 'ESRCH' });
+	} finally {
+		pid ??= Number(await fs.readFile(started, 'utf8').catch(() => '0'));
+		if (pid) {
+			try {
+				process.kill(pid, 'SIGKILL');
+			} catch (error) {
+				assert.equal((error as NodeJS.ErrnoException).code, 'ESRCH');
+			}
+		}
+		await fs.rm(directory, {
+			recursive: true,
+			force: true,
+		});
+	}
+}, 5000);
+
 test('timeout does not wait for escaped descendants holding output pipes', async () => {
 	const directory = await fs.mkdtemp(path.join(os.tmpdir(), 'benchmark-escaped-'));
 	const started = path.join(directory, 'started');
