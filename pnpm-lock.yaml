@@ -230,6 +230,9 @@ importers:
       mem:
         specifier: ^9.0.2
         version: 9.0.2
+      nano-spawn:
+        specifier: ^2.0.0
+        version: 2.0.0
       oxc-minify:
         specifier: ^0.153.0
         version: 0.153.0
@@ -243,6 +246,9 @@ importers:
       '@types/uglify-js':
         specifier: ^3.17.0
         version: 3.17.5
+      manten:
+        specifier: ^2.0.2
+        version: 2.0.2
       type-fest:
         specifier: ^4.15.0
         version: 4.41.0
