@@ -32,13 +32,13 @@ const displayColumn = (
 const compareSpeed = (
 	current: BenchmarkResultSuccessWithRuns,
 	fastest?: BenchmarkResultSuccessWithRuns,
-) => (
-	(fastest === current)
-		? ''
-		: md.italic(
-			`${Math.floor(current.data.time / fastest!.data.time)}x`,
-		)
-);
+) => {
+	if (!fastest || current.data.time === fastest.data.time) {
+		return '';
+	}
+	const ratio = current.data.time / fastest.data.time;
+	return md.italic(`${ratio < 10 ? ratio.toFixed(1) : Math.round(ratio)}x`);
+};
 
 const generateBenchmarkTable = (
 	artifactName: string,
@@ -83,7 +83,7 @@ const generateBenchmarkTable = (
 				}`;
 
 				if (message === 'timeout') {
-					columns.push('-', '-', `${md.sup(':warning:')} ${md.code('+10,000 ms')}`);
+					columns.push('-', '-', md.el('span', { title: 'The whole benchmark process exceeded 10 s' }, `${md.sup(':warning:')} ${md.code('>10 s')}`));
 				} else {
 					columns.push('❌', '❌ ', '-');
 				}
@@ -92,17 +92,17 @@ const generateBenchmarkTable = (
 					displayColumn(
 						byteSize(result.data.minifiedBytes).toString(),
 						percent(artifact.size, result.data.minifiedBytes),
-						minifierName === artifact.bestMinified?.[0],
+						result.data.minifiedBytes === artifact.bestMinified?.[1].result.data.minifiedBytes,
 					),
 					displayColumn(
 						byteSize(result.data.minzippedBytes).toString(),
 						percent(artifact.gzipSize, result.data.minzippedBytes),
-						minifierName === artifact.bestMinzipped?.[0],
+						result.data.minzippedBytes === artifact.bestMinzipped?.[1].result.data.minzippedBytes,
 					),
 					displayColumn(
 						formatMs(result.data.time),
 						compareSpeed(result, artifact.bestSpeed?.[1].result as BenchmarkResultSuccessWithRuns),
-						minifierName === artifact.bestSpeed?.[0],
+						result.data.time === artifact.bestSpeed?.[1].result.data.time,
 					),
 				);
 			}
@@ -166,7 +166,6 @@ const minifiersList = md.table([
 		),
 ]);
 
-const utcToday = new Date(new Date().toISOString().split('T')[0]);
 const escapeHtml = (string_ = '') => string_
 	.replaceAll('&', '&amp;')
 	.replaceAll('<', '&lt;')
@@ -175,7 +174,12 @@ const escapeHtml = (string_ = '') => string_
 	.replaceAll('\'', '&#39;');
 
 const newReadme = commentMark(readme, {
-	lastUpdated: format(utcToday, 'MMM d, y'),
+	lastUpdated: new Intl.DateTimeFormat('en-US', {
+		timeZone: 'UTC',
+		month: 'short',
+		day: 'numeric',
+		year: 'numeric',
+	}).format(new Date()),
 	benchmarks: generateBenchmarks(analyzedData),
 	minifiers: minifiersList,
 	aiSystemPrompt: ai && escapeHtml(ai.systemPrompt),

@@ -28,10 +28,8 @@ export type AnalyzedDataEntry = [ArtifactName: string, AnalyzedArtifact];
 export type AnalyzedData = AnalyzedDataEntry[];
 
 // Dynamically adjust weights based on the time penalty
-const baseSizeWeight = 0.85;
 const baseTimeWeight = 0.15;
 const weightSwing = 0.35;
-const steepness = 1;
 
 const getRange = (numbers: number[]) => {
 	const min = Math.min(...numbers);
@@ -45,7 +43,6 @@ const getRange = (numbers: number[]) => {
 };
 
 const getScoredMinifiers = (
-	artifact: Artifact,
 	minified: [string, Minifier][],
 ): ScoredMinifiers => {
 	// Filter out unsuccessful minifiers
@@ -70,15 +67,10 @@ const getScoredMinifiers = (
 		successfulMinifiers.map(([, m]) => m.result.data.time),
 	);
 
-	// Calculate the median processing rate (KB/ms) to determine the expected time
-	const rates = successfulMinifiers.map(([, m]) => artifact.size / m.result.data.time);
-	rates.sort((a, b) => a - b);
-
-	const medianRate = rates.length % 2 === 0
-		? (rates[rates.length / 2 - 1] + rates[rates.length / 2]) / 2
-		: rates[Math.floor(rates.length / 2)];
-
-	const centerPointInMs = artifact.size / medianRate;
+	const times = successfulMinifiers.map(([, m]) => m.result.data.time).sort((a, b) => a - b);
+	const medianTime = times.length % 2 === 0
+		? (times[times.length / 2 - 1] + times[times.length / 2]) / 2
+		: times[Math.floor(times.length / 2)];
 
 	// Calculate the score for each minifier
 	const minifiedWithScores = minified
@@ -90,26 +82,22 @@ const getScoredMinifiers = (
 				score = Number.POSITIVE_INFINITY;
 			} else {
 				// Min-max normalization
-				const normalizedSize = (result.data.minzippedBytes - minSize) / sizeRange;
-				const normalizedTime = (result.data.time - minTime) / timeRange;
+				const normalizedSize = sizeRange ? (result.data.minzippedBytes - minSize) / sizeRange : 0;
+				const normalizedTime = timeRange ? (result.data.time - minTime) / timeRange : 0;
 
 				/**
 				 * Calculates a time penalty factor using the logistic sigmoid function.
 				 *
-				 * Maps how slow a minifier is (compared to the median) to a value between 0 and 1.
-				 * - Fast minifiers → ~0 (low penalty)
-				 * - Slow minifiers → ~1 (high penalty)
-				 *
-				 * This allows for a smooth, gradual increase in penalty based on time, instead of
-                 * a harsh threshold.
+				 * The logarithmic ratio makes the penalty depend on relative speed, not milliseconds.
 				 */
-				const timePenaltyFactor = 1 / (
-					1 + Math.exp(-steepness * (result.data.time - centerPointInMs))
-				);
+				const timeRatio = medianTime === 0 && result.data.time === 0
+					? 1
+					: result.data.time / medianTime;
+				const timePenaltyFactor = 1 / (1 + Math.exp(-2 * Math.log2(timeRatio)));
 
 				/**
 				 * Dynamically increases the time weight based on how slow the minifier is,
-				 * effectively adding a penalty for slowness. The size weight remains constant.
+				 * effectively adding a penalty for slowness. The weights sum to 1.
 				 *
 				 * If a minifier is fast (timePenaltyFactor ≈ 0):
 				 * - Time is weighted lightly at its base value (0.15).
@@ -121,7 +109,7 @@ const getScoredMinifiers = (
 				 */
 				const dynamicTimeWeight = baseTimeWeight + (weightSwing * timePenaltyFactor);
 
-				score = (baseSizeWeight * normalizedSize) + (dynamicTimeWeight * normalizedTime);
+				score = ((1 - dynamicTimeWeight) * normalizedSize) + (dynamicTimeWeight * normalizedTime);
 			}
 
 			return {
@@ -153,7 +141,7 @@ export const getAnalyzedData = (): AnalyzedData => {
 		{
 
 			...artifact,
-			...getScoredMinifiers(artifact, Object.entries(artifact.minified)),
+			...getScoredMinifiers(Object.entries(artifact.minified)),
 		},
 	]);
 };

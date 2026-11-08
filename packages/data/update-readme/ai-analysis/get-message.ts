@@ -49,52 +49,44 @@ export const getMessage = (
 
 	# Race results
 	${
-		data
+		data.slice()
 			.sort(([, artifactA], [, artifactB]) => artifactA.gzipSize - artifactB.gzipSize)
 			.map(([artifactName, artifact], artifactIndex) => {
 				const round = artifactIndex + 1;
-
-				const mostBalanced = artifact.minifiedWithScores[0];
-				if ('error' in mostBalanced.minifier.result) {
-					throw new Error('wont happen');
-				}
 
 				const rankings: Record<string, {
 					minifier: string;
 					minzippedBytes: number;
 					time: number;
-				}> = {
-					'Best gzip compression': {
-						minifier: artifact.bestMinzipped![0],
-						minzippedBytes: artifact.bestMinzipped![1].result.data.minzippedBytes,
-						time: artifact.bestMinzipped![1].result.data.time,
-					},
-					Fastest: {
-						minifier: artifact.bestSpeed![0],
-						minzippedBytes: artifact.bestSpeed![1].result.data.minzippedBytes,
-						time: artifact.bestSpeed![1].result.data.time,
-					},
-					'Most balanced': {
-						minifier: mostBalanced.minifierName,
-						minzippedBytes: mostBalanced.minifier.result.data.minzippedBytes,
-						time: mostBalanced.minifier.result.data.time,
-					},
-				};
+				}> = {};
+				const mostBalanced = artifact.minifiedWithScores.find(({ minifier }) => 'data' in minifier.result);
+				const candidates = [
+					['Best gzip compression', artifact.bestMinzipped],
+					['Fastest', artifact.bestSpeed],
+					['Most balanced', mostBalanced && [mostBalanced.minifierName, mostBalanced.minifier] as const],
+				] as const;
+				for (const [label, candidate] of candidates) {
+					if (candidate && 'data' in candidate[1].result) {
+						rankings[label] = {
+							minifier: candidate[0],
+							minzippedBytes: candidate[1].result.data.minzippedBytes,
+							time: candidate[1].result.data.time,
+						};
+					}
+				}
 
 				const mentionedMinifiers = new Set(Object.values(rankings).map(r => r.minifier));
 				const filteredMinified = artifact.minifiedWithScores.find(
-					({ minifierName }) => !mentionedMinifiers.has(minifierName),
+					({ minifierName, minifier }) => !mentionedMinifiers.has(minifierName) && 'data' in minifier.result,
 				);
 
-				const honorableMention = filteredMinified!;
-				if ('error' in honorableMention.minifier.result) {
-					throw new Error('wont happen');
+				if (filteredMinified && 'data' in filteredMinified.minifier.result) {
+					rankings['Honorable mention'] = {
+						minifier: filteredMinified.minifierName,
+						minzippedBytes: filteredMinified.minifier.result.data.minzippedBytes,
+						time: filteredMinified.minifier.result.data.time,
+					};
 				}
-				rankings['Honorable mention'] = {
-					minifier: honorableMention.minifierName,
-					minzippedBytes: honorableMention.minifier.result.data.minzippedBytes,
-					time: honorableMention.minifier.result.data.time,
-				};
 
 				return outdent`
 				## Round ${round}: npm package "${artifactName}" (${byteSize(artifact.gzipSize).toString()} gzipped)
