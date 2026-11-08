@@ -56,7 +56,7 @@ _Benchmarks last updated on <!-- lastUpdated:start -->Oct 10, 2026<!-- lastUpdat
 
 For each benchmark, minifiers are ranked by a score that reflects the best balance of trade-offs.
 
-The score combines minzipped size and minification time, starting from an 85% size, 15% time split since size is usually the top priority. A [logistic sigmoid function](https://en.wikipedia.org/wiki/Sigmoid_function) smoothly increases the time weight based on the ratio to the median time, up to a 50/50 split. This avoids harsh cutoffs while still penalizing extreme slowness.
+The score combines minzipped size and minification time. Size has a fixed weight of 0.85, while time starts at 0.15 and rises smoothly up to 0.50 based on the ratio to the median time, using a [logistic sigmoid function](https://en.wikipedia.org/wiki/Sigmoid_function). This avoids harsh cutoffs while still penalizing extreme slowness.
 
 Both size and time are scaled using [min-max normalization](https://en.wikipedia.org/wiki/Feature_scaling#Rescaling_%28min–max_normalization%29) so they can be compared fairly. The result is a context-aware score that helps surface the best overall choice—but make sure to check each column directly if size or speed matters more to you.
 

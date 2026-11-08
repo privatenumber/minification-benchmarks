@@ -18,16 +18,17 @@ export const isSuccessful = (m: MinifierWithScore): m is MinifierWithScore<Bench
 
 export type ScoredMinifiers = {
 	minifiedWithScores: MinifierWithScore[];
-	bestMinified?: BestMinifier;
-	bestMinzipped?: BestMinifier;
-	bestSpeed?: BestMinifier;
+	bestMinified: BestMinifier[];
+	bestMinzipped: BestMinifier[];
+	bestSpeed: BestMinifier[];
 };
 
 export type AnalyzedArtifact = Artifact & ScoredMinifiers;
 export type AnalyzedDataEntry = [ArtifactName: string, AnalyzedArtifact];
 export type AnalyzedData = AnalyzedDataEntry[];
 
-// Dynamically adjust weights based on the time penalty
+// Dynamically adjust the time weight based on the time penalty
+const sizeWeight = 0.85;
 const baseTimeWeight = 0.15;
 const weightSwing = 0.35;
 
@@ -42,6 +43,15 @@ const getRange = (numbers: number[]) => {
 	};
 };
 
+const getWinners = (minifiers: BestMinifier[], metric: 'minifiedBytes' | 'minzippedBytes' | 'time') => {
+	const best = minBy(minifiers, ([, minifier]) => minifier.result.data[metric]);
+	return best
+		? minifiers.filter(
+			([, minifier]) => minifier.result.data[metric] === best[1].result.data[metric],
+		)
+		: [];
+};
+
 const getScoredMinifiers = (
 	minified: [string, Minifier][],
 ): ScoredMinifiers => {
@@ -54,9 +64,9 @@ const getScoredMinifiers = (
 	});
 
 	// Find the best performers for each metric
-	const bestMinified = minBy(successfulMinifiers, '1.result.data.minifiedBytes');
-	const bestMinzipped = minBy(successfulMinifiers, '1.result.data.minzippedBytes');
-	const bestSpeed = minBy(successfulMinifiers, '1.result.data.time');
+	const bestMinified = getWinners(successfulMinifiers, 'minifiedBytes');
+	const bestMinzipped = getWinners(successfulMinifiers, 'minzippedBytes');
+	const bestSpeed = getWinners(successfulMinifiers, 'time');
 
 	// Calculate the range of sizes and times for normalization
 	const { min: minSize, range: sizeRange } = getRange(
@@ -97,7 +107,7 @@ const getScoredMinifiers = (
 
 				/**
 				 * Dynamically increases the time weight based on how slow the minifier is,
-				 * effectively adding a penalty for slowness. The weights sum to 1.
+				 * effectively adding a penalty for slowness. The size weight remains fixed.
 				 *
 				 * If a minifier is fast (timePenaltyFactor ≈ 0):
 				 * - Time is weighted lightly at its base value (0.15).
@@ -109,7 +119,7 @@ const getScoredMinifiers = (
 				 */
 				const dynamicTimeWeight = baseTimeWeight + (weightSwing * timePenaltyFactor);
 
-				score = ((1 - dynamicTimeWeight) * normalizedSize) + (dynamicTimeWeight * normalizedTime);
+				score = (sizeWeight * normalizedSize) + (dynamicTimeWeight * normalizedTime);
 			}
 
 			return {

@@ -77,13 +77,15 @@ const generateBenchmarkTable = (
 								: capitalize(message.split('\n')[0].slice(0, 15))
 						}`,
 						{
-							title: `Failed: ${message}`,
+							title: message === 'timeout'
+								? 'The whole benchmark process, including validation, exceeded 10 s'
+								: `Failed: ${message}`,
 						},
 					)
 				}`;
 
 				if (message === 'timeout') {
-					columns.push('-', '-', md.el('span', { title: 'The whole benchmark process exceeded 10 s' }, `${md.sup(':warning:')} ${md.code('>10 s')}`));
+					columns.push('-', '-', '-');
 				} else {
 					columns.push('❌', '❌ ', '-');
 				}
@@ -92,17 +94,17 @@ const generateBenchmarkTable = (
 					displayColumn(
 						byteSize(result.data.minifiedBytes).toString(),
 						percent(artifact.size, result.data.minifiedBytes),
-						result.data.minifiedBytes === artifact.bestMinified?.[1].result.data.minifiedBytes,
+						artifact.bestMinified.some(([name]) => name === minifierName),
 					),
 					displayColumn(
 						byteSize(result.data.minzippedBytes).toString(),
 						percent(artifact.gzipSize, result.data.minzippedBytes),
-						result.data.minzippedBytes === artifact.bestMinzipped?.[1].result.data.minzippedBytes,
+						artifact.bestMinzipped.some(([name]) => name === minifierName),
 					),
 					displayColumn(
 						formatMs(result.data.time),
-						compareSpeed(result, artifact.bestSpeed?.[1].result as BenchmarkResultSuccessWithRuns),
-						result.data.time === artifact.bestSpeed?.[1].result.data.time,
+						compareSpeed(result, artifact.bestSpeed[0]?.[1].result),
+						artifact.bestSpeed.some(([name]) => name === minifierName),
 					),
 				);
 			}

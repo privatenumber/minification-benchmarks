@@ -54,44 +54,51 @@ export const getMessage = (
 			.map(([artifactName, artifact], artifactIndex) => {
 				const round = artifactIndex + 1;
 
-				const rankings: Record<string, {
+				const rankings: {
+					label: string;
 					minifier: string;
 					minzippedBytes: number;
 					time: number;
-				}> = {};
+				}[] = [];
 				const mostBalanced = artifact.minifiedWithScores.find(({ minifier }) => 'data' in minifier.result);
 				const candidates = [
 					['Best gzip compression', artifact.bestMinzipped],
 					['Fastest', artifact.bestSpeed],
-					['Most balanced', mostBalanced && [mostBalanced.minifierName, mostBalanced.minifier] as const],
+					['Most balanced', mostBalanced ? [[mostBalanced.minifierName, mostBalanced.minifier] as const] : []],
 				] as const;
-				for (const [label, candidate] of candidates) {
-					if (candidate && 'data' in candidate[1].result) {
-						rankings[label] = {
-							minifier: candidate[0],
-							minzippedBytes: candidate[1].result.data.minzippedBytes,
-							time: candidate[1].result.data.time,
-						};
+				for (const [label, winners] of candidates) {
+					for (const [minifierName, minifier] of winners) {
+						if ('data' in minifier.result) {
+							rankings.push({
+								label,
+								minifier: minifierName,
+								minzippedBytes: minifier.result.data.minzippedBytes,
+								time: minifier.result.data.time,
+							});
+						}
 					}
 				}
 
-				const mentionedMinifiers = new Set(Object.values(rankings).map(r => r.minifier));
+				const mentionedMinifiers = new Set(rankings.map(r => r.minifier));
 				const filteredMinified = artifact.minifiedWithScores.find(
 					({ minifierName, minifier }) => !mentionedMinifiers.has(minifierName) && 'data' in minifier.result,
 				);
 
 				if (filteredMinified && 'data' in filteredMinified.minifier.result) {
-					rankings['Honorable mention'] = {
+					rankings.push({
+						label: 'Honorable mention',
 						minifier: filteredMinified.minifierName,
 						minzippedBytes: filteredMinified.minifier.result.data.minzippedBytes,
 						time: filteredMinified.minifier.result.data.time,
-					};
+					});
 				}
 
 				return outdent`
 				## Round ${round}: npm package "${artifactName}" (${byteSize(artifact.gzipSize).toString()} gzipped)
 				${
-					Object.entries(rankings).map(([label, { minifier, minzippedBytes, time }]) => {
+					rankings.map(({
+						label, minifier, minzippedBytes, time,
+					}) => {
 						const percentShaved = (
 							(artifact.gzipSize - minzippedBytes) / artifact.gzipSize
 						).toLocaleString(undefined, { style: 'percent' });
