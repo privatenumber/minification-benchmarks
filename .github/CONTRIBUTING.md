@@ -43,11 +43,11 @@ Results are stored in `packages/data/data/data.json`. Matching results are skipp
 pnpm update-readme
 ```
 
-This regenerates `README.md` from the saved results and minifier metadata; it does not run benchmarks. To include AI analysis, set `OPENCODE_GO_API_KEY` in `.env` (see `.env.example`). Without the key, AI analysis is skipped.
+This regenerates `README.md` from the saved results and minifier metadata; it does not run benchmarks. To include AI analysis, set `OPENCODE_GO_API_KEY` in `.env` (see `.env.example`). Without the key, the existing AI analysis and system prompt are left unchanged and may describe older results. Do not commit them alongside new results unless you regenerate them.
 
 ## Add a minifier
 
-Add a file or directory under `packages/minifiers/minifiers/` that default-exports `createMinifier(packageName, instances)`. Add its dependency to `packages/minifiers/package.json` and its package name to the minifiers list in `renovate.json`.
+Add a file or directory under `packages/minifiers/minifiers/` that default-exports `createMinifier(packageName, instances)`. The name must match the package name because it is used to look up metadata. Add npm dependencies to `packages/minifiers/package.json`. For Composer dependencies, update `packages/minifiers/composer.json` and `composer.lock`; see `tedivm/jshrink` for an example. Add the package name to the minifiers list in `renovate.json`.
 
 ## Add an artifact
 
