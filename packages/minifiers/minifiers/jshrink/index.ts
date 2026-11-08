@@ -7,8 +7,6 @@ export default createMinifier(
 	'tedivm/jshrink',
 	{
 		default: async ({ code }) => runMinifier('php', [jshrinkPath], {
-			// Needs to be context of composer install
-			cwd: new URL('..', import.meta.url).pathname,
 			input: code,
 		}),
 	},
