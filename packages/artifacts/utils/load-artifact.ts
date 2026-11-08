@@ -18,10 +18,13 @@ export const loadArtifact = async (
 	const artifact = artifactModule.default as ArtifactLoaded;
 
 	const artifactTestPath = path.join(artifactsDirectory, name, 'test.ts');
-	const testExists = await fs.access(artifactTestPath).then(() => true, () => false);
-	if (testExists) {
-		artifact.loadTest = () => import(artifactTestPath).then(module => module.default as Test);
-	}
+	await fs.access(artifactTestPath).catch((error: NodeJS.ErrnoException) => {
+		if (error.code === 'ENOENT') {
+			throw new Error(`Missing test for artifact "${name}": ${artifactTestPath}`);
+		}
+		throw error;
+	});
+	artifact.loadTest = () => import(artifactTestPath).then(module => module.default as Test);
 
 	await artifact.load();
 

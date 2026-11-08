@@ -10,55 +10,94 @@ const benchmarkCliPath = new URL('../benchmark/cli.ts', import.meta.url).pathnam
 
 export const parseBenchmarkProcessResult = (
 	minificationProcess: Result | SubprocessError,
-): BenchmarkResult => parseJsonResult(
-	minificationProcess instanceof SubprocessError
-		? minificationProcess.stderr
-		: minificationProcess.stdout,
-) as BenchmarkResult;
+): BenchmarkResult => {
+	try {
+		return parseJsonResult(
+			minificationProcess instanceof SubprocessError
+				? minificationProcess.stderr
+				: minificationProcess.stdout,
+		) as BenchmarkResult;
+	} catch {
+		const tail = (output: string) => output.split(/\r?\n/).slice(-20).join('\n');
+		const exitCode = minificationProcess instanceof SubprocessError
+			? minificationProcess.exitCode
+			: 0;
+		const signal = minificationProcess instanceof SubprocessError
+			? minificationProcess.signalName
+			: undefined;
+		return {
+			error: {
+				message: `Failed to parse JSON result (exit code: ${exitCode}, signal: ${signal})\nstdout tail:\n${tail(minificationProcess.stdout)}\nstderr tail:\n${tail(minificationProcess.stderr)}`,
+			},
+		};
+	}
+};
+
+export const runBenchmarkProcess = async (
+	file: string,
+	args: string[],
+	timeout: number,
+): Promise<BenchmarkResult> => {
+	const subprocess = spawn(file, args, {
+		detached: true,
+		env: { NO_COLOR: '1' },
+	});
+	const resultPromise = subprocess.catch(error => error as SubprocessError);
+	const child = await subprocess.nodeChildProcess.catch(() => undefined);
+	if (!child) {
+		return parseBenchmarkProcessResult(await resultPromise);
+	}
+	let timedOut = false;
+	let timer: NodeJS.Timeout;
+	const timeoutFailure = new Promise<never>((_resolve, reject) => {
+		timer = setTimeout(() => {
+			timedOut = true;
+			try {
+				process.kill(-child.pid!, 'SIGKILL');
+			} catch (error) {
+				if ((error as NodeJS.ErrnoException).code !== 'ESRCH') {
+					reject(error);
+				}
+			}
+		}, timeout);
+	});
+	try {
+		const result = await Promise.race([resultPromise, timeoutFailure]);
+		if (timedOut) {
+			return { error: { message: 'timeout' } };
+		}
+		return parseBenchmarkProcessResult(result);
+	} finally {
+		clearTimeout(timer!);
+	}
+};
 
 const benchmark = async (
 	artifact: string,
 	minifier: string,
 	minifierInstance: string | undefined,
 	timeout = 1000 * 10,
-): Promise<BenchmarkResult> => {
-	const minificationProcess = await spawn(
-		process.execPath,
-		[
-			...process.execArgv,
-			benchmarkCliPath,
-			'--artifact',
-			artifact,
-			'--minifier',
-			minifier,
-			// e.g. "no-compress"
-			...(
-				minifierInstance
-					? [
-						'--instance',
-						minifierInstance,
-					]
-					: []
-			),
-		],
-		{
-			timeout,
-			env: {
-				NO_COLOR: '1',
-			},
-		},
-	).catch(error => error as SubprocessError);
-
-	if ('signalName' in minificationProcess && minificationProcess.signalName === 'SIGTERM') {
-		return {
-			error: {
-				message: 'timeout',
-			},
-		};
-	}
-
-	return parseBenchmarkProcessResult(minificationProcess);
-};
+): Promise<BenchmarkResult> => runBenchmarkProcess(
+	process.execPath,
+	[
+		...process.execArgv,
+		benchmarkCliPath,
+		'--artifact',
+		artifact,
+		'--minifier',
+		minifier,
+		// e.g. "no-compress"
+		...(
+			minifierInstance
+				? [
+					'--instance',
+					minifierInstance,
+				]
+				: []
+		),
+	],
+	timeout,
+);
 
 const getAverage = (
 	numbers: number[],
@@ -98,15 +137,6 @@ export const benchmarkAverage = async (
 			minifier,
 			minifierInstance,
 		);
-
-		if (!result) {
-			setStatus(`${i + 1}/${sampleSize} — No result`);
-			return {
-				error: {
-					message: 'No result',
-				},
-			};
-		}
 
 		if ('error' in result) {
 			setStatus(`${i + 1}/${sampleSize} — ${result.error.message}`);
