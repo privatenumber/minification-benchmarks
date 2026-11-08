@@ -9,15 +9,19 @@ import type {
 const benchmarkCliPath = new URL('../benchmark/cli.ts', import.meta.url).pathname;
 const activeProcesses = new Set<number>();
 
+const killProcessGroup = (pid: number) => {
+	try {
+		process.kill(-pid, 'SIGKILL');
+	} catch (error) {
+		if ((error as NodeJS.ErrnoException).code !== 'ESRCH') {
+			throw error;
+		}
+	}
+};
+
 process.on('exit', () => {
 	for (const pid of activeProcesses) {
-		try {
-			process.kill(-pid, 'SIGKILL');
-		} catch (error) {
-			if ((error as NodeJS.ErrnoException).code !== 'ESRCH') {
-				throw error;
-			}
-		}
+		killProcessGroup(pid);
 	}
 });
 process.on('SIGINT', () => process.exit(130));
@@ -28,8 +32,9 @@ const isBenchmarkResult = (value: unknown): value is BenchmarkResult => {
 		return false;
 	}
 	if ('error' in value) {
-		return value.error !== null && typeof value.error === 'object'
-			&& 'message' in value.error && typeof value.error.message === 'string';
+		return !('data' in value) && value.error !== null && typeof value.error === 'object'
+			&& 'message' in value.error && typeof value.error.message === 'string'
+			&& (!('stage' in value.error) || typeof value.error.stage === 'string');
 	}
 	if (!('data' in value) || value.data === null || typeof value.data !== 'object') {
 		return false;
@@ -47,7 +52,8 @@ export const parseBenchmarkProcessResult = (
 			minificationProcess instanceof SubprocessError
 				? minificationProcess.stderr
 				: minificationProcess.stdout,
-			isBenchmarkResult,
+			(value): value is BenchmarkResult => isBenchmarkResult(value)
+				&& (!(minificationProcess instanceof SubprocessError) || 'error' in value),
 		);
 	} catch {
 		const tail = (output: string) => output.split(/\r?\n/).slice(-20).join('\n');
@@ -57,9 +63,13 @@ export const parseBenchmarkProcessResult = (
 		const signal = minificationProcess instanceof SubprocessError
 			? minificationProcess.signalName
 			: undefined;
+		const cause = minificationProcess instanceof SubprocessError
+			&& minificationProcess.cause instanceof Error
+			? `\ncause: ${minificationProcess.cause.message}`
+			: '';
 		return {
 			error: {
-				message: `Failed to parse JSON result (exit code: ${exitCode}, signal: ${signal})\nstdout tail:\n${tail(minificationProcess.stdout)}\nstderr tail:\n${tail(minificationProcess.stderr)}`,
+				message: `Failed to parse JSON result (exit code: ${exitCode}, signal: ${signal})${cause}\nstdout tail:\n${tail(minificationProcess.stdout)}\nstderr tail:\n${tail(minificationProcess.stderr)}`,
 			},
 		};
 	}
@@ -81,24 +91,27 @@ export const runBenchmarkProcess = async (
 	}
 	const pid = child.pid!;
 	activeProcesses.add(pid);
-	resultPromise.then(() => activeProcesses.delete(pid), () => activeProcesses.delete(pid));
-	resultPromise.catch(() => {});
+	const settledResult = resultPromise.then((result) => {
+		killProcessGroup(pid);
+		activeProcesses.delete(pid);
+		return result;
+	});
+	settledResult.catch(() => {});
 	let timer: NodeJS.Timeout;
 	const timeoutResult = new Promise<BenchmarkResult>((resolve, reject) => {
 		timer = setTimeout(() => {
 			try {
-				process.kill(-pid, 'SIGKILL');
+				killProcessGroup(pid);
 			} catch (error) {
-				if ((error as NodeJS.ErrnoException).code !== 'ESRCH') {
-					reject(error);
-					return;
-				}
+				reject(error);
+				return;
 			}
+			// Escaped descendants holding pipes can still delay the parent's exit.
 			resolve({ error: { message: 'timeout' } });
 		}, timeout);
 	});
 	try {
-		return await Promise.race([resultPromise.then(parseBenchmarkProcessResult), timeoutResult]);
+		return await Promise.race([settledResult.then(parseBenchmarkProcessResult), timeoutResult]);
 	} finally {
 		clearTimeout(timer!);
 	}

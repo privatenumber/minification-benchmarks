@@ -15,7 +15,7 @@ export const logResult = (
 			time: minified.time,
 		},
 	};
-	console.log(JSON.stringify(stringified));
+	console.log(`\n${JSON.stringify(stringified)}`);
 };
 
 export const logError = (
@@ -40,6 +40,6 @@ export const logError = (
 	}
 
 	const stringified: BenchmarkError = { error };
-	console.error(JSON.stringify(stringified));
+	console.error(`\n${JSON.stringify(stringified)}`);
 	process.exit(1);
 };
