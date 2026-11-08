@@ -8,6 +8,16 @@ import type {
 
 const benchmarkCliPath = new URL('../benchmark/cli.ts', import.meta.url).pathname;
 
+const isBenchmarkResult = (value: unknown): value is BenchmarkResult => {
+	if (!value || typeof value !== 'object') {
+		return false;
+	}
+	return (
+		('data' in value && value.data !== null && typeof value.data === 'object')
+		|| ('error' in value && value.error !== null && typeof value.error === 'object')
+	);
+};
+
 export const parseBenchmarkProcessResult = (
 	minificationProcess: Result | SubprocessError,
 ): BenchmarkResult => {
@@ -16,7 +26,8 @@ export const parseBenchmarkProcessResult = (
 			minificationProcess instanceof SubprocessError
 				? minificationProcess.stderr
 				: minificationProcess.stdout,
-		) as BenchmarkResult;
+			isBenchmarkResult,
+		);
 	} catch {
 		const tail = (output: string) => output.split(/\r?\n/).slice(-20).join('\n');
 		const exitCode = minificationProcess instanceof SubprocessError

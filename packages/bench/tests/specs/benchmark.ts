@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import assert from 'node:assert/strict';
 import os from 'node:os';
 import path from 'node:path';
 import { setTimeout as delay } from 'node:timers/promises';
@@ -20,7 +21,7 @@ const successResult: BenchmarkResult = {
 	},
 };
 
-test('cache requires the current Node version and a deterministic result', async () => {
+test('cache requires the current Node version and a successful result', async () => {
 	const artifact = await loadArtifact('react');
 	const minifier = await getMinifier('esbuild');
 	const original = data[artifact.name];
@@ -43,11 +44,18 @@ test('cache requires the current Node version and a deterministic result', async
 		const cached = data[artifact.name].minified[minifier.name];
 		expect(hasResults(artifact, minifier, 'default')).toBe(false);
 		cached.result = { error: { message: 'timeout' } };
-		expect(hasResults(artifact, minifier, 'default')).toBe(true);
+		expect(hasResults(artifact, minifier, 'default')).toBe(false);
 		cached.result = {
 			error: {
 				message: 'failed',
 				stage: 'minification',
+			},
+		};
+		expect(hasResults(artifact, minifier, 'default')).toBe(false);
+		cached.result = {
+			data: {
+				...successResult.data,
+				runs: 2,
 			},
 		};
 		expect(hasResults(artifact, minifier, 'default')).toBe(true);
@@ -84,7 +92,7 @@ test('validates an empty string rather than substituting original code', async (
 
 test('parses stdout when a successful benchmark writes to stderr', async ({ signal }) => {
 	const processResult = await runNode(
-		`console.log('warning {}'); console.log(JSON.stringify(${JSON.stringify(successResult)})); console.warn('benign warning')`,
+		`console.log('warning {}'); console.log(JSON.stringify(${JSON.stringify(successResult)})); console.log('null'); console.warn('benign warning')`,
 		signal,
 	);
 
@@ -106,19 +114,39 @@ test('reports process details when output has no JSON result', async ({ signal }
 	}
 }, 5000);
 
+test('reports a protocol error when a failing process prints null', async ({ signal }) => {
+	const processResult = await runNode(
+		'console.error("null"); process.exit(1)',
+		signal,
+	).catch(error => error as SubprocessError);
+	const result = parseBenchmarkProcessResult(processResult);
+	expect('error' in result).toBe(true);
+	if ('error' in result) {
+		expect(result.error.message).toContain('Failed to parse JSON result (exit code: 1');
+		expect(result.error.message).toContain('null');
+	}
+}, 5000);
+
 test('timeout kills descendant processes', async () => {
 	const directory = await fs.mkdtemp(path.join(os.tmpdir(), 'benchmark-timeout-'));
 	const started = path.join(directory, 'started');
-	const survived = path.join(directory, 'survived');
+	let pid: number | undefined;
 	try {
-		const grandchild = `require('fs').writeFileSync(${JSON.stringify(started)}, ''); setTimeout(() => require('fs').writeFileSync(${JSON.stringify(survived)}, ''), 1500)`;
+		const grandchild = `require('fs').writeFileSync(${JSON.stringify(started)}, String(process.pid)); setInterval(() => {}, 1000)`;
 		const parent = `require('child_process').spawn(process.execPath, ['-e', ${JSON.stringify(grandchild)}], { stdio: 'ignore' }); setInterval(() => {}, 1000)`;
 		const result = await runBenchmarkProcess(process.execPath, ['-e', parent], 700);
 		expect(result).toStrictEqual({ error: { message: 'timeout' } });
-		await fs.access(started);
-		await delay(1200);
-		expect(await fs.access(survived).then(() => true, () => false)).toBe(false);
+		pid = Number(await fs.readFile(started, 'utf8'));
+		await delay(100);
+		assert.throws(() => process.kill(pid!, 0), { code: 'ESRCH' });
 	} finally {
+		if (pid) {
+			try {
+				process.kill(pid, 'SIGKILL');
+			} catch (error) {
+				assert.equal((error as NodeJS.ErrnoException).code, 'ESRCH');
+			}
+		}
 		await fs.rm(directory, {
 			recursive: true,
 			force: true,
