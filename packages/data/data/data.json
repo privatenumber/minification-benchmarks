@@ -109,12 +109,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "0f3c18cc9a",
+				"configHash": "a1c7d23563",
 				"result": {
 					"data": {
 						"minifiedBytes": 40821,
 						"minzippedBytes": 11040,
-						"time": 129.7246824,
+						"time": 123.83988740000002,
 						"runs": 5
 					}
 				}
@@ -283,12 +283,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "0f3c18cc9a",
+				"configHash": "a1c7d23563",
 				"result": {
 					"data": {
 						"minifiedBytes": 97632,
 						"minzippedBytes": 24998,
-						"time": 279.9726314,
+						"time": 280.2876238,
 						"runs": 5
 					}
 				}
@@ -457,12 +457,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "0f3c18cc9a",
+				"configHash": "a1c7d23563",
 				"result": {
 					"data": {
 						"minifiedBytes": 144144,
 						"minzippedBytes": 40879,
-						"time": 356.1310826,
+						"time": 360.5348826,
 						"runs": 5
 					}
 				}
@@ -631,12 +631,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "0f3c18cc9a",
+				"configHash": "a1c7d23563",
 				"result": {
 					"data": {
 						"minifiedBytes": 197357,
 						"minzippedBytes": 57169,
-						"time": 473.0525922,
+						"time": 467.5904198,
 						"runs": 5
 					}
 				}
@@ -805,12 +805,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "0f3c18cc9a",
+				"configHash": "a1c7d23563",
 				"result": {
 					"data": {
 						"minifiedBytes": 148780,
 						"minzippedBytes": 36327,
-						"time": 369.899304,
+						"time": 369.3656856,
 						"runs": 5
 					}
 				}
@@ -981,11 +981,11 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "0f3c18cc9a",
+				"configHash": "a1c7d23563",
 				"result": {
 					"error": {
-						"message": "RuntimeException: Unclosed regex pattern at position: 289075 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:660",
-						"stack": "Error: RuntimeException: Unclosed regex pattern at position: 289075 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:660\nStack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString()\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify()\n#4 {main}",
+						"message": "RuntimeException: Unclosed regex pattern at position: 289075 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:660\nStack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString()\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify()\n#4 {main}\nCommand failed with exit code 1: php /packages/minifiers/minifiers/jshrink/jshrink.php",
+						"stack": "SubprocessError: Command failed with exit code 1: php /packages/minifiers/minifiers/jshrink/jshrink.php\n    at checkFailure (file:///node_modules/.pnpm/nano-spawn@2.0.0/node_modules/nano-spawn/source/result.js:40:9)\n    at getResult (file:///node_modules/.pnpm/nano-spawn@2.0.0/node_modules/nano-spawn/source/result.js:17:3)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async runMinifier (file:///packages/minifiers/utils/run-minifier.ts:11:18)\n    at async runMinifier (file:///packages/bench/benchmark/cli.ts:21:18)\n    at async file:///packages/bench/benchmark/cli.ts:95:18",
 						"stage": "minification"
 					}
 				}
@@ -1156,12 +1156,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "0f3c18cc9a",
+				"configHash": "a1c7d23563",
 				"result": {
 					"data": {
 						"minifiedBytes": 633710,
 						"minzippedBytes": 145178,
-						"time": 1315.4150536,
+						"time": 1304.6301556,
 						"runs": 5
 					}
 				}
@@ -1330,12 +1330,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "0f3c18cc9a",
+				"configHash": "a1c7d23563",
 				"result": {
 					"data": {
 						"minifiedBytes": 952007,
 						"minzippedBytes": 193471,
-						"time": 1722.025604,
+						"time": 1708.751123,
 						"runs": 5
 					}
 				}
@@ -1503,7 +1503,7 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "0f3c18cc9a",
+				"configHash": "a1c7d23563",
 				"result": {
 					"error": {
 						"message": "Unexpected token '~'",
@@ -1673,11 +1673,11 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "0f3c18cc9a",
+				"configHash": "a1c7d23563",
 				"result": {
 					"error": {
-						"message": "RuntimeException: Unclosed regex pattern at position: 37315 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:660",
-						"stack": "Error: RuntimeException: Unclosed regex pattern at position: 37315 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:660\nStack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString()\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify()\n#4 {main}",
+						"message": "RuntimeException: Unclosed regex pattern at position: 37315 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:660\nStack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString()\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify()\n#4 {main}\nCommand failed with exit code 1: php /packages/minifiers/minifiers/jshrink/jshrink.php",
+						"stack": "SubprocessError: Command failed with exit code 1: php /packages/minifiers/minifiers/jshrink/jshrink.php\n    at checkFailure (file:///node_modules/.pnpm/nano-spawn@2.0.0/node_modules/nano-spawn/source/result.js:40:9)\n    at getResult (file:///node_modules/.pnpm/nano-spawn@2.0.0/node_modules/nano-spawn/source/result.js:17:3)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async runMinifier (file:///packages/minifiers/utils/run-minifier.ts:11:18)\n    at async runMinifier (file:///packages/bench/benchmark/cli.ts:21:18)\n    at async file:///packages/bench/benchmark/cli.ts:95:18",
 						"stage": "minification"
 					}
 				}
@@ -1840,12 +1840,12 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "0f3c18cc9a",
+				"configHash": "a1c7d23563",
 				"result": {
 					"data": {
 						"minifiedBytes": 4449283,
 						"minzippedBytes": 626675,
-						"time": 7343.055830400001,
+						"time": 7200.248116600002,
 						"runs": 5
 					}
 				}
@@ -2008,7 +2008,7 @@
 			"tedivm/jshrink": {
 				"minifierPath": "jshrink/index.ts",
 				"version": "1.8.1",
-				"configHash": "0f3c18cc9a",
+				"configHash": "a1c7d23563",
 				"result": {
 					"error": {
 						"message": "timeout"
