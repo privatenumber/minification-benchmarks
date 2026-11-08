@@ -14,9 +14,13 @@ export const runMinifier = async (
 		// nano-spawn strips one trailing LF or CRLF from stdout.
 		return result.stdout;
 	} catch (error) {
-		if (error instanceof SubprocessError && error.stderr) {
+		if (error instanceof SubprocessError && (error.stderr || error.cause instanceof Error)) {
 			const { stack } = error;
-			error.message = `${error.stderr.trim()}\n${error.message}`;
+			error.message = [
+				error.stderr.trimEnd(),
+				error.message,
+				error.cause instanceof Error ? error.cause.message : '',
+			].filter(Boolean).join('\n');
 			error.stack = stack;
 		}
 		throw error;
