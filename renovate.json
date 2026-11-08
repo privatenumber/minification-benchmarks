@@ -23,7 +23,7 @@
 			],
 			"groupName": "minifiers",
 			"matchPackageNames": [
-				"@minify-js/node",
+				"@cminify/cminify-linux-x64",
 				"@swc/core",
 				"@tdewolff/minify",
 				"babel-minify",
@@ -31,9 +31,9 @@
 				"esbuild",
 				"google-closure-compiler",
 				"oxc-minify",
+				"tedivm/jshrink",
 				"terser",
-				"uglify-js",
-				"tedivm/jshrink"
+				"uglify-js"
 			],
 			"rangeStrategy": "bump",
 			"enabled": true
