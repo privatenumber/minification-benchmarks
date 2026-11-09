@@ -12,13 +12,14 @@ The README ends with commentary written by a language model. This note records h
   - the minifier versions;
   - per-artifact "rounds" listing the best gzip, fastest, most balanced and an honorable mention;
   - minifiers eliminated by a non-timeout failure.
+- **Missing key:** without `OPENCODE_GO_API_KEY`, `getAiAnalysis()` logs "Skipping AI analysis" and returns nothing. `comment-mark` leaves the `aiAnalysis` and `aiSystemPrompt` regions unchanged, so the rest of the README can update while the commentary still describes older data.
 - **Published input:** the README embeds the full system prompt and message in the `aiSystemPrompt` region, so every published analysis can be traced to its exact input.
 
 The system prompt asks the model to "Crown the winner" with judgment-based criteria. Among them: "Consider speed—especially where compression is close" and "Bigger source = harder challenge. Reward outstanding performance on large artifacts."
 
-## The champion changes with identical input
+## The champion changed while the data didn't
 
-Observed: two generations from the same data named different champions.
+Observed: two generations from the same benchmark data named different champions.
 
 | Generation | Commit | Champion |
 | --- | --- | --- |
@@ -28,9 +29,14 @@ Observed: two generations from the same data named different champions.
 The two inputs differ only in the date line. To reproduce, extract the `aiSystemPrompt` region from both commits and diff it:
 
 ```sh
-extract() { git show "$1:README.md" | sed -n '/aiSystemPrompt:start/,/aiSystemPrompt:end/p'; }
-diff <(extract d489b93) <(extract 6ae8603)
+extract() {
+	curl -s "https://raw.githubusercontent.com/privatenumber/minification-benchmarks/$1/README.md" |
+		sed -n '/aiSystemPrompt:start/,/aiSystemPrompt:end/p'
+}
+diff <(extract d489b93bfb2443882830363412674fe61071d7ac) <(extract 6ae86039013c8705f0debbab0a521a05501a6110)
 ```
+
+`6ae8603` is a CI commit on the #871 branch, not on `master`, so the command reads both files from GitHub rather than from local history.
 
 Output, checked on Nov 9, 2026:
 
@@ -43,6 +49,11 @@ Output, checked on Nov 9, 2026:
 
 `packages/data/data/data.json` is also identical between the two commits.
 
-Both readings fit the data. In the message's "Most balanced" entries, `@swc/core` leads 8 of 12 rounds (react, moment, jquery, vue, lodash, d3, three, victory). `oxc-minify` leads the other 4 (terser, echarts, antd, typescript), three of which are among the four largest artifacts. The October text weighed consistency ("Consistency over twelve rounds beat brilliance in three"). The November text weighed the large-artifact rule. Both called the decision close.
+Both winners are defensible from the input, but both justifications misstate it. In the message's "Most balanced" entries, `@swc/core` leads 8 of 12 rounds (react, moment, jquery, vue, lodash, d3, three, victory). `oxc-minify` leads the other 4 (terser, echarts, antd, typescript), three of which are among the four largest artifacts.
 
-Inference: the headline verdict is decided by sampling, not by the data. Any regeneration can flip it, even when no measurement changed.
+- The October text weighed consistency ("Consistency over twelve rounds beat brilliance in three"). It also says swc was "Most balanced" in nine of twelve rounds and took echarts' balance award. Its input gives swc eight, and gives echarts to oxc.
+- The November text weighed the large-artifact rule. It also says oxc "took the smallest-and-quickest double" on terser. Its input lists `@cminify/cminify-linux-x64` as fastest on terser.
+
+Both texts called the decision close.
+
+Inference: the benchmark data did not decide the verdict. Between the two requests, the date line changed and a month passed, so the cause could be sampling, the date, or a provider-side model update. These two observations cannot separate those causes. Either way, a regeneration on unchanged benchmark data can produce a different champion, and the model's justification can contradict its own input.
