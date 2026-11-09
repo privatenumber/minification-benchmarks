@@ -13,7 +13,7 @@ The README ends with commentary written by a language model. This note records h
   - the benchmark's champion and runner-up by round wins;
   - per-artifact "rounds" listing the best gzip, fastest, most balanced and an honorable mention;
   - minifiers eliminated by a non-timeout failure.
-- **Missing key:** without `OPENCODE_GO_API_KEY`, `getAiAnalysis()` logs "Skipping AI analysis" and returns nothing. `comment-mark` leaves the `aiAnalysis` and `aiSystemPrompt` regions unchanged, so the rest of the README can update while the commentary still describes older data.
+- **Missing key:** in CI, `getAiAnalysis()` throws without `OPENCODE_GO_API_KEY`. Elsewhere it logs "Skipping AI analysis" and returns nothing. `comment-mark` leaves the `aiAnalysis` and `aiSystemPrompt` regions unchanged, so the rest of the README can update while the commentary still describes older data.
 - **Published input:** the README embeds the full system prompt and message in the `aiSystemPrompt` region, so every published analysis can be traced to its exact input.
 
 The system prompt directs the model to announce the champion provided in the data and use the measurements to explain it.
