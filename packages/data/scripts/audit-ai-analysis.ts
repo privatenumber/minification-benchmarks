@@ -1,8 +1,8 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { execFileSync } from 'node:child_process';
 import { parseArgs } from 'node:util';
 import { generateText } from 'ai';
+import spawn from 'nano-spawn';
 import { getMinifiers, type MinifierLoaded } from '@minification-benchmarks/minifiers';
 import { getAnalyzedData, getChampion } from '../update-readme/analyzed-data.ts';
 import { createAnalysisProvider, getAnalysisPrompt } from '../update-readme/ai-analysis/index.ts';
@@ -54,10 +54,7 @@ const analyzedData = getAnalyzedData();
 const champion = getChampion(analyzedData).champion?.name;
 const names = [...new Set(analyzedData.flatMap(([, artifact]) => Object.keys(artifact.minified)))];
 const sortedNames = names.slice().sort((a, b) => b.length - a.length);
-const baselineReadme = execFileSync('git', ['show', 'd489b93:README.md'], {
-	encoding: 'utf8',
-	maxBuffer: 10_000_000,
-});
+const { stdout: baselineReadme } = await spawn('git', ['show', 'd489b93:README.md']);
 const region = baselineReadme.match(/<!-- aiSystemPrompt:start -->([\s\S]*?)<!-- aiSystemPrompt:end -->/)?.[1];
 if (!region) { throw new Error('Baseline aiSystemPrompt region not found'); }
 const entities: Record<string, string> = {
@@ -88,8 +85,9 @@ const baselineMinifiers = baseline.prompt.split('\n').flatMap((line) => {
 		: [];
 }) as MinifierLoaded[];
 const current = await getAnalysisPrompt(values['dry-run'] ? baselineMinifiers : await getMinifiers(), analyzedData);
-const baselineData = execFileSync('git', ['show', 'd489b93:packages/data/data/data.json'], { maxBuffer: 10_000_000 });
-const sameData = baselineData.equals(await fs.readFile('packages/data/data/data.json'));
+const { stdout: baselineData } = await spawn('git', ['show', 'd489b93:packages/data/data/data.json']);
+// nano-spawn strips the final newline that data.json ends with
+const sameData = `${baselineData}\n` === await fs.readFile('packages/data/data/data.json', 'utf8');
 const prompts: Record<string, typeof baseline> = {
 	current,
 	baseline,
