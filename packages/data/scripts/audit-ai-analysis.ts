@@ -15,7 +15,8 @@ const { values } = parseArgs({
 		},
 		variants: {
 			type: 'string',
-			default: 'current,baseline',
+			// `baseline` replays the Oct 10, 2026 prompt and only runs while data.json still matches it
+			default: 'current',
 		},
 		temperatures: {
 			type: 'string',
