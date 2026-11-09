@@ -65,7 +65,7 @@ Inference: the allowance is a single meter, and each model's spend counts in pro
 
 Consequences:
 
-- A full audit with the $15-limit models can use a whole 5-hour window, and block the README job until it resets. Run audits with fewer runs, cheaper models, or after CI has finished.
+- A full audit with the $15-limit models can use a whole 5-hour window, and block the README job until it resets. The audit script therefore has no default model list, prints its request count, and refuses more than 20 requests without `--yes`. Prefer cheap models such as `glm-5.3-flash` or `gpt-6-luna`, fewer runs, and running after CI has finished.
 - The production model, `glm-5.3`, costs about $0.034 per request at the observed rate. The docs estimate 220 `glm-5.3` requests per 5-hour window on the Go plan, so a normal CI cadence stays well inside it.
 
 ## Champion selection
@@ -80,7 +80,7 @@ The generator prepends a code-owned champion line to the model's commentary. The
 
 ## Model and prompt audit
 
-[`packages/data/scripts/audit-ai-analysis.ts`](../../packages/data/scripts/audit-ai-analysis.ts) (`pnpm audit-ai`) sends the analysis request to several OpenCode Go models and scores every output. It compares two prompt variants built from the same `data.json`:
+[`packages/data/scripts/audit-ai-analysis.ts`](../../packages/data/scripts/audit-ai-analysis.ts) (`pnpm audit-ai --models <ids>`) sends the analysis request to the given OpenCode Go models and scores every output. It compares two prompt variants built from the same `data.json`:
 
 - `current`: today's system prompt and message, with the champion given as a fact;
 - `baseline`: the prompt embedded in the README at `d489b93`, where the model picks the winner.
