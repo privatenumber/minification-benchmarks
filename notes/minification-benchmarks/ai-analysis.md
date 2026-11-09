@@ -37,7 +37,8 @@ Constraints:
 
 - Declaring `permissions:` resets every unlisted permission to none, so the job also lists `contents: write` for its result commits.
 - Fork pull requests cannot request an OIDC token, so the step only works on runs from this repository.
-- The step fails explicitly when the exchange returns no token. GitHub's default `bash` shell runs without `pipefail`, so a failed `curl` inside the pipeline would otherwise go unnoticed. `getAiAnalysis()` would then skip the analysis without an error.
+- The step fails before "Update README" when the exchange returns an empty or `null` token. `set -o pipefail` makes a failed `curl` fail the step at that command, with its own error. Without `pipefail`, GitHub's default `bash` shell would report only the generic empty-token error.
+- `id-token: write` applies to the whole job, not just this step. Code that runs earlier in the job can request its own OIDC token and exchange it for OpenCode access. That code includes the minifiers and artifact tests run by `pnpm bench-all`. Accepted risk: that code already runs with the job's `contents: write` token, which `actions/checkout` persists in the local git config by default. OIDC adds the ability to spend the OpenCode account's model allowance. Removing the exposure would require running the benchmark in a separate job without either permission, and committing its results from a trusted job.
 
 Evidence gap: the token-exchange endpoint is not described in OpenCode's public docs. The step's parameters come from the setup instructions in the OpenCode Console.
 
