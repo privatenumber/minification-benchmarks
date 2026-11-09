@@ -47,7 +47,7 @@ Equal weighting rewards consistency across all rounds rather than favoring large
 
 Temperature 0 reduces variation in the commentary, but it does not make model output deterministic. The benchmark supplies the winner as a fact rather than relying on the model to choose it.
 
-Before publication, the generator checks the name in the model's "Best minifier" section against the selected champion. A mismatch fails in CI and skips the analysis locally. Only the champion is validated; other prose can still contradict the data. For example, the current README says "costs 22 seconds" where 5,712 ms minus 258 ms is about 5.5 seconds.
+The generator prepends a code-owned champion line to the model's commentary. The model's prose can still contradict the data. For example, the current README says the victory time difference costs "twenty-two seconds" where 5,712 ms minus 258 ms is about 5.5 seconds. It also says both eliminated minifiers never made it past the starting grid, although `tedivm/jshrink` completed earlier rounds, and says `google-closure-compiler` crossed every finish line, although it timed out on larger artifacts.
 
 ## Model and prompt audit
 
@@ -78,11 +78,11 @@ Run on Nov 9, 2026, with the champion-in-code prompt and the `master` data from 
 
 Findings:
 
-- **Code-chosen champions hold across models.** All 55 successful `current` runs named the given champion.
+- **The classifier found the given champion across models.** It identified the given champion in all 55 successful `current` runs. The prose classifier is heuristic and can misread a comparison as the verdict.
 - **The old prompt mostly crowns oxc.** It picked `oxc-minify` in 48 of 55 runs. The Oct 10 README's `@swc/core` verdict was the minority outcome, which fits the "reward large artifacts" rule.
 - **Temperature 0 does not fix the old prompt's choice.** At temperature 0, `gpt-6-luna` still split 2 to 3 between oxc and swc across five runs.
 - **`kimi-k3.1-pro` rejects temperature 0** with "invalid temperature: only 1 is allowed for this model". Production's `temperature: 0` therefore ties the analysis to models that accept it. `glm-5.3` does.
-- **Figures are mostly derived, not invented.** Every `current` run cites figures absent from the input, between 0.6 and 4.6 per run on average. Every one I traced was arithmetic on input values, such as "0.26 KB" for 157.70 KB − 157.44 KB, or a truncation, such as "684 KB" for 684.61 KB. The count measures arithmetic and rounding more than fabrication.
+- **Figures are mostly derived, not invented.** After matching seconds against input milliseconds, 43 of 55 successful `current` runs cite at least one figure absent from the input, with group averages between 0.8 and 4.8 per run. Every figure traced was arithmetic on input values, such as "0.26 KB" for 157.70 KB − 157.44 KB, or a truncation, such as "684 KB" for 684.61 KB. The count measures arithmetic and rounding more than fabrication.
 - **The audit found an input bug.** For errors without a stage, `getEliminated()` wrote `Failed "react" in undefined stage`. It now omits the stage when there is none.
 
 ## Authentication in CI
