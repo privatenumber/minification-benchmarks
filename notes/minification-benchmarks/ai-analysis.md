@@ -17,6 +17,30 @@ The README ends with commentary written by a language model. This note records h
 
 The system prompt asks the model to "Crown the winner" with judgment-based criteria. Among them: "Consider speed—especially where compression is close" and "Bigger source = harder challenge. Reward outstanding performance on large artifacts."
 
+## Authentication in CI
+
+Decision: the Benchmark workflow gets a short-lived OpenCode token through GitHub OIDC instead of storing an API key as a repository secret. The "Sign in to OpenCode" step in [`.github/workflows/benchmark.yml`](../../.github/workflows/benchmark.yml) does the exchange:
+
+1. Request a GitHub OIDC token for the audience `https://opencode.ai/console`. This needs `id-token: write`.
+2. Exchange it at `https://opencode.ai/console/auth/oauth/token` with an RFC 8693 token-exchange grant. The client ID is the OpenCode Console service account.
+3. Export the result as `OPENCODE_GO_API_KEY`, the variable `ai-analysis/index.ts` reads.
+
+Rationale:
+
+- Console API keys can be set to expire, and "An expired key can't be renewed" ([OpenCode Console API docs](https://opencode.ai/docs/console/api/), accessed Nov 9, 2026).
+- The stored key did expire. Every "Update README" step then failed with HTTP 401 and `"code":"api_key_expired"`, for example in [run 42505062767](https://github.com/privatenumber/minification-benchmarks/actions/runs/42505062767).
+- OIDC leaves no long-lived credential to rotate.
+
+Evidence the exchange works: in [run 42551116484](https://github.com/privatenumber/minification-benchmarks/actions/runs/42551116484), both "Sign in to OpenCode" and "Update README" succeeded. The run committed a newly generated analysis, so the exchanged token is accepted by the Go endpoint `https://opencode.ai/zen/go/v1`.
+
+Constraints:
+
+- Declaring `permissions:` resets every unlisted permission to none, so the job also lists `contents: write` for its result commits.
+- Fork pull requests cannot request an OIDC token, so the step only works on runs from this repository.
+- The step fails explicitly when the exchange returns no token. GitHub's default `bash` shell runs without `pipefail`, so a failed `curl` inside the pipeline would otherwise go unnoticed. `getAiAnalysis()` would then skip the analysis without an error.
+
+Evidence gap: the token-exchange endpoint is not described in OpenCode's public docs. The step's parameters come from the setup instructions in the OpenCode Console.
+
 ## The champion changed while the data didn't
 
 Observed: two generations from the same benchmark data named different champions.
