@@ -28,16 +28,16 @@ Decision: the Benchmark workflow gets a short-lived OpenCode token through GitHu
 Rationale:
 
 - Console API keys can be set to expire, and "An expired key can't be renewed" ([OpenCode Console API docs](https://opencode.ai/docs/console/api/), accessed Nov 9, 2026).
-- The stored key did expire. Every "Update README" step then failed with HTTP 401 and `"code":"api_key_expired"`, for example in [run 42505062767](https://github.com/privatenumber/minification-benchmarks/actions/runs/42505062767).
+- The stored key did expire. Every "Update README" step then failed with HTTP 401 and `"code":"api_key_expired"`, for example in [run 42505062767](https://github.com/privatenumber/minification-benchmarks/actions/runs/42505062767). After the secret was removed, runs such as [run 42552089991](https://github.com/privatenumber/minification-benchmarks/actions/runs/42552089991) passed while skipping the analysis, and committed a README with stale commentary.
 - OIDC leaves no long-lived credential to rotate.
 
 Evidence the exchange works: in [run 42551116484](https://github.com/privatenumber/minification-benchmarks/actions/runs/42551116484), both "Sign in to OpenCode" and "Update README" succeeded. The run committed a newly generated analysis, so the exchanged token is accepted by the Go endpoint `https://opencode.ai/zen/go/v1`.
 
 Constraints:
 
-- Declaring `permissions:` resets every unlisted permission to none, so the job also lists `contents: write` for its result commits.
+- Declaring `permissions:` resets every unlisted configurable permission to none (GitHub still grants `metadata: read`), so the job also lists `contents: write` for its result commits.
 - Fork pull requests cannot request an OIDC token, so the step only works on runs from this repository.
-- The step fails before "Update README" when the exchange returns an empty or `null` token. `set -o pipefail` makes a failed `curl` fail the step at that command, with its own error. Without `pipefail`, GitHub's default `bash` shell would report only the generic empty-token error.
+- The step fails before "Update README" when the exchange returns an empty or `null` token. `set -o pipefail` also fails the step at a failed `curl` itself. Both requests time out after 60 s, so a stalled endpoint can't hold the job until its 60-minute limit.
 - `id-token: write` applies to the whole job, not just this step. Code that runs earlier in the job can request its own OIDC token and exchange it for OpenCode access. That code includes the minifiers and artifact tests run by `pnpm bench-all`. Accepted risk: that code already runs with the job's `contents: write` token, which `actions/checkout` persists in the local git config by default. OIDC adds the ability to spend the OpenCode account's model allowance. Removing the exposure would require running the benchmark in a separate job without either permission, and committing its results from a trusted job.
 
 Evidence gap: the token-exchange endpoint is not described in OpenCode's public docs. The step's parameters come from the setup instructions in the OpenCode Console.

@@ -9,8 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    # Declaring id-token resets every unlisted permission to none, so contents
-    # must be listed explicitly
+    # Declaring permissions resets every unlisted configurable permission to
+    # none (metadata read stays), so contents must be listed explicitly
     permissions:
       # Pushes the benchmark results and report commits
       contents: write
@@ -96,9 +96,9 @@ jobs:
           AUDIENCE: https://opencode.ai/console
         run: |
           set -o pipefail
-          oidc=$(curl -sSf --oauth2-bearer "$ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+          oidc=$(curl -sSf --connect-timeout 10 --max-time 60 --oauth2-bearer "$ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
             "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=$AUDIENCE" | jq -r .value)
-          token=$(curl -sSf https://opencode.ai/console/auth/oauth/token \
+          token=$(curl -sSf --connect-timeout 10 --max-time 60 https://opencode.ai/console/auth/oauth/token \
             -d grant_type=urn:ietf:params:oauth:grant-type:token-exchange \
             -d subject_token_type=urn:ietf:params:oauth:token-type:jwt \
             -d client_id=sk_1ab1e997-cddd-4a71-8a85-13a6490c9f1e \
