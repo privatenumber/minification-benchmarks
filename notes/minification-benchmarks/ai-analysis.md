@@ -39,6 +39,35 @@ Go enforces the session header but not the user agent. Keep both: the session he
 
 The session ID also enables prompt caching. In the model audit below, each model and prompt variant reused one session ID across its 10 requests, and most input tokens were cache reads. Across both variants' 20 requests, `glm-5.3` read 42,261 of 49,730 input tokens from cache, and `gpt-6-luna` read 44,055 of 49,010. Production makes one generation call per CI run; the AI SDK retries retryable failures up to twice by default. Evidence gap: whether its cache survives between runs is not measured.
 
+## Usage limits
+
+CI and local audit runs that use the project's OpenCode service-account key share one OpenCode Go allowance. The [Go docs](https://opencode.ai/docs/console/go/#usage-limits) (accessed Nov 9, 2026) define it this way:
+
+- "Usage limits are defined as monthly dollar amounts."
+- "Each model has the following usage limits: 5-hour — 20% of the monthly limit; weekly — 50%; and monthly — 100%. Each model's monthly limit below determines how its usage counts toward those allowances."
+- Monthly limits on the Go plan include `glm-5.3` $15, `qwen3.8-max` $15, `kimi-k3.1-pro` $15, and `glm-5.3-flash` $60.
+- "Extra Usage" can fall back to Console credits once a limit is reached, instead of blocking requests.
+
+Observed on Nov 9, 2026 in the OpenCode Console, after the model audit below and a few CI runs (123 requests in total, all from the service account):
+
+| Model | Requests | Cost |
+| --- | --- | --- |
+| `qwen3.8-max` | 21 | $1.20 |
+| `kimi-k3.1-pro` | 12 | $0.92 |
+| `glm-5.3` | 25 | $0.85 |
+| `claude-haiku-5-5` | 20 | $0.04 |
+| `gpt-6-luna` | 20 | $0.02 |
+| `glm-5.3-flash` | 25 | $0.01 |
+
+The meters read: 5-hour window "Limit reached", weekly 40% used, monthly 20% used. CI's "Update README" then failed with HTTP 429 `GoUsageLimitError` (`"limitName":"5 hour"`) and a `retry-after` of about 11,700 seconds.
+
+Inference: the allowance is a single meter, and each model's spend counts in proportion to its own monthly limit. The three $15-limit models above spent $2.97, which is about 20% of $15. That reading matches the meters: the 5-hour cap is 20% of the monthly allowance, and 20% used is 40% of the 50% weekly cap. The cheap models barely registered.
+
+Consequences:
+
+- A full audit with the $15-limit models can use a whole 5-hour window, and block the README job until it resets. Run audits with fewer runs, cheaper models, or after CI has finished.
+- The production model, `glm-5.3`, costs about $0.034 per request at the observed rate. The docs estimate 220 `glm-5.3` requests per 5-hour window on the Go plan, so a normal CI cadence stays well inside it.
+
 ## Champion selection
 
 The benchmark selects the champion in [`analyzed-data.ts`](../../packages/data/update-readme/analyzed-data.ts), not through the model. A minifier that never completed a round, such as one that timed out on every artifact, is also left out of the standings. A minifier is eliminated from the standings if it has any non-timeout error in any artifact. Each artifact is one equally weighted round. Every successful minifier tied for the best score wins that round. The champion has the most round wins. Ties are broken by the lowest mean 1-based rank across artifacts where the minifier appears, then by name in ascending order using direct string comparison. Equal scores share the rank of the first entry with that score.
