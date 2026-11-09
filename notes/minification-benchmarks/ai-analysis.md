@@ -18,6 +18,27 @@ The README ends with commentary written by a language model. This note records h
 
 The system prompt directs the model to announce the champion provided in the data and use the measurements to explain it.
 
+## Request headers
+
+`createAnalysisProvider()` in [`ai-analysis/index.ts`](../../packages/data/update-readme/ai-analysis/index.ts) sends two headers on every Go request:
+
+- `User-Agent: minification-benchmarks/1.0`
+- `x-opencode-session: minification-benchmarks-ai-analysis`. The audit script uses one ID per model and prompt variant.
+
+The [OpenCode Go docs](https://opencode.ai/docs/go/#where-can-i-use-it) (accessed Nov 9, 2026) say a client "should" identify itself with its own user agent "rather than a generic SDK or HTTP-library name", and should "Send a stable session ID in `x-opencode-session` for each conversation so we can optimize routing and prompt caching". They also say "Traffic is monitored for abuse".
+
+Observed on Nov 9, 2026, with `glm-5.3-flash` and a one-line chat completion:
+
+| Headers sent | Response |
+| --- | --- |
+| `User-Agent` only | HTTP 400, `{"type":"MissingSessionID","message":"Request is missing x-opencode-session and cannot be routed efficiently. ..."}` |
+| `x-opencode-session` only | HTTP 200 |
+| Both | HTTP 200 |
+
+Go enforces the session header but not the user agent. Keep both: the session header is required to get a response at all, and the user agent is what the docs ask clients to send.
+
+The session ID also enables prompt caching. In the model audit below, each model and prompt variant reused one session ID across its 10 requests, and most input tokens were cache reads. Across both variants' 20 requests, `glm-5.3` read 42,261 of 49,730 input tokens from cache, and `gpt-6-luna` read 44,055 of 49,010. Production sends one request per CI run. Evidence gap: whether its cache survives between runs is not measured.
+
 ## Champion selection
 
 The benchmark selects the champion in [`analyzed-data.ts`](../../packages/data/update-readme/analyzed-data.ts), not through the model. Each artifact is one equally weighted round. Every successful minifier tied for the best score wins that round. The champion has the most round wins. Ties are broken by the lowest mean 1-based rank across artifacts where the minifier appears, then by name in ascending order using direct string comparison.
