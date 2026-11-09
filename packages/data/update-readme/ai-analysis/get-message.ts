@@ -23,7 +23,7 @@ const getEliminated = (
 				&& !eliminated[minifierName]
 			) {
 				eliminated[minifierName] = {
-					reason: `Failed "${artifactName}" in ${minified.result.error.stage} stage`,
+					reason: `Failed "${artifactName}"${minified.result.error.stage ? ` in ${minified.result.error.stage} stage` : ''}`,
 					error: minified.result.error.message,
 				};
 			}
