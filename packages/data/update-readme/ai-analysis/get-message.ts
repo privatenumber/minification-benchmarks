@@ -3,7 +3,7 @@ import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
 import { format } from 'date-fns';
 import { byteSize } from '../../utils/byte-size.ts';
 import { formatMs } from '../formatting.ts';
-import { getChampion, type AnalyzedData } from '../analyzed-data.ts';
+import { getChampion, isEliminated, type AnalyzedData } from '../analyzed-data.ts';
 
 type Eliminated = Record<string, {
 	reason: string;
@@ -18,8 +18,8 @@ const getEliminated = (
 	for (const [artifactName, artifact] of data) {
 		for (const [minifierName, minified] of Object.entries(artifact.minified)) {
 			if (
-				'error' in minified.result
-				&& minified.result.error.message !== 'timeout'
+				isEliminated(minified.result)
+				&& 'error' in minified.result
 				&& !eliminated[minifierName]
 			) {
 				eliminated[minifierName] = {

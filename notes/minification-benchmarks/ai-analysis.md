@@ -37,15 +37,17 @@ Observed on Nov 9, 2026, with `glm-5.3-flash` and a one-line chat completion:
 
 Go enforces the session header but not the user agent. Keep both: the session header is required to get a response at all, and the user agent is what the docs ask clients to send.
 
-The session ID also enables prompt caching. In the model audit below, each model and prompt variant reused one session ID across its 10 requests, and most input tokens were cache reads. Across both variants' 20 requests, `glm-5.3` read 42,261 of 49,730 input tokens from cache, and `gpt-6-luna` read 44,055 of 49,010. Production sends one request per CI run. Evidence gap: whether its cache survives between runs is not measured.
+The session ID also enables prompt caching. In the model audit below, each model and prompt variant reused one session ID across its 10 requests, and most input tokens were cache reads. Across both variants' 20 requests, `glm-5.3` read 42,261 of 49,730 input tokens from cache, and `gpt-6-luna` read 44,055 of 49,010. Production makes one generation call per CI run; the AI SDK retries retryable failures up to twice by default. Evidence gap: whether its cache survives between runs is not measured.
 
 ## Champion selection
 
-The benchmark selects the champion in [`analyzed-data.ts`](../../packages/data/update-readme/analyzed-data.ts), not through the model. Each artifact is one equally weighted round. Every successful minifier tied for the best score wins that round. The champion has the most round wins. Ties are broken by the lowest mean 1-based rank across artifacts where the minifier appears, then by name in ascending order using direct string comparison.
+The benchmark selects the champion in [`analyzed-data.ts`](../../packages/data/update-readme/analyzed-data.ts), not through the model. A minifier is eliminated from the standings if it has any non-timeout error in any artifact. Each artifact is one equally weighted round. Every successful minifier tied for the best score wins that round. The champion has the most round wins. Ties are broken by the lowest mean 1-based rank across artifacts where the minifier appears, then by name in ascending order using direct string comparison. Equal scores share the rank of the first entry with that score.
 
 Equal weighting rewards consistency across all rounds rather than favoring larger artifacts. The earlier prompt rewarded large artifacts, and the November 9 analysis used that criterion to select `oxc-minify`; see the evidence below. On the current data, `@swc/core` wins 8 of 12 rounds and `oxc-minify` wins 4.
 
 Temperature 0 reduces variation in the commentary, but it does not make model output deterministic. The benchmark supplies the winner as a fact rather than relying on the model to choose it.
+
+Before publication, the generator checks the name in the model's "Best minifier" section against the selected champion. A mismatch fails in CI and skips the analysis locally. Only the champion is validated; other prose can still contradict the data. For example, the current README says "costs 22 seconds" where 5,712 ms minus 258 ms is about 5.5 seconds.
 
 ## Model and prompt audit
 
@@ -63,7 +65,7 @@ Each output is checked for:
 
 Outputs go to the gitignored `results/ai-audit/`, and `--reanalyze <dir>` re-scores saved outputs without calling any model.
 
-Run on Nov 9, 2026, with the champion-in-code prompt and the `master` data from Oct 10, 2026, using 5 runs per model, variant, and temperature setting (omitted, or 0). The scores below come from `--reanalyze` after a fix to name matching, which had missed names followed by a sentence-ending period:
+Run on Nov 9, 2026, with the champion-in-code prompt and the `master` data from Oct 10, 2026, using 5 runs per model, variant, and temperature setting (omitted, or 0). The scores below come from `--reanalyze` with the corrected champion classifier. The older saved inputs did not include a name list, so reanalysis derives it from the saved prompts:
 
 | Model | `current`: champion matches code | `baseline`: champions chosen | Median latency (`current`, temperature omitted) | Mean words |
 | --- | --- | --- | --- | --- |
@@ -71,13 +73,13 @@ Run on Nov 9, 2026, with the champion-in-code prompt and the `master` data from 
 | `glm-5.3-flash` | 10/10 | oxc-minify 9, @swc/core 1 | 15 s | 529 |
 | `kimi-k3.1-pro` | 5/5 | oxc-minify 5 | 212 s | 712 |
 | `qwen3.8-max` | 10/10 | oxc-minify 10 | 237 s | 913 |
-| `claude-haiku-5-5` | 10/10 | oxc-minify 8, @swc/core 1, none found 1 | 16 s | 814 |
+| `claude-haiku-5-5` | 10/10 | oxc-minify 10 | 16 s | 814 |
 | `gpt-6-luna` | 10/10 | oxc-minify 5, @swc/core 5 | 14 s | 455 |
 
 Findings:
 
 - **Code-chosen champions hold across models.** All 55 successful `current` runs named the given champion.
-- **The old prompt mostly crowns oxc.** It picked `oxc-minify` in 46 of 55 runs. The Oct 10 README's `@swc/core` verdict was the minority outcome, which fits the "reward large artifacts" rule.
+- **The old prompt mostly crowns oxc.** It picked `oxc-minify` in 48 of 55 runs. The Oct 10 README's `@swc/core` verdict was the minority outcome, which fits the "reward large artifacts" rule.
 - **Temperature 0 does not fix the old prompt's choice.** At temperature 0, `gpt-6-luna` still split 2 to 3 between oxc and swc across five runs.
 - **`kimi-k3.1-pro` rejects temperature 0** with "invalid temperature: only 1 is allowed for this model". Production's `temperature: 0` therefore ties the analysis to models that accept it. `glm-5.3` does.
 - **Figures are mostly derived, not invented.** Every `current` run cites figures absent from the input, between 0.6 and 4.6 per run on average. Every one I traced was arithmetic on input values, such as "0.26 KB" for 157.70 KB − 157.44 KB, or a truncation, such as "684 KB" for 684.61 KB. The count measures arithmetic and rounding more than fabrication.
