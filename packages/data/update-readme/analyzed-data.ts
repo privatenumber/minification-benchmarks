@@ -27,7 +27,15 @@ export type AnalyzedArtifact = Artifact & ScoredMinifiers;
 export type AnalyzedDataEntry = [ArtifactName: string, AnalyzedArtifact];
 export type AnalyzedData = AnalyzedDataEntry[];
 
+export const isEliminated = (result: BenchmarkResultWithRuns) => (
+	'error' in result && result.error.message !== 'timeout'
+);
+
 export const getChampion = (analyzedData: AnalyzedData) => {
+	const eliminated = new Set(analyzedData.flatMap(([, artifact]) => (
+		Object.entries(artifact.minified).filter(([, minifier]) => isEliminated(minifier.result))
+			.map(([name]) => name)
+	)));
 	const totals = new Map<string, {
 		name: string;
 		wins: number;
@@ -37,7 +45,14 @@ export const getChampion = (analyzedData: AnalyzedData) => {
 	for (const [, artifact] of analyzedData) {
 		const entries = artifact.minifiedWithScores;
 		const best = entries[0];
+		let rank = 0;
 		for (const [index, entry] of entries.entries()) {
+			if (index === 0 || entry.score !== entries[index - 1].score) {
+				rank = index + 1;
+			}
+			if (eliminated.has(entry.minifierName)) {
+				continue;
+			}
 			let total = totals.get(entry.minifierName);
 			if (!total) {
 				total = {
@@ -48,7 +63,7 @@ export const getChampion = (analyzedData: AnalyzedData) => {
 				};
 				totals.set(entry.minifierName, total);
 			}
-			total.rankSum += index + 1;
+			total.rankSum += rank;
 			total.rounds += 1;
 			if (best && isSuccessful(best) && isSuccessful(entry) && entry.score === best.score) {
 				total.wins += 1;
