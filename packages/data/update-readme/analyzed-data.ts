@@ -76,7 +76,7 @@ export const getChampion = (analyzedData: AnalyzedData) => {
 		|| (a.name < b.name ? -1 : (a.name > b.name ? 1 : 0))
 	));
 	return {
-		champion: standings[0]?.wins ? standings[0] : undefined,
+		champion: standings[0],
 		standings,
 	};
 };

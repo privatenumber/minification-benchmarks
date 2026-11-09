@@ -5,7 +5,7 @@ import { generateText } from 'ai';
 import spawn from 'nano-spawn';
 import { getMinifiers, type MinifierLoaded } from '@minification-benchmarks/minifiers';
 import { getAnalyzedData, getChampion } from '../update-readme/analyzed-data.ts';
-import { createAnalysisProvider, findChampionInAnalysis, getAnalysisPrompt } from '../update-readme/ai-analysis/index.ts';
+import { createAnalysisProvider, getAnalysisPrompt } from '../update-readme/ai-analysis/index.ts';
 
 const { values } = parseArgs({
 	options: {
@@ -171,6 +171,44 @@ const section = (text: string, heading: string) => {
 	const next = new RegExp(String.raw`^#{1,${match[1].length}}[ \t]+`, 'm').exec(content);
 	return next ? content.slice(0, next.index) : content;
 };
+const findChampionInAnalysis = (text: string, names_: string[]) => {
+	const heading = /^#{1,6}[ \t]+Best minifier(?:[ \t]*:(.*)|[ \t]*)$/im.exec(text);
+	if (!heading) { return undefined; }
+	const body = text.slice(heading.index + heading[0].length).split(/^#{1,6}[ \t]+/m)[0];
+	const find = (content: string) => {
+		const matches = names_.flatMap((name) => {
+			const escaped = name.replaceAll(/[.*+?^${}()|[\]\\]/g, String.raw`\$&`);
+			const match = new RegExp(String.raw`(?<![\w@/.-])${escaped}(?![\w/-]|\.[\w/-])`, 'i').exec(content);
+			return match
+				? [{
+					name,
+					index: match.index,
+				}]
+				: [];
+		});
+		return matches.sort((a, b) => a.index - b.index || b.name.length - a.name.length)[0]?.name;
+	};
+	const inHeading = find(heading[1] ?? '');
+	if (inHeading) { return inHeading; }
+	for (const sentence of body.split(/(?<=[.!?])\s+|\n+/)) {
+		const decisive = /\b(?:crown goes to|crowning)\b/i.exec(sentence);
+		if (decisive) {
+			const winner = find(sentence.slice(decisive.index + decisive[0].length));
+			if (winner) { return winner; }
+		}
+	}
+	for (const paragraph of body.trim().split(/\n\s*\n/)) {
+		for (const sentence of paragraph.split(/(?<=[.!?])\s+|\n+/)) {
+			if (/\b(?:crown(?:ing|ed)?|champion|winner|goes to|takes)\b/i.test(sentence)) {
+				const winner = find(sentence);
+				if (winner) { return winner; }
+			}
+		}
+		const first = find(paragraph);
+		if (first) { return first; }
+	}
+	return undefined;
+};
 const mentions = (text: string) => {
 	let remaining = text;
 	const found: {
@@ -192,7 +230,7 @@ const mentions = (text: string) => {
 	}
 	return found.sort((a, b) => a.index - b.index).map(item => item.name);
 };
-const numbers = (text: string) => [...text.matchAll(/\b(\d[\d,]*(?:\.\d+)?)\s*(kilobytes?|megabytes?|milliseconds?|percent|KB|MB|ms|%)(?![a-z])/gi)]
+const numbers = (text: string) => [...text.matchAll(/\b(\d[\d,]*(?:\.\d+)?)\s*(kilobytes?|megabytes?|milliseconds?|seconds?|percent|KB|MB|ms|sec|s|%)(?![a-z])/gi)]
 	.map(match => ({
 		text: match[0],
 		value: Number(match[1].replaceAll(',', '')),
@@ -204,6 +242,9 @@ const numbers = (text: string) => [...text.matchAll(/\b(\d[\d,]*(?:\.\d+)?)\s*(k
 			megabytes: 'mb',
 			millisecond: 'ms',
 			milliseconds: 'ms',
+			second: 's',
+			seconds: 's',
+			sec: 's',
 			percent: '%',
 		} as Record<string, string>)[match[2].toLowerCase()] ?? match[2].toLowerCase(),
 	}));
@@ -220,12 +261,15 @@ const analyze = (text: string, prompt: string, instructions: string, variant: st
 		championMatches: variant === 'current' ? namedChampion === champion : null,
 		missingHeadings: headings.filter(heading => !new RegExp(String.raw`^#{1,6}\s+${heading}(?:\s*:.*)?\s*$`, 'im').test(text)),
 		unknownNames,
-		unmatchedNumbers: numbers(text).filter(number => !inputNumbers.some(input => (
-			input.unit === number.unit
-			&& (number.precision > 100
-				? input.value === number.value
-				: Number(input.value.toFixed(number.precision)) === number.value)
-		))).map(number => number.text),
+		unmatchedNumbers: numbers(text).filter(number => !inputNumbers.some((input) => {
+			if (input.unit !== number.unit && !(input.unit === 'ms' && number.unit === 's')) {
+				return false;
+			}
+			const value = input.unit === 'ms' && number.unit === 's' ? input.value / 1000 : input.value;
+			return number.precision > 100
+				? value === number.value
+				: Number(value.toFixed(number.precision)) === number.value;
+		})).map(number => number.text),
 		eliminations: {
 			missing: expectedEliminations.filter(name => !actualEliminations.includes(name)),
 			extra: actualEliminations.filter(name => !expectedEliminations.includes(name)),
