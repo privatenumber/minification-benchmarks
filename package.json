@@ -14,6 +14,7 @@
 		"bench-all": "node packages/bench/benchmark-all/cli.ts",
 		"test": "node packages/bench/tests/index.ts",
 		"update-readme": "node --env-file-if-exists=.env packages/data/update-readme/index.ts",
+		"audit-ai": "node --env-file-if-exists=.env packages/data/scripts/audit-ai-analysis.ts",
 		"lint": "lintroll --cache . --ignore-pattern ./packages/data/data/data.json",
 		"type-check": "tsc"
 	},
