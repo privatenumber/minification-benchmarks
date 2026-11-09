@@ -36,6 +36,11 @@ export const getChampion = (analyzedData: AnalyzedData) => {
 		Object.entries(artifact.minified).filter(([, minifier]) => isEliminated(minifier.result))
 			.map(([name]) => name)
 	)));
+	// A minifier that never completed a round (e.g. timed out everywhere) can't be champion
+	const completed = new Set(analyzedData.flatMap(([, artifact]) => (
+		Object.entries(artifact.minified).filter(([, minifier]) => 'data' in minifier.result)
+			.map(([name]) => name)
+	)));
 	const totals = new Map<string, {
 		name: string;
 		wins: number;
@@ -50,7 +55,7 @@ export const getChampion = (analyzedData: AnalyzedData) => {
 			if (index === 0 || entry.score !== entries[index - 1].score) {
 				rank = index + 1;
 			}
-			if (eliminated.has(entry.minifierName)) {
+			if (eliminated.has(entry.minifierName) || !completed.has(entry.minifierName)) {
 				continue;
 			}
 			let total = totals.get(entry.minifierName);

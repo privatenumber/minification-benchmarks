@@ -41,7 +41,7 @@ The session ID also enables prompt caching. In the model audit below, each model
 
 ## Champion selection
 
-The benchmark selects the champion in [`analyzed-data.ts`](../../packages/data/update-readme/analyzed-data.ts), not through the model. A minifier is eliminated from the standings if it has any non-timeout error in any artifact. Each artifact is one equally weighted round. Every successful minifier tied for the best score wins that round. The champion has the most round wins. Ties are broken by the lowest mean 1-based rank across artifacts where the minifier appears, then by name in ascending order using direct string comparison. Equal scores share the rank of the first entry with that score.
+The benchmark selects the champion in [`analyzed-data.ts`](../../packages/data/update-readme/analyzed-data.ts), not through the model. A minifier that never completed a round, such as one that timed out on every artifact, is also left out of the standings. A minifier is eliminated from the standings if it has any non-timeout error in any artifact. Each artifact is one equally weighted round. Every successful minifier tied for the best score wins that round. The champion has the most round wins. Ties are broken by the lowest mean 1-based rank across artifacts where the minifier appears, then by name in ascending order using direct string comparison. Equal scores share the rank of the first entry with that score.
 
 Equal weighting rewards consistency across all rounds rather than favoring larger artifacts. The earlier prompt rewarded large artifacts, and the November 9 analysis used that criterion to select `oxc-minify`; see the evidence below. On the current data, `@swc/core` wins 8 of 12 rounds and `oxc-minify` wins 4.
 
@@ -63,7 +63,7 @@ Each output is checked for:
 - figures that don't appear in the input;
 - whether the "Eliminated" section matches the input.
 
-Outputs go to the gitignored `results/ai-audit/`, and `--reanalyze <dir>` re-scores saved outputs without calling any model.
+The default runs only `current`. `--variants current,baseline` adds the historical comparison, which works only while `data.json` still matches `d489b93`; otherwise the script exits. The script reads `d489b93` from git history in either case, so it needs a checkout that includes that commit. The figure check only sees digits followed by a known unit (KB, MB, ms, s, %, or their spelled-out forms), so phrasings like "a minute and a half" go unchecked. Outputs go to the gitignored `results/ai-audit/`, and `--reanalyze <dir>` re-scores saved outputs without calling any model.
 
 Run on Nov 9, 2026, with the champion-in-code prompt and the `master` data from Oct 10, 2026, using 5 runs per model, variant, and temperature setting (omitted, or 0). The scores below come from `--reanalyze` with the corrected champion classifier. The older saved inputs did not include a name list, so reanalysis derives it from the saved prompts:
 
