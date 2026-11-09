@@ -1,42 +1,57 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { parseArgs } from 'node:util';
+import { cli } from 'cleye';
 import { generateText } from 'ai';
 import spawn from 'nano-spawn';
 import { getMinifiers, type MinifierLoaded } from '@minification-benchmarks/minifiers';
 import { getAnalyzedData, getChampion } from '../update-readme/analyzed-data.ts';
 import { createAnalysisProvider, getAnalysisPrompt } from '../update-readme/ai-analysis/index.ts';
 
-const { values } = parseArgs({
-	options: {
+const { flags: values } = cli({
+	name: 'audit-ai',
+	help: {
+		description: 'Send the README AI analysis prompt to OpenCode Go models and score each output',
+		examples: [
+			'pnpm audit-ai --models glm-5.3-flash --runs 2',
+			'pnpm audit-ai --dry-run',
+			'pnpm audit-ai --reanalyze results/ai-audit/<timestamp>',
+		],
+	},
+	flags: {
 		// No default: every live run spends the shared Go allowance that CI also uses
 		models: {
-			type: 'string',
+			type: String,
+			description: 'Comma-separated OpenCode Go model IDs (required for live runs)',
 		},
 		yes: {
-			type: 'boolean',
+			type: Boolean,
 			default: false,
+			description: 'Allow more than 20 requests',
 		},
 		variants: {
-			type: 'string',
+			type: String,
 			// `baseline` replays the Oct 10, 2026 prompt and only runs while data.json still matches it
 			default: 'current',
+			description: 'Comma-separated prompt variants: current, baseline',
 		},
 		temperatures: {
-			type: 'string',
+			type: String,
 			default: 'default,0',
+			description: 'Comma-separated temperature settings: default (omitted), 0',
 		},
 		runs: {
-			type: 'string',
-			default: '5',
+			type: Number,
+			default: 5,
+			description: 'Runs per model, variant, and temperature',
 		},
-		'dry-run': {
-			type: 'boolean',
+		dryRun: {
+			type: Boolean,
 			default: false,
+			description: 'Use a canned response instead of calling any model',
 		},
-		// Re-score the saved outputs in an earlier results directory without calling any model
 		reanalyze: {
-			type: 'string',
+			type: String,
+			description: 'Re-score the saved outputs in an earlier results directory without calling any model',
 		},
 	},
 });
@@ -61,14 +76,14 @@ if (values.reanalyze && (!savedInputs || !Array.isArray(savedInputs.models)
 	|| !Object.hasOwn(savedInputs, 'champion') || (savedInputs.names && !Array.isArray(savedInputs.names)))) {
 	throw new Error('Saved inputs are missing the job matrix, champion, or data comparison');
 }
-const live = !values['dry-run'] && !values.reanalyze;
+const live = !values.dryRun && !values.reanalyze;
 if (live && !values.models) {
 	throw new Error('Pass --models explicitly, e.g. --models glm-5.3-flash. Live runs spend the Go allowance CI uses; see notes/minification-benchmarks/ai-analysis.md#usage-limits');
 }
 const models: string[] = savedInputs?.models ?? (values.models ?? 'glm-5.3').split(',');
 const variants: string[] = savedInputs?.variants ?? values.variants.split(',');
 const temperatures: string[] = savedInputs?.temperatures ?? values.temperatures.split(',');
-const runs: number = savedInputs?.runs ?? Number(values.runs);
+const runs: number = savedInputs?.runs ?? values.runs;
 if (!Number.isSafeInteger(runs) || runs < 1 || !models.every(m => /^[\w.-]+$/.test(m))
 	|| new Set(models).size !== models.length
 	|| !variants.every(v => ['current', 'baseline'].includes(v)) || new Set(variants).size !== variants.length
@@ -143,7 +158,8 @@ if (savedInputs) {
 			}]
 			: [];
 	}) as MinifierLoaded[];
-	const current = await getAnalysisPrompt(values['dry-run'] ? baselineMinifiers : await getMinifiers(), analyzedData!);
+	const minifiers = values.dryRun ? baselineMinifiers : await getMinifiers();
+	const current = await getAnalysisPrompt(minifiers, analyzedData!);
 	const { stdout: baselineData } = await spawn('git', ['show', 'd489b93:packages/data/data/data.json']);
 	// nano-spawn strips the final newline that data.json ends with
 	sameData = `${baselineData}\n` === await fs.readFile('packages/data/data/data.json', 'utf8');
@@ -173,8 +189,8 @@ if (!values.reanalyze) {
 		variants,
 		temperatures,
 		runs,
-		dryRun: values['dry-run'],
-		minifierMetadata: values['dry-run'] ? 'historical baseline' : 'installed minifiers and npm registry',
+		dryRun: values.dryRun,
+		minifierMetadata: values.dryRun ? 'historical baseline' : 'installed minifiers and npm registry',
 	}, null, '\t')}\n`);
 }
 
@@ -323,7 +339,7 @@ const getResponse = async (job: Job, prefix: string, saved: Result | undefined) 
 			usage: saved.usage,
 		};
 	}
-	if (values['dry-run']) {
+	if (values.dryRun) {
 		return {
 			text: fakeResponse,
 			usage: null,
