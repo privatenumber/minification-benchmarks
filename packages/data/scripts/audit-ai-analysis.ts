@@ -29,6 +29,10 @@ const { values } = parseArgs({
 			type: 'boolean',
 			default: false,
 		},
+		// Re-score the saved outputs in an earlier results directory without calling any model
+		reanalyze: {
+			type: 'string',
+		},
 	},
 });
 
@@ -42,7 +46,7 @@ if (!Number.isSafeInteger(runs) || runs < 1 || !models.every(m => /^[\w.-]+$/.te
 	|| !temperatures.every(t => ['default', '0'].includes(t)) || new Set(temperatures).size !== temperatures.length) {
 	throw new Error('Invalid models, variants, temperatures, or runs');
 }
-if (!values['dry-run'] && !process.env.OPENCODE_GO_API_KEY) {
+if (!values['dry-run'] && !values.reanalyze && !process.env.OPENCODE_GO_API_KEY) {
 	throw new Error('OPENCODE_GO_API_KEY is required unless --dry-run is set');
 }
 
@@ -90,13 +94,14 @@ const prompts: Record<string, typeof baseline> = {
 	current,
 	baseline,
 };
-const outputDirectory = path.join('results', 'ai-audit', new Date().toISOString().replaceAll(':', '-'));
+const outputDirectory = values.reanalyze ?? path.join('results', 'ai-audit', new Date().toISOString().replaceAll(':', '-'));
 await fs.mkdir(outputDirectory).catch(async (error: NodeJS.ErrnoException) => {
+	if (values.reanalyze && error.code === 'EEXIST') { return; }
 	if (error.code !== 'ENOENT') { throw error; }
 	await fs.mkdir(path.dirname(outputDirectory), { recursive: true });
 	await fs.mkdir(outputDirectory);
 });
-await fs.writeFile(path.join(outputDirectory, 'inputs.json'), `${JSON.stringify({
+await fs.writeFile(path.join(outputDirectory, values.reanalyze ? 'inputs-reanalyze.json' : 'inputs.json'), `${JSON.stringify({
 	prompts,
 	sameData,
 	champion,
@@ -127,7 +132,8 @@ const mentions = (text: string) => {
 	}[] = [];
 	for (const name of sortedNames) {
 		const escaped = name.replaceAll(/[.*+?^${}()|[\]\\]/g, String.raw`\$&`);
-		const pattern = new RegExp(String.raw`(?<![\w@/.-])${escaped}(?![\w/.-])`, 'gi');
+		// A trailing period ends a sentence ("... is @swc/core."), not the name
+		const pattern = new RegExp(String.raw`(?<![\w@/.-])${escaped}(?![\w/-]|\.[\w/-])`, 'gi');
 		const match = pattern.exec(remaining);
 		if (match) {
 			found.push({
@@ -152,7 +158,7 @@ const analyze = (text: string, prompt: string, instructions: string, variant: st
 	const inputNumbers = numbers(`${instructions}\n${prompt}`);
 	const expectedEliminations = mentions(section(prompt, 'Eliminated'));
 	const actualEliminations = mentions(section(text, 'Eliminated'));
-	const unknownNames = [...new Set(text.match(/(?<![\w@/.-])(?:@[\w.-]+\/[\w.-]+|[\w.-]+\/[\w.-]+|[\w.-]*minify[\w.-]*)(?![\w/.-])/gi))]
+	const unknownNames = [...new Set(text.match(/(?<![\w@/.-])(?:@[\w.-]+\/[\w.-]+|[\w.-]+\/[\w.-]+|[\w.-]*minify[\w.-]*)(?![\w/.-])/gi)?.map(name => name.replace(/\.+$/, '')))]
 		.filter(name => !names.some(known => known.toLowerCase() === name.toLowerCase()));
 	return {
 		champion: champions[0] ?? null,
@@ -195,6 +201,25 @@ const jobs: Job[] = models.flatMap(model => variants.flatMap(variant => (
 const results: Result[] = [];
 const active = new Map<string, number>();
 const fakeResponse = `### Best minifier\n${champion ?? '@swc/core'} leads in 30.86 KB, 825 KB, 1% and 999 ms.\n\n### Honorable mentions\nother-minify competes.\n\n### Eliminated\nNone.\n\n### Closing remarks\nCompare the trade-offs.`;
+const getResponse = async (job: Job, prefix: string, saved: Result | undefined) => {
+	if (saved) {
+		return {
+			text: await fs.readFile(path.join(outputDirectory, `${prefix}.txt`), 'utf8'),
+			usage: saved.usage,
+		};
+	}
+	if (values['dry-run']) {
+		return {
+			text: fakeResponse,
+			usage: null,
+		};
+	}
+	return generateText({
+		model: createAnalysisProvider(`ai-audit-${job.variant}-${job.model}`).chatModel(job.model),
+		...prompts[job.variant],
+		...(job.temperature === '0' ? { temperature: 0 } : {}),
+	});
+};
 const worker = async () => {
 	for (;;) {
 		const index = jobs.findIndex(job => (active.get(job.model) ?? 0) < 2);
@@ -202,23 +227,21 @@ const worker = async () => {
 		const [job] = jobs.splice(index, 1);
 		active.set(job.model, (active.get(job.model) ?? 0) + 1);
 		const started = performance.now();
+		const prefix = `${job.variant}--${job.model}--${job.temperature}--${job.run}`;
 		let text = '';
 		let result: Result;
 		try {
-			const response = values['dry-run']
-				? {
-					text: fakeResponse,
-					usage: null,
-				}
-				: await generateText({
-					model: createAnalysisProvider(`ai-audit-${job.variant}-${job.model}`).chatModel(job.model),
-					...prompts[job.variant],
-					...(job.temperature === '0' ? { temperature: 0 } : {}),
-				});
+			const saved = values.reanalyze
+				? JSON.parse(await fs.readFile(path.join(outputDirectory, `${prefix}.json`), 'utf8')) as Result
+				: undefined;
+			if (saved?.error) {
+				throw new Error(saved.error);
+			}
+			const response = await getResponse(job, prefix, saved);
 			text = response.text;
 			result = {
 				...job,
-				latencyMs: performance.now() - started,
+				latencyMs: saved?.latencyMs ?? performance.now() - started,
 				usage: response.usage,
 				checks: analyze(
 					text, prompts[job.variant].prompt, prompts[job.variant].instructions, job.variant,
@@ -231,7 +254,6 @@ const worker = async () => {
 				error: error instanceof Error ? error.message : String(error),
 			};
 		}
-		const prefix = `${job.variant}--${job.model}--${job.temperature}--${job.run}`;
 		await Promise.all([
 			fs.writeFile(path.join(outputDirectory, `${prefix}.txt`), text),
 			fs.writeFile(path.join(outputDirectory, `${prefix}.json`), `${JSON.stringify(result, null, '\t')}\n`),

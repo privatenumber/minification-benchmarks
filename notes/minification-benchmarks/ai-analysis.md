@@ -26,6 +26,42 @@ Equal weighting rewards consistency across all rounds rather than favoring large
 
 Temperature 0 reduces variation in the commentary, but it does not make model output deterministic. The benchmark supplies the winner as a fact rather than relying on the model to choose it.
 
+## Model and prompt audit
+
+[`packages/data/scripts/audit-ai-analysis.ts`](../../packages/data/scripts/audit-ai-analysis.ts) (`pnpm audit-ai`) sends the analysis request to several OpenCode Go models and scores every output. It compares two prompt variants built from the same `data.json`:
+
+- `current`: today's system prompt and message, with the champion given as a fact;
+- `baseline`: the prompt embedded in the README at `d489b93`, where the model picks the winner.
+
+Each output is checked for:
+
+- the champion named under "Best minifier";
+- the required headings;
+- figures that don't appear in the input;
+- whether the "Eliminated" section matches the input.
+
+Outputs go to the gitignored `results/ai-audit/`, and `--reanalyze <dir>` re-scores saved outputs without calling any model.
+
+Run on Nov 9, 2026, with the champion-in-code prompt and the `master` data from Oct 10, 2026, using 5 runs per model, variant, and temperature setting (omitted, or 0). The scores below come from `--reanalyze` after a fix to name matching, which had missed names followed by a sentence-ending period:
+
+| Model | `current`: champion matches code | `baseline`: champions chosen | Median latency (`current`, temperature omitted) | Mean words |
+| --- | --- | --- | --- | --- |
+| `glm-5.3` (production) | 10/10 | oxc-minify 9, @swc/core 1 | 49 s | 701 |
+| `glm-5.3-flash` | 10/10 | oxc-minify 9, @swc/core 1 | 15 s | 529 |
+| `kimi-k3.1-pro` | 5/5 | oxc-minify 5 | 212 s | 712 |
+| `qwen3.8-max` | 10/10 | oxc-minify 10 | 237 s | 913 |
+| `claude-haiku-5-5` | 10/10 | oxc-minify 8, @swc/core 1, none found 1 | 16 s | 814 |
+| `gpt-6-luna` | 10/10 | oxc-minify 5, @swc/core 5 | 14 s | 455 |
+
+Findings:
+
+- **Code-chosen champions hold across models.** All 55 successful `current` runs named the given champion.
+- **The old prompt mostly crowns oxc.** It picked `oxc-minify` in 46 of 55 runs. The Oct 10 README's `@swc/core` verdict was the minority outcome, which fits the "reward large artifacts" rule.
+- **Temperature 0 does not fix the old prompt's choice.** At temperature 0, `gpt-6-luna` still split 2 to 3 between oxc and swc across five runs.
+- **`kimi-k3.1-pro` rejects temperature 0** with "invalid temperature: only 1 is allowed for this model". Production's `temperature: 0` therefore ties the analysis to models that accept it. `glm-5.3` does.
+- **Figures are mostly derived, not invented.** Every `current` run cites figures absent from the input, between 0.6 and 4.6 per run on average. Every one I traced was arithmetic on input values, such as "0.26 KB" for 157.70 KB − 157.44 KB, or a truncation, such as "684 KB" for 684.61 KB. The count measures arithmetic and rounding more than fabrication.
+- **The audit found an input bug.** For errors without a stage, `getEliminated()` wrote `Failed "react" in undefined stage`. It now omits the stage when there is none.
+
 ## Authentication in CI
 
 Decision: the Benchmark workflow gets a short-lived OpenCode token through GitHub OIDC instead of storing an API key as a repository secret. The "Sign in to OpenCode" step in [`.github/workflows/benchmark.yml`](../../.github/workflows/benchmark.yml) does the exchange:
