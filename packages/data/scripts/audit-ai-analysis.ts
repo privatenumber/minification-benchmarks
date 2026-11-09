@@ -9,9 +9,13 @@ import { createAnalysisProvider, getAnalysisPrompt } from '../update-readme/ai-a
 
 const { values } = parseArgs({
 	options: {
+		// No default: every live run spends the shared Go allowance that CI also uses
 		models: {
 			type: 'string',
-			default: 'glm-5.3,glm-5.3-flash,kimi-k3.1-pro,qwen3.8-max,claude-haiku-5-5,gpt-6-luna',
+		},
+		yes: {
+			type: 'boolean',
+			default: false,
 		},
 		variants: {
 			type: 'string',
@@ -57,7 +61,11 @@ if (values.reanalyze && (!savedInputs || !Array.isArray(savedInputs.models)
 	|| !Object.hasOwn(savedInputs, 'champion') || (savedInputs.names && !Array.isArray(savedInputs.names)))) {
 	throw new Error('Saved inputs are missing the job matrix, champion, or data comparison');
 }
-const models: string[] = savedInputs?.models ?? values.models.split(',');
+const live = !values['dry-run'] && !values.reanalyze;
+if (live && !values.models) {
+	throw new Error('Pass --models explicitly, e.g. --models glm-5.3-flash. Live runs spend the Go allowance CI uses; see notes/minification-benchmarks/ai-analysis.md#usage-limits');
+}
+const models: string[] = savedInputs?.models ?? (values.models ?? 'glm-5.3').split(',');
 const variants: string[] = savedInputs?.variants ?? values.variants.split(',');
 const temperatures: string[] = savedInputs?.temperatures ?? values.temperatures.split(',');
 const runs: number = savedInputs?.runs ?? Number(values.runs);
@@ -67,7 +75,15 @@ if (!Number.isSafeInteger(runs) || runs < 1 || !models.every(m => /^[\w.-]+$/.te
 	|| !temperatures.every(t => ['default', '0'].includes(t)) || new Set(temperatures).size !== temperatures.length) {
 	throw new Error('Invalid models, variants, temperatures, or runs');
 }
-if (!values['dry-run'] && !values.reanalyze && !process.env.OPENCODE_GO_API_KEY) {
+const requestCount = models.length * variants.length * temperatures.length * runs;
+if (live) {
+	console.log(`This audit sends ${requestCount} model requests.`);
+	// A 120-request audit used up a whole 5-hour Go window and blocked CI's README job
+	if (requestCount > 20 && !values.yes) {
+		throw new Error(`Refusing to send ${requestCount} requests without --yes`);
+	}
+}
+if (live && !process.env.OPENCODE_GO_API_KEY) {
 	throw new Error('OPENCODE_GO_API_KEY is required unless --dry-run is set');
 }
 
