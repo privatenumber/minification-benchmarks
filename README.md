@@ -426,38 +426,38 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 <!-- aiAnalysis:start -->
 **Champion: @swc/core**, with 8 of 12 round wins by the ranking above.
 
-Ladies and gentlemen, twelve rounds of pure compression carnage! We started with react, a featherweight at 19 KB, and ended with typescript, a 1.88 MB heavyweight that broke weaker tools on contact. We had a veteran grinding out every last byte, a rookie sprinting through the field, and a champion who simply refused to leave the podium. Buckle up.
+Three... two... one... compress! Welcome to the Minification Grand Prix—twelve rounds, twelve payloads, from a 19 KB react featherweight all the way up to a 1.88 MB typescript super-heavyweight. This year's grid was ferocious: a Rust-fueled rookie stealing heavyweight belts, a 2024-vintage grandmaster still winning byte-by-byte slugfests, and a champion who made balance look almost boring. Two contenders crashed out entirely. Grab a seat.
 
 ### Best minifier
 
-@swc/core takes the crown with 8 round wins out of 12, and it earned every single one. This is balance incarnate. On jquery it grabbed the best gzip of the entire field, 30.86 KB, in just 48 ms. It repeated the trick on vue, three, and echarts — best size AND respectable speed, a double nobody else managed with such consistency.
+The crown goes to @swc/core—eight round wins out of twelve, and the data reads like a highlight reel. Best gzipped output on jquery, vue, three, and echarts. And in the rounds it didn't win on pure size, it came within a whisker of the tool that did, then lapped that tool on the clock.
 
-Here's the knockout punch: on react, uglify-js squeezed out 8.18 KB in 420 ms. swc landed 8.19 KB in 18 ms. That's a 0.01 KB gap — one hundred bytes — for roughly 23 times the speed. On victory, the story repeats: uglify's 157.44 KB took 5,712 ms, while swc delivered 157.70 KB in 258 ms. Twenty-two times faster for a 0.26 KB difference. That's not a trade-off, that's a heist.
+Exhibit A: victory. uglify-js squeezed out 157.44 KB; swc delivered 157.70 KB. That is a 0.26 KB gap—roughly a sixth of a percent—for 22 times the runtime. Exhibit B: d3. swc landed 87.39 KB against uglify's 87.02, finishing in 127 milliseconds while uglify needed 3,272. That's grandmaster-grade compression at espresso-machine speed.
 
-The champ's only wobble came at the very top of the weight classes, where the runner-up started overtaking it on both axes. But 8 wins across small, medium, and large payloads? That's dominance, not luck.
+And when the payloads grew teeth, the champion grew with them. Echarts, 684 KB of raw source: 321.03 KB gzipped, best in class, in 505 ms. Three, 248 KB: 158.70 KB, best in class. Across the whole season swc never made you wait—18 ms on react, and even its heaviest listed run, 653 ms on antd, barely finishes a coffee order. Size when it matters, speed everywhere. That's a title run.
 
 ### Honorable mentions
 
-oxc-minify, the runner-up with 4 wins, is the story of the season. Three milliseconds on react. Three! And when the files got huge, it got scary. On antd it beat the champion on size AND speed — 451.46 KB in 220 ms versus swc's 452.46 KB in 653 ms. Then it closed the show by winning typescript, the final boss, with the best compression of anyone: 851.44 KB, 55% shaved. The kid is alright.
+Runner-up oxc-minify is the story of the season. Four round wins, and it owned the heavyweight card: best gzip on terser, antd, and the colossal typescript bundle—851.44 KB, 55% shaved, in under half a second. On antd it beat the champion on both axes: smaller output AND a third of the runtime. Released mere weeks before this race and already trading haymakers. For CI pipelines where the clock is king, oxc's near-identical sizes at a fraction of swc's runtime—159.84 KB in 49 ms on three, versus swc's 158.70 in 173—make it a seriously tempting alternative.
 
-uglify-js is the grizzled veteran, winning pure compression on react, moment, lodash, d3, and victory. Magnificent bytes. Painful clock. Five-point-seven seconds on victory means you can brew coffee while it works. If transfer size is everything and build time is nothing, this is your horse.
+uglify-js, the byte-grinding grandmaster. Smallest output on react, moment, lodash, d3, and victory. Nobody squeezes harder. Nobody waits longer either: 5.7 seconds on victory, 3.3 on d3. Precision surgery on a sleeping patient. By the echarts and antd rounds, the podium had moved on without it.
 
-terser quietly out-compressed the champion on moment and lodash, but paid roughly ten times the runtime to do it. The steady professional of the field.
+terser, the quiet workhorse. It actually out-squeezed the champion on moment and lodash—18.69 versus 18.74, 25.15 versus 25.26—but paid roughly ten times the clock for the privilege. Dependable, dignified, never dramatic.
 
-@tdewolff/minify was the fastest thing on two legs in the early rounds — 7 ms on moment, 12 ms on jquery — and then stunned everyone with 875.77 KB on typescript in 266 ms, nearly oxc-grade size at half the time. A genuinely great showing on the biggest challenge.
+@tdewolff/minify, the sprinter with stamina. Fastest on moment, jquery, and vue at 7 to 15 ms, then a genuinely impressive 875.77 KB on the typescript monster. Blink and it's done.
 
-@cminify is the pure speed specialist: fastest in every large-file round, including 108 ms on typescript. But the compression tax is brutal — 1.13 MB on typescript versus oxc's 851 KB, and only 21% shaved on d3 where the leaders hit 33%. A niche sprinter, not a marathoner.
+@cminify/cminify-linux-x64, fastest on the five biggest files, full stop. But the bill is brutal: 1.13 MB on typescript where oxc managed 851 KB. Pure velocity, niche appeal—reach for it when milliseconds matter more than megabytes.
 
-esbuild sniffed the podium once with a solid 331.62 KB on echarts in 116 ms. Respectable, just outclassed. bun and google-closure-compiler finished every race but never cracked the highlights reel — no failures, no fireworks.
+esbuild nabbed one podium—echarts, 331.62 KB in 116 ms—quiet and respectable. google-closure-compiler and bun never cracked a single highlight all day. No failures shown, just no fireworks.
 
 ### Eliminated
 
-- **babel-minify**: Crashed out on react, the very first round, with a JSON parsing error about stale baseline-browser-mapping data. Out before the first turn.
-- **tedivm/jshrink**: Exploded on d3 with an "Unclosed regex pattern" exception. A PHP tool entering a JavaScript race, undone by a regex. Poetic. Disqualified.
+- babel-minify — out in round 1 on react, felled by a JSON parse error over stale baseline-browser-mapping data before compressing a single byte.
+- tedivm/jshrink — eliminated on d3 with an "Unclosed regex pattern" crash mid-minification. The regex won.
 
 ### Closing remarks
 
-What a season. swc proved that you can have the bytes and the speed, oxc proved the future arrives in milliseconds, and uglify proved that patience still pays — barely. One caveat before you crown anything in your own repo: these benchmarks measure performance only. Real adoption also hinges on correctness guarantees, install size, API ergonomics, and community support. Run your own payload through the contenders and see who wins on your track. The podium is waiting.
+What a race. A champion who made balance look easy, a rookie who stormed the heavy divisions, and a legend who proved bytes still bow to patience. One caveat before you crown your own pipeline: this Grand Prix measures exactly two things—gzip size and speed. Real-world adoption also runs on developer experience, install weight, API ergonomics, and community support. So run your own bundles through the contenders and see who wins on your track. The podium, as always, is yours to shuffle.
 <!-- aiAnalysis:end -->
 
 <details>
