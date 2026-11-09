@@ -27,6 +27,45 @@ export type AnalyzedArtifact = Artifact & ScoredMinifiers;
 export type AnalyzedDataEntry = [ArtifactName: string, AnalyzedArtifact];
 export type AnalyzedData = AnalyzedDataEntry[];
 
+export const getChampion = (analyzedData: AnalyzedData) => {
+	const totals = new Map<string, {
+		name: string;
+		wins: number;
+		rankSum: number;
+		rounds: number;
+	}>();
+	for (const [, artifact] of analyzedData) {
+		const entries = artifact.minifiedWithScores;
+		const best = entries[0];
+		for (const [index, entry] of entries.entries()) {
+			let total = totals.get(entry.minifierName);
+			if (!total) {
+				total = {
+					name: entry.minifierName,
+					wins: 0,
+					rankSum: 0,
+					rounds: 0,
+				};
+				totals.set(entry.minifierName, total);
+			}
+			total.rankSum += index + 1;
+			total.rounds += 1;
+			if (best && isSuccessful(best) && isSuccessful(entry) && entry.score === best.score) {
+				total.wins += 1;
+			}
+		}
+	}
+	const standings = [...totals.values()].sort((a, b) => (
+		b.wins - a.wins
+		|| a.rankSum / a.rounds - b.rankSum / b.rounds
+		|| (a.name < b.name ? -1 : (a.name > b.name ? 1 : 0))
+	));
+	return {
+		champion: standings[0]?.wins ? standings[0] : undefined,
+		standings,
+	};
+};
+
 // Dynamically adjust weights based on the time penalty
 const baseSizeWeight = 0.85;
 const baseTimeWeight = 0.15;

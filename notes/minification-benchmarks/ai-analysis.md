@@ -1,21 +1,30 @@
 # AI analysis
 
-The README ends with commentary written by a language model. This note records how that commentary is produced, and the evidence that the model's choice of overall winner is not stable between runs.
+The README ends with commentary written by a language model. This note records how that commentary is produced, how the benchmark selects its champion, and why that selection is made in code.
 
 ## How it is generated
 
 `pnpm update-readme` runs [`packages/data/update-readme/index.ts`](../../packages/data/update-readme/index.ts), which calls `getAiAnalysis()` in [`ai-analysis/index.ts`](../../packages/data/update-readme/ai-analysis/index.ts).
 
-- **Model:** `glm-5.3` through the OpenCode Go endpoint `https://opencode.ai/zen/go/v1`, called with the AI SDK's `generateText()`. No temperature or seed is set.
+- **Model:** `glm-5.3` through the OpenCode Go endpoint `https://opencode.ai/zen/go/v1`, called with the AI SDK's `generateText()` and temperature 0. No seed is set.
 - **System prompt:** [`ai-analysis/system-prompt.txt`](../../packages/data/update-readme/ai-analysis/system-prompt.txt), prefixed with today's date.
-- **User message:** built by `getMessage()` in [`ai-analysis/get-message.ts`](../../packages/data/update-readme/ai-analysis/get-message.ts) from the benchmark data. It has three sections:
+- **User message:** built by `getMessage()` in [`ai-analysis/get-message.ts`](../../packages/data/update-readme/ai-analysis/get-message.ts) from the benchmark data. It has four sections:
   - the minifier versions;
+  - the benchmark's champion and runner-up by round wins;
   - per-artifact "rounds" listing the best gzip, fastest, most balanced and an honorable mention;
   - minifiers eliminated by a non-timeout failure.
 - **Missing key:** without `OPENCODE_GO_API_KEY`, `getAiAnalysis()` logs "Skipping AI analysis" and returns nothing. `comment-mark` leaves the `aiAnalysis` and `aiSystemPrompt` regions unchanged, so the rest of the README can update while the commentary still describes older data.
 - **Published input:** the README embeds the full system prompt and message in the `aiSystemPrompt` region, so every published analysis can be traced to its exact input.
 
-The system prompt asks the model to "Crown the winner" with judgment-based criteria. Among them: "Consider speed—especially where compression is close" and "Bigger source = harder challenge. Reward outstanding performance on large artifacts."
+The system prompt directs the model to announce the champion provided in the data and use the measurements to explain it.
+
+## Champion selection
+
+The benchmark selects the champion in [`analyzed-data.ts`](../../packages/data/update-readme/analyzed-data.ts), not through the model. Each artifact is one equally weighted round. Every successful minifier tied for the best score wins that round. The champion has the most round wins. Ties are broken by the lowest mean 1-based rank across artifacts where the minifier appears, then by name in ascending order using direct string comparison.
+
+Equal weighting rewards consistency across all rounds rather than favoring larger artifacts. The earlier prompt rewarded large artifacts, and the November 9 analysis used that criterion to select `oxc-minify`; see the evidence below. On the current data, `@swc/core` wins 8 of 12 rounds and `oxc-minify` wins 4.
+
+Temperature 0 reduces variation in the commentary, but it does not make model output deterministic. The benchmark supplies the winner as a fact rather than relying on the model to choose it.
 
 ## Authentication in CI
 
@@ -39,6 +48,8 @@ Constraints:
 - Fork pull requests cannot request an OIDC token, so the step only works on runs from this repository.
 - The step fails before "Update README" when the exchange returns no string token (empty, `null`, or another JSON type). `set -o pipefail` also fails the step at a failed `curl` itself. Both requests time out after 60 s, so a stalled endpoint can't hold the job until its 60-minute limit.
 - `id-token: write` applies to the whole job, not just this step. Code that runs earlier in the job can request its own OIDC token and exchange it for OpenCode access. That code includes the minifiers and artifact tests run by `pnpm bench-all`. Accepted risk: that code already runs with the job's `contents: write` token, which `actions/checkout` keeps available to later steps by default. Checkout v7 writes the credential to a file under `RUNNER_TEMP` and references it from the local git config with `includeIf`. OIDC adds the ability to spend the OpenCode account's model allowance. Removing the exposure would require running the benchmark in a separate job without either permission, and committing its results from a trusted job.
+
+`getAiAnalysis()` also throws when the key is missing and `CI` is set, so a missing credential can't publish new tables beside an old analysis. Before that check, [run 42552233518](https://github.com/privatenumber/minification-benchmarks/actions/runs/42552233518) logged "Skipping AI analysis due to missing OPENCODE_GO_API_KEY" and still passed.
 
 Evidence gap: the token-exchange endpoint is not described in OpenCode's public docs. The step's parameters come from the setup instructions in the OpenCode Console.
 

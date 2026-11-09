@@ -29,6 +29,10 @@ export const getAiAnalysis = async (
 	const message = await getMessage(minifiers, data);
 
 	if (!apiKey) {
+		// In CI a missing key would publish new tables beside a stale analysis
+		if (process.env.CI) {
+			throw new Error('OPENCODE_GO_API_KEY is required in CI');
+		}
 		console.warn('Skipping AI analysis due to missing OPENCODE_GO_API_KEY');
 		return;
 	}
@@ -37,6 +41,7 @@ export const getAiAnalysis = async (
 
 	const { text } = await generateText({
 		model: provider.chatModel('glm-5.3'),
+		temperature: 0,
 		instructions: systemPromptWithDate,
 		prompt: message,
 	});

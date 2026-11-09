@@ -3,7 +3,7 @@ import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
 import { format } from 'date-fns';
 import { byteSize } from '../../utils/byte-size.ts';
 import { formatMs } from '../formatting.ts';
-import type { AnalyzedData } from '../analyzed-data.ts';
+import { getChampion, type AnalyzedData } from '../analyzed-data.ts';
 
 type Eliminated = Record<string, {
 	reason: string;
@@ -38,6 +38,8 @@ export const getMessage = (
 	data: AnalyzedData,
 ) => {
 	const eliminated = getEliminated(data);
+	const { champion, standings } = getChampion(data);
+	const runnerUp = standings[1];
 
 	return outdent`
 	# Minifiers
@@ -46,6 +48,10 @@ export const getMessage = (
 			.map(minifier => `- ${minifier.name} v${minifier.meta.version}${minifier.meta.publishDate ? ` released ${format(minifier.meta.publishDate, 'yyyy-MM-dd')}` : ''}`)
 			.join('\n')
 	}
+
+	# Champion
+	${champion ? `The benchmark's champion is ${champion.name}, with ${champion.wins} round wins out of ${data.length}.` : 'The benchmark has no champion.'}
+	${runnerUp ? `Runner-up: ${runnerUp.name}, with ${runnerUp.wins} round wins.` : ''}
 
 	# Race results
 	${
