@@ -1,5 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
+import { createHash } from 'node:crypto';
 import { outdent } from 'outdent';
 import { commentMark } from 'comment-mark';
 import { format } from 'date-fns';
@@ -175,13 +176,27 @@ const escapeHtml = (string_ = '') => string_
 	.replaceAll('"', '&quot;')
 	.replaceAll('\'', '&#39;');
 
+const getLastUpdated = (content: string, fingerprint: string) => {
+	const region = content.match(/<!-- lastUpdated:start -->(.*?)<!-- lastUpdated:end -->/s);
+	if (!region) {
+		throw new Error('README lastUpdated region not found');
+	}
+	const previous = region[1].match(/^(.*?)(?:<!-- data:([a-f0-9]{12}) -->)?$/s)!;
+	const date = previous[2] && previous[2] !== fingerprint
+		? new Intl.DateTimeFormat('en-US', {
+			timeZone: 'UTC',
+			month: 'short',
+			day: 'numeric',
+			year: 'numeric',
+		}).format(new Date())
+		: previous[1];
+	return `${date}<!-- data:${fingerprint} -->`;
+};
+const dataBytes = await fs.readFile(new URL('../data/data.json', import.meta.url));
+const fingerprint = createHash('sha256').update(dataBytes).digest('hex').slice(0, 12);
+
 const newReadme = commentMark(readme, {
-	lastUpdated: new Intl.DateTimeFormat('en-US', {
-		timeZone: 'UTC',
-		month: 'short',
-		day: 'numeric',
-		year: 'numeric',
-	}).format(new Date()),
+	lastUpdated: getLastUpdated(readme, fingerprint),
 	benchmarks: generateBenchmarks(analyzedData),
 	minifiers: minifiersList,
 	aiSystemPrompt: ai && escapeHtml(ai.systemPrompt),
