@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { createHash } from 'node:crypto';
 import { outdent } from 'outdent';
-import { commentMark } from 'comment-mark';
+import { commentMark, getCommentMark } from 'comment-mark';
 import { format } from 'date-fns';
 import { capitalize } from 'lodash-es';
 import type { BenchmarkResultSuccessWithRuns } from '@minification-benchmarks/bench/types.ts';
@@ -146,15 +146,16 @@ const generateBenchmarks = (
 const minifiers = await getMinifiers();
 const publishDates = await getPublishDates(minifiers);
 
+const readmePath = './README.md';
+const readme = await fs.readFile(readmePath, 'utf8');
+
 const analyzedData = getAnalyzedData();
 const ai = await getAiAnalysis(
 	minifiers,
 	publishDates,
 	analyzedData,
+	getCommentMark(readme, 'aiAnalysis')?.attributes.input,
 );
-
-const readmePath = './README.md';
-const readme = await fs.readFile(readmePath, 'utf8');
 
 const minifiersList = md.table([
 	['Minifier', 'Version', 'Release date ↓'],
@@ -187,31 +188,31 @@ const escapeHtml = (string_ = '') => string_
 	.replaceAll('"', '&quot;')
 	.replaceAll('\'', '&#39;');
 
-const getLastUpdated = (content: string, fingerprint: string) => {
-	const region = content.match(/<!-- lastUpdated:start -->(.*?)<!-- lastUpdated:end -->/s);
-	if (!region) {
-		throw new Error('README lastUpdated region not found');
-	}
-	const previous = region[1].match(/^(.*?)(?:<!-- data:([a-f0-9]{12}) -->)?$/s)!;
-	const date = previous[2] && previous[2] !== fingerprint
-		? new Intl.DateTimeFormat('en-US', {
-			timeZone: 'UTC',
-			month: 'short',
-			day: 'numeric',
-			year: 'numeric',
-		}).format(new Date())
-		: previous[1];
-	return `${date}<!-- data:${fingerprint} -->`;
-};
 const dataBytes = await fs.readFile(new URL('../data/data.json', import.meta.url));
-const fingerprint = createHash('sha256').update(dataBytes).digest('hex').slice(0, 12);
+const dataHash = createHash('sha256').update(dataBytes).digest('hex').slice(0, 12);
 
-const newReadme = commentMark(readme, {
-	lastUpdated: getLastUpdated(readme, fingerprint),
+const newReadme = await commentMark(readme, {
+	lastUpdated: ({ attributes, content }) => ({
+		attributes: {
+			...attributes,
+			data: dataHash,
+		},
+		content: attributes.data === dataHash
+			? content
+			: new Intl.DateTimeFormat('en-US', {
+				timeZone: 'UTC',
+				month: 'short',
+				day: 'numeric',
+				year: 'numeric',
+			}).format(new Date()),
+	}),
 	benchmarks: generateBenchmarks(analyzedData),
 	minifiers: minifiersList,
 	aiSystemPrompt: ai && escapeHtml(ai.systemPrompt),
-	aiAnalysis: ai?.analysis,
+	aiAnalysis: ai && {
+		attributes: { input: ai.inputHash },
+		content: ai.analysis,
+	},
 });
 
 await fs.writeFile(readmePath, newReadme);

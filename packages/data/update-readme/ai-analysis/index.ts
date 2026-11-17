@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
 import { generateText } from 'ai';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
@@ -19,6 +20,7 @@ export const createAnalysisProvider = (session = 'minification-benchmarks-ai-ana
 	},
 });
 const provider = createAnalysisProvider();
+const modelId = 'glm-5.3';
 
 export const getAnalysisPrompt = async (
 	minifiers: MinifierLoaded[],
@@ -32,6 +34,11 @@ export const getAnalysisPrompt = async (
 	return {
 		instructions: `${todaysDate}\n\n${systemPrompt}`,
 		prompt: message,
+		// Excludes the date so an unchanged benchmark doesn't trigger a daily regeneration
+		inputHash: createHash('sha256')
+			.update(JSON.stringify([modelId, systemPrompt, message]))
+			.digest('hex')
+			.slice(0, 12),
 	};
 };
 
@@ -39,8 +46,19 @@ export const getAiAnalysis = async (
 	minifiers: MinifierLoaded[],
 	publishDates: Map<string, Date>,
 	data: AnalyzedData,
+	previousInputHash?: string,
 ) => {
-	const { instructions, prompt } = await getAnalysisPrompt(minifiers, publishDates, data);
+	const {
+		instructions,
+		prompt,
+		inputHash,
+	} = await getAnalysisPrompt(minifiers, publishDates, data);
+
+	// A regeneration from the same input can change the verdict, so keep it
+	if (inputHash === previousInputHash) {
+		console.log('Skipping AI analysis because its input is unchanged');
+		return;
+	}
 
 	if (!apiKey) {
 		// In CI a missing key would publish new tables beside a stale analysis
@@ -52,7 +70,7 @@ export const getAiAnalysis = async (
 	}
 
 	const { text } = await generateText({
-		model: provider.chatModel('glm-5.3'),
+		model: provider.chatModel(modelId),
 		temperature: 0,
 		instructions,
 		prompt,
@@ -63,6 +81,7 @@ export const getAiAnalysis = async (
 		: '';
 
 	return {
+		inputHash,
 		systemPrompt: `${instructions}\n\n${prompt}`,
 		analysis: headline + text.replaceAll('\n---\n', ''),
 	};
