@@ -1073,7 +1073,7 @@
 				"node": "v26.13.0",
 				"result": {
 					"error": {
-						"message": "RuntimeException: Unclosed regex pattern at position: 289075 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:660\nStack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString()\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify()\n#4 {main}\nCommand failed with exit code 1: php /packages/minifiers/minifiers/jshrink/jshrink.php",
+						"message": "RuntimeException: Unclosed regex pattern at position: 289067 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:660\nStack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString()\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify()\n#4 {main}\nCommand failed with exit code 1: php /packages/minifiers/minifiers/jshrink/jshrink.php",
 						"stack": "SubprocessError: Command failed with exit code 1: php /packages/minifiers/minifiers/jshrink/jshrink.php\n    at checkFailure (file:///node_modules/.pnpm/nano-spawn@2.0.0/node_modules/nano-spawn/source/result.js:40:9)\n    at getResult (file:///node_modules/.pnpm/nano-spawn@2.0.0/node_modules/nano-spawn/source/result.js:17:3)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async runMinifier (file:///packages/minifiers/utils/run-minifier.ts:11:18)\n    at async runMinifier (file:///packages/bench/benchmark/cli.ts:21:18)\n    at async file:///packages/bench/benchmark/cli.ts:104:18",
 						"stage": "minification"
 					}
@@ -1608,8 +1608,11 @@
 				"configHash": "27f4c66966",
 				"node": "v26.13.0",
 				"result": {
-					"error": {
-						"message": "timeout"
+					"data": {
+						"minifiedBytes": 705388,
+						"minzippedBytes": 175428,
+						"time": 8862.8018902,
+						"runs": 5
 					}
 				}
 			},
@@ -1818,7 +1821,7 @@
 				"result": {
 					"error": {
 						"message": "RuntimeException: Unclosed regex pattern at position: 37315 in /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php:660\nStack trace:\n#0 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(302): JShrink\\Minifier->saveRegex()\n#1 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(164): JShrink\\Minifier->loop()\n#2 /packages/minifiers/vendor/tedivm/jshrink/src/JShrink/Minifier.php(139): JShrink\\Minifier->minifyToString()\n#3 /packages/minifiers/minifiers/jshrink/jshrink.php(8): JShrink\\Minifier::minify()\n#4 {main}\nCommand failed with exit code 1: php /packages/minifiers/minifiers/jshrink/jshrink.php",
-						"stack": "SubprocessError: Command failed with exit code 1: php /packages/minifiers/minifiers/jshrink/jshrink.php\n    at checkFailure (file:///node_modules/.pnpm/nano-spawn@2.0.0/node_modules/nano-spawn/source/result.js:40:9)\n    at getResult (file:///node_modules/.pnpm/nano-spawn@2.0.0/node_modules/nano-spawn/source/result.js:17:3)\n    at async runMinifier (file:///packages/minifiers/utils/run-minifier.ts:11:18)\n    at async runMinifier (file:///packages/bench/benchmark/cli.ts:21:18)\n    at async file:///packages/bench/benchmark/cli.ts:104:18",
+						"stack": "SubprocessError: Command failed with exit code 1: php /packages/minifiers/minifiers/jshrink/jshrink.php\n    at checkFailure (file:///node_modules/.pnpm/nano-spawn@2.0.0/node_modules/nano-spawn/source/result.js:40:9)\n    at getResult (file:///node_modules/.pnpm/nano-spawn@2.0.0/node_modules/nano-spawn/source/result.js:17:3)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async runMinifier (file:///packages/minifiers/utils/run-minifier.ts:11:18)\n    at async runMinifier (file:///packages/bench/benchmark/cli.ts:21:18)\n    at async file:///packages/bench/benchmark/cli.ts:104:18",
 						"stage": "minification"
 					}
 				}
