@@ -34,11 +34,7 @@ export const getAnalysisPrompt = async (
 	return {
 		instructions: `${todaysDate}\n\n${systemPrompt}`,
 		prompt: message,
-		// Excludes the date so an unchanged benchmark doesn't trigger a daily regeneration
-		inputHash: createHash('sha256')
-			.update(JSON.stringify([modelId, systemPrompt, message]))
-			.digest('hex')
-			.slice(0, 12),
+		systemPrompt,
 	};
 };
 
@@ -46,16 +42,26 @@ export const getAiAnalysis = async (
 	minifiers: MinifierLoaded[],
 	publishDates: Map<string, Date>,
 	data: AnalyzedData,
-	previousInputHash?: string,
+	cache: {
+		dataHash: string;
+		previousInputHash?: string;
+	},
 ) => {
 	const {
 		instructions,
 		prompt,
-		inputHash,
+		systemPrompt,
 	} = await getAnalysisPrompt(minifiers, publishDates, data);
 
+	// Leaves out the date so unchanged results don't regenerate daily. The data hash
+	// covers results the message omits, such as timeouts
+	const inputHash = createHash('sha256')
+		.update(JSON.stringify([modelId, systemPrompt, prompt, cache.dataHash]))
+		.digest('hex')
+		.slice(0, 12);
+
 	// A regeneration from the same input can change the verdict, so keep it
-	if (inputHash === previousInputHash) {
+	if (inputHash === cache.previousInputHash) {
 		console.log('Skipping AI analysis because its input is unchanged');
 		return;
 	}
@@ -69,12 +75,17 @@ export const getAiAnalysis = async (
 		return;
 	}
 
-	const { text } = await generateText({
+	const { text, finishReason } = await generateText({
 		model: provider.chatModel(modelId),
 		temperature: 0,
 		instructions,
 		prompt,
 	});
+
+	// The input hash would keep an incomplete analysis published until the data changes
+	if (finishReason !== 'stop' || !text.trim()) {
+		throw new Error(`Incomplete AI analysis (finish reason: ${finishReason})`);
+	}
 	const { champion } = getChampion(data);
 	const headline = champion
 		? `**Champion: ${champion.name}**, with ${champion.wins} of ${data.length} round wins by the ranking above.\n\n`
