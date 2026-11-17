@@ -27,6 +27,65 @@ export type AnalyzedArtifact = Artifact & ScoredMinifiers;
 export type AnalyzedDataEntry = [ArtifactName: string, AnalyzedArtifact];
 export type AnalyzedData = AnalyzedDataEntry[];
 
+export const isEliminated = (result: BenchmarkResultWithRuns) => (
+	'error' in result && result.error.message !== 'timeout'
+);
+
+export const getChampion = (analyzedData: AnalyzedData) => {
+	const eliminated = new Set(analyzedData.flatMap(([, artifact]) => (
+		Object.entries(artifact.minified).filter(([, minifier]) => isEliminated(minifier.result))
+			.map(([name]) => name)
+	)));
+	// A minifier that never completed a round (e.g. timed out everywhere) can't be champion
+	const completed = new Set(analyzedData.flatMap(([, artifact]) => (
+		Object.entries(artifact.minified).filter(([, minifier]) => 'data' in minifier.result)
+			.map(([name]) => name)
+	)));
+	const totals = new Map<string, {
+		name: string;
+		wins: number;
+		rankSum: number;
+		rounds: number;
+	}>();
+	for (const [, artifact] of analyzedData) {
+		const entries = artifact.minifiedWithScores;
+		const best = entries[0];
+		let rank = 0;
+		for (const [index, entry] of entries.entries()) {
+			if (index === 0 || entry.score !== entries[index - 1].score) {
+				rank = index + 1;
+			}
+			if (eliminated.has(entry.minifierName) || !completed.has(entry.minifierName)) {
+				continue;
+			}
+			let total = totals.get(entry.minifierName);
+			if (!total) {
+				total = {
+					name: entry.minifierName,
+					wins: 0,
+					rankSum: 0,
+					rounds: 0,
+				};
+				totals.set(entry.minifierName, total);
+			}
+			total.rankSum += rank;
+			total.rounds += 1;
+			if (best && isSuccessful(best) && isSuccessful(entry) && entry.score === best.score) {
+				total.wins += 1;
+			}
+		}
+	}
+	const standings = [...totals.values()].sort((a, b) => (
+		b.wins - a.wins
+		|| a.rankSum / a.rounds - b.rankSum / b.rounds
+		|| (a.name < b.name ? -1 : (a.name > b.name ? 1 : 0))
+	));
+	return {
+		champion: standings[0],
+		standings,
+	};
+};
+
 // Dynamically adjust weights based on the time penalty
 const baseSizeWeight = 0.85;
 const baseTimeWeight = 0.15;
