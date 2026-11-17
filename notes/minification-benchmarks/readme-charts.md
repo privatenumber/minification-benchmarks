@@ -26,8 +26,10 @@ Evidence, Nov 17, 2026, on the live README at master commit `cb3f9c8294cf39844e3
 ```js
 // document.documentElement.dataset.colorMode
 'light'
+
 // matchMedia('(prefers-color-scheme: dark)').matches
 true
+
 // For each `article picture`: img.currentSrc === source.srcset
 true // the dark-mode chart was loaded
 ```
