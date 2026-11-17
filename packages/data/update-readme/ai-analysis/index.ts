@@ -42,10 +42,7 @@ export const getAiAnalysis = async (
 	minifiers: MinifierLoaded[],
 	publishDates: Map<string, Date>,
 	data: AnalyzedData,
-	cache: {
-		dataHash: string;
-		previousInputHash?: string;
-	},
+	previousInputHash?: string,
 ) => {
 	const {
 		instructions,
@@ -53,15 +50,15 @@ export const getAiAnalysis = async (
 		systemPrompt,
 	} = await getAnalysisPrompt(minifiers, publishDates, data);
 
-	// Leaves out the date so unchanged results don't regenerate daily. The data hash
+	// Leaves out the date so unchanged results don't regenerate daily. The data
 	// covers results the message omits, such as timeouts
 	const inputHash = createHash('sha256')
-		.update(JSON.stringify([modelId, systemPrompt, prompt, cache.dataHash]))
+		.update(JSON.stringify([modelId, systemPrompt, prompt, data]))
 		.digest('hex')
 		.slice(0, 12);
 
 	// A regeneration from the same input can change the verdict, so keep it
-	if (inputHash === cache.previousInputHash) {
+	if (inputHash === previousInputHash) {
 		console.log('Skipping AI analysis because its input is unchanged');
 		return;
 	}

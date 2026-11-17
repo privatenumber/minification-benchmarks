@@ -399,7 +399,7 @@ How long minification took (average of 5 runs). Each time is annotated with a mu
 > [!NOTE]
 > 🤖 This analysis is AI generated. See below for the system prompt.
 
-<!-- aiAnalysis input="3990f98e4c96" -->
+<!-- aiAnalysis input="0efce4938d98" -->
 **Champion: @swc/core**, with 7 of 12 round wins by the ranking above.
 
 Three... two... one... compress! Welcome back to the Minification Grand Prix, where semicolors are slaughtered, kilobytes are king, and milliseconds decide careers. Twelve rounds on the card tonight, from featherweight react at 19 KB to the absolute unit that is typescript at 1.88 MB. Eleven tools rolled up to the line. Only nine would leave d3 alive. Let's get to it.

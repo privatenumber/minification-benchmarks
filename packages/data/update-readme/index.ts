@@ -147,21 +147,13 @@ const minifiers = await getMinifiers();
 const publishDates = await getPublishDates(minifiers);
 
 const readmePath = './README.md';
-const dataBytes = await fs.readFile(new URL('../data/data.json', import.meta.url));
-const dataHash = createHash('sha256').update(dataBytes).digest('hex').slice(0, 12);
 
 const analyzedData = getAnalyzedData();
 const ai = await getAiAnalysis(
 	minifiers,
 	publishDates,
 	analyzedData,
-	{
-		dataHash,
-		previousInputHash: getCommentMark(
-			await fs.readFile(readmePath, 'utf8'),
-			'aiAnalysis',
-		)?.attributes.input,
-	},
+	getCommentMark(await fs.readFile(readmePath, 'utf8'), 'aiAnalysis')?.attributes.input,
 );
 
 const minifiersList = md.table([
@@ -194,6 +186,9 @@ const escapeHtml = (string_ = '') => string_
 	.replaceAll('>', '&gt;')
 	.replaceAll('"', '&quot;')
 	.replaceAll('\'', '&#39;');
+
+const dataBytes = await fs.readFile(new URL('../data/data.json', import.meta.url));
+const dataHash = createHash('sha256').update(dataBytes).digest('hex').slice(0, 12);
 
 // Read after the AI request so edits outside generated regions made while it runs are kept
 const readme = await fs.readFile(readmePath, 'utf8');
