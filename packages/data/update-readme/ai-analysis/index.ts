@@ -82,8 +82,10 @@ export const getAiAnalysis = async (
 		prompt,
 	});
 
+	const body = text.replaceAll('\n---\n', '');
+
 	// The input hash would keep an incomplete analysis published until the data changes
-	if (finishReason !== 'stop' || !text.trim()) {
+	if (finishReason !== 'stop' || !body.trim()) {
 		throw new Error(`Incomplete AI analysis (finish reason: ${finishReason})`);
 	}
 	const { champion } = getChampion(data);
@@ -94,6 +96,6 @@ export const getAiAnalysis = async (
 	return {
 		inputHash,
 		systemPrompt: `${instructions}\n\n${prompt}`,
-		analysis: headline + text.replaceAll('\n---\n', ''),
+		analysis: headline + body,
 	};
 };

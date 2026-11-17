@@ -195,7 +195,7 @@ const escapeHtml = (string_ = '') => string_
 	.replaceAll('"', '&quot;')
 	.replaceAll('\'', '&#39;');
 
-// Read after the AI request so edits made while it runs are kept
+// Read after the AI request so edits outside generated regions made while it runs are kept
 const readme = await fs.readFile(readmePath, 'utf8');
 if (!getCommentMark(readme, 'lastUpdated')) {
 	throw new Error('README lastUpdated marker not found');
