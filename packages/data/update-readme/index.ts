@@ -119,15 +119,23 @@ const generateBenchmarks = (
 	analyzedData: AnalyzedData,
 ) => analyzedData
 	.map(
-		([name, artifact]) => [
-			outdent`
-			<picture>
-				<source media="(prefers-color-scheme: dark)" srcset="${getBarChartUrl(name, artifact, artifact.minifiedWithScores, true)}">
-				<img src="${getBarChartUrl(name, artifact, artifact.minifiedWithScores)}">
-			</picture>
-			`,
-			md.el('div', { align: 'center' }, `\n\n${generateBenchmarkTable(name, artifact)}\n`),
-		].join('\n\n'),
+		([name, artifact]) => {
+			const lightUrl = getBarChartUrl(name, artifact, artifact.minifiedWithScores);
+			const darkUrl = getBarChartUrl(name, artifact, artifact.minifiedWithScores, true);
+
+			/**
+			 * GitHub hides elements whose href ends in #gh-*-mode-only based on the
+			 * GitHub theme. A <picture> media query follows the OS theme instead, and
+			 * the fragment on an <img> src is lost when GitHub proxies it through camo
+			 */
+			return [
+				outdent`
+				<a href="${lightUrl}#gh-light-mode-only"><img src="${lightUrl}"></a>
+				<a href="${darkUrl}#gh-dark-mode-only"><img src="${darkUrl}"></a>
+				`,
+				md.el('div', { align: 'center' }, `\n\n${generateBenchmarkTable(name, artifact)}\n`),
+			].join('\n\n');
+		},
 	)
 	.join('\n\n----\n\n');
 
