@@ -1,4 +1,5 @@
 import fs from 'fs/promises';
+import { randomUUID } from 'crypto';
 import { readJsonFile } from '@minification-benchmarks/utils/read-json-file.ts';
 import { sortObjectKeys } from '@minification-benchmarks/utils/sort-object-keys.ts';
 import type { ArtifactLoaded } from '@minification-benchmarks/artifacts';
@@ -9,7 +10,12 @@ import { sortArtifacts, sortMinifiers } from './sort.ts';
 
 const dataPath = new URL('data.json', import.meta.url).pathname;
 
-export const data = await readJsonFile(dataPath).catch(() => ({})) as Data;
+export const data = await readJsonFile(dataPath).catch((error: NodeJS.ErrnoException) => {
+	if (error.code === 'ENOENT') {
+		return {};
+	}
+	throw error;
+}) as Data;
 
 export const saveData = async (
 	minifiersSort = false,
@@ -22,7 +28,13 @@ export const saveData = async (
 		}
 	}
 
-	await fs.writeFile(dataPath, `${JSON.stringify(sortedData, null, '\t')}\n`);
+	const temporaryPath = `${dataPath}.${randomUUID()}.tmp`;
+	try {
+		await fs.writeFile(temporaryPath, `${JSON.stringify(sortedData, null, '\t')}\n`);
+		await fs.rename(temporaryPath, dataPath);
+	} finally {
+		await fs.rm(temporaryPath, { force: true });
+	}
 };
 
 const getArtifact = (
@@ -53,6 +65,8 @@ const getMinifier = (
 		foundMinifier
 		&& foundMinifier.version === minifier.meta.version
 		&& foundMinifier.configHash === minifier.configHash
+		&& foundMinifier.node === process.version
+		&& !('error' in foundMinifier.result)
 	);
 };
 
@@ -93,6 +107,7 @@ export const saveResults = async (
 		minifierPath: minifier.minifierPath!,
 		version: minifier.meta.version,
 		configHash: minifier.configHash!,
+		node: process.version,
 		result,
 	};
 	foundArtifact.minified = sortObjectKeys(foundArtifact.minified, sortMinifiers);
