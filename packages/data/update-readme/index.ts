@@ -11,6 +11,7 @@ import md from 'md-pen';
 import { byteSize } from '../utils/byte-size.ts';
 import { percent, formatMs } from './formatting.ts';
 import { getAiAnalysis } from './ai-analysis/index.ts';
+import { getPublishDates } from './get-publish-dates.ts';
 import {
 	getAnalyzedData, type AnalyzedData, type AnalyzedArtifact,
 } from './analyzed-data.ts';
@@ -139,11 +140,13 @@ const generateBenchmarks = (
 	)
 	.join('\n\n----\n\n');
 
-const minifiers = await getMinifiers({ includePublishDate: true });
+const minifiers = await getMinifiers();
+const publishDates = await getPublishDates(minifiers);
 
 const analyzedData = getAnalyzedData();
 const ai = await getAiAnalysis(
 	minifiers,
+	publishDates,
 	analyzedData,
 );
 
@@ -156,8 +159,8 @@ const minifiersList = md.table([
 		// Sort by release date
 		.sort(
 			(a, b) => {
-				const dateA = a.meta.publishDate ? a.meta.publishDate.getTime() : 0;
-				const dateB = b.meta.publishDate ? b.meta.publishDate.getTime() : 0;
+				const dateA = publishDates.get(a.meta.name)?.getTime() ?? 0;
+				const dateB = publishDates.get(b.meta.name)?.getTime() ?? 0;
 				return dateB - dateA;
 			},
 		)
@@ -167,8 +170,8 @@ const minifiersList = md.table([
 				meta.registry === 'npm'
 					? md.link(`https://www.npmjs.com/package/${meta.name}/v/${meta.version}`, meta.version)
 					: meta.version,
-				meta.publishDate
-					? format(meta.publishDate, 'yyyy-MM-dd')
+				publishDates.has(meta.name)
+					? format(publishDates.get(meta.name)!, 'yyyy-MM-dd')
 					: '',
 			],
 		),

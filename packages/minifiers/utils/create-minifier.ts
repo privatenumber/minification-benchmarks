@@ -14,7 +14,6 @@ export type MetaData = {
 	name: string;
 	version: string;
 	url: string;
-	publishDate?: Date;
 	registry: 'npm' | 'composer';
 };
 
@@ -40,7 +39,6 @@ export class Minifier {
 	async loadMeta(
 		minifierPath: string,
 		configHash: string,
-		includePublishDate = false,
 	) {
 		this.minifierPath = minifierPath;
 		this.configHash = configHash;
@@ -48,14 +46,6 @@ export class Minifier {
 		const packageJson = await loadPackageJson(this.name);
 		if (packageJson) {
 			this.meta = getPackageJsonMeta(packageJson);
-			if (includePublishDate) {
-				const response = await fetch(`https://registry.npmjs.org/${packageJson.name}`);
-				if (!response.ok) {
-					throw new Error(`Failed to fetch npm metadata for ${packageJson.name}: HTTP ${response.status} ${response.statusText}`);
-				}
-				const json = await response.json() as { time: Record<string, string> };
-				this.meta.publishDate = new Date(json.time[packageJson.version!]);
-			}
 			return;
 		}
 

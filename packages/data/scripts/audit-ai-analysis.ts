@@ -6,6 +6,7 @@ import spawn from 'nano-spawn';
 import { getMinifiers, type MinifierLoaded } from '@minification-benchmarks/minifiers';
 import { getAnalyzedData, getChampion } from '../update-readme/analyzed-data.ts';
 import { createAnalysisProvider, getAnalysisPrompt } from '../update-readme/ai-analysis/index.ts';
+import { getPublishDates } from '../update-readme/get-publish-dates.ts';
 
 const { flags: values } = cli({
 	name: 'audit-ai',
@@ -146,20 +147,23 @@ if (savedInputs) {
 		prompt: baselineText.slice(messageStart).trim(),
 	};
 	// The published baseline contains minifier metadata, so dry runs need no npm requests.
-	const baselineMinifiers = baseline.prompt.split('\n').flatMap((line) => {
+	const baselineLines = baseline.prompt.split('\n').flatMap((line) => {
 		const match = line.match(/^- (.+) v([^ ]+)(?: released (\d{4}-\d{2}-\d{2}))?$/);
-		return match
-			? [{
-				name: match[1],
-				meta: {
-					version: match[2],
-					publishDate: match[3] ? new Date(`${match[3]}T12:00:00`) : undefined,
-				},
-			}]
-			: [];
-	}) as MinifierLoaded[];
+		return match ? [match] : [];
+	});
+	const baselineMinifiers = baselineLines.map(match => ({
+		name: match[1],
+		meta: {
+			name: match[1],
+			version: match[2],
+		},
+	})) as MinifierLoaded[];
+	const baselinePublishDates = new Map(baselineLines.flatMap(match => (
+		match[3] ? [[match[1], new Date(`${match[3]}T12:00:00`)] as const] : []
+	)));
 	const minifiers = values.dryRun ? baselineMinifiers : await getMinifiers();
-	const current = await getAnalysisPrompt(minifiers, analyzedData!);
+	const publishDates = values.dryRun ? baselinePublishDates : await getPublishDates(minifiers);
+	const current = await getAnalysisPrompt(minifiers, publishDates, analyzedData!);
 	const { stdout: baselineData } = await spawn('git', ['show', 'd489b93:packages/data/data/data.json']);
 	// nano-spawn strips the final newline that data.json ends with
 	sameData = `${baselineData}\n` === await fs.readFile('packages/data/data/data.json', 'utf8');

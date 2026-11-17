@@ -35,6 +35,7 @@ const getEliminated = (
 
 export const getMessage = (
 	minifiers: MinifierLoaded[],
+	publishDates: Map<string, Date>,
 	data: AnalyzedData,
 ) => {
 	const eliminated = getEliminated(data);
@@ -45,7 +46,10 @@ export const getMessage = (
 	# Minifiers
 	${
 		minifiers
-			.map(minifier => `- ${minifier.name} v${minifier.meta.version}${minifier.meta.publishDate ? ` released ${format(minifier.meta.publishDate, 'yyyy-MM-dd')}` : ''}`)
+			.map((minifier) => {
+				const publishDate = publishDates.get(minifier.meta.name);
+				return `- ${minifier.name} v${minifier.meta.version}${publishDate ? ` released ${format(publishDate, 'yyyy-MM-dd')}` : ''}`;
+			})
 			.join('\n')
 	}
 

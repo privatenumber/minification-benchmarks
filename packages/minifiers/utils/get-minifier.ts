@@ -6,9 +6,6 @@ import type { MinifierLoaded } from './create-minifier.ts';
 
 const loadMinifierByPath = async (
 	minifierPath: string,
-	options: {
-		includePublishDate?: boolean;
-	} = {},
 ) => {
 	try {
 		const stat = await fs.stat(path.join(minifiersDirectory, minifierPath)).catch(() => null);
@@ -43,7 +40,7 @@ const loadMinifierByPath = async (
 		const minifierModule = await import(fullMinifierPath);
 		const minifier: MinifierLoaded = minifierModule.default;
 
-		await minifier.loadMeta(minifierPath, configHash, options.includePublishDate);
+		await minifier.loadMeta(minifierPath, configHash);
 
 		return minifier;
 	} catch (error) {
@@ -59,11 +56,9 @@ export const getMinifier = async (
 	minifierName: string,
 ) => loadMinifierByPath(minifierName);
 
-export const getMinifiers = async (
-	options: { includePublishDate?: boolean } = {},
-) => {
+export const getMinifiers = async () => {
 	const files = await fs.readdir(minifiersDirectory);
 	const minifierFiles = files.filter(filePath => !filePath.startsWith('_'));
 
-	return await Promise.all(minifierFiles.map(minifier => loadMinifierByPath(minifier, options)));
+	return await Promise.all(minifierFiles.map(minifier => loadMinifierByPath(minifier)));
 };
