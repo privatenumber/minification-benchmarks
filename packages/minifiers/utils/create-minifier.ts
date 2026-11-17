@@ -14,7 +14,6 @@ export type MetaData = {
 	name: string;
 	version: string;
 	url: string;
-	publishDate?: Date;
 	registry: 'npm' | 'composer';
 };
 
@@ -46,25 +45,16 @@ export class Minifier {
 
 		const packageJson = await loadPackageJson(this.name);
 		if (packageJson) {
-			const response = await fetch(`https://registry.npmjs.org/${packageJson.name}`).catch((error) => {
-				console.error(error);
-				throw error;
-			});
-			const json = await response.json() as {
-				time: Record<string, string>;
-			};
-			const publishDate = new Date(json.time[packageJson.version!]);
-			this.meta = {
-				...getPackageJsonMeta(packageJson),
-				publishDate,
-			};
+			this.meta = getPackageJsonMeta(packageJson);
 			return;
 		}
 
 		const composerInstalled = await loadComposerInstalled(this.name);
 		if (composerInstalled) {
 			this.meta = getMeta(composerInstalled);
+			return;
 		}
+		throw new Error(`No package metadata found for minifier "${this.name}"`);
 	}
 }
 

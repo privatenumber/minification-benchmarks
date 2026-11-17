@@ -20,11 +20,15 @@ export const createAnalysisProvider = (session = 'minification-benchmarks-ai-ana
 });
 const provider = createAnalysisProvider();
 
-export const getAnalysisPrompt = async (minifiers: MinifierLoaded[], data: AnalyzedData) => {
+export const getAnalysisPrompt = async (
+	minifiers: MinifierLoaded[],
+	publishDates: Map<string, Date>,
+	data: AnalyzedData,
+) => {
 	const todaysDate = `Today's date is ${new Date().toISOString().split('T')[0]}`;
 	const systemPromptPath = new URL('system-prompt.txt', import.meta.url);
 	const systemPrompt = await fs.readFile(systemPromptPath.pathname, 'utf8');
-	const message = getMessage(minifiers, data);
+	const message = getMessage(minifiers, publishDates, data);
 	return {
 		instructions: `${todaysDate}\n\n${systemPrompt}`,
 		prompt: message,
@@ -33,9 +37,10 @@ export const getAnalysisPrompt = async (minifiers: MinifierLoaded[], data: Analy
 
 export const getAiAnalysis = async (
 	minifiers: MinifierLoaded[],
+	publishDates: Map<string, Date>,
 	data: AnalyzedData,
 ) => {
-	const { instructions, prompt } = await getAnalysisPrompt(minifiers, data);
+	const { instructions, prompt } = await getAnalysisPrompt(minifiers, publishDates, data);
 
 	if (!apiKey) {
 		// In CI a missing key would publish new tables beside a stale analysis
