@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
 import { generateText } from 'ai';
 import type { MinifierLoaded } from '@minification-benchmarks/minifiers';
@@ -19,6 +20,7 @@ export const createAnalysisProvider = (session = 'minification-benchmarks-ai-ana
 	},
 });
 const provider = createAnalysisProvider();
+const modelId = 'glm-5.3';
 
 export const getAnalysisPrompt = async (
 	minifiers: MinifierLoaded[],
@@ -32,6 +34,7 @@ export const getAnalysisPrompt = async (
 	return {
 		instructions: `${todaysDate}\n\n${systemPrompt}`,
 		prompt: message,
+		systemPrompt,
 	};
 };
 
@@ -39,8 +42,26 @@ export const getAiAnalysis = async (
 	minifiers: MinifierLoaded[],
 	publishDates: Map<string, Date>,
 	data: AnalyzedData,
+	previousInputHash?: string,
 ) => {
-	const { instructions, prompt } = await getAnalysisPrompt(minifiers, publishDates, data);
+	const {
+		instructions,
+		prompt,
+		systemPrompt,
+	} = await getAnalysisPrompt(minifiers, publishDates, data);
+
+	// Leaves out the date so unchanged results don't regenerate daily. The data
+	// covers results the message omits, such as timeouts
+	const inputHash = createHash('sha256')
+		.update(JSON.stringify([modelId, systemPrompt, prompt, data]))
+		.digest('hex')
+		.slice(0, 12);
+
+	// A regeneration from the same input can change the verdict, so keep it
+	if (inputHash === previousInputHash) {
+		console.log('Skipping AI analysis because its input is unchanged');
+		return;
+	}
 
 	if (!apiKey) {
 		// In CI a missing key would publish new tables beside a stale analysis
@@ -51,19 +72,27 @@ export const getAiAnalysis = async (
 		return;
 	}
 
-	const { text } = await generateText({
-		model: provider.chatModel('glm-5.3'),
+	const { text, finishReason } = await generateText({
+		model: provider.chatModel(modelId),
 		temperature: 0,
 		instructions,
 		prompt,
 	});
+
+	const body = text.replaceAll('\n---\n', '');
+
+	// The input hash would keep an incomplete analysis published until the data changes
+	if (finishReason !== 'stop' || !body.trim()) {
+		throw new Error(`Incomplete AI analysis (finish reason: ${finishReason})`);
+	}
 	const { champion } = getChampion(data);
 	const headline = champion
 		? `**Champion: ${champion.name}**, with ${champion.wins} of ${data.length} round wins by the ranking above.\n\n`
 		: '';
 
 	return {
+		inputHash,
 		systemPrompt: `${instructions}\n\n${prompt}`,
-		analysis: headline + text.replaceAll('\n---\n', ''),
+		analysis: headline + body,
 	};
 };

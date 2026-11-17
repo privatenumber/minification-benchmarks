@@ -13,7 +13,9 @@ The README ends with commentary written by a language model. This note records h
   - the benchmark's champion and runner-up by round wins;
   - per-artifact "rounds" listing the best gzip, fastest, most balanced and an honorable mention;
   - minifiers eliminated by a non-timeout failure.
-- **Missing key:** in CI, `getAiAnalysis()` throws without `OPENCODE_GO_API_KEY`. Elsewhere it logs "Skipping AI analysis" and returns nothing. `comment-mark` leaves the `aiAnalysis` and `aiSystemPrompt` regions unchanged, so the rest of the README can update while the commentary still describes older data.
+- **Missing key:** when the input has changed, `getAiAnalysis()` throws in CI without `OPENCODE_GO_API_KEY`. Elsewhere it logs "Skipping AI analysis" and returns nothing. `comment-mark` leaves the `aiAnalysis` and `aiSystemPrompt` regions unchanged, so the rest of the README can update while the commentary still describes older data.
+- **Unchanged input:** the `aiAnalysis` marker stores an `input` attribute. It is a hash of the model ID, the system prompt file, the message, and the analyzed benchmark data. The hash leaves out the date line, so unchanged results don't cause a daily regeneration. It includes the data because the message leaves out some results, such as timeouts. When the hash matches, `getAiAnalysis()` returns before it checks the key or calls the model, and both regions stay as published. This saves the request, and a regeneration can't change the champion while the data stays the same (see [The champion changed while the data didn't](#the-champion-changed-while-the-data-didnt)). An empty or truncated model response throws, so its hash is never saved.
+- **Time zone and locale:** the message formats release dates and numbers with the local time zone and locale, so a run with settings other than CI's can produce a different hash than CI and regenerate the analysis.
 - **Published input:** the README embeds the full system prompt and message in the `aiSystemPrompt` region, so every published analysis can be traced to its exact input.
 
 The system prompt directs the model to announce the champion provided in the data and use the measurements to explain it.
@@ -37,7 +39,7 @@ Observed on Nov 9, 2026, with `glm-5.3-flash` and a one-line chat completion:
 
 Go enforces the session header but not the user agent. Keep both: the session header is required to get a response at all, and the user agent is what the docs ask clients to send.
 
-The session ID also enables prompt caching. In the model audit below, each model and prompt variant reused one session ID across its 10 requests, and most input tokens were cache reads. Across both variants' 20 requests, `glm-5.3` read 42,261 of 49,730 input tokens from cache, and `gpt-6-luna` read 44,055 of 49,010. Production makes one generation call per CI run; the AI SDK retries retryable failures up to twice by default. Evidence gap: whether its cache survives between runs is not measured.
+The session ID also enables prompt caching. In the model audit below, each model and prompt variant reused one session ID across its 10 requests, and most input tokens were cache reads. Across both variants' 20 requests, `glm-5.3` read 42,261 of 49,730 input tokens from cache, and `gpt-6-luna` read 44,055 of 49,010. Production makes at most one generation call per CI run, and none when the input is unchanged; the AI SDK retries retryable failures up to twice by default. Evidence gap: whether its cache survives between runs is not measured.
 
 ## Usage limits
 
@@ -137,7 +139,7 @@ Constraints:
 - The step fails before "Update README" when the exchange returns no string token (empty, `null`, or another JSON type). `set -o pipefail` also fails the step at a failed `curl` itself. Both requests time out after 60 s, so a stalled endpoint can't hold the job until its 60-minute limit.
 - `id-token: write` applies to the whole job, not just this step. Code that runs earlier in the job can request its own OIDC token and exchange it for OpenCode access. That code includes the minifiers and artifact tests run by `pnpm bench-all`. Accepted risk: that code already runs with the job's `contents: write` token, which `actions/checkout` keeps available to later steps by default. Checkout v7 writes the credential to a file under `RUNNER_TEMP` and references it from the local git config with `includeIf`. OIDC adds the ability to spend the OpenCode account's model allowance. Removing the exposure would require running the benchmark in a separate job without either permission, and committing its results from a trusted job.
 
-`getAiAnalysis()` also throws when the key is missing and `CI` is set, so a missing credential can't publish new tables beside an old analysis. Before that check, [run 42552233518](https://github.com/privatenumber/minification-benchmarks/actions/runs/42552233518) logged "Skipping AI analysis due to missing OPENCODE_GO_API_KEY" and still passed.
+`getAiAnalysis()` also throws when the key is missing, `CI` is set, and the input has changed, so a missing credential can't publish new tables beside an old analysis. Before that check, [run 42552233518](https://github.com/privatenumber/minification-benchmarks/actions/runs/42552233518) logged "Skipping AI analysis due to missing OPENCODE_GO_API_KEY" and still passed.
 
 Evidence gap: the token-exchange endpoint is not described in OpenCode's public docs. The step's parameters come from the setup instructions in the OpenCode Console.
 
