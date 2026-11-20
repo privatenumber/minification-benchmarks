@@ -19,6 +19,7 @@ Real READMEs keep the element too. On Fri Nov 20 2026, the github.com HTML of [k
 
 ## Consequences
 
-- The element uses its [defaults](https://github.com/github/relative-time-element#readme): relative text such as "3 days ago" for up to 30 days, then "on Nov 17, 2026". The fallback text is `on <date>` so that the sentence reads the same before the script runs and after 30 days.
+- The element uses its [defaults](https://github.com/github/relative-time-element#readme): relative text such as "3 days ago" for up to 30 days, then `on <date>`. That date is in the reader's time zone and leaves out the year when it is the current year ([`get timeZone()`](https://github.com/github/relative-time-element/blob/5.3.1/src/relative-time-element.ts#L166-L172) and [`get year()`](https://github.com/github/relative-time-element/blob/5.3.1/src/relative-time-element.ts#L515-L524) in v5.3.1). GitHub removes the `time-zone` and `year` attributes, so these cannot be pinned.
+- The fallback text is `on <date, year>` in UTC, so the sentence reads the same way before the script runs. It can differ from the upgraded text by the year, or by one day near midnight UTC.
 - `tense="past"` cannot be set. A reader whose clock is behind the commit time can briefly see "in 1 minute".
 - The README page needs github.com's script to show relative text. Renderers without that script show the fallback text.

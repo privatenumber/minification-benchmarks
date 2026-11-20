@@ -198,8 +198,8 @@ const getLastUpdated = (content: string, fingerprint: string) => {
 	}
 
 	// GitHub's sanitizer keeps only `datetime` and `title` on <relative-time>, so the
-	// element uses its defaults: "3 days ago" within 30 days, then "on Nov 17, 2026".
-	// The fallback text matches the second form for readers without JavaScript.
+	// element uses its defaults: "3 days ago" within 30 days, then a date such as "on Nov 17"
+	// in the reader's time zone. The UTC fallback text reads the same way without JavaScript.
 	const now = new Date();
 	const fallback = new Intl.DateTimeFormat('en-US', {
 		timeZone: 'UTC',
