@@ -193,15 +193,21 @@ const getLastUpdated = (content: string, fingerprint: string) => {
 		throw new Error('README lastUpdated region not found');
 	}
 	const previous = region[1].match(/^(.*?)(?:<!-- data:([a-f0-9]{12}) -->)?$/s)!;
-	const date = previous[2] && previous[2] !== fingerprint
-		? new Intl.DateTimeFormat('en-US', {
-			timeZone: 'UTC',
-			month: 'short',
-			day: 'numeric',
-			year: 'numeric',
-		}).format(new Date())
-		: previous[1];
-	return `${date}<!-- data:${fingerprint} -->`;
+	if (!previous[2] || previous[2] === fingerprint) {
+		return `${previous[1]}<!-- data:${fingerprint} -->`;
+	}
+
+	// GitHub's sanitizer keeps only `datetime` and `title` on <relative-time>, so the
+	// element uses its defaults: "3 days ago" within 30 days, then "on Nov 17, 2026".
+	// The fallback text matches the second form for readers without JavaScript.
+	const now = new Date();
+	const fallback = new Intl.DateTimeFormat('en-US', {
+		timeZone: 'UTC',
+		month: 'short',
+		day: 'numeric',
+		year: 'numeric',
+	}).format(now);
+	return `<relative-time datetime="${now.toISOString()}">on ${fallback}</relative-time><!-- data:${fingerprint} -->`;
 };
 const dataBytes = await fs.readFile(new URL('../data/data.json', import.meta.url));
 const fingerprint = createHash('sha256').update(dataBytes).digest('hex').slice(0, 12);
