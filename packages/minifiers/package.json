@@ -9,14 +9,14 @@
 		"@swc/core": "1.16.22",
 		"@tdewolff/minify": "^2.24.8",
 		"babel-minify": "^0.5.2",
-		"bun": "^1.4.4",
+		"bun": "^1.4.5",
 		"esbuild": "^0.28.2",
 		"find-up": "^7.0.0",
 		"google-closure-compiler": "^20251216.0.0",
 		"mem": "^9.0.2",
 		"nano-spawn": "^2.0.0",
-		"oxc-minify": "^0.159.0",
-		"terser": "^5.51.2",
+		"oxc-minify": "^0.160.0",
+		"terser": "^5.51.4",
 		"uglify-js": "^3.19.3"
 	},
 	"devDependencies": {
